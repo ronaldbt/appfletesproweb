@@ -152,7 +152,7 @@ let directionsService
 let directionsRenderer
 
 onMounted(() => {
-  const apiKey = encodeURIComponent(import.meta.env.VITE_GOOGLE_MAPS_API_KEY)
+  const apiKey = encodeURIComponent(import.meta.env.VITE_GOOGLE_MAPS_API_KEY || 'AIzaSyD6_IKXikaZ2YFx5R8yKVpFPUe_S6WOKJI')
 
 
   if (window.google && window.google.maps) {
@@ -177,6 +177,8 @@ onMounted(() => {
 
   googleScript.onerror = () => {
     console.error('❌ Error al cargar Google Maps API.')
+    // Mostrar mensaje de error más amigable
+    alert('Error al cargar Google Maps. Por favor verifica la configuración de la API key.')
   }
 
   document.head.appendChild(googleScript)

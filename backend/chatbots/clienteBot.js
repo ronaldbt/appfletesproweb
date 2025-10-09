@@ -10,8 +10,14 @@ async function manejarMensajeCliente(message, client) {
   const numero = message.from;
   const texto = message.body.trim();
 
+  console.log('🔧 [CLIENTE BOT] manejarMensajeCliente llamado');
+  console.log('🔧 [CLIENTE BOT] Mensaje de:', numero);
+  console.log('🔧 [CLIENTE BOT] Texto:', texto);
+  console.log('🔧 [CLIENTE BOT] Cliente válido:', !!client);
+
   if (!client || typeof client.sendMessage !== 'function') {
-    console.error('❌ client WhatsApp no válido en manejarMensajeCliente');
+    console.error('❌ [CLIENTE BOT] client WhatsApp no válido en manejarMensajeCliente');
+    console.error('❌ [CLIENTE BOT] Client type:', typeof client);
     return;
   }
 
@@ -102,7 +108,8 @@ async function manejarMensajeCliente(message, client) {
       });
 
       try {
-        await db.execute(
+        console.log('🔧 [CLIENTE BOT] Intentando guardar solicitud en BD:', nuevaSolicitud.id);
+        await db.query(
           `INSERT INTO reservas (id, nombre, telefono, email, origen, destino, precio, fecha)
            VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
           [
@@ -116,13 +123,17 @@ async function manejarMensajeCliente(message, client) {
             nuevaSolicitud.fecha
           ]
         );
+        console.log('✅ [CLIENTE BOT] Solicitud guardada en BD exitosamente');
 
+        console.log('🔧 [CLIENTE BOT] Enviando solicitud a conductores...');
         await enviarSolicitudAConductores(nuevaSolicitud, client);
+        console.log('✅ [CLIENTE BOT] Solicitud enviada a conductores');
 
         client.sendMessage(numero, `🚚 ¡Perfecto! Tu solicitud fue registrada con el ID *${nuevaSolicitud.id}*. En breve un conductor será asignado. ✅`);
-        console.log(`✅ Cotización confirmada y guardada para ${numero}:`, nuevaSolicitud);
+        console.log(`✅ [CLIENTE BOT] Cotización confirmada y guardada para ${numero}:`, nuevaSolicitud);
       } catch (error) {
-        console.error('❌ Error al guardar flete desde clienteBot:', error);
+        console.error('❌ [CLIENTE BOT] Error al guardar flete desde clienteBot:', error);
+        console.error('❌ [CLIENTE BOT] Error details:', error.message);
         client.sendMessage(numero, '❌ Ocurrió un error al guardar tu solicitud. Intenta más tarde.');
       }
 

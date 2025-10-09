@@ -1,11 +1,15 @@
-// backend/utils/db.js
-const mysql = require('mysql2/promise');
+// backend/utils/db.js - PostgreSQL pool
+const { Pool } = require('pg');
 
-const pool = mysql.createPool({
-  host: process.env.DATABASE_HOST,
-  user: process.env.DATABASE_USER,
-  password: process.env.DATABASE_PASSWORD,
-  database: process.env.DATABASE_NAME
+const pool = new Pool({
+  host: process.env.DATABASE_HOST || '127.0.0.1',
+  port: Number(process.env.DATABASE_PORT || 5432),
+  user: process.env.DATABASE_USER || 'fletespro_user',
+  password: process.env.DATABASE_PASSWORD || 'fletespro_password123',
+  database: process.env.DATABASE_NAME || 'fletespro'
 });
 
-module.exports = pool;
+module.exports = {
+  query: (text, params) => pool.query(text, params),
+  pool
+};

@@ -1,61 +1,75 @@
 <template>
-    <div class="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center px-4">
-      <h1 class="text-3xl font-bold mb-6">Iniciar Sesión</h1>
-  
-      <form @submit.prevent="iniciarSesion" class="w-full max-w-md space-y-4 bg-gray-800 p-6 rounded-lg shadow">
+  <div class="min-h-screen bg-white text-gray-900 flex items-center justify-center px-4">
+    <div class="w-full max-w-md">
+      <div class="text-center mb-6">
+        <h1 class="text-3xl font-extrabold text-green-700">Bienvenido a FletesPro</h1>
+        <p class="text-sm text-gray-600 mt-1">Ingresa para continuar</p>
+      </div>
+
+      <form @submit.prevent="iniciarSesion" class="space-y-4 bg-gray-50 border border-gray-200 p-6 rounded-xl shadow-sm">
         <input
           v-model="email"
           type="email"
           placeholder="Correo electrónico"
-          class="w-full p-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-        <input
-          v-model="telefono"
-          type="tel"
-          placeholder="Teléfono"
-          class="w-full p-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          required
+          class="w-full p-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
         />
         <input
           v-model="password"
           type="password"
           placeholder="Contraseña"
-          class="w-full p-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          required
+          class="w-full p-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
         />
-  
+
         <button
           type="submit"
-          class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition"
+          class="w-full bg-green-600 text-white p-3 rounded font-semibold hover:bg-green-700 transition"
         >
           Entrar
         </button>
       </form>
-  
-      <router-link to="/register" class="mt-4 text-sm text-blue-400 hover:underline">
+
+      <router-link to="/register" class="block text-center mt-4 text-sm text-green-700 hover:underline">
         ¿No tienes cuenta? Regístrate aquí
       </router-link>
     </div>
-  </template>
+  </div>
+</template>
   
   <script setup>
   import { ref } from 'vue'
   import { useRouter } from 'vue-router'
+  import { apiUrl, API_ENDPOINTS } from '../config/api.js'
   
   const email = ref('')
-  const telefono = ref('')
   const password = ref('')
   const router = useRouter()
   
   async function iniciarSesion() {
-    const res = await fetch('http://localhost:3001/api/login', {
+    if (!email.value || !password.value) {
+      alert('Por favor, completa todos los campos')
+      return
+    }
+
+    const res = await fetch(apiUrl(API_ENDPOINTS.LOGIN), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: email.value, telefono: telefono.value, password: password.value })
+      body: JSON.stringify({ email: email.value, password: password.value })
     })
   
     const data = await res.json()
     if (data.usuario) {
       localStorage.setItem('usuario', JSON.stringify(data.usuario))
-      router.push(data.usuario.tipo === 'conductor' ? '/dashboard-conductor' : '/dashboard-cliente')
+      
+      // Redireccionar según tipo de usuario
+      if (data.usuario.tipo === 'admin') {
+        router.push('/dashboard-admin')
+      } else if (data.usuario.tipo === 'conductor') {
+        router.push('/dashboard-conductor')
+      } else {
+        router.push('/dashboard-cliente')
+      }
     } else {
       alert(data.error || 'Error al iniciar sesión')
     }
@@ -65,4 +79,3 @@
   <style scoped>
   /* Puedes agregar estilos adicionales aquí si quieres */
   </style>
-  

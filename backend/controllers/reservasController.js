@@ -7,8 +7,15 @@ const {crearSolicitud, guardarSolicitud} = require('../models/solicitudModel');
 const mpapi = require("../utils/mpapi");
 
 const crearReserva = async (req, res) => {
+    console.log('🔧 [RESERVAS CONTROLLER] crearReserva llamado');
+    
+    // Usar el cliente desde el middleware inyectado en req
     const client = req.whatsapp;
+    console.log('🔧 [RESERVAS CONTROLLER] Cliente WhatsApp disponible:', !!client);
+    
     const {nombre, telefono, email, origen, destino, precio, carga, ayudante} = req.body;
+    
+    console.log('🔧 [RESERVAS CONTROLLER] Datos recibidos:', {nombre, telefono, email, origen, destino, precio, carga, ayudante});
 
     if (!nombre || !telefono || !origen || !destino || !precio || !carga || ayudante === undefined) {
         console.warn('⚠️ Solicitud incompleta recibida:', req.body);
@@ -26,13 +33,24 @@ const crearReserva = async (req, res) => {
     const nuevaSolicitud = crearSolicitud({nombre, telefono, email, origen, destino, precio, carga, ayudante});
 
     try {
-        //enviarSolicitudAConductores(nuevaSolicitud, client);
-
-        if (email) {
-            //await enviarConfirmacionCliente(nuevaSolicitud);
+        console.log('🔧 [RESERVAS CONTROLLER] Solicitud creada:', nuevaSolicitud.id);
+        
+        // Solo enviar a conductores si hay cliente WhatsApp disponible
+        if (client && typeof client.sendMessage === 'function') {
+            console.log('🔧 [RESERVAS CONTROLLER] Enviando a conductores via WhatsApp...');
+            // enviarSolicitudAConductores(nuevaSolicitud, client);
+        } else {
+            console.log('⚠️ [RESERVAS CONTROLLER] WhatsApp no disponible, saltando envío a conductores');
         }
 
+        if (email) {
+            console.log('🔧 [RESERVAS CONTROLLER] Enviando confirmación por email...');
+            // await enviarConfirmacionCliente(nuevaSolicitud);
+        }
+
+        console.log('🔧 [RESERVAS CONTROLLER] Guardando solicitud en BD...');
         const solicitudId = await guardarSolicitud(nuevaSolicitud);
+        console.log('✅ [RESERVAS CONTROLLER] Solicitud guardada con ID:', solicitudId);
 
         await mpapi.nuevo(solicitudId, parseInt(precio)).then((mercadoResponse) => {
             console.log(mercadoResponse.init_point)

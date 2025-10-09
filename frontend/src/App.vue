@@ -1,41 +1,38 @@
 <template>
-  <div id="app" class="dark bg-gray-900 text-white min-h-screen">
-    <header class="flex justify-between items-center px-6 py-4 border-b border-gray-700">
-      <h1 class="text-xl font-bold text-blue-400">FletesPro 🚛</h1>
-      <div>
-        <template v-if="usuario">
-          <span class="mr-4 text-sm">👤 {{ usuario.nombre }}</span>
-          <button @click="cerrarSesion" class="bg-red-600 hover:bg-red-700 px-3 py-1 rounded text-sm">
-            Cerrar sesión
-          </button>
-        </template>
-        <template v-else>
-          <router-link to="/login" class="text-blue-400 hover:underline mr-4 text-sm">Iniciar sesión</router-link>
-          <router-link to="/register" class="bg-blue-600 hover:bg-blue-700 px-3 py-1 rounded text-white text-sm">
-            Registrarse
-          </router-link>
-        </template>
-      </div>
-    </header>
-
-    <main class="p-4">
+  <div id="app" class="min-h-screen bg-white text-gray-900">
+    <HeaderBar v-if="!usuario" />
+    <main>
       <router-view />
     </main>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useRouter } from 'vue-router'
+import HeaderBar from './components/Header.vue'
 
 const router = useRouter()
+// Inicializar inmediatamente desde localStorage para evitar parpadeo del Header
 const usuario = ref(null)
+try {
+  const datos = localStorage.getItem('usuario')
+  usuario.value = datos ? JSON.parse(datos) : null
+} catch { usuario.value = null }
+
+// Mantener sincronizado si cambia desde otras pestañas
+const onStorage = (e) => {
+  if (e.key === 'usuario') {
+    try { usuario.value = e.newValue ? JSON.parse(e.newValue) : null } catch { usuario.value = null }
+  }
+}
 
 onMounted(() => {
-  const datos = localStorage.getItem('usuario')
-  if (datos) {
-    usuario.value = JSON.parse(datos)
-  }
+  window.addEventListener('storage', onStorage)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('storage', onStorage)
 })
 
 function cerrarSesion() {
@@ -46,14 +43,6 @@ function cerrarSesion() {
 </script>
 
 <style>
-body {
-  @media (prefers-color-scheme: dark) {
-    background-color: #111827;
-    color: white;
-  }
-}
-
-a {
-  text-decoration: none;
-}
+body { background-color: #ffffff; }
+a { text-decoration: none; }
 </style>
