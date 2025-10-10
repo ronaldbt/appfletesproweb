@@ -1,120 +1,220 @@
 <template>
-  <div class="max-w-3xl mx-auto p-4">
-    <h1 class="text-2xl font-bold text-center mb-6 text-white">Calculadora precio fletes y mudanzas</h1>
-
-    <div ref="map" class="w-full h-[350px] rounded-lg shadow mb-6"></div>
-
-    <form
-      @submit.prevent="calcularRuta"
-      class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow space-y-4 text-gray-800 dark:text-white"
-    >
-      <!-- Campo Origen -->
-      <div>
-        <label for="origen" class="block font-semibold mb-1">Origen:</label>
-        <input
-          id="origen"
-          type="text"
-          placeholder="Ingresa una ubicación"
-          class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
-        />
+  <div class="max-w-4xl mx-auto">
+    <div class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+      <!-- Header -->
+      <div class="bg-gradient-to-r from-green-500 to-green-600 p-6 text-white">
+        <h2 class="text-2xl font-bold">🚛 Calculadora de Fletes</h2>
+        <p class="text-sm opacity-90 mt-1">Calcula el precio y solicita tu flete en minutos</p>
       </div>
 
-      <!-- Campo Destino -->
-      <div>
-        <label for="destino" class="block font-semibold mb-1">Destino:</label>
-        <input
-          id="destino"
-          type="text"
-          placeholder="Ingresa una ubicación"
-          class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
-        />
-      </div>
+      <!-- Mapa -->
+      <div ref="map" class="w-full h-[350px]"></div>
 
-      <!-- Botón calcular -->
-      <div class="text-center">
-        <button
-          type="submit"
-          class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
-        >
-          Mostrar Precio Flete
-        </button>
-      </div>
+      <!-- Formulario -->
+      <form @submit.prevent="calcularRuta" class="p-6 space-y-6">
+        <!-- Paso 1: Direcciones -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold text-gray-900 flex items-center">
+            <span class="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-2 text-sm">1</span>
+            Ingresa las direcciones
+          </h3>
+          
+          <div>
+            <label for="origen" class="block text-sm font-medium text-gray-700 mb-2">📍 Dirección de Origen</label>
+            <input
+              id="origen"
+              type="text"
+              placeholder="Ej: Av. Providencia 123, Santiago"
+              class="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500"
+            />
+          </div>
 
-      <!-- Resultado precio -->
-      <div
-        v-if="distancia && precio"
-        class="bg-white dark:bg-gray-700 p-4 rounded border border-gray-200 dark:border-gray-600 text-center text-lg mt-6"
-      >
-        <p><strong>Dirección origen:</strong> {{ direccionOrigen }}</p>
-        <p><strong>Dirección destino:</strong> {{ direccionDestino }}</p>
-        <p><strong>Distancia:</strong> {{ distancia.toFixed(2) }} km</p>
-        <p><strong>Precio:</strong> ${{ precio.toFixed(0) }} CLP</p>
-      </div>
+          <div>
+            <label for="destino" class="block text-sm font-medium text-gray-700 mb-2">📦 Dirección de Destino</label>
+            <input
+              id="destino"
+              type="text"
+              placeholder="Ej: Av. Libertador 456, Santiago"
+              class="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500"
+            />
+          </div>
 
-      <!-- Mostrar botón reservar -->
-      <div class="text-center mt-4" v-if="distancia && precio && !mostrarFormulario">
-        <button
-          type="button"
-          @click="mostrarFormulario = true"
-          class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition"
-        >
-          Reservar este flete
-        </button>
-      </div>
+          <button
+            type="submit"
+            class="w-full bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors flex items-center justify-center space-x-2"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+            </svg>
+            <span>Calcular Precio del Flete</span>
+          </button>
+        </div>
 
-      <!-- Formulario de reserva -->
-      <div
-        v-if="mostrarFormulario"
-        class="space-y-4 bg-white dark:bg-gray-800 p-4 rounded border border-gray-200 dark:border-gray-600 mt-4"
-      >
-        <p class="text-center font-semibold text-gray-700 dark:text-white">
-          Solo necesitamos tus datos para reservar:
-        </p>
+        <!-- Paso 2: Resumen y Formulario Completo (Aparece después de calcular) -->
+        <div v-if="distancia && precio" class="space-y-6 border-t border-gray-200 pt-6">
+          <!-- Resumen del Cálculo -->
+          <div class="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-gray-900 flex items-center mb-4">
+              <span class="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-2 text-sm">✓</span>
+              Precio Calculado
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <p class="text-sm text-gray-600">Origen:</p>
+                <p class="text-gray-900 font-medium">📍 {{ direccionOrigen }}</p>
+              </div>
+              <div>
+                <p class="text-sm text-gray-600">Destino:</p>
+                <p class="text-gray-900 font-medium">📦 {{ direccionDestino }}</p>
+              </div>
+              <div>
+                <p class="text-sm text-gray-600">Distancia:</p>
+                <p class="text-gray-900 font-medium">📏 {{ distancia.toFixed(2) }} km</p>
+              </div>
+              <div>
+                <p class="text-sm text-gray-600">Precio Base:</p>
+                <p class="text-green-600 font-bold text-xl">${{ precioBase.toLocaleString() }} CLP</p>
+              </div>
+            </div>
+          </div>
 
-        <input
-          v-model="nombre"
-          type="text"
-          placeholder="Tu nombre"
-          class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
-        />
-        <input
-          v-model="telefono"
-          type="tel"
-          placeholder="Tu teléfono"
-          class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
-        />
-        <input
-          v-model="email"
-          type="email"
-          placeholder="Tu email (opcional)"
-          class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
-        />
+          <!-- Formulario Completo -->
+          <div class="space-y-4">
+            <h3 class="text-lg font-bold text-gray-900 flex items-center">
+              <span class="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-2 text-sm">2</span>
+              Completa los detalles
+            </h3>
+            
+            <!-- Carga -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">📦 ¿Qué necesitas trasladar?</label>
+              <input
+                v-model="carga"
+                type="text"
+                placeholder="Ej: Muebles, cajas, electrodomésticos..."
+                required
+                class="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500"
+              />
+            </div>
 
-        <input
-          v-model="carga"
-          type="text"
-          placeholder="¿Qué necesitas trasladar?"
-          class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
-        />
+            <!-- Ayudante -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">👥 ¿Necesitas ayudante?</label>
+              <div class="flex space-x-4">
+                <label class="flex-1 cursor-pointer">
+                  <input type="radio" v-model="ayudante" value="no" class="sr-only peer">
+                  <div class="border-2 border-gray-300 rounded-lg p-3 text-center peer-checked:border-green-600 peer-checked:bg-green-50 transition-all">
+                    <p class="font-semibold text-gray-900">No</p>
+                    <p class="text-sm text-gray-500">Sin costo adicional</p>
+                  </div>
+                </label>
+                <label class="flex-1 cursor-pointer">
+                  <input type="radio" v-model="ayudante" value="sí" class="sr-only peer">
+                  <div class="border-2 border-gray-300 rounded-lg p-3 text-center peer-checked:border-green-600 peer-checked:bg-green-50 transition-all">
+                    <p class="font-semibold text-gray-900">Sí</p>
+                    <p class="text-sm text-green-600 font-medium">+$10,000</p>
+                  </div>
+                </label>
+              </div>
+            </div>
 
-        <select
-          v-model="ayudante"
-          class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
-        >
-          <option disabled value="">¿Necesitas ayudante?</option>
-          <option value="no">No</option>
-          <option value="sí">Sí (+$10.000)</option>
-        </select>
+            <!-- Fecha Programada -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">📅 ¿Para cuándo necesitas el flete?</label>
+              <div class="grid grid-cols-2 gap-3 mb-3">
+                <button type="button" @click="setFechaRapida('hoy')" 
+                        class="px-4 py-2 border-2 border-gray-300 rounded-lg hover:border-green-600 hover:bg-green-50 transition-all">
+                  Hoy
+                </button>
+                <button type="button" @click="setFechaRapida('mañana')" 
+                        class="px-4 py-2 border-2 border-gray-300 rounded-lg hover:border-green-600 hover:bg-green-50 transition-all">
+                  Mañana
+                </button>
+              </div>
+              <input
+                v-model="fechaProgramada"
+                type="datetime-local"
+                :min="fechaMinima"
+                required
+                class="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500"
+              />
+            </div>
 
-        <button
-          type="button"
-          @click="enviarReserva"
-          class="w-full bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
-        >
-          Confirmar Reserva
-        </button>
-      </div>
-    </form>
+            <!-- Datos Personales -->
+            <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 space-y-4">
+              <h4 class="font-semibold text-gray-900">👤 Tus datos</h4>
+              
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Nombre completo *</label>
+                <input
+                  v-model="nombre"
+                  type="text"
+                  placeholder="Tu nombre"
+                  required
+                  class="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500"
+                />
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Teléfono *</label>
+                <input
+                  v-model="telefono"
+                  type="tel"
+                  placeholder="+56 9 1234 5678"
+                  required
+                  class="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500"
+                />
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Email (opcional)</label>
+                <input
+                  v-model="email"
+                  type="email"
+                  placeholder="tu@email.com"
+                  class="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500"
+                />
+              </div>
+            </div>
+
+            <!-- Resumen Final con Precio -->
+            <div class="bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl p-6">
+              <div class="flex justify-between items-center">
+                <div>
+                  <p class="text-sm opacity-90">Precio Total</p>
+                  <p class="text-4xl font-bold">${{ precioFinal.toLocaleString() }} CLP</p>
+                  <p class="text-sm opacity-75 mt-1">
+                    {{ ayudante === 'sí' ? 'Incluye ayudante (+$10,000)' : 'Sin ayudante' }}
+                  </p>
+                </div>
+                <svg class="w-16 h-16 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Botón de Confirmación -->
+            <button
+              type="button"
+              @click="enviarReserva"
+              :disabled="enviando"
+              class="w-full bg-green-600 text-white px-6 py-4 rounded-lg font-bold text-lg hover:bg-green-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+            >
+              <svg v-if="enviando" class="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              <span>{{ enviando ? 'Enviando...' : '🚚 Confirmar y Solicitar Flete' }}</span>
+            </button>
+
+            <p class="text-xs text-gray-500 text-center">
+              Al confirmar, tu solicitud será enviada a conductores verificados de FletesPro
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -122,20 +222,18 @@
 
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
-const mostrarFormulario = ref(false)
 const nombre = ref('')
 const telefono = ref('')
 const email = ref('')
 const carga = ref('')
-const ayudante = ref('')
-
-
-
+const ayudante = ref('no')
+const fechaProgramada = ref('')
+const enviando = ref(false)
 
 const distancia = ref(null)
 const precio = ref(null)
@@ -147,6 +245,23 @@ const origenPlace = ref(null)
 const destinoPlace = ref(null)
 
 const backendURL = import.meta.env.VITE_BACKEND_URL
+
+// Computed para precio base y final
+const precioBase = computed(() => precio.value || 0)
+const precioFinal = computed(() => {
+  let total = precioBase.value
+  if (ayudante.value === 'sí') {
+    total += 10000
+  }
+  return total
+})
+
+// Fecha mínima (ahora)
+const fechaMinima = computed(() => {
+  const now = new Date()
+  now.setMinutes(now.getMinutes() - now.getTimezoneOffset())
+  return now.toISOString().slice(0, 16)
+})
 
 let directionsService
 let directionsRenderer
@@ -220,6 +335,22 @@ function initMap() {
   })
 }
 
+// Función para establecer fechas rápidas
+function setFechaRapida(opcion) {
+  const ahora = new Date()
+  
+  if (opcion === 'hoy') {
+    ahora.setHours(ahora.getHours() + 2) // 2 horas desde ahora
+  } else if (opcion === 'mañana') {
+    ahora.setDate(ahora.getDate() + 1)
+    ahora.setHours(9, 0, 0, 0) // Mañana a las 9 AM
+  }
+  
+  // Formatear para datetime-local
+  ahora.setMinutes(ahora.getMinutes() - ahora.getTimezoneOffset())
+  fechaProgramada.value = ahora.toISOString().slice(0, 16)
+}
+
 function calcularRuta() {
   if (!origenPlace.value || !destinoPlace.value) {
     alert('Por favor, selecciona direcciones válidas desde las sugerencias.')
@@ -253,28 +384,39 @@ function calcularRuta() {
 }
 
 async function enviarReserva() {
+  // Validaciones
   if (!nombre.value || !telefono.value) {
     alert('Por favor, completa tu nombre y teléfono.')
     return
   }
-
-  // 🧠 Calcular precio final sumando ayudante si aplica
-  let precioFinal = precio.value
-  if (ayudante.value === 'sí') {
-    precioFinal += 10000
+  
+  if (!carga.value) {
+    alert('Por favor, indica qué necesitas trasladar.')
+    return
+  }
+  
+  if (!fechaProgramada.value) {
+    alert('Por favor, selecciona una fecha para el flete.')
+    return
   }
 
-  // 📦 Crear cuerpo del POST
+  enviando.value = true
+
+  // 📦 Crear cuerpo del POST con todos los campos
   const body = {
     nombre: nombre.value,
     telefono: telefono.value,
-    email: email.value,
+    email: email.value || null,
     origen: direccionOrigen.value,
     destino: direccionDestino.value,
-    precio: precioFinal,
+    precio: precioFinal.value,
     carga: carga.value,
-    ayudante: ayudante.value === 'sí' // lo convertimos en booleano true/false
+    ayudante: ayudante.value === 'sí',
+    programado_para: fechaProgramada.value,
+    distancia_km: distancia.value
   }
+
+  console.log('📦 [FleteCalculator] Enviando reserva:', body)
 
   try {
     const res = await fetch(backendURL+'/api/reservar', {
@@ -283,30 +425,60 @@ async function enviarReserva() {
       body: JSON.stringify(body)
     })
 
-    const data = await res.json();
-    console.log('✅ Reserva enviada:', data);
+    const data = await res.json()
+    console.log('✅ [FleteCalculator] Respuesta del servidor:', data)
 
     if (data.url) {
-      // Guardar data en localStorage si aún lo querés
-      localStorage.setItem('flete_nombre', nombre.value);
-      localStorage.setItem('flete_destino', direccionDestino.value);
-      localStorage.setItem('flete_email', email.value);
-      localStorage.setItem('flete_id', data.fleteId);
-      localStorage.setItem('flete_carga', carga.value);
-      localStorage.setItem('flete_ayudante', ayudante.value);
+      // Guardar data en localStorage
+      localStorage.setItem('flete_nombre', nombre.value)
+      localStorage.setItem('flete_destino', direccionDestino.value)
+      localStorage.setItem('flete_email', email.value)
+      localStorage.setItem('flete_id', data.fleteId)
+      localStorage.setItem('flete_carga', carga.value)
+      localStorage.setItem('flete_ayudante', ayudante.value)
 
-      window.open(data.url, '_blank');
+      // Abrir ventana de pago
+      window.open(data.url, '_blank')
+      
+      // Mostrar confirmación
+      alert('✅ ¡Solicitud enviada! Tu flete ha sido registrado y enviado a conductores verificados. Te contactarán pronto por WhatsApp.')
+      
+      // Limpiar formulario
+      resetFormulario()
+      
+      // Redirigir a página de gracias si existe
+      // router.push('/gracias')
     } else {
-      throw new Error('No se recibió la URL de pago.');
+      // Solicitud guardada pero sin URL de pago
+      alert('✅ ¡Solicitud registrada! Un conductor te contactará pronto por WhatsApp.')
+      resetFormulario()
     }
-
-
-    // 🔁 Redirigir al resumen de confirmación
-    //router.push('/gracias')
   } catch (error) {
-    console.error('❌ Error al enviar reserva:', error)
-    alert('Hubo un error al procesar tu solicitud.')
+    console.error('❌ [FleteCalculator] Error al enviar reserva:', error)
+    alert('❌ Hubo un error al procesar tu solicitud. Por favor intenta nuevamente.')
+  } finally {
+    enviando.value = false
   }
+}
+
+// Función para resetear el formulario
+function resetFormulario() {
+  nombre.value = ''
+  telefono.value = ''
+  email.value = ''
+  carga.value = ''
+  ayudante.value = 'no'
+  fechaProgramada.value = ''
+  distancia.value = null
+  precio.value = null
+  direccionOrigen.value = ''
+  direccionDestino.value = ''
+  
+  // Limpiar inputs de direcciones
+  const inputOrigen = document.getElementById('origen')
+  const inputDestino = document.getElementById('destino')
+  if (inputOrigen) inputOrigen.value = ''
+  if (inputDestino) inputDestino.value = ''
 }
 
 
