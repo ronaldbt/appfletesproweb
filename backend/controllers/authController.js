@@ -3,6 +3,38 @@
 const bcrypt = require('bcrypt');
 const validator = require('validator');
 const db = require('../utils/db');
+
+// Función para normalizar números chilenos al formato de WhatsApp
+function normalizarTelefonoChileno(telefono) {
+  if (!telefono) return null;
+  
+  // Remover espacios y caracteres especiales
+  let numero = telefono.toString().replace(/\s+/g, '').replace(/[^\d+]/g, '');
+  
+  // Si empieza con +56, remover solo el + y dejar el 56
+  if (numero.startsWith('+56')) {
+    numero = numero.substring(1); // Remover solo el +
+  }
+  // Si empieza con 9 (móvil chileno), agregar 56
+  else if (numero.startsWith('9')) {
+    numero = '56' + numero;
+  }
+  // Si empieza con 2 (fijo chileno), agregar 56
+  else if (numero.startsWith('2')) {
+    numero = '56' + numero;
+  }
+  // Si ya empieza con 56, dejarlo como está
+  else if (numero.startsWith('56')) {
+    // Ya está bien
+  }
+  // Si no tiene código de país, asumir que es chileno y agregar 56
+  else {
+    numero = '56' + numero;
+  }
+  
+  // Formato final para WhatsApp Web
+  return numero + '@c.us';
+}
 const {
   buscarUsuarioPorCampo,
   buscarUsuarioPorEmailInsensitive,
@@ -51,10 +83,14 @@ async function registrar(req, res) {
       const usuarioId = userRow.rows[0]?.id;
       if (!usuarioId) throw new Error('No se pudo obtener el usuario creado');
 
+      // Normalizar teléfono para WhatsApp
+      const telefonoNormalizado = normalizarTelefonoChileno(telefono);
+      console.log(`📱 Teléfono original: ${telefono} → Normalizado: ${telefonoNormalizado}`);
+
       await client.query(
         `INSERT INTO conductores (nombre, numero, rut, vehiculo_placa, vehiculo_tipo, direccion, activo, usuario_id)
          VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
-        [nombre, telefono || null, rut || null, vehiculo_placa || null, vehiculo_tipo || null, direccion || null, true, usuarioId]
+        [nombre, telefonoNormalizado, rut || null, vehiculo_placa || null, vehiculo_tipo || null, direccion || null, true, usuarioId]
       );
     }
 

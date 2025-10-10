@@ -85,6 +85,10 @@ app.use('/api', adminStatsRoutes);
 const adminUsuariosRoutes = require('./routes/adminUsuariosRoutes');
 app.use('/api', adminUsuariosRoutes);
 
+// Rutas específicas para conductores
+const conductorRoutes = require('./routes/conductorRoutes');
+app.use('/api', conductorRoutes);
+
 // 🔁 Conexión QR para iniciar sesión en WhatsApp
 client.on('qr', (qr) => {
   console.log('📲 Escanea este QR con WhatsApp para vincular tu sesión:');

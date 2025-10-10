@@ -61,17 +61,18 @@
                     </div>
                     
                     <div class="flex items-center space-x-4 text-sm text-gray-500">
-                      <span>👤 {{ reserva.cliente_nombre || 'Cliente' }}</span>
-                      <span>📞 {{ reserva.cliente_telefono || 'N/A' }}</span>
+                      <span>👤 {{ reserva.nombre_cliente || 'Cliente' }}</span>
+                      <span>📞 {{ reserva.telefono_cliente || 'N/A' }}</span>
+                      <span v-if="reserva.carga">📦 Carga: {{ reserva.carga }}</span>
                       <span>🚚 Ayudante: {{ reserva.ayudante ? 'Sí' : 'No' }}</span>
                     </div>
                   </div>
                   
                   <div class="flex flex-col space-y-2 ml-4">
-                    <button @click="aceptarReserva(reserva)" 
+                    <button @click="completarReserva(reserva)" 
                             v-if="reserva.estado === 'asignado'"
                             class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
-                      ✅ Aceptar
+                      ✅ Completado
                     </button>
                     <button @click="rechazarReserva(reserva)" 
                             v-if="reserva.estado === 'asignado'"
@@ -97,6 +98,9 @@
 import { ref, onMounted } from 'vue'
 import { API_BASE_URL } from '../../config/api.js'
 import Sidebar from '../../components/Sidebar.vue'
+import { useSidebar } from '../../composables/useSidebar.js'
+
+const { updateReservasCount } = useSidebar()
 
 const sidebar = ref(null)
 const reservas = ref([])
@@ -110,18 +114,51 @@ const toggleSidebar = () => {
 
 const loadReservas = async () => {
   try {
+    console.log('🚀 [ConductorReservas] Iniciando carga de reservas...')
     loading.value = true
+    
     const usuario = JSON.parse(localStorage.getItem('usuario'))
-    if (!usuario) return
+    console.log('👤 [ConductorReservas] Usuario desde localStorage:', usuario)
+    
+    if (!usuario) {
+      console.log('❌ [ConductorReservas] No hay usuario en localStorage')
+      return
+    }
 
-    const response = await fetch(`${API_BASE_URL}/api/conductor/reservas/${usuario.id}`)
+    const url = `${API_BASE_URL}/api/conductor/reservas/${usuario.id}`
+    console.log('🌐 [ConductorReservas] URL de la API:', url)
+    
+    const response = await fetch(url)
+    console.log('📡 [ConductorReservas] Response status:', response.status)
+    console.log('📡 [ConductorReservas] Response ok:', response.ok)
+    
     const data = await response.json()
-    reservas.value = data.reservas || []
+    console.log('📦 [ConductorReservas] Datos recibidos:', data)
+    console.log('📦 [ConductorReservas] Tipo de datos:', typeof data)
+    console.log('📦 [ConductorReservas] Es array?', Array.isArray(data))
+    
+    if (Array.isArray(data)) {
+      reservas.value = data
+      console.log('✅ [ConductorReservas] Reservas cargadas:', data.length, 'elementos')
+    } else if (data.reservas) {
+      reservas.value = data.reservas
+      console.log('✅ [ConductorReservas] Reservas desde data.reservas:', data.reservas.length, 'elementos')
+    } else {
+      reservas.value = []
+      console.log('⚠️ [ConductorReservas] No se encontraron reservas en la respuesta')
+    }
+    
+    console.log('📋 [ConductorReservas] Estado final de reservas:', reservas.value)
+    
+    // Actualizar el sidebar con el nuevo número de reservas
+    await updateReservasCount()
   } catch (error) {
-    console.error('❌ Error al cargar reservas:', error)
+    console.error('❌ [ConductorReservas] Error al cargar reservas:', error)
+    console.error('❌ [ConductorReservas] Error details:', error.message)
     reservas.value = []
   } finally {
     loading.value = false
+    console.log('🏁 [ConductorReservas] Carga de reservas completada')
   }
 }
 
@@ -147,21 +184,42 @@ const formatDate = (dateString) => {
   return new Date(dateString).toLocaleDateString('es-CL')
 }
 
-const aceptarReserva = async (reserva) => {
-  if (confirm(`¿Aceptar la reserva a ${reserva.destino}?`)) {
+const completarReserva = async (reserva) => {
+  if (confirm(`¿Marcar como completada la reserva a ${reserva.destino}?`)) {
     try {
-      const response = await fetch(`${API_BASE_URL}/api/reservas/${reserva.id}/estado`, {
-        method: 'PUT',
+      console.log('✅ [ConductorReservas] Marcando reserva como completada:', reserva.id)
+      
+      // Determinar la URL correcta según el tipo de flete
+      let url = ''
+      let method = 'PUT'
+      
+      if (reserva.tipo_flete === 'admin') {
+        url = `${API_BASE_URL}/api/admin/fletes/${reserva.id}/estado`
+        method = 'POST' // Admin fletes usa POST
+      } else {
+        url = `${API_BASE_URL}/api/reservas/${reserva.id}/estado`
+        method = 'PUT' // Reservas normales usa PUT
+      }
+      
+      console.log(`🌐 [ConductorReservas] URL: ${url}, Method: ${method}`)
+      
+      const response = await fetch(url, {
+        method: method,
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ estado: 'confirmado' })
+        body: JSON.stringify({ estado: 'completado' })
       })
       
       const data = await response.json()
-      if (data.success) {
+      console.log('📡 [ConductorReservas] Respuesta del servidor:', data)
+      
+      if (data.success || response.ok) {
+        console.log('✅ [ConductorReservas] Reserva marcada como completada exitosamente')
         await loadReservas()
+      } else {
+        console.error('❌ [ConductorReservas] Error del servidor:', data)
       }
     } catch (error) {
-      console.error('❌ Error al aceptar reserva:', error)
+      console.error('❌ [ConductorReservas] Error al completar reserva:', error)
     }
   }
 }
@@ -191,6 +249,7 @@ const verDetalles = (reserva) => {
 }
 
 onMounted(() => {
+  console.log('🎯 [ConductorReservas] Componente montado, iniciando carga de reservas...')
   loadReservas()
 })
 </script>

@@ -13,7 +13,17 @@ async function cargarConductores() {
     if (rows && rows.length) {
       return rows.map(c => {
         let numero = String(c.numero || '').replace(/\s+/g, '');
-        if (!numero.endsWith('@c.us')) numero += '@c.us';
+        // Si ya está en formato @c.us, dejarlo como está
+        if (numero.endsWith('@c.us')) {
+          return { nombre: c.nombre || 'Conductor', numero };
+        }
+        // Si no, normalizarlo
+        if (!numero.startsWith('56')) {
+          if (numero.startsWith('9') || numero.startsWith('2')) {
+            numero = '56' + numero;
+          }
+        }
+        numero += '@c.us';
         return { nombre: c.nombre || 'Conductor', numero };
       });
     }
@@ -25,7 +35,14 @@ async function cargarConductores() {
   let conductores = JSON.parse(rawData);
   conductores = conductores.map(c => {
     let numero = c.numero.toString().replace(/\s+/g, '');
-    if (!numero.endsWith('@c.us')) numero += '@c.us';
+    if (!numero.endsWith('@c.us')) {
+      if (!numero.startsWith('56')) {
+        if (numero.startsWith('9') || numero.startsWith('2')) {
+          numero = '56' + numero;
+        }
+      }
+      numero += '@c.us';
+    }
     return { ...c, numero };
   });
   return conductores;
@@ -109,8 +126,24 @@ async function manejarRespuestaConductor(message, client) {
         console.error('❌ Error guardando asignación:', err);
       }
 
-      client.sendMessage(message.from, `✅ *Flete asignado a ti*\n\n        🆔 ID: ${fleteId}\n        👤 Cliente: ${clienteLinea || 'Cliente'}\n        📞 Teléfono: ${telefonoLinea || 'N/D'}\n        📍 Origen: ${flete.origen}\n        📦 Destino: ${flete.destino}\n        📦 Carga: ${flete.carga}\n        👥 Ayudante: ${flete.ayudante ? 'Sí' : 'No'}${programado}\n        💰 Tu pago: $${Math.round(Number(flete.precio || 0) * 0.9).toLocaleString()} CLP`)
+      // Preparar datos del mensaje de confirmación
+      const clienteLinea = flete.nombre || flete.cliente || 'Cliente';
+      const telefonoLinea = flete.telefono || flete.clienteTelefono || 'N/D';
+      const programado = flete.programadoPara ? `\n        🗓️ Programado: ${new Date(flete.programadoPara).toLocaleString('es-CL')}` : '';
+      const pagoConductor = Math.round(Number(flete.precio || 0) * 0.9);
+      
+      const mensajeConfirmacion = `✅ *Flete asignado a ti*\n\n🆔 ID: ${fleteId}\n👤 Cliente: ${clienteLinea}\n📞 Teléfono: ${telefonoLinea}\n📍 Origen: ${flete.origen}\n📦 Destino: ${flete.destino}\n📦 Carga: ${flete.carga}\n👥 Ayudante: ${flete.ayudante ? 'Sí' : 'No'}${programado}\n💰 Tu pago: $${pagoConductor.toLocaleString()} CLP\n\n¡Contacta al cliente para coordinar el flete!`;
+      
+      client.sendMessage(message.from, mensajeConfirmacion)
         .catch(err => console.error('❌ Error al notificar conductor asignado:', err));
+    } else if (flete && flete.asignado) {
+      // Flete ya asignado a otro conductor
+      client.sendMessage(message.from, '⚠️ *Flete ya asignado*\n\nEste flete ya fue tomado por otro conductor. Estaremos enviando nuevas oportunidades pronto.')
+        .catch(err => console.error('❌ Error al notificar flete asignado:', err));
+    } else {
+      // No hay fletes pendientes
+      client.sendMessage(message.from, 'ℹ️ *No hay fletes pendientes*\n\nActualmente no tienes solicitudes de fletes pendientes.')
+        .catch(err => console.error('❌ Error al notificar sin fletes:', err));
     }
   }
 }

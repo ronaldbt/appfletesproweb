@@ -178,6 +178,9 @@
 import { ref, onMounted } from 'vue'
 import { API_BASE_URL } from '../../config/api.js'
 import Sidebar from '../../components/Sidebar.vue'
+import { useSidebar } from '../../composables/useSidebar.js'
+
+const { setSidebarRef } = useSidebar()
 
 const fletes = ref([])
 const sidebar = ref(null)
@@ -315,6 +318,9 @@ const verDetalles = (flete) => {
 }
 
 onMounted(async () => {
+  // Configurar referencia del sidebar
+  setSidebarRef(sidebar.value)
+  
   await Promise.all([
     loadConductorInfo(),
     loadFletes(),

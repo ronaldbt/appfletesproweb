@@ -8,27 +8,46 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
 import HeaderBar from './components/Header.vue'
 
 const router = useRouter()
-// Inicializar inmediatamente desde localStorage para evitar parpadeo del Header
-const usuario = ref(null)
-try {
-  const datos = localStorage.getItem('usuario')
-  usuario.value = datos ? JSON.parse(datos) : null
-} catch { usuario.value = null }
+const route = useRoute()
+
+// Función para obtener usuario del localStorage
+const getUsuarioFromStorage = () => {
+  try {
+    const datos = localStorage.getItem('usuario')
+    return datos ? JSON.parse(datos) : null
+  } catch { 
+    return null 
+  }
+}
+
+// Inicializar usuario desde localStorage
+const usuario = ref(getUsuarioFromStorage())
 
 // Mantener sincronizado si cambia desde otras pestañas
 const onStorage = (e) => {
   if (e.key === 'usuario') {
-    try { usuario.value = e.newValue ? JSON.parse(e.newValue) : null } catch { usuario.value = null }
+    try { 
+      usuario.value = e.newValue ? JSON.parse(e.newValue) : null 
+    } catch { 
+      usuario.value = null 
+    }
   }
 }
 
+// Actualizar usuario cuando cambia la ruta (para detectar login/logout)
+watch(route, () => {
+  usuario.value = getUsuarioFromStorage()
+}, { immediate: true })
+
 onMounted(() => {
   window.addEventListener('storage', onStorage)
+  // Verificar usuario al montar
+  usuario.value = getUsuarioFromStorage()
 })
 
 onBeforeUnmount(() => {
@@ -37,8 +56,8 @@ onBeforeUnmount(() => {
 
 function cerrarSesion() {
   localStorage.removeItem('usuario')
+  usuario.value = null
   router.push('/')
-  location.reload()
 }
 </script>
 

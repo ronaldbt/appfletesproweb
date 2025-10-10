@@ -34,53 +34,145 @@ import ConductorHistorial from '../views/conductor/ConductorHistorial.vue'
 import ClientePagos from '../views/cliente/ClientePagos.vue'
 
 const routes = [
+  // Rutas públicas (sin autenticación requerida)
   {
     path: '/',
     name: 'Home',
-    component: HomeView
+    component: HomeView,
+    meta: { requiresAuth: false, publicOnly: true }
   },
   {
     path: '/gracias',
     name: 'Gracias',
-    component: GraciasView
+    component: GraciasView,
+    meta: { requiresAuth: false }
   },
   {
     path: '/no-disponible',
     name: 'NoDisponible',
-    component: NoDisponibleView
+    component: NoDisponibleView,
+    meta: { requiresAuth: false }
   },
   {
     path: '/login',
     name: 'Login',
-    component: LoginView
+    component: LoginView,
+    meta: { requiresAuth: false, publicOnly: true }
   },
   {
     path: '/register',
     name: 'Register',
-    component: RegisterView
+    component: RegisterView,
+    meta: { requiresAuth: false, publicOnly: true }
   },
+  
+  // Rutas de Cliente (protegidas)
   {
     path: '/dashboard-cliente',
     name: 'DashboardCliente',
-    component: DashboardClienteView
+    component: DashboardClienteView,
+    meta: { requiresAuth: true, roles: ['cliente'] }
   },
+  {
+    path: '/cliente/reservas',
+    name: 'ClienteReservas',
+    component: ClienteReservas,
+    meta: { requiresAuth: true, roles: ['cliente'] }
+  },
+  {
+    path: '/cliente/perfil',
+    name: 'ClientePerfil',
+    component: ClientePerfil,
+    meta: { requiresAuth: true, roles: ['cliente'] }
+  },
+  {
+    path: '/cliente/pagos',
+    name: 'ClientePagos',
+    component: ClientePagos,
+    meta: { requiresAuth: true, roles: ['cliente'] }
+  },
+  
+  // Rutas de Conductor (protegidas)
   {
     path: '/dashboard-conductor',
     name: 'DashboardConductor',
-    component: DashboardConductorView
+    component: DashboardConductorView,
+    meta: { requiresAuth: true, roles: ['conductor'] }
   },
+  {
+    path: '/conductor/rutas',
+    name: 'ConductorRutas',
+    component: ConductorRutas,
+    meta: { requiresAuth: true, roles: ['conductor'] }
+  },
+  {
+    path: '/conductor/reservas',
+    name: 'ConductorReservas',
+    component: ConductorReservas,
+    meta: { requiresAuth: true, roles: ['conductor'] }
+  },
+  {
+    path: '/conductor/perfil',
+    name: 'ConductorPerfil',
+    component: ConductorPerfil,
+    meta: { requiresAuth: true, roles: ['conductor'] }
+  },
+  {
+    path: '/conductor/historial',
+    name: 'ConductorHistorial',
+    component: ConductorHistorial,
+    meta: { requiresAuth: true, roles: ['conductor'] }
+  },
+  
+  // Rutas de Admin (protegidas)
   {
     path: '/dashboard-admin',
     name: 'DashboardAdmin',
     component: AdminLayout,
+    meta: { requiresAuth: true, roles: ['admin'] },
     children: [
-      { path: '', name: 'DashboardAdminHome', component: DashboardAdminView },
-      { path: 'usuarios', name: 'AdminUsuarios', component: AdminUsuarios },
-      { path: 'reservas', name: 'AdminReservas', component: AdminReservas },
-      { path: 'fletes', name: 'AdminFletes', component: AdminFletes },
-      { path: 'conductores', name: 'AdminConductores', component: AdminConductores },
-      { path: 'pagos', name: 'AdminPagos', component: AdminPagos },
-      { path: 'configuracion', name: 'AdminConfiguracion', component: AdminConfiguracion }
+      { 
+        path: '', 
+        name: 'DashboardAdminHome', 
+        component: DashboardAdminView,
+        meta: { requiresAuth: true, roles: ['admin'] }
+      },
+      { 
+        path: 'usuarios', 
+        name: 'AdminUsuarios', 
+        component: AdminUsuarios,
+        meta: { requiresAuth: true, roles: ['admin'] }
+      },
+      { 
+        path: 'reservas', 
+        name: 'AdminReservas', 
+        component: AdminReservas,
+        meta: { requiresAuth: true, roles: ['admin'] }
+      },
+      { 
+        path: 'fletes', 
+        name: 'AdminFletes', 
+        component: AdminFletes,
+        meta: { requiresAuth: true, roles: ['admin'] }
+      },
+      { 
+        path: 'conductores', 
+        name: 'AdminConductores', 
+        component: AdminConductores,
+        meta: { requiresAuth: true, roles: ['admin'] }
+      },
+      { 
+        path: 'pagos', 
+        name: 'AdminPagos', 
+        component: AdminPagos,
+        meta: { requiresAuth: true, roles: ['admin'] }
+      },
+      { 
+        path: 'configuracion', 
+        name: 'AdminConfiguracion', 
+        component: AdminConfiguracion,
+        meta: { requiresAuth: true, roles: ['admin'] }
+      }
     ]
   },
   
@@ -88,53 +180,62 @@ const routes = [
   { path: '/admin/usuarios', redirect: { name: 'AdminUsuarios' } },
   { path: '/admin/reservas', redirect: { name: 'AdminReservas' } },
   { path: '/admin/fletes', redirect: { name: 'AdminFletes' } },
-  { path: '/admin/conductores', redirect: { name: 'AdminConductores' } },
-  
-  // Rutas de Cliente
-  {
-    path: '/cliente/reservas',
-    name: 'ClienteReservas',
-    component: ClienteReservas
-  },
-  {
-    path: '/cliente/perfil',
-    name: 'ClientePerfil',
-    component: ClientePerfil
-  },
-  
-  // Rutas de Conductor
-  {
-    path: '/conductor/rutas',
-    name: 'ConductorRutas',
-    component: ConductorRutas
-  },
-  {
-    path: '/conductor/reservas',
-    name: 'ConductorReservas',
-    component: ConductorReservas
-  },
-  {
-    path: '/conductor/perfil',
-    name: 'ConductorPerfil',
-    component: ConductorPerfil
-  },
-  {
-    path: '/conductor/historial',
-    name: 'ConductorHistorial',
-    component: ConductorHistorial
-  },
-  
-  // Rutas adicionales de Cliente
-  {
-    path: '/cliente/pagos',
-    name: 'ClientePagos',
-    component: ClientePagos
-  }
+  { path: '/admin/conductores', redirect: { name: 'AdminConductores' } }
 ]
 
 const router = createRouter({
   history: createWebHistory(),
   routes
+})
+
+// Navigation Guard - Sistema completo de protección de rutas
+router.beforeEach((to, from, next) => {
+  // Obtener usuario del localStorage
+  let usuario = null
+  try {
+    const userData = localStorage.getItem('usuario')
+    usuario = userData ? JSON.parse(userData) : null
+  } catch (e) {
+    usuario = null
+  }
+
+  // Verificar si la ruta requiere autenticación
+  const requiresAuth = to.matched.some(record => record.meta.requiresAuth)
+  const publicOnly = to.matched.some(record => record.meta.publicOnly)
+  const allowedRoles = to.meta.roles || []
+
+  // Función helper para obtener el dashboard según el rol
+  const getDashboardByRole = (role) => {
+    switch(role) {
+      case 'admin': return '/dashboard-admin'
+      case 'conductor': return '/dashboard-conductor'
+      case 'cliente': return '/dashboard-cliente'
+      default: return '/login'
+    }
+  }
+
+  // CASO 1: Ruta pública solo para usuarios NO logueados (login, register, home)
+  if (publicOnly && usuario) {
+    const dashboard = getDashboardByRole(usuario.tipo)
+    return next(dashboard)
+  }
+
+  // CASO 2: Ruta protegida - requiere autenticación
+  if (requiresAuth) {
+    // Usuario no está logueado
+    if (!usuario) {
+      return next('/login')
+    }
+
+    // Usuario logueado pero sin el rol correcto
+    if (allowedRoles.length > 0 && !allowedRoles.includes(usuario.tipo)) {
+      const dashboard = getDashboardByRole(usuario.tipo)
+      return next(dashboard)
+    }
+  }
+
+  // CASO 3: Permitir navegación normal
+  next()
 })
 
 export default router

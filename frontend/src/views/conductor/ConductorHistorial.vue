@@ -152,9 +152,11 @@
                     </div>
                     
                     <div class="flex items-center space-x-4 text-sm text-gray-500">
-                      <span>👤 {{ flete.cliente_nombre || 'Cliente' }}</span>
+                      <span>👤 {{ flete.nombre_cliente || 'Cliente' }}</span>
+                      <span>📞 {{ flete.telefono_cliente || 'N/A' }}</span>
+                      <span v-if="flete.carga">📦 Carga: {{ flete.carga }}</span>
+                      <span>🚚 Ayudante: {{ flete.ayudante ? 'Sí' : 'No' }}</span>
                       <span>⭐ {{ flete.rating || 'Sin calificar' }}/5</span>
-                      <span>⏱️ {{ flete.tiempo_estimado || 'N/A' }}</span>
                     </div>
                   </div>
                 </div>
@@ -194,23 +196,40 @@ const toggleSidebar = () => {
 
 const loadHistorial = async () => {
   try {
+    console.log('📊 [ConductorHistorial] Iniciando carga de historial...')
     loading.value = true
+    
     const usuario = JSON.parse(localStorage.getItem('usuario'))
-    if (!usuario) return
+    console.log('👤 [ConductorHistorial] Usuario:', usuario)
+    
+    if (!usuario) {
+      console.log('❌ [ConductorHistorial] No hay usuario en localStorage')
+      return
+    }
 
     const params = new URLSearchParams(filtro.value)
-    const response = await fetch(`${API_BASE_URL}/api/conductor/historial/${usuario.id}?${params}`)
+    const url = `${API_BASE_URL}/api/conductor/historial/${usuario.id}?${params}`
+    console.log('🌐 [ConductorHistorial] URL:', url)
+    
+    const response = await fetch(url)
+    console.log('📡 [ConductorHistorial] Response status:', response.status)
+    
     const data = await response.json()
+    console.log('📦 [ConductorHistorial] Datos recibidos:', data)
     
     historial.value = data.historial || []
+    console.log(`📋 [ConductorHistorial] Historial cargado: ${historial.value.length} elementos`)
+    
     if (data.stats) {
       stats.value = data.stats
+      console.log('📊 [ConductorHistorial] Estadísticas:', data.stats)
     }
   } catch (error) {
-    console.error('❌ Error al cargar historial:', error)
+    console.error('❌ [ConductorHistorial] Error al cargar historial:', error)
     historial.value = []
   } finally {
     loading.value = false
+    console.log('🏁 [ConductorHistorial] Carga de historial completada')
   }
 }
 

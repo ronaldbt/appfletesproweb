@@ -63,7 +63,10 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import { getMenuItems } from '../config/sidebarConfig.js'
+import { getMenuItems, updateMenuBadges } from '../config/sidebarConfig.js'
+import { useSidebar } from '../composables/useSidebar.js'
+
+const { sidebarRef, reservasCount: globalReservasCount } = useSidebar()
 
 const router = useRouter()
 const isOpen = ref(false)
@@ -97,7 +100,17 @@ const userInitials = computed(() => {
 })
 
 const menuItems = computed(() => {
-  return getMenuItems(props.userRole)
+  const baseMenu = getMenuItems(props.userRole)
+  
+  // Si es conductor, actualizar el badge de reservas
+  if (props.userRole === 'conductor') {
+    const badges = {
+      '/conductor/reservas': globalReservasCount.value > 0 ? globalReservasCount.value.toString() : null
+    }
+    return updateMenuBadges(props.userRole, badges)
+  }
+  
+  return baseMenu
 })
 
 // Métodos
@@ -114,17 +127,42 @@ const logout = () => {
   router.push('/login')
 }
 
+// Función para cargar el número de reservas del conductor
+const loadReservasCount = async () => {
+  if (props.userRole !== 'conductor' || !userData.value) return
+  
+  try {
+    console.log('🔢 [Sidebar] Cargando número de reservas para conductor...')
+    const response = await fetch(`https://api.fletespro.cl/api/conductor/reservas/${userData.value.id}`)
+    const data = await response.json()
+    
+    if (Array.isArray(data)) {
+      globalReservasCount.value = data.length
+      console.log(`🔢 [Sidebar] Reservas encontradas: ${globalReservasCount.value}`)
+    }
+  } catch (error) {
+    console.error('❌ [Sidebar] Error al cargar número de reservas:', error)
+    globalReservasCount.value = 0
+  }
+}
+
 // Cargar datos del usuario al montar
-onMounted(() => {
+onMounted(async () => {
   const storedUser = localStorage.getItem('usuario')
   if (storedUser) {
     userData.value = JSON.parse(storedUser)
+    
+    // Si es conductor, cargar el número de reservas
+    if (props.userRole === 'conductor') {
+      await loadReservasCount()
+    }
   }
 })
 
 // Exponer métodos para el componente padre
 defineExpose({
   toggleSidebar,
-  closeSidebar
+  closeSidebar,
+  loadReservasCount
 })
 </script>
