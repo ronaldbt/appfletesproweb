@@ -247,13 +247,13 @@ const destinoPlace = ref(null)
 const backendURL = import.meta.env.VITE_BACKEND_URL
 
 // Computed para precio base y final
-const precioBase = computed(() => precio.value || 0)
+const precioBase = computed(() => Math.round(precio.value || 0))
 const precioFinal = computed(() => {
   let total = precioBase.value
   if (ayudante.value === 'sí') {
     total += 10000
   }
-  return total
+  return Math.round(total)
 })
 
 // Fecha mínima (ahora)
@@ -408,8 +408,8 @@ async function enviarReserva() {
     destino: direccionDestino.value,
     carga: carga.value,
     ayudante: ayudante.value === 'sí',
-    precio: precioFinal.value,
-    nota: `Distancia: ${distancia.value.toFixed(2)} km`,
+    precio: Math.round(precioFinal.value), // Redondear a entero
+    nota: `Distancia: ${distancia.value.toFixed(2)} km | Email: ${email.value || 'No proporcionado'}`,
     clienteNombre: nombre.value,
     clienteTelefono: telefono.value,
     programadoPara: fechaProgramada.value,
