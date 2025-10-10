@@ -402,24 +402,25 @@ async function enviarReserva() {
 
   enviando.value = true
 
-  // 📦 Crear cuerpo del POST con todos los campos
+  // 📦 Crear cuerpo del POST usando el mismo formato que AdminFletes
   const body = {
-    nombre: nombre.value,
-    telefono: telefono.value,
-    email: email.value || null,
     origen: direccionOrigen.value,
     destino: direccionDestino.value,
-    precio: precioFinal.value,
     carga: carga.value,
     ayudante: ayudante.value === 'sí',
-    programado_para: fechaProgramada.value,
-    distancia_km: distancia.value
+    precio: precioFinal.value,
+    nota: `Distancia: ${distancia.value.toFixed(2)} km`,
+    clienteNombre: nombre.value,
+    clienteTelefono: telefono.value,
+    programadoPara: fechaProgramada.value,
+    creadoPor: 'cliente_web'
   }
 
-  console.log('📦 [FleteCalculator] Enviando reserva:', body)
+  console.log('📦 [FleteCalculator] Enviando flete a conductores:', body)
 
   try {
-    const res = await fetch(backendURL+'/api/reservar', {
+    // Usar la misma ruta que AdminFletes
+    const res = await fetch('https://api.fletespro.cl/api/admin/fletes/send', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body)
@@ -428,31 +429,28 @@ async function enviarReserva() {
     const data = await res.json()
     console.log('✅ [FleteCalculator] Respuesta del servidor:', data)
 
-    if (data.url) {
-      // Guardar data en localStorage
-      localStorage.setItem('flete_nombre', nombre.value)
-      localStorage.setItem('flete_destino', direccionDestino.value)
-      localStorage.setItem('flete_email', email.value)
-      localStorage.setItem('flete_id', data.fleteId)
-      localStorage.setItem('flete_carga', carga.value)
-      localStorage.setItem('flete_ayudante', ayudante.value)
-
-      // Abrir ventana de pago
-      window.open(data.url, '_blank')
-      
-      // Mostrar confirmación
-      alert('✅ ¡Solicitud enviada! Tu flete ha sido registrado y enviado a conductores verificados. Te contactarán pronto por WhatsApp.')
-      
-      // Limpiar formulario
-      resetFormulario()
-      
-      // Redirigir a página de gracias si existe
-      // router.push('/gracias')
-    } else {
-      // Solicitud guardada pero sin URL de pago
-      alert('✅ ¡Solicitud registrada! Un conductor te contactará pronto por WhatsApp.')
-      resetFormulario()
+    if (!res.ok || !data.success) {
+      throw new Error(data.error || 'Error al enviar el flete')
     }
+
+    // ✅ Solicitud enviada exitosamente
+    console.log(`✅ Flete creado con ID: ${data.fleteId}`)
+    
+    // Guardar info en localStorage
+    localStorage.setItem('ultimo_flete_id', data.fleteId)
+    localStorage.setItem('ultimo_flete_nombre', nombre.value)
+    
+    // Mostrar mensaje de éxito
+    alert(`✅ ¡Solicitud enviada exitosamente!
+    
+📦 ID del Flete: ${data.fleteId}
+🚛 Tu flete ha sido enviado a todos los conductores disponibles
+📱 Un conductor te contactará pronto por WhatsApp al ${telefono.value}
+    
+¡Gracias por usar FletesPro!`)
+    
+    // Limpiar formulario
+    resetFormulario()
   } catch (error) {
     console.error('❌ [FleteCalculator] Error al enviar reserva:', error)
     alert('❌ Hubo un error al procesar tu solicitud. Por favor intenta nuevamente.')
