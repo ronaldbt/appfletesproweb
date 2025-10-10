@@ -1,11 +1,11 @@
 <template>
-  <div class="min-h-screen bg-gray-900">
+  <div class="min-h-screen bg-white text-gray-900">
     <!-- Sidebar -->
     <Sidebar :userRole="'cliente'" ref="sidebar" />
     
     <!-- Botón toggle para móvil -->
     <button @click="toggleSidebar" 
-            class="fixed top-4 left-4 z-50 lg:hidden bg-blue-600 text-white p-2 rounded-lg shadow-lg">
+            class="fixed top-4 left-4 z-50 lg:hidden bg-green-600 text-white p-2 rounded-lg shadow-lg">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
       </svg>
@@ -13,19 +13,19 @@
 
     <!-- Contenido principal -->
     <div class="lg:ml-64 transition-all duration-300">
-      <div class="max-w-4xl mx-auto p-6 text-white">
-        <h1 class="text-3xl font-bold mb-6">👤 Mi Perfil</h1>
+      <div class="max-w-4xl mx-auto p-6">
+        <h1 class="text-3xl font-bold text-green-700 mb-6">👤 Mi Perfil</h1>
 
         <!-- Información del perfil -->
-        <div class="bg-gray-800 p-6 rounded-lg shadow-lg mb-6">
+        <div class="bg-white border border-gray-200 rounded-xl shadow-sm p-6 mb-6">
           <div class="flex items-center mb-6">
-            <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center">
+            <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center text-white">
               <span class="text-2xl font-bold">{{ getInitials(usuario.nombre) }}</span>
             </div>
             <div class="ml-6">
-              <h2 class="text-2xl font-bold text-white">{{ usuario.nombre }}</h2>
-              <p class="text-gray-400">Cliente FletesPro</p>
-              <p class="text-sm text-gray-500">Miembro desde {{ formatDate(usuario.creado_en) }}</p>
+              <h2 class="text-2xl font-bold text-gray-900">{{ usuario.nombre }}</h2>
+              <p class="text-gray-500">Cliente FletesPro</p>
+              <p class="text-sm text-gray-400">Miembro desde {{ formatDate(usuario.creado_en) }}</p>
             </div>
           </div>
 
@@ -33,35 +33,35 @@
           <form @submit.prevent="updatePerfil" class="space-y-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label class="block text-sm font-medium mb-2">Nombre Completo</label>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Nombre Completo</label>
                 <input v-model="form.nombre" 
                        type="text"
                        required
-                       class="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                       class="w-full p-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
               </div>
               
               <div>
-                <label class="block text-sm font-medium mb-2">Email</label>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
                 <input v-model="form.email" 
                        type="email"
                        required
-                       class="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                       class="w-full p-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
               </div>
               
               <div>
-                <label class="block text-sm font-medium mb-2">Teléfono</label>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Teléfono</label>
                 <input v-model="form.telefono" 
                        type="tel"
                        placeholder="+56 9 1234 5678"
-                       class="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                       class="w-full p-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
               </div>
               
               <div>
-                <label class="block text-sm font-medium mb-2">Nueva Contraseña</label>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Nueva Contraseña</label>
                 <input v-model="form.password" 
                        type="password"
                        placeholder="Dejar vacío para mantener actual"
-                       class="w-full p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                       class="w-full p-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
               </div>
             </div>
 
@@ -69,11 +69,11 @@
             <div class="flex justify-end space-x-3 pt-4">
               <button type="button" 
                       @click="resetForm"
-                      class="px-4 py-2 bg-gray-600 hover:bg-gray-700 rounded-lg transition">
+                      class="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-lg font-medium transition-colors">
                 Cancelar
               </button>
               <button type="submit" 
-                      class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition">
+                      class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-colors">
                 Guardar Cambios
               </button>
             </div>
@@ -81,32 +81,36 @@
         </div>
 
         <!-- Configuraciones adicionales -->
-        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-4">⚙️ Configuraciones</h3>
+        <div class="bg-white border border-gray-200 rounded-xl shadow-sm p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">⚙️ Configuraciones</h3>
           
           <div class="space-y-4">
-            <div class="flex justify-between items-center">
+            <div class="flex justify-between items-center py-3 border-b border-gray-100">
               <div>
-                <p class="text-white font-medium">Notificaciones por Email</p>
-                <p class="text-sm text-gray-400">Recibir actualizaciones sobre mis reservas</p>
+                <p class="text-gray-900 font-medium">Notificaciones por Email</p>
+                <p class="text-sm text-gray-500">Recibir actualizaciones sobre mis reservas</p>
               </div>
-              <input type="checkbox" v-model="configuraciones.emailNotifications" 
-                     class="w-5 h-5 text-blue-600 bg-gray-700 border-gray-600 rounded">
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" v-model="configuraciones.emailNotifications" class="sr-only peer">
+                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600"></div>
+              </label>
             </div>
             
-            <div class="flex justify-between items-center">
+            <div class="flex justify-between items-center py-3">
               <div>
-                <p class="text-white font-medium">Notificaciones WhatsApp</p>
-                <p class="text-sm text-gray-400">Recibir mensajes de estado por WhatsApp</p>
+                <p class="text-gray-900 font-medium">Notificaciones WhatsApp</p>
+                <p class="text-sm text-gray-500">Recibir mensajes de estado por WhatsApp</p>
               </div>
-              <input type="checkbox" v-model="configuraciones.whatsappNotifications" 
-                     class="w-5 h-5 text-blue-600 bg-gray-700 border-gray-600 rounded">
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" v-model="configuraciones.whatsappNotifications" class="sr-only peer">
+                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-green-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600"></div>
+              </label>
             </div>
           </div>
           
-          <div class="mt-6 pt-4 border-t border-gray-700">
+          <div class="mt-6 pt-4 border-t border-gray-200">
             <button @click="saveConfiguraciones" 
-                    class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg">
+                    class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
               Guardar Configuraciones
             </button>
           </div>

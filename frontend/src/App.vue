@@ -4,6 +4,8 @@
     <main>
       <router-view />
     </main>
+    <!-- Botón flotante de WhatsApp para soporte (visible en todas las vistas) -->
+    <WhatsAppButton />
   </div>
 </template>
 
@@ -11,6 +13,7 @@
 import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import HeaderBar from './components/Header.vue'
+import WhatsAppButton from './components/WhatsAppButton.vue'
 
 const router = useRouter()
 const route = useRoute()

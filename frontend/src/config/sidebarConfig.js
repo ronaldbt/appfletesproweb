@@ -75,17 +75,17 @@ const menuConfigs = {
       name: 'Reservas Asignadas',
       path: '/conductor/reservas',
       icon: icons.reservations,
-      badge: '3' // Ejemplo de badge dinámico
-    },
-    {
-      name: 'Mi Perfil',
-      path: '/conductor/perfil',
-      icon: icons.profile
+      badge: '3' // Badge dinámico
     },
     {
       name: 'Historial',
       path: '/conductor/historial',
       icon: icons.stats
+    },
+    {
+      name: 'Mi Perfil',
+      path: '/conductor/perfil',
+      icon: icons.profile
     }
   ],
 
@@ -106,14 +106,14 @@ const menuConfigs = {
       icon: icons.reservations
     },
     {
-      name: 'Mi Perfil',
-      path: '/cliente/perfil',
-      icon: icons.profile
-    },
-    {
       name: 'Historial de Pagos',
       path: '/cliente/pagos',
       icon: icons.payments
+    },
+    {
+      name: 'Mi Perfil',
+      path: '/cliente/perfil',
+      icon: icons.profile
     }
   ]
 }

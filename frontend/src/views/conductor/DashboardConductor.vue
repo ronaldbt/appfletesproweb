@@ -14,16 +14,73 @@
     <!-- Contenido principal -->
     <div class="lg:ml-64 transition-all duration-300">
       <div class="max-w-7xl mx-auto p-6">
-        <!-- Header -->
-        <div class="flex justify-between items-center mb-6">
-          <h1 class="text-3xl font-bold text-green-700">🚛 Dashboard del Conductor</h1>
-          <div class="text-sm text-gray-500">
-            Bienvenido, {{ conductorInfo?.nombre || 'Conductor' }}
+        <!-- Header con fecha y hora actual -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+          <div>
+            <h1 class="text-3xl font-bold text-green-700">🚛 Centro de Control</h1>
+            <p class="text-sm text-gray-500 mt-1">{{ fechaActual }}</p>
+          </div>
+          <div class="mt-4 md:mt-0 flex items-center space-x-3">
+            <button @click="toggleDisponibilidad" 
+                    :class="['px-4 py-2 rounded-lg font-medium transition-all', 
+                             disponible ? 'bg-green-600 text-white hover:bg-green-700' : 'bg-gray-300 text-gray-700 hover:bg-gray-400']">
+              {{ disponible ? '✅ Disponible' : '⏸️ No Disponible' }}
+            </button>
+            <button @click="loadAllData" 
+                    class="px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors">
+              🔄 Actualizar
+            </button>
           </div>
         </div>
 
-        <!-- Estadísticas -->
+        <!-- Alerta de próximo flete -->
+        <div v-if="proximoFlete" class="bg-yellow-50 border border-yellow-200 rounded-xl p-6 mb-6 shadow-sm">
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div class="ml-4 flex-1">
+              <h3 class="text-lg font-bold text-yellow-800">⚡ Próximo Flete</h3>
+              <p class="text-yellow-700 mt-1">
+                <span class="font-semibold">{{ proximoFlete.origen }}</span> → 
+                <span class="font-semibold">{{ proximoFlete.destino }}</span>
+              </p>
+              <p class="text-sm text-yellow-600 mt-1">
+                🕐 Programado: {{ formatearFechaHora(proximoFlete.programado_para) }}
+              </p>
+              <p class="text-sm text-yellow-600">
+                👤 Cliente: {{ proximoFlete.nombre_cliente || 'Sin especificar' }} | 
+                📞 {{ proximoFlete.telefono_cliente || 'N/A' }}
+              </p>
+              <p class="text-lg font-bold text-green-700 mt-2">
+                💰 Tu ganancia: ${{ Math.round(proximoFlete.precio * 0.9).toLocaleString() }} CLP
+              </p>
+            </div>
+            <button @click="verDetallesFlete(proximoFlete)" 
+                    class="ml-4 bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+              Ver Detalles
+            </button>
+          </div>
+        </div>
+
+        <!-- Métricas del día -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+            <div class="flex items-center">
+              <div class="p-3 bg-orange-100 rounded-lg">
+                <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <div class="ml-4">
+                <p class="text-sm font-medium text-gray-600">Fletes de Hoy</p>
+                <p class="text-2xl font-bold text-gray-900">{{ fletesHoy.length }}</p>
+              </div>
+            </div>
+          </div>
+
           <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div class="flex items-center">
               <div class="p-3 bg-green-100 rounded-lg">
@@ -32,7 +89,7 @@
                 </svg>
               </div>
               <div class="ml-4">
-                <p class="text-sm font-medium text-gray-600">Fletes Activos</p>
+                <p class="text-sm font-medium text-gray-600">Pendientes</p>
                 <p class="text-2xl font-bold text-gray-900">{{ stats.fletesActivos }}</p>
               </div>
             </div>
@@ -46,22 +103,8 @@
                 </svg>
               </div>
               <div class="ml-4">
-                <p class="text-sm font-medium text-gray-600">Ganancia del Mes</p>
-                <p class="text-2xl font-bold text-gray-900">${{ stats.gananciaMes.toLocaleString() }}</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-            <div class="flex items-center">
-              <div class="p-3 bg-yellow-100 rounded-lg">
-                <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
-                </svg>
-              </div>
-              <div class="ml-4">
-                <p class="text-sm font-medium text-gray-600">Fletes Completados</p>
-                <p class="text-2xl font-bold text-gray-900">{{ stats.fletesCompletados }}</p>
+                <p class="text-sm font-medium text-gray-600">Ganancia esta semana</p>
+                <p class="text-2xl font-bold text-gray-900">${{ stats.gananciaSemana?.toLocaleString() || '0' }}</p>
               </div>
             </div>
           </div>
@@ -70,21 +113,69 @@
             <div class="flex items-center">
               <div class="p-3 bg-purple-100 rounded-lg">
                 <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
                 </svg>
               </div>
               <div class="ml-4">
-                <p class="text-sm font-medium text-gray-600">Rating Promedio</p>
+                <p class="text-sm font-medium text-gray-600">Tu Rating</p>
                 <p class="text-2xl font-bold text-gray-900">{{ stats.ratingPromedio }}/5</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Fletes Asignados -->
+        <!-- Acciones rápidas -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          <router-link to="/conductor/reservas" 
+                       class="bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all transform hover:scale-105">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-sm font-medium opacity-90">Ir a</p>
+                <p class="text-xl font-bold mt-1">Reservas Asignadas</p>
+                <p class="text-sm opacity-90 mt-1">{{ stats.fletesActivos }} pendientes</p>
+              </div>
+              <svg class="w-10 h-10 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </div>
+          </router-link>
+
+          <router-link to="/conductor/historial" 
+                       class="bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all transform hover:scale-105">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-sm font-medium opacity-90">Ver</p>
+                <p class="text-xl font-bold mt-1">Historial Completo</p>
+                <p class="text-sm opacity-90 mt-1">{{ stats.fletesCompletados }} completados</p>
+              </div>
+              <svg class="w-10 h-10 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </div>
+          </router-link>
+
+          <router-link to="/conductor/perfil" 
+                       class="bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all transform hover:scale-105">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-sm font-medium opacity-90">Configurar</p>
+                <p class="text-xl font-bold mt-1">Mi Perfil</p>
+                <p class="text-sm opacity-90 mt-1">Datos y vehículo</p>
+              </div>
+              <svg class="w-10 h-10 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </div>
+          </router-link>
+        </div>
+
+        <!-- Fletes Programados para Hoy -->
         <div class="bg-white border border-gray-200 rounded-xl shadow-sm">
-          <div class="p-6 border-b border-gray-200">
-            <h2 class="text-xl font-semibold text-green-700">📋 Fletes Asignados</h2>
+          <div class="p-6 border-b border-gray-200 flex justify-between items-center">
+            <h2 class="text-xl font-semibold text-green-700">📅 Fletes de Hoy</h2>
+            <router-link to="/conductor/reservas" class="text-sm text-green-600 hover:text-green-700 font-medium">
+              Ver todas las reservas →
+            </router-link>
           </div>
           
           <div class="p-6">
@@ -93,16 +184,22 @@
               <p class="mt-2 text-gray-500">Cargando fletes...</p>
             </div>
             
-            <div v-else-if="fletes.length === 0" class="text-center py-12">
+            <div v-else-if="fletesHoy.length === 0" class="text-center py-12">
               <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
               </svg>
-              <h3 class="mt-2 text-sm font-medium text-gray-900">No tienes fletes asignados</h3>
-              <p class="mt-1 text-sm text-gray-500">Los fletes aparecerán aquí cuando tengas reservas asignadas.</p>
+              <h3 class="mt-2 text-sm font-medium text-gray-900">No tienes fletes programados para hoy</h3>
+              <p class="mt-1 text-sm text-gray-500">
+                Tienes <span class="font-semibold text-green-600">{{ stats.fletesActivos }}</span> reservas asignadas para otros días.
+              </p>
+              <router-link to="/conductor/reservas" 
+                           class="mt-4 inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+                Ver todas las reservas
+              </router-link>
             </div>
             
             <div v-else class="space-y-4">
-              <div v-for="flete in fletes" :key="flete.id" 
+              <div v-for="flete in fletesHoy" :key="flete.id" 
                    class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
                 <div class="flex justify-between items-start">
                   <div class="flex-1">
@@ -130,8 +227,9 @@
                     </div>
                     
                     <div class="flex items-center space-x-4 text-sm text-gray-500">
-                      <span>👤 {{ flete.cliente_nombre || 'Cliente' }}</span>
-                      <span>📅 {{ formatDate(flete.fecha) }}</span>
+                      <span>👤 {{ flete.nombre_cliente || 'Cliente' }}</span>
+                      <span>📞 {{ flete.telefono_cliente || 'N/A' }}</span>
+                      <span v-if="flete.carga">📦 {{ flete.carga }}</span>
                       <span>🚚 Ayudante: {{ flete.ayudante ? 'Sí' : 'No' }}</span>
                     </div>
                   </div>
@@ -186,10 +284,16 @@ const fletes = ref([])
 const sidebar = ref(null)
 const loading = ref(false)
 const conductorInfo = ref(null)
+const disponible = ref(true)
+const fechaActual = ref('')
+const proximoFlete = ref(null)
+const fletesHoy = ref([])
+
 const stats = ref({
   fletesActivos: 0,
   gananciaMes: 0,
   fletesCompletados: 0,
+  gananciaSemana: 0,
   ratingPromedio: 4.5
 })
 
@@ -221,12 +325,36 @@ const loadFletes = async () => {
     const usuario = JSON.parse(localStorage.getItem('usuario'))
     if (!usuario) return
 
-    const response = await fetch(`${API_BASE_URL}/api/conductor/fletes/${usuario.id}`)
+    const response = await fetch(`${API_BASE_URL}/api/conductor/reservas/${usuario.id}`)
     const data = await response.json()
-    fletes.value = data.fletes || []
+    fletes.value = Array.isArray(data) ? data : []
+    
+    // Filtrar fletes de hoy
+    const hoy = new Date()
+    hoy.setHours(0, 0, 0, 0)
+    const mañana = new Date(hoy)
+    mañana.setDate(mañana.getDate() + 1)
+    
+    fletesHoy.value = fletes.value.filter(f => {
+      if (!f.programado_para) return false
+      const fechaFlete = new Date(f.programado_para)
+      return fechaFlete >= hoy && fechaFlete < mañana
+    })
+    
+    // Obtener el próximo flete (el más cercano en el tiempo)
+    const fletesOrdenados = [...fletes.value].sort((a, b) => {
+      const fechaA = new Date(a.programado_para || a.fecha)
+      const fechaB = new Date(b.programado_para || b.fecha)
+      return fechaA - fechaB
+    })
+    proximoFlete.value = fletesOrdenados.length > 0 ? fletesOrdenados[0] : null
+    
+    console.log(`📅 Fletes de hoy: ${fletesHoy.value.length}`)
+    console.log(`⏰ Próximo flete:`, proximoFlete.value ? proximoFlete.value.id : 'Ninguno')
   } catch (error) {
     console.error('❌ Error al cargar fletes:', error)
     fletes.value = []
+    fletesHoy.value = []
   } finally {
     loading.value = false
   }
@@ -240,10 +368,74 @@ const loadStats = async () => {
 
     const response = await fetch(`${API_BASE_URL}/api/conductor/stats/${usuario.id}`)
     const data = await response.json()
-    stats.value = data.stats || stats.value
+    
+    // Calcular ganancia de la semana basada en fletes completados
+    const gananciaSemana = fletes.value
+      .filter(f => {
+        if (f.estado !== 'completado') return false
+        const fechaFlete = new Date(f.fecha)
+        const hace7Dias = new Date()
+        hace7Dias.setDate(hace7Dias.getDate() - 7)
+        return fechaFlete >= hace7Dias
+      })
+      .reduce((sum, f) => sum + (f.precio * 0.9), 0)
+    
+    stats.value = { 
+      ...stats.value, 
+      ...(data.stats || data),
+      gananciaSemana: Math.round(gananciaSemana)
+    }
   } catch (error) {
     console.error('❌ Error al cargar estadísticas:', error)
   }
+}
+
+// Actualizar fecha actual
+const actualizarFechaActual = () => {
+  const opciones = { 
+    weekday: 'long', 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric' 
+  }
+  fechaActual.value = new Date().toLocaleDateString('es-CL', opciones)
+}
+
+// Toggle disponibilidad
+const toggleDisponibilidad = () => {
+  disponible.value = !disponible.value
+  console.log(`🔄 Disponibilidad cambiada a: ${disponible.value ? 'Disponible' : 'No disponible'}`)
+  // TODO: Guardar en backend
+}
+
+// Actualizar todos los datos
+const loadAllData = async () => {
+  console.log('🔄 Actualizando todos los datos...')
+  actualizarFechaActual()
+  await Promise.all([
+    loadConductorInfo(),
+    loadFletes(),
+    loadStats()
+  ])
+}
+
+// Formatear fecha y hora
+const formatearFechaHora = (fechaStr) => {
+  if (!fechaStr) return 'Sin programar'
+  const fecha = new Date(fechaStr)
+  return fecha.toLocaleString('es-CL', {
+    day: 'numeric',
+    month: 'long',
+    hour: '2-digit',
+    minute: '2-digit'
+  })
+}
+
+// Ver detalles del flete
+const verDetallesFlete = (flete) => {
+  console.log('📋 Ver detalles de flete:', flete)
+  // TODO: Implementar modal de detalles
+  alert(`Flete: ${flete.origen} → ${flete.destino}\nCliente: ${flete.nombre_cliente}\nTeléfono: ${flete.telefono_cliente}\nGanancia: $${Math.round(flete.precio * 0.9).toLocaleString()}`)
 }
 
 // Utilidades
@@ -321,11 +513,12 @@ onMounted(async () => {
   // Configurar referencia del sidebar
   setSidebarRef(sidebar.value)
   
-  await Promise.all([
-    loadConductorInfo(),
-    loadFletes(),
-    loadStats()
-  ])
+  // Actualizar fecha y cargar todos los datos
+  actualizarFechaActual()
+  await loadAllData()
+  
+  // Actualizar fecha cada minuto
+  setInterval(actualizarFechaActual, 60000)
 })
 </script>
   
