@@ -158,6 +158,106 @@
                     class="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-50"
                   />
                 </div>
+              </form>
+            </div>
+
+            <!-- Sección de Datos Bancarios -->
+            <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm mt-6">
+              <div class="flex justify-between items-center mb-6">
+                <div>
+                  <h3 class="text-xl font-semibold text-green-700">💳 Datos Bancarios</h3>
+                  <p class="text-sm text-gray-500 mt-1">Para procesar tus pagos semanalmente</p>
+                </div>
+              </div>
+
+              <form @submit.prevent="saveProfile" class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Banco</label>
+                    <select 
+                      v-model="editForm.banco" 
+                      :disabled="!editMode"
+                      class="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-50"
+                    >
+                      <option value="">Seleccionar banco</option>
+                      <option value="banco_chile">Banco de Chile</option>
+                      <option value="banco_estado">Banco Estado</option>
+                      <option value="santander">Santander</option>
+                      <option value="bci">BCI</option>
+                      <option value="scotiabank">Scotiabank</option>
+                      <option value="itau">Itaú</option>
+                      <option value="security">Security</option>
+                      <option value="falabella">Banco Falabella</option>
+                      <option value="ripley">Banco Ripley</option>
+                      <option value="consorcio">Consorcio</option>
+                      <option value="bice">BICE</option>
+                      <option value="otro">Otro</option>
+                    </select>
+                  </div>
+                  
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Tipo de Cuenta</label>
+                    <select 
+                      v-model="editForm.tipo_cuenta" 
+                      :disabled="!editMode"
+                      class="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-50"
+                    >
+                      <option value="">Seleccionar tipo</option>
+                      <option value="cuenta_corriente">Cuenta Corriente</option>
+                      <option value="cuenta_vista">Cuenta Vista</option>
+                      <option value="cuenta_rut">Cuenta RUT</option>
+                      <option value="chequera_electronica">Chequera Electrónica</option>
+                    </select>
+                  </div>
+                  
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Número de Cuenta</label>
+                    <input 
+                      v-model="editForm.numero_cuenta" 
+                      type="text"
+                      :disabled="!editMode"
+                      placeholder="Ingresa el número de cuenta"
+                      class="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-50"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">RUT del Titular</label>
+                    <input 
+                      v-model="editForm.rut_titular" 
+                      type="text"
+                      :disabled="!editMode"
+                      placeholder="12.345.678-9"
+                      class="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-50"
+                    />
+                  </div>
+                  
+                  <div class="md:col-span-2">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Nombre del Titular</label>
+                    <input 
+                      v-model="editForm.nombre_titular" 
+                      type="text"
+                      :disabled="!editMode"
+                      placeholder="Nombre completo del titular de la cuenta"
+                      class="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-50"
+                    />
+                  </div>
+                </div>
+
+                <!-- Información de pagos -->
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-4">
+                  <div class="flex items-start">
+                    <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <div>
+                      <p class="text-sm text-blue-800 font-medium">💸 Información de pagos</p>
+                      <p class="text-sm text-blue-700 mt-1">
+                        Tus ganancias se depositan todos los <strong>miércoles</strong> automáticamente a la cuenta registrada.
+                      </p>
+                    </div>
+                  </div>
+                </div>
                 
                 <div v-if="editMode" class="flex space-x-3">
                   <button 
@@ -178,11 +278,12 @@
                     ❌ Cancelar
                   </button>
                 </div>
-                
-                <div v-if="message" class="mt-3 p-3 rounded-lg" :class="message.includes('Error') ? 'bg-red-50 text-red-800 border border-red-200' : 'bg-green-50 text-green-800 border border-green-200'">
-                  {{ message }}
-                </div>
               </form>
+            </div>
+
+            <!-- Mensaje de estado -->
+            <div v-if="message" class="mt-6 p-4 rounded-lg" :class="message.includes('Error') ? 'bg-red-50 text-red-800 border border-red-200' : 'bg-green-50 text-green-800 border border-green-200'">
+              {{ message }}
             </div>
           </div>
         </div>
@@ -225,7 +326,13 @@ const editForm = ref({
   vehiculo_tipo: '',
   direccion: '',
   zona: '',
-  password: ''
+  password: '',
+  // Datos bancarios
+  banco: '',
+  tipo_cuenta: '',
+  numero_cuenta: '',
+  rut_titular: '',
+  nombre_titular: ''
 })
 
 const toggleSidebar = () => {
@@ -254,7 +361,13 @@ const loadProfile = async () => {
         vehiculo_tipo: data.conductor.vehiculo_tipo || '',
         direccion: data.conductor.direccion || '',
         zona: data.conductor.zona || '',
-        password: ''
+        password: '',
+        // Datos bancarios
+        banco: data.conductor.banco || '',
+        tipo_cuenta: data.conductor.tipo_cuenta || '',
+        numero_cuenta: data.conductor.numero_cuenta || '',
+        rut_titular: data.conductor.rut_titular || data.conductor.rut || '',
+        nombre_titular: data.conductor.nombre_titular || data.conductor.nombre || ''
       }
     }
     
@@ -276,7 +389,12 @@ const loadProfile = async () => {
         vehiculo_tipo: '',
         direccion: '',
         zona: '',
-        password: ''
+        password: '',
+        banco: '',
+        tipo_cuenta: '',
+        numero_cuenta: '',
+        rut_titular: '',
+        nombre_titular: ''
       }
     }
   }

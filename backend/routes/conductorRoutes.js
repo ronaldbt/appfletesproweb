@@ -271,4 +271,114 @@ router.get('/conductor/reservas/:id', async (req, res) => {
   }
 });
 
+// Obtener perfil completo del conductor
+router.get('/conductor/perfil/:id', async (req, res) => {
+  try {
+    const conductorId = req.params.id;
+    
+    // Obtener datos del conductor desde la tabla conductores
+    const result = await db.query(
+      `SELECT c.*, u.email 
+       FROM conductores c
+       JOIN usuarios u ON c.usuario_id = u.id
+       WHERE c.usuario_id = $1`,
+      [conductorId]
+    );
+    
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: 'Conductor no encontrado' });
+    }
+    
+    const conductor = result.rows[0];
+    
+    // Obtener estadísticas
+    const stats = {
+      fletesCompletados: 0,
+      ratingPromedio: 4.5
+    };
+    
+    res.json({ conductor, stats });
+  } catch (error) {
+    console.error('❌ Error al obtener perfil del conductor:', error);
+    res.status(500).json({ error: 'Error interno del servidor' });
+  }
+});
+
+// Actualizar perfil del conductor
+router.put('/conductor/perfil/:id', async (req, res) => {
+  try {
+    const conductorId = req.params.id;
+    const {
+      nombre,
+      email,
+      numero,
+      rut,
+      vehiculo_placa,
+      vehiculo_tipo,
+      direccion,
+      zona,
+      password,
+      // Datos bancarios
+      banco,
+      tipo_cuenta,
+      numero_cuenta,
+      rut_titular,
+      nombre_titular
+    } = req.body;
+    
+    console.log('📝 Actualizando perfil del conductor ID:', conductorId);
+    
+    // Actualizar tabla conductores
+    await db.query(
+      `UPDATE conductores SET 
+        nombre = $1,
+        rut = $2,
+        numero = $3,
+        vehiculo_placa = $4,
+        vehiculo_tipo = $5,
+        direccion = $6,
+        zona = $7,
+        banco = $8,
+        tipo_cuenta = $9,
+        numero_cuenta = $10,
+        rut_titular = $11,
+        nombre_titular = $12,
+        updated_at = NOW()
+       WHERE usuario_id = $13`,
+      [
+        nombre,
+        rut,
+        numero,
+        vehiculo_placa,
+        vehiculo_tipo,
+        direccion,
+        zona,
+        banco,
+        tipo_cuenta,
+        numero_cuenta,
+        rut_titular,
+        nombre_titular,
+        conductorId
+      ]
+    );
+    
+    // Actualizar tabla usuarios si cambió email o contraseña
+    if (email) {
+      await db.query('UPDATE usuarios SET email = $1 WHERE id = $2', [email, conductorId]);
+    }
+    
+    if (password) {
+      const bcrypt = require('bcrypt');
+      const hashedPassword = await bcrypt.hash(password, 10);
+      await db.query('UPDATE usuarios SET password = $1 WHERE id = $2', [hashedPassword, conductorId]);
+    }
+    
+    console.log('✅ Perfil del conductor actualizado exitosamente');
+    res.json({ success: true, message: 'Perfil actualizado correctamente' });
+  } catch (error) {
+    console.error('❌ Error al actualizar perfil del conductor:', error);
+    res.status(500).json({ error: 'Error interno del servidor' });
+  }
+});
+
 module.exports = router;
