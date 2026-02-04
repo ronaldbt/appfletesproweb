@@ -189,7 +189,33 @@ router.get('/admin/stats', async (req, res) => {
     res.json(stats);
   } catch (error) {
     console.error('❌ Error al obtener estadísticas:', error);
-    res.status(500).json({ error: 'Error al obtener estadísticas' });
+    // Devolver estadísticas en cero para que el panel y el sidebar sigan funcionando
+    const fallback = {
+      totalFletes: 0,
+      fletesMes: 0,
+      fletesMesAnterior: 0,
+      fletesCompletados: 0,
+      fletesCancelados: 0,
+      fletesPendientes: 0,
+      conductoresActivos: 0,
+      conductoresInactivos: 0,
+      totalClientes: 0,
+      nuevosClientesMes: 0,
+      tiempoPromedioAsignacion: 0,
+      distanciaTotal: 0,
+      ingresosTotales: 0,
+      ingresosMes: 0,
+      ingresosMesAnterior: 0,
+      gananciaNeta: 0,
+      costoPromedioFlete: 0,
+      pagosPendientes: 0,
+      crecimientoFletes: 0,
+      crecimientoIngresos: 0,
+      fletesPorEstado: [],
+      rutasPopulares: [],
+      actividadReciente: []
+    };
+    res.status(200).json(fallback);
   }
 });
 

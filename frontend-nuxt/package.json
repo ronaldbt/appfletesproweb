@@ -1,0 +1,28 @@
+{
+  "name": "frontend-nuxt",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/content": "^3.10.0",
+    "@nuxtjs/i18n": "^10.2.1",
+    "@pinia/nuxt": "^0.11.3",
+    "better-sqlite3": "^12.6.0",
+    "nuxt": "^4.2.2",
+    "pinia": "^3.0.4",
+    "rehype-slug": "^6.0.0",
+    "vue": "^3.5.26",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@nuxtjs/sitemap": "^7.5.2",
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "sharp": "^0.34.5"
+  }
+}

@@ -1,0 +1,1968 @@
+{
+  "common": {
+    "title": "Fletes y Mudanzas",
+    "subtitle": "Cuidado artesanal y precisión tecnológica. Fletes y mudanzas en Santiago y regiones de Chile.",
+    "cta": "Solicitar Presupuesto",
+    "learnMore": "Saber Más",
+    "contact": "Contactar",
+    "call": "Llamar",
+    "email": "Email",
+    "address": "Dirección",
+    "phone": "Teléfono",
+    "open": "Abrir",
+    "close": "Cerrar",
+    "readMore": "Leer Más",
+    "seeMore": "Ver Más",
+    "less": "Menos",
+    "all": "Todos",
+    "services": "Servicios",
+    "about": "Sobre Nosotros",
+    "testimonials": "Testimonios",
+    "gallery": "Galería",
+    "blog": "Blog",
+    "news": "Noticias",
+    "onlineAssistant": "Asistente en línea",
+    "onlineAssistantTooltip": "¿Necesitas ayuda? Escríbenos por WhatsApp"
+  },
+  "breadcrumbs": {
+    "home": "Inicio",
+    "ultimaMilla": "Última Milla"
+  },
+  "nav": {
+    "mudanzas": "Mudanzas",
+    "embalajes": "Embalajes",
+    "guardamuebles": "Bodegaje",
+    "transporteFrio": "Transporte Frío",
+    "ultimaMilla": "Última Milla",
+    "contacto": "Contacto",
+    "zonas": "Zonas",
+    "login": "Ingresar",
+    "mudanzasParticulares": "Mudanzas Particulares",
+    "mudanzasEmpresas": "Mudanzas Empresas",
+    "mudanzasOficinas": "Mudanzas Oficinas",
+    "mudanzasInternacionales": "Mudanzas Internacionales",
+    "mudanzasUrgentes": "Mudanzas Urgentes",
+    "marbella": "Santiago",
+    "malaga": "Región Metropolitana",
+    "costaDelSol": "Chile",
+    "estepona": "Providencia",
+    "fuengirola": "Las Condes"
+  },
+  "pages": {
+    "index": {
+      "heroTag": "Fletes y Mudanzas en Santiago y Regiones",
+      "title": "Fletes y Mudanzas",
+      "subtitle": "Fletes y mudanzas en Santiago y a regiones de Chile. Empresa de fletes con servicios de mudanzas, transporte de carga y envíos. Precios desde $27.000. Cotiza tu flete online y presupuesto gratis.",
+      "description": "Fletes y mudanzas en Santiago y regiones desde $27.000. Cotiza tu flete online. Presupuesto gratis. Servicio de mudanzas, fletes a regiones y transporte en frío.",
+      "features": {
+        "title": "Por Qué Elegirnos",
+        "subtitle": "Servicios profesionales de fletes y mudanzas en Santiago y regiones",
+        "feature1": {
+          "title": "Profesionales con Experiencia",
+          "description": "Equipo de expertos en fletes y mudanzas. Servicios para particulares, empresas y oficinas en Santiago y a regiones."
+        },
+        "feature2": {
+          "title": "Precios Transparentes",
+          "description": "Cotiza tu flete online con nuestra calculadora. Precio aproximado al instante y presupuesto personalizado sin compromiso."
+        },
+        "feature3": {
+          "title": "Disponibilidad",
+          "description": "Servicio de fletes y mudanzas con respuesta rápida. Atendemos en Santiago, Región Metropolitana y a regiones de Chile."
+        },
+        "feature4": {
+          "title": "Servicio Completo",
+          "description": "Servicio de mudanza completo desde mudanzas pequeñas hasta mudanzas grandes. Mudanzas completas con todo incluido para particulares y empresas."
+        },
+        "feature5": {
+          "title": "Seguro Completo",
+          "description": "Todas nuestras mudanzas incluyen seguro completo para proteger tus pertenencias durante el transporte de muebles y objetos."
+        },
+        "feature6": {
+          "title": "Tracking en Tiempo Real",
+          "description": "Sistema de seguimiento en tiempo real para mudanzas online. Conoce la ubicación de tu mudanza en todo momento."
+        }
+      },
+      "stats": {
+        "title": "Números que Hablan",
+        "stat1": {
+          "value": "5000+",
+          "label": "Mudanzas Completadas"
+        },
+        "stat2": {
+          "value": "98%",
+          "label": "Clientes Satisfechos"
+        },
+        "stat3": {
+          "value": "24/7",
+          "label": "Disponibilidad"
+        },
+        "stat4": {
+          "value": "15+",
+          "label": "Años de Experiencia"
+        }
+      },
+      "process": {
+        "title": "Nuestro Proceso",
+        "subtitle": "Cómo Funciona Nuestro Servicio de Mudanzas",
+        "step1": {
+          "title": "Consulta Online",
+          "description": "Cotizar mudanza online con nuestra calculadora o solicita un presupuesto mudanza personalizado. Precio mudanza aproximado al instante para mudanzas particulares, empresas u oficinas."
+        },
+        "step2": {
+          "title": "Planificación",
+          "description": "Nuestro equipo de empresas de mudanzas profesionales planifica cada detalle de tu mudanza nacional o internacional para asegurar un servicio perfecto."
+        },
+        "step3": {
+          "title": "Transporte",
+          "description": "Transporte de muebles y traslado de muebles seguro con camiones de mudanza adecuados. Servicio de transporte de mudanza profesional y cuidadoso."
+        },
+        "step4": {
+          "title": "Entrega",
+          "description": "Entrega puntual en tu nuevo destino. Completamos tu mudanza con el servicio de mudanza completo que contrataste."
+        },
+        "step5": {
+          "title": "Entrega",
+          "description": "Entrega puntual y montaje de muebles en tu nuevo hogar o negocio."
+        },
+        "step6": {
+          "title": "Seguimiento",
+          "description": "Seguimiento en tiempo real y confirmación de entrega completa."
+        }
+      },
+      "faqs": {
+        "title": "Preguntas Frecuentes sobre Fletes y Mudanzas",
+        "subtitle": "Resolvemos tus dudas sobre servicios de mudanzas, fletes y transporte en Santiago y Región Metropolitana",
+        "faq1": {
+          "question": "¿Cuánto cuesta una mudanza?",
+          "answer": "El precio de una mudanza varía según varios factores: tipo de vivienda (piso, casa, oficina), distancia, volumen de objetos, servicios adicionales (embalaje, montaje) y urgencia. Utiliza nuestra calculadora online para obtener un presupuesto aproximado gratis sin compromiso, o solicita un presupuesto personalizado detallado."
+        },
+        "faq2": {
+          "question": "¿Cómo calcular el precio de una mudanza?",
+          "answer": "Puedes calcular el precio de tu mudanza usando nuestra calculadora online en la página principal. Solo necesitas indicar la ruta (origen y destino), el tipo de vivienda, objetos especiales (pianos, obras de arte) y servicios adicionales. También puedes solicitar un presupuesto personalizado gratuito y sin compromiso para obtener un precio exacto."
+        },
+        "faq3": {
+          "question": "¿Qué incluye el servicio de mudanza profesional?",
+          "answer": "Nuestro servicio de mudanza profesional completo incluye: embalaje profesional con todos los materiales, carga y descarga, transporte seguro con vehículos adecuados, montaje de muebles en el destino, seguro completo de tus pertenencias y seguimiento en tiempo real. También ofrecemos servicios parciales según tus necesidades."
+        },
+        "faq4": {
+          "question": "¿Cómo contratar una mudanza?",
+          "answer": "Para contratar una mudanza con FletesPro, puedes usar nuestra calculadora online para obtener un presupuesto aproximado, solicitar un presupuesto personalizado gratuito, o contactarnos directamente por teléfono o WhatsApp. Una vez acordado el presupuesto, planificamos la fecha de la mudanza y nuestros profesionales se encargan de todo el proceso."
+        },
+        "faq5": {
+          "question": "¿Incluyen el embalaje en el precio de la mudanza?",
+          "answer": "Sí, en nuestros paquetes de mudanza completa incluimos el embalaje profesional sin coste adicional. Nuestro equipo acude a tu domicilio con todos los materiales necesarios (cajas, papel burbuja, film, mantas) y realiza el embalaje completo de tus objetos. También puedes contratar solo el servicio de embalaje si haces la mudanza tú mismo."
+        },
+        "faq6": {
+          "question": "¿Cuánto tiempo tarda una mudanza?",
+          "answer": "El tiempo de una mudanza depende del volumen de objetos, la distancia y la complejidad. Una mudanza local (Santiago, Región Metropolitana) puede durar de 4 a 8 horas para una vivienda estándar. Mudanzas interprovinciales o nacionales pueden durar de 1 a 3 días. Te proporcionamos un horario estimado cuando planificamos tu mudanza."
+        },
+        "faq7": {
+          "question": "¿Ofrecen mudanzas urgentes?",
+          "answer": "Sí, ofrecemos mudanzas urgentes y mudanzas express 24 horas para situaciones que requieren reubicación inmediata. Nuestro equipo está disponible 24/7 para mudanzas urgentes en Santiago y Región Metropolitana. Contacta con nosotros para una cotización urgente y te ayudaremos lo antes posible."
+        },
+        "faq8": {
+          "question": "¿Qué garantías tienen las mudanzas?",
+          "answer": "Todas nuestras mudanzas incluyen seguro completo para proteger tus pertenencias durante el transporte. Además, ofrecemos garantía de satisfacción y responsabilidad civil. Nuestro equipo está formado por profesionales certificados con años de experiencia. Si ocurre algún daño, nuestra póliza de seguro cubre los objetos transportados según nuestras condiciones."
+        },
+        "faq9": {
+          "question": "¿Cuánto cuesta una mudanza pequeña?",
+          "answer": "El precio de una mudanza pequeña varía según la distancia y el volumen. Para mudanzas pequeñas baratas en Santiago y Región Metropolitana, los precios empiezan desde 200€ para estudios o pisos pequeños. Utiliza nuestra calculadora online para obtener el precio mudanza pequeña aproximado o solicita un presupuesto personalizado gratuito."
+        },
+        "faq10": {
+          "question": "¿Cómo funciona el servicio de fletes y mudanzas?",
+          "answer": "Nuestro servicio de fletes y mudanzas ofrece fletes baratos para particulares y empresas. Trabajamos con camiones para mudanzas de diferentes tamaños según tus necesidades. Los fletes económicos incluyen transporte de muebles sueltos, traslado de muebles y servicio de transporte de mudanza completo. Contacta con nosotros para cotizar tu flete."
+        },
+        "faq11": {
+          "question": "¿Ofrecen mudanzas nacionales e internacionales?",
+          "answer": "Sí, ofrecemos tanto mudanzas nacionales como mudanzas internacionales. Para mudanzas nacionales, trabajamos en todo Chile con precios competitivos. En mudanzas internacionales, manejamos la documentación necesaria y coordinamos el traslado de muebles a cualquier país. Solicita un presupuesto para mudanzas nacionales precios o mudanzas internacionales precios según tu destino."
+        },
+        "faq12": {
+          "question": "¿Cuál es el precio de mudanza por hora?",
+          "answer": "El precio mudanza por hora depende del tipo de servicio. Para mudanzas locales pequeñas, el precio mudanza por hora puede estar entre 25€ y 40€ por hora. Para mudanzas empresas o mudanzas oficinas, el precio puede variar. El precio aproximado de mudanza depende del volumen y distancia. Nuestra calculadora online te dará un precio mudanza aproximado, o puedes solicitar un presupuesto detallado con precio mudanza por hora exacto."
+        }
+      },
+      "servicesTypes": {
+        "title": "Tipos de Mudanzas y Servicios",
+        "subtitle": "Servicios completos de mudanzas y fletes para particulares y empresas en Santiago y regiones",
+        "type1": {
+          "title": "Mudanzas Particulares",
+          "description": "Mudanzas particulares y mudanza pequeña con servicio completo para hogares y familias. Ideal para mudanzas baratas particulares y mudanzas pequeñas baratas.",
+          "feature1": "Mudanzas particulares completas",
+          "feature2": "Mudanza pequeña para estudios y pisos",
+          "feature3": "Fletes y mudanzas en Santiago y regiones"
+        },
+        "type2": {
+          "title": "Mudanzas Empresas y Oficinas",
+          "description": "Mudanzas empresas, mudanzas oficinas y mudanzas corporativas con servicio especializado para negocios. Empresas de mudanzas profesionales para mudanzas de oficinas.",
+          "feature1": "Mudanzas empresas con planificación completa",
+          "feature2": "Mudanzas oficinas sin interrumpir tu negocio",
+          "feature3": "Mudanzas corporativas con coordinación precisa"
+        },
+        "type3": {
+          "title": "Mudanzas y Fletes a Regiones",
+          "description": "Fletes y mudanzas a todas las regiones de Chile. Transporte seguro con precios competitivos.",
+          "feature1": "Fletes y mudanzas en todo Chile",
+          "feature2": "Santiago a regiones y entre regiones",
+          "feature3": "Transporte seguro y profesional"
+        },
+        "type4": {
+          "title": "Fletes y Carga",
+          "description": "Fletes y mudanzas con precios competitivos para particulares y empresas. Servicio de fletes en Santiago y a regiones con camiones de todos los tamaños.",
+          "feature1": "Fletes baratos y fletes económicos",
+          "feature2": "Fletes particulares y para empresas",
+          "feature3": "Camiones de mudanza y transporte de carga"
+        },
+        "type5": {
+          "title": "Transporte de Muebles",
+          "description": "Transporte de muebles, transporte de muebles sueltos y traslado de muebles. Servicio de transporte de mudanza profesional para objetos y muebles individuales.",
+          "feature1": "Transporte de muebles sueltos",
+          "feature2": "Traslado de muebles seguro",
+          "feature3": "Transporte de mudanza para objetos específicos"
+        },
+        "type6": {
+          "title": "Trasteos y Mudanzas",
+          "description": "Trasteos, trasteos y mudanzas con servicio completo. Empresa de trasteos nacionales para mudanzas compartidas y mudanzas consolidadas.",
+          "feature1": "Trasteos económicos y rápidos",
+          "feature2": "Trasteos y mudanzas combinadas",
+          "feature3": "Mudanza compartida para reducir costes"
+        }
+      },
+      "pricing": {
+        "title": "Precios de Fletes y Presupuestos",
+        "subtitle": "Transparencia total en precios con calculadora online y presupuesto gratis",
+        "price1": {
+          "title": "Precio Flete por Hora / Región Metropolitana",
+          "description": "Para fletes dentro de la RM el precio de referencia es desde $12.000 + $1.300 por km (sin ayudante). Con ayudante hay un recargo de $7.000. Obtén un precio aproximado con nuestra calculadora online."
+        },
+        "price2": {
+          "title": "Precio Flete Aproximado",
+          "description": "Calcula el precio de tu flete al instante con nuestra calculadora en la página principal. Para fletes a regiones la referencia es distancia × $900 CLP. Solicita presupuesto personalizado para un precio exacto."
+        },
+        "price3": {
+          "title": "Precio Flete por Km (a regiones)",
+          "description": "Para fletes de Santiago a regiones aplicamos un precio por kilómetro de referencia ($900 CLP). El precio final depende del volumen y tipo de carga. Cotiza online o por WhatsApp para tu ruta."
+        },
+        "price4": {
+          "title": "Precios Adaptados a tu Necesidad",
+          "description": "Los precios varían según tipo de servicio (flete sencillo, mudanza, transporte en frío), distancia y volumen. Fletes desde $27.000 para traslados cortos. Usa la calculadora o pide presupuesto gratis."
+        },
+        "ctaText": "Usa nuestra calculadora para cotizar tu flete al instante o solicita un presupuesto personalizado gratuito por WhatsApp.",
+        "ctaButton": "Cotizar Flete Online"
+      }
+    },
+    "guardamuebles": {
+      "description": "Bodegaje y arriendo de bodegas en Santiago y Región Metropolitana. Espacios de almacenamiento climatizados, vigilados 24h. Servicio de recogida a domicilio incluido. Acceso online con usuario y contraseña. Calculadora de bodegaje online. Presupuesto gratis sin compromiso.",
+      "hero": {
+        "badge": "Almacenamiento Seguro y Climatizado",
+        "title": "Bodegaje y Arriendo de Bodegas en Santiago",
+        "subtitle": "Bodegaje y arriendo de bodegas baratos y seguros en Santiago y Región Metropolitana. Espacios de almacenamiento climatizados con acceso 24 horas. Servicio de recogida a domicilio incluido. Acceso online para verificar tus pertenencias siempre."
+      },
+      "pickupService": {
+        "title": "Servicio de Recogida a Domicilio",
+        "subtitle": "No necesitas transportar tus muebles, nosotros vamos a buscarlos",
+        "feature1": "Recogemos tus muebles y pertenencias en tu domicilio",
+        "feature2": "No necesitas transportarlos, nosotros vamos a buscarlos",
+        "feature3": "Servicio de bodegaje a domicilio incluido",
+        "feature4": "Bodegas a domicilio para tu comodidad"
+      },
+      "onlinePlatform": {
+        "title": "Plataforma Online de Gestión",
+        "subtitle": "Accede a tu bodega desde cualquier dispositivo",
+        "feature1": "Acceso online 24/7 con usuario y contraseña",
+        "feature2": "Verifica siempre qué tienes guardado",
+        "feature3": "Consulta tu inventario desde cualquier dispositivo",
+        "feature4": "Gestión completa de tu bodegaje online"
+      },
+      "sizes": {
+        "title": "Bodegaje y Bodegas por Tamaño",
+        "subtitle": "Desde mini bodegas hasta espacios extra grandes. Elige el tamaño perfecto para guardar tus cosas",
+        "size1": {
+          "metros": "1-2m²",
+          "title": "Mini Bodega",
+          "description": "Ideal para guardar objetos personales, cajas pequeñas y pertenencias.",
+          "price": "Desde $49.000/mes"
+        },
+        "size2": {
+          "metros": "3-4m²",
+          "title": "Bodega Pequeña",
+          "description": "Perfecta para el contenido de un departamento pequeño o estudio.",
+          "price": "Desde $60.000/mes"
+        },
+        "size3": {
+          "metros": "5-6m²",
+          "title": "Bodega Mediana",
+          "description": "Ideal para guardar muebles de un departamento pequeño.",
+          "price": "Desde $85.000/mes"
+        },
+        "size4": {
+          "metros": "8-10m²",
+          "title": "Bodega Grande",
+          "description": "Para el contenido de 2-3 habitaciones.",
+          "price": "Desde $120.000/mes"
+        },
+        "size5": {
+          "metros": "15m²",
+          "title": "Bodega Extra Grande",
+          "description": "Perfecta para el contenido de un departamento completo.",
+          "price": "Desde $180.000/mes"
+        },
+        "size6": {
+          "metros": "20m²+",
+          "title": "Espacio Empresarial",
+          "description": "Para casas, negocios o almacenamiento comercial.",
+          "price": "Consultar"
+        }
+      },
+      "types": {
+        "title": "Tipos de Bodegaje y Almacenamiento",
+        "subtitle": "Encuentra el tipo de almacenamiento perfecto para tus necesidades en Santiago",
+        "type1": {
+          "title": "Mini Bodegas",
+          "description": "Mini bodegas para almacenamiento compacto y económico. Ideal para guardar cosas."
+        },
+        "type2": {
+          "title": "Bodegas Particulares",
+          "description": "Bodegas para uso doméstico y personal. Arriendo de bodega para guardar muebles."
+        },
+        "type3": {
+          "title": "Bodegas para Empresas",
+          "description": "Almacenamiento comercial con acceso flexible en Región Metropolitana."
+        },
+        "type4": {
+          "title": "Espacios Modulares",
+          "description": "Espacios que se adaptan a tus necesidades cambiantes."
+        },
+        "type5": {
+          "title": "Self Storage",
+          "description": "Self storage con acceso independiente y gestión personal en Santiago."
+        }
+      },
+      "pricing": {
+        "title": "Precios y Tarifas de Bodegaje",
+        "subtitle": "Arriendo de bodegas con precios transparentes. Precio bodegaje mes desde $49.000",
+        "info1": "Precio bodegaje mes desde $49.000",
+        "info2": "Precio por metro cuadrado competitivo",
+        "info3": "Tarifas flexibles según duración",
+        "info4": "Descuentos por contratos de largo plazo"
+      },
+      "features": {
+        "title": "Características de Nuestro Bodegaje",
+        "subtitle": "Bodegas seguras, vigiladas y climatizadas para la máxima protección de tus pertenencias en Santiago",
+        "feature1": {
+          "title": "Bodega Climatizada",
+          "description": "Bodegas con temperatura controlada para proteger tus pertenencias del calor y la humedad."
+        },
+        "feature2": {
+          "title": "Bodega Segura",
+          "description": "Bodegas vigiladas 24 horas, alarma y cámaras para máxima protección."
+        },
+        "feature3": {
+          "title": "Acceso 24 Horas",
+          "description": "Acceso fácil y horarios flexibles. Disponible cuando lo necesites."
+        },
+        "feature4": {
+          "title": "Bodegaje Económico",
+          "description": "Arriendo de bodegas con las mejores tarifas en Santiago y Región Metropolitana."
+        },
+        "feature5": {
+          "title": "Temporal o Largo Plazo",
+          "description": "Bodegaje temporal para reformas o almacenamiento largo plazo. Flexibilidad total."
+        },
+        "feature6": {
+          "title": "Bodega Interior",
+          "description": "Espacios cubiertos e interiores. Protección contra humedad y clima."
+        }
+      },
+      "useCases": {
+        "title": "Bodegaje Temporal y de Largo Plazo",
+        "subtitle": "Perfecto para mudanzas, reformas, obras o almacenamiento temporal. Bodegaje en Santiago y Región Metropolitana.",
+        "case1": {
+          "title": "Bodegaje durante Mudanza",
+          "description": "Guarda tus muebles mientras te mudas. Almacenamiento temporal durante el traslado. Bodegaje con mudanza incluida disponible."
+        },
+        "case2": {
+          "title": "Bodegaje durante Reformas",
+          "description": "Protege tus muebles durante obras de renovación. Arriendo de bodega por temporada."
+        },
+        "case3": {
+          "title": "Bodegaje por Días",
+          "description": "Almacenamiento temporal corto. Perfecto para necesidades puntuales en Santiago."
+        },
+        "case4": {
+          "title": "Bodegaje Estacional",
+          "description": "Guarda cosas en temporada. Almacenamiento estacional cuando lo necesites."
+        }
+      },
+      "zones": {
+        "title": "Zonas donde Ofrecemos Bodegaje",
+        "subtitle": "Arriendo de bodegas cerca de ti en Santiago y Región Metropolitana",
+        "zone1": "Santiago Centro",
+        "zone2": "Providencia",
+        "zone3": "Las Condes",
+        "zone4": "Ñuñoa",
+        "zone5": "La Florida",
+        "zone6": "Maipú",
+        "zone7": "Puente Alto",
+        "zone8": "Vitacura"
+      },
+      "cta": {
+        "title": "Arrienda tu Bodega Ahora",
+        "subtitle": "Bodegaje y arriendo de bodegas en Santiago y Región Metropolitana. Bodegaje con mudanza incluida disponible. Presupuesto gratis.",
+        "button1": "Arrendar Bodega",
+        "button2": "Solicitar Presupuesto"
+      },
+      "faqs": {
+        "title": "Preguntas Frecuentes sobre Bodegaje y Arriendo de Bodegas",
+        "subtitle": "Resolvemos tus dudas sobre bodegaje y arriendo de bodegas en Santiago y Región Metropolitana",
+        "faq1": {
+          "question": "¿Cuánto cuesta arrendar una bodega?",
+          "answer": "El precio de arriendo de bodega varía según el tamaño. Mini bodegas desde $49.000/mes, bodegas pequeñas desde $60.000/mes, bodegas medianas desde $85.000/mes. Ofrecemos bodegaje económico en Santiago con diferentes opciones de pago. El precio mensual incluye el arriendo del espacio."
+        },
+        "faq2": {
+          "question": "¿Cuál es el precio de bodegaje por metro cuadrado?",
+          "answer": "El precio por metro cuadrado varía según el tamaño total. Para mini bodegas (1-4m²) el precio es competitivo. Para bodegas medianas (5-10m²) y grandes (15m²+) ofrecemos tarifas transparentes. Consulta nuestra calculadora o solicita presupuesto para Santiago y Región Metropolitana."
+        },
+        "faq3": {
+          "question": "¿Ofrecen servicio de bodegaje a domicilio?",
+          "answer": "Sí, ofrecemos servicio de bodegaje a domicilio. Recogemos tus muebles y pertenencias en tu domicilio en Santiago o Región Metropolitana. No necesitas transportarlos; nuestro equipo acude con el vehículo adecuado y realiza la recogida completa."
+        },
+        "faq4": {
+          "question": "¿Puedo verificar mis pertenencias online?",
+          "answer": "Sí, con nuestro servicio de bodegaje online puedes acceder a tu cuenta con usuario y contraseña para verificar qué tienes guardado. La plataforma te permite consultar tu inventario desde cualquier dispositivo, las 24 horas."
+        },
+        "faq5": {
+          "question": "¿Cómo funciona la plataforma online de bodegaje?",
+          "answer": "Nuestra plataforma de bodegaje te permite acceder con usuario y contraseña para gestionar tu bodega. Puedes verificar tu inventario, consultar tus pertenencias y gestionar tu cuenta. Acceso online 24/7 desde cualquier dispositivo."
+        },
+        "faq6": {
+          "question": "¿Qué es una mini bodega?",
+          "answer": "Una mini bodega es un espacio de almacenamiento pequeño, ideal para guardar cosas personales, cajas o pertenencias. Nuestras mini bodegas van desde 1-2m² y son perfectas para almacenamiento compacto y económico en Santiago."
+        },
+        "faq7": {
+          "question": "¿Ofrecen bodegas para empresas?",
+          "answer": "Sí, ofrecemos bodegas para empresas y almacenamiento comercial en Santiago y Región Metropolitana. Incluyen acceso flexible, espacios modulares y gestión online. Ideal para archivos, material de oficina o productos."
+        },
+        "faq8": {
+          "question": "¿Puedo arrendar una bodega por días?",
+          "answer": "Sí, ofrecemos bodegaje por días para almacenamiento temporal corto. Perfecto si necesitas guardar cosas unos días o semanas. Tarifas flexibles según el tiempo que necesites."
+        },
+        "faq9": {
+          "question": "¿Qué diferencia hay entre bodegas particulares y para empresas?",
+          "answer": "Las bodegas particulares son para uso doméstico y personal. Las bodegas para empresas ofrecen acceso flexible, gestión online avanzada y espacios modulares. Ambos tipos incluyen seguridad y climatización."
+        },
+        "faq10": {
+          "question": "¿Los espacios son modulares?",
+          "answer": "Ofrecemos espacios modulares que se adaptan a tus necesidades. Puedes ampliar o reducir el espacio según necesites guardar cosas en Santiago."
+        },
+        "faq11": {
+          "question": "¿Ofrecen self storage?",
+          "answer": "Sí, ofrecemos self storage con acceso independiente y gestión personal en Santiago. Accede a tu espacio cuando lo necesites, con tu llave y control total sobre tu almacenamiento."
+        },
+        "faq12": {
+          "question": "¿Cómo puedo contratar una bodega?",
+          "answer": "Puedes usar nuestra calculadora online para obtener un presupuesto o contactarnos para una consulta personalizada. Ofrecemos arriendo de bodegas desde $49.000/mes en Santiago y Región Metropolitana con diferentes tamaños."
+        },
+        "faq13": {
+          "question": "¿Cuáles son las tarifas de bodegaje?",
+          "answer": "Las tarifas de bodegaje varían según tamaño y duración. Mini bodegas desde $49.000/mes, bodegas medianas desde $85.000/mes, bodegas grandes desde $120.000/mes. Descuentos por contratos largo plazo. Precios transparentes en Santiago."
+        },
+        "faq14": {
+          "question": "¿El servicio incluye recogida a domicilio?",
+          "answer": "Sí, nuestro servicio de bodegaje incluye recogida a domicilio en Santiago y Región Metropolitana. No necesitas transportar tus muebles; nuestro equipo realiza la recogida completa sin coste adicional."
+        },
+        "faq15": {
+          "question": "¿Puedo acceder a mi bodega online las 24 horas?",
+          "answer": "Sí, con nuestro servicio de bodegaje online puedes acceder a tu cuenta 24 horas, 7 días a la semana. Verifica tu inventario y gestiona tu bodega desde cualquier dispositivo con internet."
+        },
+        "faq16": {
+          "question": "¿Las bodegas están climatizadas?",
+          "answer": "Sí, nuestras bodegas tienen temperatura controlada para proteger tus pertenencias del calor y la humedad. Ideal para muebles de madera, documentos o objetos sensibles en Santiago."
+        },
+        "faq17": {
+          "question": "¿Qué seguridad tienen las bodegas?",
+          "answer": "Nuestras bodegas incluyen vigilancia 24 horas, alarma y cámaras de seguridad en Santiago y Región Metropolitana. Acceso controlado y seguro de contenido opcional para mayor tranquilidad."
+        },
+        "faq18": {
+          "question": "¿Puedo acceder a mi bodega 24 horas?",
+          "answer": "Sí, ofrecemos acceso 24 horas según el plan elegido. El horario está disponible según tus necesidades. Algunos planes incluyen acceso ilimitado en Santiago."
+        }
+      }
+    },
+    "embalajes": {
+      "description": "Servicio de embalaje profesional para mudanzas en Santiago y Región Metropolitana. Embalaje completo a domicilio con materiales incluidos. Embalaje de muebles, electrodomésticos y objetos frágiles. Presupuesto gratis.",
+      "hero": {
+        "badge": "Servicio de Embalaje Profesional",
+        "title": "Embalaje Profesional en Santiago",
+        "subtitle": "Embalaje a domicilio en Santiago y Región Metropolitana. Materiales incluidos, muebles y objetos frágiles. Presupuesto gratis."
+      },
+      "types": {
+        "title": "Tipos de Embalaje que Ofrecemos",
+        "subtitle": "Servicio de embalaje profesional adaptado a tus necesidades de mudanza",
+        "type1": {
+          "title": "Embalaje Completo para Mudanzas",
+          "description": "Servicio de embalaje profesional completo para toda tu mudanza. Nuestro equipo realiza el embalaje de todos tus objetos con materiales profesionales incluidos."
+        },
+        "type2": {
+          "title": "Embalaje Parcial",
+          "description": "Embalaje personalizado solo para objetos frágiles y delicados que necesitan protección especial durante la mudanza."
+        },
+        "type3": {
+          "title": "Embalaje de Muebles",
+          "description": "Embalaje profesional de muebles grandes y pequeños. Utilizamos mantas protección, film estirable y fundas especiales para proteger tus muebles durante el transporte."
+        },
+        "type4": {
+          "title": "Embalaje de Electrodomésticos",
+          "description": "Embalaje seguro de neveras, lavadoras, televisores y otros electrodomésticos con materiales específicos para evitar daños."
+        },
+        "type5": {
+          "title": "Embalaje de Objetos Frágiles",
+          "description": "Embalaje especializado para cristales, porcelana, obras de arte y antigüedades con protección multicapa personalizada."
+        }
+      },
+      "materials": {
+        "title": "Materiales Profesionales que Utilizamos",
+        "subtitle": "Materiales de embalaje profesional incluidos en nuestro servicio",
+        "material1": {
+          "title": "Cajas de Cartón",
+          "description": "Cajas de cartón para mudanzas de diferentes tamaños: simple, doble y triple. Materiales profesionales incluidos en el servicio de embalaje."
+        },
+        "material2": {
+          "title": "Papel Burbuja",
+          "description": "Papel burbuja y plástico burbuja para protección de objetos frágiles, cristales, porcelana y vajillas."
+        },
+        "material3": {
+          "title": "Film Estirable",
+          "description": "Film plástico transparente y film protección para envolver muebles, electrodomésticos y objetos voluminosos."
+        },
+        "material4": {
+          "title": "Cinta Embalaje",
+          "description": "Cinta adhesiva, cinta carrocero y cinta papel de alta resistencia para sellar cajas de forma segura."
+        },
+        "material5": {
+          "title": "Mantas Protección",
+          "description": "Mantas mudanza y mantas muebles para proteger sofás, mesas, armarios y muebles grandes durante el transporte."
+        },
+        "material6": {
+          "title": "Fundas y Esquineras",
+          "description": "Fundas muebles, fundas colchones, fundas cama y esquineras cartón para protección adicional de esquinas y cantos."
+        }
+      },
+      "services": {
+        "title": "Servicios de Embalaje",
+        "subtitle": "Embalaje profesional incluido, completo o parcial según tus necesidades",
+        "service1": {
+          "title": "Embalaje Completo",
+          "description": "Servicio de embalaje profesional completo incluido en tu mudanza",
+          "feature1": "Embalaje de todos tus objetos",
+          "feature2": "Materiales incluidos sin coste adicional",
+          "feature3": "Protección multicapa personalizada",
+          "feature4": "Embalaje cuidadoso y seguro"
+        },
+        "service2": {
+          "title": "Embalaje Parcial",
+          "description": "Embalaje personalizado solo para objetos frágiles y delicados",
+          "feature1": "Embalaje de frágiles y obras de arte",
+          "feature2": "Embalaje de electrodomésticos",
+          "feature3": "Embalaje de muebles grandes",
+          "feature4": "A medida según tus necesidades"
+        },
+        "service3": {
+          "title": "Embalaje de Muebles",
+          "description": "Embalaje profesional de muebles para mudanzas",
+          "feature1": "Embalaje de muebles grandes y pequeños",
+          "feature2": "Mantas protección especiales",
+          "feature3": "Film estirable para protección",
+          "feature4": "Fundas personalizadas"
+        },
+        "service4": {
+          "title": "Embalaje de Electrodomésticos",
+          "description": "Embalaje seguro de electrodomésticos para mudanzas",
+          "feature1": "Neveras y frigoríficos",
+          "feature2": "Lavadoras y secadoras",
+          "feature3": "Televisores y pantallas",
+          "feature4": "Protección específica por tipo"
+        }
+      },
+      "process": {
+        "title": "Proceso de Embalaje Profesional",
+        "subtitle": "Cómo trabajamos para garantizar el embalaje cuidadoso y seguro de tus pertenencias",
+        "step1": {
+          "title": "Evaluación Inicial",
+          "description": "Nuestro equipo evalúa tus objetos y determina los materiales necesarios para un embalaje profesional."
+        },
+        "step2": {
+          "title": "Preparación de Materiales",
+          "description": "Preparamos todos los materiales de embalaje profesional necesarios: cajas, papel burbuja, film y mantas."
+        },
+        "step3": {
+          "title": "Embalaje Cuidadoso",
+          "description": "Realizamos el embalaje profesional de cada objeto con técnicas especializadas según su tipo y fragilidad."
+        },
+        "step4": {
+          "title": "Protección Adicional para Frágiles",
+          "description": "Aplicamos protección multicapa adicional para objetos frágiles, cristales y obras de arte."
+        },
+        "step5": {
+          "title": "Verificación Final",
+          "description": "Verificamos que todo esté correctamente embalado y protegido para el transporte seguro."
+        }
+      },
+      "zones": {
+        "title": "Zonas donde Ofrecemos Embalaje Profesional",
+        "subtitle": "Servicio de embalaje a domicilio en toda la Costa del Sol",
+        "zone1": "Marbella",
+        "zone2": "Costa del Sol",
+        "zone3": "Málaga",
+        "zone4": "Estepona",
+        "zone5": "Fuengirola",
+        "zone6": "Torremolinos",
+        "zone7": "Benalmádena",
+        "zone8": "Mijas"
+      },
+      "cta": {
+        "title": "¿Necesitas Servicio de Embalaje Profesional para tu Mudanza?",
+        "subtitle": "Contrata nuestro servicio de embalaje profesional para mudanzas en Santiago. Embalaje completo o parcial según tus necesidades. Nuestro equipo acude a tu domicilio con todos los materiales de embalaje incluidos sin coste adicional.",
+        "button1": "Solicitar Presupuesto",
+        "button2": "Ver Servicios"
+      },
+      "faqs": {
+        "title": "Preguntas Frecuentes sobre Embalajes",
+        "subtitle": "Resolvemos tus dudas sobre nuestro servicio de embalaje profesional para mudanzas",
+        "faq1": {
+          "question": "¿Qué incluye el servicio de embalaje profesional?",
+          "answer": "Nuestro servicio de embalaje profesional incluye que nuestros expertos vayan a tu domicilio con todos los materiales necesarios (cajas de cartón, papel burbuja, film plástico, mantas protección) y realicen el embalaje completo de tus objetos. No necesitas comprar nada, nosotros traemos el material y hacemos el trabajo."
+        },
+        "faq2": {
+          "question": "¿Cuánto cuesta el servicio de embalaje para mudanzas?",
+          "answer": "El precio del servicio de embalaje profesional para mudanzas varía según el tipo de vivienda y cantidad de objetos. Ofrecemos embalaje completo incluido en mudanzas completas sin coste adicional, o embalaje parcial solo para objetos frágiles. Solicita un presupuesto personalizado sin compromiso."
+        },
+        "faq3": {
+          "question": "¿Incluyen el embalaje en el precio de la mudanza?",
+          "answer": "Sí, ofrecemos embalaje incluido sin coste adicional en nuestros paquetes de mudanza completa. Nuestro equipo profesional acude a tu domicilio con todos los materiales y realiza el embalaje completo. También puedes contratar embalaje profesional completo o embalaje parcial solo para objetos frágiles."
+        },
+        "faq4": {
+          "question": "¿Hacen embalaje de muebles grandes?",
+          "answer": "Sí, ofrecemos servicio de embalaje profesional de muebles grandes y pequeños. Utilizamos mantas protección especiales, film estirable y fundas personalizadas para proteger tus muebles durante el transporte de la mudanza."
+        },
+        "faq5": {
+          "question": "¿Ofrecen embalaje de electrodomésticos?",
+          "answer": "Sí, realizamos embalaje profesional de electrodomésticos como neveras, frigoríficos, lavadoras, secadoras, televisores y otros. Utilizamos materiales específicos y técnicas especializadas para cada tipo de electrodoméstico."
+        },
+        "faq6": {
+          "question": "¿Cómo embalan objetos frágiles como cristales y porcelana?",
+          "answer": "Nuestro servicio de embalaje profesional para objetos frágiles incluye protección multicapa específica: papel burbuja o plástico burbuja, separadores cartón y esquineras protección. Nuestros expertos conocen las técnicas adecuadas para proteger cristales, porcelana, vajillas y obras de arte durante el transporte."
+        },
+        "faq7": {
+          "question": "¿Tienen que venir a mi casa para hacer el embalaje?",
+          "answer": "Sí, nuestro servicio de embalaje profesional se realiza en tu domicilio. Nuestro equipo acude con todos los materiales necesarios (cajas, papel burbuja, film, mantas) y realiza el embalaje completo in situ. No necesitas comprar ni preparar nada, nosotros nos encargamos de todo."
+        },
+        "faq8": {
+          "question": "¿Qué tipo de embalaje hacen para electrodomésticos?",
+          "answer": "Para electrodomésticos como neveras, frigoríficos y lavadoras, nuestro servicio de embalaje profesional incluye fundas protección especiales, film estirable y mantas muebles. Protegemos cada electrodoméstico con materiales específicos para evitar daños durante el transporte."
+        },
+        "faq9": {
+          "question": "¿Puedo contratar solo el servicio de embalaje sin mudanza?",
+          "answer": "Sí, puedes contratar nuestro servicio de embalaje profesional de forma independiente. Nuestro equipo acude a tu domicilio con todos los materiales y realiza el embalaje completo. Ideal si necesitas embalar para una mudanza que harás tú mismo o para almacenamiento."
+        },
+        "faq10": {
+          "question": "¿Ofrecen embalaje a domicilio en Santiago?",
+          "answer": "Sí, ofrecemos servicio de embalaje profesional a domicilio en Santiago y Región Metropolitana. Nuestro equipo acude a tu domicilio con todos los materiales incluidos y realiza el trabajo in situ."
+        },
+        "faq11": {
+          "question": "¿Qué materiales de embalaje utilizan?",
+          "answer": "Utilizamos materiales de embalaje profesionales de primera calidad: cajas de cartón resistentes, papel burbuja, film estirable, mantas protección, cinta adhesiva de alta resistencia y fundas especiales. Todos los materiales están incluidos en el servicio sin coste adicional."
+        },
+        "faq12": {
+          "question": "¿Cuánto tiempo tarda el servicio de embalaje?",
+          "answer": "El tiempo de embalaje profesional depende del tamaño de la vivienda y cantidad de objetos. Para un estudio puede ser de 2-3 horas, para un piso mediano de 4-6 horas, y para una casa grande puede requerir un día completo. Te damos una estimación precisa en el presupuesto."
+        }
+      }
+    },
+    "transporteFrio": {
+      "hero": {
+        "badge": "Logística Refrigerada y Cadena de Frío",
+        "title": "Transporte en Frío y Refrigerado",
+        "subtitle": "Empresa de transporte en frío en Santiago y Región Metropolitana. Transporte refrigerado, transporte frigorífico y logística de cadena frío. Transporte con temperatura controlada garantizada. Transporte de frios y congelados, transporte de alimentos frios y transporte de carga fria."
+      },
+      "vehicleTypes": {
+        "title": "Vehículos y Equipamiento de Transporte Frío",
+        "subtitle": "Flota especializada en transporte frío con vehículos isotermos y contenedores para mantener frío",
+        "vehicle1": {
+          "title": "Camión Isotermo con Frío",
+          "description": "Camiones isotermos con frío para transporte refrigerado y transporte con temperatura controlada. Equipados con sistemas de frío para camión."
+        },
+        "vehicle2": {
+          "title": "Camión Frío Congelación",
+          "description": "Camiones frío congelación para transporte de frios y congelados. Transporte ultracongelado a -18°C garantizado."
+        },
+        "vehicle3": {
+          "title": "Camión con Frío para Reparto",
+          "description": "Vehículos con frío para reparto refrigerado. Camión con frío para reparto local y distribución frío en Santiago y Región Metropolitana."
+        },
+        "vehicle4": {
+          "title": "Contenedores para Mantener Frío",
+          "description": "Contenedores para mantener frío durante el transporte. Equipamiento especializado para cadena de frio transporte."
+        }
+      },
+      "specializedServices": {
+        "title": "Servicios Especializados de Transporte Frío",
+        "subtitle": "Mensajería en frío, envío de paquetes fríos y transporte frío express para particulares y empresas",
+        "service1": {
+          "title": "Mensajería en Frío",
+          "description": "Servicio de mensajería en frío y mensajería frío para envíos urgentes con temperatura controlada."
+        },
+        "service2": {
+          "title": "Envío de Paquetes Fríos",
+          "description": "Envío de paquetes fríos y envio paquete frio con cadena frío garantizada. Envíos a temperatura controlada."
+        },
+        "service3": {
+          "title": "Transporte Frío Particulares",
+          "description": "Transporte frío particulares para particulares que necesitan transportar productos en frío. Precio transporte frío competitivo."
+        },
+        "service4": {
+          "title": "Transporte Frío Express",
+          "description": "Transporte frío express para entregas urgentes. Transporte frio express con cadena frío garantizada."
+        }
+      },
+      "temperatures": {
+        "title": "Transporte por Temperatura Controlada",
+        "subtitle": "Transporte con temperatura controlada para diferentes rangos según tus necesidades",
+        "range1": {
+          "title": "Transporte Congelación",
+          "description": "Transporte a -18°C para productos congelados y helados. Transporte de frios y congelados garantizado.",
+          "temperature": "-18°C"
+        },
+        "range2": {
+          "title": "Transporte Refrigerado",
+          "description": "Transporte entre 0-4°C para productos frescos y refrigerados. Transporte refrigerado estándar.",
+          "temperature": "0-4°C"
+        },
+        "range3": {
+          "title": "Transporte Farmacéutico",
+          "description": "Transporte entre 2°C y 8°C para productos farmacéuticos. Transporte con temperatura controlada según normativa.",
+          "temperature": "2°C - 8°C"
+        }
+      },
+      "products": {
+        "title": "Transporte Frío por Tipo de Producto",
+        "subtitle": "Especialistas en transporte de alimentos frios, productos farmacéuticos y perecederos",
+        "product1": {
+          "title": "Transporte de Alimentos Frios",
+          "description": "Transporte de alimentos frios y productos frescos. Transporte refrigerado para supermercados y restaurantes."
+        },
+        "product2": {
+          "title": "Transporte de Carga Fria",
+          "description": "Transporte de carga fria y transporte carga fria para empresas. Logística frío completa."
+        },
+        "product3": {
+          "title": "Transporte Frío Farmacéutico",
+          "description": "Transporte frío productos farmacéuticos y medicamentos. Cadena frío garantizada según normativa."
+        },
+        "product4": {
+          "title": "Transporte Frío Perecederos",
+          "description": "Transporte de productos perecederos con cadena frío. Fruta, verdura, pescado y carne fresca."
+        },
+        "product5": {
+          "title": "Transporte Frío Flores",
+          "description": "Transporte refrigerado de flores y plantas. Temperatura controlada para mantener frescura."
+        },
+        "product6": {
+          "title": "Transporte Frío Bebidas",
+          "description": "Transporte bebidas y productos líquidos refrigerados. Logística especializada en transporte frío."
+        }
+      },
+      "services": {
+        "title": "Servicios de Transporte Frío",
+        "subtitle": "Empresa transporte frío con servicios completos de logística frío y cadena de frio transporte",
+        "service1": {
+          "title": "Transporte Refrigerado",
+          "description": "Servicio de transporte frío con vehículos frigoríficos y temperatura controlada",
+          "feature1": "Vehículos frigoríficos certificados",
+          "feature2": "Temperatura controlada en tiempo real",
+          "feature3": "Monitoreo GPS y temperatura",
+          "feature4": "Cadena frío garantizada"
+        },
+        "service2": {
+          "title": "Almacenaje Frío",
+          "description": "Cámaras frío y almacenaje refrigerado para productos perecederos",
+          "feature1": "Cámaras refrigeración",
+          "feature2": "Almacenaje refrigerado",
+          "feature3": "Control de temperatura 24/7",
+          "feature4": "Distribución frío incluida"
+        },
+        "service3": {
+          "title": "Transporte Cadena de Frío",
+          "description": "Transporte cadena de frio con garantía completa. Cadena de frio transporte certificada.",
+          "feature1": "Cadena frío garantizada",
+          "feature2": "Control continuo de temperatura",
+          "feature3": "Documentación completa",
+          "feature4": "Certificación de cadena frío"
+        },
+        "service4": {
+          "title": "Envíos a Temperatura Controlada",
+          "description": "Envíos a temperatura controlada y envios temperatura controlada para cualquier tipo de producto",
+          "feature1": "Temperatura controlada garantizada",
+          "feature2": "Envíos nacionales e internacionales",
+          "feature3": "Tracking en tiempo real",
+          "feature4": "Documentación completa"
+        }
+      },
+      "companies": {
+        "title": "Empresas de Transporte en Frío",
+        "subtitle": "Somos una empresa transporte frío especializada en transporte con cadena de frío y temperatura controlada",
+        "info1": "Empresa transporte frío certificada",
+        "info2": "Empresas de transporte en frio con experiencia",
+        "info3": "Empresas de transporte con cadena de frío",
+        "info4": "Empresas de transporte temperatura controlada",
+        "info5": "Empresas logistica frio especializada"
+      },
+      "coverage": {
+        "title": "Cobertura de Transporte Frío",
+        "subtitle": "Transporte frío local, regional, nacional e internacional",
+        "coverage1": {
+          "title": "Transporte Frío Local",
+          "description": "Transporte en frío en Santiago y Región Metropolitana."
+        },
+        "coverage2": {
+          "title": "Transporte Frío Regional",
+          "description": "Transporte en frío en toda la Región Metropolitana y zonas aledañas."
+        },
+        "coverage3": {
+          "title": "Transporte Frío Nacional",
+          "description": "Transporte frio nacional en todo Chile con cadena frío garantizada."
+        },
+        "coverage4": {
+          "title": "Transporte Frío Internacional",
+          "description": "Transporte frio internacional con documentación completa."
+        }
+      },
+      "cta": {
+        "title": "¿Necesitas Transporte Refrigerado o Transporte en Frío?",
+        "subtitle": "Empresa transporte frío en Santiago y Región Metropolitana. Transporte refrigerado profesional con cadena frío garantizada. Precio transporte frío competitivo. Presupuesto gratis.",
+        "button1": "Solicitar Transporte Frío",
+        "button2": "Presupuesto Gratis"
+      },
+      "faqs": {
+        "title": "Preguntas Frecuentes sobre Transporte en Frío",
+        "subtitle": "Resolvemos tus dudas sobre transporte refrigerado, cadena frío, mensajería en frío y logística frío",
+        "faq1": {
+          "question": "¿Qué temperatura mantiene el transporte en frío?",
+          "answer": "Nuestro servicio de transporte en frío mantiene diferentes rangos de temperatura según el producto: transporte congelado a -18°C para congelados, transporte refrigerado a 0-4°C para productos frescos, y transporte temperatura controlada a 2-8°C para productos farmacéuticos. El transporte cadena frío está garantizado durante todo el trayecto."
+        },
+        "faq2": {
+          "question": "¿Cuánto cuesta el transporte en frío?",
+          "answer": "El precio del transporte en frío varía según la distancia, temperatura requerida y tipo de producto. Ofrecemos transporte frío local en Santiago y Región Metropolitana, transporte frío regional y transporte frio nacional en Chile. El precio transporte frío es competitivo. Solicita un presupuesto personalizado sin compromiso."
+        },
+        "faq3": {
+          "question": "¿Qué productos pueden transportarse en frío?",
+          "answer": "Transportamos productos perecederos como alimentos frescos, pescado, carne, lácteos, frutas y verduras. También ofrecemos transporte frío para productos farmacéuticos, medicamentos, flores, bebidas y helados. El transporte refrigerado es ideal para cualquier producto que requiera cadena frío. Transportamos transporte de frios y congelados, transporte de alimentos frios y transporte de carga fria."
+        },
+        "faq4": {
+          "question": "¿Cómo garantizan la cadena de frío?",
+          "answer": "Garantizamos la cadena frío con vehículos frigoríficos equipados con sistemas de temperatura controlada, monitoreo en tiempo real y registro de temperatura. El transporte cadena frío está certificado y cumple con todas las normativas de seguridad alimentaria y farmacéutica. Nuestro servicio de cadena de frio transporte garantiza la temperatura durante todo el proceso."
+        },
+        "faq5": {
+          "question": "¿Hacen transporte en frío internacional?",
+          "answer": "Sí, ofrecemos transporte frio internacional para productos que requieren cadena frío. El transporte refrigerado internacional incluye documentación aduanera, certificados sanitarios y seguimiento completo. Cubrimos rutas internacionales con garantía de temperatura controlada."
+        },
+        "faq6": {
+          "question": "¿Qué diferencia hay entre transporte frío y transporte refrigerado?",
+          "answer": "El transporte frío generalmente se refiere a temperaturas bajo cero (congelación), mientras que el transporte refrigerado mantiene temperaturas positivas (0-4°C). Ambos servicios garantizan la cadena frío y están disponibles según las necesidades de tu producto."
+        },
+        "faq7": {
+          "question": "¿Ofrecen mensajería en frío?",
+          "answer": "Sí, ofrecemos servicio de mensajería en frío y mensajería frío para envíos urgentes con temperatura controlada. Nuestro servicio de mensajería en frío garantiza la cadena frío durante todo el trayecto."
+        },
+        "faq8": {
+          "question": "¿Puedo enviar paquetes fríos?",
+          "answer": "Sí, ofrecemos envío de paquetes fríos y envio paquete frio con cadena frío garantizada. Nuestro servicio de envío de paquetes fríos incluye temperatura controlada y tracking en tiempo real."
+        },
+        "faq9": {
+          "question": "¿Ofrecen transporte frío para particulares?",
+          "answer": "Sí, ofrecemos transporte frío particulares para particulares que necesitan transportar productos en frío. El precio transporte frío para particulares es competitivo y adaptado a tus necesidades."
+        },
+        "faq10": {
+          "question": "¿Qué tipos de vehículos utilizan para transporte frío?",
+          "answer": "Utilizamos camión isotermo con frío, camión frío congelación, camión con frío para reparto y contenedores para mantener frío. Nuestra flota está equipada con sistemas de frío para camión y garantiza la cadena frío durante todo el transporte."
+        },
+        "faq11": {
+          "question": "¿Son una empresa de transporte en frío certificada?",
+          "answer": "Sí, somos una empresa transporte frío certificada especializada en transporte con cadena de frío. Como empresas de transporte en frio, cumplimos con todas las normativas de seguridad alimentaria y farmacéutica. Somos empresas de transporte con cadena de frío y empresas de transporte temperatura controlada."
+        },
+        "faq12": {
+          "question": "¿Ofrecen transporte frío express?",
+          "answer": "Sí, ofrecemos transporte frío express para entregas urgentes. El transporte frio express garantiza la cadena frío con entrega rápida y temperatura controlada."
+        },
+        "faq13": {
+          "question": "¿Qué es el transporte cadena de frío?",
+          "answer": "El transporte cadena de frio es el proceso de mantener productos a temperatura controlada durante todo el transporte. Nuestro servicio de cadena de frio transporte garantiza que los productos mantengan su temperatura desde el origen hasta el destino."
+        },
+        "faq14": {
+          "question": "¿Transportan carga fría?",
+          "answer": "Sí, ofrecemos transporte de carga fria y transporte carga fria para empresas. Nuestro servicio de transporte de carga fria incluye vehículos especializados y cadena frío garantizada."
+        },
+        "faq15": {
+          "question": "¿Qué significa transporte con temperatura controlada?",
+          "answer": "El transporte con temperatura controlada es un servicio que mantiene productos a una temperatura específica durante todo el transporte. Ofrecemos transporte con temperatura controlada y transporte de temperatura controlada para diferentes rangos según el producto."
+        },
+        "faq16": {
+          "question": "¿Ofrecen envíos a temperatura controlada?",
+          "answer": "Sí, ofrecemos envíos a temperatura controlada y envios temperatura controlada para cualquier tipo de producto. Nuestro servicio garantiza la temperatura durante todo el proceso de envío."
+        },
+        "faq17": {
+          "question": "¿Qué servicios de logística frío ofrecen?",
+          "answer": "Como empresas logistica frio, ofrecemos transporte refrigerado, almacenaje frío, distribución frío y reparto refrigerado. Nuestro servicio completo de logística frío incluye cadena frío garantizada y temperatura controlada."
+        },
+        "faq18": {
+          "question": "¿Transportan productos congelados?",
+          "answer": "Sí, ofrecemos transporte de frios y congelados con temperatura de -18°C garantizada. Nuestro servicio de transporte de frios y congelados utiliza camión frío congelación y garantiza la cadena frío durante todo el proceso."
+        }
+      },
+      "seo": {
+        "title": "Transporte en Frío Santiago | Empresa Transporte Frío | Cadena Frío Garantizada | FletesPro",
+        "description": "Empresa de transporte en frío en Santiago y Región Metropolitana. Transporte refrigerado, transporte frigorífico y logística de cadena frío. Transporte con temperatura controlada. Transporte de frios y congelados, transporte de alimentos frios. Precio transporte frío competitivo. Presupuesto gratis.",
+        "keywords": "transporte en frio, transporte frio, transporte refrigerado, cadena frío, transporte frigorífico, transporte temperatura controlada, transporte alimentos, transporte farmacéutico, logística frío, transporte frío local, transporte frío provincial, transporte frio nacional, transporte frio internacional, transporte de frios y congelados, transporte frío particulares, envios temperatura controlada, transporte frío precio, envio paquete frio, empresas de transporte en frio, cadena de frio transporte, camion frio congelacion, camion isotermo con frio, camión con frio para reparto, contenedores para mantener frio, empresa transporte frio, empresas de transporte con cadena de frío, empresas de transporte temperatura controlada, empresas logistica frio, envio de paquetes frios, envios a temperatura controlada, mensajeria en frio, mensajeria frio, precio transporte frio, transporte cadena de frio, transporte carga fria, transporte con temperatura controlada, transporte de alimentos frios, transporte de carga fria, transporte de temperatura controlada, transporte frio express, transporte frios, transportes refrigerados"
+      }
+    },
+    "ultimaMilla": {
+      "hero": {
+        "badge": "Logística de Última Milla y Entrega Final",
+        "title": "Última Milla",
+        "subtitle": "Servicio última milla, logística última milla y distribución última milla en Santiago y Región Metropolitana. Entrega última milla express y mismo día. Envíos para ecommerce, tiendas online y paquetería ecommerce."
+      },
+      "sectors": {
+        "title": "Última Milla por Sector",
+        "subtitle": "Especialistas en última milla para ecommerce, alimentación, farmacia y más sectores",
+        "sector1": {
+          "title": "Última Milla Ecommerce",
+          "description": "Última milla comercio electrónico y tiendas online. Entrega última milla para ecommerce y retail online. Envíos para tiendas online y envios para ecommerce.",
+          "feature1": "Última milla tiendas online",
+          "feature2": "Última milla retail",
+          "feature3": "Entrega paquetes ecommerce",
+          "feature4": "Tracking en tiempo real"
+        },
+        "sector2": {
+          "title": "Última Milla Alimentación",
+          "description": "Última milla supermercados y distribución alimentaria. Entrega de productos frescos y perecederos.",
+          "feature1": "Última milla supermercados",
+          "feature2": "Entrega productos frescos",
+          "feature3": "Horarios flexibles",
+          "feature4": "Cadena frío garantizada"
+        },
+        "sector3": {
+          "title": "Última Milla Restaurantes",
+          "description": "Última milla comida a domicilio y delivery. Servicio express para restaurantes y servicios de comida.",
+          "feature1": "Última milla comida a domicilio",
+          "feature2": "Entrega express restaurantes",
+          "feature3": "Horarios ampliados",
+          "feature4": "Temperatura controlada"
+        },
+        "sector4": {
+          "title": "Última Milla Farmacia",
+          "description": "Última milla productos farmacéuticos y medicamentos. Entrega urgente y programada para farmacias.",
+          "feature1": "Última milla farmacia",
+          "feature2": "Entrega medicamentos",
+          "feature3": "Servicio urgente disponible",
+          "feature4": "Cumplimiento normativo"
+        },
+        "sector5": {
+          "title": "Última Milla Paquetería",
+          "description": "Última milla paquetes y mensajería. Entrega de envíos y paquetería general. Paqueteria ecommerce y paqueteria para ecommerce.",
+          "feature1": "Última milla paquetes",
+          "feature2": "Mensajería última milla",
+          "feature3": "Entrega flexible",
+          "feature4": "Seguimiento completo"
+        }
+      },
+      "deliveryTypes": {
+        "title": "Tipos de Entrega Última Milla",
+        "subtitle": "Última milla mismo día, express, urgente y programada según tus necesidades",
+        "type1": {
+          "title": "Última Milla Mismo Día",
+          "description": "Entrega última milla mismo día para urgencias"
+        },
+        "type2": {
+          "title": "Última Milla Express",
+          "description": "Última milla express y 24 horas disponible"
+        },
+        "type3": {
+          "title": "Última Milla Programada",
+          "description": "Última milla programada con horarios flexibles"
+        },
+        "type4": {
+          "title": "Última Milla Nocturna",
+          "description": "Última milla nocturna y entrega tarde disponible"
+        }
+      },
+      "technology": {
+        "title": "Tecnología Última Milla",
+        "subtitle": "Última milla digital con tracking, seguimiento GPS y plataforma avanzada",
+        "tech1": {
+          "title": "Última Milla Tracking",
+          "description": "Última milla seguimiento y tracking GPS en tiempo real. Monitoreo completo de cada entrega."
+        },
+        "tech2": {
+          "title": "Última Milla App",
+          "description": "Última milla digital con app móvil y plataforma web. Gestión completa desde tu dispositivo."
+        },
+        "tech3": {
+          "title": "Última Milla Sistema",
+          "description": "Última milla plataforma avanzada con integración API. Sistema completo de logística última milla."
+        }
+      },
+      "zones": {
+        "title": "Cobertura Última Milla",
+        "subtitle": "Última milla local, urbana y rural en Marbella, Málaga y toda la Costa del Sol",
+        "zone1": {
+          "title": "Última Milla Urbana",
+          "description": "Última milla local en Marbella, Málaga y ciudades principales"
+        },
+        "zone2": {
+          "title": "Última Milla Periférica",
+          "description": "Última milla en zonas periféricas y áreas residenciales"
+        },
+        "zone3": {
+          "title": "Última Milla Rural",
+          "description": "Última milla rural y zonas menos accesibles de la Costa del Sol"
+        }
+      },
+      "ecommerceShipping": {
+        "title": "Envíos para Ecommerce y Tiendas Online",
+        "subtitle": "Servicio de envíos para ecommerce, tiendas online y paquetería ecommerce con última milla garantizada",
+        "service1": {
+          "title": "Envíos para Tiendas Online",
+          "description": "Envíos para tiendas online con última milla logística. Servicio de entrega última milla para tu tienda online."
+        },
+        "service2": {
+          "title": "Envíos para Ecommerce",
+          "description": "Envíos para ecommerce y envios ecommerce con logística última milla. Transporte ecommerce y paqueteria ecommerce."
+        },
+        "service3": {
+          "title": "Mensajería Ecommerce",
+          "description": "Mensajería ecommerce y mensajeria para ecommerce. Servicio de mensajería última milla para comercio electrónico."
+        },
+        "service4": {
+          "title": "Envíos Internacionales Ecommerce",
+          "description": "Envíos internacionales ecommerce con última milla. Logística internacional para tiendas online."
+        }
+      },
+      "companies": {
+        "title": "Empresas y Proveedores de Última Milla",
+        "subtitle": "Somos tu empresa de transporte ecommerce y proveedor de última milla especializado",
+        "company1": {
+          "title": "Empresas de Envío para Ecommerce",
+          "description": "Empresas de envio para ecommerce y empresas de envios para tiendas online. Servicio profesional de última milla."
+        },
+        "company2": {
+          "title": "Empresas de Transporte Ecommerce",
+          "description": "Empresas de transporte ecommerce y empresas transporte ecommerce. Logística especializada para comercio electrónico."
+        },
+        "company3": {
+          "title": "Proveedor de Última Milla",
+          "description": "Proveedor de ultima milla y proveedor ultima milla. Servicio de última milla logística profesional."
+        },
+        "company4": {
+          "title": "Empresas de Última Milla",
+          "description": "Empresas de ultima milla y empresas ultima milla. Soluciones logísticas de última milla para ecommerce."
+        }
+      },
+      "pricing": {
+        "title": "Tarifas y Precios de Envíos Ecommerce",
+        "subtitle": "Tarifas envíos ecommerce, precios envios ecommerce y tarifa plana envios ecommerce competitivos",
+        "price1": {
+          "title": "Tarifas Envíos Ecommerce",
+          "description": "Tarifas envios ecommerce y tarifas envíos ecommerce competitivas. Precios adaptados a tu volumen de envíos."
+        },
+        "price2": {
+          "title": "Precios Envíos Ecommerce",
+          "description": "Precios envios ecommerce y envios ecommerce baratos. Envíos baratos para ecommerce y envíos baratos para tienda online."
+        },
+        "price3": {
+          "title": "Tarifa Plana Envíos Ecommerce",
+          "description": "Tarifa plana envios ecommerce para múltiples envíos. Solución económica para tiendas online."
+        }
+      },
+      "concept": {
+        "title": "Concepto y Definición de Última Milla",
+        "subtitle": "Qué es la última milla, concepto de última milla y la última milla en logística",
+        "concept1": {
+          "title": "Qué es la Última Milla",
+          "description": "La última milla es la fase final de la distribución, desde el almacén hasta el cliente final. Concepto ultima milla y ultima milla que es explicado."
+        },
+        "concept2": {
+          "title": "Concepto de Última Milla",
+          "description": "Concepto de ultima milla y concepto ultima milla logistica. La última milla en logística es crucial para el éxito del ecommerce."
+        },
+        "concept3": {
+          "title": "La Última Milla en Logística",
+          "description": "La ultima milla en logistica y la última milla logística. Logística de última milla y logística de la última milla para ecommerce."
+        }
+      },
+      "cta": {
+        "title": "¿Necesitas Servicio de Última Milla?",
+        "subtitle": "Logística última milla, distribución última milla y entrega última milla en Santiago y Región Metropolitana. Última milla ecommerce, alimentación y farmacia. Envíos para ecommerce y tiendas online.",
+        "button1": "Contratar Última Milla",
+        "button2": "Solicitar Presupuesto"
+      },
+      "faqs": {
+        "title": "Preguntas Frecuentes sobre Última Milla",
+        "subtitle": "Resolvemos tus dudas sobre última milla logística, entrega última milla, envíos para ecommerce y distribución última milla",
+        "faq1": {
+          "question": "¿Qué es el servicio de última milla?",
+          "answer": "El servicio de última milla es la fase final de la distribución, desde el almacén o centro de distribución hasta el destino final del cliente. Ofrecemos última milla logística, última milla distribución y entrega última milla para ecommerce, alimentación, farmacia y paquetería en Santiago y Región Metropolitana. La última milla logística es crucial para el éxito de las tiendas online."
+        },
+        "faq2": {
+          "question": "¿Cuánto tiempo tarda la entrega última milla?",
+          "answer": "Ofrecemos última milla mismo día, última milla 24 horas y última milla express para entregas urgentes. También disponemos de última milla programada con horarios flexibles, última milla fin de semana y última milla nocturna. El tiempo de entrega última milla depende del tipo de servicio contratado."
+        },
+        "faq3": {
+          "question": "¿Qué sectores cubre el servicio de última milla?",
+          "answer": "Cubrimos última milla ecommerce y última milla comercio electrónico para tiendas online, última milla alimentación y última milla supermercados, última milla restaurantes y última milla comida a domicilio, última milla farmacia, última milla paquetería y última milla retail."
+        },
+        "faq4": {
+          "question": "¿Cómo funciona el tracking de última milla?",
+          "answer": "Nuestro servicio de última milla incluye última milla tracking y última milla seguimiento en tiempo real mediante última milla GPS. Disponemos de última milla app y última milla plataforma digital para que puedas seguir tu envío en cada momento. El última milla sistema te notifica cada actualización."
+        },
+        "faq5": {
+          "question": "¿Cuánto cuesta el servicio de última milla?",
+          "answer": "El precio de última milla varía según la zona (última milla urbana, última milla periférica o última milla rural), tipo de entrega y urgencia. Ofrecemos última milla local en Santiago y Región Metropolitana. Las tarifas envíos ecommerce y precios envios ecommerce son competitivos. Solicita un presupuesto personalizado sin compromiso."
+        },
+        "faq6": {
+          "question": "¿Hacen reparto última milla los fines de semana?",
+          "answer": "Sí, ofrecemos última milla fin de semana y última milla flexible con horarios adaptados a tus necesidades. El servicio de reparto última milla y reparto de ultima milla está disponible de lunes a domingo según el plan contratado."
+        },
+        "faq7": {
+          "question": "¿Qué diferencia hay entre última milla y mensajería tradicional?",
+          "answer": "La última milla logística se enfoca en la eficiencia y rapidez de la entrega final, con tecnología avanzada de tracking, rutas optimizadas y flexibilidad horaria. Nuestro servicio de mensajería última milla y mensajeria ecommerce combina la velocidad del delivery última milla con la profesionalidad del transporte última milla."
+        },
+        "faq8": {
+          "question": "¿Ofrecen envíos para ecommerce?",
+          "answer": "Sí, ofrecemos envíos para ecommerce y envios para tiendas online. Nuestro servicio de transporte ecommerce y paqueteria ecommerce está especializado en última milla logística para comercio electrónico. Somos empresas de envio para ecommerce y empresas de envios para tiendas online."
+        },
+        "faq9": {
+          "question": "¿Qué es la paquetería ecommerce?",
+          "answer": "La paquetería ecommerce y paqueteria para ecommerce es el servicio de envío de paquetes para tiendas online. Ofrecemos paqueteria para tiendas online, paquetería e commerce y ecommerce paqueteria con última milla garantizada. También ofrecemos paqueteria ultima milla y paqueteria de ultima milla."
+        },
+        "faq10": {
+          "question": "¿Cuáles son las tarifas envíos ecommerce?",
+          "answer": "Las tarifas envios ecommerce y tarifas envíos ecommerce varían según el volumen, distancia y tipo de entrega. Ofrecemos precios envios ecommerce competitivos, envios ecommerce baratos y tarifa plana envios ecommerce para múltiples envíos. También disponemos de envios baratos para ecommerce y envíos baratos para tienda online."
+        },
+        "faq11": {
+          "question": "¿Qué es la logística de última milla?",
+          "answer": "La logística de ultima milla y logística de última milla es la gestión del último tramo de la cadena de suministro, desde el centro de distribución hasta el cliente final. Incluye logistica ultima milla, logistica envios ecommerce y logistica de ultima milla. También abarca la logística de distribución ultima milla y la logística de la última milla."
+        },
+        "faq12": {
+          "question": "¿Son una empresa de transporte ecommerce?",
+          "answer": "Sí, somos empresas de transporte ecommerce y empresas transporte ecommerce especializadas en última milla. También somos empresas de transporte ultima milla y empresas de ultima milla. Ofrecemos transporte para ecommerce y transporte ultima milla profesional."
+        },
+        "faq13": {
+          "question": "¿Qué es un proveedor de última milla?",
+          "answer": "Un proveedor de ultima milla y proveedor ultima milla es una empresa que ofrece servicios de entrega última milla. Como proveedor última milla, ofrecemos soluciones de entrega de última milla y servicios de entrega de última milla para ecommerce y tiendas online."
+        },
+        "faq14": {
+          "question": "¿Qué es el concepto de última milla?",
+          "answer": "El concepto de ultima milla y concepto ultima milla se refiere a la fase final del proceso de distribución. El concepto ultima milla logistica incluye entregas ultima milla, entregas de ultima milla y entrega de la ultima milla. La ultima milla concepto y ultima milla definicion es crucial para entender la logística moderna."
+        },
+        "faq15": {
+          "question": "¿Qué es la distribución de última milla?",
+          "answer": "La distribucion de ultima milla y distribucion ultima milla es el proceso de entrega final de productos. Incluye distribucion de la ultima milla y operaciones de ultima milla. También abarca el proceso de ultima milla, proceso ultima milla y procesos ultima milla."
+        },
+        "faq16": {
+          "question": "¿Ofrecen soluciones logísticas para ecommerce?",
+          "answer": "Sí, ofrecemos soluciones logisticas para ecommerce y soluciones envios ecommerce. También disponemos de soluciones de ultima milla, soluciones de entrega de última milla y soluciones ultima milla. Somos especialistas en logística para tiendas online."
+        },
+        "faq17": {
+          "question": "¿Qué es la última milla en logística?",
+          "answer": "La ultima milla en logistica y última milla en logística es el último tramo del proceso de entrega. La logística de la última milla y la última milla logística son fundamentales para el éxito del ecommerce. También incluye la ultima milla logistica que es y ultima milla logistica que es."
+        },
+        "faq18": {
+          "question": "¿Qué significa última milla?",
+          "answer": "La ultima milla significado y ultima milla que es se refiere a la fase final de la distribución. La ultima milla definicion y ultima milla concepto incluyen entregas ultima milla, envios ultima milla y envios de ultima milla. También abarca la ultima milla empresa y ultima milla paqueteria."
+        }
+      },
+      "seo": {
+        "title": "Última Milla Logística Santiago | Envíos para Ecommerce y Tiendas Online | FletesPro",
+        "description": "Última milla logística en Santiago y Región Metropolitana. Envíos para ecommerce, tiendas online y paquetería ecommerce. Empresas de transporte ecommerce y proveedor de última milla. Tarifas envíos ecommerce competitivas. Presupuesto gratis.",
+        "keywords": "ultima milla, última milla, ultima milla logistica, última milla logística, envios para tiendas online, envios para ecommerce, envios ecommerce, envio ecommerce, transporte ecommerce, paqueteria ecommerce, empresas de envio para ecommerce, tarifas envíos ecommerce, tarifa plana envios ecommerce, envios ecommerce baratos, ecommerce envios, transporte para ecommerce, envios baratos ecommerce, transporte ultima milla, paqueteria para ecommerce, logistica ultima milla, empresas de envios para tiendas online, empresas de transporte ecommerce, logistica envios ecommerce, logistica de ultima milla, paquetería e commerce, última milla logística, la ultima milla, envios para empresas online, servicio ultima milla, envíos baratos para tienda online, precios envios ecommerce, empresas de ultima milla, empresas ultima milla, reparto ultima milla, última milla transporte, empresas transporte ecommerce, paqueteria ultima milla, envios internacionales ecommerce, servicio de ultima milla, mensajeria ecommerce, proveedor de ultima milla, proveedor ultima milla, envios baratos para ecommerce, envios ultima milla, tarifas envios ecommerce, mensajeria para ecommerce, transporte de ultima milla, empresas de transporte ultima milla, ecommerce paqueteria, entregas ultima milla, la ultima milla en logistica, soluciones envios ecommerce, entregas de ultima milla, envios de ultima milla, empresas de paqueteria para ecommerce, reparto de ultima milla, logística de última milla, paqueteria para tiendas online, e commerce paqueteria, ultima milla en logistica, paquetería para tiendas online, mensajeria para tienda online, distribucion de ultima milla, distribucion ultima milla, mejor paqueteria para ecommerce, concepto de ultima milla, concepto ultima milla, concepto ultima milla logistica, distribucion de la ultima milla, empresas de mensajeria para tienda online, entrega de la ultima milla, envios para mi tienda online, envío de comercio electrónico, envío ecommerce, la logística de la última milla, la ultima milla logistica, la ultima milla que es, la última milla logística, logistica de distribución ultima milla, logistica de la ultima milla, logistica de ultima milla que es, logística de la última milla, logística de última milla definición, logística de última milla ejemplo, operaciones de ultima milla, paquete e commerce, paqueteria de ultima milla, paqueteria para e commerce, paqueteria tienda online, paquetería e commerce que es, paquetes de ecommerce, proceso de ultima milla, proceso ultima milla, procesos ultima milla, proveedor última milla, servicio de última milla, servicios de entrega de última milla, soluciones de entrega de última milla, soluciones de ultima milla, soluciones logisticas para ecommerce, soluciones ultima milla, tiendas online envio gratis, ultima milla concepto, ultima milla definicion, ultima milla empresa, ultima milla logistica que es, ultima milla paqueteria, ultima milla que es, ultima milla significado, ultima milla sostenible, ultimamilla, última milla en logística, última milla logística que es, última milla que es",
+        "ogTitle": "Última Milla Logística Santiago | Envíos para Ecommerce",
+        "ogDescription": "Última milla logística en Santiago y Región Metropolitana. Envíos para ecommerce, tiendas online y paquetería ecommerce. Empresas de transporte ecommerce y proveedor de última milla.",
+        "twitterTitle": "Última Milla Logística | Envíos Ecommerce",
+        "twitterDescription": "Última milla logística en Santiago. Envíos para ecommerce, tiendas online y paquetería ecommerce. Tarifas competitivas.",
+        "schemaServiceType": "Última Milla Logística",
+        "schemaDescription": "Última milla logística en Santiago. Entrega última milla express, mismo día y 24h. Envíos para ecommerce y tiendas online."
+      }
+    },
+    "mudanzasParticulares": {
+      "hero": {
+        "badge": "Mudanzas para Particulares y Familias",
+        "title": "Mudanzas Particulares",
+        "subtitle": "Mudanzas particulares y mudanza pequeña en Santiago y Región Metropolitana. Servicio completo de mudanzas baratas particulares para hogares y familias. Presupuesto gratis."
+      },
+      "services": {
+        "title": "Servicios de Mudanzas Particulares",
+        "subtitle": "Mudanzas particulares completas con servicio profesional para tu hogar",
+        "service1": {
+          "title": "Mudanzas Particulares Completas",
+          "description": "Mudanzas particulares y mudanza pequeña con servicio completo. Ideal para mudanzas baratas particulares y mudanzas pequeñas baratas."
+        },
+        "service2": {
+          "title": "Embalaje y Desembalaje",
+          "description": "Servicio de embalaje profesional incluido en mudanzas particulares. Protección completa de tus pertenencias."
+        },
+        "service3": {
+          "title": "Seguro y Garantía",
+          "description": "Mudanzas particulares con seguro completo y garantía de satisfacción. Tranquilidad total en tu mudanza."
+        }
+      },
+      "benefits": {
+        "title": "Ventajas de Mudanzas Particulares",
+        "subtitle": "Por qué elegir nuestras mudanzas particulares",
+        "benefit1": {
+          "title": "Precios Competitivos",
+          "description": "Mudanzas baratas particulares y mudanzas pequeñas baratas con precios desde 45€."
+        },
+        "benefit2": {
+          "title": "Servicio Rápido",
+          "description": "Mudanzas particulares con entrega rápida y eficiente. Sin esperas innecesarias."
+        },
+        "benefit3": {
+          "title": "Protección Total",
+          "description": "Mudanzas particulares con seguro completo y cuidado profesional de tus pertenencias."
+        },
+        "benefit4": {
+          "title": "Embalaje Incluido",
+          "description": "Mudanzas particulares con servicio de embalaje profesional incluido sin coste adicional."
+        }
+      },
+      "process": {
+        "title": "Proceso de Mudanzas Particulares",
+        "subtitle": "Cómo trabajamos en tus mudanzas particulares",
+        "step1": {
+          "title": "Presupuesto Gratis",
+          "description": "Solicita presupuesto para mudanzas particulares sin compromiso. Cotización online instantánea."
+        },
+        "step2": {
+          "title": "Planificación",
+          "description": "Planificamos tu mudanza pequeña o mudanza particular con detalle y profesionalidad."
+        },
+        "step3": {
+          "title": "Embalaje y Carga",
+          "description": "Embalaje profesional y carga segura en mudanzas particulares. Cuidado máximo."
+        },
+        "step4": {
+          "title": "Entrega y Desembalaje",
+          "description": "Entrega puntual y desembalaje en destino. Mudanzas particulares completas."
+        }
+      },
+      "cta": {
+        "title": "¿Necesitas Mudanzas Particulares?",
+        "subtitle": "Mudanzas particulares y mudanza pequeña en Santiago y Región Metropolitana. Mudanzas baratas particulares con servicio completo. Presupuesto gratis.",
+        "button1": "Solicitar Presupuesto",
+        "button2": "Calcular Precio Online"
+      },
+      "faqs": {
+        "title": "Preguntas Frecuentes sobre Mudanzas Particulares",
+        "subtitle": "Resolvemos tus dudas sobre mudanzas particulares y mudanza pequeña",
+        "faq1": {
+          "question": "¿Qué incluyen las mudanzas particulares?",
+          "answer": "Las mudanzas particulares incluyen servicio completo: embalaje profesional, carga, transporte seguro, descarga y desembalaje. Ideal para mudanza pequeña y mudanzas baratas particulares."
+        },
+        "faq2": {
+          "question": "¿Cuánto cuestan las mudanzas particulares?",
+          "answer": "El precio de mudanzas particulares varía según volumen y distancia. Ofrecemos mudanzas baratas particulares con precios competitivos en Santiago y Región Metropolitana. Solicita presupuesto gratis."
+        },
+        "faq3": {
+          "question": "¿Qué es una mudanza pequeña?",
+          "answer": "Una mudanza pequeña es ideal para estudios, apartamentos pequeños o mudanzas particulares con pocos muebles. Ofrecemos mudanzas pequeñas baratas con servicio completo."
+        },
+        "faq4": {
+          "question": "¿Incluyen embalaje en mudanzas particulares?",
+          "answer": "Sí, nuestras mudanzas particulares incluyen servicio de embalaje profesional sin coste adicional. Protección completa de tus pertenencias en mudanza pequeña o mudanza particular."
+        },
+        "faq5": {
+          "question": "¿Ofrecen seguro en mudanzas particulares?",
+          "answer": "Sí, todas nuestras mudanzas particulares incluyen seguro completo. Mudanzas baratas particulares con protección total de tus pertenencias."
+        },
+        "faq6": {
+          "question": "¿Cuánto tiempo tardan las mudanzas particulares?",
+          "answer": "El tiempo de mudanzas particulares depende del volumen. Para mudanza pequeña, el proceso suele ser de 4-6 horas. Mudanzas particulares completas pueden tardar 1-2 días."
+        }
+      },
+      "seo": {
+        "title": "Mudanzas Particulares Marbella | Mudanza Pequeña | Mudanzas Baratas Particulares | FletesPro",
+        "description": "Mudanzas particulares y mudanza pequeña en Santiago y Región Metropolitana. Mudanzas baratas particulares y mudanzas pequeñas baratas con servicio completo. Presupuesto gratis.",
+        "keywords": "mudanzas particulares, mudanza pequeña, mudanzas baratas particulares, mudanzas pequeñas baratas, mudanza particular, mudanzas para particulares, mudanzas hogar, mudanzas familia, mudanzas vivienda, mudanzas casa, mudanzas piso, mudanzas apartamento, mudanzas estudio, mudanzas baratas, mudanzas económicas, presupuesto mudanzas particulares, cotizar mudanza particular, precio mudanzas particulares, empresa mudanzas particulares, servicio mudanzas particulares",
+        "ogTitle": "Mudanzas Particulares Marbella | Mudanza Pequeña",
+        "ogDescription": "Mudanzas particulares y mudanza pequeña en Santiago y Región Metropolitana. Mudanzas baratas particulares con servicio completo.",
+        "twitterTitle": "Mudanzas Particulares | Mudanza Pequeña",
+        "twitterDescription": "Mudanzas particulares y mudanza pequeña en Santiago. Mudanzas baratas particulares con servicio completo.",
+        "schemaServiceType": "Mudanzas Particulares",
+        "schemaDescription": "Mudanzas particulares y mudanza pequeña en Santiago y Región Metropolitana. Servicio completo de mudanzas baratas particulares."
+      }
+    },
+    "mudanzasEmpresas": {
+      "hero": {
+        "badge": "Mudanzas para Empresas y Negocios",
+        "title": "Mudanzas Empresas",
+        "subtitle": "Mudanzas empresas y mudanzas corporativas en Santiago y Región Metropolitana. Servicio especializado de mudanzas de oficinas para empresas. Presupuesto gratis."
+      },
+      "services": {
+        "title": "Servicios de Mudanzas Empresas",
+        "subtitle": "Mudanzas empresas y mudanzas corporativas con servicio profesional especializado",
+        "service1": {
+          "title": "Mudanzas Corporativas",
+          "description": "Mudanzas empresas y mudanzas corporativas completas. Servicio especializado para empresas de todos los tamaños."
+        },
+        "service2": {
+          "title": "Planificación Empresarial",
+          "description": "Mudanzas empresas con planificación detallada para minimizar interrupciones en tu negocio."
+        },
+        "service3": {
+          "title": "Horarios Flexibles",
+          "description": "Mudanzas empresas con horarios adaptados a tus necesidades. Incluso fines de semana y horarios nocturnos."
+        }
+      },
+      "benefits": {
+        "title": "Ventajas de Mudanzas Empresas",
+        "subtitle": "Por qué elegir nuestras mudanzas empresas",
+        "benefit1": {
+          "title": "Sin Interrupciones",
+          "description": "Mudanzas empresas planificadas para minimizar el impacto en tu actividad empresarial."
+        },
+        "benefit2": {
+          "title": "Equipos Especializados",
+          "description": "Mudanzas empresas con equipos profesionales especializados en mudanzas corporativas."
+        },
+        "benefit3": {
+          "title": "Documentación Completa",
+          "description": "Mudanzas empresas con toda la documentación necesaria y seguros empresariales."
+        },
+        "benefit4": {
+          "title": "Soporte 24/7",
+          "description": "Mudanzas empresas con soporte continuo durante todo el proceso de mudanza."
+        }
+      },
+      "process": {
+        "title": "Proceso de Mudanzas Empresas",
+        "subtitle": "Cómo trabajamos en tus mudanzas empresas",
+        "step1": {
+          "title": "Análisis y Presupuesto",
+          "description": "Análisis detallado de tus necesidades para mudanzas empresas. Presupuesto personalizado."
+        },
+        "step2": {
+          "title": "Planificación Estratégica",
+          "description": "Planificación estratégica de mudanzas corporativas para minimizar interrupciones."
+        },
+        "step3": {
+          "title": "Ejecución Profesional",
+          "description": "Ejecución profesional de mudanzas empresas con equipos especializados."
+        },
+        "step4": {
+          "title": "Instalación y Verificación",
+          "description": "Instalación completa y verificación en destino. Mudanzas empresas finalizadas."
+        }
+      },
+      "cta": {
+        "title": "¿Necesitas Mudanzas Empresas?",
+        "subtitle": "Mudanzas empresas y mudanzas corporativas en Santiago y Región Metropolitana. Servicio especializado de mudanzas de oficinas. Presupuesto gratis.",
+        "button1": "Solicitar Presupuesto",
+        "button2": "Calcular Precio Online"
+      },
+      "faqs": {
+        "title": "Preguntas Frecuentes sobre Mudanzas Empresas",
+        "subtitle": "Resolvemos tus dudas sobre mudanzas empresas y mudanzas corporativas",
+        "faq1": {
+          "question": "¿Qué incluyen las mudanzas empresas?",
+          "answer": "Las mudanzas empresas incluyen servicio completo: planificación estratégica, embalaje profesional, transporte seguro, instalación y verificación. Mudanzas corporativas con servicio especializado."
+        },
+        "faq2": {
+          "question": "¿Cuánto cuestan las mudanzas empresas?",
+          "answer": "El precio de mudanzas empresas varía según el tamaño de la empresa y complejidad. Ofrecemos presupuestos personalizados para mudanzas corporativas. Solicita cotización sin compromiso."
+        },
+        "faq3": {
+          "question": "¿Pueden hacer mudanzas empresas en horario nocturno?",
+          "answer": "Sí, ofrecemos mudanzas empresas con horarios flexibles, incluyendo horarios nocturnos y fines de semana para minimizar interrupciones en mudanzas corporativas."
+        },
+        "faq4": {
+          "question": "¿Qué documentación necesito para mudanzas empresas?",
+          "answer": "Para mudanzas empresas necesitarás documentación básica de la empresa. Nuestro equipo te ayudará con toda la documentación necesaria para mudanzas corporativas."
+        },
+        "faq5": {
+          "question": "¿Ofrecen seguro para mudanzas empresas?",
+          "answer": "Sí, todas nuestras mudanzas empresas incluyen seguro empresarial completo. Mudanzas corporativas con protección total de equipos y mobiliario."
+        },
+        "faq6": {
+          "question": "¿Cuánto tiempo tardan las mudanzas empresas?",
+          "answer": "El tiempo de mudanzas empresas depende del tamaño. Mudanzas corporativas pequeñas pueden tardar 1 día, mientras que mudanzas empresas grandes pueden requerir varios días."
+        }
+      },
+      "seo": {
+        "title": "Mudanzas Empresas Santiago | Mudanzas Corporativas | Mudanzas de Oficinas | FletesPro",
+        "description": "Mudanzas empresas y mudanzas corporativas en Santiago y Región Metropolitana. Servicio especializado de mudanzas de oficinas para empresas. Presupuesto gratis.",
+        "keywords": "mudanzas empresas, mudanzas corporativas, mudanzas de oficinas, mudanzas empresariales, mudanzas negocios, mudanzas locales comerciales, mudanzas tiendas, mudanzas almacenes, mudanzas empresas Santiago, mudanzas empresas Región Metropolitana, servicio mudanzas empresas, empresa mudanzas corporativas, presupuesto mudanzas empresas, cotizar mudanzas empresas, precio mudanzas empresas",
+        "ogTitle": "Mudanzas Empresas Santiago | Mudanzas Corporativas",
+        "ogDescription": "Mudanzas empresas y mudanzas corporativas en Santiago y Región Metropolitana. Servicio especializado de mudanzas de oficinas.",
+        "twitterTitle": "Mudanzas Empresas | Mudanzas Corporativas",
+        "twitterDescription": "Mudanzas empresas y mudanzas corporativas en Santiago. Servicio especializado de mudanzas de oficinas.",
+        "schemaServiceType": "Mudanzas Empresas",
+        "schemaDescription": "Mudanzas empresas y mudanzas corporativas en Santiago y Región Metropolitana. Servicio especializado de mudanzas de oficinas."
+      }
+    },
+    "mudanzasOficinas": {
+      "hero": {
+        "badge": "Mudanzas de Oficinas Profesionales",
+        "title": "Mudanzas Oficinas",
+        "subtitle": "Mudanzas oficinas y mudanzas de oficinas en Santiago y Región Metropolitana. Servicio especializado para mudanzas de oficinas sin interrumpir tu negocio. Presupuesto gratis."
+      },
+      "services": {
+        "title": "Servicios de Mudanzas Oficinas",
+        "subtitle": "Mudanzas oficinas y mudanzas de oficinas con servicio profesional especializado",
+        "service1": {
+          "title": "Mudanzas de Oficinas Completas",
+          "description": "Mudanzas oficinas y mudanzas de oficinas con servicio completo. Especialistas en mudanzas de oficinas."
+        },
+        "service2": {
+          "title": "Desmontaje y Montaje",
+          "description": "Mudanzas oficinas con servicio de desmontaje y montaje de mobiliario de oficina incluido."
+        },
+        "service3": {
+          "title": "Reubicación de Equipos",
+          "description": "Mudanzas oficinas con reubicación profesional de equipos informáticos y tecnología."
+        }
+      },
+      "benefits": {
+        "title": "Ventajas de Mudanzas Oficinas",
+        "subtitle": "Por qué elegir nuestras mudanzas oficinas",
+        "benefit1": {
+          "title": "Sin Interrupciones",
+          "description": "Mudanzas oficinas planificadas para que tu negocio siga funcionando durante la mudanza."
+        },
+        "benefit2": {
+          "title": "Equipos Especializados",
+          "description": "Mudanzas oficinas con equipos profesionales especializados en mudanzas de oficinas."
+        },
+        "benefit3": {
+          "title": "Horarios Flexibles",
+          "description": "Mudanzas oficinas con horarios adaptados: fines de semana, horarios nocturnos."
+        },
+        "benefit4": {
+          "title": "Instalación Completa",
+          "description": "Mudanzas oficinas con instalación completa de mobiliario y equipos en destino."
+        }
+      },
+      "process": {
+        "title": "Proceso de Mudanzas Oficinas",
+        "subtitle": "Cómo trabajamos en tus mudanzas oficinas",
+        "step1": {
+          "title": "Evaluación y Presupuesto",
+          "description": "Evaluación detallada de tus necesidades para mudanzas oficinas. Presupuesto personalizado."
+        },
+        "step2": {
+          "title": "Planificación Minuciosa",
+          "description": "Planificación detallada de mudanzas de oficinas para minimizar interrupciones."
+        },
+        "step3": {
+          "title": "Ejecución Profesional",
+          "description": "Ejecución profesional de mudanzas oficinas con equipos especializados."
+        },
+        "step4": {
+          "title": "Instalación y Configuración",
+          "description": "Instalación completa y configuración en destino. Mudanzas oficinas finalizadas."
+        }
+      },
+      "cta": {
+        "title": "¿Necesitas Mudanzas Oficinas?",
+        "subtitle": "Mudanzas oficinas y mudanzas de oficinas en Santiago y Región Metropolitana. Servicio especializado sin interrumpir tu negocio. Presupuesto gratis.",
+        "button1": "Solicitar Presupuesto",
+        "button2": "Calcular Precio Online"
+      },
+      "faqs": {
+        "title": "Preguntas Frecuentes sobre Mudanzas Oficinas",
+        "subtitle": "Resolvemos tus dudas sobre mudanzas oficinas y mudanzas de oficinas",
+        "faq1": {
+          "question": "¿Qué incluyen las mudanzas oficinas?",
+          "answer": "Las mudanzas oficinas incluyen servicio completo: desmontaje, embalaje, transporte, montaje e instalación. Mudanzas de oficinas con servicio especializado."
+        },
+        "faq2": {
+          "question": "¿Cuánto cuestan las mudanzas oficinas?",
+          "answer": "El precio de mudanzas oficinas varía según el tamaño de la oficina. Ofrecemos presupuestos personalizados para mudanzas de oficinas. Solicita cotización sin compromiso."
+        },
+        "faq3": {
+          "question": "¿Pueden hacer mudanzas oficinas en fin de semana?",
+          "answer": "Sí, ofrecemos mudanzas oficinas con horarios flexibles, incluyendo fines de semana y horarios nocturnos para no interrumpir tu actividad en mudanzas de oficinas."
+        },
+        "faq4": {
+          "question": "¿Incluyen desmontaje y montaje en mudanzas oficinas?",
+          "answer": "Sí, nuestras mudanzas oficinas incluyen servicio completo de desmontaje y montaje de mobiliario. Mudanzas de oficinas con instalación profesional."
+        },
+        "faq5": {
+          "question": "¿Qué pasa con los equipos informáticos en mudanzas oficinas?",
+          "answer": "En mudanzas oficinas, nuestros especialistas se encargan de la reubicación segura de equipos informáticos. Mudanzas de oficinas con cuidado especial de tecnología."
+        },
+        "faq6": {
+          "question": "¿Cuánto tiempo tardan las mudanzas oficinas?",
+          "answer": "El tiempo de mudanzas oficinas depende del tamaño. Mudanzas de oficinas pequeñas pueden tardar 1 día, mientras que mudanzas oficinas grandes pueden requerir 2-3 días."
+        }
+      },
+      "seo": {
+        "title": "Mudanzas Oficinas Marbella | Mudanzas de Oficinas | Servicio Especializado | FletesPro",
+        "description": "Mudanzas oficinas y mudanzas de oficinas en Santiago y Región Metropolitana. Servicio especializado para mudanzas de oficinas sin interrumpir tu negocio. Presupuesto gratis.",
+        "keywords": "mudanzas oficinas, mudanzas de oficinas, mudanzas oficina, mudanzas despachos, mudanzas espacios trabajo, mudanzas oficinas Santiago, mudanzas oficinas Región Metropolitana, servicio mudanzas oficinas, empresa mudanzas oficinas, presupuesto mudanzas oficinas, cotizar mudanzas oficinas, precio mudanzas oficinas, mudanzas oficinas fin de semana, mudanzas oficinas nocturnas",
+        "ogTitle": "Mudanzas Oficinas Marbella | Mudanzas de Oficinas",
+        "ogDescription": "Mudanzas oficinas y mudanzas de oficinas en Santiago y Región Metropolitana. Servicio especializado sin interrumpir tu negocio.",
+        "twitterTitle": "Mudanzas Oficinas | Mudanzas de Oficinas",
+        "twitterDescription": "Mudanzas oficinas y mudanzas de oficinas en Santiago. Servicio especializado sin interrumpir tu negocio.",
+        "schemaServiceType": "Mudanzas Oficinas",
+        "schemaDescription": "Mudanzas oficinas y mudanzas de oficinas en Santiago y Región Metropolitana. Servicio especializado sin interrumpir tu negocio."
+      }
+    },
+    "mudanzasInternacionales": {
+      "hero": {
+        "badge": "Mudanzas Internacionales Profesionales",
+        "title": "Mudanzas Internacionales",
+        "subtitle": "Mudanzas internacionales y mudanzas al extranjero en Santiago y Región Metropolitana. Servicio completo de mudanzas internacionales con documentación incluida. Presupuesto gratis."
+      },
+      "services": {
+        "title": "Servicios de Mudanzas Internacionales",
+        "subtitle": "Mudanzas internacionales y mudanzas al extranjero con servicio profesional completo",
+        "service1": {
+          "title": "Mudanzas al Extranjero",
+          "description": "Mudanzas internacionales y mudanzas al extranjero a cualquier destino. Servicio completo de mudanzas internacionales."
+        },
+        "service2": {
+          "title": "Documentación Completa",
+          "description": "Mudanzas internacionales con toda la documentación aduanera y legal incluida."
+        },
+        "service3": {
+          "title": "Seguro Internacional",
+          "description": "Mudanzas internacionales con seguro completo para mudanzas al extranjero."
+        }
+      },
+      "benefits": {
+        "title": "Ventajas de Mudanzas Internacionales",
+        "subtitle": "Por qué elegir nuestras mudanzas internacionales",
+        "benefit1": {
+          "title": "Cobertura Mundial",
+          "description": "Mudanzas internacionales a cualquier destino. Mudanzas al extranjero con cobertura completa."
+        },
+        "benefit2": {
+          "title": "Documentación Incluida",
+          "description": "Mudanzas internacionales con toda la documentación aduanera y legal incluida sin coste adicional."
+        },
+        "benefit3": {
+          "title": "Seguro Completo",
+          "description": "Mudanzas internacionales con seguro completo para mudanzas al extranjero."
+        },
+        "benefit4": {
+          "title": "Seguimiento 24/7",
+          "description": "Mudanzas internacionales con seguimiento completo durante todo el proceso de mudanzas al extranjero."
+        }
+      },
+      "process": {
+        "title": "Proceso de Mudanzas Internacionales",
+        "subtitle": "Cómo trabajamos en tus mudanzas internacionales",
+        "step1": {
+          "title": "Consulta y Presupuesto",
+          "description": "Consulta inicial para mudanzas internacionales. Presupuesto detallado para mudanzas al extranjero."
+        },
+        "step2": {
+          "title": "Documentación y Trámites",
+          "description": "Gestión completa de documentación para mudanzas internacionales. Trámites aduaneros incluidos."
+        },
+        "step3": {
+          "title": "Embalaje y Embarque",
+          "description": "Embalaje profesional y embarque seguro para mudanzas al extranjero."
+        },
+        "step4": {
+          "title": "Transporte y Entrega",
+          "description": "Transporte seguro y entrega en destino. Mudanzas internacionales completadas."
+        }
+      },
+      "cta": {
+        "title": "¿Necesitas Mudanzas Internacionales?",
+        "subtitle": "Mudanzas internacionales y mudanzas al extranjero en Santiago y Región Metropolitana. Servicio completo con documentación incluida. Presupuesto gratis.",
+        "button1": "Solicitar Presupuesto",
+        "button2": "Calcular Precio Online"
+      },
+      "faqs": {
+        "title": "Preguntas Frecuentes sobre Mudanzas Internacionales",
+        "subtitle": "Resolvemos tus dudas sobre mudanzas internacionales y mudanzas al extranjero",
+        "faq1": {
+          "question": "¿Qué incluyen las mudanzas internacionales?",
+          "answer": "Las mudanzas internacionales incluyen servicio completo: embalaje, documentación aduanera, transporte seguro, seguro internacional y entrega en destino. Mudanzas al extranjero con servicio profesional."
+        },
+        "faq2": {
+          "question": "¿Cuánto cuestan las mudanzas internacionales?",
+          "answer": "El precio de mudanzas internacionales varía según destino y volumen. Mudanzas al extranjero con precios competitivos. Solicita presupuesto personalizado para mudanzas internacionales."
+        },
+        "faq3": {
+          "question": "¿Qué documentación necesito para mudanzas internacionales?",
+          "answer": "Para mudanzas internacionales necesitarás documentación básica. Nosotros gestionamos toda la documentación aduanera para mudanzas al extranjero."
+        },
+        "faq4": {
+          "question": "¿Cuánto tiempo tardan las mudanzas internacionales?",
+          "answer": "El tiempo de mudanzas internacionales depende del destino. Mudanzas al extranjero dentro de Europa suelen tardar 7-14 días. Mudanzas internacionales a otros continentes pueden tardar 3-6 semanas."
+        },
+        "faq5": {
+          "question": "¿Ofrecen seguro para mudanzas internacionales?",
+          "answer": "Sí, todas nuestras mudanzas internacionales incluyen seguro completo. Mudanzas al extranjero con protección total durante todo el trayecto."
+        },
+        "faq6": {
+          "question": "¿A qué países hacen mudanzas internacionales?",
+          "answer": "Ofrecemos mudanzas internacionales a cualquier destino mundial. Mudanzas al extranjero dentro y fuera de Europa. Consulta disponibilidad para mudanzas internacionales a tu destino."
+        }
+      },
+      "seo": {
+        "title": "Mudanzas Internacionales Santiago | Mudanzas al Extranjero | Servicio Completo | FletesPro",
+        "description": "Mudanzas internacionales y mudanzas al extranjero en Santiago y Región Metropolitana. Servicio completo de mudanzas internacionales con documentación incluida. Presupuesto gratis.",
+        "keywords": "mudanzas internacionales, mudanzas al extranjero, mudanzas fuera Chile, mudanzas Europa, mudanzas internacionales precios, mudanzas internacionales Marbella, mudanzas internacionales Málaga, mudanzas internacionales Costa del Sol, servicio mudanzas internacionales, empresa mudanzas internacionales, presupuesto mudanzas internacionales, cotizar mudanzas internacionales, precio mudanzas internacionales, mudanzas a estados unidos, mudanzas a reino unido, mudanzas a francia, mudanzas a alemania, mudanzas a portugal",
+        "ogTitle": "Mudanzas Internacionales Santiago | Mudanzas al Extranjero",
+        "ogDescription": "Mudanzas internacionales y mudanzas al extranjero en Santiago y Región Metropolitana. Servicio completo con documentación incluida.",
+        "twitterTitle": "Mudanzas Internacionales | Mudanzas al Extranjero",
+        "twitterDescription": "Mudanzas internacionales y mudanzas al extranjero en Santiago. Servicio completo con documentación incluida.",
+        "schemaServiceType": "Mudanzas Internacionales",
+        "schemaDescription": "Mudanzas internacionales y mudanzas al extranjero en Santiago y Región Metropolitana. Servicio completo con documentación incluida."
+      }
+    },
+    "mudanzasUrgentes": {
+      "hero": {
+        "badge": "Mudanzas Urgentes 24 Horas",
+        "title": "Mudanzas Urgentes",
+        "subtitle": "Mudanzas urgentes y mudanzas express 24 horas en Santiago y Región Metropolitana. Servicio de mudanzas urgentes disponible todos los días. Presupuesto gratis."
+      },
+      "services": {
+        "title": "Servicios de Mudanzas Urgentes",
+        "subtitle": "Mudanzas urgentes y mudanzas express 24 horas con servicio profesional inmediato",
+        "service1": {
+          "title": "Mudanzas Express 24h",
+          "description": "Mudanzas urgentes y mudanzas express 24 horas. Servicio disponible todos los días del año."
+        },
+        "service2": {
+          "title": "Respuesta Inmediata",
+          "description": "Mudanzas urgentes con respuesta inmediata. Disponibilidad 24/7 para mudanzas express."
+        },
+        "service3": {
+          "title": "Mismo Día",
+          "description": "Mudanzas urgentes con servicio el mismo día. Mudanzas express cuando más lo necesitas."
+        }
+      },
+      "benefits": {
+        "title": "Ventajas de Mudanzas Urgentes",
+        "subtitle": "Por qué elegir nuestras mudanzas urgentes",
+        "benefit1": {
+          "title": "Disponibilidad 24/7",
+          "description": "Mudanzas urgentes disponibles todos los días. Mudanzas express cuando más lo necesitas."
+        },
+        "benefit2": {
+          "title": "Respuesta Rápida",
+          "description": "Mudanzas urgentes con respuesta inmediata. Mudanzas express en el menor tiempo posible."
+        },
+        "benefit3": {
+          "title": "Servicio Completo",
+          "description": "Mudanzas urgentes con servicio completo. Mudanzas express sin comprometer la calidad."
+        },
+        "benefit4": {
+          "title": "Equipos Preparados",
+          "description": "Mudanzas urgentes con equipos siempre preparados. Mudanzas express profesionales."
+        }
+      },
+      "process": {
+        "title": "Proceso de Mudanzas Urgentes",
+        "subtitle": "Cómo trabajamos en tus mudanzas urgentes",
+        "step1": {
+          "title": "Llamada Urgente",
+          "description": "Contacta para mudanzas urgentes. Respuesta inmediata para mudanzas express."
+        },
+        "step2": {
+          "title": "Evaluación Rápida",
+          "description": "Evaluación rápida de tus necesidades para mudanzas urgentes. Presupuesto express."
+        },
+        "step3": {
+          "title": "Despliegue Inmediato",
+          "description": "Despliegue inmediato de equipos para mudanzas express. Mudanzas urgentes en marcha."
+        },
+        "step4": {
+          "title": "Entrega Rápida",
+          "description": "Entrega rápida y eficiente. Mudanzas urgentes completadas en tiempo récord."
+        }
+      },
+      "cta": {
+        "title": "¿Necesitas Mudanzas Urgentes?",
+        "subtitle": "Mudanzas urgentes y mudanzas express 24 horas en Santiago y Región Metropolitana. Servicio disponible todos los días. Presupuesto gratis.",
+        "button1": "Solicitar Presupuesto",
+        "button2": "Calcular Precio Online"
+      },
+      "faqs": {
+        "title": "Preguntas Frecuentes sobre Mudanzas Urgentes",
+        "subtitle": "Resolvemos tus dudas sobre mudanzas urgentes y mudanzas express",
+        "faq1": {
+          "question": "¿Qué son las mudanzas urgentes?",
+          "answer": "Las mudanzas urgentes son servicios de mudanza express 24 horas disponibles cuando necesitas mudarte con urgencia. Mudanzas express con respuesta inmediata."
+        },
+        "faq2": {
+          "question": "¿Cuánto cuestan las mudanzas urgentes?",
+          "answer": "El precio de mudanzas urgentes puede ser ligeramente superior debido a la urgencia. Mudanzas express con precios competitivos. Solicita presupuesto para mudanzas urgentes."
+        },
+        "faq3": {
+          "question": "¿Están disponibles las mudanzas urgentes los fines de semana?",
+          "answer": "Sí, nuestras mudanzas urgentes están disponibles todos los días, incluyendo fines de semana y festivos. Mudanzas express 24/7."
+        },
+        "faq4": {
+          "question": "¿Cuánto tiempo tardan las mudanzas urgentes?",
+          "answer": "Las mudanzas urgentes pueden realizarse el mismo día o en 24 horas. Mudanzas express con tiempos de respuesta mínimos."
+        },
+        "faq5": {
+          "question": "¿Incluyen embalaje en mudanzas urgentes?",
+          "answer": "Sí, nuestras mudanzas urgentes incluyen servicio de embalaje profesional. Mudanzas express con servicio completo."
+        },
+        "faq6": {
+          "question": "¿Qué diferencia hay entre mudanzas urgentes y mudanzas normales?",
+          "answer": "Las mudanzas urgentes ofrecen disponibilidad inmediata y tiempos de respuesta más rápidos. Mudanzas express cuando más lo necesitas."
+        }
+      },
+      "seo": {
+        "title": "Mudanzas Urgentes Marbella | Mudanzas Express 24 Horas | Servicio Inmediato | FletesPro",
+        "description": "Mudanzas urgentes y mudanzas express 24 horas en Santiago y Región Metropolitana. Servicio de mudanzas urgentes disponible todos los días. Presupuesto gratis.",
+        "keywords": "mudanzas urgentes, mudanzas express, mudanzas 24 horas, mudanzas mismo día, mudanzas urgentes Santiago, mudanzas urgentes Región Metropolitana, servicio mudanzas urgentes, empresa mudanzas urgentes, presupuesto mudanzas urgentes, cotizar mudanzas urgentes, precio mudanzas urgentes, mudanzas express 24h, mudanzas urgentes fin de semana, mudanzas urgentes domingo, mudanzas urgentes festivos",
+        "ogTitle": "Mudanzas Urgentes Marbella | Mudanzas Express 24h",
+        "ogDescription": "Mudanzas urgentes y mudanzas express 24 horas en Santiago y Región Metropolitana. Servicio disponible todos los días.",
+        "twitterTitle": "Mudanzas Urgentes | Mudanzas Express 24h",
+        "twitterDescription": "Mudanzas urgentes y mudanzas express 24 horas en Santiago. Servicio disponible todos los días.",
+        "schemaServiceType": "Mudanzas Urgentes",
+        "schemaDescription": "Mudanzas urgentes y mudanzas express 24 horas en Santiago y Región Metropolitana. Servicio disponible todos los días."
+      }
+    },
+    "contacto": {
+      "badge": "Contacta con Nosotros",
+      "title": "Contacto",
+      "subtitle": "Solicita presupuesto gratis para mudanzas baratas, mudanzas económicas y servicio de mudanza en Santiago y Región Metropolitana",
+      "phoneTitle": "Teléfono",
+      "phoneDesc": "Llámanos para presupuesto mudanza y cotizar mudanza",
+      "emailTitle": "Email",
+      "emailDesc": "Escríbenos para empresas de mudanzas y servicio de mudanza",
+      "addressTitle": "Dirección",
+      "addressDesc": "Oficina en Santiago y Región Metropolitana",
+      "ctaTitle": "¿Necesitas Presupuesto de Mudanza?",
+      "ctaSubtitle": "Contacta con nuestra empresa de mudanzas para mudanzas baratas, mudanzas económicas y servicio de mudanza profesional",
+      "ctaButton": "Solicitar Presupuesto",
+      "callButton": "Llamar Ahora",
+      "seoTitle": "Contacta con FletesPro - Empresa de Mudanzas Profesionales",
+      "seoContent1": "FletesPro es una empresa de mudanzas profesionales especializada en mudanzas baratas, mudanzas económicas y servicio de mudanza en Santiago y Región Metropolitana. Ofrecemos presupuesto mudanza gratis y cotizar mudanza online para particulares y empresas.",
+      "seoContent2": "Nuestro servicio de mudanza incluye mudanzas particulares, mudanzas empresas, mudanzas oficinas, mudanzas internacionales y mudanzas urgentes. También proporcionamos embalajes profesionales, guardamuebles y transporte en frío.",
+      "seoContent3": "Contacta con nuestra empresa de mudanzas para obtener un presupuesto mudanza personalizado. Ofrecemos mudanzas baratas, mudanzas económicas y servicio de mudanza con la máxima calidad. Solicita presupuesto mudanza gratis sin compromiso.",
+      "keywords": "contacto mudanzas, presupuesto mudanza, cotizar mudanza, empresa de mudanzas, mudanzas baratas, mudanzas económicas, servicio de mudanza, empresas de mudanzas, mudanzas Marbella, mudanzas Málaga, mudanzas Costa del Sol"
+    }
+  },
+  "calculator": {
+    "title": "Calculadora de Precios",
+    "subtitle": "Calcula el precio de tu mudanza en segundos",
+    "step1": "Ruta",
+    "step2": "Carga",
+    "step3": "Finalizar",
+    "step1Full": "Origen y Destino",
+    "step2Full": "Detalles",
+    "step3Full": "Resumen",
+    "origin": "Origen",
+    "destination": "Destino",
+    "originPlaceholder": "Introduce una dirección...",
+    "destinationPlaceholder": "Introduce una dirección...",
+    "distance": "Distancia",
+    "volume": "Volumen",
+    "items": "Objetos",
+    "price": "Precio",
+    "total": "Total",
+    "calculate": "Calcular",
+    "reset": "Restablecer",
+    "result": "Resultado",
+    "estimatedPrice": "Precio Estimado",
+    "estimatedTime": "Tiempo Estimado",
+    "getQuote": "Obtener Presupuesto",
+    "configureLoad": "Configurar Carga",
+    "digitalInventory": "Inventario Digital",
+    "technicalPrecision": "Precisión Técnica",
+    "selectBelongings": "Selecciona tus pertenencias",
+    "back": "Atrás",
+    "finishQuote": "Finalizar Presupuesto",
+    "quoteFinished": "Presupuesto Finalizado",
+    "artisanalCareGuaranteed": "Cuidado artesanal garantizado en Santiago y Región Metropolitana.",
+    "totalEstimatedFletesPro": "Total Estimado FletesPro",
+    "reserveMove": "RESERVAR MI MUDANZA",
+    "immediateConfirmation": "Confirmación inmediata • Soporte 24/7",
+    "executiveSummary": "Resumen Ejecutivo",
+    "routePlanning": "Planificación de Ruta",
+    "loadEstimation": "Estimación de Carga",
+    "attentionProtocol": "Protocolo de Atención",
+    "optimizedLogistics": "Logística optimizada",
+    "presets": {
+      "smallBox": "Caja Pequeña",
+      "largeBox": "Caja Grande",
+      "sofa3Seats": "Sofá 3 Plazas",
+      "refrigerator": "Nevera",
+      "washingMachine": "Lavadora",
+      "doubleBed": "Cama Matrimonio",
+      "diningTable": "Mesa Comedor",
+      "chair": "Silla"
+    },
+    "categories": {
+      "small": "Pequeño",
+      "medium": "Mediano",
+      "large": "Grande",
+      "special": "Especial"
+    }
+  },
+  "components": {
+    "stats": {
+      "movesCompleted": "Mudanzas Completadas",
+      "yearsExperience": "Años de Experiencia",
+      "vipClients": "Clientes VIP",
+      "zonesCovered": "Zonas Cubiertas"
+    },
+    "features": {
+      "title": "La Diferencia FletesPro",
+      "trilingualDrivers": "Conductores Trilingües",
+      "trilingualDriversDesc": "Hablamos español, inglés y sueco para tu comodidad y tranquilidad.",
+      "portesMudanzas": "Portes y Mudanzas",
+      "portesMudanzasDesc": "Especialistas en Marbella, Puerto Banús y Cala de Mijas. Servicio VIP.",
+      "packingOnDemand": "Embalaje Bajo Demanda",
+      "packingOnDemandDesc": "Protección máxima para antigüedades, arte y muebles delicados.",
+      "flexibleCapacity": "Capacidad Flexible",
+      "flexibleCapacityDesc": "Desde pequeños paquetes hasta grandes villas con la misma eficiencia.",
+      "insurance": "Seguro Completo",
+      "insuranceDesc": "Cobertura total para proteger todas tus pertenencias durante el transporte.",
+      "realTimeTracking": "Seguimiento en Tiempo Real",
+      "realTimeTrackingDesc": "Monitoreo constante de tu mudanza desde el origen hasta el destino."
+    },
+    "process": {
+      "tag": "Metodología FletesPro",
+      "title": "El estándar de oro en logística de mudanzas.",
+      "subtitle": "Combinamos tecnología de vanguardia con el trato personalizado de los artesanos de antaño.",
+      "step1Title": "Auditoría Digital",
+      "step1Desc": "Calculamos el volumen exacto con nuestra tecnología de precisión para un precio sin sorpresas.",
+      "step2Title": "Embalaje Artesanal",
+      "step2Desc": "Protección multicapa específica para cada objeto, desde arte hasta tecnología delicada.",
+      "step3Title": "Tránsito Premium",
+      "step3Desc": "Conductores trilingües y vehículos monitoreados por GPS en tiempo real a lo largo de toda la costa.",
+      "step4Title": "Entrega Manual",
+      "step4Desc": "Colocamos cada mueble en su ubicación final. Tu hogar listo para vivir desde el primer minuto."
+    },
+    "testimonials": {
+      "title": "Opiniones de Nuestros Clientes",
+      "testimonial1": {
+        "name": "Alejandro Ruiz",
+        "role": "Mudanza en Santiago",
+        "content": "Excelente trato y cuidado con los muebles. Un servicio 10/10 en Puerto Banús."
+      },
+      "testimonial2": {
+        "name": "Marta Sánchez",
+        "role": "Mudanza Cala de Mijas",
+        "content": "La web es súper dinámica y la calculadora me dio el precio exacto que pagué. Muy profesional."
+      },
+      "testimonial3": {
+        "name": "David Smith",
+        "role": "Transporte de Muebles",
+        "content": "Puntuales y muy eficientes. El equipo manejó todo con cuidado. Muy recomendable."
+      }
+    },
+    "quality": {
+      "title": "Nuestra obsesión:",
+      "titleHighlight": "La Perfección en el Servicio.",
+      "insuranceTitle": "Seguro Todo Riesgo",
+      "insuranceDesc": "Pólizas exclusivas para objetos valiosos y antigüedades sin letra pequeña.",
+      "digitalTitle": "Eficiencia Digital",
+      "digitalDesc": "Inventarios en la nube para que sepas dónde está cada caja en todo momento.",
+      "artisanTitle": "Cuidado Artesanal",
+      "artisanDesc": "Tratamos tus pertenencias como si fueran obras de arte. Nuestros operarios están formados en el manejo de materiales nobles y montajes complejos.",
+      "ctaButton": "Conoce al equipo"
+    },
+    "guardamueblesCalculator": {
+      "title": "Calculadora de Guardamuebles",
+      "subtitle": "Calcula el precio de tu bodegaje en Santiago según el volumen de tus objetos",
+      "additionalServices": "Servicios Adicionales",
+      "duration": "Duración",
+      "calculationSummary": "Resumen del Cálculo",
+      "totalVolume": "Volumen Total",
+      "objects": "Objetos",
+      "stacking": "Apilado",
+      "minimum": "Mínimo 3 m³",
+      "containers": "Contenedores",
+      "perUnit": "cada uno",
+      "basePrice": "Precio base",
+      "insurance": "Seguro",
+      "discount": "Descuento",
+      "monthly": "Mensual",
+      "total": "Total",
+      "requestQuote": "Solicitar Presupuesto",
+      "estimatedPriceNote": "* Precio estimado. Presupuesto final tras inspección."
+    },
+    "embalajesCalculator": {
+      "title": "Calculadora de Embalaje Profesional",
+      "subtitle": "Calcula el precio del servicio de embalaje profesional según tu tipo de vivienda",
+      "housingType": "Tipo de Vivienda",
+      "specialItems": "Objetos Especiales",
+      "serviceType": "Tipo de Servicio",
+      "calculationSummary": "Resumen del Cálculo",
+      "basePrice": "Precio Base",
+      "specialItemsPrice": "Objetos Especiales",
+      "service": "Servicio",
+      "totalPrice": "Precio Total",
+      "includesMaterials": "* Incluye todos los materiales",
+      "requestQuote": "Solicitar Presupuesto"
+    },
+    "transporteFrioCalculator": {
+      "title": "Calculadora de Transporte Frío",
+      "subtitle": "Calcula el precio del transporte refrigerado según temperatura, distancia y tipo de producto",
+      "temperatureRange": "Rango de Temperatura",
+      "productType": "Tipo de Producto",
+      "distance": "Distancia (km)",
+      "distancePlaceholder": "Introduce la distancia",
+      "distanceNote": "Distancia en kilómetros desde origen hasta destino",
+      "transportType": "Tipo de Transporte",
+      "calculationSummary": "Resumen del Cálculo",
+      "basePrice": "Precio Base",
+      "tariff": "Tarifa",
+      "temperature": "Temperatura",
+      "product": "Producto",
+      "type": "Tipo",
+      "totalPrice": "Precio Total",
+      "coldChainGuarantee": "* Incluye garantía de cadena de frío",
+      "requestQuote": "Solicitar Presupuesto"
+    },
+    "ultimaMillaCalculator": {
+      "title": "Calculadora de Última Milla",
+      "subtitle": "Calcula el precio de entrega de última milla para múltiples puntos de entrega",
+      "shipmentType": "Tipo de Envío",
+      "packageSmall": "Paquete Pequeño",
+      "maxWeight": "Máximo 20 kg",
+      "weightNote": "Ajusta el peso del paquete (0-20 kg)",
+      "addDeliveryPoint": "Añadir Punto de Entrega",
+      "addressPlaceholder": "Introduce dirección o lugar",
+      "addPoint": "Añadir Punto",
+      "minPoints": "Mínimo 5 puntos requeridos",
+      "pointsAdded": "puntos añadidos",
+      "deliveryPoints": "Puntos de Entrega",
+      "pointPrice": "Precio",
+      "noPoints": "No hay puntos añadidos",
+      "routeMap": "Mapa de Ruta",
+      "totalPoints": "Total de Puntos",
+      "calculationSummary": "Resumen del Cálculo",
+      "pricePerDelivery": "Precio por Entrega",
+      "totalPrice": "Precio Total",
+      "priceBreakdown": "3€ + IVA (21%) = 3.63€ por entrega",
+      "requestQuote": "Solicitar Presupuesto",
+      "minimumPointsNote": "Mínimo 5 puntos de entrega requeridos. Precio fijo por entrega."
+    }
+  },
+  "footer": {
+    "title": "FletesPro",
+    "description": "Empresa de mudanzas profesionales en Santiago y Región Metropolitana. Servicios de fletes, embalajes, guardamuebles, transporte en frío y última milla. Mudanzas baratas, económicas y rápidas con la máxima calidad.",
+    "services": "Servicios",
+    "zones": "Zonas",
+    "legal": "Legal",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "cookies": "Cookies",
+    "contact": "Contacto",
+    "followUs": "Síguenos",
+    "allRightsReserved": "Todos los derechos reservados"
+  }
+}

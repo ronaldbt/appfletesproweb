@@ -14,7 +14,7 @@
     <!-- Contenedor principal -->
     <div class="lg:ml-64 transition-all duration-300">
       <div class="max-w-7xl mx-auto p-6">
-        <router-view />
+        <slot />
       </div>
     </div>
   </div>

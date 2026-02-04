@@ -1,0 +1,24 @@
+RESUMEN DE INVESTIGACIÓN:
+
+1. ✅ console.logs agregados en app.vue, layouts/default.vue, pages/index.vue
+2. ✅ app.vue SÍ se ejecuta (logs visibles en servidor)
+3. ❌ pages/index.vue NO se ejecuta (logs NO visibles)
+4. ❌ layouts/default.vue NO se usa (cuando uso NuxtLayout)
+5. ❌ NuxtPage NO renderiza NINGUNA página (ni / ni /test)
+6. ❌ Header y WhatsAppButton NO se renderizan (aparecen como comentarios HTML)
+
+ESTRUCTURA ACTUAL:
+- app/app.vue: Tiene Header, NuxtPage, WhatsAppButton directamente
+- layouts/default.vue: Existe pero no se usa
+- pages/index.vue: Existe y tiene contenido
+
+PROBLEMA:
+NuxtPage no está encontrando/renderizando las páginas. Puede ser:
+- Problema de configuración en nuxt.config.ts
+- Problema con la estructura app/app.vue
+- Problema con cómo Nuxt compila las páginas
+
+PRÓXIMOS PASOS:
+- Probar estructura sin app/app.vue (usar solo layouts)
+- Verificar si hay problemas de compilación no visibles
+- Revisar si necesitamos configuración adicional

@@ -1,0 +1,1976 @@
+{
+  "common": {
+    "title": "Moving and Transport",
+    "subtitle": "Artisanal care and technological precision. Moving services in Marbella and Costa del Sol.",
+    "cta": "Request Quote",
+    "learnMore": "Learn More",
+    "contact": "Contact",
+    "call": "Call",
+    "email": "Email",
+    "address": "Address",
+    "phone": "Phone",
+    "open": "Open",
+    "close": "Close",
+    "readMore": "Read More",
+    "seeMore": "See More",
+    "less": "Less",
+    "all": "All",
+    "services": "Services",
+    "about": "About Us",
+    "testimonials": "Testimonials",
+    "gallery": "Gallery",
+    "blog": "Blog",
+    "news": "News",
+    "onlineAssistant": "Online Assistant",
+    "onlineAssistantTooltip": "Need help? Write to us on WhatsApp"
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "ultimaMilla": "Last Mile"
+  },
+  "nav": {
+    "mudanzas": "Moving",
+    "embalajes": "Packing",
+    "guardamuebles": "Storage",
+    "transporteFrio": "Cold Transport",
+    "ultimaMilla": "Last Mile",
+    "contacto": "Contact",
+    "zonas": "Areas",
+    "login": "Login",
+    "mudanzasParticulares": "Residential Moving",
+    "mudanzasEmpresas": "Commercial Moving",
+    "mudanzasOficinas": "Office Moving",
+    "mudanzasInternacionales": "International Moving",
+    "mudanzasUrgentes": "Urgent Moving",
+    "marbella": "Santiago",
+    "malaga": "Metropolitan Region",
+    "costaDelSol": "Chile",
+    "estepona": "Providencia",
+    "fuengirola": "Las Condes"
+  },
+  "pages": {
+    "index": {
+      "heroTag": "Freight and Moving in Santiago and Chile",
+      "title": "Freight and Moving",
+      "subtitle": "Freight and moving in Santiago and across Chile. Cargo transport, moving services and deliveries. Prices from $27,000 CLP. Online quote and free estimate.",
+      "description": "Freight and moving in Santiago and regions from $27,000 CLP. Online quote. Free estimate. Moving services, freight to regions and cold transport.",
+      "features": {
+        "title": "Why Choose Us",
+        "subtitle": "Professional freight and moving services in Santiago and regions",
+        "feature1": {
+          "title": "Certified Professionals",
+          "description": "Team of moving experts with years of experience and professional certifications."
+        },
+        "feature2": {
+          "title": "Transparent Prices",
+          "description": "Online calculator to know the price of your move without commitment."
+        },
+        "feature3": {
+          "title": "24/7 Availability",
+          "description": "Service available every day of the year for urgent and scheduled moves."
+        },
+        "feature4": {
+          "title": "Materials Included",
+          "description": "Professional packing with all necessary materials included in the price."
+        },
+        "feature5": {
+          "title": "Complete Insurance",
+          "description": "Insurance coverage to protect your belongings during transport."
+        },
+        "feature6": {
+          "title": "Real-Time Tracking",
+          "description": "Real-time tracking system to know the location of your move."
+        }
+      },
+      "stats": {
+        "title": "Numbers that Speak",
+        "stat1": {
+          "value": "5000+",
+          "label": "Moves Completed"
+        },
+        "stat2": {
+          "value": "98%",
+          "label": "Satisfied Clients"
+        },
+        "stat3": {
+          "value": "24/7",
+          "label": "Availability"
+        },
+        "stat4": {
+          "value": "15+",
+          "label": "Years of Experience"
+        }
+      },
+      "servicesTypes": {
+        "title": "Types of Moves and Services",
+        "subtitle": "Complete moving and freight services for individuals and businesses in Santiago and regions",
+        "type1": {
+          "title": "Residential Moves",
+          "description": "Residential moves and small moves with complete service for homes and families. Ideal for affordable residential moves and cheap small moves.",
+          "feature1": "Complete residential moves",
+          "feature2": "Small moves for studios and apartments",
+          "feature3": "Local moves in Marbella and Costa del Sol"
+        },
+        "type2": {
+          "title": "Business and Office Moves",
+          "description": "Business moves, office moves and corporate moves with specialized service for businesses. Professional moving companies for office moves.",
+          "feature1": "Business moves with complete planning",
+          "feature2": "Office moves without interrupting your business",
+          "feature3": "Corporate moves with precise coordination"
+        },
+        "type3": {
+          "title": "National and Regional Moves",
+          "description": "Moves and freight to all regions of Chile. Safe transport with competitive prices.",
+          "feature1": "Freight and moves throughout Chile",
+          "feature2": "Santiago to regions and between regions",
+          "feature3": "Safe and professional transport"
+        },
+        "type4": {
+          "title": "Freight and Cargo",
+          "description": "Freight and moving at competitive prices for individuals and businesses. Freight in Santiago and to regions with trucks of all sizes.",
+          "feature1": "Affordable freight",
+          "feature2": "Freight for individuals and businesses",
+          "feature3": "Moving trucks and cargo transport"
+        },
+        "type5": {
+          "title": "Furniture Transport",
+          "description": "Furniture transport, loose furniture transport and furniture relocation. Professional moving transport service for individual items and furniture.",
+          "feature1": "Loose furniture transport",
+          "feature2": "Safe furniture relocation",
+          "feature3": "Moving transport for specific items"
+        },
+        "type6": {
+          "title": "Relocations and Moves",
+          "description": "Relocations, relocations and moves with complete service. National relocation company for shared moves and consolidated moves.",
+          "feature1": "Affordable and fast relocations",
+          "feature2": "Combined relocations and moves",
+          "feature3": "Shared moves to reduce costs"
+        }
+      },
+      "process": {
+        "title": "Our Process",
+        "subtitle": "How Our Moving Service Works",
+        "step1": {
+          "title": "Online Consultation",
+          "description": "Calculate the price of your move with our online calculator or request a personalized quote."
+        },
+        "step2": {
+          "title": "Planning",
+          "description": "Our team plans every detail of your move to ensure perfect service."
+        },
+        "step3": {
+          "title": "Packing",
+          "description": "Professional packing of all your items with high-quality materials."
+        },
+        "step4": {
+          "title": "Transport",
+          "description": "Safe and careful transport of your belongings to their new destination."
+        },
+        "step5": {
+          "title": "Delivery",
+          "description": "Punctual delivery and furniture assembly in your new home or business."
+        },
+        "step6": {
+          "title": "Tracking",
+          "description": "Real-time tracking and delivery completion confirmation."
+        }
+      },
+      "pricing": {
+        "title": "Freight Prices and Quotes",
+        "subtitle": "Full transparency with online calculator and free quote",
+        "price1": {
+          "title": "Freight Price – Metropolitan Region",
+          "description": "For freight within the RM the reference price is from $12,000 + $1,300 per km (without helper). With helper there is an extra $7,000. Get an approximate price with our online calculator."
+        },
+        "price2": {
+          "title": "Approximate Freight Price",
+          "description": "Calculate your freight price instantly with our calculator on the main page. For freight to regions the reference is distance × $900 CLP. Request a personalized quote for an exact price."
+        },
+        "price3": {
+          "title": "Freight Price per Km (to regions)",
+          "description": "For freight from Santiago to regions we use a reference price per kilometer ($900 CLP). Final price depends on volume and type of load. Quote online or via WhatsApp for your route."
+        },
+        "price4": {
+          "title": "Prices Adapted to Your Needs",
+          "description": "Prices vary by type of service (simple freight, moving, cold transport), distance and volume. Freight from $27,000 CLP for short hauls. Use the calculator or request a free quote."
+        },
+        "ctaText": "Use our calculator to quote your freight instantly or request a free personalized quote via WhatsApp.",
+        "ctaButton": "Quote Freight Online"
+      },
+      "faqs": {
+        "title": "Frequently Asked Questions about Freight and Moving",
+        "subtitle": "We answer your questions about freight, moving and transport in Santiago and Chile",
+        "faq1": {
+          "question": "What is the difference between freight and a move?",
+          "answer": "Freight is simpler and involves less cargo; a move is a larger relocation, often with many items."
+        },
+        "faq2": {
+          "question": "How much do you charge for freight?",
+          "answer": "It depends on distance, number of items and whether you need extra help. You can use our calculator on the main page for an estimate or request a quote via WhatsApp."
+        },
+        "faq3": {
+          "question": "What is the cost of freight in Santiago, Chile?",
+          "answer": "Minimum cost starts from $20,000 for short hauls within the Metropolitan Region. Use our calculator or contact us for an exact price."
+        },
+        "faq4": {
+          "question": "How much do you pay for freight?",
+          "answer": "It depends on several factors. At FletesPro we keep our prices competitive. Contact us for an updated quote."
+        },
+        "faq5": {
+          "question": "How much does freight cost per kilometer?",
+          "answer": "It varies by route and type of load. For freight to regions we use an approximate reference of $900 CLP per km. Contact us for an exact price for your route."
+        },
+        "faq6": {
+          "question": "How much does freight cost from Santiago to Arica?",
+          "answer": "The price depends on volume and type of load. Request a quote with our calculator or via WhatsApp +56 9 7979 6841 for a personalized estimate."
+        },
+        "faq7": {
+          "question": "What does freight include?",
+          "answer": "Freight includes moving items from one point to another. Depending on the service it may include a helper, packing or cold transport; ask us for details."
+        },
+        "faq8": {
+          "question": "How much does a move cost?",
+          "answer": "The price varies by volume, distance and services (packing, helper). For small moves in Santiago prices start from $27,000. Use our calculator or request a free quote."
+        },
+        "faq9": {
+          "question": "Do you offer freight to other regions?",
+          "answer": "Yes, we run freight from Santiago to all regions of Chile: Concepción, La Serena, Antofagasta, Viña del Mar, Temuco, Puerto Montt and more. Quote with us for regional routes."
+        },
+        "faq10": {
+          "question": "Do you have cold transport?",
+          "answer": "Yes, we offer refrigerated transport for perishable products in the Metropolitan Region and to other regions. We maintain the cold chain throughout the journey."
+        },
+        "faq11": {
+          "question": "How do I hire freight or a move?",
+          "answer": "You can use the calculator on the main page for an estimate, message us on WhatsApp at +56 9 7979 6841, or request a quote in the contact section. We reply with no obligation."
+        },
+        "faq12": {
+          "question": "Do you include packing?",
+          "answer": "Yes, we offer professional packing for moves. You can add it to the freight or hire it separately. Ask for prices when quoting."
+        }
+      }
+    },
+    "guardamuebles": {
+      "description": "Storage units in Marbella from 35€/month. Climate-controlled warehouses, 24h surveillance. Home pickup service included. Online access with username and password. Online storage calculator. Free quote.",
+      "hero": {
+        "badge": "Secure and Climate-Controlled Storage",
+        "title": "Storage Units near you in Marbella",
+        "subtitle": "Cheap, affordable and secure storage in Marbella, Málaga and Costa del Sol. Climate-controlled warehouses with 24-hour access. Home pickup service included. Online access with username and password to always verify your belongings."
+      },
+      "pickupService": {
+        "title": "Home Pickup Service",
+        "subtitle": "You don't need to transport your furniture, we come to pick it up",
+        "feature1": "We collect your furniture and belongings at your home",
+        "feature2": "You don't need to transport them, we come to pick them up",
+        "feature3": "Home storage service included",
+        "feature4": "Home storage units for your convenience"
+      },
+      "onlinePlatform": {
+        "title": "Online Management Platform",
+        "subtitle": "Access your storage from any device",
+        "feature1": "24/7 online access with username and password",
+        "feature2": "Always verify what you have stored",
+        "feature3": "Check your inventory from any device",
+        "feature4": "Complete online storage management"
+      },
+      "sizes": {
+        "title": "Storage Units by Size",
+        "subtitle": "From small storage units to extra large storage. Choose the perfect size for your needs",
+        "size1": {
+          "metros": "1-2m²",
+          "title": "Mini Storage",
+          "description": "Ideal for mini warehouses and small storage units. Perfect for personal items and small boxes.",
+          "price": "From 35€"
+        },
+        "size2": {
+          "metros": "3-4m²",
+          "title": "Small Storage",
+          "description": "Small storage unit perfect for studio contents. Ideal for mini warehouses.",
+          "price": "From 45€"
+        },
+        "size3": {
+          "metros": "5-6m²",
+          "title": "Small Storage Unit",
+          "description": "Small storage unit ideal for small apartments. 5 square meter storage available.",
+          "price": "From 60€"
+        },
+        "size4": {
+          "metros": "8-10m²",
+          "title": "Medium Storage",
+          "description": "Medium storage ideal for 2-3 bedroom apartments. 10m2 storage available.",
+          "price": "From 85€"
+        },
+        "size5": {
+          "metros": "15m²",
+          "title": "Large Storage",
+          "description": "Large storage perfect for complete 2-3 bedroom apartment contents.",
+          "price": "From 120€"
+        },
+        "size6": {
+          "metros": "20m²+",
+          "title": "Extra Large Storage",
+          "description": "Extra large storage for houses, villas or business storage. 20m2 storage available.",
+          "price": "From 180€"
+        }
+      },
+      "types": {
+        "title": "Types of Storage Units",
+        "subtitle": "Find the perfect storage type for your needs",
+        "type1": {
+          "title": "Mini Warehouses",
+          "description": "Mini warehouses and mini storage units for compact and affordable storage."
+        },
+        "type2": {
+          "title": "Personal Storage",
+          "description": "Personal storage units ideal for domestic and personal use."
+        },
+        "type3": {
+          "title": "Business Storage",
+          "description": "Business storage units and commercial storage with flexible access."
+        },
+        "type4": {
+          "title": "Modular Storage",
+          "description": "Modular storage units that adapt to your changing needs."
+        },
+        "type5": {
+          "title": "Self Storage",
+          "description": "Self storage units with independent access and personal management."
+        }
+      },
+      "pricing": {
+        "title": "Storage Prices and Rates",
+        "subtitle": "Transparent storage prices. Storage price per month from 35€",
+        "info1": "Storage price per month from 35€",
+        "info2": "Competitive price per square meter",
+        "info3": "Flexible storage rates according to duration",
+        "info4": "Discounts for long-term contracts"
+      },
+      "features": {
+        "title": "Features of Our Storage Units",
+        "subtitle": "Secure, monitored and climate-controlled storage for maximum protection of your belongings",
+        "feature1": {
+          "title": "Climate-Controlled Storage",
+          "description": "Storage with air conditioning and temperature control to protect your belongings from heat and humidity."
+        },
+        "feature2": {
+          "title": "Secure Storage",
+          "description": "Monitored storage with 24-hour security, alarms and surveillance cameras for maximum protection."
+        },
+        "feature3": {
+          "title": "24-Hour Storage",
+          "description": "24-hour storage with easy access and flexible hours. Access available when you need it."
+        },
+        "feature4": {
+          "title": "Affordable Storage",
+          "description": "Affordable storage units and cheap storage with the best rates in the market."
+        },
+        "feature5": {
+          "title": "Temporary or Long-Term",
+          "description": "Temporary storage for renovations or long-term storage. Total flexibility in contracts."
+        },
+        "feature6": {
+          "title": "Indoor Storage",
+          "description": "Covered and indoor storage. Total protection against external elements and weather conditions."
+        }
+      },
+      "useCases": {
+        "title": "Temporary and Long-Term Storage",
+        "subtitle": "Perfect for moves, renovations, construction or temporary storage. Storage in Marbella.",
+        "case1": {
+          "title": "Moving Storage",
+          "description": "Storage during move. Temporary storage during the moving process. Storage with moving included available."
+        },
+        "case2": {
+          "title": "Renovation Storage",
+          "description": "Renovation and construction storage. Protect your furniture during renovation works."
+        },
+        "case3": {
+          "title": "Daily Storage",
+          "description": "Daily storage for short-term temporary storage. Perfect for specific needs."
+        },
+        "case4": {
+          "title": "Seasonal Storage",
+          "description": "Summer and winter storage. Seasonal storage for vacation periods."
+        }
+      },
+      "zones": {
+        "title": "Areas where We Offer Storage",
+        "subtitle": "Storage near you throughout the Costa del Sol",
+        "zone1": "Marbella",
+        "zone2": "Malaga",
+        "zone3": "Costa del Sol",
+        "zone4": "Estepona",
+        "zone5": "Fuengirola",
+        "zone6": "Torremolinos",
+        "zone7": "Benalmadena",
+        "zone8": "Mijas"
+      },
+      "cta": {
+        "title": "Rent Your Storage Unit Now",
+        "subtitle": "Storage Marbella, Málaga and Costa del Sol. Storage with moving included available. Storage to rent from 35€/month.",
+        "button1": "Rent Storage",
+        "button2": "Request Quote"
+      },
+      "faqs": {
+        "title": "Frequently Asked Questions about Storage",
+        "subtitle": "We answer your questions about storage in Marbella, Málaga and Costa del Sol",
+        "faq1": {
+          "question": "How much does it cost to rent a storage unit?",
+          "answer": "The price to rent storage varies according to size. Mini storage from 35€/month, small storage from 45€/month, medium storage from 85€/month. We offer cheap storage and affordable storage with different payment options. The monthly price includes space rental."
+        },
+        "faq2": {
+          "question": "What is the price per square meter?",
+          "answer": "The price per square meter varies according to total size. For small storage (1-4m²) the price is approximately 10-12€/m²/month. For medium storage (5-10m²) the price is approximately 8-10€/m²/month. For large storage (15m²+) the price is approximately 6-8€/m²/month."
+        },
+        "faq3": {
+          "question": "Do you offer home storage service?",
+          "answer": "Yes, we offer home storage service. We collect your furniture and belongings at your home, you don't need to transport them. Our team comes to your home with the appropriate vehicle and performs complete pickup. Home storage included in the service."
+        },
+        "faq4": {
+          "question": "Can I verify my belongings online?",
+          "answer": "Yes, with our online storage service you can access your account with username and password to always verify what you have stored. The online storage platform allows you to check your inventory from any device, 24 hours a day."
+        },
+        "faq5": {
+          "question": "How does the online storage platform work?",
+          "answer": "Our online storage platform allows you to access with username and password to manage your storage. You can verify your inventory, check your belongings, see your storage status and manage your account. 24/7 online access from any device."
+        },
+        "faq6": {
+          "question": "What is a mini warehouse or mini storage?",
+          "answer": "A mini warehouse or mini storage is a small storage space, ideal for personal items, small boxes or belongings that don't take up much space. Our mini warehouses range from 1-2m² and are perfect for compact and affordable storage."
+        },
+        "faq7": {
+          "question": "Do you offer business storage?",
+          "answer": "Yes, we offer business storage and commercial storage. Our business storage includes flexible access, modular spaces and online management. Perfect for businesses that need temporary or permanent storage of files, office supplies or products."
+        },
+        "faq8": {
+          "question": "Can I rent storage by the day?",
+          "answer": "Yes, we offer daily storage for short-term temporary storage. Perfect if you need temporary storage for a few days or weeks. Daily storage has flexible rates and you can rent it for as long as you need."
+        },
+        "faq9": {
+          "question": "What's the difference between personal and business storage?",
+          "answer": "Personal storage is designed for domestic and personal use, while business storage offers additional features such as flexible access, advanced online management and modular spaces. Both types include the same security and climate control guarantees."
+        },
+        "faq10": {
+          "question": "Are storage units modular or prefabricated?",
+          "answer": "We offer modular storage units that adapt to your changing needs. Modular storage allows you to expand or reduce space as needed, while we also have prefabricated storage options for specific needs."
+        },
+        "faq11": {
+          "question": "Do you offer self storage?",
+          "answer": "Yes, we offer self storage with independent access and personal management. Self storage allows you to access your space when you need it, with your own key and total control over your storage."
+        },
+        "faq12": {
+          "question": "I need storage, how can I rent it?",
+          "answer": "If you need storage, you can easily rent it. Use our online calculator to get a quote, or contact us for a personalized consultation. We offer storage to rent from 35€/month with different sizes available."
+        },
+        "faq13": {
+          "question": "What are the storage rates?",
+          "answer": "Storage rates vary according to size and duration. Mini storage from 35€/month, small storage from 60€/month, medium storage from 85€/month, large storage from 120€/month. We offer discounts for long-term contracts. Storage rates are competitive and transparent."
+        },
+        "faq14": {
+          "question": "Does the service include home pickup?",
+          "answer": "Yes, our storage service includes home pickup. You don't need to transport your furniture, our team comes to your home with the appropriate vehicle and performs complete pickup. Home storage service included at no additional cost."
+        },
+        "faq15": {
+          "question": "Can I access my storage online 24 hours?",
+          "answer": "Yes, with our online storage service you can access your account 24 hours a day, 7 days a week. With username and password you can verify your inventory, check your belongings and manage your storage from any device with internet connection."
+        },
+        "faq16": {
+          "question": "Are storage units climate-controlled?",
+          "answer": "Yes, all our storage units are climate-controlled with air conditioning and temperature control to protect your belongings from heat and humidity. Temperature-controlled storage is ideal for sensitive items such as fine wood furniture, artwork or important documents."
+        },
+        "faq17": {
+          "question": "What security do storage units have?",
+          "answer": "Our secure storage units include 24-hour surveillance, alarms, security cameras and controlled access. Monitored storage and secure storage guarantee maximum protection of your belongings. We also offer optional content insurance for greater peace of mind."
+        },
+        "faq18": {
+          "question": "Can I access my storage 24 hours?",
+          "answer": "Yes, we offer 24-hour storage with easy access according to the chosen plan. Storage access is available at different times according to your needs. Some plans include unlimited access, while others have specific hours."
+        }
+      }
+    },
+    "embalajes": {
+      "description": "Professional packing service for moves in Marbella. Complete packing at home with materials included. Packing of furniture, appliances and fragile items. Free quote.",
+      "hero": {
+        "badge": "Professional Packing Service",
+        "title": "Professional Packing for Moves in Marbella",
+        "subtitle": "Professional packing service at home in Marbella and Costa del Sol. Our team of experts comes to your home with all professional packing materials included and performs complete packing of your move. Careful and safe packing for furniture, appliances and fragile items."
+      },
+      "types": {
+        "title": "Types of Packing We Offer",
+        "subtitle": "Professional packing service adapted to your moving needs",
+        "type1": {
+          "title": "Complete Packing for Moves",
+          "description": "Complete professional packing service for your entire move. Our team performs packing of all your items with professional materials included."
+        },
+        "type2": {
+          "title": "Partial Packing",
+          "description": "Customized packing only for fragile and delicate items that need special protection during the move."
+        },
+        "type3": {
+          "title": "Furniture Packing",
+          "description": "Professional packing of large and small furniture. We use protection blankets, stretch film and special covers to protect your furniture during transport."
+        },
+        "type4": {
+          "title": "Appliances Packing",
+          "description": "Safe packing of refrigerators, washing machines, televisions and other appliances with specific materials to prevent damage."
+        },
+        "type5": {
+          "title": "Fragile Items Packing",
+          "description": "Specialized packing for glass, porcelain, artwork and antiques with customized multi-layer protection."
+        }
+      },
+      "materials": {
+        "title": "Professional Materials We Use",
+        "subtitle": "Professional packing materials included in our service",
+        "material1": {
+          "title": "Cardboard Boxes",
+          "description": "Cardboard boxes for moves in different sizes: single, double and triple. Professional materials included in the packing service."
+        },
+        "material2": {
+          "title": "Bubble Wrap",
+          "description": "Bubble wrap and bubble plastic for protection of fragile items, glass, porcelain and tableware."
+        },
+        "material3": {
+          "title": "Stretch Film",
+          "description": "Transparent plastic film and protection film to wrap furniture, appliances and bulky items."
+        },
+        "material4": {
+          "title": "Packing Tape",
+          "description": "Adhesive tape, car tape and high-strength paper tape to securely seal boxes."
+        },
+        "material5": {
+          "title": "Protection Blankets",
+          "description": "Moving blankets and furniture blankets to protect sofas, tables, wardrobes and large furniture during transport."
+        },
+        "material6": {
+          "title": "Covers and Corner Protectors",
+          "description": "Furniture covers, mattress covers, bed covers and cardboard corner protectors for additional protection of corners and edges."
+        }
+      },
+      "services": {
+        "title": "Packing Services",
+        "subtitle": "Professional packing included, complete or partial according to your needs",
+        "service1": {
+          "title": "Complete Packing",
+          "description": "Complete professional packing service included in your move",
+          "feature1": "Packing of all your items",
+          "feature2": "Materials included at no additional cost",
+          "feature3": "Customized multi-layer protection",
+          "feature4": "Careful and safe packing"
+        },
+        "service2": {
+          "title": "Partial Packing",
+          "description": "Customized packing only for fragile and delicate items",
+          "feature1": "Packing of fragile items and artwork",
+          "feature2": "Packing of appliances",
+          "feature3": "Packing of large furniture",
+          "feature4": "Customized according to your needs"
+        },
+        "service3": {
+          "title": "Furniture Packing",
+          "description": "Professional furniture packing for moves",
+          "feature1": "Packing of large and small furniture",
+          "feature2": "Special protection blankets",
+          "feature3": "Stretch film for protection",
+          "feature4": "Customized covers"
+        },
+        "service4": {
+          "title": "Appliances Packing",
+          "description": "Safe appliance packing for moves",
+          "feature1": "Refrigerators and freezers",
+          "feature2": "Washing machines and dryers",
+          "feature3": "Televisions and screens",
+          "feature4": "Specific protection by type"
+        }
+      },
+      "process": {
+        "title": "Professional Packing Process",
+        "subtitle": "How we work to ensure careful and safe packing of your belongings",
+        "step1": {
+          "title": "Initial Assessment",
+          "description": "Our team evaluates your items and determines the materials needed for professional packing."
+        },
+        "step2": {
+          "title": "Material Preparation",
+          "description": "We prepare all necessary professional packing materials: boxes, bubble wrap, film and blankets."
+        },
+        "step3": {
+          "title": "Careful Packing",
+          "description": "We perform professional packing of each item with specialized techniques according to its type and fragility."
+        },
+        "step4": {
+          "title": "Additional Protection for Fragile Items",
+          "description": "We apply additional multi-layer protection for fragile items, glass and artwork."
+        },
+        "step5": {
+          "title": "Final Verification",
+          "description": "We verify that everything is correctly packed and protected for safe transport."
+        }
+      },
+      "zones": {
+        "title": "Areas where We Offer Professional Packing",
+        "subtitle": "Home packing service throughout the Costa del Sol",
+        "zone1": "Marbella",
+        "zone2": "Costa del Sol",
+        "zone3": "Malaga",
+        "zone4": "Estepona",
+        "zone5": "Fuengirola",
+        "zone6": "Torremolinos",
+        "zone7": "Benalmadena",
+        "zone8": "Mijas"
+      },
+      "cta": {
+        "title": "Do You Need Professional Packing Service for Your Move?",
+        "subtitle": "Hire our professional packing service for moves in Marbella. Complete or partial packing according to your needs. Our team comes to your home with all packing materials included at no additional cost.",
+        "button1": "Request Quote",
+        "button2": "View Services"
+      },
+      "faqs": {
+        "title": "Frequently Asked Questions about Packing",
+        "subtitle": "We answer your questions about our professional packing service for moves",
+        "faq1": {
+          "question": "What does the professional packing service include?",
+          "answer": "Our professional packing service includes our experts coming to your home with all necessary materials (cardboard boxes, bubble wrap, plastic film, protection blankets) and performing complete packing of your items. You don't need to buy anything, we bring the materials and do the work."
+        },
+        "faq2": {
+          "question": "How much does the packing service for moves cost?",
+          "answer": "The price of the professional packing service for moves varies according to the type of home and number of items. We offer complete packing included in complete moves at no additional cost, or partial packing only for fragile items. Request a personalized quote without commitment."
+        },
+        "faq3": {
+          "question": "Is packing included in the moving price?",
+          "answer": "Yes, we offer packing included at no additional cost in our complete move packages. Our professional team comes to your home with all materials and performs complete packing. You can also hire complete professional packing or partial packing only for fragile items."
+        },
+        "faq4": {
+          "question": "Do you pack large furniture?",
+          "answer": "Yes, we offer professional packing service for large and small furniture. We use special protection blankets, stretch film and customized covers to protect your furniture during move transport."
+        },
+        "faq5": {
+          "question": "Do you offer appliance packing?",
+          "answer": "Yes, we perform professional packing of appliances such as refrigerators, freezers, washing machines, dryers, televisions and others. We use specific materials and specialized techniques for each type of appliance."
+        },
+        "faq6": {
+          "question": "How do you pack fragile items like glass and porcelain?",
+          "answer": "Our professional packing service for fragile items includes specific multi-layer protection: bubble wrap or bubble plastic, cardboard separators and corner protectors. Our experts know the proper techniques to protect glass, porcelain, tableware and artwork during transport."
+        },
+        "faq7": {
+          "question": "Do they have to come to my house to do the packing?",
+          "answer": "Yes, our professional packing service is performed at your home. Our team comes with all necessary materials (boxes, bubble wrap, film, blankets) and performs complete packing on site. You don't need to buy or prepare anything, we take care of everything."
+        },
+        "faq8": {
+          "question": "What type of packing do you do for appliances?",
+          "answer": "For appliances like refrigerators, freezers and washing machines, our professional packing service includes special protection covers, stretch film and furniture blankets. We protect each appliance with specific materials to prevent damage during transport."
+        },
+        "faq9": {
+          "question": "Can I hire only the packing service without moving?",
+          "answer": "Yes, you can hire our professional packing service independently. Our team comes to your home with all materials and performs complete packing. Ideal if you need to pack for a move you will do yourself or for storage."
+        },
+        "faq10": {
+          "question": "Do you offer home packing service in Marbella?",
+          "answer": "Yes, we offer professional packing service at home in Marbella, Costa del Sol, Malaga and throughout the province. Our team comes to your home with all packing materials included and performs the work on site."
+        },
+        "faq11": {
+          "question": "What packing materials do you use?",
+          "answer": "We use first-quality professional packing materials: resistant cardboard boxes, bubble wrap, stretch film, protection blankets, high-strength adhesive tape and special covers. All materials are included in the service at no additional cost."
+        },
+        "faq12": {
+          "question": "How long does the packing service take?",
+          "answer": "Professional packing time depends on the size of the home and number of items. For a studio it can be 2-3 hours, for a medium apartment 4-6 hours, and for a large house it may require a full day. We give you an accurate estimate in the quote."
+        }
+      }
+    },
+    "transporteFrio": {
+      "title": "Cold Transport Marbella",
+      "subtitle": "Cold transport and cold chain in Marbella. Refrigerated transport for food, pharmaceutical products and perishables.",
+      "description": "Cold transport and cold chain in Marbella. Refrigerated transport for food, pharmaceutical products and perishables. Controlled temperatures. Real-time tracking. Free quote.",
+      "temperatures": {
+        "title": "Transport by Controlled Temperature",
+        "subtitle": "Transport with controlled temperature for different ranges according to your needs",
+        "range1": {
+          "title": "Freezing Transport",
+          "description": "Transport at -18°C for frozen products and ice cream. Transport of cold and frozen products guaranteed.",
+          "temperature": "-18°C"
+        },
+        "range2": {
+          "title": "Refrigerated Transport",
+          "description": "Transport between 0-4°C for fresh and refrigerated products. Standard refrigerated transport.",
+          "temperature": "0-4°C"
+        },
+        "range3": {
+          "title": "Pharmaceutical Transport",
+          "description": "Transport between 2°C and 8°C for pharmaceutical products. Transport with controlled temperature according to regulations.",
+          "temperature": "2°C - 8°C"
+        }
+      },
+      "products": {
+        "title": "Cold Transport by Product Type",
+        "subtitle": "Specialists in transport of cold food, pharmaceutical products and perishables",
+        "product1": {
+          "title": "Cold Food Transport",
+          "description": "Transport of cold food and fresh products. Refrigerated transport for supermarkets and restaurants."
+        },
+        "product2": {
+          "title": "Cold Cargo Transport",
+          "description": "Transport of cold cargo and cold cargo transport for businesses. Complete cold logistics."
+        },
+        "product3": {
+          "title": "Cold Pharmaceutical Transport",
+          "description": "Cold transport of pharmaceutical products and medications. Guaranteed cold chain according to regulations."
+        },
+        "product4": {
+          "title": "Cold Perishables Transport",
+          "description": "Transport of perishable products with cold chain. Fruit, vegetables, fish and fresh meat."
+        },
+        "product5": {
+          "title": "Cold Flower Transport",
+          "description": "Refrigerated transport of flowers and plants. Controlled temperature to maintain freshness."
+        },
+        "product6": {
+          "title": "Cold Beverage Transport",
+          "description": "Transport of beverages and refrigerated liquid products. Specialized logistics in cold transport."
+        }
+      },
+      "coverage": {
+        "coverage4": {
+          "title": "International Cold Transport",
+          "description": "International cold transport for Europe and European Union with complete documentation."
+        }
+      },
+      "faqs": {
+        "title": "Frequently Asked Questions",
+        "faq1": {
+          "question": "What temperatures do you handle for cold transport?",
+          "answer": "We handle different temperature ranges according to the product: freezing at -18°C, refrigerated between 2°C and 8°C, and controlled temperature for pharmaceutical products according to regulations."
+        },
+        "faq2": {
+          "question": "How much does cold transport cost?",
+          "answer": "The price of cold transport varies according to distance, required temperature range and type of product. Request a personalized quote without commitment with our online calculator."
+        },
+        "faq3": {
+          "question": "Do you have refrigerated vehicles?",
+          "answer": "Yes, we have a fleet of refrigerated vehicles equipped with temperature control systems to guarantee the cold chain at all times."
+        },
+        "faq4": {
+          "question": "Can you transport pharmaceutical products?",
+          "answer": "Yes, we offer specialized pharmaceutical transport with strict temperature control according to current regulations and complete process tracking."
+        },
+        "faq5": {
+          "question": "Do you offer real-time tracking?",
+          "answer": "Yes, all our cold transports include real-time tracking so you can know the location and temperature of your shipment at all times."
+        },
+        "faq6": {
+          "question": "What do you guarantee for the cold chain?",
+          "answer": "We guarantee cold chain maintenance throughout transport with continuous temperature controls, certified refrigerated vehicles and documented process tracking."
+        },
+        "faq7": {
+          "question": "Do you offer cold courier service?",
+          "answer": "Yes, we offer cold courier service and cold courier for urgent shipments with controlled temperature. Our cold courier service guarantees the cold chain throughout the journey."
+        },
+        "faq8": {
+          "question": "Can I ship cold packages?",
+          "answer": "Yes, we offer cold package shipping and cold package shipping with guaranteed cold chain. Our cold package shipping service includes controlled temperature and real-time tracking."
+        },
+        "faq9": {
+          "question": "Do you offer cold transport for individuals?",
+          "answer": "Yes, we offer cold transport for individuals who need to transport cold products. The cold transport price for individuals is competitive and adapted to your needs."
+        },
+        "faq10": {
+          "question": "What types of vehicles do you use for cold transport?",
+          "answer": "We use isothermal truck with cold, freezing cold truck, cold truck for delivery and containers to maintain cold. Our fleet is equipped with cold systems for trucks and guarantees the cold chain throughout transport."
+        },
+        "faq11": {
+          "question": "Are you a certified cold transport company?",
+          "answer": "Yes, we are a certified cold transport company specialized in transport with cold chain. As cold transport companies, we comply with all food and pharmaceutical safety regulations. We are transport companies with cold chain and transport companies with controlled temperature."
+        },
+        "faq12": {
+          "question": "Do you offer express cold transport?",
+          "answer": "Yes, we offer express cold transport for urgent deliveries. Express cold transport guarantees the cold chain with fast delivery and controlled temperature."
+        },
+        "faq13": {
+          "question": "What is cold chain transport?",
+          "answer": "Cold chain transport is the process of maintaining products at controlled temperature throughout transport. Our cold chain transport service guarantees that products maintain their temperature from origin to destination."
+        },
+        "faq14": {
+          "question": "Do you transport cold cargo?",
+          "answer": "Yes, we offer transport of cold cargo and cold cargo transport for businesses. Our transport of cold cargo service includes specialized vehicles and guaranteed cold chain."
+        },
+        "faq15": {
+          "question": "What does transport with controlled temperature mean?",
+          "answer": "Transport with controlled temperature is a service that maintains products at a specific temperature throughout transport. We offer transport with controlled temperature and transport of controlled temperature for different ranges according to the product."
+        },
+        "faq16": {
+          "question": "Do you offer temperature controlled shipments?",
+          "answer": "Yes, we offer temperature controlled shipments and temperature controlled shipments for any type of product. Our service guarantees the temperature throughout the shipping process."
+        },
+        "faq17": {
+          "question": "What cold logistics services do you offer?",
+          "answer": "As cold logistics companies, we offer refrigerated transport, cold storage, cold distribution and refrigerated delivery. Our complete cold logistics service includes guaranteed cold chain and controlled temperature."
+        },
+        "faq18": {
+          "question": "Do you transport frozen products?",
+          "answer": "Yes, we offer transport of cold and frozen products with guaranteed -18°C temperature. Our transport of cold and frozen products service uses freezing cold truck and guarantees the cold chain throughout the process."
+        }
+      },
+      "hero": {
+        "badge": "Refrigerated Logistics and Cold Chain",
+        "title": "Cold and Refrigerated Transport",
+        "subtitle": "Cold transport company in Marbella, Málaga and Costa del Sol. Refrigerated transport, refrigerated transport and cold chain logistics. Transport with guaranteed controlled temperature. Transport of cold and frozen products, transport of cold food and transport of cold cargo."
+      },
+      "vehicleTypes": {
+        "title": "Cold Transport Vehicles and Equipment",
+        "subtitle": "Specialized fleet for cold transport with isothermal vehicles and containers to maintain cold",
+        "vehicle1": {
+          "title": "Isothermal Truck with Cold",
+          "description": "Isothermal trucks with cold for refrigerated transport and transport with controlled temperature. Equipped with cold systems for trucks."
+        },
+        "vehicle2": {
+          "title": "Freezing Cold Truck",
+          "description": "Freezing cold trucks for transport of cold and frozen products. Ultra-frozen transport at -18°C guaranteed."
+        },
+        "vehicle3": {
+          "title": "Cold Truck for Delivery",
+          "description": "Vehicles with cold for refrigerated delivery. Cold truck for local delivery and cold distribution in Marbella and Costa del Sol."
+        },
+        "vehicle4": {
+          "title": "Containers to Maintain Cold",
+          "description": "Containers to maintain cold during transport. Specialized equipment for cold chain transport."
+        }
+      },
+      "specializedServices": {
+        "title": "Specialized Cold Transport Services",
+        "subtitle": "Cold courier service, cold package shipping and express cold transport for individuals and businesses",
+        "service1": {
+          "title": "Cold Courier Service",
+          "description": "Cold courier service and cold courier for urgent shipments with controlled temperature."
+        },
+        "service2": {
+          "title": "Cold Package Shipping",
+          "description": "Cold package shipping and cold package shipping with guaranteed cold chain. Temperature controlled shipments."
+        },
+        "service3": {
+          "title": "Cold Transport for Individuals",
+          "description": "Cold transport for individuals who need to transport cold products. Competitive cold transport price."
+        },
+        "service4": {
+          "title": "Express Cold Transport",
+          "description": "Express cold transport for urgent deliveries. Express cold transport with guaranteed cold chain."
+        }
+      },
+      "services": {
+        "title": "Cold Transport Services",
+        "subtitle": "Cold transport company with complete cold logistics and cold chain transport services",
+        "service1": {
+          "title": "Refrigerated Transport",
+          "description": "Cold transport service with refrigerated vehicles and controlled temperature",
+          "feature1": "Certified refrigerated vehicles",
+          "feature2": "Real-time controlled temperature",
+          "feature3": "GPS and temperature monitoring",
+          "feature4": "Guaranteed cold chain"
+        },
+        "service2": {
+          "title": "Cold Storage",
+          "description": "Cold chambers and refrigerated storage for perishable products",
+          "feature1": "Refrigeration chambers",
+          "feature2": "Refrigerated storage",
+          "feature3": "24/7 temperature control",
+          "feature4": "Cold distribution included"
+        },
+        "service3": {
+          "title": "Cold Chain Transport",
+          "description": "Cold chain transport with complete guarantee. Certified cold chain transport.",
+          "feature1": "Guaranteed cold chain",
+          "feature2": "Continuous temperature control",
+          "feature3": "Complete documentation",
+          "feature4": "Cold chain certification"
+        },
+        "service4": {
+          "title": "Temperature Controlled Shipments",
+          "description": "Temperature controlled shipments and temperature controlled shipments for any type of product",
+          "feature1": "Guaranteed controlled temperature",
+          "feature2": "National and international shipments",
+          "feature3": "Real-time tracking",
+          "feature4": "Complete documentation"
+        }
+      },
+      "companies": {
+        "title": "Cold Transport Companies",
+        "subtitle": "We are a certified cold transport company specialized in transport with cold chain and controlled temperature",
+        "info1": "Certified cold transport company",
+        "info2": "Cold transport companies with experience",
+        "info3": "Transport companies with cold chain",
+        "info4": "Transport companies with controlled temperature",
+        "info5": "Specialized cold logistics companies"
+      },
+      "cta": {
+        "title": "Do You Need Refrigerated or Cold Transport?",
+        "subtitle": "Cold transport company in Marbella, Málaga and Costa del Sol. Professional refrigerated transport with guaranteed cold chain. Competitive cold transport price. Free quote.",
+        "button1": "Request Cold Transport",
+        "button2": "Free Quote"
+      },
+      "seo": {
+        "title": "Cold Transport Marbella | Cold Transport Company | Guaranteed Cold Chain | FletesPro",
+        "description": "Cold transport company in Marbella, Málaga and Costa del Sol. Refrigerated transport, refrigerated transport and cold chain logistics. Transport with controlled temperature. Transport of cold and frozen products, transport of cold food. Competitive cold transport price. Free quote.",
+        "keywords": "cold transport, cold transport company, refrigerated transport, cold chain, refrigerated transport, transport with controlled temperature, food transport, pharmaceutical transport, cold logistics, local cold transport, provincial cold transport, national cold transport, international cold transport, transport of cold and frozen products, cold transport for individuals, temperature controlled shipments, cold transport price, cold package shipping, cold transport companies, cold chain transport, freezing cold truck, isothermal truck with cold, cold truck for delivery, containers to maintain cold, cold transport company, transport companies with cold chain, transport companies with controlled temperature, cold logistics companies, cold package shipping, temperature controlled shipments, cold courier service, cold courier, cold transport price, cold chain transport, cold cargo transport, transport with controlled temperature, cold food transport, cold cargo transport, transport of controlled temperature, express cold transport, cold transport, refrigerated transport"
+      }
+    },
+    "ultimaMilla": {
+      "hero": {
+        "badge": "Last Mile Logistics and Final Delivery",
+        "title": "Last Mile",
+        "subtitle": "Last mile service, last mile logistics and last mile distribution in Marbella, Málaga and Costa del Sol. Last mile express and same day delivery. Shipping for ecommerce, online stores and ecommerce parcel service."
+      },
+      "sectors": {
+        "title": "Last Mile by Sector",
+        "subtitle": "Specialists in last mile for ecommerce, food, pharmacy and more sectors",
+        "sector1": {
+          "title": "Last Mile Ecommerce",
+          "description": "Last mile e-commerce and online stores. Last mile delivery for ecommerce and online retail. Shipping for online stores and shipping for ecommerce.",
+          "feature1": "Last mile online stores",
+          "feature2": "Last mile retail",
+          "feature3": "Ecommerce package delivery",
+          "feature4": "Real-time tracking"
+        },
+        "sector2": {
+          "title": "Last Mile Food",
+          "description": "Last mile supermarkets and food distribution. Delivery of fresh and perishable products.",
+          "feature1": "Last mile supermarkets",
+          "feature2": "Fresh product delivery",
+          "feature3": "Flexible schedules",
+          "feature4": "Guaranteed cold chain"
+        },
+        "sector3": {
+          "title": "Last Mile Restaurants",
+          "description": "Last mile home delivery and delivery. Express service for restaurants and food services.",
+          "feature1": "Last mile home delivery",
+          "feature2": "Express restaurant delivery",
+          "feature3": "Extended hours",
+          "feature4": "Controlled temperature"
+        },
+        "sector4": {
+          "title": "Last Mile Pharmacy",
+          "description": "Last mile pharmaceutical products and medicines. Urgent and scheduled delivery for pharmacies.",
+          "feature1": "Last mile pharmacy",
+          "feature2": "Medicine delivery",
+          "feature3": "Urgent service available",
+          "feature4": "Regulatory compliance"
+        },
+        "sector5": {
+          "title": "Last Mile Parcel Service",
+          "description": "Last mile packages and courier. Delivery of shipments and general parcel service. Ecommerce parcel service and parcel service for ecommerce.",
+          "feature1": "Last mile packages",
+          "feature2": "Last mile courier",
+          "feature3": "Flexible delivery",
+          "feature4": "Complete tracking"
+        }
+      },
+      "deliveryTypes": {
+        "title": "Last Mile Delivery Types",
+        "subtitle": "Last mile same day, express, urgent and scheduled according to your needs",
+        "type1": {
+          "title": "Last Mile Same Day",
+          "description": "Last mile same day delivery for emergencies"
+        },
+        "type2": {
+          "title": "Last Mile Express",
+          "description": "Last mile express and 24 hours available"
+        },
+        "type3": {
+          "title": "Last Mile Scheduled",
+          "description": "Last mile scheduled with flexible schedules"
+        },
+        "type4": {
+          "title": "Last Mile Night",
+          "description": "Last mile night and late delivery available"
+        }
+      },
+      "technology": {
+        "title": "Last Mile Technology",
+        "subtitle": "Digital last mile with tracking, GPS monitoring and advanced platform",
+        "tech1": {
+          "title": "Last Mile Tracking",
+          "description": "Last mile monitoring and GPS tracking in real time. Complete monitoring of each delivery."
+        },
+        "tech2": {
+          "title": "Last Mile App",
+          "description": "Digital last mile with mobile app and web platform. Complete management from your device."
+        },
+        "tech3": {
+          "title": "Last Mile System",
+          "description": "Advanced last mile platform with API integration. Complete last mile logistics system."
+        }
+      },
+      "zones": {
+        "title": "Last Mile Coverage",
+        "subtitle": "Local, urban and rural last mile in Marbella, Málaga and all Costa del Sol",
+        "zone1": {
+          "title": "Urban Last Mile",
+          "description": "Local last mile in Marbella, Málaga and main cities"
+        },
+        "zone2": {
+          "title": "Peripheral Last Mile",
+          "description": "Last mile in peripheral areas and residential areas"
+        },
+        "zone3": {
+          "title": "Rural Last Mile",
+          "description": "Rural last mile and less accessible areas of Costa del Sol"
+        }
+      },
+      "ecommerceShipping": {
+        "title": "Shipping for Ecommerce and Online Stores",
+        "subtitle": "Shipping service for ecommerce, online stores and ecommerce parcel service with guaranteed last mile",
+        "service1": {
+          "title": "Shipping for Online Stores",
+          "description": "Shipping for online stores with last mile logistics. Last mile delivery service for your online store."
+        },
+        "service2": {
+          "title": "Shipping for Ecommerce",
+          "description": "Shipping for ecommerce and ecommerce shipping with last mile logistics. Ecommerce transport and ecommerce parcel service."
+        },
+        "service3": {
+          "title": "Ecommerce Courier",
+          "description": "Ecommerce courier and courier for ecommerce. Last mile courier service for e-commerce."
+        },
+        "service4": {
+          "title": "International Ecommerce Shipping",
+          "description": "International ecommerce shipping with last mile. International logistics for online stores."
+        }
+      },
+      "companies": {
+        "title": "Last Mile Companies and Providers",
+        "subtitle": "We are your ecommerce transport company and specialized last mile provider",
+        "company1": {
+          "title": "Ecommerce Shipping Companies",
+          "description": "Ecommerce shipping companies and shipping companies for online stores. Professional last mile service."
+        },
+        "company2": {
+          "title": "Ecommerce Transport Companies",
+          "description": "Ecommerce transport companies and ecommerce transport companies. Specialized logistics for e-commerce."
+        },
+        "company3": {
+          "title": "Last Mile Provider",
+          "description": "Last mile provider and last mile provider. Professional last mile logistics service."
+        },
+        "company4": {
+          "title": "Last Mile Companies",
+          "description": "Last mile companies and last mile companies. Last mile logistics solutions for ecommerce."
+        }
+      },
+      "pricing": {
+        "title": "Ecommerce Shipping Rates and Prices",
+        "subtitle": "Competitive ecommerce shipping rates, ecommerce shipping prices and flat rate ecommerce shipping",
+        "price1": {
+          "title": "Ecommerce Shipping Rates",
+          "description": "Competitive ecommerce shipping rates and ecommerce shipping rates. Prices adapted to your shipping volume."
+        },
+        "price2": {
+          "title": "Ecommerce Shipping Prices",
+          "description": "Ecommerce shipping prices and cheap ecommerce shipping. Cheap shipping for ecommerce and cheap shipping for online store."
+        },
+        "price3": {
+          "title": "Flat Rate Ecommerce Shipping",
+          "description": "Flat rate ecommerce shipping for multiple shipments. Economic solution for online stores."
+        }
+      },
+      "concept": {
+        "title": "Last Mile Concept and Definition",
+        "subtitle": "What is last mile, last mile concept and last mile in logistics",
+        "concept1": {
+          "title": "What is Last Mile",
+          "description": "Last mile is the final phase of distribution, from warehouse to final customer. Last mile concept and what is last mile explained."
+        },
+        "concept2": {
+          "title": "Last Mile Concept",
+          "description": "Last mile concept and last mile logistics concept. Last mile in logistics is crucial for ecommerce success."
+        },
+        "concept3": {
+          "title": "Last Mile in Logistics",
+          "description": "Last mile in logistics and last mile logistics. Last mile logistics and last mile logistics for ecommerce."
+        }
+      },
+      "cta": {
+        "title": "Do You Need Last Mile Service?",
+        "subtitle": "Last mile logistics, last mile distribution and last mile delivery in Marbella, Málaga and Costa del Sol. Last mile ecommerce, food and pharmacy. Shipping for ecommerce and online stores.",
+        "button1": "Hire Last Mile",
+        "button2": "Request Quote"
+      },
+      "faqs": {
+        "title": "Frequently Asked Questions about Last Mile",
+        "subtitle": "We answer your questions about last mile logistics, last mile delivery, ecommerce shipping and last mile distribution",
+        "faq1": {
+          "question": "What is last mile service?",
+          "answer": "Last mile service is the final phase of distribution, from warehouse or distribution center to final customer destination. We offer last mile logistics, last mile distribution and last mile delivery for ecommerce, food, pharmacy and parcel service in Marbella and Costa del Sol. Last mile logistics is crucial for online store success."
+        },
+        "faq2": {
+          "question": "How long does last mile delivery take?",
+          "answer": "We offer same day last mile, 24 hour last mile and express last mile for urgent deliveries. We also have scheduled last mile with flexible schedules, weekend last mile and night last mile. Last mile delivery time depends on the type of service contracted."
+        },
+        "faq3": {
+          "question": "What sectors does last mile service cover?",
+          "answer": "We cover last mile ecommerce and last mile e-commerce for online stores, last mile food and last mile supermarkets, last mile restaurants and last mile home delivery, last mile pharmacy, last mile parcel service and last mile retail."
+        },
+        "faq4": {
+          "question": "How does last mile tracking work?",
+          "answer": "Our last mile service includes last mile tracking and last mile monitoring in real time through last mile GPS. We have last mile app and last mile digital platform so you can track your shipment at all times. The last mile system notifies you of each update."
+        },
+        "faq5": {
+          "question": "How much does last mile service cost?",
+          "answer": "Last mile price varies according to area (urban last mile, peripheral last mile or rural last mile), delivery type and urgency. We offer local last mile in Marbella, Málaga last mile and Costa del Sol last mile. Ecommerce shipping rates and ecommerce shipping prices are competitive. Request a personalized quote without commitment."
+        },
+        "faq6": {
+          "question": "Do you do weekend last mile delivery?",
+          "answer": "Yes, we offer weekend last mile and flexible last mile with schedules adapted to your needs. Last mile delivery service and last mile delivery is available Monday through Sunday according to the contracted plan."
+        },
+        "faq7": {
+          "question": "What is the difference between last mile and traditional courier?",
+          "answer": "Last mile logistics focuses on efficiency and speed of final delivery, with advanced tracking technology, optimized routes and schedule flexibility. Our last mile courier service and ecommerce courier combines the speed of last mile delivery with the professionalism of last mile transport."
+        },
+        "faq8": {
+          "question": "Do you offer ecommerce shipping?",
+          "answer": "Yes, we offer shipping for ecommerce and shipping for online stores. Our ecommerce transport service and ecommerce parcel service is specialized in last mile logistics for e-commerce. We are ecommerce shipping companies and shipping companies for online stores."
+        },
+        "faq9": {
+          "question": "What is ecommerce parcel service?",
+          "answer": "Ecommerce parcel service and parcel service for ecommerce is the package shipping service for online stores. We offer parcel service for online stores, e-commerce parcel service and ecommerce parcel service with guaranteed last mile. We also offer last mile parcel service and last mile parcel service."
+        },
+        "faq10": {
+          "question": "What are ecommerce shipping rates?",
+          "answer": "Ecommerce shipping rates and ecommerce shipping rates vary according to volume, distance and delivery type. We offer competitive ecommerce shipping prices, cheap ecommerce shipping and flat rate ecommerce shipping for multiple shipments. We also have cheap shipping for ecommerce and cheap shipping for online store."
+        },
+        "faq11": {
+          "question": "What is last mile logistics?",
+          "answer": "Last mile logistics and last mile logistics is the management of the last leg of the supply chain, from distribution center to final customer. It includes last mile logistics, ecommerce shipping logistics and last mile logistics. It also covers last mile distribution logistics and last mile logistics."
+        },
+        "faq12": {
+          "question": "Are you an ecommerce transport company?",
+          "answer": "Yes, we are ecommerce transport companies and ecommerce transport companies specialized in last mile. We are also last mile transport companies and last mile companies. We offer transport for ecommerce and professional last mile transport."
+        },
+        "faq13": {
+          "question": "What is a last mile provider?",
+          "answer": "A last mile provider and last mile provider is a company that offers last mile delivery services. As a last mile provider, we offer last mile delivery solutions and last mile delivery services for ecommerce and online stores."
+        },
+        "faq14": {
+          "question": "What is the last mile concept?",
+          "answer": "The last mile concept and last mile concept refers to the final phase of the distribution process. The last mile logistics concept includes last mile deliveries, last mile deliveries and last mile delivery. The last mile concept and last mile definition is crucial to understanding modern logistics."
+        },
+        "faq15": {
+          "question": "What is last mile distribution?",
+          "answer": "Last mile distribution and last mile distribution is the final product delivery process. It includes last mile distribution and last mile operations. It also covers last mile process, last mile process and last mile processes."
+        },
+        "faq16": {
+          "question": "Do you offer logistics solutions for ecommerce?",
+          "answer": "Yes, we offer logistics solutions for ecommerce and ecommerce shipping solutions. We also have last mile solutions, last mile delivery solutions and last mile solutions. We are specialists in logistics for online stores."
+        },
+        "faq17": {
+          "question": "What is last mile in logistics?",
+          "answer": "Last mile in logistics and last mile in logistics is the last leg of the delivery process. Last mile logistics and last mile logistics are fundamental for ecommerce success. It also includes what is last mile logistics and what is last mile logistics."
+        },
+        "faq18": {
+          "question": "What does last mile mean?",
+          "answer": "Last mile meaning and what is last mile refers to the final phase of distribution. Last mile definition and last mile concept include last mile deliveries, last mile shipping and last mile shipping. It also covers last mile company and last mile parcel service."
+        }
+      },
+      "seo": {
+        "title": "Last Mile Logistics Marbella | Ecommerce Shipping and Online Stores | FletesPro",
+        "description": "Last mile logistics in Marbella, Málaga and Costa del Sol. Shipping for ecommerce, online stores and ecommerce parcel service. Ecommerce transport companies and last mile provider. Competitive ecommerce shipping rates. Free quote.",
+        "keywords": "last mile, last mile logistics, shipping for online stores, shipping for ecommerce, ecommerce shipping, ecommerce transport, ecommerce parcel service, ecommerce shipping companies, ecommerce shipping rates, flat rate ecommerce shipping, cheap ecommerce shipping, last mile transport, last mile logistics, last mile provider, last mile companies, ecommerce logistics, last mile concept, last mile definition, last mile distribution",
+        "ogTitle": "Last Mile Logistics Marbella | Ecommerce Shipping",
+        "ogDescription": "Last mile logistics in Marbella, Málaga and Costa del Sol. Shipping for ecommerce, online stores and ecommerce parcel service. Ecommerce transport companies and last mile provider.",
+        "twitterTitle": "Last Mile Logistics | Ecommerce Shipping",
+        "twitterDescription": "Last mile logistics in Marbella. Shipping for ecommerce, online stores and ecommerce parcel service. Competitive rates.",
+        "schemaServiceType": "Last Mile Logistics",
+        "schemaDescription": "Last mile logistics in Marbella. Express last mile delivery, same day and 24h. Shipping for ecommerce and online stores."
+      }
+    }
+  },
+  "footer": {
+    "title": "FletesPro",
+    "description": "Professional moving company in Marbella, Málaga and Costa del Sol. Services for moving, packing, storage, cold transport and last mile. Cheap, affordable and fast moves with maximum quality.",
+    "services": "Services",
+    "zones": "Areas",
+    "legal": "Legal",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "cookies": "Cookies",
+    "contact": "Contact",
+    "followUs": "Follow Us",
+    "allRightsReserved": "All rights reserved"
+  },
+  "buttons": {
+    "calculate": "Calculate Price",
+    "requestQuote": "Request Quote",
+    "contact": "Contact",
+    "learnMore": "Learn More",
+    "book": "Book",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "close": "Close",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "search": "Search",
+    "filter": "Filter",
+    "reset": "Reset",
+    "apply": "Apply"
+  },
+  "calculator": {
+    "title": "Price Calculator",
+    "subtitle": "Calculate the price of your move in seconds",
+    "step1": "Route",
+    "step2": "Load",
+    "step3": "Finish",
+    "step1Full": "Origin and Destination",
+    "step2Full": "Details",
+    "step3Full": "Summary",
+    "origin": "Origin",
+    "destination": "Destination",
+    "originPlaceholder": "Enter an address...",
+    "destinationPlaceholder": "Enter an address...",
+    "distance": "Distance",
+    "volume": "Volume",
+    "items": "Items",
+    "price": "Price",
+    "total": "Total",
+    "calculate": "Calculate",
+    "reset": "Reset",
+    "result": "Result",
+    "estimatedPrice": "Estimated Price",
+    "estimatedTime": "Estimated Time",
+    "getQuote": "Get Quote",
+    "configureLoad": "Configure Load",
+    "digitalInventory": "Digital Inventory",
+    "technicalPrecision": "Technical Precision",
+    "selectBelongings": "Select your belongings",
+    "back": "Back",
+    "finishQuote": "Finish Quote",
+    "quoteFinished": "Quote Finished",
+    "artisanalCareGuaranteed": "Artisanal care guaranteed throughout the Costa del Sol.",
+    "totalEstimatedFletesPro": "Total Estimated FletesPro",
+    "reserveMove": "RESERVE MY MOVE",
+    "immediateConfirmation": "Immediate confirmation • 24/7 Support",
+    "executiveSummary": "Executive Summary",
+    "routePlanning": "Route Planning",
+    "loadEstimation": "Load Estimation",
+    "attentionProtocol": "Attention Protocol",
+    "optimizedLogistics": "Optimized logistics",
+    "presets": {
+      "smallBox": "Small Box",
+      "largeBox": "Large Box",
+      "sofa3Seats": "3-Seat Sofa",
+      "refrigerator": "Refrigerator",
+      "washingMachine": "Washing Machine",
+      "doubleBed": "Double Bed",
+      "diningTable": "Dining Table",
+      "chair": "Chair"
+    },
+    "categories": {
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large",
+      "special": "Special"
+    }
+  },
+  "components": {
+    "stats": {
+      "movesCompleted": "Moves Completed",
+      "yearsExperience": "Years of Experience",
+      "vipClients": "VIP Clients",
+      "zonesCovered": "Zones Covered"
+    },
+    "features": {
+      "title": "The FletesPro Difference",
+      "trilingualDrivers": "Trilingual Drivers",
+      "trilingualDriversDesc": "We speak Spanish, English and Swedish for your comfort and peace of mind.",
+      "portesMudanzas": "Moving and Transport",
+      "portesMudanzasDesc": "Specialists in Marbella, Puerto Banús and Cala de Mijas. VIP service.",
+      "packingOnDemand": "Packing on demand",
+      "packingOnDemandDesc": "Maximum protection for antiques, art and delicate furniture.",
+      "flexibleCapacity": "Flexible Capacity",
+      "flexibleCapacityDesc": "From small packages to large villas with the same efficiency.",
+      "insurance": "Complete Insurance",
+      "insuranceDesc": "Full coverage to protect all your belongings during transport.",
+      "realTimeTracking": "Real-Time Tracking",
+      "realTimeTrackingDesc": "Constant monitoring of your move from origin to destination."
+    },
+    "process": {
+      "tag": "FletesPro Methodology",
+      "title": "The gold standard in moving logistics.",
+      "subtitle": "We combine cutting-edge technology with the personalized treatment of artisans of yesteryear.",
+      "step1Title": "Digital Audit",
+      "step1Desc": "We calculate the exact volume with our precision technology for a price without surprises.",
+      "step2Title": "Artisanal Packing",
+      "step2Desc": "Specific multi-layer protection for each object, from art to delicate technology.",
+      "step3Title": "Premium Transit",
+      "step3Desc": "Trilingual drivers and GPS-monitored vehicles in real-time along the entire coast.",
+      "step4Title": "Hand Delivery",
+      "step4Desc": "We place each piece of furniture in its final location. Your home ready to live from the first minute."
+    },
+    "testimonials": {
+      "title": "Our Clients' Opinions",
+      "testimonial1": {
+        "name": "Alejandro Ruiz",
+        "role": "Move in Marbella",
+        "content": "Excellent treatment and care with the furniture. A 10/10 service in Puerto Banús."
+      },
+      "testimonial2": {
+        "name": "Marta Sánchez",
+        "role": "Move Cala de Mijas",
+        "content": "The website is super dynamic and the calculator gave me the exact price I paid. Very professional."
+      },
+      "testimonial3": {
+        "name": "David Smith",
+        "role": "Furniture Transport",
+        "content": "Punctual and very efficient. The team handled everything with care. Highly recommended."
+      }
+    },
+    "quality": {
+      "title": "Our obsession:",
+      "titleHighlight": "Perfection in Service.",
+      "insuranceTitle": "All-Risk Insurance",
+      "insuranceDesc": "Exclusive policies for valuable items and antiques with no fine print.",
+      "digitalTitle": "Digital Efficiency",
+      "digitalDesc": "Cloud inventories so you know where every box is at all times.",
+      "artisanTitle": "Artisanal Care",
+      "artisanDesc": "We treat your belongings as if they were works of art. Our operators are trained in handling noble materials and complex assemblies.",
+      "ctaButton": "Meet the team"
+    },
+    "guardamueblesCalculator": {
+      "title": "Storage Calculator",
+      "subtitle": "Calculate the price of your storage in Marbella according to the volume of your objects",
+      "additionalServices": "Additional Services",
+      "duration": "Duration",
+      "calculationSummary": "Calculation Summary",
+      "totalVolume": "Total Volume",
+      "objects": "Objects",
+      "stacking": "Stacking",
+      "minimum": "Minimum 3 m³",
+      "containers": "Containers",
+      "perUnit": "each",
+      "basePrice": "Base price",
+      "insurance": "Insurance",
+      "discount": "Discount",
+      "monthly": "Monthly",
+      "total": "Total",
+      "requestQuote": "Request Quote",
+      "estimatedPriceNote": "* Estimated price. Final quote after inspection."
+    },
+    "embalajesCalculator": {
+      "title": "Professional Packing Calculator",
+      "subtitle": "Calculate the price of the professional packing service according to your type of housing",
+      "housingType": "Housing Type",
+      "specialItems": "Special Items",
+      "serviceType": "Service Type",
+      "calculationSummary": "Calculation Summary",
+      "basePrice": "Base Price",
+      "specialItemsPrice": "Special Items",
+      "service": "Service",
+      "totalPrice": "Total Price",
+      "includesMaterials": "* Includes all materials",
+      "requestQuote": "Request Quote"
+    },
+    "transporteFrioCalculator": {
+      "title": "Cold Transport Calculator",
+      "subtitle": "Calculate the price of refrigerated transport according to temperature, distance and product type",
+      "temperatureRange": "Temperature Range",
+      "productType": "Product Type",
+      "distance": "Distance (km)",
+      "distancePlaceholder": "Enter the distance",
+      "distanceNote": "Distance in kilometers from origin to destination",
+      "transportType": "Transport Type",
+      "calculationSummary": "Calculation Summary",
+      "basePrice": "Base Price",
+      "tariff": "Tariff",
+      "temperature": "Temperature",
+      "product": "Product",
+      "type": "Type",
+      "totalPrice": "Total Price",
+      "coldChainGuarantee": "* Includes cold chain guarantee",
+      "requestQuote": "Request Quote"
+    },
+    "ultimaMillaCalculator": {
+      "title": "Last Mile Calculator",
+      "subtitle": "Calculate the last mile delivery price for multiple delivery points",
+      "shipmentType": "Shipment Type",
+      "packageSmall": "Small Package",
+      "maxWeight": "Maximum 20 kg",
+      "weightNote": "Adjust package weight (0-20 kg)",
+      "addDeliveryPoint": "Add Delivery Point",
+      "addressPlaceholder": "Enter address or place",
+      "addPoint": "Add Point",
+      "minPoints": "Minimum 5 points required",
+      "pointsAdded": "points added",
+      "deliveryPoints": "Delivery Points",
+      "pointPrice": "Price",
+      "noPoints": "No points added",
+      "routeMap": "Route Map",
+      "totalPoints": "Total Points",
+      "calculationSummary": "Calculation Summary",
+      "pricePerDelivery": "Price per Delivery",
+      "totalPrice": "Total Price",
+      "priceBreakdown": "3€ + VAT (21%) = 3.63€ per delivery",
+      "requestQuote": "Request Quote",
+      "minimumPointsNote": "Minimum 5 delivery points required. Fixed price per delivery."
+    },
+    "contacto": {
+      "badge": "Contact Us",
+      "title": "Contact",
+      "subtitle": "Request a free quote for cheap moving services and affordable removals in Marbella and Costa del Sol",
+      "phoneTitle": "Phone",
+      "phoneDesc": "Call us for moving quote and moving estimate",
+      "emailTitle": "Email",
+      "emailDesc": "Write to us for moving companies and moving service",
+      "addressTitle": "Address",
+      "addressDesc": "Office in Marbella, Málaga and Costa del Sol",
+      "ctaTitle": "Need a Moving Quote?",
+      "ctaSubtitle": "Contact our moving company for cheap moving services, affordable removals and professional moving service",
+      "ctaButton": "Request Quote",
+      "callButton": "Call Now",
+      "seoTitle": "Contact FletesPro - Professional Moving Company",
+      "seoContent1": "FletesPro is a professional moving company specializing in cheap moving services, affordable removals and moving service in Marbella, Málaga and Costa del Sol. We offer free moving quotes and online moving estimates for individuals and businesses.",
+      "seoContent2": "Our moving service includes residential moves, commercial moves, office moves, international moves and urgent moves. We also provide professional packing, storage and cold transport services.",
+      "seoContent3": "Contact our moving company to get a personalized moving quote. We offer cheap moving services, affordable removals and moving service with maximum quality. Request a free moving quote with no obligation.",
+      "keywords": "contact moving, moving quote, moving estimate, moving company, cheap moving, affordable removals, moving service, moving companies, removals Marbella, removals Málaga, removals Costa del Sol"
+    },
+    "mudanzasParticulares": {
+      "hero": {
+        "badge": "Moving for Individuals and Families",
+        "title": "Residential Moving",
+        "subtitle": "Residential moving and small moves in Marbella, Málaga and Costa del Sol. Complete service for affordable residential moving for homes and families. Free quote."
+      },
+      "services": {
+        "title": "Residential Moving Services",
+        "subtitle": "Complete residential moving with professional service for your home",
+        "service1": {
+          "title": "Complete Residential Moving",
+          "description": "Residential moving and small moves with complete service. Ideal for affordable residential moving and cheap small moves."
+        },
+        "service2": {
+          "title": "Packing and Unpacking",
+          "description": "Professional packing service included in residential moving. Complete protection of your belongings."
+        },
+        "service3": {
+          "title": "Insurance and Guarantee",
+          "description": "Residential moving with complete insurance and satisfaction guarantee. Total peace of mind in your move."
+        }
+      },
+      "benefits": {
+        "title": "Benefits of Residential Moving",
+        "subtitle": "Why choose our residential moving",
+        "benefit1": {
+          "title": "Competitive Prices",
+          "description": "Affordable residential moving and cheap small moves with prices from €45."
+        },
+        "benefit2": {
+          "title": "Fast Service",
+          "description": "Residential moving with fast and efficient delivery. No unnecessary waits."
+        },
+        "benefit3": {
+          "title": "Total Protection",
+          "description": "Residential moving with complete insurance and professional care of your belongings."
+        },
+        "benefit4": {
+          "title": "Packing Included",
+          "description": "Residential moving with professional packing service included at no additional cost."
+        }
+      },
+      "process": {
+        "title": "Residential Moving Process",
+        "subtitle": "How we work on your residential moving",
+        "step1": {
+          "title": "Free Quote",
+          "description": "Request a quote for residential moving with no obligation. Instant online quote."
+        },
+        "step2": {
+          "title": "Planning",
+          "description": "We plan your small move or residential move in detail and professionally."
+        },
+        "step3": {
+          "title": "Packing and Loading",
+          "description": "Professional packing and safe loading in residential moving. Maximum care."
+        },
+        "step4": {
+          "title": "Delivery and Unpacking",
+          "description": "Punctual delivery and unpacking at destination. Complete residential moving."
+        }
+      },
+      "cta": {
+        "title": "Need Residential Moving?",
+        "subtitle": "Residential moving and small moves in Marbella, Málaga and Costa del Sol. Affordable residential moving with complete service. Free quote.",
+        "button1": "Request Quote",
+        "button2": "Calculate Online Price"
+      },
+      "faqs": {
+        "title": "Frequently Asked Questions about Residential Moving",
+        "subtitle": "We answer your questions about residential moving and small moves",
+        "faq1": {
+          "question": "What do residential moving include?",
+          "answer": "Residential moving includes complete service: professional packing, loading, safe transport, unloading and unpacking. Ideal for small moves and affordable residential moving."
+        },
+        "faq2": {
+          "question": "How much do residential moving cost?",
+          "answer": "The price of residential moving varies according to volume and distance. We offer affordable residential moving from €45. Cheap small moves with competitive prices. Request a free quote."
+        },
+        "faq3": {
+          "question": "What is a small move?",
+          "answer": "A small move is ideal for studios, small apartments or residential moving with few furniture. We offer cheap small moves with complete service."
+        },
+        "faq4": {
+          "question": "Do residential moving include packing?",
+          "answer": "Yes, our residential moving includes professional packing service at no additional cost. Complete protection of your belongings in small moves or residential moves."
+        },
+        "faq5": {
+          "question": "Do you offer insurance for residential moving?",
+          "answer": "Yes, all our residential moving includes complete insurance. Affordable residential moving with total protection of your belongings."
+        },
+        "faq6": {
+          "question": "How long do residential moving take?",
+          "answer": "The time for residential moving depends on volume. For small moves, the process usually takes 4-6 hours. Complete residential moving can take 1-2 days."
+        }
+      },
+      "seo": {
+        "title": "Residential Moving Marbella | Small Moves | Affordable Residential Moving | FletesPro",
+        "description": "Residential moving and small moves in Marbella, Málaga and Costa del Sol. Affordable residential moving and cheap small moves with complete service. Free quote.",
+        "keywords": "residential moving, small moves, affordable residential moving, cheap small moves, residential move, moving for individuals, home moving, family moving, house moving, apartment moving, studio moving, cheap moving, economical moving, residential moving quote, residential moving price, residential moving company, residential moving service",
+        "ogTitle": "Residential Moving Marbella | Small Moves",
+        "ogDescription": "Residential moving and small moves in Marbella, Málaga and Costa del Sol. Affordable residential moving with complete service.",
+        "twitterTitle": "Residential Moving | Small Moves",
+        "twitterDescription": "Residential moving and small moves in Marbella. Affordable residential moving with complete service.",
+        "schemaServiceType": "Residential Moving",
+        "schemaDescription": "Residential moving and small moves in Marbella, Málaga and Costa del Sol. Complete service for affordable residential moving."
+      }
+    },
+    "mudanzasEmpresas": {
+      "hero": {
+        "badge": "Moving for Businesses and Companies",
+        "title": "Business Moving",
+        "subtitle": "Business moving and corporate moving in Marbella, Málaga and Costa del Sol. Specialized service for office moving for businesses. Free quote."
+      },
+      "services": {
+        "title": "Business Moving Services",
+        "subtitle": "Business moving and corporate moving with specialized professional service",
+        "service1": {
+          "title": "Corporate Moving",
+          "description": "Business moving and complete corporate moving. Specialized service for businesses of all sizes."
+        },
+        "service2": {
+          "title": "Business Planning",
+          "description": "Business moving with detailed planning to minimize interruptions in your business."
+        },
+        "service3": {
+          "title": "Flexible Schedules",
+          "description": "Business moving with schedules adapted to your needs. Even weekends and night schedules."
+        }
+      },
+      "benefits": {
+        "title": "Benefits of Business Moving",
+        "subtitle": "Why choose our business moving",
+        "benefit1": {
+          "title": "No Interruptions",
+          "description": "Business moving planned to minimize impact on your business activity."
+        },
+        "benefit2": {
+          "title": "Specialized Teams",
+          "description": "Business moving with professional teams specialized in corporate moving."
+        },
+        "benefit3": {
+          "title": "Complete Documentation",
+          "description": "Business moving with all necessary documentation and business insurance."
+        },
+        "benefit4": {
+          "title": "24/7 Support",
+          "description": "Business moving with continuous support throughout the moving process."
+        }
+      },
+      "process": {
+        "title": "Business Moving Process",
+        "subtitle": "How we work on your business moving",
+        "step1": {
+          "title": "Analysis and Quote",
+          "description": "Detailed analysis of your needs for business moving. Personalized quote."
+        },
+        "step2": {
+          "title": "Strategic Planning",
+          "description": "Strategic planning of corporate moving to minimize interruptions."
+        },
+        "step3": {
+          "title": "Professional Execution",
+          "description": "Professional execution of business moving with specialized teams."
+        },
+        "step4": {
+          "title": "Installation and Verification",
+          "description": "Complete installation and verification at destination. Business moving completed."
+        }
+      },
+      "cta": {
+        "title": "Need Business Moving?",
+        "subtitle": "Business moving and corporate moving in Marbella, Málaga and Costa del Sol. Specialized service for office moving. Free quote.",
+        "button1": "Request Quote",
+        "button2": "Calculate Online Price"
+      },
+      "faqs": {
+        "title": "Frequently Asked Questions about Business Moving",
+        "subtitle": "We answer your questions about business moving and corporate moving",
+        "faq1": {
+          "question": "What do business moving include?",
+          "answer": "Business moving includes complete service: strategic planning, professional packing, safe transport, installation and verification. Corporate moving with specialized service."
+        },
+        "faq2": {
+          "question": "How much do business moving cost?",
+          "answer": "The price of business moving varies according to company size and complexity. We offer personalized quotes for corporate moving. Request a quote with no obligation."
+        },
+        "faq3": {
+          "question": "Can you do business moving at night?",
+          "answer": "Yes, we offer business moving with flexible schedules, including night schedules and weekends to minimize interruptions in corporate moving."
+        },
+        "faq4": {
+          "question": "What documentation do I need for business moving?",
+          "answer": "For business moving you will need basic company documentation. Our team will help you with all necessary documentation for corporate moving."
+        },
+        "faq5": {
+          "question": "Do you offer insurance for business moving?",
+          "answer": "Yes, all our business moving includes complete business insurance. Corporate moving with total protection of equipment and furniture."
+        },
+        "faq6": {
+          "question": "How long do business moving take?",
+          "answer": "The time for business moving depends on size. Small corporate moving can take 1 day, while large business moving may require several days."
+        }
+      },
+      "seo": {
+        "title": "Business Moving Marbella | Corporate Moving | Office Moving | FletesPro",
+        "description": "Business moving and corporate moving in Marbella, Málaga and Costa del Sol. Specialized service for office moving for businesses. Free quote.",
+        "keywords": "business moving, corporate moving, office moving, business removals, commercial moving, store moving, warehouse moving, business moving Marbella, business moving Málaga, corporate moving Costa del Sol, business moving service, corporate moving company, business moving quote, business moving price",
+        "ogTitle": "Business Moving Marbella | Corporate Moving",
+        "ogDescription": "Business moving and corporate moving in Marbella, Málaga and Costa del Sol. Specialized service for office moving.",
+        "twitterTitle": "Business Moving | Corporate Moving",
+        "twitterDescription": "Business moving and corporate moving in Marbella. Specialized service for office moving.",
+        "schemaServiceType": "Business Moving",
+        "schemaDescription": "Business moving and corporate moving in Marbella, Málaga and Costa del Sol. Specialized service for office moving."
+      }
+    },
+    "mudanzasOficinas": {
+      "hero": {
+        "badge": "Professional Office Moving",
+        "title": "Office Moving",
+        "subtitle": "Office moving and office removals in Marbella, Málaga and Costa del Sol. Specialized service for office moving without interrupting your business. Free quote."
+      },
+      "services": {
+        "title": "Office Moving Services",
+        "subtitle": "Office moving and office removals with specialized professional service",
+        "service1": {
+          "title": "Complete Office Moving",
+          "description": "Office moving and office removals with complete service. Specialists in office moving."
+        },
+        "service2": {
+          "title": "Dismantling and Assembly",
+          "description": "Office moving with dismantling and assembly service of office furniture included."
+        },
+        "service3": {
+          "title": "Equipment Relocation",
+          "description": "Office moving with professional relocation of IT equipment and technology."
+        }
+      },
+      "benefits": {
+        "title": "Benefits of Office Moving",
+        "subtitle": "Why choose our office moving",
+        "benefit1": {
+          "title": "No Interruptions",
+          "description": "Office moving planned so your business continues operating during the move."
+        },
+        "benefit2": {
+          "title": "Specialized Teams",
+          "description": "Office moving with professional teams specialized in office moving."
+        },
+        "benefit3": {
+          "title": "Flexible Schedules",
+          "description": "Office moving with adapted schedules: weekends, night schedules."
+        },
+        "benefit4": {
+          "title": "Complete Installation",
+          "description": "Office moving with complete installation of furniture and equipment at destination."
+        }
+      },
+      "process": {
+        "title": "Office Moving Process",
+        "subtitle": "How we work on your office moving",
+        "step1": {
+          "title": "Evaluation and Quote",
+          "description": "Detailed evaluation of your needs for office moving. Personalized quote."
+        },
+        "step2": {
+          "title": "Detailed Planning",
+          "description": "Detailed planning of office moving to minimize interruptions."
+        },
+        "step3": {
+          "title": "Professional Execution",
+          "description": "Professional execution of office moving with specialized teams."
+        },
+        "step4": {
+          "title": "Installation and Configuration",
+          "description": "Complete installation and configuration at destination. Office moving completed."
+        }
+      },
+      "cta": {
+        "title": "Need Office Moving?",
+        "subtitle": "Office moving and office removals in Marbella, Málaga and Costa del Sol. Specialized service without interrupting your business. Free quote.",
+        "button1": "Request Quote",
+        "button2": "Calculate Online Price"
+      },
+      "faqs": {
+        "title": "Frequently Asked Questions about Office Moving",
+        "subtitle": "We answer your questions about office moving and office removals",
+        "faq1": {
+          "question": "What do office moving include?",
+          "answer": "Office moving includes complete service: dismantling, packing, transport, assembly and installation. Office removals with specialized service."
+        },
+        "faq2": {
+          "question": "How much do office moving cost?",
+          "answer": "The price of office moving varies according to office size. We offer personalized quotes for office removals. Request a quote with no obligation."
+        },
+        "faq3": {
+          "question": "Can you do office moving on weekends?",
+          "answer": "Yes, we offer office moving with flexible schedules, including weekends and night schedules to not interrupt your activity in office removals."
+        },
+        "faq4": {
+          "question": "Do office moving include dismantling and assembly?",
+          "answer": "Yes, our office moving includes complete dismantling and assembly service of furniture. Office removals with professional installation."
+        },
+        "faq5": {
+          "question": "What happens with IT equipment in office moving?",
+          "answer": "In office moving, our specialists take care of safe relocation of IT equipment. Office removals with special care of technology."
+        },
+        "faq6": {
+          "question": "How long do office moving take?",
+          "answer": "The time for office moving depends on size. Small office removals can take 1 day, while large office moving may require 2-3 days."
+        }
+      },
+      "seo": {
+        "title": "Office Moving Marbella | Office Removals | Specialized Service | FletesPro",
+        "description": "Office moving and office removals in Marbella, Málaga and Costa del Sol. Specialized service for office moving without interrupting your business. Free quote.",
+        "keywords": "office moving, office removals, office relocation, office moving Marbella, office moving Málaga, office moving Costa del Sol, office moving service, office moving company, office moving quote, office moving price",
+        "ogTitle": "Office Moving Marbella | Office Removals",
+        "ogDescription": "Office moving and office removals in Marbella, Málaga and Costa del Sol. Specialized service without interrupting your business.",
+        "twitterTitle": "Office Moving | Office Removals",
+        "twitterDescription": "Office moving and office removals in Marbella. Specialized service without interrupting your business.",
+        "schemaServiceType": "Office Moving",
+        "schemaDescription": "Office moving and office removals in Marbella, Málaga and Costa del Sol. Specialized service without interrupting your business."
+      }
+    },
+    "mudanzasInternacionales": {
+      "hero": {
+        "badge": "Professional International Moving",
+        "title": "International Moving",
+        "subtitle": "International moving and moving abroad in Marbella, Málaga and Costa del Sol. Complete service for international moving with documentation included. Free quote."
+      },
+      "services": {
+        "title": "International Moving Services",
+        "subtitle": "International moving and moving abroad with complete professional service",
+        "service1": {
+          "title": "Moving Abroad",
+          "description": "International moving and moving abroad to any destination. Complete service for international moving."
+        },
+        "service2": {
+          "title": "Complete Documentation",
+          "description": "International moving with all customs and legal documentation included."
+        },
+        "service3": {
+          "title": "International Insurance",
+          "description": "International moving with complete insurance for moving abroad."
+        }
+      },
+      "benefits": {
+        "title": "Benefits of International Moving",
+        "subtitle": "Why choose our international moving",
+        "benefit1": {
+          "title": "Worldwide Coverage",
+          "description": "International moving to any destination. Moving abroad with complete coverage."
+        },
+        "benefit2": {
+          "title": "Documentation Included",
+          "description": "International moving with all customs and legal documentation included at no additional cost."
+        },
+        "benefit3": {
+          "title": "Complete Insurance",
+          "description": "International moving with complete insurance for moving abroad."
+        },
+        "benefit4": {
+          "title": "24/7 Tracking",
+          "description": "International moving with complete tracking throughout the moving abroad process."
+        }
+      },
+      "process": {
+        "title": "International Moving Process",
+        "subtitle": "How we work on your international moving",
+        "step1": {
+          "title": "Consultation and Quote",
+          "description": "Initial consultation for international moving. Detailed quote for moving abroad."
+        },
+        "step2": {
+          "title": "Documentation and Procedures",
+          "description": "Complete documentation management for international moving. Customs procedures included."
+        },
+        "step3": {
+          "title": "Packing and Shipping",
+          "description": "Professional packing and safe shipping for moving abroad."
+        },
+        "step4": {
+          "title": "Transport and Delivery",
+          "description": "Safe transport and delivery at destination. International moving completed."
+        }
+      },
+      "cta": {
+        "title": "Need International Moving?",
+        "subtitle": "International moving and moving abroad in Marbella, Málaga and Costa del Sol. Complete service with documentation included. Free quote.",
+        "button1": "Request Quote",
+        "button2": "Calculate Online Price"
+      },
+      "faqs": {
+        "title": "Frequently Asked Questions about International Moving",
+        "subtitle": "We answer your questions about international moving and moving abroad",
+        "faq1": {
+          "question": "What do international moving include?",
+          "answer": "International moving includes complete service: packing, customs documentation, safe transport, international insurance and delivery at destination. Moving abroad with professional service."
+        },
+        "faq2": {
+          "question": "How much do international moving cost?",
+          "answer": "The price of international moving varies according to destination and volume. Moving abroad with competitive prices. Request a personalized quote for international moving."
+        },
+        "faq3": {
+          "question": "What documentation do I need for international moving?",
+          "answer": "For international moving you will need basic documentation. We manage all customs documentation for moving abroad."
+        },
+        "faq4": {
+          "question": "How long do international moving take?",
+          "answer": "The time for international moving depends on destination. Moving abroad within Europe usually takes 7-14 days. International moving to other continents may take 3-6 weeks."
+        },
+        "faq5": {
+          "question": "Do you offer insurance for international moving?",
+          "answer": "Yes, all our international moving includes complete insurance. Moving abroad with total protection throughout the journey."
+        },
+        "faq6": {
+          "question": "To which countries do you do international moving?",
+          "answer": "We offer international moving to any worldwide destination. Moving abroad within and outside Europe. Check availability for international moving to your destination."
+        }
+      },
+      "seo": {
+        "title": "International Moving Marbella | Moving Abroad | Complete Service | FletesPro",
+        "description": "International moving and moving abroad in Marbella, Málaga and Costa del Sol. Complete service for international moving with documentation included. Free quote.",
+        "keywords": "international moving, moving abroad, moving outside Chile, moving Europe, international moving prices, international moving Marbella, international moving Málaga, international moving Costa del Sol, international moving service, international moving company, international moving quote, international moving price",
+        "ogTitle": "International Moving Marbella | Moving Abroad",
+        "ogDescription": "International moving and moving abroad in Marbella, Málaga and Costa del Sol. Complete service with documentation included.",
+        "twitterTitle": "International Moving | Moving Abroad",
+        "twitterDescription": "International moving and moving abroad in Marbella. Complete service with documentation included.",
+        "schemaServiceType": "International Moving",
+        "schemaDescription": "International moving and moving abroad in Marbella, Málaga and Costa del Sol. Complete service with documentation included."
+      }
+    },
+    "mudanzasUrgentes": {
+      "hero": {
+        "badge": "Urgent Moving 24 Hours",
+        "title": "Urgent Moving",
+        "subtitle": "Urgent moving and express moving 24 hours in Marbella, Málaga and Costa del Sol. Urgent moving service available every day. Free quote."
+      },
+      "services": {
+        "title": "Urgent Moving Services",
+        "subtitle": "Urgent moving and express moving 24 hours with immediate professional service",
+        "service1": {
+          "title": "Express Moving 24h",
+          "description": "Urgent moving and express moving 24 hours. Service available every day of the year."
+        },
+        "service2": {
+          "title": "Immediate Response",
+          "description": "Urgent moving with immediate response. 24/7 availability for express moving."
+        },
+        "service3": {
+          "title": "Same Day",
+          "description": "Urgent moving with same day service. Express moving when you need it most."
+        }
+      },
+      "benefits": {
+        "title": "Benefits of Urgent Moving",
+        "subtitle": "Why choose our urgent moving",
+        "benefit1": {
+          "title": "24/7 Availability",
+          "description": "Urgent moving available every day. Express moving when you need it most."
+        },
+        "benefit2": {
+          "title": "Fast Response",
+          "description": "Urgent moving with immediate response. Express moving in the shortest time possible."
+        },
+        "benefit3": {
+          "title": "Complete Service",
+          "description": "Urgent moving with complete service. Express moving without compromising quality."
+        },
+        "benefit4": {
+          "title": "Prepared Teams",
+          "description": "Urgent moving with always prepared teams. Professional express moving."
+        }
+      },
+      "process": {
+        "title": "Urgent Moving Process",
+        "subtitle": "How we work on your urgent moving",
+        "step1": {
+          "title": "Urgent Call",
+          "description": "Contact for urgent moving. Immediate response for express moving."
+        },
+        "step2": {
+          "title": "Quick Evaluation",
+          "description": "Quick evaluation of your needs for urgent moving. Express quote."
+        },
+        "step3": {
+          "title": "Immediate Deployment",
+          "description": "Immediate deployment of teams for express moving. Urgent moving underway."
+        },
+        "step4": {
+          "title": "Fast Delivery",
+          "description": "Fast and efficient delivery. Urgent moving completed in record time."
+        }
+      },
+      "cta": {
+        "title": "Need Urgent Moving?",
+        "subtitle": "Urgent moving and express moving 24 hours in Marbella, Málaga and Costa del Sol. Service available every day. Free quote.",
+        "button1": "Request Quote",
+        "button2": "Calculate Online Price"
+      },
+      "faqs": {
+        "title": "Frequently Asked Questions about Urgent Moving",
+        "subtitle": "We answer your questions about urgent moving and express moving",
+        "faq1": {
+          "question": "What are urgent moving?",
+          "answer": "Urgent moving are express moving 24 hour services available when you need to move urgently. Express moving with immediate response."
+        },
+        "faq2": {
+          "question": "How much do urgent moving cost?",
+          "answer": "The price of urgent moving may be slightly higher due to urgency. Express moving with competitive prices. Request a quote for urgent moving."
+        },
+        "faq3": {
+          "question": "Are urgent moving available on weekends?",
+          "answer": "Yes, our urgent moving are available every day, including weekends and holidays. Express moving 24/7."
+        },
+        "faq4": {
+          "question": "How long do urgent moving take?",
+          "answer": "Urgent moving can be done the same day or within 24 hours. Express moving with minimum response times."
+        },
+        "faq5": {
+          "question": "Do urgent moving include packing?",
+          "answer": "Yes, our urgent moving includes professional packing service. Express moving with complete service."
+        },
+        "faq6": {
+          "question": "What is the difference between urgent moving and normal moving?",
+          "answer": "Urgent moving offer immediate availability and faster response times. Express moving when you need it most."
+        }
+      },
+      "seo": {
+        "title": "Urgent Moving Marbella | Express Moving 24 Hours | Immediate Service | FletesPro",
+        "description": "Urgent moving and express moving 24 hours in Marbella, Málaga and Costa del Sol. Urgent moving service available every day. Free quote.",
+        "keywords": "urgent moving, express moving, 24 hour moving, same day moving, urgent moving Marbella, urgent moving Málaga, urgent moving Costa del Sol, urgent moving service, urgent moving company, urgent moving quote, urgent moving price, express moving 24h",
+        "ogTitle": "Urgent Moving Marbella | Express Moving 24h",
+        "ogDescription": "Urgent moving and express moving 24 hours in Marbella, Málaga and Costa del Sol. Service available every day.",
+        "twitterTitle": "Urgent Moving | Express Moving 24h",
+        "twitterDescription": "Urgent moving and express moving 24 hours in Marbella. Service available every day.",
+        "schemaServiceType": "Urgent Moving",
+        "schemaDescription": "Urgent moving and express moving 24 hours in Marbella, Málaga and Costa del Sol. Service available every day."
+      }
+    }
+  }
+}

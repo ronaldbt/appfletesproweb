@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://app.fletespro.cl/sitemap.xml
+
+# Disallow admin and dashboard pages
+Disallow: /dashboard-admin/
+Disallow: /dashboard-cliente/
+Disallow: /dashboard-conductor/
+Disallow: /login
+Disallow: /register
+Disallow: /api/
+Disallow: /cliente/
+Disallow: /conductor/
+Disallow: /test
+Disallow: /no-disponible
+
+# Allow important pages
+Allow: /mudanzas/
+Allow: /embalajes
+Allow: /guardamuebles
+Allow: /transporte-frio
+Allow: /ultima-milla
+Allow: /contacto
+Allow: /blog/
+
+# Crawl-delay (opcional, ayuda a no sobrecargar el servidor)
+Crawl-delay: 1

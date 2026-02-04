@@ -1,0 +1,39 @@
+═══════════════════════════════════════════════════════════════
+RESUMEN COMPLETO DE INVESTIGACIÓN
+═══════════════════════════════════════════════════════════════
+
+PROBLEMAS ENCONTRADOS:
+
+1. ✅ ERROR 500 DEL MANIFEST: RESUELTO
+   - El archivo manifest no existía después de builds anteriores
+   - Solución: Limpiar cache y rebuild
+   - Estado: El manifest ahora existe correctamente
+
+2. ❌ HYDRATION MISMATCH: ACTIVO
+   - El servidor renderiza HTML vacío: <!---->
+   - El cliente intenta renderizar Header/WhatsAppButton
+   - Causa: Los componentes no se renderizan en SSR
+
+3. ❌ NUXTPAGE NO RENDERIZA PÁGINAS: CRÍTICO
+   - pages/index.vue existe pero no se ejecuta (no hay logs)
+   - El HTML muestra <main><!----></main> vacío
+   - Ni / ni /test funcionan
+
+4. ❌ COMPONENTES NO SE RENDERIZAN EN SSR
+   - Header no aparece en HTML del servidor
+   - WhatsAppButton no aparece en HTML del servidor
+   - NuxtPage no renderiza contenido
+
+LOGS Y DEBUGGING:
+- ✅ app.vue SÍ se ejecuta (logs visibles)
+- ❌ pages/index.vue NO se ejecuta (logs NO visibles)
+- ❌ layouts/default.vue NO se usa actualmente
+
+ESTRUCTURA ACTUAL:
+- app/app.vue: Tiene Header, NuxtPage, WhatsAppButton directamente
+- layouts/default.vue: Existe pero no se está usando
+- pages/index.vue: Existe con contenido pero no se renderiza
+
+CONCLUSIÓN:
+El problema principal es que Nuxt no está renderizando NADA en SSR.
+Los componentes y páginas existen pero no se compilan/renderizan correctamente.

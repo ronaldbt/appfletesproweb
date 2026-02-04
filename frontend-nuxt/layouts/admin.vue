@@ -14,7 +14,7 @@
     <!-- Contenedor principal -->
     <div class="lg:ml-64 transition-all duration-300">
       <div class="max-w-7xl mx-auto p-6">
-        <router-view />
+        <slot />
       </div>
     </div>
   </div>
@@ -35,34 +35,26 @@ const toggleSidebar = () => {
 
 <style scoped>
 @media print {
-  /* Ocultar sidebar completo en modo impresión */
   :deep(.fixed.left-0.top-0.h-full.w-64),
   :deep(.sidebar),
   :deep([class*="sidebar"]) {
     display: none !important;
     visibility: hidden !important;
   }
-
-  /* Ocultar overlay y botón toggle móvil */
   :deep(button.fixed.top-4.left-4),
   :deep(.fixed.inset-0.bg-black) {
     display: none !important;
     visibility: hidden !important;
   }
-
-  /* Hacer que el contenido use todo el ancho en impresión */
   .lg\:ml-64 {
     margin-left: 0 !important;
     padding-left: 0 !important;
   }
-
   .max-w-7xl.mx-auto.p-6 {
     max-width: 100% !important;
     padding: 0 !important;
     margin: 0 !important;
   }
-
-  /* Asegurar que el contenido sea visible */
   :deep(.cotizacion-wrapper),
   :deep(#cotizacion-container) {
     display: block !important;
@@ -74,4 +66,3 @@ const toggleSidebar = () => {
   }
 }
 </style>
-

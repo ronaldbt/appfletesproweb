@@ -19,6 +19,7 @@ import AdminFletes from '../views/admin/AdminFletes.vue'
 import AdminConductores from '../views/admin/AdminConductores.vue'
 import AdminPagos from '../views/admin/AdminPagos.vue'
 import AdminConfiguracion from '../views/admin/AdminConfiguracion.vue'
+import AdminCotizacion from '../views/admin/AdminCotizacion.vue'
 
 // Vistas de Cliente
 import ClienteReservas from '../views/cliente/ClienteReservas.vue'
@@ -147,6 +148,12 @@ const routes = [
         path: 'reservas', 
         name: 'AdminReservas', 
         component: AdminReservas,
+        meta: { requiresAuth: true, roles: ['admin'] }
+      },
+      { 
+        path: 'cotizacion', 
+        name: 'AdminCotizacion', 
+        component: AdminCotizacion,
         meta: { requiresAuth: true, roles: ['admin'] }
       },
       { 
