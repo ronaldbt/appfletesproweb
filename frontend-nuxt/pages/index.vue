@@ -282,12 +282,6 @@
     </main>
 
     <PortesFooter />
-
-    <!-- Modern Dynamic Background Orbs -->
-    <div class="fixed top-0 left-0 w-full h-full -z-40 pointer-events-none opacity-30 overflow-hidden">
-      <div class="absolute top-1/4 -right-1/4 w-[700px] h-[700px] bg-teal-200/20 rounded-full blur-[180px] animate-float-1" />
-      <div class="absolute bottom-1/4 -left-1/4 w-[700px] h-[700px] bg-slate-300/40 rounded-full blur-[180px] animate-float-2" />
-    </div>
   </div>
 </template>
 

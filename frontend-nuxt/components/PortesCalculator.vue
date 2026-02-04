@@ -194,6 +194,11 @@
               <span class="text-5xl font-black text-white tracking-tighter animate-price-in">{{ calculation.priceFormatted || calculation.price }}</span>
               <span class="text-xl font-bold text-teal-500">CLP</span>
             </div>
+            <p class="text-[8px] text-teal-500/90 mt-2">{{ $t('calculator.includesFreeM3') }} {{ calculation.includesFreeM3 }} m³</p>
+            <div v-if="calculation.volumeExtra > 0 || calculation.helpersExtra > 0" class="mt-3 space-y-1 text-[9px] text-slate-400">
+              <p v-if="calculation.volumeExtra > 0">{{ $t('calculator.volumeExtra') }}: +${{ calculation.volumeExtra.toLocaleString('es-CL') }}</p>
+              <p v-if="calculation.helpersExtra > 0">{{ $t('calculator.helpers') }}: +${{ calculation.helpersExtra.toLocaleString('es-CL') }}</p>
+            </div>
             <div class="mt-6 pt-5 border-t border-slate-800 flex justify-between text-[9px] font-black text-slate-500 uppercase tracking-[0.3em]">
               <span>REG. METROPOLITANA</span>
               <span>FLETESPRO</span>
@@ -201,9 +206,10 @@
           </div>
 
           <div class="mt-8 space-y-3">
-            <button class="w-full bg-teal-600 text-white py-4 rounded-2xl font-black text-lg shadow-2xl shadow-teal-500/30 hover:bg-teal-500 transition-all hover:scale-[1.05] active:scale-[0.95]">
+            <a :href="whatsappQuoteUrl" target="_blank" rel="noopener noreferrer" class="w-full bg-teal-600 text-white py-4 rounded-2xl font-black text-lg shadow-2xl shadow-teal-500/30 hover:bg-teal-500 transition-all hover:scale-[1.05] active:scale-[0.95] flex items-center justify-center gap-2" @click="saveQuoteToStorage">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               {{ $t('calculator.reserveMove') }}
-            </button>
+            </a>
             <p class="text-[9px] text-slate-400 font-black uppercase tracking-widest">{{ $t('calculator.immediateConfirmation') }}</p>
           </div>
         </div>
@@ -211,66 +217,81 @@
     </div>
 
     <!-- Right Panel (Summary) -->
-    <div class="lg:w-1/3 bg-slate-950 p-5 md:p-8 text-white flex flex-col justify-between border-l border-slate-900 relative">
+    <div class="lg:w-1/3 bg-slate-950 p-4 md:p-6 text-white flex flex-col border-l border-slate-900 relative">
       <div class="absolute top-0 right-0 w-48 h-48 bg-teal-600/10 rounded-full blur-[80px] -z-10" />
       
-      <div class="space-y-8">
-        <div class="flex items-center justify-between border-b border-slate-900 pb-5">
-          <h4 class="text-base font-black text-white tracking-tight">{{ $t('calculator.executiveSummary') }}</h4>
-          <div class="flex gap-2">
-            <div class="w-2 h-2 bg-teal-500 rounded-full animate-pulse" />
-            <div class="w-2 h-2 bg-teal-500 rounded-full animate-pulse" style="animation-delay: 0.5s" />
+      <div class="flex flex-col gap-3">
+        <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+          <h4 class="text-sm font-black text-white tracking-tight">{{ $t('calculator.executiveSummary') }}</h4>
+          <div class="flex gap-1.5">
+            <div class="w-1.5 h-1.5 bg-teal-500 rounded-full animate-pulse" />
+            <div class="w-1.5 h-1.5 bg-teal-500 rounded-full animate-pulse" style="animation-delay: 0.5s" />
           </div>
         </div>
-        
-          <div class="space-y-6">
-            <div class="flex items-start gap-4">
-              <div class="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center border border-slate-800 shadow-xl group">
-              <svg class="text-teal-400 w-6 h-6 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
+
+        <div class="space-y-3">
+          <div class="flex items-start gap-3">
+            <div class="w-9 h-9 shrink-0 bg-slate-900 rounded-lg flex items-center justify-center border border-slate-800">
+              <svg class="text-teal-400 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+            </div>
+            <div class="min-w-0 flex-1">
+              <p class="text-slate-500 text-[9px] font-black uppercase tracking-widest mb-1">{{ $t('calculator.routePlanning') }}</p>
+              <p class="font-bold text-xs leading-snug text-white truncate" :title="origin">{{ origin || '—' }}</p>
+              <p class="font-bold text-xs leading-snug text-teal-400 truncate" :title="destination">{{ destination || '—' }}</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 shrink-0 bg-slate-900 rounded-lg flex items-center justify-center border border-slate-800">
+              <svg class="text-teal-400 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
             </div>
             <div>
-              <p class="text-slate-500 text-[10px] font-black uppercase tracking-widest mb-2">{{ $t('calculator.routePlanning') }}</p>
-              <p class="font-black text-base leading-none text-white">{{ origin }} <span class="text-teal-500 px-2">➔</span> {{ destination }}</p>
+              <p class="text-slate-500 text-[9px] font-black uppercase tracking-widest mb-0.5">{{ $t('calculator.loadEstimation') }}</p>
+              <p class="font-black text-base text-white">{{ calculation.totalVolume.toFixed(2) }} m³ <span class="text-slate-500 font-normal text-[10px]">({{ $t('calculator.includesFreeM3') }} {{ calculation.includesFreeM3 }} m³)</span></p>
             </div>
           </div>
 
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center border border-slate-800 shadow-xl">
-              <svg class="text-teal-400 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-              </svg>
+          <div class="p-3 bg-white/[0.04] border border-white/5 rounded-xl space-y-2.5">
+            <p class="text-teal-500 text-[8px] font-black uppercase tracking-widest">{{ $t('calculator.fleteSchedule') }}</p>
+            <div class="flex gap-1.5">
+              <button type="button" :class="fleteImmediate ? 'bg-teal-600 text-white border-teal-500' : 'bg-slate-800 text-slate-400 border-slate-700'" class="flex-1 py-1.5 rounded-md border text-[9px] font-black uppercase" @click="fleteImmediate = true">{{ $t('calculator.fleteImmediate') }}</button>
+              <button type="button" :class="!fleteImmediate ? 'bg-teal-600 text-white border-teal-500' : 'bg-slate-800 text-slate-400 border-slate-700'" class="flex-1 py-1.5 rounded-md border text-[9px] font-black uppercase" @click="fleteImmediate = false">{{ $t('calculator.fleteScheduled') }}</button>
             </div>
-            <div>
-              <p class="text-slate-500 text-[10px] font-black uppercase tracking-widest mb-2">{{ $t('calculator.loadEstimation') }}</p>
-              <p class="font-black text-lg leading-none text-white">{{ calculation.totalVolume.toFixed(2) }} m³</p>
+            <div v-if="!fleteImmediate" class="grid grid-cols-2 gap-1.5">
+              <input v-model="fleteDate" type="date" class="bg-slate-900 border border-slate-700 rounded-md px-2 py-1 text-[10px] font-bold text-white w-full" />
+              <input v-model="fleteTime" type="time" class="bg-slate-900 border border-slate-700 rounded-md px-2 py-1 text-[10px] font-bold text-white w-full" />
             </div>
-          </div>
 
-            <div class="p-6 bg-white/[0.03] border border-white/5 rounded-2xl backdrop-blur-xl">
-            <p class="text-teal-500 text-[9px] font-black uppercase tracking-[0.3em] mb-6 text-center">{{ $t('calculator.attentionProtocol') }}</p>
-            <div class="grid grid-cols-2 gap-3">
-              <div v-for="l in ['ES', 'EN']" :key="l" class="flex flex-col items-center gap-2">
-                <span class="text-xs font-black bg-slate-900 w-full text-center py-2.5 rounded-xl border border-slate-800 text-slate-300">
-                  {{ l }}
-                </span>
-              </div>
+            <p class="text-teal-500 text-[8px] font-black uppercase tracking-widest pt-0.5">{{ $t('calculator.helpers') }}</p>
+            <p class="text-[8px] text-slate-400 leading-tight">{{ $t('calculator.helpersNoteShort') }}</p>
+            <div class="flex items-center gap-2 flex-wrap">
+              <button type="button" :disabled="helpersCount <= 0" @click="helpersCount = Math.max(0, helpersCount - 1)" class="w-7 h-7 rounded-md bg-slate-800 border border-slate-700 text-white text-sm font-black disabled:opacity-40 disabled:cursor-not-allowed">−</button>
+              <span class="text-xs font-black text-white w-5 text-center">{{ helpersCount }}</span>
+              <button type="button" :disabled="helpersCount >= MAX_HELPERS" @click="helpersCount = Math.min(MAX_HELPERS, helpersCount + 1)" class="w-7 h-7 rounded-md bg-slate-800 border border-slate-700 text-white text-sm font-black disabled:opacity-40 disabled:cursor-not-allowed">+</button>
+              <span class="text-[8px] text-slate-500">+${{ (HELPER_PRICE_CLP).toLocaleString('es-CL') }}/{{ $t('calculator.helperUnit') }}</span>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="mt-10 bg-white/[0.05] p-6 rounded-3xl border border-white/5 space-y-2.5 shadow-2xl">
-        <div class="flex justify-between items-center">
-          <span class="text-slate-500 font-black text-[9px] uppercase tracking-widest">{{ $t('calculator.price') }}</span>
-          <span class="text-3xl font-black text-white tracking-tighter">{{ calculation.priceFormatted || calculation.price }} CLP</span>
+        <div class="mt-2 bg-white/[0.05] p-4 rounded-2xl border border-white/5 space-y-1.5 shadow-xl">
+        <div class="flex justify-between items-baseline gap-2">
+          <span class="text-slate-500 font-black text-[8px] uppercase tracking-widest shrink-0">{{ $t('calculator.price') }}</span>
+          <span class="text-xl md:text-2xl font-black text-white tracking-tighter truncate">{{ calculation.priceFormatted || calculation.price }} CLP</span>
         </div>
-        <div class="h-1.5 w-full bg-slate-900 rounded-full overflow-hidden">
-          <div class="h-full w-1/4 bg-teal-500/60 shadow-[0_0_15px_rgba(20,184,166,0.5)] animate-progress" />
+        <p class="text-[7px] text-teal-500/90 font-bold">{{ $t('calculator.includesFreeM3') }} {{ calculation.includesFreeM3 }} m³</p>
+        <div v-if="calculation.volumeExtra > 0" class="text-[8px] text-slate-400 flex justify-between gap-2">
+          <span class="truncate">{{ $t('calculator.volumeExtra') }} ({{ calculation.extraM3.toFixed(1) }} m³)</span>
+          <span class="shrink-0">+${{ calculation.volumeExtra.toLocaleString('es-CL') }}</span>
         </div>
-        <p class="text-[8px] text-slate-600 font-black text-center pt-2 tracking-[0.3em] uppercase">Santiago • Región Metropolitana</p>
+        <div v-if="calculation.helpersExtra > 0" class="text-[8px] text-slate-400 flex justify-between gap-2">
+          <span class="truncate">{{ $t('calculator.helpers') }} ({{ helpersCount }})</span>
+          <span class="shrink-0">+${{ calculation.helpersExtra.toLocaleString('es-CL') }}</span>
+        </div>
+        <div class="h-1 w-full bg-slate-900 rounded-full overflow-hidden">
+          <div class="h-full w-1/4 bg-teal-500/60 rounded-full animate-progress" />
+        </div>
+        <p class="text-[7px] text-slate-500 font-bold text-center pt-1 tracking-widest uppercase">Santiago • RM</p>
+        </div>
       </div>
     </div>
   </div>
@@ -345,6 +366,15 @@ const BASE_RM_CLP = 20000
 const POR_KM_RM_CLP = 2000
 const POR_KM_REGIONES_CLP = 900
 const LIMITE_KM_RM = 50
+const FREE_M3 = 3
+const PRICE_PER_EXTRA_M3 = 4000
+const HELPER_PRICE_CLP = 10000
+const MAX_HELPERS = 10
+
+const fleteImmediate = ref(true)
+const fleteDate = ref('')
+const fleteTime = ref('12:00')
+const helpersCount = ref(0)
 
 function calcPrecioFromDistancia(km) {
   if (!km || km <= 0) return 0
@@ -356,21 +386,69 @@ function calcPrecioFromDistancia(km) {
 
 const calculation = computed(() => {
   const totalVolume = items.value.reduce((acc, item) => acc + (item.volume * item.quantity), 0)
-  let calculatedPrice = 0
+  let baseFromDist = 0
   if (precio.value !== null && precio.value > 0) {
-    calculatedPrice = precio.value
+    baseFromDist = precio.value
   } else if (distancia.value !== null && distancia.value > 0) {
-    calculatedPrice = calcPrecioFromDistancia(distancia.value)
-    precio.value = calculatedPrice
+    baseFromDist = calcPrecioFromDistancia(distancia.value)
+    precio.value = baseFromDist
   }
+  const extraM3 = Math.max(0, totalVolume - FREE_M3)
+  const volumeExtra = Math.round(extraM3 * PRICE_PER_EXTRA_M3)
+  const helpersExtra = (helpersCount.value || 0) * HELPER_PRICE_CLP
+  const totalPrice = baseFromDist + volumeExtra + helpersExtra
   return {
     totalVolume,
-    price: Math.round(calculatedPrice),
-    priceFormatted: calculatedPrice > 0 ? `$${Math.round(calculatedPrice).toLocaleString('es-CL')}` : '0',
+    basePrice: baseFromDist,
+    volumeExtra,
+    extraM3,
+    helpersExtra,
+    price: totalPrice,
+    priceFormatted: totalPrice > 0 ? `$${Math.round(totalPrice).toLocaleString('es-CL')}` : '0',
     itemCount: items.value.reduce((acc, i) => acc + i.quantity, 0),
-    distancia: distancia.value
+    distancia: distancia.value,
+    includesFreeM3: FREE_M3
   }
 })
+
+const WHATSAPP_PHONE = '56979796841'
+const whatsappQuoteUrl = computed(() => {
+  const c = calculation.value
+  const schedule = fleteImmediate.value ? 'Inmediato' : `Programado: ${fleteDate.value || '--'} ${fleteTime.value || ''}`
+  const itemsLine = items.value.length ? items.value.map(i => `${i.name} x${i.quantity} (${(i.volume * i.quantity).toFixed(1)} m³)`).join(', ') : 'Sin ítems'
+  const msg = [
+    'Hola, quiero cotización / reservar flete FletesPro',
+    `Ruta: ${origin.value || '--'} → ${destination.value || '--'}`,
+    `Distancia: ${c.distancia != null ? c.distancia.toFixed(1) + ' km' : '--'}`,
+    `Carga: ${c.totalVolume.toFixed(1)} m³ (incluye ${FREE_M3} m³)`,
+    `Ítems: ${itemsLine}`,
+    `Fecha: ${schedule}`,
+    `Ayudantes extra: ${helpersCount.value}`,
+    `Total estimado: ${c.priceFormatted} CLP`
+  ].join('\n')
+  return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(msg)}`
+})
+
+function saveQuoteToStorage() {
+  if (process.client && typeof localStorage !== 'undefined') {
+    try {
+      const payload = {
+        origin: origin.value,
+        destination: destination.value,
+        distancia: calculation.value.distancia,
+        totalVolume: calculation.value.totalVolume,
+        price: calculation.value.price,
+        items: items.value.map(i => ({ name: i.name, quantity: i.quantity, volume: i.volume })),
+        fleteImmediate: fleteImmediate.value,
+        fleteDate: fleteDate.value,
+        fleteTime: fleteTime.value,
+        helpersCount: helpersCount.value,
+        savedAt: new Date().toISOString()
+      }
+      localStorage.setItem('fletespro_quote', JSON.stringify(payload))
+    } catch (_) {}
+  }
+}
 
 // Función para inicializar el mapa (simplificada como FleteCalculator)
 function initMap() {
@@ -500,7 +578,7 @@ function calculateRoute() {
       const leg = result.routes[0].legs[0]
       distancia.value = leg.distance.value / 1000 // Convertir metros a kilómetros
       
-      // Hasta 50 km: $20.000 + (km × $1.600); más de 50 km: km × $900 (regiones)
+      // RM ≤50 km: $20.000 + (km × $2.000); >50 km: km × $900 (regiones)
       precio.value = calcPrecioFromDistancia(distancia.value)
       
       console.log('📊 Precio calculado:', {
