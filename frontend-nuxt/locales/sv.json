@@ -34,6 +34,7 @@
     "guardamuebles": "Förvaring",
     "transporteFrio": "Kyltransport",
     "ultimaMilla": "Sista Milen",
+    "fletesConstruccion": "Byggtransport",
     "contacto": "Kontakt",
     "zonas": "Områden",
     "login": "Logga In",
@@ -1275,9 +1276,9 @@
     },
     "features": {
       "title": "PortesPro Skillnaden",
-      "trilingualDrivers": "Trilinguala Förare",
-      "trilingualDriversDesc": "Vi talar spanska, engelska och svenska för din komfort och lugn.",
-      "portesMudanzas": "Flytt och Transport",
+      "trilingualDrivers": "Tvåspråkig Förare",
+      "trilingualDriversDesc": "Vi talar spanska och engelska för din komfort och lugn.",
+      "portesMudanzas": "Fletes y Mudanzas",
       "portesMudanzasDesc": "Specialister i Marbella, Puerto Banús och Cala de Mijas. VIP-tjänst.",
       "packingOnDemand": "Inpackning på begäran",
       "packingOnDemandDesc": "Maximal skydd för antikviteter, konst och delikat möbler.",
@@ -1305,16 +1306,16 @@
       "title": "Våra Kunders Åsikter",
       "testimonial1": {
         "name": "Alejandro Ruiz",
-        "role": "Flytt i Marbella",
-        "content": "Utmärkt behandling och omsorg med möblerna. En 10-tjänst i Puerto Banús."
+        "role": "Flytt i Santiago",
+        "content": "Utmärkt behandling och omsorg med möblerna. En 10-tjänst i El Arrayán."
       },
       "testimonial2": {
-        "name": "Marta Sánchez",
-        "role": "Flytt Cala de Mijas",
+        "name": "Francisca Espinoza",
+        "role": "Flytt Chicureo",
         "content": "Webbplatsen är superdynamisk och räknaren gav mig exakt det pris jag betalade. Mycket professionella."
       },
       "testimonial3": {
-        "name": "David Smith",
+        "name": "Matias Larrain",
         "role": "Möbeltransport",
         "content": "Punktlig och mycket effektiv. Teamet hanterade allt med omsorg. Rekommenderas starkt."
       }

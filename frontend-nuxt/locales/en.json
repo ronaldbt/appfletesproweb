@@ -34,6 +34,7 @@
     "guardamuebles": "Storage",
     "transporteFrio": "Cold Transport",
     "ultimaMilla": "Last Mile",
+    "fletesConstruccion": "Construction Freight",
     "contacto": "Contact",
     "zonas": "Areas",
     "login": "Login",
@@ -1267,12 +1268,26 @@
     "presets": {
       "smallBox": "Small Box",
       "largeBox": "Large Box",
-      "sofa3Seats": "3-Seat Sofa",
-      "refrigerator": "Refrigerator",
+      "chair": "Chair",
+      "microwave": "Microwave",
+      "nightstand": "Nightstand",
+      "tv": "TV / Screen",
+      "desk": "Desk",
+      "dishwasher": "Dishwasher",
+      "dryer": "Dryer",
       "washingMachine": "Washing Machine",
-      "doubleBed": "Double Bed",
+      "bookshelf": "Bookshelf",
+      "mattress": "Mattress",
+      "bicycle": "Bicycle",
+      "dresser": "Dresser",
       "diningTable": "Dining Table",
-      "chair": "Chair"
+      "armchair": "Armchair",
+      "refrigerator": "Refrigerator",
+      "singleBed": "Single Bed",
+      "couch2Seats": "2-Seat Sofa",
+      "sofa3Seats": "3-Seat Sofa",
+      "wardrobe": "Wardrobe",
+      "doubleBed": "Double Bed"
     },
     "categories": {
       "small": "Small",
@@ -1290,9 +1305,9 @@
     },
     "features": {
       "title": "The FletesPro Difference",
-      "trilingualDrivers": "Trilingual Drivers",
-      "trilingualDriversDesc": "We speak Spanish, English and Swedish for your comfort and peace of mind.",
-      "portesMudanzas": "Moving and Transport",
+      "trilingualDrivers": "Bilingual Driver",
+      "trilingualDriversDesc": "We speak Spanish and English for your comfort and peace of mind.",
+      "portesMudanzas": "Fletes y Mudanzas",
       "portesMudanzasDesc": "Specialists in Marbella, Puerto Banús and Cala de Mijas. VIP service.",
       "packingOnDemand": "Packing on demand",
       "packingOnDemandDesc": "Maximum protection for antiques, art and delicate furniture.",
@@ -1320,16 +1335,16 @@
       "title": "Our Clients' Opinions",
       "testimonial1": {
         "name": "Alejandro Ruiz",
-        "role": "Move in Marbella",
-        "content": "Excellent treatment and care with the furniture. A 10/10 service in Puerto Banús."
+        "role": "Move in Santiago",
+        "content": "Excellent treatment and care with the furniture. A 10/10 service in El Arrayán."
       },
       "testimonial2": {
-        "name": "Marta Sánchez",
-        "role": "Move Cala de Mijas",
+        "name": "Francisca Espinoza",
+        "role": "Move Chicureo",
         "content": "The website is super dynamic and the calculator gave me the exact price I paid. Very professional."
       },
       "testimonial3": {
-        "name": "David Smith",
+        "name": "Matias Larrain",
         "role": "Furniture Transport",
         "content": "Punctual and very efficient. The team handled everything with care. Highly recommended."
       }

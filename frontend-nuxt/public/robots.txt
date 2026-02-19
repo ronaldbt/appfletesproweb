@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://app.fletespro.cl/sitemap.xml
+Sitemap: https://fletespro.cl/sitemap.xml
 
 # Disallow admin and dashboard pages
 Disallow: /dashboard-admin/

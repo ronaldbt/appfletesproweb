@@ -11,9 +11,30 @@ export default defineNuxtConfig({
   ssr: true,
   
   // Blog y páginas fletes por comuna: pre-renderizadas (estáticas)
+  // Redirecciones 301: URLs antiguas de WordPress (fletespro.cl) → Nuxt (/blog/...)
   routeRules: {
     '/blog': { prerender: true },
     '/blog/**': { prerender: true },
+    '/cuanto-se-cobra-por-un-flete-en-chile': { redirect: { to: '/blog/cuanto-se-cobra-por-un-flete-en-chile', statusCode: 301 } },
+    '/cuanto-se-cobra-por-un-flete-en-chile/': { redirect: { to: '/blog/cuanto-se-cobra-por-un-flete-en-chile', statusCode: 301 } },
+    '/expertos-en-embalaje': { redirect: { to: '/blog/expertos-en-embalaje', statusCode: 301 } },
+    '/expertos-en-embalaje/': { redirect: { to: '/blog/expertos-en-embalaje', statusCode: 301 } },
+    '/fletes-baratos': { redirect: { to: '/blog/fletes-baratos', statusCode: 301 } },
+    '/fletes-baratos/': { redirect: { to: '/blog/fletes-baratos', statusCode: 301 } },
+    '/transporte-en-frio-con-amplia-experiencia': { redirect: { to: '/blog/transporte-en-frio-con-amplia-experiencia', statusCode: 301 } },
+    '/transporte-en-frio-con-amplia-experiencia/': { redirect: { to: '/blog/transporte-en-frio-con-amplia-experiencia', statusCode: 301 } },
+    '/transporte-en-frio': { redirect: { to: '/blog/transporte-en-frio-con-amplia-experiencia', statusCode: 301 } },
+    '/transporte-en-frio/': { redirect: { to: '/blog/transporte-en-frio-con-amplia-experiencia', statusCode: 301 } },
+    '/las-15-mejores-empresas-de-logistica-para-ecommerce-en-chile-en-2026': { redirect: { to: '/blog/las-15-mejores-empresas-de-logistica-para-ecommerce-en-chile-en-2026', statusCode: 301 } },
+    '/las-15-mejores-empresas-de-logistica-para-ecommerce-en-chile-en-2026/': { redirect: { to: '/blog/las-15-mejores-empresas-de-logistica-para-ecommerce-en-chile-en-2026', statusCode: 301 } },
+    '/las-15-mejores-empresas-de-logistica-para-ecommerce-en-chile-en-2024': { redirect: { to: '/blog/las-15-mejores-empresas-de-logistica-para-ecommerce-en-chile-en-2026', statusCode: 301 } },
+    '/las-15-mejores-empresas-de-logistica-para-ecommerce-en-chile-en-2024/': { redirect: { to: '/blog/las-15-mejores-empresas-de-logistica-para-ecommerce-en-chile-en-2026', statusCode: 301 } },
+    '/fletes-la-reina': { redirect: { to: '/fletes-en-la-reina', statusCode: 301 } },
+    '/fletes-la-reina/': { redirect: { to: '/fletes-en-la-reina', statusCode: 301 } },
+    '/fletes-chicureo': { redirect: { to: '/fletes-en-chicureo', statusCode: 301 } },
+    '/fletes-chicureo/': { redirect: { to: '/fletes-en-chicureo', statusCode: 301 } },
+    '/fletes-nunoa': { redirect: { to: '/fletes-en-nunoa', statusCode: 301 } },
+    '/fletes-nunoa/': { redirect: { to: '/fletes-en-nunoa', statusCode: 301 } },
     ...Object.fromEntries(rutasFletesComunas.map(r => [r, { prerender: true }]))
   },
   
@@ -89,7 +110,7 @@ export default defineNuxtConfig({
         { rel: 'apple-touch-icon', href: '/logo-portespro.png' }
       ],
       meta: [
-        { name: 'description', content: 'FletesPro - Fletes y mudanzas en Santiago y regiones de Chile. Cotiza tu flete online. Presupuesto gratis.' },
+        { name: 'description', content: 'Fletes Santiago económicos desde $27.000. Cotización online instantánea, calculadora de precios, mudanzas y transporte en RM. Servicio 24/7. WhatsApp +56979796841.' },
         { name: 'robots', content: 'index, follow' },
         { name: 'author', content: 'FletesPro' },
         { name: 'language', content: 'Spanish' },
@@ -103,7 +124,7 @@ export default defineNuxtConfig({
   
   // Configuración de Sitemap
   sitemap: {
-    hostname: 'https://app.fletespro.cl',
+    hostname: 'https://fletespro.cl',
     gzip: true,
     exclude: [
       '/dashboard-admin/**',

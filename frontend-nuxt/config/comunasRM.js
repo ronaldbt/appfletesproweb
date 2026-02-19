@@ -18,14 +18,14 @@ export const comunasRM = [
   { slug: 'la-florida', name: 'La Florida', zona: 'sur' },
   { slug: 'la-granja', name: 'La Granja', zona: 'sur' },
   { slug: 'la-pintana', name: 'La Pintana', zona: 'sur' },
-  { slug: 'la-reina', name: 'La Reina', zona: 'oriente' },
+  { slug: 'en-la-reina', name: 'La Reina', zona: 'oriente' },
   { slug: 'las-condes', name: 'Las Condes', zona: 'oriente' },
   { slug: 'lo-barnechea', name: 'Lo Barnechea', zona: 'oriente' },
   { slug: 'lo-espejo', name: 'Lo Espejo', zona: 'sur' },
   { slug: 'lo-prado', name: 'Lo Prado', zona: 'centro' },
   { slug: 'macul', name: 'Macul', zona: 'oriente' },
   { slug: 'maipu', name: 'Maipú', zona: 'oeste' },
-  { slug: 'nunoa', name: 'Ñuñoa', zona: 'oriente' },
+  { slug: 'en-nunoa', name: 'Ñuñoa', zona: 'oriente' },
   { slug: 'pedro-aguirre-cerda', name: 'Pedro Aguirre Cerda', zona: 'sur' },
   { slug: 'penalolen', name: 'Peñalolén', zona: 'oriente' },
   { slug: 'providencia', name: 'Providencia', zona: 'oriente' },
@@ -42,8 +42,9 @@ export const comunasRM = [
   { slug: 'pirque', name: 'Pirque', zona: 'oriente' },
   { slug: 'puente-alto', name: 'Puente Alto', zona: 'sur' },
   { slug: 'san-jose-de-maipo', name: 'San José de Maipo', zona: 'oriente' },
-  // Chacabuco (3)
+  // Chacabuco (3) + Chicureo (sector)
   { slug: 'colina', name: 'Colina', zona: 'norte' },
+  { slug: 'en-chicureo', name: 'Chicureo', zona: 'norte' },
   { slug: 'lampa', name: 'Lampa', zona: 'norte' },
   { slug: 'tiltil', name: 'Tiltil', zona: 'norte' },
   // Maipo (4)

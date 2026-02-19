@@ -87,6 +87,11 @@
               </NuxtLink>
             </li>
             <li>
+              <NuxtLink to="/fletes-construccion" class="hover:text-teal-400 transition-colors text-sm">
+                {{ $t('nav.fletesConstruccion') }}
+              </NuxtLink>
+            </li>
+            <li>
               <NuxtLink to="/blog" class="hover:text-teal-400 transition-colors text-sm">
                 {{ $t('common.blog') }}
               </NuxtLink>
@@ -94,16 +99,38 @@
           </ul>
         </div>
 
-        <!-- Comunas RM -->
+        <!-- Comunas RM: primeras 10 visibles + resto expandible (todos en el DOM para SEO) -->
         <div>
           <h4 class="text-lg font-black mb-6 uppercase tracking-widest text-teal-500">Comunas RM</h4>
           <ul class="space-y-3 text-slate-400">
-            <li v-for="comuna in comunasRM" :key="comuna.slug">
+            <li v-for="comuna in comunasVisibles" :key="comuna.slug">
               <NuxtLink :to="`/fletes-${comuna.slug}`" class="hover:text-teal-400 transition-colors text-sm">
                 Fletes {{ comuna.name }}
               </NuxtLink>
             </li>
           </ul>
+          <div
+            class="overflow-hidden transition-all duration-300"
+            :class="comunasExpandidas ? 'max-h-[999px] opacity-100' : 'max-h-0 opacity-0'"
+            style="visibility: visible;"
+          >
+            <ul class="space-y-3 text-slate-400 pt-1">
+              <li v-for="comuna in comunasResto" :key="comuna.slug">
+                <NuxtLink :to="`/fletes-${comuna.slug}`" class="hover:text-teal-400 transition-colors text-sm">
+                  Fletes {{ comuna.name }}
+                </NuxtLink>
+              </li>
+            </ul>
+          </div>
+          <button
+            v-if="comunasResto.length > 0"
+            type="button"
+            @click="comunasExpandidas = !comunasExpandidas"
+            class="mt-3 text-sm font-bold text-teal-400 hover:text-teal-300 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500/50 rounded px-1"
+            :aria-expanded="comunasExpandidas"
+          >
+            {{ comunasExpandidas ? 'Ver menos' : `Ver más (+${comunasResto.length} comunas)` }}
+          </button>
         </div>
 
         <!-- Servicios Especializados -->
@@ -239,10 +266,21 @@
           <NuxtLink to="/terminos" class="hover:text-teal-400 transition-colors">{{ $t('footer.terms') }}</NuxtLink>
         </div>
       </div>
+      <p class="border-t border-slate-900 pt-6 mt-4 text-center text-xs text-slate-500">
+        Esta página está hecha con amor por
+        <a href="https://ronbhack.com" target="_blank" rel="noopener noreferrer" class="text-teal-400 hover:text-teal-300 transition-colors font-semibold">ronbhack.com</a>
+      </p>
     </div>
   </footer>
 </template>
 
 <script setup>
+import { ref, computed } from 'vue'
 import { comunasRM } from '~/config/comunasRM'
+
+const COMUNAS_VISIBLES = 10
+const comunasExpandidas = ref(false)
+
+const comunasVisibles = computed(() => comunasRM.slice(0, COMUNAS_VISIBLES))
+const comunasResto = computed(() => comunasRM.slice(COMUNAS_VISIBLES))
 </script>

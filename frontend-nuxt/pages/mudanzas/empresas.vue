@@ -1,11 +1,6 @@
 <template>
   <div class="min-h-screen flex flex-col overflow-x-hidden bg-white selection:bg-teal-100 selection:text-teal-900">
-    <PortesNavbar @get-quote="scrollToCalc" />
-    
-    <PortesLanguageSwitcher :current-lang="lang" @lang-change="lang = $event" />
-
-    <main class="flex-grow">
-      <Breadcrumbs />
+    <Breadcrumbs />
       <!-- Hero Section -->
       <section id="hero-calculator" class="relative pt-8 pb-24 md:pt-12 md:pb-32 overflow-hidden bg-slate-50">
         <div class="absolute top-0 right-0 w-full h-full bg-teal-600/[0.02] -skew-y-3 origin-top-right -z-10" />
@@ -194,9 +189,6 @@
 
       <PortesStats />
       <PortesTestimonials />
-    </main>
-
-    <PortesFooter />
 
     <div class="fixed top-0 left-0 w-full h-full -z-40 pointer-events-none opacity-30 overflow-hidden">
       <div class="absolute top-1/4 -right-1/4 w-[700px] h-[700px] bg-teal-200/20 rounded-full blur-[180px] animate-float-1" />
@@ -325,7 +317,7 @@ const faqs = computed(() => [
 ])
 
 // SEO Meta Tags
-const siteUrl = 'https://app.fletespro.cl'
+const siteUrl = 'https://fletespro.cl'
 const currentUrl = computed(() => `${siteUrl}/mudanzas/empresas`)
 const defaultImage = `${siteUrl}/og-image.jpg`
 

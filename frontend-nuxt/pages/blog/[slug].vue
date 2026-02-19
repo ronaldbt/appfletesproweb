@@ -1,10 +1,6 @@
 <template>
   <div class="min-h-screen flex flex-col overflow-x-hidden bg-white selection:bg-teal-100 selection:text-teal-900">
-    <PortesNavbar />
-    <PortesLanguageSwitcher :current-lang="lang" @lang-change="lang = $event" />
-
-    <main class="flex-grow">
-      <Breadcrumbs />
+    <Breadcrumbs />
 
       <div v-if="pending" class="container mx-auto px-4 py-20 text-center">
         <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-teal-600"></div>
@@ -163,8 +159,6 @@
         </section>
       </article>
 
-      <PortesFooter />
-    </main>
   </div>
 </template>
 
@@ -192,7 +186,7 @@ const formatDate = (dateString) => {
 }
 
 // SEO Meta Tags
-const siteUrl = 'https://app.fletespro.cl'
+const siteUrl = 'https://fletespro.cl'
 const currentUrl = computed(() => page.value ? `${siteUrl}${page.value._path}` : `${siteUrl}/blog`)
 const defaultImage = computed(() => page.value?.image ? `${siteUrl}${page.value.image}` : `${siteUrl}/og-image.jpg`)
 

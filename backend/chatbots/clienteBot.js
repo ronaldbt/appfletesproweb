@@ -110,16 +110,19 @@ async function manejarMensajeCliente(message, client) {
       try {
         console.log('🔧 [CLIENTE BOT] Intentando guardar solicitud en BD:', nuevaSolicitud.id);
         await db.query(
-          `INSERT INTO reservas (id, nombre, telefono, email, origen, destino, precio, fecha)
-           VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+          `INSERT INTO reservas (id, nombre, telefono, email, origen, destino, precio, carga, ayudante, hora, fecha)
+           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)`,
           [
             nuevaSolicitud.id,
             nuevaSolicitud.nombre,
             nuevaSolicitud.telefono,
-            nuevaSolicitud.email,
+            nuevaSolicitud.email || null,
             nuevaSolicitud.origen,
             nuevaSolicitud.destino,
             nuevaSolicitud.precio,
+            nuevaSolicitud.carga || null,
+            nuevaSolicitud.ayudante === true || nuevaSolicitud.ayudante === 'si',
+            nuevaSolicitud.hora || null,
             nuevaSolicitud.fecha
           ]
         );

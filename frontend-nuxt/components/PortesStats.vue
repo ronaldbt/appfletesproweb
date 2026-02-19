@@ -46,9 +46,9 @@ const stats = computed(() => {
   console.log('🟢 [PortesStats] Computed recalculando, locale:', currentLocale)
   
   return [
-    { label: t('components.stats.movesCompleted'), value: '12k+' },
-    { label: t('components.stats.yearsExperience'), value: '15+' },
-    { label: t('components.stats.vipClients'), value: '4k+' },
+    { label: t('components.stats.movesCompleted'), value: '4k+' },
+    { label: t('components.stats.yearsExperience'), value: '+10' },
+    { label: t('components.stats.vipClients'), value: '134' },
     { label: t('components.stats.zonesCovered'), value: '100%' },
   ]
 })

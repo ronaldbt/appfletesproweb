@@ -20,10 +20,10 @@ if (!process.env.FORCE_CLIENT_BOT) {
 // 🚀 Inicializar servidor Express
 const app = express();
 app.use(cors({
-  origin: 'https://app.fletespro.cl', // ✅ solo tu frontend puede acceder
+  origin: ['https://fletespro.cl', 'https://www.fletespro.cl', 'https://app.fletespro.cl'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true // ✅ si usás cookies o auth headers
+  credentials: true
 }));
 
 app.options('*', cors()); // 🟢 responde a preflight OPTIONS
@@ -84,6 +84,9 @@ app.use('/api', adminStatsRoutes);
 
 const adminUsuariosRoutes = require('./routes/adminUsuariosRoutes');
 app.use('/api', adminUsuariosRoutes);
+
+const adminReservasRoutes = require('./routes/adminReservasRoutes');
+app.use('/api', adminReservasRoutes);
 
 // Rutas específicas para conductores
 const conductorRoutes = require('./routes/conductorRoutes');

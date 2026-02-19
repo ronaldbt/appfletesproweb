@@ -1,13 +1,12 @@
 // Configuración de API para Nuxt
+// Backend = api.fletespro.cl (Express). Frontend = fletespro.cl (esta app Nuxt).
 
-// En producción (portespro.es) apuntar a api.portespro.es
 const isBrowser = typeof window !== 'undefined'
 const host = isBrowser ? window.location.hostname : ''
+const isFletesProProduction = isBrowser && (host === 'fletespro.cl' || host === 'www.fletespro.cl' || host === 'app.fletespro.cl' || host.endsWith('.fletespro.cl'))
 const API_BASE_URL = host === 'portespro.es'
   ? 'https://api.portespro.es'
-  : (host === 'app.fletespro.cl'
-    ? 'https://api.fletespro.cl'
-    : (host ? `${window.location.protocol}//${host}:3002` : 'http://localhost:3002'))
+  : (isFletesProProduction ? 'https://api.fletespro.cl' : (host ? `${typeof window !== 'undefined' ? window.location.protocol : 'http:'}//${host}:3002` : 'http://localhost:3002'))
 
 export const buildApiUrl = (endpoint) => `${API_BASE_URL}${endpoint}`
 

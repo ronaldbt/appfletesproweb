@@ -34,6 +34,7 @@
     "guardamuebles": "Bodegaje",
     "transporteFrio": "Transporte Frío",
     "ultimaMilla": "Última Milla",
+    "fletesConstruccion": "Fletes Construcción",
     "contacto": "Contacto",
     "zonas": "Zonas",
     "login": "Ingresar",
@@ -51,7 +52,7 @@
   "pages": {
     "index": {
       "heroTag": "Fletes y Mudanzas en Santiago y Regiones",
-      "title": "Fletes y Mudanzas",
+      "title": "Fletes Santiago: económicos, rápidos y seguros desde $27.000",
       "subtitle": "Fletes y mudanzas en Santiago y a regiones de Chile. Empresa de fletes con servicios de mudanzas, transporte de carga y envíos. Precios desde $27.000. Cotiza tu flete online y presupuesto gratis.",
       "description": "Fletes y mudanzas en Santiago y regiones desde $27.000. Cotiza tu flete online. Presupuesto gratis. Servicio de mudanzas, fletes a regiones y transporte en frío.",
       "features": {
@@ -166,7 +167,7 @@
         },
         "faq9": {
           "question": "¿Cuánto cuesta una mudanza pequeña?",
-          "answer": "El precio de una mudanza pequeña varía según la distancia y el volumen. Para mudanzas pequeñas baratas en Santiago y Región Metropolitana, los precios empiezan desde 200€ para estudios o pisos pequeños. Utiliza nuestra calculadora online para obtener el precio mudanza pequeña aproximado o solicita un presupuesto personalizado gratuito."
+          "answer": "El precio de una mudanza pequeña varía según la distancia y el volumen. Para mudanzas pequeñas baratas en Santiago y Región Metropolitana, los precios de referencia empiezan desde $20.000 + $2.000 por km (hasta 50 km), con hasta 2 m³ incluidos. Utiliza nuestra calculadora online para obtener el precio mudanza pequeña aproximado o solicita un presupuesto personalizado gratuito."
         },
         "faq10": {
           "question": "¿Cómo funciona el servicio de fletes y mudanzas?",
@@ -178,7 +179,59 @@
         },
         "faq12": {
           "question": "¿Cuál es el precio de mudanza por hora?",
-          "answer": "El precio mudanza por hora depende del tipo de servicio. Para mudanzas locales pequeñas, el precio mudanza por hora puede estar entre 25€ y 40€ por hora. Para mudanzas empresas o mudanzas oficinas, el precio puede variar. El precio aproximado de mudanza depende del volumen y distancia. Nuestra calculadora online te dará un precio mudanza aproximado, o puedes solicitar un presupuesto detallado con precio mudanza por hora exacto."
+          "answer": "El precio de la mudanza depende del tipo de servicio, la distancia y el volumen. Para fletes en la RM usamos una tarifa base de $20.000 + $2.000 por km (hasta 50 km), con hasta 2 m³ incluidos; m³ adicional +$20.000 CLP (incluye carga y descarga) y ayudante +$10.000 CLP. Para mudanzas empresas u oficinas el precio puede variar. Nuestra calculadora online te da un precio aproximado al instante, o puedes solicitar un presupuesto detallado sin compromiso."
+        },
+        "faq13": {
+          "question": "¿Cuánto cuesta un flete de Santiago a Temuco?",
+          "answer": "El valor del flete Santiago Temuco depende del volumen y del tipo de carga. Para Santiago a regiones usamos una tarifa de referencia de $900 CLP por kilómetro. Temuco está a unos 670 km de Santiago, por lo que el precio de referencia parte aproximadamente desde $600.000. Para un presupuesto exacto usa nuestra calculadora o escríbenos por WhatsApp con origen, destino y descripción de la carga."
+        },
+        "faq14": {
+          "question": "¿Cuánto sale un flete de Santiago a Valparaíso o a La Serena?",
+          "answer": "El precio de un flete de Santiago a Valparaíso o de Santiago a La Serena se calcula por kilómetro (referencia $900 CLP/km para fletes a regiones). Valparaíso está a unos 120 km y La Serena a unos 470 km. Te recomendamos usar la calculadora de la web o pedir cotización por WhatsApp con el detalle de tu carga para recibir el valor flete Santiago a tu destino."
+        },
+        "faq15": {
+          "question": "¿Cuánto cuesta un flete dentro de Santiago?",
+          "answer": "Un flete dentro de Santiago tiene una base de $20.000 + $2.000 por kilómetro (hasta 50 km), con hasta 2 m³ incluidos. Fletes Santiago centro, Providencia, Las Condes, Maipú y todas las comunas de la RM siguen esta tarifa. Usa la calculadora de la página principal para un precio al instante según tu ruta."
+        },
+        "faq16": {
+          "question": "¿Hacen fletes Santiago centro?",
+          "answer": "Sí. Realizamos fletes Santiago centro y en todas las comunas de la Región Metropolitana. Atendemos Santiago centro, Providencia, Las Condes, Ñuñoa, Maipú y el resto de la RM. Puedes cotizar con la calculadora o por WhatsApp para fletes baratos Santiago centro."
+        },
+        "faq17": {
+          "question": "¿Tienen fletes Santiago centro 24 horas?",
+          "answer": "Sí. Ofrecemos servicio de fletes Santiago centro 24 horas y en toda la RM. Nuestros fletes están disponibles todos los días para urgencias y traslados programados. Contáctanos por WhatsApp +56 9 7979 6841 para coordinar un flete mismo día o en la madrugada."
+        },
+        "faq18": {
+          "question": "¿Fletes baratos Santiago? ¿Cómo cotizar?",
+          "answer": "Sí, ofrecemos fletes baratos Santiago con precios desde $27.000. Para cotizar: usa la calculadora online en la página principal (origen, destino y carga) o escríbenos por WhatsApp. Te enviamos presupuesto sin compromiso. Fletes económicos en Santiago para particulares y empresas."
+        },
+        "faq19": {
+          "question": "¿Fletes económicos en Santiago?",
+          "answer": "Sí. Nuestros fletes económicos en Santiago y en toda la RM tienen tarifa base de $20.000 + $2.000/km (hasta 50 km), con hasta 2 m³ incluidos. Servicio de fletes en Santiago con precios transparentes. Cotiza con la calculadora o por WhatsApp para el valor flete Santiago según tu ruta."
+        },
+        "faq20": {
+          "question": "¿Cuánto vale un flete de Santiago a Viña del Mar o Concepción?",
+          "answer": "El valor flete Santiago Viña del Mar o Santiago Concepción se calcula por kilómetro (referencia $900/km para rutas a regiones). Viña está a unos 120 km y Concepción a unos 500 km. Para un precio exacto indica en la calculadora o por WhatsApp el origen, destino y volumen de carga."
+        },
+        "faq21": {
+          "question": "¿Qué es un flete pequeño Santiago y cuánto cuesta?",
+          "answer": "Un flete pequeño Santiago es un traslado de poca carga (muebles sueltos, electrodomésticos, cajas). Los fletes pequeños Santiago tienen precios desde $27.000 según la distancia dentro de la RM. Incluye hasta 2 m³. Usa la calculadora para flete pequeño Santiago o cotiza por WhatsApp."
+        },
+        "faq22": {
+          "question": "¿Fletes express Santiago? ¿Mismo día?",
+          "answer": "Sí. Ofrecemos fletes express Santiago y servicio mismo día cuando la disponibilidad lo permite. Fletes express en Santiago para mudanzas urgentes o traslados de carga. Contáctanos por WhatsApp para confirmar horario y precio de un flete express Santiago."
+        },
+        "faq23": {
+          "question": "¿Fletes de Santiago a regiones? Precios aproximados",
+          "answer": "Sí. Realizamos fletes de Santiago a regiones con tarifa de referencia de $900 CLP por kilómetro. Ejemplos orientativos: Santiago–Valparaíso (120 km) desde aprox. $108.000; Santiago–Rancagua (87 km) desde aprox. $78.300; Santiago–La Serena (470 km) desde aprox. $423.000. El precio final depende del volumen. Cotiza con la calculadora o por WhatsApp."
+        },
+        "faq24": {
+          "question": "¿Servicio de fletes en Santiago? ¿Qué zonas cubren?",
+          "answer": "Nuestro servicio de fletes en Santiago cubre toda la Región Metropolitana: Santiago centro, Providencia, Las Condes, Maipú, Puente Alto, Ñuñoa y más de 40 comunas. Fletes dentro de Santiago y fletes fuera de Santiago (a regiones). Cotización online y por WhatsApp."
+        },
+        "faq25": {
+          "question": "¿Valor flete Santiago? ¿Cómo se calcula?",
+          "answer": "El valor flete Santiago se calcula según la distancia y el volumen. Dentro de la RM: base $20.000 + $2.000/km (hasta 50 km), hasta 2 m³ incluidos; m³ adicional +$20.000 (incl. carga y descarga), ayudante +$10.000. A regiones: $900/km. Usa la calculadora de la página para el valor flete Santiago al instante o pide presupuesto por WhatsApp."
         }
       },
       "servicesTypes": {
@@ -231,20 +284,20 @@
         "title": "Precios de Fletes y Presupuestos",
         "subtitle": "Transparencia total en precios con calculadora online y presupuesto gratis",
         "price1": {
-          "title": "Precio Flete por Hora / Región Metropolitana",
-          "description": "Para fletes dentro de la RM el precio de referencia es desde $12.000 + $1.300 por km (sin ayudante). Con ayudante hay un recargo de $7.000. Obtén un precio aproximado con nuestra calculadora online."
+          "title": "Precio Flete Región Metropolitana",
+          "description": "Para fletes dentro de la RM (hasta 50 km) el precio de referencia es desde $20.000 + $2.000 por km. Incluye hasta 2 m³; por m³ adicional +$20.000 CLP (incluye carga y descarga). Por ayudante extra +$10.000 CLP. Obtén un precio aproximado con nuestra calculadora online."
         },
         "price2": {
           "title": "Precio Flete Aproximado",
-          "description": "Calcula el precio de tu flete al instante con nuestra calculadora en la página principal. Para fletes a regiones la referencia es distancia × $900 CLP. Solicita presupuesto personalizado para un precio exacto."
+          "description": "Calcula el precio de tu flete al instante con nuestra calculadora en la página principal. Para fletes a regiones (más de 50 km) la referencia es distancia × $900 CLP/km. Solicita presupuesto personalizado para un precio exacto."
         },
         "price3": {
           "title": "Precio Flete por Km (a regiones)",
-          "description": "Para fletes de Santiago a regiones aplicamos un precio por kilómetro de referencia ($900 CLP). El precio final depende del volumen y tipo de carga. Cotiza online o por WhatsApp para tu ruta."
+          "description": "Para fletes de Santiago a regiones (más de 50 km) aplicamos $900 CLP por kilómetro. El precio final suma volumen (hasta 2 m³ incluidos, +$20.000/m³ adicional con carga y descarga) y ayudantes (+$10.000 c/u). Cotiza online o por WhatsApp."
         },
         "price4": {
           "title": "Precios Adaptados a tu Necesidad",
-          "description": "Los precios varían según tipo de servicio (flete sencillo, mudanza, transporte en frío), distancia y volumen. Fletes desde $27.000 para traslados cortos. Usa la calculadora o pide presupuesto gratis."
+          "description": "Los precios varían según tipo de servicio, distancia y volumen. En la RM: desde $20.000 + $2.000/km (hasta 50 km). Incluye hasta 2 m³; m³ extra +$20.000 (incl. carga y descarga); ayudante +$10.000. Usa la calculadora o pide presupuesto gratis."
         },
         "ctaText": "Usa nuestra calculadora para cotizar tu flete al instante o solicita un presupuesto personalizado gratuito por WhatsApp.",
         "ctaButton": "Cotizar Flete Online"
@@ -609,10 +662,10 @@
       },
       "zones": {
         "title": "Zonas donde Ofrecemos Embalaje Profesional",
-        "subtitle": "Servicio de embalaje a domicilio en toda la Costa del Sol",
-        "zone1": "Marbella",
-        "zone2": "Costa del Sol",
-        "zone3": "Málaga",
+        "subtitle": "Servicio de embalaje a domicilio en Santiago y Región Metropolitana",
+        "zone1": "Santiago",
+        "zone2": "Región Metropolitana",
+        "zone3": "Chile",
         "zone4": "Estepona",
         "zone5": "Fuengirola",
         "zone6": "Torremolinos",
@@ -921,18 +974,18 @@
       "seo": {
         "title": "Transporte en Frío Santiago | Empresa Transporte Frío | Cadena Frío Garantizada | FletesPro",
         "description": "Empresa de transporte en frío en Santiago y Región Metropolitana. Transporte refrigerado, transporte frigorífico y logística de cadena frío. Transporte con temperatura controlada. Transporte de frios y congelados, transporte de alimentos frios. Precio transporte frío competitivo. Presupuesto gratis.",
-        "keywords": "transporte en frio, transporte frio, transporte refrigerado, cadena frío, transporte frigorífico, transporte temperatura controlada, transporte alimentos, transporte farmacéutico, logística frío, transporte frío local, transporte frío provincial, transporte frio nacional, transporte frio internacional, transporte de frios y congelados, transporte frío particulares, envios temperatura controlada, transporte frío precio, envio paquete frio, empresas de transporte en frio, cadena de frio transporte, camion frio congelacion, camion isotermo con frio, camión con frio para reparto, contenedores para mantener frio, empresa transporte frio, empresas de transporte con cadena de frío, empresas de transporte temperatura controlada, empresas logistica frio, envio de paquetes frios, envios a temperatura controlada, mensajeria en frio, mensajeria frio, precio transporte frio, transporte cadena de frio, transporte carga fria, transporte con temperatura controlada, transporte de alimentos frios, transporte de carga fria, transporte de temperatura controlada, transporte frio express, transporte frios, transportes refrigerados"
+        "keywords": "transporte en frio, transporte frio, transporte refrigerado, cadena frío, transporte frigorífico, transporte temperatura controlada, transporte alimentos, transporte farmacéutico, logística frío, transporte frío local, transporte frio nacional, transporte frio internacional, transporte de frios y congelados, transporte frío particulares, envios temperatura controlada, envio paquete frio, empresas de transporte en frio, cadena de frio transporte, cadena de frio transporte en chile, transporte de frio en chile, transporte en frio santiago de chile, transporte de carga en frio, transporte de muestras en frio, importancia del transporte en la cadena de frio, como transportar medicamentos en frio, empresas de transportes y bodegaje en frio, transporte en frio desde santiago hacia arica, transporte en frio temuco, metodologias de transporte en cadena de frio, impacto del transporte en la cadena de frio, camion frio congelacion, camion isotermo con frio, contenedores para mantener frio, empresa transporte frio, empresas logistica frio, envio de paquetes frios, mensajeria en frio, precio transporte frio, transporte cadena de frio, transporte carga fria, transporte de alimentos frios, transporte de carga fria, transporte frio express, transportes refrigerados"
       }
     },
     "ultimaMilla": {
       "hero": {
         "badge": "Logística de Última Milla y Entrega Final",
         "title": "Última Milla",
-        "subtitle": "Servicio última milla, logística última milla y distribución última milla en Santiago y Región Metropolitana. Entrega última milla express y mismo día. Envíos para ecommerce, tiendas online y paquetería ecommerce."
+        "subtitle": "Servicio última milla y última milla Chile: logística de última milla, distribución última milla y transporte última milla en Santiago y Región Metropolitana. Entrega última milla express y mismo día. Envíos para ecommerce, envios ecommerce y envios para tiendas online. Tiendas online con envío a domicilio y paquetería ecommerce con reparto de última milla."
       },
       "sectors": {
         "title": "Última Milla por Sector",
-        "subtitle": "Especialistas en última milla para ecommerce, alimentación, farmacia y más sectores",
+        "subtitle": "Especialistas en última milla para ecommerce, alimentación, farmacia y más sectores. Envíos para ecommerce en Chile y envios para tiendas online.",
         "sector1": {
           "title": "Última Milla Ecommerce",
           "description": "Última milla comercio electrónico y tiendas online. Entrega última milla para ecommerce y retail online. Envíos para tiendas online y envios para ecommerce.",
@@ -1012,10 +1065,10 @@
       },
       "zones": {
         "title": "Cobertura Última Milla",
-        "subtitle": "Última milla local, urbana y rural en Marbella, Málaga y toda la Costa del Sol",
+        "subtitle": "Última milla local, urbana y rural en Santiago y Región Metropolitana",
         "zone1": {
           "title": "Última Milla Urbana",
-          "description": "Última milla local en Marbella, Málaga y ciudades principales"
+          "description": "Última milla local en Santiago, Providencia, Las Condes y ciudades principales de la RM"
         },
         "zone2": {
           "title": "Última Milla Periférica",
@@ -1023,19 +1076,19 @@
         },
         "zone3": {
           "title": "Última Milla Rural",
-          "description": "Última milla rural y zonas menos accesibles de la Costa del Sol"
+          "description": "Última milla rural y zonas menos accesibles de la Región Metropolitana"
         }
       },
       "ecommerceShipping": {
         "title": "Envíos para Ecommerce y Tiendas Online",
-        "subtitle": "Servicio de envíos para ecommerce, tiendas online y paquetería ecommerce con última milla garantizada",
+        "subtitle": "Servicio de envíos para ecommerce, tiendas online y paquetería ecommerce con última milla garantizada. Envios para ecommerce en Chile y envios para tiendas online con reparto última milla.",
         "service1": {
           "title": "Envíos para Tiendas Online",
-          "description": "Envíos para tiendas online con última milla logística. Servicio de entrega última milla para tu tienda online."
+          "description": "Envíos para tiendas online con última milla logística. Servicio de entrega última milla para tu tienda online. Tiendas online con envío a domicilio y servicio envio productos tienda online Santiago Chile."
         },
         "service2": {
           "title": "Envíos para Ecommerce",
-          "description": "Envíos para ecommerce y envios ecommerce con logística última milla. Transporte ecommerce y paqueteria ecommerce."
+          "description": "Envíos para ecommerce y envios ecommerce con logística última milla. Transporte ecommerce y paqueteria ecommerce. Envios ecommerce Chile y plataforma de envios para ecommerce."
         },
         "service3": {
           "title": "Mensajería Ecommerce",
@@ -1182,8 +1235,8 @@
       },
       "seo": {
         "title": "Última Milla Logística Santiago | Envíos para Ecommerce y Tiendas Online | FletesPro",
-        "description": "Última milla logística en Santiago y Región Metropolitana. Envíos para ecommerce, tiendas online y paquetería ecommerce. Empresas de transporte ecommerce y proveedor de última milla. Tarifas envíos ecommerce competitivas. Presupuesto gratis.",
-        "keywords": "ultima milla, última milla, ultima milla logistica, última milla logística, envios para tiendas online, envios para ecommerce, envios ecommerce, envio ecommerce, transporte ecommerce, paqueteria ecommerce, empresas de envio para ecommerce, tarifas envíos ecommerce, tarifa plana envios ecommerce, envios ecommerce baratos, ecommerce envios, transporte para ecommerce, envios baratos ecommerce, transporte ultima milla, paqueteria para ecommerce, logistica ultima milla, empresas de envios para tiendas online, empresas de transporte ecommerce, logistica envios ecommerce, logistica de ultima milla, paquetería e commerce, última milla logística, la ultima milla, envios para empresas online, servicio ultima milla, envíos baratos para tienda online, precios envios ecommerce, empresas de ultima milla, empresas ultima milla, reparto ultima milla, última milla transporte, empresas transporte ecommerce, paqueteria ultima milla, envios internacionales ecommerce, servicio de ultima milla, mensajeria ecommerce, proveedor de ultima milla, proveedor ultima milla, envios baratos para ecommerce, envios ultima milla, tarifas envios ecommerce, mensajeria para ecommerce, transporte de ultima milla, empresas de transporte ultima milla, ecommerce paqueteria, entregas ultima milla, la ultima milla en logistica, soluciones envios ecommerce, entregas de ultima milla, envios de ultima milla, empresas de paqueteria para ecommerce, reparto de ultima milla, logística de última milla, paqueteria para tiendas online, e commerce paqueteria, ultima milla en logistica, paquetería para tiendas online, mensajeria para tienda online, distribucion de ultima milla, distribucion ultima milla, mejor paqueteria para ecommerce, concepto de ultima milla, concepto ultima milla, concepto ultima milla logistica, distribucion de la ultima milla, empresas de mensajeria para tienda online, entrega de la ultima milla, envios para mi tienda online, envío de comercio electrónico, envío ecommerce, la logística de la última milla, la ultima milla logistica, la ultima milla que es, la última milla logística, logistica de distribución ultima milla, logistica de la ultima milla, logistica de ultima milla que es, logística de la última milla, logística de última milla definición, logística de última milla ejemplo, operaciones de ultima milla, paquete e commerce, paqueteria de ultima milla, paqueteria para e commerce, paqueteria tienda online, paquetería e commerce que es, paquetes de ecommerce, proceso de ultima milla, proceso ultima milla, procesos ultima milla, proveedor última milla, servicio de última milla, servicios de entrega de última milla, soluciones de entrega de última milla, soluciones de ultima milla, soluciones logisticas para ecommerce, soluciones ultima milla, tiendas online envio gratis, ultima milla concepto, ultima milla definicion, ultima milla empresa, ultima milla logistica que es, ultima milla paqueteria, ultima milla que es, ultima milla significado, ultima milla sostenible, ultimamilla, última milla en logística, última milla logística que es, última milla que es",
+        "description": "Última milla Chile: logística de última milla y servicio de última milla en Santiago y Región Metropolitana. Envíos para ecommerce, envios ecommerce Chile y envios para tiendas online. Tiendas online con envío gratis y paquetería ecommerce. Empresas de transporte ecommerce y proveedor de última milla. Tarifas envíos ecommerce competitivas. Presupuesto gratis.",
+        "keywords": "ultima milla, ultima milla chile, última milla, ultima milla logistica, logistica de ultima milla, última milla logística, servicio de ultima milla, transporte ultima milla, transporte de ultima milla, envios para tiendas online, envios para ecommerce, envios ecommerce, envios ecommerce chile, envio ecommerce, transporte ecommerce, paqueteria ecommerce, empresas de envio para ecommerce, tarifas envíos ecommerce, tarifa plana envios ecommerce, envios ecommerce baratos, envios baratos para ecommerce, envios baratos para tienda online, transporte para ecommerce, paqueteria para ecommerce, logistica ultima milla, empresas de envios para tiendas online, empresas de transporte ecommerce, logistica de ultima milla, la ultima milla, que es ultima milla, concepto ultima milla, reparto ultima milla, reparto de ultima milla, empresas de ultima milla, empresas ultima milla, paqueteria ultima milla, envios internacionales ecommerce, servicio envio ecommerce, mensajeria ecommerce, proveedor de ultima milla, envios para mi tienda online, tiendas online con envio gratis, tiendas online envio, envio productos tienda online santiago chile, politicas de envio tienda online, como hacer los envios de mi tienda online, envios de tienda online, plataforma de envios para ecommerce, precios envios ecommerce, entregas ultima milla, logística de última milla, paqueteria para tiendas online, ultima milla en logistica, concepto de ultima milla, distribucion de ultima milla, soluciones logisticas para ecommerce, ultima milla definicion, ultima milla que es",
         "ogTitle": "Última Milla Logística Santiago | Envíos para Ecommerce",
         "ogDescription": "Última milla logística en Santiago y Región Metropolitana. Envíos para ecommerce, tiendas online y paquetería ecommerce. Empresas de transporte ecommerce y proveedor de última milla.",
         "twitterTitle": "Última Milla Logística | Envíos Ecommerce",
@@ -1219,7 +1272,7 @@
         "subtitle": "Por qué elegir nuestras mudanzas particulares",
         "benefit1": {
           "title": "Precios Competitivos",
-          "description": "Mudanzas baratas particulares y mudanzas pequeñas baratas con precios desde 45€."
+          "description": "Mudanzas baratas particulares y mudanzas pequeñas baratas con precios desde $20.000 + $2.000/km en la RM."
         },
         "benefit2": {
           "title": "Servicio Rápido",
@@ -1289,10 +1342,10 @@
         }
       },
       "seo": {
-        "title": "Mudanzas Particulares Marbella | Mudanza Pequeña | Mudanzas Baratas Particulares | FletesPro",
+        "title": "Mudanzas Particulares Santiago | Mudanza Pequeña | Mudanzas Baratas Particulares | FletesPro",
         "description": "Mudanzas particulares y mudanza pequeña en Santiago y Región Metropolitana. Mudanzas baratas particulares y mudanzas pequeñas baratas con servicio completo. Presupuesto gratis.",
         "keywords": "mudanzas particulares, mudanza pequeña, mudanzas baratas particulares, mudanzas pequeñas baratas, mudanza particular, mudanzas para particulares, mudanzas hogar, mudanzas familia, mudanzas vivienda, mudanzas casa, mudanzas piso, mudanzas apartamento, mudanzas estudio, mudanzas baratas, mudanzas económicas, presupuesto mudanzas particulares, cotizar mudanza particular, precio mudanzas particulares, empresa mudanzas particulares, servicio mudanzas particulares",
-        "ogTitle": "Mudanzas Particulares Marbella | Mudanza Pequeña",
+        "ogTitle": "Mudanzas Particulares Santiago | Mudanza Pequeña",
         "ogDescription": "Mudanzas particulares y mudanza pequeña en Santiago y Región Metropolitana. Mudanzas baratas particulares con servicio completo.",
         "twitterTitle": "Mudanzas Particulares | Mudanza Pequeña",
         "twitterDescription": "Mudanzas particulares y mudanza pequeña en Santiago. Mudanzas baratas particulares con servicio completo.",
@@ -1505,10 +1558,10 @@
         }
       },
       "seo": {
-        "title": "Mudanzas Oficinas Marbella | Mudanzas de Oficinas | Servicio Especializado | FletesPro",
+        "title": "Mudanzas Oficinas Santiago | Mudanzas de Oficinas | Servicio Especializado | FletesPro",
         "description": "Mudanzas oficinas y mudanzas de oficinas en Santiago y Región Metropolitana. Servicio especializado para mudanzas de oficinas sin interrumpir tu negocio. Presupuesto gratis.",
         "keywords": "mudanzas oficinas, mudanzas de oficinas, mudanzas oficina, mudanzas despachos, mudanzas espacios trabajo, mudanzas oficinas Santiago, mudanzas oficinas Región Metropolitana, servicio mudanzas oficinas, empresa mudanzas oficinas, presupuesto mudanzas oficinas, cotizar mudanzas oficinas, precio mudanzas oficinas, mudanzas oficinas fin de semana, mudanzas oficinas nocturnas",
-        "ogTitle": "Mudanzas Oficinas Marbella | Mudanzas de Oficinas",
+        "ogTitle": "Mudanzas Oficinas Santiago | Mudanzas de Oficinas",
         "ogDescription": "Mudanzas oficinas y mudanzas de oficinas en Santiago y Región Metropolitana. Servicio especializado sin interrumpir tu negocio.",
         "twitterTitle": "Mudanzas Oficinas | Mudanzas de Oficinas",
         "twitterDescription": "Mudanzas oficinas y mudanzas de oficinas en Santiago. Servicio especializado sin interrumpir tu negocio.",
@@ -1601,7 +1654,7 @@
         },
         "faq4": {
           "question": "¿Cuánto tiempo tardan las mudanzas internacionales?",
-          "answer": "El tiempo de mudanzas internacionales depende del destino. Mudanzas al extranjero dentro de Europa suelen tardar 7-14 días. Mudanzas internacionales a otros continentes pueden tardar 3-6 semanas."
+          "answer": "El tiempo de mudanzas internacionales depende del destino. Mudanzas desde Chile a países de América Latina suelen tardar 1-3 semanas. Mudanzas internacionales a Europa u otros continentes pueden tardar 3-6 semanas. Te damos un plazo estimado al cotizar."
         },
         "faq5": {
           "question": "¿Ofrecen seguro para mudanzas internacionales?",
@@ -1609,13 +1662,13 @@
         },
         "faq6": {
           "question": "¿A qué países hacen mudanzas internacionales?",
-          "answer": "Ofrecemos mudanzas internacionales a cualquier destino mundial. Mudanzas al extranjero dentro y fuera de Europa. Consulta disponibilidad para mudanzas internacionales a tu destino."
+          "answer": "Ofrecemos mudanzas internacionales desde Chile a cualquier destino mundial: América Latina, Estados Unidos, Europa, y otros continentes. Consulta disponibilidad y presupuesto para mudanzas internacionales a tu destino."
         }
       },
       "seo": {
         "title": "Mudanzas Internacionales Santiago | Mudanzas al Extranjero | Servicio Completo | FletesPro",
         "description": "Mudanzas internacionales y mudanzas al extranjero en Santiago y Región Metropolitana. Servicio completo de mudanzas internacionales con documentación incluida. Presupuesto gratis.",
-        "keywords": "mudanzas internacionales, mudanzas al extranjero, mudanzas fuera Chile, mudanzas Europa, mudanzas internacionales precios, mudanzas internacionales Marbella, mudanzas internacionales Málaga, mudanzas internacionales Costa del Sol, servicio mudanzas internacionales, empresa mudanzas internacionales, presupuesto mudanzas internacionales, cotizar mudanzas internacionales, precio mudanzas internacionales, mudanzas a estados unidos, mudanzas a reino unido, mudanzas a francia, mudanzas a alemania, mudanzas a portugal",
+        "keywords": "mudanzas internacionales Chile, mudanzas al extranjero Santiago, mudanzas internacionales precios, servicio mudanzas internacionales, empresa mudanzas internacionales Santiago, presupuesto mudanzas internacionales, cotizar mudanzas internacionales, mudanzas a Argentina, mudanzas a Perú, mudanzas a Estados Unidos, mudanzas a Europa",
         "ogTitle": "Mudanzas Internacionales Santiago | Mudanzas al Extranjero",
         "ogDescription": "Mudanzas internacionales y mudanzas al extranjero en Santiago y Región Metropolitana. Servicio completo con documentación incluida.",
         "twitterTitle": "Mudanzas Internacionales | Mudanzas al Extranjero",
@@ -1721,10 +1774,10 @@
         }
       },
       "seo": {
-        "title": "Mudanzas Urgentes Marbella | Mudanzas Express 24 Horas | Servicio Inmediato | FletesPro",
+        "title": "Mudanzas Urgentes Santiago | Mudanzas Express 24 Horas | Servicio Inmediato | FletesPro",
         "description": "Mudanzas urgentes y mudanzas express 24 horas en Santiago y Región Metropolitana. Servicio de mudanzas urgentes disponible todos los días. Presupuesto gratis.",
         "keywords": "mudanzas urgentes, mudanzas express, mudanzas 24 horas, mudanzas mismo día, mudanzas urgentes Santiago, mudanzas urgentes Región Metropolitana, servicio mudanzas urgentes, empresa mudanzas urgentes, presupuesto mudanzas urgentes, cotizar mudanzas urgentes, precio mudanzas urgentes, mudanzas express 24h, mudanzas urgentes fin de semana, mudanzas urgentes domingo, mudanzas urgentes festivos",
-        "ogTitle": "Mudanzas Urgentes Marbella | Mudanzas Express 24h",
+        "ogTitle": "Mudanzas Urgentes Santiago | Mudanzas Express 24h",
         "ogDescription": "Mudanzas urgentes y mudanzas express 24 horas en Santiago y Región Metropolitana. Servicio disponible todos los días.",
         "twitterTitle": "Mudanzas Urgentes | Mudanzas Express 24h",
         "twitterDescription": "Mudanzas urgentes y mudanzas express 24 horas en Santiago. Servicio disponible todos los días.",
@@ -1750,7 +1803,7 @@
       "seoContent1": "FletesPro es una empresa de mudanzas profesionales especializada en mudanzas baratas, mudanzas económicas y servicio de mudanza en Santiago y Región Metropolitana. Ofrecemos presupuesto mudanza gratis y cotizar mudanza online para particulares y empresas.",
       "seoContent2": "Nuestro servicio de mudanza incluye mudanzas particulares, mudanzas empresas, mudanzas oficinas, mudanzas internacionales y mudanzas urgentes. También proporcionamos embalajes profesionales, guardamuebles y transporte en frío.",
       "seoContent3": "Contacta con nuestra empresa de mudanzas para obtener un presupuesto mudanza personalizado. Ofrecemos mudanzas baratas, mudanzas económicas y servicio de mudanza con la máxima calidad. Solicita presupuesto mudanza gratis sin compromiso.",
-      "keywords": "contacto mudanzas, presupuesto mudanza, cotizar mudanza, empresa de mudanzas, mudanzas baratas, mudanzas económicas, servicio de mudanza, empresas de mudanzas, mudanzas Marbella, mudanzas Málaga, mudanzas Costa del Sol"
+      "keywords": "contacto mudanzas, presupuesto mudanza, cotizar mudanza, empresa de mudanzas Santiago, mudanzas baratas, mudanzas económicas Chile, servicio de mudanza, empresas de mudanzas Región Metropolitana"
     }
   },
   "calculator": {
@@ -1806,12 +1859,26 @@
     "presets": {
       "smallBox": "Caja Pequeña",
       "largeBox": "Caja Grande",
-      "sofa3Seats": "Sofá 3 Plazas",
-      "refrigerator": "Nevera",
+      "chair": "Silla",
+      "microwave": "Microondas",
+      "nightstand": "Velador",
+      "tv": "TV / Pantalla",
+      "desk": "Escritorio",
+      "dishwasher": "Lavavajillas",
+      "dryer": "Secadora",
       "washingMachine": "Lavadora",
-      "doubleBed": "Cama Matrimonio",
+      "bookshelf": "Estantería",
+      "mattress": "Colchón",
+      "bicycle": "Bicicleta",
+      "dresser": "Cómoda",
       "diningTable": "Mesa Comedor",
-      "chair": "Silla"
+      "armchair": "Sillón",
+      "refrigerator": "Nevera",
+      "singleBed": "Cama Una Plaza",
+      "couch2Seats": "Sofá 2 Plazas",
+      "sofa3Seats": "Sofá 3 Plazas",
+      "wardrobe": "Closet / Ropero",
+      "doubleBed": "Cama Matrimonio"
     },
     "categories": {
       "small": "Pequeño",
@@ -1829,10 +1896,10 @@
     },
     "features": {
       "title": "La Diferencia FletesPro",
-      "trilingualDrivers": "Conductores Trilingües",
-      "trilingualDriversDesc": "Hablamos español, inglés y sueco para tu comodidad y tranquilidad.",
-      "portesMudanzas": "Portes y Mudanzas",
-      "portesMudanzasDesc": "Especialistas en Marbella, Puerto Banús y Cala de Mijas. Servicio VIP.",
+      "trilingualDrivers": "Conductor Bilingue",
+      "trilingualDriversDesc": "Hablamos español e inglés para tu comodidad y tranquilidad.",
+      "portesMudanzas": "Fletes y Mudanzas",
+      "portesMudanzasDesc": "Especialistas en Santiago, Providencia, Las Condes y Región Metropolitana. Servicio profesional.",
       "packingOnDemand": "Embalaje Bajo Demanda",
       "packingOnDemandDesc": "Protección máxima para antigüedades, arte y muebles delicados.",
       "flexibleCapacity": "Capacidad Flexible",
@@ -1860,15 +1927,15 @@
       "testimonial1": {
         "name": "Alejandro Ruiz",
         "role": "Mudanza en Santiago",
-        "content": "Excelente trato y cuidado con los muebles. Un servicio 10/10 en Puerto Banús."
+        "content": "Excelente trato y cuidado con los muebles. Un servicio 10/10 en El Arrayán."
       },
       "testimonial2": {
-        "name": "Marta Sánchez",
-        "role": "Mudanza Cala de Mijas",
+        "name": "Francisca Espinoza",
+        "role": "Mudanza Chicureo",
         "content": "La web es súper dinámica y la calculadora me dio el precio exacto que pagué. Muy profesional."
       },
       "testimonial3": {
-        "name": "David Smith",
+        "name": "Matias Larrain",
         "role": "Transporte de Muebles",
         "content": "Puntuales y muy eficientes. El equipo manejó todo con cuidado. Muy recomendable."
       }
@@ -1957,7 +2024,7 @@
       "calculationSummary": "Resumen del Cálculo",
       "pricePerDelivery": "Precio por Entrega",
       "totalPrice": "Precio Total",
-      "priceBreakdown": "3€ + IVA (21%) = 3.63€ por entrega",
+      "priceBreakdown": "Precio por entrega según distancia y volumen. Cotiza con la calculadora online.",
       "requestQuote": "Solicitar Presupuesto",
       "minimumPointsNote": "Mínimo 5 puntos de entrega requeridos. Precio fijo por entrega."
     }

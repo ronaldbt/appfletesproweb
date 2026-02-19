@@ -1,35 +1,36 @@
-// backend/models/solicitudModel.js
-const db = require('../utils/db'); // conexión a mysql2
+// backend/models/solicitudModel.js - PostgreSQL
+const db = require('../utils/db');
 
 function generarId() {
   return 'F' + Math.floor(100000 + Math.random() * 900000);
 }
 
-function crearSolicitud({ nombre, telefono, email, origen, destino, precio, carga, ayudante }) {
+function crearSolicitud({ nombre, telefono, email, origen, destino, precio, carga, ayudante, hora }) {
   const id = generarId();
-
+  const fecha = new Date().toISOString();
   return {
     id,
     nombre,
     telefono,
-    email,
+    email: email || null,
     origen,
     destino,
     precio,
-    carga,
-    ayudante,
-    fecha: new Date().toISOString().slice(0, 19).replace('T', ' '),
+    carga: carga || null,
+    ayudante: ayudante === true || ayudante === 'si',
+    hora: hora || null,
+    fecha,
     asignado: false
   };
 }
 
 async function guardarSolicitud(solicitud) {
+  console.log('📋 [solicitudModel] guardarSolicitud:', solicitud.id);
   const sql = `
     INSERT INTO reservas 
-      (id, nombre, telefono, email, origen, destino, precio, carga, ayudante, fecha)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      (id, nombre, telefono, email, origen, destino, precio, carga, ayudante, hora, fecha)
+    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
   `;
-
   const values = [
     solicitud.id,
     solicitud.nombre,
@@ -40,10 +41,11 @@ async function guardarSolicitud(solicitud) {
     solicitud.precio,
     solicitud.carga,
     solicitud.ayudante,
+    solicitud.hora,
     solicitud.fecha
   ];
-
-  await db.execute(sql, values);
+  await db.query(sql, values);
+  console.log('📋 [solicitudModel] Reserva guardada OK:', solicitud.id);
   return solicitud.id;
 }
 

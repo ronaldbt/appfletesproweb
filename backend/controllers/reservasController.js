@@ -13,9 +13,9 @@ const crearReserva = async (req, res) => {
     const client = req.whatsapp;
     console.log('🔧 [RESERVAS CONTROLLER] Cliente WhatsApp disponible:', !!client);
     
-    const {nombre, telefono, email, origen, destino, precio, carga, ayudante} = req.body;
+    const {nombre, telefono, email, origen, destino, precio, carga, ayudante, hora} = req.body;
     
-    console.log('🔧 [RESERVAS CONTROLLER] Datos recibidos:', {nombre, telefono, email, origen, destino, precio, carga, ayudante});
+    console.log('🔧 [RESERVAS CONTROLLER] Datos recibidos:', {nombre, telefono, email, origen, destino, precio, carga, ayudante, hora});
 
     if (!nombre || !telefono || !origen || !destino || !precio || !carga || ayudante === undefined) {
         console.warn('⚠️ Solicitud incompleta recibida:', req.body);
@@ -30,7 +30,7 @@ const crearReserva = async (req, res) => {
         return res.status(400).json({error: 'Correo electrónico inválido.'});
     }
 
-    const nuevaSolicitud = crearSolicitud({nombre, telefono, email, origen, destino, precio, carga, ayudante});
+    const nuevaSolicitud = crearSolicitud({nombre, telefono, email, origen, destino, precio, carga, ayudante, hora});
 
     try {
         console.log('🔧 [RESERVAS CONTROLLER] Solicitud creada:', nuevaSolicitud.id);

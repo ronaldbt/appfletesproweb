@@ -1,7 +1,7 @@
 export const useHreflang = () => {
   const { locale, locales } = useI18n()
   const route = useRoute()
-  const siteUrl = 'https://portespro.es'
+  const siteUrl = 'https://fletespro.cl'
   
   const getAlternateLinks = () => {
     const links = []

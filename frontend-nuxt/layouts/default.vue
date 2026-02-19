@@ -1,8 +1,11 @@
 <template>
-  <div id="app" class="min-h-screen bg-white text-gray-900">
-    <main>
+  <div id="app" class="min-h-screen flex flex-col bg-white text-gray-900">
+    <PortesNavbar @get-quote="scrollToCalc" />
+    <PortesLanguageSwitcher />
+    <main class="flex-grow">
       <slot />
     </main>
+    <PortesFooter />
     <WhatsAppButton />
   </div>
 </template>
@@ -11,13 +14,11 @@
 import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
 import { useRoute } from '#app'
 
-console.log('🟡 [layouts/default.vue] Script setup ejecutado')
-
-// En Nuxt, Header y WhatsAppButton se auto-importan desde components/
-
 const route = useRoute()
 
-console.log('🟡 [layouts/default.vue] Route:', route.path)
+const scrollToCalc = () => {
+  if (process.client) document.getElementById('hero-calculator')?.scrollIntoView({ behavior: 'smooth' })
+}
 
 const getUsuarioFromStorage = () => {
   if (process.client) {
@@ -44,14 +45,12 @@ const onStorage = (e) => {
 }
 
 watch(route, () => {
-  console.log('🟡 [layouts/default.vue] Route cambió:', route.path)
   if (process.client) {
     usuario.value = getUsuarioFromStorage()
   }
 }, { immediate: true })
 
 onMounted(() => {
-  console.log('🟡 [layouts/default.vue] onMounted ejecutado')
   if (process.client) {
     window.addEventListener('storage', onStorage)
     usuario.value = getUsuarioFromStorage()

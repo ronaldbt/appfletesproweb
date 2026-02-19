@@ -334,12 +334,26 @@ let autocompleteDestino = null
 const presets = computed(() => [
   { name: t('calculator.presets.smallBox'), category: t('calculator.categories.small'), volume: 0.1, key: 'smallBox' },
   { name: t('calculator.presets.largeBox'), category: t('calculator.categories.medium'), volume: 0.3, key: 'largeBox' },
-  { name: t('calculator.presets.sofa3Seats'), category: t('calculator.categories.large'), volume: 2.5, key: 'sofa3Seats' },
-  { name: t('calculator.presets.refrigerator'), category: t('calculator.categories.large'), volume: 1.5, key: 'refrigerator' },
-  { name: t('calculator.presets.washingMachine'), category: t('calculator.categories.medium'), volume: 0.8, key: 'washingMachine' },
-  { name: t('calculator.presets.doubleBed'), category: t('calculator.categories.special'), volume: 3.0, key: 'doubleBed' },
-  { name: t('calculator.presets.diningTable'), category: t('calculator.categories.medium'), volume: 1.2, key: 'diningTable' },
   { name: t('calculator.presets.chair'), category: t('calculator.categories.small'), volume: 0.2, key: 'chair' },
+  { name: t('calculator.presets.microwave'), category: t('calculator.categories.small'), volume: 0.15, key: 'microwave' },
+  { name: t('calculator.presets.nightstand'), category: t('calculator.categories.small'), volume: 0.3, key: 'nightstand' },
+  { name: t('calculator.presets.tv'), category: t('calculator.categories.medium'), volume: 0.4, key: 'tv' },
+  { name: t('calculator.presets.desk'), category: t('calculator.categories.medium'), volume: 0.6, key: 'desk' },
+  { name: t('calculator.presets.dishwasher'), category: t('calculator.categories.medium'), volume: 0.6, key: 'dishwasher' },
+  { name: t('calculator.presets.dryer'), category: t('calculator.categories.medium'), volume: 0.7, key: 'dryer' },
+  { name: t('calculator.presets.washingMachine'), category: t('calculator.categories.medium'), volume: 0.8, key: 'washingMachine' },
+  { name: t('calculator.presets.bookshelf'), category: t('calculator.categories.medium'), volume: 0.8, key: 'bookshelf' },
+  { name: t('calculator.presets.mattress'), category: t('calculator.categories.medium'), volume: 0.8, key: 'mattress' },
+  { name: t('calculator.presets.bicycle'), category: t('calculator.categories.medium'), volume: 0.5, key: 'bicycle' },
+  { name: t('calculator.presets.dresser'), category: t('calculator.categories.large'), volume: 1.0, key: 'dresser' },
+  { name: t('calculator.presets.diningTable'), category: t('calculator.categories.medium'), volume: 1.2, key: 'diningTable' },
+  { name: t('calculator.presets.armchair'), category: t('calculator.categories.large'), volume: 1.2, key: 'armchair' },
+  { name: t('calculator.presets.refrigerator'), category: t('calculator.categories.large'), volume: 1.5, key: 'refrigerator' },
+  { name: t('calculator.presets.singleBed'), category: t('calculator.categories.large'), volume: 1.5, key: 'singleBed' },
+  { name: t('calculator.presets.couch2Seats'), category: t('calculator.categories.large'), volume: 1.8, key: 'couch2Seats' },
+  { name: t('calculator.presets.sofa3Seats'), category: t('calculator.categories.large'), volume: 2.5, key: 'sofa3Seats' },
+  { name: t('calculator.presets.wardrobe'), category: t('calculator.categories.large'), volume: 2.0, key: 'wardrobe' },
+  { name: t('calculator.presets.doubleBed'), category: t('calculator.categories.special'), volume: 3.0, key: 'doubleBed' },
 ])
 
 const addItem = (preset) => {
@@ -366,8 +380,8 @@ const BASE_RM_CLP = 20000
 const POR_KM_RM_CLP = 2000
 const POR_KM_REGIONES_CLP = 900
 const LIMITE_KM_RM = 50
-const FREE_M3 = 3
-const PRICE_PER_EXTRA_M3 = 4000
+const FREE_M3 = 2
+const PRICE_PER_EXTRA_M3 = 20000 // Incluye carga y descarga
 const HELPER_PRICE_CLP = 10000
 const MAX_HELPERS = 10
 

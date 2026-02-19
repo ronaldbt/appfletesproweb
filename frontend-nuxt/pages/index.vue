@@ -1,12 +1,6 @@
 <template>
   <div class="min-h-screen flex flex-col overflow-x-hidden bg-white selection:bg-teal-100 selection:text-teal-900">
-    <PortesNavbar @get-quote="scrollToCalc" />
-    
-    <!-- Floating Elements -->
-    <PortesLanguageSwitcher />
-
-    <main class="flex-grow">
-      <Breadcrumbs />
+    <Breadcrumbs />
       <!-- Hero Section with Integrated Calculator -->
       <section id="hero-calculator" class="relative pt-8 pb-24 md:pt-12 md:pb-32 overflow-hidden bg-slate-50">
         <div class="absolute top-0 right-0 w-full h-full bg-teal-600/[0.02] -skew-y-3 origin-top-right -z-10" />
@@ -23,7 +17,7 @@
               {{ $t('pages.index.subtitle') }}
             </p>
             <p class="mt-6 text-base text-slate-600 max-w-2xl mx-auto">
-              Desde pequeños fletes y mudanzas hasta envíos para ecommerce. ¿Estás planeando fletes o mudanzas o necesitas transportar mercancías de forma económica y segura? Si es así, estás en el lugar correcto. WhatsApp +56 9 7979 6841.
+              Desde pequeños fletes y mudanzas hasta envíos para ecommerce. Ofrecemos flete Santiago, fletes Santiago centro y toda la Región Metropolitana. ¿Estás planeando fletes o mudanzas o necesitas transportar mercancías de forma económica y segura? Si es así, estás en el lugar correcto. WhatsApp +56 9 7979 6841.
             </p>
           </div>
 
@@ -33,7 +27,7 @@
             <ol class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-slate-600 text-sm">
               <li class="flex gap-2 items-start">
                 <span class="flex-shrink-0 w-5 h-5 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center font-bold text-xs">1</span>
-                <span>Flete en la <strong class="text-slate-800">RM</strong>: usa la calculadora de abajo.</span>
+                <span><strong class="text-slate-800">Fletes en la Región Metropolitana</strong>: usa la calculadora de abajo.</span>
               </li>
               <li class="flex gap-2 items-start">
                 <span class="flex-shrink-0 w-5 h-5 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center font-bold text-xs">2</span>
@@ -41,7 +35,7 @@
               </li>
               <li class="flex gap-2 items-start">
                 <span class="flex-shrink-0 w-5 h-5 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center font-bold text-xs">3</span>
-                <span><strong class="text-slate-800">Santiago a regiones</strong>: <NuxtLink to="/blog/cuanto-se-cobra-por-un-flete-en-chile" class="text-teal-600 font-semibold hover:underline">clic aquí</NuxtLink>.</span>
+                <span><strong class="text-slate-800">Flete de Santiago a regiones</strong>: <NuxtLink to="/blog/cuanto-se-cobra-por-un-flete-en-chile" class="text-teal-600 font-semibold hover:underline">clic aquí</NuxtLink>.</span>
               </li>
             </ol>
           </section>
@@ -55,15 +49,68 @@
 
       <!-- Precio fletes Santiago / estimativo -->
       <section class="py-16 bg-white">
-        <div class="container mx-auto px-4 max-w-4xl">
-          <h2 class="text-3xl font-black text-slate-900 mb-4">Precio fletes Santiago</h2>
-          <p class="text-slate-600 leading-relaxed mb-6">
-            ¿Necesitas trasladar un mueble, un refrigerador, una cama, te cambias de casa y no estás seguro del precio que te pueden cobrar? Acá te dejamos un estimativo: si alguien te dio una buena oferta, contáctanos que te la mejoramos. Usa la calculadora de arriba o escríbenos por WhatsApp.
-          </p>
-          <p class="text-lg font-black text-slate-800 mb-4">Fletes y mudanzas precios</p>
-          <p class="text-slate-600 leading-relaxed">
-            Desde un flete pequeño hasta más grandes tenemos los mejores precios flete en Santiago. En el proceso de mudanzas y transportes, el factor económico suele ser un aspecto crucial. Muchas personas buscan fletes y mudanzas a precios asequibles sin comprometer la calidad del servicio.
-          </p>
+        <div class="container mx-auto px-4 max-w-5xl">
+          <div class="grid lg:grid-cols-2 gap-10 items-start">
+            <div>
+              <h2 class="text-3xl font-black text-slate-900 mb-4">Precio fletes Santiago</h2>
+              <p class="text-slate-600 leading-relaxed mb-6">
+                ¿Necesitas trasladar un mueble, un refrigerador, una cama, te cambias de casa y no estás seguro del precio que te pueden cobrar? Acá te dejamos un estimativo: si alguien te dio una buena oferta, contáctanos que te la mejoramos. Usa la calculadora de arriba o escríbenos por WhatsApp.
+              </p>
+              <p class="text-lg font-black text-slate-800 mb-4">Fletes y mudanzas precios</p>
+              <p class="text-slate-600 leading-relaxed">
+                Desde un flete pequeño hasta más grandes tenemos los mejores precios para flete Santiago y fletes Santiago. Realizamos fletes Santiago centro y toda la RM. En el proceso de mudanzas y transportes, el factor económico suele ser un aspecto crucial. Muchas personas buscan fletes y mudanzas a precios asequibles sin comprometer la calidad del servicio.
+              </p>
+              <p class="text-slate-600 leading-relaxed mt-4">
+                Nuestro servicio de fletes en Santiago ofrece fletes baratos Santiago y fletes económicos en Santiago para particulares y empresas. Si buscas fletes en Santiago de Chile con valor flete Santiago claro, usa la calculadora o escríbenos por WhatsApp. Cubrimos fletes dentro de Santiago y fletes fuera de Santiago (a regiones).
+              </p>
+            </div>
+            <figure class="rounded-2xl border border-slate-200 overflow-hidden shadow-lg bg-white">
+              <img
+                src="/ejemplo-flete-sencillo.webp"
+                alt="Ejemplo flete sencillo: Costanera Center a Estadio Nacional, distancia 6.5 km, precio $35.750, camión 3/4"
+                width="600"
+                height="400"
+                class="w-full h-auto object-cover"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Precios de Fletes en Santiago 2026 - Tarifas actualizadas (consultor) -->
+      <section class="py-16 bg-slate-50">
+        <div class="container mx-auto px-4 max-w-5xl">
+          <h2 class="text-3xl font-black text-slate-900 mb-2">Precios de Fletes en Santiago 2026 – Tarifas actualizadas</h2>
+          <p class="text-slate-600 mb-8">¿Cuánto cuesta un flete en Santiago? Referencia de precios para fletes Santiago y fletes Santiago a regiones.</p>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+              <h3 class="text-xl font-black text-slate-900 mb-4">Fletes Región Metropolitana: $20.000 + $2.000/km</h3>
+              <ul class="text-slate-600 space-y-2 mb-4">
+                <li>Precio base: $20.000 CLP</li>
+                <li>Por kilómetro adicional: $2.000 CLP (hasta 50 km)</li>
+                <li>Incluye hasta 2 m³ de carga</li>
+                <li>Metro cúbico adicional: +$20.000 CLP (incluye carga y descarga)</li>
+                <li>Ayudante extra: +$10.000 CLP</li>
+              </ul>
+              <p class="text-sm font-black text-slate-800 mb-2">Ejemplos de precios fletes Santiago:</p>
+              <ul class="text-slate-600 text-sm space-y-1">
+                <li>Providencia a Las Condes (6 km): aprox. $32.000</li>
+                <li>Maipú a Santiago Centro (15 km): aprox. $50.000</li>
+                <li>Puente Alto a La Florida (12 km): aprox. $44.000</li>
+              </ul>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+              <h3 class="text-xl font-black text-slate-900 mb-4">Fletes Santiago a regiones: $900/km</h3>
+              <ul class="text-slate-600 space-y-2 mb-4">
+                <li>Tarifa de referencia: $900 CLP por kilómetro</li>
+                <li>Santiago – Valparaíso (120 km): desde aprox. $108.000</li>
+                <li>Santiago – Rancagua (87 km): desde aprox. $78.300</li>
+                <li>Santiago – La Serena (470 km): desde aprox. $423.000</li>
+              </ul>
+              <p class="text-slate-600 text-sm">Para un valor flete Santiago a tu destino exacto, usa la calculadora de arriba o cotiza por WhatsApp.</p>
+            </div>
+          </div>
         </div>
       </section>
       
@@ -123,9 +170,75 @@
           <p class="text-slate-600 leading-relaxed mb-4">
             Trabajamos con profesionalismo y eficiencia para garantizar que tu mudanza se realice de manera fluida y sin contratiempos. Nuestra empresa de mudanza cerca de ti te brinda la comodidad de contar con un servicio local y rápido. También trabajamos en estrecha colaboración con empresas de mudanzas cercanas, lo que nos permite ofrecerte opciones adicionales si es necesario.
           </p>
-          <p class="text-slate-600 leading-relaxed">
-            Además de nuestros servicios de mudanza, ofrecemos soluciones de fletes: ya sea que necesites enviar un paquete pequeño o transportar mercancía a gran escala, nuestros camiones de flete están disponibles. Ofrecemos fletes en compras, flete de carga, flete contra entrega y flete de mercancía, asegurando una variedad de opciones para adaptarnos a tus requerimientos específicos.
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Además de nuestros servicios de mudanza, ofrecemos soluciones de fletes: ya sea que necesites enviar un paquete pequeño o transportar mercancía a gran escala, nuestros camiones de flete están disponibles. Servicios de fletes que ofrecemos:
           </p>
+          <ul class="list-disc list-inside text-slate-600 space-y-2 mb-4">
+            <li><strong>Fletes en compras</strong></li>
+            <li><strong>Flete de carga</strong></li>
+            <li><strong>Flete contra entrega</strong></li>
+            <li><strong>Flete de mercancía</strong></li>
+          </ul>
+          <p class="text-slate-600 leading-relaxed">
+            Asegurando una variedad de opciones para adaptarnos a tus requerimientos específicos.
+          </p>
+        </div>
+      </section>
+
+      <!-- Fletes para constructoras -->
+      <section class="py-20 bg-slate-50">
+        <div class="container mx-auto px-4 max-w-6xl">
+          <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+            <div>
+              <h2 class="text-2xl md:text-4xl font-black text-slate-900 mb-4 tracking-tight">
+                Fletes para constructoras en la Región Metropolitana
+              </h2>
+              <p class="text-slate-600 leading-relaxed mb-4">
+                ¿Tienes una constructora y necesitas transporte de materiales, compras a pedido o arriendo de equipos? Ofrecemos un servicio tipo personal shopper para constructoras: vamos a distintas tiendas, compramos por usted, retiramos materiales y los llevamos hasta su obra. También arrendamos equipos y realizamos fletes de materiales de construcción en toda la RM.
+              </p>
+              <ul class="text-slate-600 space-y-2 text-sm mb-4">
+                <li class="flex items-start gap-2">
+                  <span class="text-teal-600 font-bold mt-0.5">•</span>
+                  <span><strong>Compras a pedido</strong>: vamos a Sodimac, Easy, Homecenter y más, compramos por usted y entregamos en obra.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-teal-600 font-bold mt-0.5">•</span>
+                  <span><strong>Flete de materiales de construcción</strong>: cemento, áridos, fierros, tabiquería y más.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-teal-600 font-bold mt-0.5">•</span>
+                  <span><strong>Arriendo de equipos</strong> y transporte de maquinaria a obra.</span>
+                </li>
+              </ul>
+              <NuxtLink
+                to="/fletes-construccion"
+                class="inline-block bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-xl font-black text-sm uppercase tracking-widest transition-all hover:scale-105"
+              >
+                Ver servicio fletes para constructoras →
+              </NuxtLink>
+            </div>
+            <div class="bg-white rounded-2xl border-2 border-slate-200 p-8 shadow-lg">
+              <h3 class="text-xl font-black text-slate-900 mb-4">¿Qué incluye?</h3>
+              <ul class="space-y-3 text-slate-600">
+                <li class="flex items-center gap-3">
+                  <svg class="w-5 h-5 text-teal-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Personal shopper / compras a pedido
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg class="w-5 h-5 text-teal-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Flete de materiales de construcción
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg class="w-5 h-5 text-teal-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Arriendo de equipos y maquinaria
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg class="w-5 h-5 text-teal-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                  Entrega en obra en toda la RM
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -134,10 +247,33 @@
         <div class="container mx-auto px-4 max-w-4xl">
           <h2 class="text-3xl font-black text-slate-900 mb-6">Fletes Santiago a regiones</h2>
           <p class="text-slate-600 leading-relaxed mb-4">
-            Si necesitas fletes fuera de Santiago, contamos con fletes económicos que cubren diversas áreas: Santiago Centro, Concepción, La Serena, Antofagasta, Viña del Mar, Temuco, Puerto Montt y regiones cercanas. Nuestro servicio de fletes está disponible las 24 horas, para brindarte flexibilidad y conveniencia en el horario de tus traslados.
+            Realizamos fletes Santiago centro y flete Santiago a cualquier comuna de la capital. Si necesitas fletes fuera de Santiago, contamos con fletes económicos que cubren diversas áreas. <strong class="text-slate-800">Fletes disponible las 24 horas</strong>, para brindarte flexibilidad y conveniencia en el horario de tus traslados.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-3">Ciudades y zonas que cubrimos:</p>
+          <ul class="list-disc list-inside text-slate-600 space-y-1 mb-4 columns-2 md:columns-3 gap-x-6">
+            <li>Santiago Centro</li>
+            <li>Concepción</li>
+            <li>La Serena</li>
+            <li>Antofagasta</li>
+            <li>Viña del Mar</li>
+            <li>Temuco</li>
+            <li>Puerto Montt</li>
+            <li>Valparaíso</li>
+            <li>Iquique</li>
+            <li>Rancagua</li>
+            <li>Talca</li>
+            <li>Chillán</li>
+            <li>Valdivia</li>
+            <li>Osorno</li>
+            <li>Copiapó</li>
+            <li>Calama</li>
+            <li>y regiones cercanas</li>
+          </ul>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Además, ofrecemos servicios de acarreos pequeños, ideales para transportar cargas de menor tamaño. Nuestros camiones de acarreo están equipados para manejar tus necesidades de transporte de manera eficiente y segura.
           </p>
           <p class="text-slate-600 leading-relaxed">
-            Además, ofrecemos servicios de acarreos pequeños, ideales para transportar cargas de menor tamaño. Nuestros camiones de acarreo están equipados para manejar tus necesidades de transporte de manera eficiente y segura.
+            Somos una empresa de fletes en Santiago de Chile con años de experiencia. Nuestro servicio de fletes en Santiago incluye fletes express Santiago cuando lo necesites y fletes Santiago centro 24 horas. Ya sea fletes dentro de Santiago o fletes Santiago a regiones, cotiza con la calculadora o por WhatsApp para el mejor valor flete Santiago.
           </p>
         </div>
       </section>
@@ -147,18 +283,42 @@
       
       <PortesQualityCommitment />
 
-      <!-- Transporte en frío -->
+      <!-- Transporte en frío: garantizando la seguridad + video (mismo diseño que página transporte-frio) -->
       <section class="py-20 bg-white">
-        <div class="container mx-auto px-4 max-w-4xl">
-          <h2 class="text-3xl font-black text-slate-900 mb-6">Transporte en frío: garantizando la seguridad de tus productos perecederos</h2>
-          <p class="text-slate-600 leading-relaxed mb-4">
-            El transporte en frío es fundamental si necesitas trasladar productos perecederos, como alimentos o medicamentos que requieren condiciones de temperatura controlada. Tenemos el más confiable transporte refrigerado a tu servicio a precios muy competitivos.
-          </p>
-          <ul class="list-disc list-inside text-slate-600 space-y-2 mb-4">
-            <li><strong>Equipo especializado:</strong> Vehículos equipados con sistemas de refrigeración adecuados, cumpliendo estándares de calidad y regulaciones para el transporte de productos sensibles a la temperatura.</li>
-            <li><strong>Experiencia en transporte en frío:</strong> Protocolos de mantenimiento de la cadena de frío y historial de entregas exitosas en condiciones óptimas.</li>
-          </ul>
-          <NuxtLink to="/transporte-frio" class="text-teal-600 font-bold hover:underline">Ver servicio de transporte en frío →</NuxtLink>
+        <div class="container mx-auto px-4 max-w-6xl">
+          <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+            <div>
+              <h2 class="text-2xl md:text-4xl font-black text-slate-900 mb-4 tracking-tight">
+                Transporte en frío: garantizando la seguridad de tus productos perecederos
+              </h2>
+              <p class="text-slate-600 leading-relaxed mb-4">
+                El transporte en frío es fundamental si necesitas trasladar productos perecederos, como alimentos o medicamentos, que requieren condiciones de temperatura controlada. Tenemos el más confiable transporte refrigerado a tu servicio a precios muy competitivos.
+              </p>
+              <ul class="text-slate-600 space-y-2 text-sm mb-4">
+                <li class="flex items-start gap-2">
+                  <span class="text-teal-600 font-bold mt-0.5">1.</span>
+                  <span>Equipo especializado con vehículos equipados con sistemas de refrigeración adecuados y estándares de calidad.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-teal-600 font-bold mt-0.5">2.</span>
+                  <span>Experiencia comprobada en transporte de mercancías perecederas y mantenimiento de la cadena de frío.</span>
+                </li>
+              </ul>
+              <NuxtLink to="/transporte-frio" class="text-teal-600 font-bold hover:underline inline-block">Ver servicio de transporte en frío →</NuxtLink>
+            </div>
+            <div class="relative">
+              <div class="aspect-video rounded-2xl overflow-hidden border-2 border-slate-200 shadow-xl bg-slate-100 ring-4 ring-teal-500/10">
+                <iframe
+                  src="https://www.youtube.com/embed/YUJKAA-KX7w"
+                  title="Transporte en frío - FletesPro"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  class="w-full h-full"
+                />
+              </div>
+              <p class="text-center text-slate-500 text-sm mt-3 font-medium">Servicio de transporte refrigerado en RM y regiones</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -231,6 +391,47 @@
         </div>
       </section>
 
+      <!-- Blog reciente (widget) -->
+      <section class="py-24 bg-slate-50">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
+            <div class="text-center sm:text-left">
+              <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-2 tracking-tighter">
+                Blog
+              </h2>
+              <p class="text-slate-500 font-medium">Artículos recientes sobre fletes, mudanzas y logística</p>
+            </div>
+            <NuxtLink
+              to="/blog"
+              class="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 font-black text-sm uppercase tracking-widest shrink-0"
+            >
+              Ver más
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </NuxtLink>
+          </div>
+          <div class="overflow-x-auto pb-4 -mx-4 px-4 scrollbar-thin">
+            <div class="flex gap-6 min-w-max md:min-w-0 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8">
+              <template v-if="recentPosts.length">
+                <NuxtLink
+                  v-for="post in recentPosts"
+                  :key="getBlogSlug(post)"
+                  :to="`/blog/${getBlogSlug(post)}`"
+                  class="group flex-shrink-0 w-[280px] md:w-auto bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:border-teal-200 transition-all hover:-translate-y-1"
+                >
+                  <div class="p-6">
+                    <p v-if="post.date" class="text-xs font-bold text-teal-600 uppercase tracking-wider mb-2">{{ formatBlogDate(post.date) }}</p>
+                    <h3 class="text-lg font-black text-slate-900 mb-2 line-clamp-2 group-hover:text-teal-600 transition-colors">{{ post.title || 'Sin título' }}</h3>
+                    <p v-if="post.description" class="text-slate-600 text-sm line-clamp-2">{{ post.description }}</p>
+                    <span class="inline-block mt-3 text-sm font-bold text-teal-600 group-hover:underline">Leer más →</span>
+                  </div>
+                </NuxtLink>
+              </template>
+              <p v-else class="text-slate-500 col-span-full text-center py-8">No hay entradas recientes.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- FAQs Section -->
       <section class="py-24 bg-white">
         <div class="container mx-auto px-4">
@@ -279,9 +480,6 @@
           </div>
         </div>
       </section>
-    </main>
-
-    <PortesFooter />
   </div>
 </template>
 
@@ -369,8 +567,45 @@ const scrollToCalc = () => {
   }
 }
 
+// Blog reciente para el widget de la landing (encima de FAQs)
+const { data: landingBlogData } = await useAsyncData('landing-blog-posts', async () => {
+  try {
+    const allContent = await queryCollection('content').all()
+    if (allContent && Array.isArray(allContent)) {
+      return allContent
+        .filter(item => {
+          const path = item._path || item.path || ''
+          return path.startsWith('/blog/') && path !== '/blog/'
+        })
+        .sort((a, b) => {
+          const dateA = new Date(a.date || 0)
+          const dateB = new Date(b.date || 0)
+          return dateB - dateA
+        })
+        .slice(0, 4)
+    }
+    return []
+  } catch (err) {
+    console.error('Error fetching blog posts for landing:', err)
+    return []
+  }
+})
+const recentPosts = computed(() => landingBlogData.value || [])
+function getBlogSlug (post) {
+  if (!post) return ''
+  const path = post._path || post.path || post.id || ''
+  if (!path) return ''
+  if (path.startsWith('/blog/')) return path.replace('/blog/', '')
+  const pathParts = path.split('/')
+  return pathParts[pathParts.length - 1] || path.replace(/^\/blog/, '')
+}
+function formatBlogDate (dateString) {
+  if (!dateString) return ''
+  return new Date(dateString).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })
+}
+
 // Estado de apertura de FAQs (ahora tenemos 12 FAQs)
-const faqOpenStates = ref([false, false, false, false, false, false, false, false, false, false, false, false])
+const faqOpenStates = ref(Array(25).fill(false))
 
 // FAQs con traducciones - computed para reactividad al cambio de locale y estado de apertura
 const faqs = computed(() => {
@@ -395,7 +630,7 @@ const faqs = computed(() => {
     }
   }
   
-  const faqKeys = ['faq1', 'faq2', 'faq3', 'faq4', 'faq5', 'faq6', 'faq7', 'faq8', 'faq9', 'faq10', 'faq11', 'faq12']
+  const faqKeys = ['faq1', 'faq2', 'faq3', 'faq4', 'faq5', 'faq6', 'faq7', 'faq8', 'faq9', 'faq10', 'faq11', 'faq12', 'faq13', 'faq14', 'faq15', 'faq16', 'faq17', 'faq18', 'faq19', 'faq20', 'faq21', 'faq22', 'faq23', 'faq24', 'faq25']
   
   const result = faqKeys.map((key, index) => {
     const questionKey = `pages.index.faqs.${key}.question`
@@ -612,7 +847,7 @@ const pricingInfo = computed(() => {
 })
 
 // SEO Meta Tags
-const siteUrl = 'https://app.fletespro.cl'
+const siteUrl = 'https://fletespro.cl'
 const siteName = 'FletesPro'
 const defaultImage = `${siteUrl}/og-image.jpg`
 const logoUrl = `${siteUrl}/logo.png`
@@ -660,26 +895,26 @@ const localeMap = {
   'en': 'en_US'
 }
 
-// Titles optimizados para Chile / FletesPro
+// Titles optimizados (consultor: keyword + conversión + año)
 const pageTitle = computed(() => {
-  if (locale.value === 'es') return 'Fletes y Mudanzas Profesionales'
+  if (locale.value === 'es') return 'Fletes Santiago desde $27.000 | Cotización Online Gratis | FletesPro'
   return 'Professional Moving and Freight Services'
 })
 
-// Meta descriptions optimizadas (150-160 caracteres) - Chile, pesos chilenos
+// Meta descriptions optimizadas (consultor: precio, 24/7, clientes, WhatsApp)
 const pageDescription = computed(() => {
-  if (locale.value === 'es') return 'Fletes y mudanzas en Santiago y regiones desde $27.000. Cotiza tu flete online. Presupuesto gratis. WhatsApp +56 9 7979 6841'
+  if (locale.value === 'es') return 'Fletes Santiago económicos desde $27.000. Cotización online instantánea, calculadora de precios, mudanzas y transporte en RM. ✓ Servicio 24/7 ✓ Seguro incluido ✓ +4000 clientes satisfechos. WhatsApp +56979796841'
   return 'Freight and moving in Santiago and Chile from $27,000 CLP. Online quote. Free estimate. WhatsApp +56 9 7979 6841'
 })
 
 // OG Titles y Descriptions
 const ogTitle = computed(() => {
-  if (locale.value === 'es') return 'Fletes y Mudanzas Santiago | FletesPro'
+  if (locale.value === 'es') return 'Fletes Santiago desde $27.000 | Cotización Online Gratis | FletesPro'
   return 'Freight and Moving Santiago | FletesPro'
 })
 
 const ogDescription = computed(() => {
-  if (locale.value === 'es') return 'Fletes y mudanzas profesionales en Santiago y regiones de Chile. Calculadora de precio online. Presupuesto gratis sin compromiso.'
+  if (locale.value === 'es') return 'Fletes Santiago económicos desde $27.000. Cotización online, calculadora de precios, fletes y mudanzas en Santiago y regiones. Servicio 24/7. WhatsApp +56979796841.'
   return 'Professional freight and moving in Santiago and Chile. Online price calculator. Free quote.'
 })
 
@@ -699,7 +934,7 @@ const breadcrumbSchema = computed(() => ({
 
 // FAQPage Schema
 const faqSchema = computed(() => {
-  const faqKeys = ['faq1', 'faq2', 'faq3', 'faq4', 'faq5', 'faq6', 'faq7', 'faq8', 'faq9', 'faq10', 'faq11', 'faq12']
+  const faqKeys = ['faq1', 'faq2', 'faq3', 'faq4', 'faq5', 'faq6', 'faq7', 'faq8', 'faq9', 'faq10', 'faq11', 'faq12', 'faq13', 'faq14', 'faq15', 'faq16', 'faq17', 'faq18', 'faq19', 'faq20', 'faq21', 'faq22', 'faq23', 'faq24', 'faq25']
   const mainEntity = faqKeys.map((key, index) => ({
     '@type': 'Question',
     name: t(`pages.index.faqs.${key}.question`),
@@ -808,7 +1043,7 @@ useHead(computed(() => {
       ]
     }
 
-    const faqKeys = ['faq1', 'faq2', 'faq3', 'faq4', 'faq5', 'faq6', 'faq7', 'faq8', 'faq9', 'faq10', 'faq11', 'faq12']
+    const faqKeys = ['faq1', 'faq2', 'faq3', 'faq4', 'faq5', 'faq6', 'faq7', 'faq8', 'faq9', 'faq10', 'faq11', 'faq12', 'faq13', 'faq14', 'faq15', 'faq16', 'faq17', 'faq18', 'faq19', 'faq20', 'faq21', 'faq22', 'faq23', 'faq24', 'faq25']
     const faq = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -831,7 +1066,7 @@ useHead(computed(() => {
         },
         {
           name: 'keywords',
-          content: currentLocale === 'es' ? 'fletes Santiago, fletes baratos, mudanzas Santiago, fletes a regiones, transporte de carga Chile, fletes económicos, mudanzas y fletes, cotizar flete, precio flete Santiago, fletes Región Metropolitana' :
+          content: currentLocale === 'es' ? 'fletes Santiago, flete Santiago, fletes Santiago centro, fletes baratos santiago, fletes económicos santiago, fletes santiago precios, valor flete Santiago, fletes Santiago Chile, fletes dentro de Santiago, fletes fuera de Santiago, fletes Santiago centro 24 horas, fletes express Santiago, servicio de fletes en Santiago, mudanzas Santiago, fletes a regiones, transporte de carga Chile, mudanzas y fletes, cotizar flete, precio flete Santiago, fletes Región Metropolitana, mini fletes Santiago, flete pequeño Santiago' :
             'freight Santiago, cheap freight Chile, moving Santiago, freight to regions, cargo transport Chile, affordable freight, moving and freight, quote freight, freight price Santiago'
         },
         // Open Graph

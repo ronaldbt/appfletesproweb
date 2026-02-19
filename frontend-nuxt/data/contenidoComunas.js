@@ -66,6 +66,21 @@ function getContenidoComuna(slug) {
   const name = comuna.name
   const index = comunasRM.findIndex(c => c.slug === slug)
 
+  // Intro especial para /fletes-santiago (hub de keywords)
+  if (slug === 'santiago') {
+    const intro = 'Fletes en Santiago: servicio de fletes Santiago centro, fletes baratos Santiago y fletes económicos en Santiago. Cotiza tu flete Santiago con la calculadora online o por WhatsApp. Valor flete Santiago desde $27.000. Fletes Santiago a regiones y fletes dentro de Santiago con precios transparentes.'
+    const ventajas = [
+      'Fletes Santiago centro y toda la RM: cobertura en las 52 comunas.',
+      'Precios claros: valor flete Santiago desde $20.000 + $2.000/km en la RM.',
+      'Fletes Santiago a regiones: tarifa $900/km a Valparaíso, Temuco, La Serena y más.',
+      'Fletes express Santiago y fletes Santiago centro 24 horas cuando lo necesites.',
+      'Servicio de fletes en Santiago para particulares y empresas.',
+      'Cotización al instante: calculadora online y presupuesto por WhatsApp sin compromiso.'
+    ]
+    const cierre = 'Cotiza tu flete Santiago con la calculadora de esta página o escríbenos por WhatsApp +56 9 7979 6841. Fletes baratos Santiago y fletes Santiago Chile con el mejor servicio.'
+    return { intro, ventajas, cierre }
+  }
+
   const introFn = INTROS[index % INTROS.length]
   const intro = introFn(name)
 

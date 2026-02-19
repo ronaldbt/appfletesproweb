@@ -82,6 +82,24 @@
           <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300" />
         </NuxtLink>
 
+        <!-- Fletes Construcción -->
+        <NuxtLink 
+          to="/fletes-construccion"
+          class="text-sm font-black uppercase tracking-widest text-slate-500 hover:text-teal-600 transition-all relative group"
+        >
+          {{ $t('nav.fletesConstruccion') }}
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300" />
+        </NuxtLink>
+
+        <!-- Blog -->
+        <NuxtLink 
+          to="/blog"
+          class="text-sm font-black uppercase tracking-widest text-slate-500 hover:text-teal-600 transition-all relative group"
+        >
+          {{ $t('common.blog') }}
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300" />
+        </NuxtLink>
+
         <!-- Comunas RM Dropdown -->
         <div class="relative group">
           <button 
@@ -98,6 +116,15 @@
             </NuxtLink>
           </div>
         </div>
+
+        <!-- Contacto -->
+        <NuxtLink 
+          to="/contacto"
+          class="text-sm font-black uppercase tracking-widest text-slate-500 hover:text-teal-600 transition-all relative group"
+        >
+          {{ $t('nav.contacto') }}
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300" />
+        </NuxtLink>
 
         <NuxtLink 
           to="/login"
@@ -157,7 +184,16 @@
             Transporte Frío
           </NuxtLink>
           <NuxtLink to="/ultima-milla" @click="isOpen = false" class="text-slate-900 font-black text-lg uppercase tracking-tighter">
-            Última Milla
+            {{ $t('nav.ultimaMilla') }}
+          </NuxtLink>
+          <NuxtLink to="/fletes-construccion" @click="isOpen = false" class="text-slate-900 font-black text-lg uppercase tracking-tighter">
+            {{ $t('nav.fletesConstruccion') }}
+          </NuxtLink>
+          <NuxtLink to="/blog" @click="isOpen = false" class="text-slate-900 font-black text-lg uppercase tracking-tighter">
+            Blog
+          </NuxtLink>
+          <NuxtLink to="/contacto" @click="isOpen = false" class="text-slate-900 font-black text-lg uppercase tracking-tighter">
+            Contacto
           </NuxtLink>
           <div class="h-px bg-slate-100" />
           <NuxtLink 

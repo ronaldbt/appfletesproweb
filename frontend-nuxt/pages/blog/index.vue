@@ -1,10 +1,6 @@
 <template>
   <div class="min-h-screen flex flex-col overflow-x-hidden bg-white selection:bg-teal-100 selection:text-teal-900">
-    <PortesNavbar />
-    <PortesLanguageSwitcher :current-lang="lang" @lang-change="lang = $event" />
-
-    <main class="flex-grow">
-      <Breadcrumbs />
+    <Breadcrumbs />
 
       <!-- Hero Section -->
       <section class="relative pt-8 pb-24 md:pt-12 md:pb-32 overflow-hidden bg-slate-50">
@@ -101,8 +97,6 @@
         </div>
       </section>
 
-      <PortesFooter />
-    </main>
   </div>
 </template>
 
@@ -158,7 +152,7 @@ const getBlogSlug = (post) => {
 }
 
 // SEO Meta Tags
-const siteUrl = 'https://app.fletespro.cl'
+const siteUrl = 'https://fletespro.cl'
 const currentUrl = `${siteUrl}/blog`
 const defaultImage = `${siteUrl}/og-image.jpg`
 

@@ -1,11 +1,6 @@
 <template>
   <div class="min-h-screen flex flex-col overflow-x-hidden bg-white selection:bg-teal-100 selection:text-teal-900">
-    <PortesNavbar @get-quote="scrollToCalc" />
-    
-    <PortesLanguageSwitcher :current-lang="lang" @lang-change="lang = $event" />
-
-    <main class="flex-grow">
-      <Breadcrumbs />
+    <Breadcrumbs />
       <!-- Hero Section -->
       <section class="relative pt-8 pb-24 md:pt-12 md:pb-32 overflow-hidden bg-slate-50">
         <div class="absolute top-0 right-0 w-full h-full bg-teal-600/[0.02] -skew-y-3 origin-top-right -z-10" />
@@ -25,6 +20,47 @@
 
           <div class="animate-slide-up">
             <TransporteFrioCalculator />
+          </div>
+        </div>
+      </section>
+
+      <!-- Transporte en frío: garantizando la seguridad + video (widget al lado) -->
+      <section class="py-16 bg-white border-t border-slate-100">
+        <div class="container mx-auto px-4 max-w-6xl">
+          <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+            <div>
+              <h2 class="text-2xl md:text-4xl font-black text-slate-900 mb-4 tracking-tight">
+                Transporte en frío: garantizando la seguridad de tus productos perecederos
+              </h2>
+              <p class="text-slate-600 leading-relaxed mb-4">
+                El transporte en frío es fundamental si necesitas trasladar productos perecederos, como alimentos o medicamentos, que requieren condiciones de temperatura controlada. Tenemos el más confiable transporte refrigerado a tu servicio a precios muy competitivos.
+              </p>
+              <p class="text-slate-600 leading-relaxed mb-4">
+                La importancia del transporte en la cadena de frío es clave: desde el origen hasta el destino la temperatura debe mantenerse estable. Somos una empresa de transporte en frío en Santiago de Chile y Región Metropolitana; ofrecemos transporte de frio en Chile, transporte de carga en frio y cadena de frio transporte en Chile. Si necesitas como transportar medicamentos en frio o transporte de muestras en frio, contamos con metodologías de transporte en cadena de frio y equipamiento adecuado. También realizamos transporte en frio desde Santiago hacia Arica, transporte en frio Temuco y otras rutas. Para empresas que requieren transporte y bodegaje en frio o transporte de alimentos en la cadena de frio, ofrecemos soluciones completas con impacto del transporte en la cadena de frio minimizado gracias a controles estrictos.
+              </p>
+              <ul class="text-slate-600 space-y-2 text-sm">
+                <li class="flex items-start gap-2">
+                  <span class="text-teal-600 font-bold mt-0.5">1.</span>
+                  <span>Equipo especializado con vehículos equipados con sistemas de refrigeración adecuados y estándares de calidad.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-teal-600 font-bold mt-0.5">2.</span>
+                  <span>Experiencia comprobada en transporte de mercancías perecederas y mantenimiento de la cadena de frío.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="relative">
+              <div class="aspect-video rounded-2xl overflow-hidden border-2 border-slate-200 shadow-xl bg-slate-100 ring-4 ring-teal-500/10">
+                <iframe
+                  src="https://www.youtube.com/embed/YUJKAA-KX7w"
+                  title="Transporte en frío - FletesPro"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  class="w-full h-full"
+                />
+              </div>
+              <p class="text-center text-slate-500 text-sm mt-3 font-medium">Servicio de transporte refrigerado en RM y regiones</p>
+            </div>
           </div>
         </div>
       </section>
@@ -306,9 +342,6 @@
 
       <PortesStats />
       <PortesTestimonials />
-    </main>
-
-    <PortesFooter />
 
     <div class="fixed top-0 left-0 w-full h-full -z-40 pointer-events-none opacity-30 overflow-hidden">
       <div class="absolute top-1/4 -right-1/4 w-[700px] h-[700px] bg-teal-200/20 rounded-full blur-[180px] animate-float-1" />
@@ -331,7 +364,7 @@ const scrollToCalc = () => {
 }
 
 // SEO Meta Tags
-const siteUrl = 'https://app.fletespro.cl'
+const siteUrl = 'https://fletespro.cl'
 const currentUrl = `${siteUrl}/transporte-frio`
 const defaultImage = `${siteUrl}/og-image.jpg`
 
