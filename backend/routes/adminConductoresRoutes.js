@@ -115,17 +115,30 @@ router.post('/admin/conductores', async (req, res) => {
     const salario = salario_mensual != null ? parseFloat(salario_mensual) : null;
     const comision = comision_porcentaje != null ? parseFloat(comision_porcentaje) : (tipo === 'comisionista' ? 90 : null);
     
-    // 1. Crear usuario en tabla usuarios
+    // 1. Crear usuario en tabla usuarios (solo columnas que suelen existir; password_visible_* pueden no existir por permisos)
     const provided = password && String(password).length >= 6 ? String(password) : null;
     const tempPassword = provided ? null : crypto.randomBytes(6).toString('base64url'); // ~8-9 chars URL-safe
     const passwordPlano = provided || tempPassword;
     const hash = await bcrypt.hash(String(passwordPlano), 10);
-    const { enc, iv, tag } = encryptVisiblePassword(passwordPlano);
-    const usuarioResult = await client.query(
-      'INSERT INTO usuarios (nombre, email, telefono, password, tipo, password_visible_enc, password_visible_iv, password_visible_tag) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING id',
-      [nombre, email, num, hash, 'conductor', enc, iv, tag]
-    );
-    const usuarioId = usuarioResult.rows[0].id;
+    let usuarioId;
+    try {
+      await client.query('SAVEPOINT sp_usuario');
+      const { enc, iv, tag } = encryptVisiblePassword(passwordPlano);
+      const usuarioResult = await client.query(
+        'INSERT INTO usuarios (nombre, email, telefono, password, tipo, password_visible_enc, password_visible_iv, password_visible_tag) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING id',
+        [nombre, email, num, hash, 'conductor', enc, iv, tag]
+      );
+      usuarioId = usuarioResult.rows[0].id;
+    } catch (e) {
+      if (e.code === '42703' || (e.message && e.message.includes('password_visible'))) {
+        await client.query('ROLLBACK TO SAVEPOINT sp_usuario');
+        const usuarioResult = await client.query(
+          'INSERT INTO usuarios (nombre, email, telefono, password, tipo) VALUES ($1, $2, $3, $4, $5) RETURNING id',
+          [nombre, email, num, hash, 'conductor']
+        );
+        usuarioId = usuarioResult.rows[0].id;
+      } else throw e;
+    }
     
     // 2. Crear conductor en tabla conductores
     const conductorResult = await client.query(
@@ -143,6 +156,7 @@ router.post('/admin/conductores', async (req, res) => {
   } catch (err) {
     await client.query('ROLLBACK');
     console.error('❌ [CONDUCTORES] Error creando:', err);
+    if (err.code === '23505') return res.status(400).json({ error: 'Ya existe un conductor o usuario con ese teléfono o email.' });
     res.status(500).json({ error: 'Error creando conductor' });
   } finally {
     client.release();

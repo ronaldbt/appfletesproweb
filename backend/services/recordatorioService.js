@@ -45,7 +45,7 @@ async function enviarRecordatorios(client) {
         `Precio: ${f.precio != null ? '$' + Number(f.precio).toLocaleString('es-CL') : '—'}\n` +
         `Programado: ${fechaHora}\n\nID: ${f.id}`;
       try {
-        await client.sendMessage(chatId, msg);
+        await client.sendMessage(chatId, msg, { sendSeen: false });
         await db.query('UPDATE admin_fletes SET recordatorio_enviado_at = NOW() WHERE id = $1', [f.id]);
         console.log('📤 [Recordatorio] Enviado a', RECORDATORIO_NUMERO, 'flete', f.id);
       } catch (e) {
@@ -87,7 +87,7 @@ async function enviarRecordatorios(client) {
         `Precio: ${r.precio != null ? '$' + Number(r.precio).toLocaleString('es-CL') : '—'}\n` +
         `Programado: ${fechaHora}\n\nID: ${r.id}`;
       try {
-        await client.sendMessage(chatId, msg);
+        await client.sendMessage(chatId, msg, { sendSeen: false });
         await db.query('UPDATE reservas SET recordatorio_enviado_at = NOW() WHERE id = $1', [r.id]);
         console.log('📤 [Recordatorio] Enviado a', RECORDATORIO_NUMERO, 'reserva', r.id);
       } catch (e) {

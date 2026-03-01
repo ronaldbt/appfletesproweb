@@ -282,7 +282,8 @@ function getVehiculoLabel(vehiculoId) {
   return v ? (v.patente + (v.nombre ? ' ' + v.nombre : '')) : '—'
 }
 
-function guardarFleteAgenda() {
+async function guardarFleteAgenda() {
+  console.log('📋 [Reservas] guardarFleteAgenda llamado')
   const id = editingFleteId.value || Date.now().toString()
   const f = {
     id,
@@ -297,10 +298,47 @@ function guardarFleteAgenda() {
     telefono: nuevoFlete.value.telefono.replace(/\D/g, '').replace(/^0/, '56'),
     vehiculoId: nuevoFlete.value.vehiculoId || null
   }
+  console.log('📋 [Reservas] Flete a guardar:', f)
+
+  if (!editingFleteId.value) {
+    try {
+      const url = apiUrl('/api/admin/fletes')
+      const payload = {
+        nombre: f.nombre,
+        telefono: f.telefono,
+        origen: f.origen,
+        destino: f.destino,
+        carga: f.carga || '',
+        ayudante: f.conAyudante === 'si',
+        precio: f.precio,
+        fecha: f.fecha,
+        hora: f.hora,
+        vehiculoId: f.vehiculoId || null
+      }
+      console.log('📋 [Reservas] POST URL:', url)
+      console.log('📋 [Reservas] Payload:', payload)
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+      const data = await res.json().catch(() => ({}))
+      console.log('📋 [Reservas] Respuesta status:', res.status, 'body:', data)
+      if (!res.ok) throw new Error(data.error || 'Error creando flete')
+      if (data.fleteId) f.id = data.fleteId
+      console.log('✅ [Reservas] Flete guardado en BD. WhatsApp enviado por backend.')
+    } catch (err) {
+      console.error('❌ [Reservas] Error guardando en backend:', err)
+      alert('Se guardó localmente pero hubo un error al enviar al servidor: ' + (err.message || 'Error desconocido'))
+    }
+  }
+
   if (editingFleteId.value) {
     agendaFletes.value = agendaFletes.value.map(x => x.id === id ? f : x)
+    console.log('📋 [Reservas] Flete actualizado en agenda local')
   } else {
     agendaFletes.value = [f, ...agendaFletes.value]
+    console.log('📋 [Reservas] Flete agregado a agenda local')
   }
   if (process.client) localStorage.setItem(STORAGE_KEY, JSON.stringify(agendaFletes.value))
   cancelarEdicionFlete()

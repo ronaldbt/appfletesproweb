@@ -62,6 +62,14 @@ app.use((req, res, next) => {
   next();
 });
 
+// Log de requests POST a admin/fletes para debug
+app.use((req, res, next) => {
+  if (req.method === 'POST' && req.originalUrl.includes('/admin/fletes') && !req.originalUrl.includes('/send')) {
+    console.log('📥 [API] POST /admin/fletes recibido', req.originalUrl, 'body keys:', req.body ? Object.keys(req.body) : 'sin body');
+  }
+  next();
+});
+
 // 🌐 Ruta base de prueba
 app.get('/', (req, res) => {
   res.send('🚀 Backend FletesPro funcionando en Express');
