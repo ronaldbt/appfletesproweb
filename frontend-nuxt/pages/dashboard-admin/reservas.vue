@@ -63,6 +63,13 @@
             <option value="si">Sí</option>
           </select>
         </label>
+        <label>
+          <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Camión (flota propia)</span>
+          <select v-model="nuevoFlete.vehiculoId" class="mt-1 w-full rounded-xl border-2 border-slate-200 bg-white px-3 py-2 text-slate-900 focus:border-teal-500 focus:outline-none">
+            <option value="">Sin asignar</option>
+            <option v-for="v in vehiculos" :key="v.id" :value="v.id">{{ v.patente }} – {{ v.nombre || v.tipo || 'Camión' }}</option>
+          </select>
+        </label>
         <label class="md:col-span-2 lg:col-span-3">
           <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Qué llevar (carga)</span>
           <input v-model="nuevoFlete.carga" type="text" placeholder="Ej: muebles, cajas, refrigerador" class="mt-1 w-full rounded-xl border-2 border-slate-200 bg-white px-3 py-2 text-slate-900 focus:border-teal-500 focus:outline-none" />
@@ -88,6 +95,7 @@
               <th class="px-4 py-3 text-left font-bold">Origen → Destino</th>
               <th class="px-4 py-3 text-left font-bold">Carga</th>
               <th class="px-4 py-3 text-left font-bold">Precio</th>
+              <th class="px-4 py-3 text-left font-bold">Camión</th>
               <th class="px-4 py-3 text-left font-bold">Ayudante</th>
               <th class="px-4 py-3 text-left font-bold">Teléfono</th>
               <th class="px-4 py-3 text-left font-bold">Acción</th>
@@ -101,6 +109,7 @@
               <td class="px-4 py-3 text-slate-700">{{ f.origen }} → {{ f.destino }}</td>
               <td class="px-4 py-3 text-slate-600">{{ f.carga || '—' }}</td>
               <td class="px-4 py-3 font-bold text-slate-900">{{ f.precio ? '$' + formatPrecio(f.precio) : '—' }}</td>
+              <td class="px-4 py-3 text-slate-600">{{ getVehiculoLabel(f.vehiculoId) }}</td>
               <td class="px-4 py-3">{{ f.conAyudante === 'si' ? 'Sí' : 'No' }}</td>
               <td class="px-4 py-3"><a :href="`https://wa.me/${f.telefono.replace(/\D/g, '')}`" target="_blank" rel="noopener" class="text-teal-600 font-bold hover:underline">{{ f.telefono }}</a></td>
               <td class="px-4 py-3 flex flex-wrap gap-2">
@@ -180,6 +189,7 @@
               </td>
               <td class="px-4 py-3 text-slate-600">{{ formatDate(reserva.fecha) }}</td>
               <td class="px-4 py-3">
+                <button v-if="reserva.estado !== 'cancelado'" @click="cancelarReserva(reserva)" class="text-amber-600 hover:underline font-bold mr-2">Cancelar</button>
                 <button @click="viewReserva(reserva)" class="text-teal-600 hover:underline font-bold mr-2">Ver</button>
                 <button @click="editReserva(reserva)" class="text-slate-600 hover:underline font-bold mr-2">Editar</button>
                 <button @click="deleteReserva(reserva)" class="text-red-600 hover:underline font-bold">Eliminar</button>
@@ -203,6 +213,7 @@ const WHATSAPP_NUMERO = '56979796841'
 const UN_MES_MS = 30 * 24 * 60 * 60 * 1000
 
 const reservas = ref([])
+const vehiculos = ref([])
 const searchTerm = ref('')
 const filterEstado = ref('')
 const filterFecha = ref('')
@@ -217,7 +228,8 @@ const nuevoFlete = ref({
   destino: '',
   carga: '',
   conAyudante: 'no',
-  telefono: ''
+  telefono: '',
+  vehiculoId: ''
 })
 
 function getAgendaFromStorage() {
@@ -264,6 +276,12 @@ function whatsappRecordatorioUrl(f) {
   return `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(msg)}`
 }
 
+function getVehiculoLabel(vehiculoId) {
+  if (!vehiculoId) return '—'
+  const v = vehiculos.value.find(x => x.id === vehiculoId)
+  return v ? (v.patente + (v.nombre ? ' ' + v.nombre : '')) : '—'
+}
+
 function guardarFleteAgenda() {
   const id = editingFleteId.value || Date.now().toString()
   const f = {
@@ -276,7 +294,8 @@ function guardarFleteAgenda() {
     destino: nuevoFlete.value.destino,
     carga: nuevoFlete.value.carga,
     conAyudante: nuevoFlete.value.conAyudante,
-    telefono: nuevoFlete.value.telefono.replace(/\D/g, '').replace(/^0/, '56')
+    telefono: nuevoFlete.value.telefono.replace(/\D/g, '').replace(/^0/, '56'),
+    vehiculoId: nuevoFlete.value.vehiculoId || null
   }
   if (editingFleteId.value) {
     agendaFletes.value = agendaFletes.value.map(x => x.id === id ? f : x)
@@ -298,13 +317,14 @@ function editarFleteAgenda(f) {
     destino: f.destino || '',
     carga: f.carga || '',
     conAyudante: f.conAyudante === 'si' ? 'si' : 'no',
-    telefono: f.telefono ? (f.telefono.startsWith('56') ? f.telefono : '56' + f.telefono) : ''
+    telefono: f.telefono ? (f.telefono.startsWith('56') ? f.telefono : '56' + f.telefono) : '',
+    vehiculoId: f.vehiculoId || ''
   }
 }
 
 function cancelarEdicionFlete() {
   editingFleteId.value = null
-  nuevoFlete.value = { nombre: '', precio: '', fecha: '', hora: '', origen: '', destino: '', carga: '', conAyudante: 'no', telefono: '' }
+  nuevoFlete.value = { nombre: '', precio: '', fecha: '', hora: '', origen: '', destino: '', carga: '', conAyudante: 'no', telefono: '', vehiculoId: '' }
 }
 
 function eliminarFleteAgenda(id) {
@@ -318,7 +338,7 @@ const reservasStats = computed(() => {
   const total = reservas.value.length
   const pendientes = reservas.value.filter(r => r.estado === 'pendiente').length
   const completadas = reservas.value.filter(r => r.estado === 'completado').length
-  const ingresos = reservas.value.reduce((sum, r) => sum + parseFloat(r.precio || 0), 0)
+  const ingresos = reservas.value.filter(r => r.estado === 'completado').reduce((sum, r) => sum + parseFloat(r.precio || 0), 0)
   return { total, pendientes, completadas, ingresos }
 })
 
@@ -404,6 +424,33 @@ async function loadReservas() {
   }
 }
 
+async function loadVehiculos() {
+  try {
+    const res = await fetch(apiUrl('/api/admin/vehiculos'))
+    const data = await res.json()
+    vehiculos.value = Array.isArray(data) ? data : []
+  } catch (e) {
+    console.error(e)
+    vehiculos.value = []
+  }
+}
+
+async function cancelarReserva(reserva) {
+  if (!confirm(`¿Marcar reserva #${reserva.id} como cancelada?`)) return
+  try {
+    const res = await fetch(apiUrl(`/api/admin/reservas/${reserva.id}`), {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ estado: 'cancelado' })
+    })
+    if (!res.ok) throw new Error(await res.text())
+    await loadReservas()
+  } catch (e) {
+    console.error(e)
+    alert('Error al cancelar la reserva')
+  }
+}
+
 function viewReserva(r) { console.log('Ver', r) }
 function editReserva(r) { console.log('Editar', r) }
 function deleteReserva(r) {
@@ -411,8 +458,9 @@ function deleteReserva(r) {
 }
 
 onMounted(() => {
-  console.log('📋 [Reservas] onMounted: cargando agenda y reservas del sistema')
+  console.log('📋 [Reservas] onMounted: cargando agenda, vehículos y reservas del sistema')
   agendaFletes.value = getAgendaFromStorage()
+  loadVehiculos()
   loadReservas()
 })
 </script>

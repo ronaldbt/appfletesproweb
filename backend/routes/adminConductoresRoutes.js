@@ -7,6 +7,18 @@ const crypto = require('crypto');
 async function ensureTable() {
   // Extensión para gen_random_uuid
   await db.query(`CREATE EXTENSION IF NOT EXISTS pgcrypto;`);
+  // Tabla vehiculos (flota propia) por si se usa antes de hit a /admin/vehiculos
+  await db.query(`
+    CREATE TABLE IF NOT EXISTS vehiculos (
+      id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+      patente TEXT NOT NULL,
+      tipo TEXT,
+      nombre TEXT,
+      activo BOOLEAN NOT NULL DEFAULT true,
+      created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+      updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    );
+  `);
   // Crear tabla si no existe (estructura base mínima)
   await db.query(`
     CREATE TABLE IF NOT EXISTS conductores (
@@ -25,15 +37,24 @@ async function ensureTable() {
   await db.query(`ALTER TABLE conductores ADD COLUMN IF NOT EXISTS usuario_id INTEGER REFERENCES usuarios(id);`);
   await db.query(`ALTER TABLE conductores ADD COLUMN IF NOT EXISTS created_at TIMESTAMPTZ NOT NULL DEFAULT NOW();`);
   await db.query(`ALTER TABLE conductores ADD COLUMN IF NOT EXISTS updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW();`);
+  // Flota propia: empleado (salario) vs comisionista (comisión por flete)
+  await db.query(`ALTER TABLE conductores ADD COLUMN IF NOT EXISTS tipo_conductor TEXT DEFAULT 'comisionista';`);
+  await db.query(`ALTER TABLE conductores ADD COLUMN IF NOT EXISTS vehiculo_id UUID;`);
+  await db.query(`ALTER TABLE conductores ADD COLUMN IF NOT EXISTS salario_mensual NUMERIC(12,2);`);
+  await db.query(`ALTER TABLE conductores ADD COLUMN IF NOT EXISTS comision_porcentaje NUMERIC(5,2);`);
   // Índice único para numero (ignorar error si ya existe)
   try {
     await db.query(`CREATE UNIQUE INDEX conductores_numero_key ON conductores (numero);`);
   } catch (_) {}
 
-  // Asegurar columnas para contraseña visible en usuarios
-  await db.query(`ALTER TABLE usuarios ADD COLUMN IF NOT EXISTS password_visible_enc BYTEA;`);
-  await db.query(`ALTER TABLE usuarios ADD COLUMN IF NOT EXISTS password_visible_iv BYTEA;`);
-  await db.query(`ALTER TABLE usuarios ADD COLUMN IF NOT EXISTS password_visible_tag BYTEA;`);
+  // Asegurar columnas para contraseña visible en usuarios (ignorar si no tenemos owner de usuarios)
+  try {
+    await db.query(`ALTER TABLE usuarios ADD COLUMN IF NOT EXISTS password_visible_enc BYTEA;`);
+    await db.query(`ALTER TABLE usuarios ADD COLUMN IF NOT EXISTS password_visible_iv BYTEA;`);
+    await db.query(`ALTER TABLE usuarios ADD COLUMN IF NOT EXISTS password_visible_tag BYTEA;`);
+  } catch (e) {
+    if (e.code !== '42501') throw e; // 42501 = must be owner, ignorar para seguir
+  }
 }
 
 function normalizeNumero(raw) {
@@ -78,38 +99,21 @@ router.use(async (req, res, next) => {
   }
 });
 
-// GET list
-router.get('/admin/conductores', async (req, res) => {
-  try {
-    const { rows } = await db.query(`
-      SELECT 
-        c.*,
-        u.email,
-        u.telefono as telefono_usuario
-      FROM conductores c
-      LEFT JOIN usuarios u ON c.usuario_id = u.id
-      ORDER BY c.created_at DESC 
-      LIMIT 500
-    `, []);
-    res.json(rows);
-  } catch (err) {
-    console.error('❌ [CONDUCTORES] Error listando:', err);
-    res.status(500).json({ error: 'Error listando conductores' });
-  }
-});
-
 // POST create
 router.post('/admin/conductores', async (req, res) => {
   const client = await db.pool.connect();
   try {
     await client.query('BEGIN');
     
-    const { nombre, numero, email, rut, vehiculo_placa = null, vehiculo_tipo = null, direccion = null, activo = true, zona = null, password = null } = req.body || {};
+    const { nombre, numero, email, rut, vehiculo_placa = null, vehiculo_tipo = null, direccion = null, activo = true, zona = null, password = null, tipo_conductor = 'comisionista', vehiculo_id = null, salario_mensual = null, comision_porcentaje = null } = req.body || {};
     if (!nombre || !numero || !email || !rut) {
       return res.status(400).json({ error: 'Campos requeridos: nombre, numero, email, rut' });
     }
     
     const num = normalizeNumero(numero);
+    const tipo = tipo_conductor === 'empleado' ? 'empleado' : 'comisionista';
+    const salario = salario_mensual != null ? parseFloat(salario_mensual) : null;
+    const comision = comision_porcentaje != null ? parseFloat(comision_porcentaje) : (tipo === 'comisionista' ? 90 : null);
     
     // 1. Crear usuario en tabla usuarios
     const provided = password && String(password).length >= 6 ? String(password) : null;
@@ -125,8 +129,9 @@ router.post('/admin/conductores', async (req, res) => {
     
     // 2. Crear conductor en tabla conductores
     const conductorResult = await client.query(
-      'INSERT INTO conductores (nombre, numero, rut, vehiculo_placa, vehiculo_tipo, direccion, activo, zona, usuario_id) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *',
-      [nombre, num, rut, vehiculo_placa, vehiculo_tipo, direccion, !!activo, zona, usuarioId]
+      `INSERT INTO conductores (nombre, numero, rut, vehiculo_placa, vehiculo_tipo, direccion, activo, zona, usuario_id, tipo_conductor, vehiculo_id, salario_mensual, comision_porcentaje)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING *`,
+      [nombre, num, rut, vehiculo_placa, vehiculo_tipo, direccion, !!activo, zona, usuarioId, tipo, vehiculo_id || null, salario, comision]
     );
     
     await client.query('COMMIT');
@@ -151,16 +156,20 @@ router.put('/admin/conductores/:id', async (req, res) => {
     await client.query('BEGIN');
     
     const { id } = req.params;
-    const { nombre, numero, email, rut, vehiculo_placa, vehiculo_tipo, direccion, activo, zona, password } = req.body || {};
+    const { nombre, numero, email, rut, vehiculo_placa, vehiculo_tipo, direccion, activo, zona, password, tipo_conductor, vehiculo_id, salario_mensual, comision_porcentaje } = req.body || {};
     const num = numero !== undefined ? normalizeNumero(numero) : undefined;
     
     const current = await client.query('SELECT * FROM conductores WHERE id=$1', [id]);
     if (!current.rows.length) return res.status(404).json({ error: 'No encontrado' });
     const c = current.rows[0];
     
+    const tipo = tipo_conductor !== undefined ? (tipo_conductor === 'empleado' ? 'empleado' : 'comisionista') : c.tipo_conductor;
+    const salario = salario_mensual !== undefined ? (salario_mensual != null ? parseFloat(salario_mensual) : null) : c.salario_mensual;
+    const comision = comision_porcentaje !== undefined ? (comision_porcentaje != null ? parseFloat(comision_porcentaje) : null) : c.comision_porcentaje;
+    
     // Actualizar conductor
     const upd = await client.query(
-      'UPDATE conductores SET nombre=$1, numero=$2, rut=$3, vehiculo_placa=$4, vehiculo_tipo=$5, direccion=$6, activo=$7, zona=$8, updated_at=NOW() WHERE id=$9 RETURNING *',
+      `UPDATE conductores SET nombre=$1, numero=$2, rut=$3, vehiculo_placa=$4, vehiculo_tipo=$5, direccion=$6, activo=$7, zona=$8, tipo_conductor=$9, vehiculo_id=$10, salario_mensual=$11, comision_porcentaje=$12, updated_at=NOW() WHERE id=$13 RETURNING *`,
       [
         nombre ?? c.nombre,
         num ?? c.numero,
@@ -170,6 +179,10 @@ router.put('/admin/conductores/:id', async (req, res) => {
         direccion ?? c.direccion,
         (activo ?? c.activo),
         (zona ?? c.zona),
+        tipo,
+        vehiculo_id !== undefined ? (vehiculo_id || null) : c.vehiculo_id,
+        salario,
+        comision,
         id
       ]
     );
@@ -279,8 +292,7 @@ router.post('/admin/conductores/:id/reset-password', async (req, res) => {
   }
 });
 
-// GET list (admin) con password_visible descifrada
-// Nota: ya existe un GET arriba; para no romper, ampliamos la selección y mapeamos
+// GET list (admin) con password_visible descifrada y datos de vehículo asignado
 router.get('/admin/conductores', async (req, res) => {
   try {
     const page = Math.max(parseInt(req.query.page, 10) || 1, 1);
@@ -296,11 +308,12 @@ router.get('/admin/conductores', async (req, res) => {
         c.*,
         u.email,
         u.telefono as telefono_usuario,
-        u.password_visible_enc,
-        u.password_visible_iv,
-        u.password_visible_tag
+        v.patente as vehiculo_patente,
+        v.nombre as vehiculo_nombre,
+        v.tipo as vehiculo_tipo
       FROM conductores c
       LEFT JOIN usuarios u ON c.usuario_id = u.id
+      LEFT JOIN vehiculos v ON c.vehiculo_id = v.id
       ORDER BY c.created_at DESC
       LIMIT $1 OFFSET $2
     `;

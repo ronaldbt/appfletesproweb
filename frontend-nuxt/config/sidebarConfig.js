@@ -59,6 +59,16 @@ const menuConfigs = {
       icon: icons.payments
     },
     {
+      name: 'Contabilidad',
+      path: '/dashboard-admin/contabilidad',
+      icon: icons.stats
+    },
+    {
+      name: 'Flota',
+      path: '/dashboard-admin/flota',
+      icon: icons.trucks
+    },
+    {
       name: 'Configuración',
       path: '/dashboard-admin/configuracion',
       icon: icons.settings

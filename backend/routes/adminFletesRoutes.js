@@ -22,6 +22,8 @@ async function ensureTable() {
   await db.query(`ALTER TABLE admin_fletes ADD COLUMN IF NOT EXISTS programado_para TIMESTAMPTZ;`);
   await db.query(`ALTER TABLE admin_fletes ADD COLUMN IF NOT EXISTS estado TEXT NOT NULL DEFAULT 'enviado';`);
   await db.query(`ALTER TABLE admin_fletes ADD COLUMN IF NOT EXISTS conductor_asignado TEXT;`);
+  await db.query(`ALTER TABLE admin_fletes ADD COLUMN IF NOT EXISTS vehiculo_id UUID;`);
+  await db.query(`ALTER TABLE admin_fletes ADD COLUMN IF NOT EXISTS recordatorio_enviado_at TIMESTAMPTZ;`);
   await db.query(`ALTER TABLE admin_fletes ADD COLUMN IF NOT EXISTS enviados_a JSONB;`);
   await db.query(`ALTER TABLE admin_fletes ADD COLUMN IF NOT EXISTS creado_por TEXT;`);
   await db.query(`ALTER TABLE admin_fletes ADD COLUMN IF NOT EXISTS created_at TIMESTAMPTZ NOT NULL DEFAULT NOW();`);
@@ -52,7 +54,8 @@ router.post('/admin/fletes/send', async (req, res) => {
       creadoPor = null,
       clienteNombre = null,
       clienteTelefono = null,
-      programadoPara = null
+      programadoPara = null,
+      vehiculoId = null
     } = req.body || {};
 
     if (!origen || !destino || !carga) {
@@ -63,9 +66,9 @@ router.post('/admin/fletes/send', async (req, res) => {
       INSERT INTO admin_fletes (
         origen, destino, carga, ayudante, precio, nota,
         cliente_nombre, cliente_telefono, programado_para,
-        estado, creado_por
+        estado, creado_por, vehiculo_id
       )
-      VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,'enviado',$10)
+      VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,'enviado',$10,$11)
       RETURNING *
     `;
     const params = [
@@ -78,7 +81,8 @@ router.post('/admin/fletes/send', async (req, res) => {
       clienteNombre,
       clienteTelefono,
       programadoPara ? new Date(programadoPara) : null,
-      creadoPor
+      creadoPor,
+      vehiculoId || null
     ];
     const { rows } = await db.query(insertSql, params);
     const flete = rows[0];

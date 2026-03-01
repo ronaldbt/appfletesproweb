@@ -50,12 +50,13 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useRouter } from '#app'
+import { useRouter, useRoute } from '#app'
 import { apiUrl, API_ENDPOINTS } from '../config/api.js'
 
 const email = ref('')
 const password = ref('')
 const router = useRouter()
+const route = useRoute()
 
 async function iniciarSesion() {
   if (!email.value || !password.value) {
@@ -72,6 +73,18 @@ async function iniciarSesion() {
   const data = await res.json()
   if (data.usuario) {
     localStorage.setItem('usuario', JSON.stringify(data.usuario))
+
+    const redirect = Array.isArray(route.query.redirect) ? route.query.redirect[0] : route.query.redirect
+    if (redirect && typeof redirect === 'string') {
+      const path = redirect.startsWith('/') ? redirect : `/${redirect}`
+      const allowed = (path.startsWith('/dashboard-admin') && data.usuario.tipo === 'admin') ||
+        ((path.startsWith('/dashboard-conductor') || path.startsWith('/conductor/')) && data.usuario.tipo === 'conductor') ||
+        ((path.startsWith('/dashboard-cliente') || path.startsWith('/cliente/')) && data.usuario.tipo === 'cliente')
+      if (allowed) {
+        router.push(path)
+        return
+      }
+    }
 
     if (data.usuario.tipo === 'admin') {
       router.push('/dashboard-admin')

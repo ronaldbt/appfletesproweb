@@ -6,7 +6,6 @@ const cors = require('cors');
 
 const qrcode = require('qrcode-terminal');
 const { Client, LocalAuth } = require('whatsapp-web.js');
-const { esConductor } = require('./utils/identificarTipoUsuario');
 const authRoutes = require('./routes/authRoutes');
 const path = require('path');
 
@@ -34,8 +33,7 @@ app.use(express.urlencoded({ extended: true }));
 // 🧠 Importaciones internas
 const reservasRoutes = require('./routes/reservasRoutes');
 const paymentsRoutes = require('./routes/paymentsRoutes');
-const manejarMensajeCliente = require('./chatbots/clienteBot');
-const { manejarRespuestaConductor } = require('./chatbots/conductorBot');
+// manejarMensajeCliente y manejarRespuestaConductor desactivados (solo recordatorios por ahora)
 
 // 🤖 Inicializar cliente WhatsApp con sesión persistente
 const client = new Client({
@@ -88,6 +86,9 @@ app.use('/api', adminUsuariosRoutes);
 const adminReservasRoutes = require('./routes/adminReservasRoutes');
 app.use('/api', adminReservasRoutes);
 
+const vehiculosRoutes = require('./routes/vehiculosRoutes');
+app.use('/api', vehiculosRoutes);
+
 // Rutas específicas para conductores
 const conductorRoutes = require('./routes/conductorRoutes');
 app.use('/api', conductorRoutes);
@@ -127,6 +128,7 @@ client.on('disconnected', (reason) => {
 });
 
 // ✅ Confirmación de conexión
+const { startRecordatorioJob } = require('./services/recordatorioService');
 let readyReceived = false;
 client.on('ready', async () => {
   readyReceived = true;
@@ -139,6 +141,7 @@ client.on('ready', async () => {
       console.log('👤 Usuario:', info.pushname || '(sin nombre)');
       console.log('📞 Número:', info.wid && info.wid.user ? info.wid.user : '(desconocido)');
     }
+    startRecordatorioJob(client);
     try {
       if (client.pupPage) {
         client.pupPage.on('pageerror', (err) => console.error('🪲 pageerror:', String(err)));
@@ -155,19 +158,10 @@ setTimeout(() => {
   }
 }, 20000);
 
-// 📩 Escuchar mensajes entrantes de clientes y conductores
+// 📩 Mensajes entrantes: desactivado por ahora. Solo se usan recordatorios (recordatorioService).
 client.on('message', async (message) => {
   if (message.fromMe) return;
-
-  try {
-    const esCon = await esConductor(message.from);
-    if (esCon) {
-      return manejarRespuestaConductor(message, client);
-    }
-    return manejarMensajeCliente(message, client);
-  } catch (e) {
-    console.error('❌ Error en handler de mensaje:', e);
-  }
+  // No responder a clientes ni conductores; solo enviar recordatorios a +56979796841
 });
 
 client.on('message_ciphertext', (msg) => {

@@ -39,6 +39,8 @@ async function ensureReservasTable() {
     'estado TEXT DEFAULT \'pendiente\'',
     'usuario_id INTEGER',
     'conductor_asignado TEXT',
+    'vehiculo_id UUID',
+    'recordatorio_enviado_at TIMESTAMPTZ',
     'created_at TIMESTAMPTZ DEFAULT NOW()',
     'updated_at TIMESTAMPTZ DEFAULT NOW()',
   ];
@@ -80,11 +82,33 @@ router.get('/admin/reservas', async (req, res) => {
       hora: r.hora ?? null,
       carga: r.carga ?? null,
       ayudante: r.ayudante ?? null,
+      vehiculo_id: r.vehiculo_id ?? null,
     }));
     res.json({ reservas });
   } catch (err) {
     console.error('❌ [ADMIN RESERVAS] Error listando reservas:', err);
     res.status(500).json({ error: 'Error listando reservas', reservas: [] });
+  }
+});
+
+// PATCH /api/admin/reservas/:id - Actualizar estado (ej. cancelar)
+router.patch('/admin/reservas/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { estado } = req.body || {};
+    const valid = ['pendiente', 'confirmado', 'en_proceso', 'completado', 'cancelado'];
+    if (!estado || !valid.includes(estado)) {
+      return res.status(400).json({ error: 'estado inválido. Use: pendiente, confirmado, en_proceso, completado, cancelado' });
+    }
+    const { rowCount } = await db.query(
+      'UPDATE reservas SET estado = $1, updated_at = NOW() WHERE id = $2',
+      [estado, id]
+    );
+    if (rowCount === 0) return res.status(404).json({ error: 'Reserva no encontrada' });
+    res.json({ success: true, estado });
+  } catch (err) {
+    console.error('❌ [ADMIN RESERVAS] Error actualizando estado:', err);
+    res.status(500).json({ error: 'Error actualizando reserva' });
   }
 });
 

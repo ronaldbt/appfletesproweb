@@ -1,5 +1,6 @@
 <template>
-  <div class="fixed left-0 top-0 h-full w-64 bg-white text-slate-900 border-r border-slate-200 z-50 transform transition-transform duration-300 lg:translate-x-0 shadow-xl"
+  <!-- Sidebar lateral (solo desktop) -->
+  <div class="hidden lg:block fixed left-0 top-0 h-full w-64 bg-white text-slate-900 border-r border-slate-200 z-50 transform transition-transform duration-300 lg:translate-x-0 shadow-xl"
        :class="{ '-translate-x-full lg:translate-x-0': !isOpen, 'translate-x-0': isOpen }">
     
     <!-- Header del Sidebar -->
@@ -53,11 +54,36 @@
     </div>
   </div>
 
-  <!-- Overlay para móvil -->
+  <!-- Overlay para móvil (cuando se usa sidebar lateral) -->
   <div v-if="isOpen" 
        @click="closeSidebar"
        class="fixed inset-0 bg-slate-900/50 z-40 lg:hidden backdrop-blur-sm">
   </div>
+
+  <!-- Barra inferior móvil -->
+  <nav class="fixed bottom-0 left-0 right-0 z-50 flex lg:hidden items-stretch overflow-x-auto bg-white border-t border-slate-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] safe-area-pb scrollbar-hide">
+    <NuxtLink
+      v-for="item in menuItems"
+      :key="item.path"
+      :to="item.path"
+      class="relative flex flex-col items-center justify-center flex-shrink-0 min-w-[56px] max-w-[72px] py-2 px-1 text-slate-600 hover:text-teal-600 hover:bg-teal-50/50 transition-colors"
+      :class="{ 'text-teal-700 bg-teal-50 border-t-2 border-teal-500': $route.path === item.path }"
+    >
+      <span v-html="item.icon" class="w-6 h-6 text-current flex-shrink-0 mb-0.5 [&>svg]:w-6 [&>svg]:h-6"></span>
+      <span class="text-[10px] font-semibold truncate w-full text-center">{{ item.name }}</span>
+      <span v-if="item.badge" class="absolute top-0.5 right-1/4 bg-teal-600 text-white text-[10px] min-w-[14px] h-[14px] rounded-full flex items-center justify-center font-bold">{{ item.badge }}</span>
+    </NuxtLink>
+    <button
+      @click="logout"
+      class="flex flex-col items-center justify-center flex-shrink-0 min-w-[56px] py-2 px-1 text-slate-600 hover:text-red-600 hover:bg-red-50/50 transition-colors"
+      title="Cerrar sesión"
+    >
+      <svg class="w-6 h-6 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+      </svg>
+      <span class="text-[10px] font-semibold">Salir</span>
+    </button>
+  </nav>
 </template>
 
 <script setup>
