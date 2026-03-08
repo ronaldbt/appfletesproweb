@@ -17,7 +17,7 @@ headings:
   - "Embalaje para Alimentos: Mantén la Frescura y Calidad de tus Productos"
 ---
 
-# Expertos en embalaje
+## Expertos en embalaje
 
 Si estás planificando una mudanza o necesitas enviar productos a través de la Región Metropolitana de Chile, contar con un servicio confiable de [fletes y mudanzas](/) es fundamental. En nuestra empresa, nos enorgullece ofrecer soluciones completas para todas tus necesidades logísticas, desde embalaje seguro hasta servicios de transporte eficientes. Ya sea que te encuentres en una comuna de Santiago o en cualquier otra región, estamos aquí para ayudarte.
 

@@ -5,10 +5,10 @@
       <div class="grid lg:grid-cols-3 gap-12 items-center">
         
         <div class="lg:col-span-2">
-          <h2 class="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter">
+          <h3 class="text-3xl md:text-5xl font-black text-white mb-8 tracking-tighter">
             {{ $t('components.quality.title') }} <br />
             <span class="text-teal-400">{{ $t('components.quality.titleHighlight') }}</span>
-          </h2>
+          </h3>
           <div class="grid sm:grid-cols-2 gap-8">
             <div class="flex gap-4">
               <div class="bg-teal-500/10 p-3 rounded-xl h-fit">

@@ -20,7 +20,7 @@ headings:
   - "Confía en Nuestro Servicio de Transporte en Frío"
 ---
 
-# Transporte en frío con amplia experiencia
+## Transporte en frío con amplia experiencia
 
 Cuando se trata de productos perecederos, mantener su frescura y calidad durante el [transporte](/transporte-frio) es de vital importancia. Combinamos este servicio con [fletes a regiones](/blog/fletes-baratos) y [embalaje profesional](/blog/expertos-en-embalaje) cuando lo necesites. Nos especializamos en servicios de **transporte en frío**, ofreciendo soluciones confiables para garantizar que tus productos lleguen en óptimas condiciones a su destino final, tanto en la Región Metropolitana como en otras regiones del país.
 

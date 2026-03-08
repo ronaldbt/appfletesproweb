@@ -13,7 +13,7 @@ headings:
   - "Precio fletes dentro de la Región metropolitana"
 ---
 
-# ¿Cuánto se cobra por un flete en Chile?
+## ¿Cuánto se cobra por un flete en Chile?
 
 Si necesitas el precio rápido de un flete y actualizado a 2026, usa la calculadora que encontrarás más abajo o las siguientes fórmulas como referencia. Para más información sobre [fletes baratos](/blog/fletes-baratos) y servicios a regiones, visita nuestro blog.
 

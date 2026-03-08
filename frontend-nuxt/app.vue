@@ -11,9 +11,9 @@ import { computed } from 'vue'
 
 const { locale } = useI18n()
 
-// Mapeo de locales a atributos HTML lang
+// Mapeo de locales a atributos HTML lang (es-CL para Chile)
 const langMap = {
-  'es': 'es',
+  'es': 'es-CL',
   'en': 'en',
   'sv': 'sv',
   'ru': 'ru'
@@ -21,8 +21,8 @@ const langMap = {
 
 useHead({
   htmlAttrs: computed(() => ({
-    lang: langMap[locale.value] || 'es'
+    lang: langMap[locale.value] || 'es-CL'
   })),
-  titleTemplate: '%s | PortesPro'
+  titleTemplate: '%s | FletesPro'
 })
 </script>

@@ -28,6 +28,8 @@ async function ensureTable() {
   await db.query(`ALTER TABLE admin_fletes ADD COLUMN IF NOT EXISTS creado_por TEXT;`);
   await db.query(`ALTER TABLE admin_fletes ADD COLUMN IF NOT EXISTS created_at TIMESTAMPTZ NOT NULL DEFAULT NOW();`);
   await db.query(`ALTER TABLE admin_fletes ADD COLUMN IF NOT EXISTS updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW();`);
+  await db.query(`ALTER TABLE admin_fletes ADD COLUMN IF NOT EXISTS iva_incluido BOOLEAN DEFAULT true;`);
+  await db.query(`ALTER TABLE admin_fletes ADD COLUMN IF NOT EXISTS cobrado BOOLEAN DEFAULT true;`);
 }
 
 router.use(async (req, res, next) => {
@@ -51,7 +53,8 @@ router.post('/admin/fletes', async (req, res) => {
       precio = null,
       fecha,
       hora,
-      vehiculoId = null
+      vehiculoId = null,
+      ivaIncluido = true
     } = req.body || {};
 
     console.log('📋 [ADMIN FLETES] Body recibido:', { nombre, telefono, origen, destino, carga, ayudante, precio, fecha, hora, vehiculoId });
@@ -77,9 +80,9 @@ router.post('/admin/fletes', async (req, res) => {
       INSERT INTO admin_fletes (
         origen, destino, carga, ayudante, precio,
         cliente_nombre, cliente_telefono, programado_para,
-        estado, vehiculo_id
+        estado, vehiculo_id, iva_incluido
       )
-      VALUES ($1,$2,$3,$4,$5,$6,$7,$8,'enviado',$9)
+      VALUES ($1,$2,$3,$4,$5,$6,$7,$8,'enviado',$9,$10)
       RETURNING *
     `;
     const params = [
@@ -91,45 +94,50 @@ router.post('/admin/fletes', async (req, res) => {
       nombre,
       telefono,
       programadoPara,
-      vehiculoId || null
+      vehiculoId || null,
+      ivaIncluido !== false
     ];
 
     const { rows } = await db.query(insertSql, params);
     const flete = rows[0];
     console.log('✅ [ADMIN FLETES] Flete creado en BD:', flete.id);
 
-    // Enviar WhatsApp inmediato al admin (siempre al 56979796841)
+    // Enviar WhatsApp inmediato al admin (56979796841)
     const client = req.whatsapp;
-    console.log('📋 [ADMIN FLETES] WhatsApp client presente:', !!client, 'sendMessage:', client ? typeof client.sendMessage : 'N/A');
-    if (client) {
-      try {
-        const state = await client.getState().catch((e) => { console.log('📋 [ADMIN FLETES] getState error:', e.message); return null; });
-        console.log('📋 [ADMIN FLETES] WhatsApp state:', state);
-      } catch (_) {}
-    }
+    const adminNum = '56979796841';
+    const adminChatId = adminNum + '@c.us';
+    const linkedNum = client && client.info && client.info.wid && client.info.wid.user ? client.info.wid.user : null;
+    const mismoNumero = linkedNum && String(linkedNum).replace(/\D/g, '').endsWith(adminNum.replace(/\D/g, ''));
+    const state = client ? await client.getState().catch(() => null) : null;
+
+    console.log('📋 [ADMIN FLETES] WhatsApp: client=', !!client, 'state=', state, '| Destino:', adminChatId, '| Vinculado:', linkedNum || 'N/A', '| ¿Mismo número?', mismoNumero);
 
     if (client && typeof client.sendMessage === 'function') {
-      const adminChatId = '56979796841@c.us';
-      const fechaHora = programadoPara ? programadoPara.toLocaleString('es-CL') : fecha;
-      const msg = `📋 *Nueva reserva FletesPro*\n\n` +
-        `Cliente: ${nombre || '—'}\n` +
-        `Tel: ${telefono || '—'}\n` +
-        `Origen: ${origen || '—'}\n` +
-        `Destino: ${destino || '—'}\n` +
-        `Carga: ${carga || '—'}\n` +
-        `Precio: ${precio != null ? '$' + Number(precio).toLocaleString('es-CL') : '—'}\n` +
-        `Programado: ${fechaHora}\n\nID: ${flete.id}`;
-      try {
-        console.log('📋 [ADMIN FLETES] Enviando WhatsApp a', adminChatId);
-        // sendSeen: false evita error "markedUnread" al enviar al mismo número (cuenta vinculada)
-        await client.sendMessage(adminChatId, msg, { sendSeen: false });
-        console.log('📤 [ADMIN FLETES] WhatsApp enviado al admin correctamente');
-      } catch (waErr) {
-        console.error('⚠️ [ADMIN FLETES] Error enviando WhatsApp:', waErr.message);
-        console.error('⚠️ [ADMIN FLETES] Stack:', waErr.stack);
+      if (state !== 'CONNECTED') {
+        console.warn('⚠️ [ADMIN FLETES] WhatsApp no CONNECTED (state:', state, '). No se envía notificación.');
+      } else {
+        const fechaHora = programadoPara ? programadoPara.toLocaleString('es-CL') : fecha;
+        const msg = `📋 *Nueva reserva FletesPro*\n\n` +
+          `Cliente: ${nombre || '—'}\n` +
+          `Tel: ${telefono || '—'}\n` +
+          `Origen: ${origen || '—'}\n` +
+          `Destino: ${destino || '—'}\n` +
+          `Carga: ${carga || '—'}\n` +
+          `Precio: ${precio != null ? '$' + Number(precio).toLocaleString('es-CL') : '—'}\n` +
+          `Programado: ${fechaHora}\n\nID: ${flete.id}`;
+        // Fire-and-forget: no bloquear respuesta, evitar que errores de WA corrompan la sesión
+        console.log('📋 [ADMIN FLETES] Enviando mensaje a', adminChatId);
+        client.sendMessage(adminChatId, msg, { sendSeen: false })
+          .then((sent) => {
+            if (sent) console.log('📤 [ADMIN FLETES] WhatsApp enviado OK');
+            else console.warn('📤 [ADMIN FLETES] Envío devolvió null (OK si librería falló internamente)');
+          })
+          .catch((waErr) => {
+            console.error('⚠️ [ADMIN FLETES] Error WhatsApp (no bloqueante):', waErr.message);
+          });
       }
     } else {
-      console.warn('⚠️ [ADMIN FLETES] WhatsApp no disponible para notificación (client=', !!client, ', sendMessage=', client ? typeof client.sendMessage : 'N/A', ')');
+      console.warn('⚠️ [ADMIN FLETES] WhatsApp no disponible (client=', !!client, ')');
     }
 
     res.status(201).json({ success: true, fleteId: flete.id, flete });
@@ -212,14 +220,76 @@ router.post('/admin/fletes/send', async (req, res) => {
 
 router.post('/admin/fletes/:id/estado', async (req, res) => {
   try {
-    const { id } = req.params; const { estado } = req.body || {};
+    const { id } = req.params;
+    const { estado, cobrado } = req.body || {};
     const valid = ['pendiente','enviado','asignado','en_progreso','completado','cancelado_admin','cancelado_conductor','cancelado_cliente','expirado'];
     if (!valid.includes(estado)) return res.status(400).json({ error: 'Estado inválido' });
-    await db.query('UPDATE admin_fletes SET estado=$1, updated_at=NOW() WHERE id=$2', [estado, id]);
+    if (typeof cobrado === 'boolean') {
+      await db.query('UPDATE admin_fletes SET estado=$1, cobrado=$2, updated_at=NOW() WHERE id=$3', [estado, cobrado, id]);
+    } else {
+      await db.query('UPDATE admin_fletes SET estado=$1, updated_at=NOW() WHERE id=$2', [estado, id]);
+    }
     res.json({ success: true });
   } catch (err) {
     console.error('❌ [ADMIN FLETES] Error actualizando estado:', err);
     res.status(500).json({ error: 'Error actualizando estado' });
+  }
+});
+
+// PATCH /admin/fletes/:id - Actualizar flete de agenda
+router.patch('/admin/fletes/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { nombre, telefono, origen, destino, carga, ayudante, precio, fecha, hora, vehiculoId, ivaIncluido, cobrado } = req.body || {};
+    const updates = [];
+    const params = [];
+    let i = 1;
+    if (nombre !== undefined) { updates.push(`cliente_nombre = $${i}`); params.push(nombre); i++; }
+    if (telefono !== undefined) { updates.push(`cliente_telefono = $${i}`); params.push(telefono); i++; }
+    if (origen !== undefined) { updates.push(`origen = $${i}`); params.push(origen); i++; }
+    if (destino !== undefined) { updates.push(`destino = $${i}`); params.push(destino); i++; }
+    if (carga !== undefined) { updates.push(`carga = $${i}`); params.push(carga); i++; }
+    if (ayudante !== undefined) { updates.push(`ayudante = $${i}`); params.push(!!ayudante); i++; }
+    if (precio !== undefined) { updates.push(`precio = $${i}`); params.push(precio != null ? parseInt(String(precio).replace(/\D/g, ''), 10) : null); i++; }
+    if (fecha !== undefined || hora !== undefined) {
+      let programadoPara = null;
+      if (fecha) {
+        const datePart = fecha instanceof Date ? fecha : new Date(fecha);
+        if (hora && /^\d{1,2}:\d{2}/.test(String(hora).trim())) {
+          const [hh, mm] = String(hora).trim().split(':').map(Number);
+          programadoPara = new Date(datePart);
+          programadoPara.setHours(hh || 0, mm || 0, 0, 0);
+        } else {
+          programadoPara = datePart;
+        }
+      }
+      updates.push(`programado_para = $${i}`); params.push(programadoPara); i++;
+    }
+    if (vehiculoId !== undefined) { updates.push(`vehiculo_id = $${i}`); params.push(vehiculoId || null); i++; }
+    if (ivaIncluido !== undefined) { updates.push(`iva_incluido = $${i}`); params.push(ivaIncluido !== false); i++; }
+    if (typeof cobrado === 'boolean') { updates.push(`cobrado = $${i}`); params.push(cobrado); i++; }
+    if (updates.length === 0) return res.status(400).json({ error: 'Nada que actualizar' });
+    params.push(id);
+    const sql = `UPDATE admin_fletes SET ${updates.join(', ')}, updated_at = NOW() WHERE id = $${i} RETURNING *`;
+    const { rows } = await db.query(sql, params);
+    if (!rows.length) return res.status(404).json({ error: 'Flete no encontrado' });
+    res.json(rows[0]);
+  } catch (err) {
+    console.error('❌ [ADMIN FLETES] Error actualizando flete:', err);
+    res.status(500).json({ error: err.message || 'Error actualizando flete' });
+  }
+});
+
+// DELETE /admin/fletes/:id - Eliminar flete de agenda
+router.delete('/admin/fletes/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { rowCount } = await db.query('DELETE FROM admin_fletes WHERE id = $1', [id]);
+    if (rowCount === 0) return res.status(404).json({ error: 'Flete no encontrado' });
+    res.json({ success: true });
+  } catch (err) {
+    console.error('❌ [ADMIN FLETES] Error eliminando flete:', err);
+    res.status(500).json({ error: err.message || 'Error eliminando flete' });
   }
 });
 

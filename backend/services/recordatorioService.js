@@ -18,6 +18,9 @@ function getChatId(numero) {
 async function enviarRecordatorios(client) {
   if (!client || typeof client.sendMessage !== 'function') return;
   const chatId = getChatId(RECORDATORIO_NUMERO);
+  const linkedNum = client.info && client.info.wid && client.info.wid.user ? client.info.wid.user : null;
+  const mismoNumero = linkedNum && String(linkedNum).replace(/\D/g, '').endsWith(String(RECORDATORIO_NUMERO).replace(/\D/g, ''));
+  if (mismoNumero) console.log('📋 [Recordatorio] Destino', RECORDATORIO_NUMERO, '= número vinculado (riesgo markedUnread/getChat)');
 
   const now = new Date();
   const in1h = new Date(now.getTime() + HORAS_ANTES_MIN * 60 * 60 * 1000);

@@ -23,7 +23,7 @@
 
           <!-- Cómo usar (compacto) -->
           <section class="max-w-2xl mx-auto mb-8 px-4 py-3 md:px-5 md:py-4 bg-white rounded-xl border border-slate-200 shadow-sm">
-            <h2 class="text-sm font-black text-slate-700 uppercase tracking-wider mb-3">¿Cómo usar?</h2>
+            <h2 class="text-sm font-black text-slate-700 uppercase tracking-wider mb-3">Cómo cotizar tu flete o mudanza – Calculadora para saber el precio</h2>
             <ol class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-slate-600 text-sm">
               <li class="flex gap-2 items-start">
                 <span class="flex-shrink-0 w-5 h-5 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center font-bold text-xs">1</span>
@@ -396,9 +396,9 @@
         <div class="container mx-auto px-4">
           <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
             <div class="text-center sm:text-left">
-              <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-2 tracking-tighter">
-                Blog
-              </h2>
+              <h4 class="text-2xl md:text-3xl font-black text-slate-900 mb-2 tracking-tighter">
+                Artículos sobre fletes y mudanzas
+              </h4>
               <p class="text-slate-500 font-medium">Artículos recientes sobre fletes, mudanzas y logística</p>
             </div>
             <NuxtLink
@@ -897,8 +897,8 @@ const localeMap = {
 
 // Titles optimizados (consultor: keyword + conversión + año)
 const pageTitle = computed(() => {
-  if (locale.value === 'es') return 'Fletes Santiago desde $27.000 | Cotización Online Gratis | FletesPro'
-  return 'Professional Moving and Freight Services'
+  if (locale.value === 'es') return 'Fletes Santiago desde $27.000 | Cotización Online | FletesPro'
+  return 'Freight and Moving Santiago | FletesPro'
 })
 
 // Meta descriptions optimizadas (consultor: precio, 24/7, clientes, WhatsApp)
@@ -909,7 +909,7 @@ const pageDescription = computed(() => {
 
 // OG Titles y Descriptions
 const ogTitle = computed(() => {
-  if (locale.value === 'es') return 'Fletes Santiago desde $27.000 | Cotización Online Gratis | FletesPro'
+  if (locale.value === 'es') return 'Fletes Santiago desde $27.000 | Cotización Online | FletesPro'
   return 'Freight and Moving Santiago | FletesPro'
 })
 

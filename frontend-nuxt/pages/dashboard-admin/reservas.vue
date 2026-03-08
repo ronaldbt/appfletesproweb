@@ -74,6 +74,10 @@
           <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Qué llevar (carga)</span>
           <input v-model="nuevoFlete.carga" type="text" placeholder="Ej: muebles, cajas, refrigerador" class="mt-1 w-full rounded-xl border-2 border-slate-200 bg-white px-3 py-2 text-slate-900 focus:border-teal-500 focus:outline-none" />
         </label>
+        <label class="md:col-span-2 lg:col-span-3 flex items-center gap-2">
+          <input v-model="nuevoFlete.ivaIncluido" type="checkbox" class="rounded border-slate-300 text-teal-600 focus:ring-teal-500" />
+          <span class="text-sm font-medium text-slate-700">Precio con IVA incluido</span>
+        </label>
         <div class="md:col-span-2 lg:col-span-3 flex flex-wrap gap-2">
           <button type="submit" class="rounded-xl bg-teal-600 hover:bg-teal-700 px-4 py-2.5 text-sm font-bold text-white shadow-lg shadow-teal-500/30 transition-colors">
             {{ editingFleteId ? 'Guardar cambios' : 'Guardar flete en agenda' }}
@@ -111,7 +115,7 @@
               <td class="px-4 py-3 font-bold text-slate-900">{{ f.precio ? '$' + formatPrecio(f.precio) : '—' }}</td>
               <td class="px-4 py-3 text-slate-600">{{ getVehiculoLabel(f.vehiculoId) }}</td>
               <td class="px-4 py-3">{{ f.conAyudante === 'si' ? 'Sí' : 'No' }}</td>
-              <td class="px-4 py-3"><a :href="`https://wa.me/${f.telefono.replace(/\D/g, '')}`" target="_blank" rel="noopener" class="text-teal-600 font-bold hover:underline">{{ f.telefono }}</a></td>
+              <td class="px-4 py-3"><a v-if="f.telefono" :href="`https://wa.me/${(f.telefono || '').replace(/\D/g, '')}`" target="_blank" rel="noopener" class="text-teal-600 font-bold hover:underline">{{ f.telefono }}</a><span v-else class="text-slate-400">—</span></td>
               <td class="px-4 py-3 flex flex-wrap gap-2">
                 <button type="button" @click="editarFleteAgenda(f)" class="text-teal-600 hover:text-teal-700 font-bold text-xs">Editar</button>
                 <button type="button" @click="eliminarFleteAgenda(f.id)" class="text-red-600 hover:text-red-700 font-bold text-xs">Eliminar</button>
@@ -167,32 +171,40 @@
               <th class="px-4 py-3 text-left font-bold">Cliente</th>
               <th class="px-4 py-3 text-left font-bold">Ruta</th>
               <th class="px-4 py-3 text-left font-bold">Precio</th>
+              <th class="px-4 py-3 text-left font-bold">IVA</th>
               <th class="px-4 py-3 text-left font-bold">Estado</th>
+              <th class="px-4 py-3 text-left font-bold">Cobrado</th>
               <th class="px-4 py-3 text-left font-bold">Fecha y hora</th>
               <th class="px-4 py-3 text-left font-bold">Acciones</th>
             </tr>
           </thead>
           <tbody>
-            <tr v-for="reserva in filteredReservas" :key="reserva.id" class="border-t border-slate-200 hover:bg-slate-50/80">
-              <td class="px-4 py-3 font-mono text-slate-600">#{{ reserva.id }}</td>
+            <tr v-for="reserva in filteredReservas" :key="(reserva.source || 'reserva') + '-' + reserva.id" class="border-t border-slate-200 hover:bg-slate-50/80">
+              <td class="px-4 py-3 font-mono text-slate-600">#{{ String(reserva.id).slice(0, 8) }}{{ reserva.source === 'flete' ? '…' : '' }}</td>
               <td class="px-4 py-3">
-                <div class="font-medium text-slate-900">{{ reserva.usuario_nombre }}</div>
-                <div class="text-xs text-slate-500">{{ reserva.usuario_email }}</div>
+                <div class="font-medium text-slate-900">{{ reserva.usuario_nombre || '—' }}</div>
+                <div class="text-xs text-slate-500">{{ reserva.usuario_email || '' }}</div>
               </td>
               <td class="px-4 py-3 text-slate-700">
                 <div>{{ reserva.origen }}</div>
                 <div class="text-teal-600">→ {{ reserva.destino }}</div>
               </td>
-              <td class="px-4 py-3 font-bold text-slate-900">${{ reserva.precio?.toLocaleString('es-CL') }}</td>
+              <td class="px-4 py-3 font-bold text-slate-900">${{ (reserva.precio != null ? reserva.precio : 0).toLocaleString('es-CL') }}</td>
+              <td class="px-4 py-3 text-slate-600">{{ reserva.iva_incluido !== false ? 'Sí' : 'No' }}</td>
               <td class="px-4 py-3">
                 <span class="px-2 py-1 text-xs font-bold rounded-full" :class="getEstadoClass(reserva.estado)">{{ getEstadoText(reserva.estado) }}</span>
               </td>
-              <td class="px-4 py-3 text-slate-600">{{ formatDate(reserva.fecha) }}</td>
               <td class="px-4 py-3">
-                <button v-if="reserva.estado !== 'cancelado'" @click="cancelarReserva(reserva)" class="text-amber-600 hover:underline font-bold mr-2">Cancelar</button>
-                <button @click="viewReserva(reserva)" class="text-teal-600 hover:underline font-bold mr-2">Ver</button>
-                <button @click="editReserva(reserva)" class="text-slate-600 hover:underline font-bold mr-2">Editar</button>
-                <button @click="deleteReserva(reserva)" class="text-red-600 hover:underline font-bold">Eliminar</button>
+                <span v-if="reserva.estado !== 'completado'" class="text-slate-400">—</span>
+                <span v-else-if="reserva.cobrado !== false" class="text-emerald-600 font-medium">Sí</span>
+                <span v-else class="text-amber-600 font-medium">Por cobrar</span>
+              </td>
+              <td class="px-4 py-3 text-slate-600">{{ formatDate(reserva.fecha) }} {{ reserva.hora || '' }}</td>
+              <td class="px-4 py-3 flex flex-wrap gap-2">
+                <button v-if="reserva.estado !== 'completado' && !estadoEsCancelado(reserva.estado)" @click="marcarCompletado(reserva)" class="text-teal-600 hover:text-teal-700 font-bold text-xs">Completado</button>
+                <button v-if="reserva.estado === 'completado' && reserva.cobrado === false" @click="marcarCobrado(reserva)" class="text-emerald-600 hover:underline font-bold text-xs">Marcar cobrado</button>
+                <button v-if="!estadoEsCancelado(reserva.estado)" @click="cancelarReserva(reserva)" class="text-amber-600 hover:underline font-bold text-xs">Cancelar</button>
+                <button @click="viewReserva(reserva)" class="text-slate-600 hover:underline font-bold text-xs">Ver</button>
               </td>
             </tr>
           </tbody>
@@ -208,7 +220,6 @@ definePageMeta({ layout: 'admin' })
 import { ref, computed, onMounted } from 'vue'
 import { apiUrl } from '../../config/api.js'
 
-const STORAGE_KEY = 'fletespro_agenda_fletes'
 const WHATSAPP_NUMERO = '56979796841'
 const UN_MES_MS = 30 * 24 * 60 * 60 * 1000
 
@@ -229,37 +240,40 @@ const nuevoFlete = ref({
   carga: '',
   conAyudante: 'no',
   telefono: '',
-  vehiculoId: ''
+  vehiculoId: '',
+  ivaIncluido: true
 })
 
-function getAgendaFromStorage() {
-  if (process.client && typeof localStorage !== 'undefined') {
-    try {
-      const raw = localStorage.getItem(STORAGE_KEY)
-      const list = raw ? JSON.parse(raw) : []
-      const now = Date.now()
-      const filtrado = list.filter(f => {
-        const d = parseDateLocal(f.fecha)
-        if (!d || isNaN(d.getTime())) return true
-        return d.getTime() + UN_MES_MS > now
-      })
-      if (filtrado.length !== list.length) localStorage.setItem(STORAGE_KEY, JSON.stringify(filtrado))
-      return filtrado
-    } catch (_) {}
+// Agenda de fletes desde la base de datos (API), sincronizada en todos los dispositivos
+function mapReservaToAgendaFlete(r) {
+  const fechaIso = r.fecha ? (typeof r.fecha === 'string' ? r.fecha : new Date(r.fecha).toISOString()) : ''
+  return {
+    id: r.id,
+    nombre: r.usuario_nombre ?? '',
+    telefono: (r.usuario_telefono ?? '').toString().replace(/\D/g, '').replace(/^0/, '56') || '',
+    fecha: fechaIso,
+    hora: r.hora ?? '',
+    origen: r.origen ?? '',
+    destino: r.destino ?? '',
+    carga: r.carga ?? '',
+    precio: r.precio != null ? parseFloat(r.precio) : null,
+    vehiculoId: r.vehiculo_id ?? null,
+    conAyudante: r.ayudante ? 'si' : 'no',
+    ivaIncluido: r.iva_incluido !== false
   }
-  return []
 }
 
-const agendaFletes = ref(getAgendaFromStorage())
+const agendaFletes = computed(() => {
+  return reservas.value
+    .filter(r => r.source === 'flete')
+    .map(mapReservaToAgendaFlete)
+})
 
 const fletesManana = computed(() => {
   const manana = new Date()
   manana.setDate(manana.getDate() + 1)
-  const y = manana.getFullYear()
-  const m = String(manana.getMonth() + 1).padStart(2, '0')
-  const d = String(manana.getDate()).padStart(2, '0')
-  const mananaStr = `${y}-${m}-${d}`
-  return agendaFletes.value.filter(f => f.fecha === mananaStr)
+  const mananaStr = `${manana.getFullYear()}-${String(manana.getMonth() + 1).padStart(2, '0')}-${String(manana.getDate()).padStart(2, '0')}`
+  return agendaFletes.value.filter(f => (f.fecha || '').slice(0, 10) === mananaStr)
 })
 
 function formatPrecio(val) {
@@ -284,9 +298,7 @@ function getVehiculoLabel(vehiculoId) {
 
 async function guardarFleteAgenda() {
   console.log('📋 [Reservas] guardarFleteAgenda llamado')
-  const id = editingFleteId.value || Date.now().toString()
   const f = {
-    id,
     nombre: (nuevoFlete.value.nombre || '').trim(),
     precio: (nuevoFlete.value.precio || '').trim().replace(/\D/g, '') || null,
     fecha: nuevoFlete.value.fecha,
@@ -296,11 +308,41 @@ async function guardarFleteAgenda() {
     carga: nuevoFlete.value.carga,
     conAyudante: nuevoFlete.value.conAyudante,
     telefono: nuevoFlete.value.telefono.replace(/\D/g, '').replace(/^0/, '56'),
-    vehiculoId: nuevoFlete.value.vehiculoId || null
+    vehiculoId: nuevoFlete.value.vehiculoId || null,
+    ivaIncluido: nuevoFlete.value.ivaIncluido !== false
   }
   console.log('📋 [Reservas] Flete a guardar:', f)
 
-  if (!editingFleteId.value) {
+  if (editingFleteId.value) {
+    try {
+      const url = apiUrl(`/api/admin/fletes/${editingFleteId.value}`)
+      const payload = {
+        nombre: f.nombre,
+        telefono: f.telefono,
+        origen: f.origen,
+        destino: f.destino,
+        carga: f.carga || '',
+        ayudante: f.conAyudante === 'si',
+        precio: f.precio,
+        fecha: f.fecha,
+        hora: f.hora,
+        vehiculoId: f.vehiculoId || null,
+        ivaIncluido: f.ivaIncluido !== false
+      }
+      const res = await fetch(url, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+      const data = await res.json().catch(() => ({}))
+      if (!res.ok) throw new Error(data.error || 'Error actualizando flete')
+      console.log('✅ [Reservas] Flete actualizado en BD.')
+    } catch (err) {
+      console.error('❌ [Reservas] Error actualizando flete:', err)
+      alert('Error al actualizar: ' + (err.message || 'Error desconocido'))
+      return
+    }
+  } else {
     try {
       const url = apiUrl('/api/admin/fletes')
       const payload = {
@@ -313,34 +355,26 @@ async function guardarFleteAgenda() {
         precio: f.precio,
         fecha: f.fecha,
         hora: f.hora,
-        vehiculoId: f.vehiculoId || null
+        vehiculoId: f.vehiculoId || null,
+        ivaIncluido: f.ivaIncluido !== false
       }
       console.log('📋 [Reservas] POST URL:', url)
-      console.log('📋 [Reservas] Payload:', payload)
       const res = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       })
       const data = await res.json().catch(() => ({}))
-      console.log('📋 [Reservas] Respuesta status:', res.status, 'body:', data)
+      console.log('📋 [Reservas] Respuesta status:', res.status)
       if (!res.ok) throw new Error(data.error || 'Error creando flete')
-      if (data.fleteId) f.id = data.fleteId
-      console.log('✅ [Reservas] Flete guardado en BD. WhatsApp enviado por backend.')
+      console.log('✅ [Reservas] Flete guardado en BD.')
     } catch (err) {
       console.error('❌ [Reservas] Error guardando en backend:', err)
-      alert('Se guardó localmente pero hubo un error al enviar al servidor: ' + (err.message || 'Error desconocido'))
+      alert('Error al guardar: ' + (err.message || 'Error desconocido'))
+      return
     }
   }
-
-  if (editingFleteId.value) {
-    agendaFletes.value = agendaFletes.value.map(x => x.id === id ? f : x)
-    console.log('📋 [Reservas] Flete actualizado en agenda local')
-  } else {
-    agendaFletes.value = [f, ...agendaFletes.value]
-    console.log('📋 [Reservas] Flete agregado a agenda local')
-  }
-  if (process.client) localStorage.setItem(STORAGE_KEY, JSON.stringify(agendaFletes.value))
+  await loadReservas()
   cancelarEdicionFlete()
 }
 
@@ -348,28 +382,35 @@ function editarFleteAgenda(f) {
   editingFleteId.value = f.id
   nuevoFlete.value = {
     nombre: f.nombre || '',
-    precio: f.precio ? String(f.precio) : '',
-    fecha: f.fecha || '',
+    precio: f.precio != null ? String(f.precio) : '',
+    fecha: (f.fecha || '').slice(0, 10) || '',
     hora: f.hora || '',
     origen: f.origen || '',
     destino: f.destino || '',
     carga: f.carga || '',
     conAyudante: f.conAyudante === 'si' ? 'si' : 'no',
-    telefono: f.telefono ? (f.telefono.startsWith('56') ? f.telefono : '56' + f.telefono) : '',
-    vehiculoId: f.vehiculoId || ''
+    telefono: f.telefono ? (String(f.telefono).startsWith('56') ? String(f.telefono) : '56' + String(f.telefono)) : '',
+    vehiculoId: f.vehiculoId || '',
+    ivaIncluido: f.ivaIncluido !== false
   }
 }
 
 function cancelarEdicionFlete() {
   editingFleteId.value = null
-  nuevoFlete.value = { nombre: '', precio: '', fecha: '', hora: '', origen: '', destino: '', carga: '', conAyudante: 'no', telefono: '', vehiculoId: '' }
+  nuevoFlete.value = { nombre: '', precio: '', fecha: '', hora: '', origen: '', destino: '', carga: '', conAyudante: 'no', telefono: '', vehiculoId: '', ivaIncluido: true }
 }
 
-function eliminarFleteAgenda(id) {
+async function eliminarFleteAgenda(id) {
   if (!confirm('¿Eliminar este flete de la agenda?')) return
-  agendaFletes.value = agendaFletes.value.filter(f => f.id !== id)
-  if (process.client) localStorage.setItem(STORAGE_KEY, JSON.stringify(agendaFletes.value))
-  if (editingFleteId.value === id) cancelarEdicionFlete()
+  try {
+    const res = await fetch(apiUrl(`/api/admin/fletes/${id}`), { method: 'DELETE' })
+    if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error || 'Error eliminando')
+    await loadReservas()
+    if (editingFleteId.value === id) cancelarEdicionFlete()
+  } catch (err) {
+    console.error('❌ [Reservas] Error eliminando flete:', err)
+    alert('Error al eliminar: ' + (err.message || 'Error desconocido'))
+  }
 }
 
 const reservasStats = computed(() => {
@@ -436,7 +477,13 @@ function getEstadoClass(estado) {
     confirmado: 'bg-sky-100 text-sky-800',
     en_proceso: 'bg-violet-100 text-violet-800',
     completado: 'bg-teal-100 text-teal-800',
-    cancelado: 'bg-red-100 text-red-800'
+    enviado: 'bg-amber-100 text-amber-800',
+    asignado: 'bg-sky-100 text-sky-800',
+    cancelado: 'bg-red-100 text-red-800',
+    cancelado_admin: 'bg-red-100 text-red-800',
+    cancelado_conductor: 'bg-red-100 text-red-800',
+    cancelado_cliente: 'bg-red-100 text-red-800',
+    expirado: 'bg-slate-200 text-slate-700'
   }
   return map[estado] || 'bg-slate-100 text-slate-800'
 }
@@ -447,14 +494,75 @@ function getEstadoText(estado) {
     confirmado: 'Confirmado',
     en_proceso: 'En Proceso',
     completado: 'Completado',
-    cancelado: 'Cancelado'
+    cancelado: 'Cancelado',
+    enviado: 'Enviado',
+    asignado: 'Asignado',
+    cancelado_admin: 'Cancelado',
+    cancelado_conductor: 'Cancelado',
+    cancelado_cliente: 'Cancelado',
+    expirado: 'Expirado'
   }
   return map[estado] || estado
 }
 
+function estadoEsCancelado(estado) {
+  return !estado || estado === 'cancelado' || (String(estado).startsWith && String(estado).startsWith('cancelado'))
+}
+
+async function marcarCompletado(item) {
+  if (!confirm('¿Marcar como realizado/completado?')) return
+  const cobrado = confirm('¿Ya recibiste el pago de este flete?\n\nSí = Cobrado\nNo = Orden de compra / me pagan después')
+  try {
+    if (item.source === 'flete') {
+      const res = await fetch(apiUrl(`/api/admin/fletes/${item.id}/estado`), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ estado: 'completado', cobrado })
+      })
+      if (!res.ok) throw new Error((await res.json()).error || 'Error')
+    } else {
+      const res = await fetch(apiUrl(`/api/admin/reservas/${item.id}`), {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ estado: 'completado', cobrado })
+      })
+      if (!res.ok) throw new Error((await res.json()).error || 'Error')
+    }
+    await loadReservas()
+  } catch (e) {
+    console.error(e)
+    alert('Error al marcar como completado')
+  }
+}
+
+async function marcarCobrado(item) {
+  if (!confirm('¿Marcar como cobrado? (Ya recibiste el pago)')) return
+  try {
+    if (item.source === 'flete') {
+      const res = await fetch(apiUrl(`/api/admin/fletes/${item.id}`), {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ cobrado: true })
+      })
+      if (!res.ok) throw new Error((await res.json()).error || 'Error')
+    } else {
+      const res = await fetch(apiUrl(`/api/admin/reservas/${item.id}`), {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ cobrado: true })
+      })
+      if (!res.ok) throw new Error((await res.json()).error || 'Error')
+    }
+    await loadReservas()
+  } catch (e) {
+    console.error(e)
+    alert('Error al marcar como cobrado')
+  }
+}
+
 async function loadReservas() {
   try {
-    const res = await fetch(apiUrl('/api/admin/reservas'))
+    const res = await fetch(apiUrl('/api/admin/reservas?unificado=1'))
     const data = await res.json()
     reservas.value = data.reservas || []
   } catch (e) {
@@ -473,19 +581,28 @@ async function loadVehiculos() {
   }
 }
 
-async function cancelarReserva(reserva) {
-  if (!confirm(`¿Marcar reserva #${reserva.id} como cancelada?`)) return
+async function cancelarReserva(item) {
+  if (!confirm(`¿Marcar como cancelada?`)) return
   try {
-    const res = await fetch(apiUrl(`/api/admin/reservas/${reserva.id}`), {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ estado: 'cancelado' })
-    })
-    if (!res.ok) throw new Error(await res.text())
+    if (item.source === 'flete') {
+      const res = await fetch(apiUrl(`/api/admin/fletes/${item.id}/estado`), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ estado: 'cancelado_admin' })
+      })
+      if (!res.ok) throw new Error((await res.json()).error || 'Error')
+    } else {
+      const res = await fetch(apiUrl(`/api/admin/reservas/${item.id}`), {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ estado: 'cancelado' })
+      })
+      if (!res.ok) throw new Error(await res.text())
+    }
     await loadReservas()
   } catch (e) {
     console.error(e)
-    alert('Error al cancelar la reserva')
+    alert('Error al cancelar')
   }
 }
 
@@ -496,8 +613,7 @@ function deleteReserva(r) {
 }
 
 onMounted(() => {
-  console.log('📋 [Reservas] onMounted: cargando agenda, vehículos y reservas del sistema')
-  agendaFletes.value = getAgendaFromStorage()
+  console.log('📋 [Reservas] onMounted: cargando vehículos y reservas (agenda desde BD)')
   loadVehiculos()
   loadReservas()
 })

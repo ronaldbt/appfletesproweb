@@ -20,7 +20,7 @@ headings:
   - "Fletes Puerto Montt: Llega al Sur con Nuestro Servicio Especializado"
 ---
 
-# Fletes Baratos
+## Fletes Baratos
 
 Tu solución confiable para **fletes baratos**, mudanzas y [transporte en frío](/transporte-frio). Simplifica tus traslados con nuestra empresa especializada. Y por supuesto contamos con [embalaje](/embalajes) si lo requiere.
 

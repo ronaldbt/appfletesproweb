@@ -277,6 +277,10 @@ useHead(() => {
         name: 'author',
         content: page.value.author || 'FletesPro'
       },
+      {
+        name: 'publisher',
+        content: 'FletesPro'
+      },
       // Open Graph
       { property: 'og:type', content: 'article' },
       { property: 'og:url', content: currentUrl.value },
@@ -284,7 +288,7 @@ useHead(() => {
       { property: 'og:description', content: page.value.description || page.value.title },
       { property: 'og:image', content: defaultImage.value },
       { property: 'og:site_name', content: 'FletesPro' },
-      { property: 'og:locale', content: 'es_ES' },
+      { property: 'og:locale', content: 'es_CL' },
       { property: 'article:published_time', content: page.value.date },
       { property: 'article:modified_time', content: page.value.date },
       { property: 'article:author', content: page.value.author || 'FletesPro' },
