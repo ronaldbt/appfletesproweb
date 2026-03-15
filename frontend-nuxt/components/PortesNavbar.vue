@@ -27,21 +27,12 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
-          <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-slate-100 overflow-hidden z-50">
-            <NuxtLink to="/mudanzas/particulares" class="block px-6 py-4 text-sm font-bold text-slate-700 hover:bg-teal-50 hover:text-teal-600 transition-all">
-              {{ $t('nav.mudanzasParticulares') }}
+          <div class="absolute top-full left-0 mt-2 w-64 max-h-[70vh] overflow-y-auto bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-slate-100 overflow-hidden z-50">
+            <NuxtLink to="/mudanzas-santiago" class="block px-6 py-4 text-sm font-bold text-teal-700 hover:bg-teal-50 hover:text-teal-600 transition-all border-b border-slate-100">
+              Mudanzas Santiago
             </NuxtLink>
-            <NuxtLink to="/mudanzas/empresas" class="block px-6 py-4 text-sm font-bold text-slate-700 hover:bg-teal-50 hover:text-teal-600 transition-all">
-              {{ $t('nav.mudanzasEmpresas') }}
-            </NuxtLink>
-            <NuxtLink to="/mudanzas/oficinas" class="block px-6 py-4 text-sm font-bold text-slate-700 hover:bg-teal-50 hover:text-teal-600 transition-all">
-              {{ $t('nav.mudanzasOficinas') }}
-            </NuxtLink>
-            <NuxtLink to="/mudanzas/internacionales" class="block px-6 py-4 text-sm font-bold text-slate-700 hover:bg-teal-50 hover:text-teal-600 transition-all">
-              {{ $t('nav.mudanzasInternacionales') }}
-            </NuxtLink>
-            <NuxtLink to="/mudanzas/urgentes" class="block px-6 py-4 text-sm font-bold text-slate-700 hover:bg-teal-50 hover:text-teal-600 transition-all">
-              {{ $t('nav.mudanzasUrgentes') }}
+            <NuxtLink v-for="comuna in mudanzasComunas" :key="comuna.slug" :to="`/mudanzas-${comuna.slug}`" class="block px-6 py-4 text-sm font-bold text-slate-700 hover:bg-teal-50 hover:text-teal-600 transition-all">
+              Mudanzas {{ comuna.name }}
             </NuxtLink>
           </div>
         </div>
@@ -159,20 +150,11 @@
           <div class="text-slate-900 font-black text-lg uppercase tracking-tighter mb-2">
             {{ $t('nav.mudanzas') }}
           </div>
-          <NuxtLink to="/mudanzas/particulares" @click="isOpen = false" class="text-slate-600 font-bold text-base pl-4 hover:text-teal-600 transition-all">
-            {{ $t('nav.mudanzasParticulares') }}
+          <NuxtLink to="/mudanzas-santiago" @click="isOpen = false" class="text-teal-700 font-bold text-base pl-4 hover:text-teal-600 transition-all">
+            Mudanzas Santiago
           </NuxtLink>
-          <NuxtLink to="/mudanzas/empresas" @click="isOpen = false" class="text-slate-600 font-bold text-base pl-4 hover:text-teal-600 transition-all">
-            {{ $t('nav.mudanzasEmpresas') }}
-          </NuxtLink>
-          <NuxtLink to="/mudanzas/oficinas" @click="isOpen = false" class="text-slate-600 font-bold text-base pl-4 hover:text-teal-600 transition-all">
-            {{ $t('nav.mudanzasOficinas') }}
-          </NuxtLink>
-          <NuxtLink to="/mudanzas/internacionales" @click="isOpen = false" class="text-slate-600 font-bold text-base pl-4 hover:text-teal-600 transition-all">
-            {{ $t('nav.mudanzasInternacionales') }}
-          </NuxtLink>
-          <NuxtLink to="/mudanzas/urgentes" @click="isOpen = false" class="text-slate-600 font-bold text-base pl-4 hover:text-teal-600 transition-all mb-2">
-            {{ $t('nav.mudanzasUrgentes') }}
+          <NuxtLink v-for="comuna in mudanzasComunas" :key="comuna.slug" :to="`/mudanzas-${comuna.slug}`" @click="isOpen = false" class="text-slate-600 font-bold text-base pl-4 hover:text-teal-600 transition-all">
+            Mudanzas {{ comuna.name }}
           </NuxtLink>
           <NuxtLink to="/embalajes" @click="isOpen = false" class="text-slate-900 font-black text-lg uppercase tracking-tighter">
             Embalajes
@@ -212,6 +194,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { comunasRM } from '~/config/comunasRM'
+import { mudanzasComunas } from '~/config/mudanzasComunas'
 
 defineEmits(['get-quote'])
 

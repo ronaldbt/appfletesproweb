@@ -51,22 +51,9 @@
         </div>
       </div>
     </section>
-    <section class="py-16 md:py-20 bg-white border-t border-slate-100">
-      <div class="container mx-auto px-4 max-w-4xl">
-        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-4 pb-3 border-b-4 border-teal-500 w-fit">Mudanzas por comuna</h2>
-        <p class="text-slate-600 leading-relaxed mb-8">Servicio de mudanzas en Santiago y en cada comuna de la Región Metropolitana. Cotiza según tu origen y destino.</p>
-        <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-          <li v-for="comuna in mudanzasComunas" :key="comuna.slug">
-            <NuxtLink :to="`/mudanzas-${comuna.slug}`" class="block px-4 py-3 rounded-xl border border-slate-200 text-slate-700 font-medium hover:border-teal-500 hover:bg-teal-50/50 hover:text-teal-700 transition-colors">
-              Mudanzas {{ comuna.name }}
-            </NuxtLink>
-          </li>
-        </ul>
-      </div>
-    </section>
     <section class="py-16 md:py-20 bg-white" id="faqs">
       <div class="container mx-auto px-4 max-w-4xl">
-        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-6 pb-3 border-b-4 border-teal-500 w-fit">Preguntas frecuentes: mudanzas Santiago</h2>
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-6 pb-3 border-b-4 border-teal-500 w-fit">Preguntas frecuentes: mudanzas {{ comunaName }}</h2>
         <ul class="space-y-6">
           <li v-for="(faq, i) in content.faqs" :key="i" class="bg-slate-50 rounded-2xl p-6 border border-slate-100">
             <h3 class="text-lg font-bold text-slate-900 mb-2">{{ faq.question }}</h3>
@@ -79,35 +66,36 @@
 </template>
 
 <script setup>
-import content from '~/data/mudanzas/santiago.js'
-import { mudanzasComunas } from '~/config/mudanzasComunas'
+import content from '~/data/mudanzas/chicureo.js'
 
+const comunaName = 'Chicureo'
 const siteUrl = 'https://fletespro.cl'
-const currentUrl = `${siteUrl}/mudanzas-santiago`
+const currentUrl = `${siteUrl}/mudanzas-chicureo`
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Inicio', item: siteUrl },
-    { '@type': 'ListItem', position: 2, name: 'Mudanzas Santiago', item: currentUrl }
+    { '@type': 'ListItem', position: 2, name: 'Mudanzas Santiago', item: `${siteUrl}/mudanzas-santiago` },
+    { '@type': 'ListItem', position: 3, name: 'Mudanzas Chicureo', item: currentUrl }
   ]
 }
 
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  serviceType: 'Mudanzas en Santiago',
-  name: 'Mudanzas Santiago',
+  serviceType: 'Mudanzas en Chicureo',
+  name: 'Mudanzas Chicureo',
   description: content.meta.description,
   provider: {
     '@type': 'LocalBusiness',
     name: 'FletesPro',
     url: siteUrl,
     telephone: '+56-9-7979-6841',
-    address: { '@type': 'PostalAddress', addressLocality: 'Santiago', addressRegion: 'Región Metropolitana', addressCountry: 'CL' }
+    address: { '@type': 'PostalAddress', addressLocality: 'Colina', addressRegion: 'Región Metropolitana', addressCountry: 'CL' }
   },
-  areaServed: { '@type': 'City', name: 'Santiago', containedInPlace: { '@type': 'AdministrativeArea', name: 'Región Metropolitana' } }
+  areaServed: { '@type': 'City', name: 'Chicureo', containedInPlace: { '@type': 'AdministrativeArea', name: 'Región Metropolitana' } }
 }
 
 const faqSchema = {
