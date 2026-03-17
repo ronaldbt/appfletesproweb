@@ -1,29 +1,29 @@
 <template>
-  <nav :class="`fixed w-full z-[70] transition-all duration-500 ${scrolled ? 'bg-white/90 backdrop-blur-xl shadow-lg py-3' : 'bg-transparent py-6'}`">
+  <nav :class="`fixed w-full z-[70] transition-all duration-500 ${scrolled ? 'bg-white/90 backdrop-blur-xl shadow-lg py-2' : 'bg-transparent py-4'}`">
     <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
       <NuxtLink to="/" class="flex items-center gap-2 group">
-        <div class="bg-white p-2 rounded-xl group-hover:bg-teal-50 border-2 border-slate-200 group-hover:border-teal-600 transition-all duration-300 transform group-hover:rotate-12 shadow-lg flex items-center justify-center">
+        <div class="bg-white p-1.5 rounded-lg group-hover:bg-teal-50 border-2 border-slate-200 group-hover:border-teal-600 transition-all duration-300 transform group-hover:rotate-12 shadow-lg flex items-center justify-center">
           <img 
             src="/logo-portespro.png" 
             alt="FletesPro Logo" 
-            class="w-12 h-12 object-contain"
+            class="w-9 h-9 object-contain"
             loading="eager"
           />
         </div>
-        <span class="text-2xl font-black tracking-tighter text-slate-900">
+        <span class="text-xl font-black tracking-tight text-slate-900">
           FLETES<span class="text-teal-600">PRO</span>.cl
         </span>
       </NuxtLink>
 
       <!-- Desktop Links -->
-      <div class="hidden md:flex items-center gap-4">
+      <div class="hidden md:flex items-center gap-2">
         <!-- Mudanzas Dropdown -->
         <div class="relative group">
           <button 
-            class="text-sm font-black uppercase tracking-widest text-slate-500 hover:text-teal-600 transition-all relative flex items-center gap-1 cursor-pointer"
+            class="text-xs font-bold uppercase tracking-wide text-slate-500 hover:text-teal-600 transition-all relative flex items-center gap-0.5 cursor-pointer whitespace-nowrap"
           >
             {{ $t('nav.mudanzas') }}
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
@@ -40,64 +40,64 @@
         <!-- Embalajes -->
         <NuxtLink 
           to="/embalajes"
-          class="text-sm font-black uppercase tracking-widest text-slate-500 hover:text-teal-600 transition-all relative group"
+          class="text-xs font-bold uppercase tracking-wide text-slate-500 hover:text-teal-600 transition-all relative group whitespace-nowrap"
         >
           {{ $t('nav.embalajes') }}
-          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300" />
+          <span class="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300" />
         </NuxtLink>
 
         <!-- Guardamuebles -->
         <NuxtLink 
           to="/guardamuebles"
-          class="text-sm font-black uppercase tracking-widest text-slate-500 hover:text-teal-600 transition-all relative group"
+          class="text-xs font-bold uppercase tracking-wide text-slate-500 hover:text-teal-600 transition-all relative group whitespace-nowrap"
         >
           {{ $t('nav.guardamuebles') }}
-          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300" />
+          <span class="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300" />
         </NuxtLink>
 
         <!-- Transporte en Frío -->
         <NuxtLink 
           to="/transporte-frio"
-          class="text-sm font-black uppercase tracking-widest text-slate-500 hover:text-teal-600 transition-all relative group"
+          class="text-xs font-bold uppercase tracking-wide text-slate-500 hover:text-teal-600 transition-all relative group whitespace-nowrap"
         >
           {{ $t('nav.transporteFrio') }}
-          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300" />
+          <span class="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300" />
         </NuxtLink>
 
         <!-- Última Milla -->
         <NuxtLink 
           to="/ultima-milla"
-          class="text-sm font-black uppercase tracking-widest text-slate-500 hover:text-teal-600 transition-all relative group"
+          class="text-xs font-bold uppercase tracking-wide text-slate-500 hover:text-teal-600 transition-all relative group whitespace-nowrap"
         >
           {{ $t('nav.ultimaMilla') }}
-          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300" />
+          <span class="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300" />
         </NuxtLink>
 
         <!-- Fletes Construcción -->
         <NuxtLink 
           to="/fletes-construccion"
-          class="text-sm font-black uppercase tracking-widest text-slate-500 hover:text-teal-600 transition-all relative group"
+          class="text-xs font-bold uppercase tracking-wide text-slate-500 hover:text-teal-600 transition-all relative group whitespace-nowrap"
         >
           {{ $t('nav.fletesConstruccion') }}
-          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300" />
+          <span class="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300" />
         </NuxtLink>
 
         <!-- Blog -->
         <NuxtLink 
           to="/blog"
-          class="text-sm font-black uppercase tracking-widest text-slate-500 hover:text-teal-600 transition-all relative group"
+          class="text-xs font-bold uppercase tracking-wide text-slate-500 hover:text-teal-600 transition-all relative group whitespace-nowrap"
         >
           {{ $t('common.blog') }}
-          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300" />
+          <span class="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300" />
         </NuxtLink>
 
         <!-- Comunas RM Dropdown -->
         <div class="relative group">
           <button 
-            class="text-sm font-black uppercase tracking-widest text-slate-500 hover:text-teal-600 transition-all relative flex items-center gap-1"
+            class="text-xs font-bold uppercase tracking-wide text-slate-500 hover:text-teal-600 transition-all relative flex items-center gap-0.5 whitespace-nowrap"
           >
             Comunas RM
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
@@ -111,15 +111,15 @@
         <!-- Contacto -->
         <NuxtLink 
           to="/contacto"
-          class="text-sm font-black uppercase tracking-widest text-slate-500 hover:text-teal-600 transition-all relative group"
+          class="text-xs font-bold uppercase tracking-wide text-slate-500 hover:text-teal-600 transition-all relative group whitespace-nowrap"
         >
           {{ $t('nav.contacto') }}
-          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300" />
+          <span class="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300" />
         </NuxtLink>
 
         <NuxtLink 
           to="/login"
-          class="px-4 py-2 rounded-xl border-2 border-teal-600 text-teal-600 font-bold hover:bg-teal-50 transition-all"
+          class="px-3 py-1.5 text-xs font-bold rounded-lg border-2 border-teal-600 text-teal-600 hover:bg-teal-50 transition-all"
         >
           {{ $t('nav.login') }}
         </NuxtLink>

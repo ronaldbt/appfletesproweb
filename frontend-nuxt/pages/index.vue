@@ -17,7 +17,7 @@
               {{ $t('pages.index.subtitle') }}
             </p>
             <p class="mt-6 text-base text-slate-600 max-w-2xl mx-auto">
-              Desde pequeños fletes y mudanzas hasta envíos para ecommerce. Ofrecemos flete Santiago, fletes Santiago centro y toda la Región Metropolitana. ¿Estás planeando fletes o mudanzas o necesitas transportar mercancías de forma económica y segura? Si es así, estás en el lugar correcto. WhatsApp +56 9 7979 6841.
+              Desde pequeños fletes y mudanzas hasta envíos para ecommerce. Servicio en la RM y a regiones. ¿Estás planeando fletes o mudanzas? Para la capital tenemos una <NuxtLink to="/fletes-santiago" class="text-teal-600 font-semibold hover:underline">página dedicada</NuxtLink>. WhatsApp +56 9 7979 6841.
             </p>
           </div>
 
@@ -27,7 +27,7 @@
             <ol class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-slate-600 text-sm">
               <li class="flex gap-2 items-start">
                 <span class="flex-shrink-0 w-5 h-5 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center font-bold text-xs">1</span>
-                <span><strong class="text-slate-800">Fletes en la Región Metropolitana</strong>: usa la calculadora de abajo.</span>
+                <span>Para la RM: calculadora aquí o <NuxtLink to="/fletes-santiago" class="text-teal-600 font-semibold hover:underline">página Fletes Santiago</NuxtLink>.</span>
               </li>
               <li class="flex gap-2 items-start">
                 <span class="flex-shrink-0 w-5 h-5 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center font-bold text-xs">2</span>
@@ -40,80 +40,25 @@
             </ol>
           </section>
 
-          <h2 class="text-2xl md:text-3xl font-black text-slate-900 mb-6 text-center">Calculadora precio flete Región metropolitana</h2>
+          <h2 class="text-2xl md:text-3xl font-black text-slate-900 mb-6 text-center">Calculadora de cotización (flete o mudanza)</h2>
           <div class="animate-slide-up">
             <PortesCalculator :is-hero="true" />
           </div>
         </div>
       </section>
 
-      <!-- Precio fletes Santiago / estimativo -->
-      <section class="py-16 bg-white">
-        <div class="container mx-auto px-4 max-w-5xl">
-          <div class="grid lg:grid-cols-2 gap-10 items-start">
-            <div>
-              <h2 class="text-3xl font-black text-slate-900 mb-4">Precio fletes Santiago</h2>
-              <p class="text-slate-600 leading-relaxed mb-6">
-                ¿Necesitas trasladar un mueble, un refrigerador, una cama, te cambias de casa y no estás seguro del precio que te pueden cobrar? Acá te dejamos un estimativo: si alguien te dio una buena oferta, contáctanos que te la mejoramos. Usa la calculadora de arriba o escríbenos por WhatsApp.
-              </p>
-              <p class="text-lg font-black text-slate-800 mb-4">Fletes y mudanzas precios</p>
-              <p class="text-slate-600 leading-relaxed">
-                Desde un flete pequeño hasta más grandes tenemos los mejores precios para flete Santiago y fletes Santiago. Realizamos fletes Santiago centro y toda la RM. En el proceso de mudanzas y transportes, el factor económico suele ser un aspecto crucial. Muchas personas buscan fletes y mudanzas a precios asequibles sin comprometer la calidad del servicio.
-              </p>
-              <p class="text-slate-600 leading-relaxed mt-4">
-                Nuestro servicio de fletes en Santiago ofrece fletes baratos Santiago y fletes económicos en Santiago para particulares y empresas. Si buscas fletes en Santiago de Chile con valor flete Santiago claro, usa la calculadora o escríbenos por WhatsApp. Cubrimos fletes dentro de Santiago y fletes fuera de Santiago (a regiones).
-              </p>
-            </div>
-            <figure class="rounded-2xl border border-slate-200 overflow-hidden shadow-lg bg-white">
-              <img
-                src="/ejemplo-flete-sencillo.webp"
-                alt="Ejemplo flete sencillo: Costanera Center a Estadio Nacional, distancia 6.5 km, precio $35.750, camión 3/4"
-                width="600"
-                height="400"
-                class="w-full h-auto object-cover"
-                loading="lazy"
-              />
-            </figure>
-          </div>
+      <!-- Enlace a Fletes Santiago (página principal Santiago) -->
+      <section class="py-10 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+          <p class="text-slate-600 leading-relaxed mb-4">
+            ¿Buscas precios y cotización para <strong>fletes en la Región Metropolitana</strong>? En nuestra página dedicada tienes calculadora, tarifas actualizadas y cobertura por comuna.
+          </p>
+          <NuxtLink to="/fletes-santiago" class="inline-block bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-xl font-black text-sm uppercase tracking-widest transition-all">
+            Ver Fletes Santiago →
+          </NuxtLink>
         </div>
       </section>
 
-      <!-- Precios de Fletes en Santiago 2026 - Tarifas actualizadas (consultor) -->
-      <section class="py-16 bg-slate-50">
-        <div class="container mx-auto px-4 max-w-5xl">
-          <h2 class="text-3xl font-black text-slate-900 mb-2">Precios de Fletes en Santiago 2026 – Tarifas actualizadas</h2>
-          <p class="text-slate-600 mb-8">¿Cuánto cuesta un flete en Santiago? Referencia de precios para fletes Santiago y fletes Santiago a regiones.</p>
-          <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-              <h3 class="text-xl font-black text-slate-900 mb-4">Fletes Región Metropolitana: $20.000 + $2.000/km</h3>
-              <ul class="text-slate-600 space-y-2 mb-4">
-                <li>Precio base: $20.000 CLP</li>
-                <li>Por kilómetro adicional: $2.000 CLP (hasta 50 km)</li>
-                <li>Incluye hasta 2 m³ de carga</li>
-                <li>Metro cúbico adicional: +$20.000 CLP (incluye carga y descarga)</li>
-                <li>Ayudante extra: +$10.000 CLP</li>
-              </ul>
-              <p class="text-sm font-black text-slate-800 mb-2">Ejemplos de precios fletes Santiago:</p>
-              <ul class="text-slate-600 text-sm space-y-1">
-                <li>Providencia a Las Condes (6 km): aprox. $32.000</li>
-                <li>Maipú a Santiago Centro (15 km): aprox. $50.000</li>
-                <li>Puente Alto a La Florida (12 km): aprox. $44.000</li>
-              </ul>
-            </div>
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-              <h3 class="text-xl font-black text-slate-900 mb-4">Fletes Santiago a regiones: $900/km</h3>
-              <ul class="text-slate-600 space-y-2 mb-4">
-                <li>Tarifa de referencia: $900 CLP por kilómetro</li>
-                <li>Santiago – Valparaíso (120 km): desde aprox. $108.000</li>
-                <li>Santiago – Rancagua (87 km): desde aprox. $78.300</li>
-                <li>Santiago – La Serena (470 km): desde aprox. $423.000</li>
-              </ul>
-              <p class="text-slate-600 text-sm">Para un valor flete Santiago a tu destino exacto, usa la calculadora de arriba o cotiza por WhatsApp.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
       <!-- Stats Section -->
       <PortesStats />
 
@@ -171,7 +116,7 @@
             Trabajamos con profesionalismo y eficiencia para garantizar que tu mudanza se realice de manera fluida y sin contratiempos. Nuestra empresa de mudanza cerca de ti te brinda la comodidad de contar con un servicio local y rápido. También trabajamos en estrecha colaboración con empresas de mudanzas cercanas, lo que nos permite ofrecerte opciones adicionales si es necesario.
           </p>
           <p class="text-slate-600 leading-relaxed mb-4">
-            Además de nuestros servicios de mudanza, ofrecemos soluciones de fletes: ya sea que necesites enviar un paquete pequeño o transportar mercancía a gran escala, nuestros camiones de flete están disponibles. Servicios de fletes que ofrecemos:
+            Además de nuestros servicios de mudanza, ofrecemos soluciones de fletes: ya sea que necesites enviar un paquete pequeño o transportar mercancía a gran escala, nuestros camiones de flete están disponibles. Para la capital, consulta nuestra <NuxtLink to="/fletes-santiago" class="text-teal-600 font-semibold hover:underline">página dedicada</NuxtLink>. Servicios de fletes que ofrecemos:
           </p>
           <ul class="list-disc list-inside text-slate-600 space-y-2 mb-4">
             <li><strong>Fletes en compras</strong></li>
@@ -242,39 +187,19 @@
         </div>
       </section>
 
-      <!-- Fletes Santiago a regiones -->
+      <!-- Fletes RM y regiones (resumen + enlace a fletes-santiago) -->
       <section class="py-20 bg-slate-50">
         <div class="container mx-auto px-4 max-w-4xl">
-          <h2 class="text-3xl font-black text-slate-900 mb-6">Fletes Santiago a regiones</h2>
+          <h2 class="text-3xl font-black text-slate-900 mb-6">Fletes en la RM y a regiones</h2>
           <p class="text-slate-600 leading-relaxed mb-4">
-            Realizamos fletes Santiago centro y flete Santiago a cualquier comuna de la capital. Si necesitas fletes fuera de Santiago, contamos con fletes económicos que cubren diversas áreas. <strong class="text-slate-800">Fletes disponible las 24 horas</strong>, para brindarte flexibilidad y conveniencia en el horario de tus traslados.
+            Realizamos fletes en la Región Metropolitana y fletes a regiones (Valparaíso, La Serena, Concepción, Temuco, Puerto Montt y más). Servicio disponible las 24 horas cuando lo necesites. Cubrimos Santiago Centro, Providencia, Las Condes, Maipú y todas las comunas de la RM.
           </p>
-          <p class="text-slate-600 leading-relaxed mb-3">Ciudades y zonas que cubrimos:</p>
-          <ul class="list-disc list-inside text-slate-600 space-y-1 mb-4 columns-2 md:columns-3 gap-x-6">
-            <li>Santiago Centro</li>
-            <li>Concepción</li>
-            <li>La Serena</li>
-            <li>Antofagasta</li>
-            <li>Viña del Mar</li>
-            <li>Temuco</li>
-            <li>Puerto Montt</li>
-            <li>Valparaíso</li>
-            <li>Iquique</li>
-            <li>Rancagua</li>
-            <li>Talca</li>
-            <li>Chillán</li>
-            <li>Valdivia</li>
-            <li>Osorno</li>
-            <li>Copiapó</li>
-            <li>Calama</li>
-            <li>y regiones cercanas</li>
-          </ul>
-          <p class="text-slate-600 leading-relaxed mb-4">
-            Además, ofrecemos servicios de acarreos pequeños, ideales para transportar cargas de menor tamaño. Nuestros camiones de acarreo están equipados para manejar tus necesidades de transporte de manera eficiente y segura.
+          <p class="text-slate-600 leading-relaxed mb-6">
+            Para precios, calculadora y toda la información detallada de <strong>fletes en Santiago</strong>, tarifas actualizadas y preguntas frecuentes, visita nuestra página dedicada.
           </p>
-          <p class="text-slate-600 leading-relaxed">
-            Somos una empresa de fletes en Santiago de Chile con años de experiencia. Nuestro servicio de fletes en Santiago incluye fletes express Santiago cuando lo necesites y fletes Santiago centro 24 horas. Ya sea fletes dentro de Santiago o fletes Santiago a regiones, cotiza con la calculadora o por WhatsApp para el mejor valor flete Santiago.
-          </p>
+          <NuxtLink to="/fletes-santiago" class="inline-block bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-xl font-black text-sm uppercase tracking-widest transition-all">
+            Ver Fletes Santiago: precios y cotización →
+          </NuxtLink>
         </div>
       </section>
 
@@ -345,8 +270,11 @@
       <!-- CTA final mudanzas, fletes, acarreos -->
       <section class="py-16 bg-teal-600">
         <div class="container mx-auto px-4 max-w-3xl text-center text-white">
-          <p class="text-xl font-medium mb-6">
-            No importa si necesitas mudanzas, fletes, acarreos o traslados: nuestra empresa se encargará de que tus pertenencias lleguen a su destino de manera segura y puntual. Contáctanos hoy mismo para más información sobre nuestros servicios de envío, precios de fletes y opciones de transporte. ¡Estamos aquí para ayudarte en todas tus necesidades de mudanza y transporte!
+          <p class="text-xl font-medium mb-4">
+            No importa si necesitas mudanzas, fletes, acarreos o traslados: nuestra empresa se encargará de que tus pertenencias lleguen a su destino de manera segura y puntual. Contáctanos para más información o consulta nuestra <NuxtLink to="/fletes-santiago" class="underline hover:no-underline font-semibold">página de fletes en la capital</NuxtLink>.
+          </p>
+          <p class="text-white/90 text-sm mb-6">
+            <NuxtLink to="/fletes-santiago" class="underline hover:no-underline font-semibold">Ver página Fletes Santiago →</NuxtLink>
           </p>
           <a href="https://wa.me/56979796841" target="_blank" rel="noopener" class="inline-block bg-white text-teal-700 px-10 py-4 rounded-2xl font-black hover:bg-slate-100 transition-all">
             WhatsApp +56 9 7979 6841
@@ -895,27 +823,27 @@ const localeMap = {
   'en': 'en_US'
 }
 
-// Titles optimizados (consultor: keyword + conversión + año)
+// Titles genéricos (Santiago se potencia en /fletes-santiago)
 const pageTitle = computed(() => {
-  if (locale.value === 'es') return 'Fletes Santiago desde $27.000 | Cotización Online | FletesPro'
-  return 'Freight and Moving Santiago | FletesPro'
+  if (locale.value === 'es') return 'Fletes y Mudanzas | Cotización Online | RM y Regiones | FletesPro'
+  return 'Freight and Moving | Online Quote | FletesPro'
 })
 
-// Meta descriptions optimizadas (consultor: precio, 24/7, clientes, WhatsApp)
+// Meta descriptions genéricas
 const pageDescription = computed(() => {
-  if (locale.value === 'es') return 'Fletes Santiago económicos desde $27.000. Cotización online instantánea, calculadora de precios, mudanzas y transporte en RM. ✓ Servicio 24/7 ✓ Seguro incluido ✓ +4000 clientes satisfechos. WhatsApp +56979796841'
-  return 'Freight and moving in Santiago and Chile from $27,000 CLP. Online quote. Free estimate. WhatsApp +56 9 7979 6841'
+  if (locale.value === 'es') return 'Fletes y mudanzas en la RM y a regiones. Cotización online y servicio 24/7. Para la capital hay página dedicada. WhatsApp +56979796841'
+  return 'Freight and moving in Chile. Online quote. Free estimate. WhatsApp +56 9 7979 6841'
 })
 
 // OG Titles y Descriptions
 const ogTitle = computed(() => {
-  if (locale.value === 'es') return 'Fletes Santiago desde $27.000 | Cotización Online | FletesPro'
-  return 'Freight and Moving Santiago | FletesPro'
+  if (locale.value === 'es') return 'Fletes y Mudanzas | Cotización Online | RM y Regiones | FletesPro'
+  return 'Freight and Moving | FletesPro'
 })
 
 const ogDescription = computed(() => {
-  if (locale.value === 'es') return 'Fletes Santiago económicos desde $27.000. Cotización online, calculadora de precios, fletes y mudanzas en Santiago y regiones. Servicio 24/7. WhatsApp +56979796841.'
-  return 'Professional freight and moving in Santiago and Chile. Online price calculator. Free quote.'
+  if (locale.value === 'es') return 'Fletes y mudanzas en la RM y a regiones. Cotización online. Página dedicada para la capital. Servicio 24/7. WhatsApp +56979796841.'
+  return 'Professional freight and moving in Chile. Online price calculator. Free quote.'
 })
 
 // BreadcrumbList Schema
@@ -1066,8 +994,8 @@ useHead(computed(() => {
         },
         {
           name: 'keywords',
-          content: currentLocale === 'es' ? 'fletes Santiago, flete Santiago, fletes Santiago centro, fletes baratos santiago, fletes económicos santiago, fletes santiago precios, valor flete Santiago, fletes Santiago Chile, fletes dentro de Santiago, fletes fuera de Santiago, fletes Santiago centro 24 horas, fletes express Santiago, servicio de fletes en Santiago, mudanzas Santiago, fletes a regiones, transporte de carga Chile, mudanzas y fletes, cotizar flete, precio flete Santiago, fletes Región Metropolitana, mini fletes Santiago, flete pequeño Santiago' :
-            'freight Santiago, cheap freight Chile, moving Santiago, freight to regions, cargo transport Chile, affordable freight, moving and freight, quote freight, freight price Santiago'
+          content: currentLocale === 'es' ? 'fletes y mudanzas, mudanzas y fletes, fletes región metropolitana, fletes a regiones, cotizar flete, transporte de carga Chile, mudanzas Santiago, mudanzas RM, fletes baratos, mudanzas económicas, calculadora flete, presupuesto mudanza, servicio de fletes, empresa de mudanzas' :
+            'freight and moving Chile, moving and freight, quote freight, cargo transport Chile, affordable freight'
         },
         // Open Graph
         { property: 'og:type', content: 'website' },

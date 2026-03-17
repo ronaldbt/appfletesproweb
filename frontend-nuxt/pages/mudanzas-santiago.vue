@@ -7,12 +7,14 @@
         <p class="text-slate-600 leading-relaxed mb-6">{{ content.precios.p1 }}</p>
         <h3 class="text-xl font-bold text-slate-800 mt-8 mb-2">{{ content.precios.h3Valores }}</h3>
         <p class="text-slate-600 leading-relaxed">{{ content.precios.p2 }}</p>
+        <p v-if="content.precios.p3" class="text-slate-600 leading-relaxed mt-4">{{ content.precios.p3 }}</p>
       </div>
     </section>
     <section class="py-16 md:py-20 bg-teal-50/30">
       <div class="container mx-auto px-4 max-w-4xl">
         <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-4 pb-3 border-b-4 border-teal-500 w-fit">{{ content.rutas.h2 }}</h2>
-        <p class="text-slate-600 leading-relaxed mb-6">{{ content.rutas.intro }}</p>
+        <p class="text-slate-600 leading-relaxed mb-4">{{ content.rutas.intro }}</p>
+        <p v-if="content.rutas.pCentro" class="text-slate-600 leading-relaxed mb-6">{{ content.rutas.pCentro }}</p>
         <ul class="grid md:grid-cols-2 gap-3 mb-6">
           <li v-for="(item, i) in content.rutas.items" :key="i" class="flex items-center gap-2 text-slate-700 font-medium">
             <span class="w-2 h-2 rounded-full bg-teal-500 shrink-0" />
@@ -32,6 +34,7 @@
             <p class="text-slate-600 leading-relaxed">{{ item.text }}</p>
           </article>
         </div>
+        <p v-if="content.servicios.pTransporte" class="mt-4 text-slate-600 leading-relaxed">{{ content.servicios.pTransporte }}</p>
         <p class="mt-6 text-slate-600 leading-relaxed">{{ content.servicios.pCombustible }}</p>
       </div>
     </section>
