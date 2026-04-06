@@ -347,6 +347,99 @@ const siteUrl = 'https://fletespro.cl'
 const currentUrl = computed(() => `${siteUrl}/ultima-milla`)
 const defaultImage = `${siteUrl}/og-image.jpg`
 
+const faqs = computed(() => [
+  {
+    question: t('pages.ultimaMilla.faqs.faq1.question'),
+    answer: t('pages.ultimaMilla.faqs.faq1.answer'),
+    open: false
+  },
+  {
+    question: t('pages.ultimaMilla.faqs.faq2.question'),
+    answer: t('pages.ultimaMilla.faqs.faq2.answer'),
+    open: false
+  },
+  {
+    question: t('pages.ultimaMilla.faqs.faq3.question'),
+    answer: t('pages.ultimaMilla.faqs.faq3.answer'),
+    open: false
+  },
+  {
+    question: t('pages.ultimaMilla.faqs.faq4.question'),
+    answer: t('pages.ultimaMilla.faqs.faq4.answer'),
+    open: false
+  },
+  {
+    question: t('pages.ultimaMilla.faqs.faq5.question'),
+    answer: t('pages.ultimaMilla.faqs.faq5.answer'),
+    open: false
+  },
+  {
+    question: t('pages.ultimaMilla.faqs.faq6.question'),
+    answer: t('pages.ultimaMilla.faqs.faq6.answer'),
+    open: false
+  },
+  {
+    question: t('pages.ultimaMilla.faqs.faq7.question'),
+    answer: t('pages.ultimaMilla.faqs.faq7.answer'),
+    open: false
+  },
+  {
+    question: t('pages.ultimaMilla.faqs.faq8.question'),
+    answer: t('pages.ultimaMilla.faqs.faq8.answer'),
+    open: false
+  },
+  {
+    question: t('pages.ultimaMilla.faqs.faq9.question'),
+    answer: t('pages.ultimaMilla.faqs.faq9.answer'),
+    open: false
+  },
+  {
+    question: t('pages.ultimaMilla.faqs.faq10.question'),
+    answer: t('pages.ultimaMilla.faqs.faq10.answer'),
+    open: false
+  },
+  {
+    question: t('pages.ultimaMilla.faqs.faq11.question'),
+    answer: t('pages.ultimaMilla.faqs.faq11.answer'),
+    open: false
+  },
+  {
+    question: t('pages.ultimaMilla.faqs.faq12.question'),
+    answer: t('pages.ultimaMilla.faqs.faq12.answer'),
+    open: false
+  },
+  {
+    question: t('pages.ultimaMilla.faqs.faq13.question'),
+    answer: t('pages.ultimaMilla.faqs.faq13.answer'),
+    open: false
+  },
+  {
+    question: t('pages.ultimaMilla.faqs.faq14.question'),
+    answer: t('pages.ultimaMilla.faqs.faq14.answer'),
+    open: false
+  },
+  {
+    question: t('pages.ultimaMilla.faqs.faq15.question'),
+    answer: t('pages.ultimaMilla.faqs.faq15.answer'),
+    open: false
+  },
+  {
+    question: t('pages.ultimaMilla.faqs.faq16.question'),
+    answer: t('pages.ultimaMilla.faqs.faq16.answer'),
+    open: false
+  },
+  {
+    question: t('pages.ultimaMilla.faqs.faq17.question'),
+    answer: t('pages.ultimaMilla.faqs.faq17.answer'),
+    open: false
+  },
+  {
+    question: t('pages.ultimaMilla.faqs.faq18.question'),
+    answer: t('pages.ultimaMilla.faqs.faq18.answer'),
+    open: false
+  }
+])
+
 useHead(computed(() => ({
   title: t('pages.ultimaMilla.seo.title'),
   meta: [
@@ -660,98 +753,6 @@ const concept = computed(() => [
   }
 ])
 
-const faqs = computed(() => [
-  {
-    question: t('pages.ultimaMilla.faqs.faq1.question'),
-    answer: t('pages.ultimaMilla.faqs.faq1.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq2.question'),
-    answer: t('pages.ultimaMilla.faqs.faq2.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq3.question'),
-    answer: t('pages.ultimaMilla.faqs.faq3.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq4.question'),
-    answer: t('pages.ultimaMilla.faqs.faq4.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq5.question'),
-    answer: t('pages.ultimaMilla.faqs.faq5.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq6.question'),
-    answer: t('pages.ultimaMilla.faqs.faq6.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq7.question'),
-    answer: t('pages.ultimaMilla.faqs.faq7.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq8.question'),
-    answer: t('pages.ultimaMilla.faqs.faq8.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq9.question'),
-    answer: t('pages.ultimaMilla.faqs.faq9.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq10.question'),
-    answer: t('pages.ultimaMilla.faqs.faq10.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq11.question'),
-    answer: t('pages.ultimaMilla.faqs.faq11.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq12.question'),
-    answer: t('pages.ultimaMilla.faqs.faq12.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq13.question'),
-    answer: t('pages.ultimaMilla.faqs.faq13.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq14.question'),
-    answer: t('pages.ultimaMilla.faqs.faq14.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq15.question'),
-    answer: t('pages.ultimaMilla.faqs.faq15.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq16.question'),
-    answer: t('pages.ultimaMilla.faqs.faq16.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq17.question'),
-    answer: t('pages.ultimaMilla.faqs.faq17.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq18.question'),
-    answer: t('pages.ultimaMilla.faqs.faq18.answer'),
-    open: false
-  }
-])
 </script>
 
 <style scoped>

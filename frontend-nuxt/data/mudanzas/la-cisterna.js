@@ -3,7 +3,7 @@
  */
 export default {
   meta: {
-    title: 'Mudanzas La Cisterna | Mudanzas y Fletes La Cisterna | FletesPro',
+    title: 'Mudanzas La Cisterna | Mudanzas en La Cisterna',
     description: 'Mudanzas en La Cisterna. Cotiza online. Presupuesto gratis. Salvoconducto, ayudantes. Zona sur Santiago. WhatsApp +56 9 7979 6841.',
     keywords: 'mudanzas La Cisterna, mudanzas en La Cisterna, fletes La Cisterna, mudanzas sur Santiago, traslado La Cisterna'
   },

@@ -3,7 +3,7 @@
  */
 export default {
   meta: {
-    title: 'Mudanzas Ñuñoa | Mudanzas y Fletes Ñuñoa | FletesPro',
+    title: 'Mudanzas Ñuñoa | Mudanzas en Ñuñoa',
     description: 'Mudanzas en Ñuñoa. Cotiza online. Presupuesto gratis. Salvoconducto, ayudantes. Cobertura oriente Santiago. WhatsApp +56 9 7979 6841.',
     keywords: 'mudanzas Ñuñoa, mudanzas en Ñuñoa, empresa mudanzas Ñuñoa, servicio mudanzas Ñuñoa, fletes Ñuñoa'
   },

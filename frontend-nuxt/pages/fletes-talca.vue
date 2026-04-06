@@ -53,7 +53,7 @@
     </section>
     <section class="py-16 md:py-20 bg-white" id="faqs">
       <div class="container mx-auto px-4 max-w-4xl">
-        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-6 pb-3 border-b-4 border-teal-500 w-fit">Preguntas frecuentes: mudanzas {{ comunaName }}</h2>
+        <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-6 pb-3 border-b-4 border-teal-500 w-fit">Preguntas frecuentes: fletes Talca</h2>
         <ul class="space-y-6">
           <li v-for="(faq, i) in content.faqs" :key="i" class="bg-slate-50 rounded-2xl p-6 border border-slate-100">
             <h3 class="text-lg font-bold text-slate-900 mb-2">{{ faq.question }}</h3>
@@ -66,44 +66,38 @@
 </template>
 
 <script setup>
-import content from '~/data/mudanzas/chicureo.js'
+import content from '~/data/comunas/talca.js'
 
-const comunaName = 'Chicureo'
 const siteUrl = 'https://fletespro.cl'
-const currentUrl = `${siteUrl}/mudanzas-chicureo`
+const routeSlug = 'talca'
+const currentUrl = `${siteUrl}/fletes-${routeSlug}`
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Inicio', item: siteUrl },
-    { '@type': 'ListItem', position: 2, name: 'Mudanzas Santiago', item: `${siteUrl}/mudanzas-santiago` },
-    { '@type': 'ListItem', position: 3, name: 'Mudanzas Chicureo', item: currentUrl }
+    { '@type': 'ListItem', position: 2, name: 'Fletes Talca', item: currentUrl }
   ]
 }
 
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  serviceType: 'Mudanzas en Chicureo',
-  name: 'Mudanzas Chicureo',
+  serviceType: 'Fletes y mudanzas Talca y Santiago–Talca',
+  name: 'Fletes Talca',
   description: content.meta.description,
   provider: {
     '@type': 'LocalBusiness',
     name: 'FletesPro',
     url: siteUrl,
     telephone: '+56-9-7979-6841',
-    address: { '@type': 'PostalAddress', addressLocality: 'Colina', addressRegion: 'Región Metropolitana', addressCountry: 'CL' },
-    priceRange: 'Desde $27.000'
+    address: { '@type': 'PostalAddress', addressLocality: 'Providencia', addressRegion: 'Región Metropolitana', addressCountry: 'CL' }
   },
-  offers: {
-    '@type': 'AggregateOffer',
-    priceCurrency: 'CLP',
-    lowPrice: '27000',
-    highPrice: '400000',
-    url: currentUrl
-  },
-  areaServed: { '@type': 'City', name: 'Chicureo', containedInPlace: { '@type': 'AdministrativeArea', name: 'Región Metropolitana' } }
+  areaServed: [
+    { '@type': 'City', name: 'Talca', containedInPlace: { '@type': 'AdministrativeArea', name: 'Región del Maule' } },
+    { '@type': 'AdministrativeArea', name: 'Región Metropolitana' }
+  ]
 }
 
 const faqSchema = {

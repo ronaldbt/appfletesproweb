@@ -3,7 +3,7 @@
  */
 export default {
   meta: {
-    title: 'Mudanzas Huechuraba | Mudanzas y Fletes Huechuraba | FletesPro',
+    title: 'Mudanzas Huechuraba | Mudanzas en Huechuraba',
     description: 'Mudanzas en Huechuraba. Cotiza online. Presupuesto gratis. Salvoconducto, ayudantes. Zona norte Santiago. WhatsApp +56 9 7979 6841.',
     keywords: 'mudanzas Huechuraba, mudanzas en Huechuraba, fletes Huechuraba, mudanzas norte Santiago, empresa mudanzas Huechuraba'
   },

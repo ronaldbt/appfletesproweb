@@ -4,7 +4,7 @@
  */
 export default {
   meta: {
-    title: 'Mudanzas Santiago | Mudanzas y Fletes Santiago | FletesPro',
+    title: 'Mudanzas Santiago | Mudanzas en Santiago y RM',
     description: 'Mudanzas en Santiago y toda la Región Metropolitana. Cotiza online. Presupuesto gratis. Salvoconducto, ayudantes y cobertura en Providencia, Las Condes, Ñuñoa y más. WhatsApp +56 9 7979 6841.',
     keywords: 'mudanzas Santiago, mudanzas en Santiago, mudanzas Santiago precios, empresa de mudanzas Santiago, mudanzas Región Metropolitana, mudanzas baratas Santiago, camion mudanza santiago, mudanzas santiago centro, mudanzas en santiago de chile, mudanzas economicas santiago, mudanzas dentro de santiago, mudanza dentro de santiago, mudanzas chile santiago, transporte mudanza santiago, empresa de mudanzas en santiago, camion de mudanza santiago precio, camion para mudanza santiago, mudanzas baratas en santiago de chile, mudanzas en santiago chile, transporte de mudanza santiago'
   },

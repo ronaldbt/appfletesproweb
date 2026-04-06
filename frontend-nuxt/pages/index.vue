@@ -42,7 +42,19 @@
 
           <h2 class="text-2xl md:text-3xl font-black text-slate-900 mb-6 text-center">Calculadora de cotización (flete o mudanza)</h2>
           <div class="animate-slide-up">
-            <PortesCalculator :is-hero="true" />
+            <ClientOnly>
+              <PortesCalculator :is-hero="true" />
+              <template #fallback>
+                <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl border border-slate-200 p-6 animate-pulse">
+                  <div class="h-10 bg-slate-200 rounded-xl w-2/3 mb-6" />
+                  <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="h-12 bg-slate-100 rounded-xl" />
+                    <div class="h-12 bg-slate-100 rounded-xl" />
+                  </div>
+                  <div class="aspect-[3/2] bg-slate-100 rounded-2xl" />
+                </div>
+              </template>
+            </ClientOnly>
           </div>
         </div>
       </section>
@@ -238,6 +250,7 @@
                   title="Transporte en frío - FletesPro"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
+                  loading="lazy"
                   class="w-full h-full"
                 />
               </div>
@@ -780,37 +793,27 @@ const siteName = 'FletesPro'
 const defaultImage = `${siteUrl}/og-image.jpg`
 const logoUrl = `${siteUrl}/logo.png`
 
-// Obtener path sin locale para canonical (con barra final estandarizada)
+// URLs normalizadas: siempre https://fletespro.cl/ (con barra) para raíz
 const pathWithoutLocale = route.path.replace(/^\/(es|en)/, '') || '/'
 const canonicalPath = locale.value === 'es' 
   ? (pathWithoutLocale === '/' ? '/' : pathWithoutLocale)
   : `/${locale.value}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`
 const canonicalUrl = `${siteUrl}${canonicalPath}`
 
-// Hreflang links
+// Hreflang: canonical debe coincidir con una URL de hreflang. x-default = español (prioridad en búsquedas)
 const alternateLinks = computed(() => {
   const links = []
-  const pathWithoutLocale = route.path.replace(/^\/(es|en)/, '') || '/'
+  const basePath = route.path.replace(/^\/(es|en)/, '') || '/'
   
   locales.value.forEach((loc) => {
-    const localePath = loc.code === 'es' 
-      ? (pathWithoutLocale === '/' ? '/' : pathWithoutLocale)
-      : `/${loc.code}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`
-    const fullUrl = `${siteUrl}${localePath}`
+    const path = loc.code === 'es' 
+      ? (basePath === '/' ? '/' : basePath)
+      : `/${loc.code}${basePath === '/' ? '' : basePath}`
+    const url = `${siteUrl}${path}`
     
-    links.push({
-      rel: 'alternate',
-      hreflang: loc.iso || loc.code,
-      href: fullUrl
-    })
-    
-    // Agregar x-default para el idioma por defecto
+    links.push({ rel: 'alternate', hreflang: loc.iso || loc.code, href: url })
     if (loc.code === 'es') {
-      links.push({
-        rel: 'alternate',
-        hreflang: 'x-default',
-        href: fullUrl
-      })
+      links.push({ rel: 'alternate', hreflang: 'x-default', href: url })
     }
   })
   
@@ -1013,12 +1016,9 @@ useHead(computed(() => {
         { name: 'twitter:image', content: defaultImage }
       ],
       link: [
-        { rel: 'canonical', href: currentCanonicalUrl },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        { rel: 'preconnect', href: 'https://www.google-analytics.com' },
+        { rel: 'canonical', href: currentCanonicalUrl, key: 'canonical' },
         { rel: 'sitemap', type: 'application/xml', title: 'Sitemap', href: '/sitemap.xml' },
-        ...alternateLinks.value
+        ...alternateLinks.value.map((l, i) => ({ ...l, key: `hreflang-${l.hreflang}-${i}` }))
       ],
       script: [
         {

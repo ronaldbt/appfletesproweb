@@ -19,7 +19,19 @@
           </div>
 
           <div class="animate-slide-up">
-            <PortesCalculator :is-hero="true" />
+            <ClientOnly>
+              <PortesCalculator :is-hero="true" />
+              <template #fallback>
+                <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl border border-slate-200 p-6 animate-pulse">
+                  <div class="h-10 bg-slate-200 rounded-xl w-2/3 mb-6" />
+                  <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="h-12 bg-slate-100 rounded-xl" />
+                    <div class="h-12 bg-slate-100 rounded-xl" />
+                  </div>
+                  <div class="aspect-[3/2] bg-slate-100 rounded-2xl" />
+                </div>
+              </template>
+            </ClientOnly>
           </div>
         </div>
       </section>

@@ -283,10 +283,9 @@ function initAutocomplete() {
       autocompleteInstances.splice(existingIndex, 1)
     }
 
-    // Bounds para Santiago y RM
-    const costaDelSolBounds = new google.maps.LatLngBounds(
-      new google.maps.LatLng(36.2, -5.3),
-      new google.maps.LatLng(36.8, -4.3)
+    const santiagoBounds = new google.maps.LatLngBounds(
+      new google.maps.LatLng(-33.68, -70.85),
+      new google.maps.LatLng(-33.2, -70.45)
     )
 
     const autocomplete = new google.maps.places.Autocomplete(input, {

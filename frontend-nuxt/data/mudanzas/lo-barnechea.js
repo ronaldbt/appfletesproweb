@@ -3,8 +3,8 @@
  */
 export default {
   meta: {
-    title: 'Mudanzas Lo Barnechea | Mudanzas y Fletes Lo Barnechea | FletesPro',
-    description: 'Mudanzas en Lo Barnechea. Cotiza online. Presupuesto gratis. Salvoconducto, ayudantes. WhatsApp +56 9 7979 6841.',
+    title: 'Mudanzas Lo Barnechea | Mudanzas en Lo Barnechea',
+    description: 'Mudanzas en Lo Barnechea. Cotiza online. Presupuesto gratis. Salvoconducto, ayudantes. Oriente RM. WhatsApp +56 9 7979 6841.',
     keywords: 'mudanzas Lo Barnechea, mudanzas en Lo Barnechea, mudanzas Lo Barnechea precios, fletes Lo Barnechea, mudanzas baratas Lo Barnechea'
   },
   hero: {

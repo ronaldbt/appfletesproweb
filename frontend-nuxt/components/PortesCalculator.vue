@@ -42,6 +42,7 @@
                 type="text"
                 :placeholder="$t('calculator.originPlaceholder')"
                 class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl p-3 font-bold text-slate-900 focus:border-teal-500 focus:bg-white outline-none transition-all shadow-sm text-sm"
+                @focus="ensureMapsLoaded"
               />
             </div>
             <div class="space-y-3">
@@ -59,6 +60,7 @@
                 type="text"
                 :placeholder="$t('calculator.destinationPlaceholder')"
                 class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl p-3 font-bold text-slate-900 focus:border-teal-500 focus:bg-white outline-none transition-all shadow-sm text-sm"
+                @focus="ensureMapsLoaded"
               />
             </div>
           </div>
@@ -475,7 +477,13 @@ function initMap() {
     return
   }
 
-  if (document.getElementById('google-maps-script')) {
+  const existingScript = document.getElementById('google-maps-script')
+  if (existingScript) {
+    if (window.google && window.google.maps) {
+      createMap()
+    } else {
+      existingScript.addEventListener('load', () => createMap(), { once: true })
+    }
     return
   }
 
@@ -485,14 +493,8 @@ function initMap() {
   googleScript.async = true
   googleScript.defer = true
 
-  googleScript.onload = () => {
-    console.log('✅ Google Maps API cargada correctamente')
-    createMap()
-  }
-
-  googleScript.onerror = () => {
-    console.error('❌ Error al cargar Google Maps API')
-  }
+  googleScript.onload = () => createMap()
+  googleScript.onerror = () => {}
 
   document.head.appendChild(googleScript)
 }
@@ -595,11 +597,6 @@ function calculateRoute() {
       // RM ≤50 km: $20.000 + (km × $2.000); >50 km: km × $900 (regiones)
       precio.value = calcPrecioFromDistancia(distancia.value)
       
-      console.log('📊 Precio calculado:', {
-        distancia: distancia.value,
-        precio: precio.value
-      })
-      
       // Ajustar el zoom para que se vea toda la ruta
       const bounds = new google.maps.LatLngBounds()
       result.routes[0].legs.forEach(leg => {
@@ -607,24 +604,51 @@ function calculateRoute() {
         bounds.extend(leg.end_location)
       })
       mapInstance.fitBounds(bounds)
-    } else {
-      console.error('Error al calcular la ruta:', status)
     }
   })
 }
 
-// Inicializar el mapa cuando el componente se monte
-// Con lazy: false, las traducciones están disponibles desde el inicio
+// Cargar Google Maps solo cuando el usuario interacciona o el mapa es visible (reduce FCP/LCP)
+function ensureMapsLoaded() {
+  if (process.client) initMap()
+}
+
 onMounted(() => {
-  const testKey = 'calculator.step1'
-  const testTranslation = t(testKey)
-  console.log('🟢 [PortesCalculator] Componente montado, traducción test:', testTranslation)
-  const nuxtApp = useNuxtApp()
-  console.log('🟢 [PortesCalculator] Mensajes disponibles:', nuxtApp.$i18n?.messages?.value?.[locale.value] ? Object.keys(nuxtApp.$i18n.messages.value[locale.value]) : 'no messages')
-  
-  if (process.client) {
-    initMap()
+  if (!process.client) return
+  const attachObserver = () => {
+    const el = mapContainer.value
+    if (!el) return false
+    if (!('IntersectionObserver' in window)) {
+      ensureMapsLoaded()
+      return true
+    }
+    try {
+      const io = new IntersectionObserver(
+        (entries) => {
+          if (entries[0]?.isIntersecting) {
+            ensureMapsLoaded()
+            io.disconnect()
+          }
+        },
+        { rootMargin: '120px', threshold: 0.01 }
+      )
+      io.observe(el)
+      return true
+    } catch {
+      ensureMapsLoaded()
+      return true
+    }
   }
+  // Doble nextTick: el mapa puede montarse tras <Transition>
+  nextTick(() => {
+    nextTick(() => {
+      if (attachObserver()) return
+      setTimeout(() => {
+        if (attachObserver()) return
+        ensureMapsLoaded()
+      }, 300)
+    })
+  })
 })
 </script>
 

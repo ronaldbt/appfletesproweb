@@ -3,8 +3,8 @@
  */
 export default {
   meta: {
-    title: 'Mudanzas Las Condes | Mudanzas y Fletes Las Condes | FletesPro',
-    description: 'Mudanzas en Las Condes. Cotiza online. Presupuesto gratis. Salvoconducto, ayudantes. WhatsApp +56 9 7979 6841.',
+    title: 'Mudanzas Las Condes | Mudanzas en Las Condes',
+    description: 'Mudanzas en Las Condes. Cotiza online. Presupuesto gratis. Salvoconducto, ayudantes. Cobertura oriente RM. WhatsApp +56 9 7979 6841.',
     keywords: 'mudanzas Las Condes, mudanzas en Las Condes, mudanzas Las Condes precios, fletes Las Condes, mudanzas baratas Las Condes'
   },
   hero: {

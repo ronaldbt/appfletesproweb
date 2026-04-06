@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { comunasRM } from './config/comunasRM.js'
+import { beasties } from 'vite-plugin-beasties'
 
 const rutasFletesComunas = comunasRM.map(c => `/fletes-${c.slug}`)
 
@@ -10,9 +11,24 @@ export default defineNuxtConfig({
   // SSR para mejor SEO
   ssr: true,
   
+  // Critical CSS inlining: reduce render-blocking, mejora LCP
+  vite: {
+    plugins: [
+      beasties({
+        options: {
+          preload: 'swap',
+          pruneSource: true,
+          inlineThreshold: 25000,
+          minimumExternalSize: 1000
+        }
+      })
+    ]
+  },
+  
   // Blog y páginas fletes por comuna: pre-renderizadas (estáticas)
   // Redirecciones 301: URLs antiguas de WordPress (fletespro.cl) → Nuxt (/blog/...)
   routeRules: {
+    '/logo-portespro.png': { headers: { 'Cache-Control': 'public, max-age=31536000, immutable' } },
     '/blog': { prerender: true },
     '/blog/**': { prerender: true },
     '/cuanto-se-cobra-por-un-flete-en-chile': { redirect: { to: '/blog/cuanto-se-cobra-por-un-flete-en-chile', statusCode: 301 } },
@@ -35,6 +51,16 @@ export default defineNuxtConfig({
     '/fletes-chicureo/': { redirect: { to: '/fletes-en-chicureo', statusCode: 301 } },
     '/fletes-nunoa': { redirect: { to: '/fletes-en-nunoa', statusCode: 301 } },
     '/fletes-nunoa/': { redirect: { to: '/fletes-en-nunoa', statusCode: 301 } },
+    // Transporte frío: solo versión en español (evita /en/ indexada con contenido incorrecto)
+    '/en/transporte-frio': { redirect: { to: '/transporte-frio', statusCode: 301 } },
+    '/en/transporte-frio/': { redirect: { to: '/transporte-frio', statusCode: 301 } },
+    '/en/transporte-en-frio-santiago': { redirect: { to: '/transporte-en-frio-santiago', statusCode: 301 } },
+    '/en/transporte-en-frio-santiago/': { redirect: { to: '/transporte-en-frio-santiago', statusCode: 301 } },
+    // Prefijo /en/ duplicado (crawler / enlaces mal resueltos)
+    '/en/en/transporte-frio': { redirect: { to: '/transporte-frio', statusCode: 301 } },
+    '/en/en/transporte-frio/': { redirect: { to: '/transporte-frio', statusCode: 301 } },
+    '/en/en/transporte-en-frio-santiago': { redirect: { to: '/transporte-en-frio-santiago', statusCode: 301 } },
+    '/en/en/transporte-en-frio-santiago/': { redirect: { to: '/transporte-en-frio-santiago', statusCode: 301 } },
     ...Object.fromEntries(rutasFletesComunas.map(r => [r, { prerender: true }]))
   },
   
@@ -42,7 +68,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/blog', ...rutasFletesComunas],
+      routes: ['/', '/blog', ...rutasFletesComunas, '/fletes-talca', '/mudanzas-vitacura'],
       failOnError: false
     }
   },
@@ -66,11 +92,14 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/i18n',
     '@nuxt/content',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxt/image'
   ],
   
-  // Configuración i18n
+  // i18n: lazy en false — evita fallos de hidratación / mensajes no listos en SSR
   i18n: {
+    baseUrl: 'https://fletespro.cl',
+    seo: false,
     locales: [
       { code: 'es', iso: 'es-ES', file: 'es.json', name: 'Español' },
       { code: 'en', iso: 'en-US', file: 'en.json', name: 'English' }
@@ -83,12 +112,9 @@ export default defineNuxtConfig({
       strictMessage: false,
       escapeHtml: false
     },
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'i18n_redirected',
-      redirectOn: 'root',
-      alwaysRedirect: false
-    }
+    // Desactivado: evita redirigir /transporte-frio → /en/transporte-frio (navegador en inglés / Googlebot)
+    // y que el índice priorice inglés. El español es el idioma por defecto sin prefijo (/ruta).
+    detectBrowserLanguage: false
   },
   
   // Runtime config para variables de entorno públicas
@@ -98,16 +124,23 @@ export default defineNuxtConfig({
     }
   },
   
-  // Configuración de SEO
+  // Configuración de SEO y performance
   app: {
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       titleTemplate: '%s - FletesPro',
+      // Critical CSS inline: LCP hero sin esperar entry.css
+      style: [
+        {
+          textContent: '#hero-calculator h1{font-size:clamp(2.5rem,8vw,6rem);font-weight:900;color:#020617;line-height:.9;letter-spacing:-.05em;margin-bottom:2rem}#hero-calculator .container{width:100%;margin-left:auto;margin-right:auto;padding-left:1rem;padding-right:1rem}.text-5xl{font-size:3rem}.md\\:text-8xl{font-size:6rem}@media(min-width:768px){#hero-calculator .container{max-width:72rem;padding-left:1.5rem;padding-right:1.5rem}}'
+        }
+      ],
       link: [
         { rel: 'icon', type: 'image/png', href: '/logo-portespro.png' },
         { rel: 'shortcut icon', type: 'image/png', href: '/logo-portespro.png' },
         { rel: 'apple-touch-icon', href: '/logo-portespro.png' }
+        // Preconnects removidos (maps deferred, fonts no usados) - Lighthouse: máx 4, solo orígenes críticos
       ],
       meta: [
         { name: 'description', content: 'Fletes Santiago económicos desde $27.000. Cotización online instantánea, calculadora de precios, mudanzas y transporte en RM. Servicio 24/7. WhatsApp +56979796841.' },

@@ -3,7 +3,7 @@
  */
 export default {
   meta: {
-    title: 'Mudanzas Providencia | Mudanzas y Fletes Providencia | FletesPro',
+    title: 'Mudanzas Providencia | Mudanzas en Providencia',
     description: 'Mudanzas en Providencia. Cotiza online. Presupuesto gratis. Salvoconducto, ayudantes. Zona oriente Santiago. WhatsApp +56 9 7979 6841.',
     keywords: 'mudanzas Providencia, mudanzas en Providencia, mudanzas Providencia precios, fletes Providencia, mudanzas zona oriente Santiago'
   },

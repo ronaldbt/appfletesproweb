@@ -3,8 +3,8 @@
  */
 export default {
   meta: {
-    title: 'Mudanzas Chicureo | Mudanzas y Fletes Chicureo | FletesPro',
-    description: 'Mudanzas en Chicureo y Colina. Cotiza online. Presupuesto gratis. Salvoconducto, ayudantes. WhatsApp +56 9 7979 6841.',
+    title: 'Mudanzas Chicureo | Mudanzas en Chicureo y Colina',
+    description: 'Mudanzas en Chicureo y Colina. Cotiza online. Presupuesto gratis. Salvoconducto, ayudantes. Norte RM. WhatsApp +56 9 7979 6841.',
     keywords: 'mudanzas Chicureo, mudanzas en Chicureo, mudanzas Colina Chicureo, fletes Chicureo, mudanzas norte Santiago'
   },
   hero: {

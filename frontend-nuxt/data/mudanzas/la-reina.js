@@ -3,7 +3,7 @@
  */
 export default {
   meta: {
-    title: 'Mudanzas La Reina | Mudanzas y Fletes La Reina | FletesPro',
+    title: 'Mudanzas La Reina | Mudanzas en La Reina',
     description: 'Mudanzas en La Reina. Cotiza online. Presupuesto gratis. Salvoconducto, ayudantes. Cobertura oriente RM. WhatsApp +56 9 7979 6841.',
     keywords: 'mudanzas La Reina, mudanzas en La Reina, traslado mudanza La Reina, fletes La Reina, cambio de domicilio oriente'
   },

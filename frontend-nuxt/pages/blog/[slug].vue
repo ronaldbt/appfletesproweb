@@ -80,6 +80,7 @@
                   class="w-full h-full"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
+                  loading="lazy"
                 />
               </div>
             </div>

@@ -289,7 +289,9 @@ function eliminarItem(index) {
 function autoResizeTextarea(event) {
   const textarea = event.target
   textarea.style.height = 'auto'
-  textarea.style.height = textarea.scrollHeight + 'px'
+  requestAnimationFrame(() => {
+    textarea.style.height = textarea.scrollHeight + 'px'
+  })
 }
 
 function imprimirPDF() {

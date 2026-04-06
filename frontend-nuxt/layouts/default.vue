@@ -67,6 +67,9 @@ onBeforeUnmount(() => {
 <style>
 body { background-color: #ffffff; }
 a { text-decoration: none; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
 @media print {
   .fixed.bottom-6.right-6, header, .header-bar, Header { display: none !important; }
   html, body, #app { background-color: #fff !important; color: #000 !important; width: 100% !important; height: auto !important; overflow: visible !important; margin: 0 !important; padding: 0 !important; }

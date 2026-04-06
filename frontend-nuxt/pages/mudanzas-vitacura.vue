@@ -66,11 +66,11 @@
 </template>
 
 <script setup>
-import content from '~/data/mudanzas/chicureo.js'
+import content from '~/data/mudanzas/vitacura.js'
 
-const comunaName = 'Chicureo'
+const comunaName = 'Vitacura'
 const siteUrl = 'https://fletespro.cl'
-const currentUrl = `${siteUrl}/mudanzas-chicureo`
+const currentUrl = `${siteUrl}/mudanzas-vitacura`
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -78,22 +78,22 @@ const breadcrumbSchema = {
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Inicio', item: siteUrl },
     { '@type': 'ListItem', position: 2, name: 'Mudanzas Santiago', item: `${siteUrl}/mudanzas-santiago` },
-    { '@type': 'ListItem', position: 3, name: 'Mudanzas Chicureo', item: currentUrl }
+    { '@type': 'ListItem', position: 3, name: 'Mudanzas Vitacura', item: currentUrl }
   ]
 }
 
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  serviceType: 'Mudanzas en Chicureo',
-  name: 'Mudanzas Chicureo',
+  serviceType: 'Mudanzas en Vitacura',
+  name: 'Mudanzas Vitacura',
   description: content.meta.description,
   provider: {
     '@type': 'LocalBusiness',
     name: 'FletesPro',
     url: siteUrl,
     telephone: '+56-9-7979-6841',
-    address: { '@type': 'PostalAddress', addressLocality: 'Colina', addressRegion: 'Región Metropolitana', addressCountry: 'CL' },
+    address: { '@type': 'PostalAddress', addressLocality: 'Vitacura', addressRegion: 'Región Metropolitana', addressCountry: 'CL' },
     priceRange: 'Desde $27.000'
   },
   offers: {
@@ -103,7 +103,7 @@ const serviceSchema = {
     highPrice: '400000',
     url: currentUrl
   },
-  areaServed: { '@type': 'City', name: 'Chicureo', containedInPlace: { '@type': 'AdministrativeArea', name: 'Región Metropolitana' } }
+  areaServed: { '@type': 'City', name: 'Vitacura', containedInPlace: { '@type': 'AdministrativeArea', name: 'Región Metropolitana' } }
 }
 
 const faqSchema = {

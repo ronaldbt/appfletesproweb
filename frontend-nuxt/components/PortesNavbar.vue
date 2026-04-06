@@ -3,11 +3,15 @@
     <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
       <NuxtLink to="/" class="flex items-center gap-2 group">
         <div class="bg-white p-1.5 rounded-lg group-hover:bg-teal-50 border-2 border-slate-200 group-hover:border-teal-600 transition-all duration-300 transform group-hover:rotate-12 shadow-lg flex items-center justify-center">
-          <img 
+          <NuxtImg 
             src="/logo-portespro.png" 
             alt="FletesPro Logo" 
+            width="36"
+            height="36"
+            format="webp"
             class="w-9 h-9 object-contain"
             loading="eager"
+            fetchpriority="high"
           />
         </div>
         <span class="text-xl font-black tracking-tight text-slate-900">

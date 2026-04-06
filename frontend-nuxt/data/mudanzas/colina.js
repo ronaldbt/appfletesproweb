@@ -3,8 +3,8 @@
  */
 export default {
   meta: {
-    title: 'Mudanzas Colina | Mudanzas y Fletes Colina | FletesPro',
-    description: 'Mudanzas en Colina y Chicureo. Cotiza online. Presupuesto gratis. WhatsApp +56 9 7979 6841.',
+    title: 'Mudanzas Colina | Mudanzas en Colina y Chicureo',
+    description: 'Mudanzas en Colina y Chicureo. Cotiza online. Presupuesto gratis. Salvoconducto, ayudantes. WhatsApp +56 9 7979 6841.',
     keywords: 'mudanzas Colina, mudanzas Chicureo, mudanzas Colina precios, fletes Colina'
   },
   hero: {

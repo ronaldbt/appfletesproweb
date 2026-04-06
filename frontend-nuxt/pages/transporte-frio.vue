@@ -56,6 +56,7 @@
                   title="Transporte en frío - FletesPro"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
+                  loading="lazy"
                   class="w-full h-full"
                 />
               </div>
@@ -363,39 +364,38 @@ const scrollToCalc = () => {
   }
 }
 
-// SEO Meta Tags
+// SEO Meta Tags (siempre español: Chile + Google; el cuerpo sigue según locale del usuario)
 const siteUrl = 'https://fletespro.cl'
 const currentUrl = `${siteUrl}/transporte-frio`
 const defaultImage = `${siteUrl}/og-image.jpg`
 
+const seoTitle = () => t('pages.transporteFrio.seo.title', {}, { locale: 'es' })
+const seoDesc = () => t('pages.transporteFrio.seo.description', {}, { locale: 'es' })
+const seoKeywords = () => t('pages.transporteFrio.seo.keywords', {}, { locale: 'es' })
+
 useHead(() => ({
-  title: t('pages.transporteFrio.seo.title'),
+  title: seoTitle(),
   meta: [
-    {
-      name: 'description',
-      content: t('pages.transporteFrio.seo.description')
-    },
-    {
-      name: 'keywords',
-      content: t('pages.transporteFrio.seo.keywords')
-    },
-    // Open Graph
+    { name: 'description', content: seoDesc() },
+    { name: 'keywords', content: seoKeywords() },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: currentUrl },
-    { property: 'og:title', content: t('pages.transporteFrio.seo.title') },
-    { property: 'og:description', content: t('pages.transporteFrio.seo.description') },
+    { property: 'og:title', content: seoTitle() },
+    { property: 'og:description', content: seoDesc() },
     { property: 'og:image', content: defaultImage },
     { property: 'og:site_name', content: 'FletesPro' },
     { property: 'og:locale', content: 'es_ES' },
-    // Twitter Card
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:url', content: currentUrl },
-    { name: 'twitter:title', content: t('pages.transporteFrio.seo.title') },
-    { name: 'twitter:description', content: t('pages.transporteFrio.seo.description') },
+    { name: 'twitter:title', content: seoTitle() },
+    { name: 'twitter:description', content: seoDesc() },
     { name: 'twitter:image', content: defaultImage }
   ],
   link: [
-    { rel: 'canonical', href: currentUrl }
+    { rel: 'canonical', href: currentUrl },
+    { rel: 'alternate', hreflang: 'es-CL', href: currentUrl },
+    { rel: 'alternate', hreflang: 'es', href: currentUrl },
+    { rel: 'alternate', hreflang: 'x-default', href: currentUrl }
   ]
 }))
 

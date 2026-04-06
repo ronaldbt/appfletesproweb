@@ -56,6 +56,7 @@
                   title="Transporte en frío - FletesPro"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
+                  loading="lazy"
                   class="w-full h-full"
                 />
               </div>

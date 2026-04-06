@@ -93,7 +93,15 @@ const serviceSchema = {
     name: 'FletesPro',
     url: siteUrl,
     telephone: '+56-9-7979-6841',
-    address: { '@type': 'PostalAddress', addressLocality: 'La Reina', addressRegion: 'Región Metropolitana', addressCountry: 'CL' }
+    address: { '@type': 'PostalAddress', addressLocality: 'La Reina', addressRegion: 'Región Metropolitana', addressCountry: 'CL' },
+    priceRange: 'Desde $27.000'
+  },
+  offers: {
+    '@type': 'AggregateOffer',
+    priceCurrency: 'CLP',
+    lowPrice: '27000',
+    highPrice: '400000',
+    url: currentUrl
   },
   areaServed: { '@type': 'City', name: 'La Reina', containedInPlace: { '@type': 'AdministrativeArea', name: 'Región Metropolitana' } }
 }

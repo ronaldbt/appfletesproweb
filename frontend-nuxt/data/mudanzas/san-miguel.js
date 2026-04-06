@@ -3,7 +3,7 @@
  */
 export default {
   meta: {
-    title: 'Mudanzas San Miguel | Mudanzas y Fletes San Miguel | FletesPro',
+    title: 'Mudanzas San Miguel | Mudanzas en San Miguel',
     description: 'Mudanzas en San Miguel. Cotiza online. Presupuesto gratis. Salvoconducto, ayudantes. Zona sur Santiago. WhatsApp +56 9 7979 6841.',
     keywords: 'mudanzas San Miguel, mudanzas en San Miguel, servicio mudanzas San Miguel, fletes San Miguel, mudanzas zona sur Santiago'
   },
