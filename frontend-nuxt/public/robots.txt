@@ -19,7 +19,7 @@ Disallow: /no-disponible
 # Allow important pages
 Allow: /mudanzas/
 Allow: /embalajes
-Allow: /guardamuebles
+Allow: /bodegaje
 Allow: /transporte-frio
 Allow: /ultima-milla
 Allow: /contacto

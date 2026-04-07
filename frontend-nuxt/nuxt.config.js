@@ -61,6 +61,10 @@ export default defineNuxtConfig({
     '/en/en/transporte-frio/': { redirect: { to: '/transporte-frio', statusCode: 301 } },
     '/en/en/transporte-en-frio-santiago': { redirect: { to: '/transporte-en-frio-santiago', statusCode: 301 } },
     '/en/en/transporte-en-frio-santiago/': { redirect: { to: '/transporte-en-frio-santiago', statusCode: 301 } },
+    '/guardamuebles': { redirect: { to: '/bodegaje', statusCode: 301 } },
+    '/guardamuebles/': { redirect: { to: '/bodegaje', statusCode: 301 } },
+    '/en/guardamuebles': { redirect: { to: '/en/bodegaje', statusCode: 301 } },
+    '/en/guardamuebles/': { redirect: { to: '/en/bodegaje', statusCode: 301 } },
     ...Object.fromEntries(rutasFletesComunas.map(r => [r, { prerender: true }]))
   },
   
@@ -68,7 +72,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/blog', ...rutasFletesComunas, '/fletes-talca', '/mudanzas-vitacura'],
+      routes: ['/', '/blog', ...rutasFletesComunas, '/fletes-talca', '/mudanzas-vitacura', '/bodegaje'],
       failOnError: false
     }
   },

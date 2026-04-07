@@ -28,7 +28,7 @@ export default defineNuxtRouteMiddleware((to) => {
     path === '/transporte-frio' ||
     path === '/ultima-milla' ||
     path === '/embalajes' ||
-    path === '/guardamuebles' ||
+    path === '/bodegaje' ||
     path === '/fletes-construccion'
 
   if (isPublic) return

@@ -311,7 +311,8 @@
               class="bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden"
             >
               <button
-                @click="faq.open = !faq.open"
+                type="button"
+                @click="toggleFaq(idx)"
                 class="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-slate-100 transition-all"
               >
                 <h3 class="text-lg font-black text-slate-900 pr-8">{{ faq.question }}</h3>
@@ -619,99 +620,21 @@ const zonas = computed(() => [
   }
 ])
 
-// FAQs
-const faqs = computed(() => [
-  {
-    question: t('pages.transporteFrio.faqs.faq1.question'),
-    answer: t('pages.transporteFrio.faqs.faq1.answer'),
-    open: false
-  },
-  {
-    question: t('pages.transporteFrio.faqs.faq2.question'),
-    answer: t('pages.transporteFrio.faqs.faq2.answer'),
-    open: false
-  },
-  {
-    question: t('pages.transporteFrio.faqs.faq3.question'),
-    answer: t('pages.transporteFrio.faqs.faq3.answer'),
-    open: false
-  },
-  {
-    question: t('pages.transporteFrio.faqs.faq4.question'),
-    answer: t('pages.transporteFrio.faqs.faq4.answer'),
-    open: false
-  },
-  {
-    question: t('pages.transporteFrio.faqs.faq5.question'),
-    answer: t('pages.transporteFrio.faqs.faq5.answer'),
-    open: false
-  },
-  {
-    question: t('pages.transporteFrio.faqs.faq6.question'),
-    answer: t('pages.transporteFrio.faqs.faq6.answer'),
-    open: false
-  },
-  {
-    question: t('pages.transporteFrio.faqs.faq7.question'),
-    answer: t('pages.transporteFrio.faqs.faq7.answer'),
-    open: false
-  },
-  {
-    question: t('pages.transporteFrio.faqs.faq8.question'),
-    answer: t('pages.transporteFrio.faqs.faq8.answer'),
-    open: false
-  },
-  {
-    question: t('pages.transporteFrio.faqs.faq9.question'),
-    answer: t('pages.transporteFrio.faqs.faq9.answer'),
-    open: false
-  },
-  {
-    question: t('pages.transporteFrio.faqs.faq10.question'),
-    answer: t('pages.transporteFrio.faqs.faq10.answer'),
-    open: false
-  },
-  {
-    question: t('pages.transporteFrio.faqs.faq11.question'),
-    answer: t('pages.transporteFrio.faqs.faq11.answer'),
-    open: false
-  },
-  {
-    question: t('pages.transporteFrio.faqs.faq12.question'),
-    answer: t('pages.transporteFrio.faqs.faq12.answer'),
-    open: false
-  },
-  {
-    question: t('pages.transporteFrio.faqs.faq13.question'),
-    answer: t('pages.transporteFrio.faqs.faq13.answer'),
-    open: false
-  },
-  {
-    question: t('pages.transporteFrio.faqs.faq14.question'),
-    answer: t('pages.transporteFrio.faqs.faq14.answer'),
-    open: false
-  },
-  {
-    question: t('pages.transporteFrio.faqs.faq15.question'),
-    answer: t('pages.transporteFrio.faqs.faq15.answer'),
-    open: false
-  },
-  {
-    question: t('pages.transporteFrio.faqs.faq16.question'),
-    answer: t('pages.transporteFrio.faqs.faq16.answer'),
-    open: false
-  },
-  {
-    question: t('pages.transporteFrio.faqs.faq17.question'),
-    answer: t('pages.transporteFrio.faqs.faq17.answer'),
-    open: false
-  },
-  {
-    question: t('pages.transporteFrio.faqs.faq18.question'),
-    answer: t('pages.transporteFrio.faqs.faq18.answer'),
-    open: false
-  }
-])
+// FAQs (estado en ref para que el acordeón sea reactivo)
+const faqOpenStates = ref(Array(18).fill(false))
+function toggleFaq (idx) {
+  const next = [...faqOpenStates.value]
+  next[idx] = !next[idx]
+  faqOpenStates.value = next
+}
+const faqs = computed(() => {
+  const o = faqOpenStates.value
+  return Array.from({ length: 18 }, (_, i) => ({
+    question: t(`pages.transporteFrio.faqs.faq${i + 1}.question`),
+    answer: t(`pages.transporteFrio.faqs.faq${i + 1}.answer`),
+    open: o[i]
+  }))
+})
 </script>
 
 <style scoped>

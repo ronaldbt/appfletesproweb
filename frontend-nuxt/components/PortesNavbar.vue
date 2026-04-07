@@ -52,7 +52,7 @@
 
         <!-- Guardamuebles -->
         <NuxtLink 
-          to="/guardamuebles"
+          to="/bodegaje"
           class="text-xs font-bold uppercase tracking-wide text-slate-500 hover:text-teal-600 transition-all relative group whitespace-nowrap"
         >
           {{ $t('nav.guardamuebles') }}
@@ -163,7 +163,7 @@
           <NuxtLink to="/embalajes" @click="isOpen = false" class="text-slate-900 font-black text-lg uppercase tracking-tighter">
             Embalajes
           </NuxtLink>
-          <NuxtLink to="/guardamuebles" @click="isOpen = false" class="text-slate-900 font-black text-lg uppercase tracking-tighter">
+          <NuxtLink to="/bodegaje" @click="isOpen = false" class="text-slate-900 font-black text-lg uppercase tracking-tighter">
             {{ $t('nav.guardamuebles') }}
           </NuxtLink>
           <NuxtLink to="/transporte-frio" @click="isOpen = false" class="text-slate-900 font-black text-lg uppercase tracking-tighter">

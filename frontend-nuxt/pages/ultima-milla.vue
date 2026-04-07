@@ -289,7 +289,8 @@
               class="bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden"
             >
               <button
-                @click="faq.open = !faq.open"
+                type="button"
+                @click="toggleFaq(idx)"
                 class="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-slate-100 transition-all"
               >
                 <h3 class="text-lg font-black text-slate-900 pr-8">{{ faq.question }}</h3>
@@ -347,98 +348,37 @@ const siteUrl = 'https://fletespro.cl'
 const currentUrl = computed(() => `${siteUrl}/ultima-milla`)
 const defaultImage = `${siteUrl}/og-image.jpg`
 
-const faqs = computed(() => [
-  {
-    question: t('pages.ultimaMilla.faqs.faq1.question'),
-    answer: t('pages.ultimaMilla.faqs.faq1.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq2.question'),
-    answer: t('pages.ultimaMilla.faqs.faq2.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq3.question'),
-    answer: t('pages.ultimaMilla.faqs.faq3.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq4.question'),
-    answer: t('pages.ultimaMilla.faqs.faq4.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq5.question'),
-    answer: t('pages.ultimaMilla.faqs.faq5.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq6.question'),
-    answer: t('pages.ultimaMilla.faqs.faq6.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq7.question'),
-    answer: t('pages.ultimaMilla.faqs.faq7.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq8.question'),
-    answer: t('pages.ultimaMilla.faqs.faq8.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq9.question'),
-    answer: t('pages.ultimaMilla.faqs.faq9.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq10.question'),
-    answer: t('pages.ultimaMilla.faqs.faq10.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq11.question'),
-    answer: t('pages.ultimaMilla.faqs.faq11.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq12.question'),
-    answer: t('pages.ultimaMilla.faqs.faq12.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq13.question'),
-    answer: t('pages.ultimaMilla.faqs.faq13.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq14.question'),
-    answer: t('pages.ultimaMilla.faqs.faq14.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq15.question'),
-    answer: t('pages.ultimaMilla.faqs.faq15.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq16.question'),
-    answer: t('pages.ultimaMilla.faqs.faq16.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq17.question'),
-    answer: t('pages.ultimaMilla.faqs.faq17.answer'),
-    open: false
-  },
-  {
-    question: t('pages.ultimaMilla.faqs.faq18.question'),
-    answer: t('pages.ultimaMilla.faqs.faq18.answer'),
-    open: false
-  }
-])
+const faqOpenStates = ref(Array(18).fill(false))
+function toggleFaq (idx) {
+  const next = [...faqOpenStates.value]
+  next[idx] = !next[idx]
+  faqOpenStates.value = next
+}
+
+const faqs = computed(() => {
+  const o = faqOpenStates.value
+  const rows = [
+    { question: t('pages.ultimaMilla.faqs.faq1.question'), answer: t('pages.ultimaMilla.faqs.faq1.answer') },
+    { question: t('pages.ultimaMilla.faqs.faq2.question'), answer: t('pages.ultimaMilla.faqs.faq2.answer') },
+    { question: t('pages.ultimaMilla.faqs.faq3.question'), answer: t('pages.ultimaMilla.faqs.faq3.answer') },
+    { question: t('pages.ultimaMilla.faqs.faq4.question'), answer: t('pages.ultimaMilla.faqs.faq4.answer') },
+    { question: t('pages.ultimaMilla.faqs.faq5.question'), answer: t('pages.ultimaMilla.faqs.faq5.answer') },
+    { question: t('pages.ultimaMilla.faqs.faq6.question'), answer: t('pages.ultimaMilla.faqs.faq6.answer') },
+    { question: t('pages.ultimaMilla.faqs.faq7.question'), answer: t('pages.ultimaMilla.faqs.faq7.answer') },
+    { question: t('pages.ultimaMilla.faqs.faq8.question'), answer: t('pages.ultimaMilla.faqs.faq8.answer') },
+    { question: t('pages.ultimaMilla.faqs.faq9.question'), answer: t('pages.ultimaMilla.faqs.faq9.answer') },
+    { question: t('pages.ultimaMilla.faqs.faq10.question'), answer: t('pages.ultimaMilla.faqs.faq10.answer') },
+    { question: t('pages.ultimaMilla.faqs.faq11.question'), answer: t('pages.ultimaMilla.faqs.faq11.answer') },
+    { question: t('pages.ultimaMilla.faqs.faq12.question'), answer: t('pages.ultimaMilla.faqs.faq12.answer') },
+    { question: t('pages.ultimaMilla.faqs.faq13.question'), answer: t('pages.ultimaMilla.faqs.faq13.answer') },
+    { question: t('pages.ultimaMilla.faqs.faq14.question'), answer: t('pages.ultimaMilla.faqs.faq14.answer') },
+    { question: t('pages.ultimaMilla.faqs.faq15.question'), answer: t('pages.ultimaMilla.faqs.faq15.answer') },
+    { question: t('pages.ultimaMilla.faqs.faq16.question'), answer: t('pages.ultimaMilla.faqs.faq16.answer') },
+    { question: t('pages.ultimaMilla.faqs.faq17.question'), answer: t('pages.ultimaMilla.faqs.faq17.answer') },
+    { question: t('pages.ultimaMilla.faqs.faq18.question'), answer: t('pages.ultimaMilla.faqs.faq18.answer') }
+  ]
+  return rows.map((row, i) => ({ ...row, open: o[i] }))
+})
 
 useHead(computed(() => ({
   title: t('pages.ultimaMilla.seo.title'),

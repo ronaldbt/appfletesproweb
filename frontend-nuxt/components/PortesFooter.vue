@@ -72,7 +72,7 @@
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/guardamuebles" class="hover:text-teal-400 transition-colors text-sm">
+              <NuxtLink to="/bodegaje" class="hover:text-teal-400 transition-colors text-sm">
                 {{ $t('nav.guardamuebles') }}
               </NuxtLink>
             </li>
@@ -158,7 +158,7 @@
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/guardamuebles" class="hover:text-teal-400 transition-colors text-sm">
+              <NuxtLink to="/bodegaje" class="hover:text-teal-400 transition-colors text-sm">
                 Bodegaje Climatizado
               </NuxtLink>
             </li>

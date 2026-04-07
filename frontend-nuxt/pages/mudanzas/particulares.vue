@@ -169,7 +169,8 @@
               class="bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden"
             >
               <button
-                @click="faq.open = !faq.open"
+                type="button"
+                @click="toggleFaq(idx)"
                 class="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-slate-100 transition-all"
               >
                 <h3 class="text-lg font-black text-slate-900 pr-8">{{ faq.question }}</h3>
@@ -295,38 +296,21 @@ const processSteps = computed(() => [
   }
 ])
 
-const faqs = computed(() => [
-  {
-    question: t('pages.mudanzasParticulares.faqs.faq1.question'),
-    answer: t('pages.mudanzasParticulares.faqs.faq1.answer'),
-    open: false
-  },
-  {
-    question: t('pages.mudanzasParticulares.faqs.faq2.question'),
-    answer: t('pages.mudanzasParticulares.faqs.faq2.answer'),
-    open: false
-  },
-  {
-    question: t('pages.mudanzasParticulares.faqs.faq3.question'),
-    answer: t('pages.mudanzasParticulares.faqs.faq3.answer'),
-    open: false
-  },
-  {
-    question: t('pages.mudanzasParticulares.faqs.faq4.question'),
-    answer: t('pages.mudanzasParticulares.faqs.faq4.answer'),
-    open: false
-  },
-  {
-    question: t('pages.mudanzasParticulares.faqs.faq5.question'),
-    answer: t('pages.mudanzasParticulares.faqs.faq5.answer'),
-    open: false
-  },
-  {
-    question: t('pages.mudanzasParticulares.faqs.faq6.question'),
-    answer: t('pages.mudanzasParticulares.faqs.faq6.answer'),
-    open: false
-  }
-])
+const faqOpenStates = ref(Array(6).fill(false))
+function toggleFaq (idx) {
+  const next = [...faqOpenStates.value]
+  next[idx] = !next[idx]
+  faqOpenStates.value = next
+}
+const faqs = computed(() => {
+  const o = faqOpenStates.value
+  const base = 'pages.mudanzasParticulares.faqs'
+  return Array.from({ length: 6 }, (_, i) => ({
+    question: t(`${base}.faq${i + 1}.question`),
+    answer: t(`${base}.faq${i + 1}.answer`),
+    open: o[i]
+  }))
+})
 
 // SEO Meta Tags
 const siteUrl = 'https://fletespro.cl'

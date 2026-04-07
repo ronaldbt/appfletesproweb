@@ -635,9 +635,11 @@ watch(locale, (newLocale) => {
   // El computed se recalculará automáticamente
 }, { immediate: true })
 
-// Función para alternar el estado de apertura de un FAQ
+// Función para alternar el estado de apertura de un FAQ (copia del array para reactividad fiable)
 const toggleFaq = (index) => {
-  faqOpenStates.value[index] = !faqOpenStates.value[index]
+  const next = [...faqOpenStates.value]
+  next[index] = !next[index]
+  faqOpenStates.value = next
 }
 
 // Service Types para la nueva sección

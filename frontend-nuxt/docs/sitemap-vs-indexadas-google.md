@@ -18,7 +18,7 @@
 | https://fletespro.cl/mudanzas/particulares | Mudanzas particulares |
 | https://fletespro.cl/mudanzas/urgentes | Mudanzas urgentes |
 | https://fletespro.cl/transporte-frio | Transporte en frío (hub) |
-| https://fletespro.cl/guardamuebles | Guardamuebles |
+| https://fletespro.cl/bodegaje | Bodegaje |
 | https://fletespro.cl/reservar | Reservar |
 | https://fletespro.cl/gracias | Gracias (post-reserva) |
 | https://fletespro.cl/fletes-santiago | Fletes Santiago (hub) |
