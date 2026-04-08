@@ -44,6 +44,11 @@ const menuConfigs = {
       icon: icons.reservations
     },
     {
+      name: 'Rutas',
+      path: '/dashboard-admin/rutas',
+      icon: icons.routes
+    },
+    {
       name: 'Cotización',
       path: '/dashboard-admin/cotizacion',
       icon: icons.calculator
