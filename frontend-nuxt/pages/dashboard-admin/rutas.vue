@@ -165,6 +165,7 @@ let mapInstance = null
 let directionsService = null
 let directionsRenderer = null
 let autocomplete = null
+let stopMarkers = []
 
 function uid () {
   return `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`
@@ -191,7 +192,7 @@ function loadGoogleScript (apiKey) {
     const s = document.createElement('script')
     s.id = id
     s.async = true
-    s.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places`
+    s.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&v=weekly&libraries=places`
     s.onload = () => {
       googleMaps = window.google.maps
       resolve()
@@ -331,6 +332,23 @@ function fitBounds () {
   mapInstance.fitBounds(b, 48)
 }
 
+function syncStopMarkers () {
+  if (!mapInstance || !googleMaps) return
+  for (const m of stopMarkers) {
+    m.setMap(null)
+  }
+  stopMarkers = []
+  points.value.forEach((p, idx) => {
+    const m = new googleMaps.Marker({
+      map: mapInstance,
+      position: { lat: p.lat, lng: p.lng },
+      label: String(idx + 1),
+      title: p.label || p.address
+    })
+    stopMarkers.push(m)
+  })
+}
+
 function formatDuration (sec) {
   if (sec == null || !Number.isFinite(sec)) return '—'
   const m = Math.round(sec / 60)
@@ -390,7 +408,14 @@ async function runOptimize () {
     result.value = buildOptimizationResult(pts, path, totalCost, optimizeBy.value)
     drawDirections(result.value.orderedPoints)
   } catch (e) {
-    errorMsg.value = e.message || 'Error al optimizar'
+    const msg = e.message || 'Error al optimizar'
+    if (/REQUEST_DENIED|not enabled|Routes API|legacy/i.test(msg)) {
+      errorMsg.value =
+        'Google rechazó la matriz de rutas. En Google Cloud → APIs, activa «Routes API» (y facturación) para la misma clave del mapa. Detalle: ' +
+        msg
+    } else {
+      errorMsg.value = msg
+    }
   } finally {
     optimizing.value = false
   }
@@ -416,9 +441,20 @@ onMounted(async () => {
   }
 })
 
-watch(points, () => fitBounds(), { deep: true })
+watch(
+  points,
+  () => {
+    fitBounds()
+    syncStopMarkers()
+  },
+  { deep: true }
+)
 
 onUnmounted(() => {
+  for (const m of stopMarkers) {
+    m.setMap(null)
+  }
+  stopMarkers = []
   mapInstance = null
   directionsService = null
   directionsRenderer = null

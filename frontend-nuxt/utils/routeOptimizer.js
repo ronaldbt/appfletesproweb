@@ -1,118 +1,126 @@
 /**
- * Matriz de costos vía Google Maps JavaScript DistanceMatrixService (misma clave que el mapa).
- * TSP abierto: inicio fijo elegido por el usuario + nearest neighbor + 2-opt.
+ * Matriz de costos vía Routes API (JS): RouteMatrix.computeRouteMatrix.
+ * Evita Distance Matrix "legacy" desactivada en muchos proyectos.
+ * TSP abierto: inicio fijo + nearest neighbor + 2-opt.
  */
 
 const MAX_ELEMENTS = 100
 
-function elementCost (el, byTime) {
-  if (!el || el.status !== 'OK') return 1e12
+function routeMatrixItemCost (item, byTime) {
+  if (!item || item.error) return 1e12
   if (byTime) {
-    if (el.duration_in_traffic && typeof el.duration_in_traffic.value === 'number') {
-      return el.duration_in_traffic.value
+    const ms = item.durationMillis
+    if (ms != null && Number.isFinite(ms) && ms !== Number.POSITIVE_INFINITY) {
+      return ms / 1000
     }
-    return el.duration?.value ?? 1e12
+    return 1e12
   }
-  return el.distance?.value ?? 1e12
+  const m = item.distanceMeters
+  return m != null && Number.isFinite(m) ? m : 1e12
+}
+
+function latLngWaypoint (p) {
+  return {
+    waypoint: {
+      location: {
+        latLng: { latitude: Number(p.lat), longitude: Number(p.lng) }
+      }
+    }
+  }
+}
+
+async function computeMatrixChunk (RouteMatrix, gmaps, points, originStart, originEnd, byTime) {
+  const n = points.length
+  const slice = points.slice(originStart, originEnd)
+  const origins = slice.map(latLngWaypoint)
+  const destinations = points.map(latLngWaypoint)
+
+  const baseRequest = {
+    origins,
+    destinations,
+    travelMode: 'DRIVING',
+    units: gmaps.UnitSystem.METRIC,
+    fields: ['durationMillis', 'distanceMeters', 'condition'],
+    languageCode: 'es'
+  }
+
+  const tryRequest = async (routingPreference) => {
+    const request = { ...baseRequest, routingPreference }
+    return RouteMatrix.computeRouteMatrix(request)
+  }
+
+  let raw
+  try {
+    raw = await tryRequest(byTime ? 'TRAFFIC_AWARE' : 'TRAFFIC_UNAWARE')
+  } catch (e) {
+    if (byTime) {
+      raw = await tryRequest('TRAFFIC_UNAWARE')
+    } else {
+      throw e
+    }
+  }
+
+  const matrixWrapper = raw?.matrix ?? raw
+  const rows = matrixWrapper?.rows
+  if (!rows || rows.length !== origins.length) {
+    throw new Error(
+      'Respuesta inválida de Route Matrix. Activa «Routes API» en Google Cloud para este proyecto y clave.'
+    )
+  }
+
+  return { rows, sliceLen: slice.length }
 }
 
 /**
- * @param {typeof google.maps} gmaps - namespace google.maps
+ * @param {typeof google.maps} gmaps
  * @param {Array<{lat:number,lng:number}>} points
  * @param {boolean} byTime
  * @returns {Promise<number[][]>}
  */
-export function fetchDistanceMatrix (gmaps, points, byTime) {
-  const n = points.length
-  const matrix = Array.from({ length: n }, () => Array(n).fill(0))
-  const service = new gmaps.DistanceMatrixService()
-  const latLng = (p) => new gmaps.LatLng(p.lat, p.lng)
-
-  const runChunk = (originsSlice, originOffset) =>
-    new Promise((resolve, reject) => {
-      const origins = originsSlice.map(latLng)
-      const destinations = points.map(latLng)
-      const opts = {
-        origins,
-        destinations,
-        travelMode: gmaps.TravelMode.DRIVING,
-        unitSystem: gmaps.UnitSystem.METRIC,
-        region: 'CL'
-      }
-      if (byTime) {
-        opts.drivingOptions = {
-          departureTime: new Date(),
-          trafficModel: gmaps.TrafficModel.BEST_GUESS
-        }
-      }
-      service.getDistanceMatrix(opts, (response, status) => {
-        if (status !== 'OK') {
-          reject(new Error(`${status}${response?.error_message ? ': ' + response.error_message : ''}`))
-          return
-        }
-        for (let i = 0; i < originsSlice.length; i++) {
-          const row = response.rows[i]
-          for (let j = 0; j < n; j++) {
-            const el = row.elements[j]
-            const gi = originOffset + i
-            matrix[gi][j] = gi === j ? 0 : elementCost(el, byTime)
-          }
-        }
-        resolve()
-      })
-    })
-
-  const chain = async () => {
-    let originStart = 0
-    while (originStart < n) {
-      const maxOrigins = Math.max(1, Math.floor(MAX_ELEMENTS / n))
-      const originEnd = Math.min(originStart + maxOrigins, n)
-      const slice = points.slice(originStart, originEnd)
-      try {
-        await runChunk(slice, originStart)
-      } catch (e) {
-        if (byTime) {
-          await runChunkBasic(slice, originStart)
-        } else {
-          throw e
-        }
-      }
-      originStart = originEnd
-    }
-    return matrix
+export async function fetchDistanceMatrix (gmaps, points, byTime) {
+  if (typeof gmaps.importLibrary !== 'function') {
+    throw new Error(
+      'Maps JS sin importLibrary. Recarga la página; el script debe incluir v=weekly.'
+    )
   }
 
-  const runChunkBasic = (originsSlice, originOffset) =>
-    new Promise((resolve, reject) => {
-      const origins = originsSlice.map(latLng)
-      const destinations = points.map(latLng)
-      service.getDistanceMatrix(
-        {
-          origins,
-          destinations,
-          travelMode: gmaps.TravelMode.DRIVING,
-          unitSystem: gmaps.UnitSystem.METRIC,
-          region: 'CL'
-        },
-        (response, status) => {
-          if (status !== 'OK') {
-            reject(new Error(status))
-            return
-          }
-          for (let i = 0; i < originsSlice.length; i++) {
-            const row = response.rows[i]
-            for (let j = 0; j < n; j++) {
-              const el = row.elements[j]
-              const gi = originOffset + i
-              matrix[gi][j] = gi === j ? 0 : elementCost(el, true)
-            }
-          }
-          resolve()
-        }
-      )
-    })
+  const routesLib = await gmaps.importLibrary('routes')
+  const RouteMatrix = routesLib.RouteMatrix
+  if (!RouteMatrix?.computeRouteMatrix) {
+    throw new Error('No se pudo cargar RouteMatrix. Comprueba la clave y la Routes API en Google Cloud.')
+  }
 
-  return chain()
+  const n = points.length
+  const matrix = Array.from({ length: n }, () => Array(n).fill(0))
+
+  let originStart = 0
+  while (originStart < n) {
+    const maxOrigins = Math.max(1, Math.floor(MAX_ELEMENTS / n))
+    const originEnd = Math.min(originStart + maxOrigins, n)
+
+    const { rows } = await computeMatrixChunk(
+      RouteMatrix,
+      gmaps,
+      points,
+      originStart,
+      originEnd,
+      byTime
+    )
+
+    for (let i = 0; i < rows.length; i++) {
+      const items = rows[i]?.items
+      if (!items || items.length !== n) {
+        throw new Error('Fila de matriz incompleta. Revisa cuotas y límites de Routes API.')
+      }
+      for (let j = 0; j < n; j++) {
+        const gi = originStart + i
+        matrix[gi][j] = gi === j ? 0 : routeMatrixItemCost(items[j], byTime)
+      }
+    }
+    originStart = originEnd
+  }
+
+  return matrix
 }
 
 export function pathCost (matrix, path) {
