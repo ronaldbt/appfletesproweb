@@ -31,19 +31,21 @@
               ref="addressInputRef"
               v-model="newAddress"
               type="text"
-              placeholder="Ej: Av. Apoquindo 3000, Las Condes"
+              placeholder="Ej: Padre Mariano 236, Providencia"
               class="mt-1 w-full rounded-xl border-2 border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 focus:border-teal-500 focus:outline-none"
+              :class="placeFromAutocomplete ? 'border-teal-400 ring-1 ring-teal-200' : ''"
               :disabled="mapsLoading || !mapsReady"
+              @keydown="onAddressKeydown"
             />
           </label>
           <div class="flex flex-wrap gap-2">
             <button
               type="button"
               class="rounded-xl bg-teal-600 px-4 py-2 text-sm font-bold text-white shadow shadow-teal-500/30 hover:bg-teal-700 disabled:opacity-50"
-              :disabled="!newAddress.trim() || !mapsReady || geocoding"
+              :disabled="!mapsReady"
               @click="addPointFromInput"
             >
-              {{ geocoding ? 'Buscando…' : 'Agregar parada' }}
+              Agregar parada
             </button>
             <button
               type="button"
@@ -54,7 +56,10 @@
               {{ geoLocating ? 'Ubicación…' : 'Mi ubicación GPS' }}
             </button>
           </div>
-          <p class="text-xs text-slate-500">Máximo 23 paradas. Las direcciones se geocodifican con Google (Places/Geocoder).</p>
+          <p class="text-xs text-slate-500">
+            Máximo 23 paradas. Escribe y <strong>elige una sugerencia de la lista</strong> (Places); no usamos Geocoding API.
+            <span v-if="placeFromAutocomplete" class="block text-teal-700 font-medium mt-1">Listo para agregar esta dirección.</span>
+          </p>
         </div>
 
         <div v-if="points.length === 0" class="text-center py-10 text-slate-400 text-sm">
@@ -131,7 +136,7 @@
 <script setup>
 definePageMeta({ layout: 'admin' })
 
-import { ref, onMounted, onUnmounted, watch } from 'vue'
+import { ref, onMounted, onUnmounted, watch, nextTick } from 'vue'
 import {
   fetchDistanceMatrix,
   optimizeRouteOrder,
@@ -148,8 +153,9 @@ const startIndex = ref(0)
 const optimizeBy = ref('time')
 const mapsLoading = ref(true)
 const mapsReady = ref(false)
-const geocoding = ref(false)
 const geoLocating = ref(false)
+/** Lugar confirmado por Autocomplete (evita Geocoder / Geocoding API) */
+const placeFromAutocomplete = ref(null)
 const optimizing = ref(false)
 const errorMsg = ref('')
 const result = ref(null)
@@ -223,38 +229,58 @@ function bindAutocomplete () {
     bounds,
     strictBounds: false,
     componentRestrictions: { country: 'cl' },
-    fields: ['formatted_address', 'geometry', 'name']
+    fields: ['formatted_address', 'geometry', 'name', 'place_id']
+  })
+  googleMaps.event.addListener(autocomplete, 'place_changed', () => {
+    const place = autocomplete.getPlace()
+    if (!place.geometry || !place.geometry.location) {
+      placeFromAutocomplete.value = null
+      return
+    }
+    const loc = place.geometry.location
+    const payload = {
+      lat: typeof loc.lat === 'function' ? loc.lat() : loc.lat,
+      lng: typeof loc.lng === 'function' ? loc.lng() : loc.lng,
+      address: place.formatted_address || place.name || newAddress.value.trim() || 'Parada'
+    }
+    // Evitar que un `input` posterior al elegir sugerencia borre la selección
+    nextTick(() => {
+      placeFromAutocomplete.value = payload
+    })
   })
 }
 
+/** Solo limpiar selección cuando el usuario escribe o borra (no en Enter/flechas del desplegable). */
+function onAddressKeydown (e) {
+  if (e.key === 'Enter' || e.key === 'ArrowDown' || e.key === 'ArrowUp' || e.key === 'Escape' || e.key === 'Tab') {
+    return
+  }
+  if (e.key.length === 1 || e.key === 'Backspace' || e.key === 'Delete') {
+    placeFromAutocomplete.value = null
+  }
+}
+
 function addPointFromInput () {
-  if (!googleMaps || !newAddress.value.trim()) return
-  geocoding.value = true
+  if (!googleMaps) return
   errorMsg.value = ''
-  const geocoder = new googleMaps.Geocoder()
-  geocoder.geocode(
-    { address: newAddress.value.trim(), region: 'cl', componentRestrictions: { country: 'cl' } },
-    (results, status) => {
-      geocoding.value = false
-      if (status !== 'OK' || !results || !results[0]) {
-        errorMsg.value = 'No se encontró la dirección. Prueba con más detalle (calle, comuna).'
-        return
-      }
-      const loc = results[0].geometry.location
-      const lat = loc.lat()
-      const lng = loc.lng()
-      points.value.push({
-        id: uid(),
-        address: results[0].formatted_address,
-        label: results[0].formatted_address,
-        lat,
-        lng
-      })
-      newAddress.value = ''
-      if (points.value.length === 1) startIndex.value = 0
-      fitBounds()
-    }
-  )
+  if (!newAddress.value.trim() && !placeFromAutocomplete.value) return
+  if (placeFromAutocomplete.value) {
+    const p = placeFromAutocomplete.value
+    points.value.push({
+      id: uid(),
+      address: p.address,
+      label: p.address,
+      lat: p.lat,
+      lng: p.lng
+    })
+    newAddress.value = ''
+    placeFromAutocomplete.value = null
+    if (points.value.length === 1) startIndex.value = 0
+    fitBounds()
+    return
+  }
+  errorMsg.value =
+    'Debes elegir una dirección de las sugerencias (flecha abajo y clic). Escribir solo el texto y pulsar «Agregar» no basta y no requiere activar Geocoding API en Google Cloud.'
 }
 
 function addCurrentLocation () {
