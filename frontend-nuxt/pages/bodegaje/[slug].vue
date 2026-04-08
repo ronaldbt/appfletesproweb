@@ -1,25 +1,26 @@
 <template>
   <div class="min-h-screen flex flex-col overflow-x-hidden bg-white selection:bg-teal-100 selection:text-teal-900">
     <Breadcrumbs />
-    <!-- Hero Section with Calculator -->
     <section id="bodegaje-calculator" class="relative pt-8 pb-24 md:pt-12 md:pb-32 overflow-hidden bg-slate-50">
       <div class="absolute top-0 right-0 w-full h-full bg-teal-600/[0.02] -skew-y-3 origin-top-right -z-10" />
 
       <div class="container mx-auto px-4 relative z-10">
-        <div class="text-center mb-16 animate-fade-in max-w-4xl mx-auto">
+        <div class="text-center mb-10 md:mb-14 animate-fade-in max-w-4xl mx-auto">
           <span class="inline-block bg-white text-teal-700 px-6 py-2.5 rounded-2xl text-[10px] font-black uppercase tracking-[0.3em] mb-8 shadow-sm border border-slate-200">
             {{ $t('pages.guardamuebles.hero.badge') }}
           </span>
-          <h1 class="text-5xl md:text-8xl font-black text-slate-950 leading-[0.9] tracking-tighter mb-8">
-            {{ $t('pages.guardamuebles.hero.title') }}
+          <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-slate-950 leading-[0.95] tracking-tighter mb-6 md:mb-8">
+            {{ h1Title }}
           </h1>
           <p class="text-lg md:text-2xl text-slate-500 max-w-3xl mx-auto font-medium">
-            {{ $t('pages.guardamuebles.hero.subtitle') }}
+            {{ heroSubtitle }}
           </p>
         </div>
 
+        <BodegajeVolumePicker @select-volume="onVolumeSelect" />
+
         <div class="animate-slide-up">
-          <GuardamueblesCalculator />
+          <GuardamueblesCalculator :volume-hint="volumeHint" />
         </div>
       </div>
     </section>
@@ -37,9 +38,27 @@
 </template>
 
 <script setup>
+import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { getBodegajeComunaBySlug } from '~/config/bodegajeComunas.js'
 
-const { t } = useI18n()
+const route = useRoute()
+const { t, locale } = useI18n()
+
+const meta = getBodegajeComunaBySlug(route.params.slug)
+if (!meta) {
+  throw createError({ statusCode: 404, statusMessage: 'Página no encontrada' })
+}
+
+const comunaLabel = meta.comunaLabel
+const h1Title = computed(() => t('pages.guardamuebles.comuna.h1', { comuna: comunaLabel }))
+const heroSubtitle = computed(() => t('pages.guardamuebles.comuna.subtitle', { comuna: comunaLabel }))
+
+const volumeHint = ref(null)
+
+function onVolumeSelect (m3) {
+  volumeHint.value = m3 === null ? 'help' : m3
+}
 
 const scrollToCalc = () => {
   if (process.client) {
@@ -48,31 +67,31 @@ const scrollToCalc = () => {
 }
 
 const siteUrl = 'https://fletespro.cl'
-const currentUrl = `${siteUrl}/bodegaje`
+const pathEs = `/bodegaje/${meta.slug}`
+const canonicalPath = computed(() => (locale.value === 'en' ? `/en${pathEs}` : pathEs))
+const currentUrl = computed(() => `${siteUrl}${canonicalPath.value}`)
 const defaultImage = `${siteUrl}/og-image.jpg`
+const pageTitle = computed(() => `${h1Title.value} | ${t('pages.guardamuebles.hero.title')} | FletesPro`)
+const pageDesc = computed(() => t('pages.guardamuebles.comuna.metaDescription', { comuna: comunaLabel }))
 
 useHead(() => ({
-  title: `${t('pages.guardamuebles.hero.title')} | FletesPro`,
+  title: pageTitle.value,
   meta: [
-    { name: 'description', content: t('pages.guardamuebles.description') },
-    {
-      name: 'keywords',
-      content: 'bodegaje Santiago, arriendo bodega Santiago, bodegaje Región Metropolitana, guardar muebles Santiago, arriendo bodega guardar cosas, mini bodegas Santiago, bodegaje precios, precio bodegaje mes, almacenamiento Santiago, bodegas particulares, bodegas empresas, bodegaje con mudanza, self storage Santiago, espacios almacenamiento Región Metropolitana'
-    },
+    { name: 'description', content: pageDesc.value },
     { property: 'og:type', content: 'website' },
-    { property: 'og:url', content: currentUrl },
-    { property: 'og:title', content: `${t('pages.guardamuebles.hero.title')} | FletesPro` },
-    { property: 'og:description', content: t('pages.guardamuebles.description') },
+    { property: 'og:url', content: currentUrl.value },
+    { property: 'og:title', content: pageTitle.value },
+    { property: 'og:description', content: pageDesc.value },
     { property: 'og:image', content: defaultImage },
     { property: 'og:site_name', content: 'FletesPro' },
-    { property: 'og:locale', content: 'es_ES' },
+    { property: 'og:locale', content: locale.value === 'en' ? 'en_US' : 'es_ES' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:url', content: currentUrl },
-    { name: 'twitter:title', content: `${t('pages.guardamuebles.hero.title')} | FletesPro` },
-    { name: 'twitter:description', content: t('pages.guardamuebles.description') },
+    { name: 'twitter:url', content: currentUrl.value },
+    { name: 'twitter:title', content: pageTitle.value },
+    { name: 'twitter:description', content: pageDesc.value },
     { name: 'twitter:image', content: defaultImage }
   ],
-  link: [{ rel: 'canonical', href: currentUrl }]
+  link: [{ rel: 'canonical', href: currentUrl.value }]
 }))
 </script>
 

@@ -32,6 +32,8 @@
     "mudanzas": "Moving",
     "embalajes": "Packing",
     "guardamuebles": "Storage",
+    "bodegajeHub": "Storage — calculator & prices",
+    "bodegajeComuna": "Storage ({comuna})",
     "transporteFrio": "Cold Transport",
     "ultimaMilla": "Last Mile",
     "fletesConstruccion": "Construction Freight",
@@ -258,6 +260,23 @@
         "title": "Storage Units near you in Marbella",
         "subtitle": "Cheap, affordable and secure storage in Marbella, Málaga and Costa del Sol. Climate-controlled warehouses with 24-hour access. Home pickup service included. Online access with username and password to always verify your belongings."
       },
+      "comuna": {
+        "h1": "We pick up in {comuna}",
+        "subtitle": "We collect your furniture in {comuna} and store it in a secure warehouse in Santiago. Rent by m³ from 1 m³. You do not lift a finger.",
+        "metaDescription": "Storage with home pickup in {comuna}. We keep your furniture while you move or renovate. Price per m³, online calculator. FletesPro Santiago."
+      },
+      "volumePicker": {
+        "title": "How much space do you need to store?",
+        "volumeTitle": "{n} m³ volume",
+        "hint1": "Great for boxes, a bike or a few small pieces.",
+        "hint3": "Studio-sized mix: chairs, low furniture, boxes.",
+        "hint6": "Roughly a small apartment: sofa, table, appliances and boxes.",
+        "hint12": "Several rooms: bulky furniture, bedroom and living room.",
+        "helpTitle": "I need help estimating m³",
+        "helpSubtitle": "Message us with photos or book a quick check—we help you get the real volume.",
+        "select": "Select",
+        "note": "All figures are in cubic metres (m³). Use the calculator below to refine the total with your items."
+      },
       "pickupService": {
         "title": "Home Pickup Service",
         "subtitle": "You don't need to transport your furniture, we come to pick it up",
@@ -274,44 +293,77 @@
         "feature3": "Check your inventory from any device",
         "feature4": "Complete online storage management"
       },
+      "comparison": {
+        "title": "Storage price comparison",
+        "subtitle": "Reference by volume (m³) versus other options in Santiago. FletesPro charges per cubic metre, with rental from 1 m³.",
+        "colConcept": "Item",
+        "colFletespro": "FletesPro",
+        "colMudango": "Mudango",
+        "colAkikb": "Akikb",
+        "colMinibodegas": "Minibodegas",
+        "footnote": "Competitor figures are indicative from public information (March 2026); they may vary by promotions, insurance and branch. On FletesPro the calculator shows estimated insurance in addition to base rent ($1,000/m³).",
+        "rows": {
+          "tarifa": {
+            "label": "Reference rate per m³ / month (base rent)",
+            "fletespro": "$6,500 CLP",
+            "mudango": "From ~$13,350 CLP",
+            "akikb": "From ~$14,500 CLP",
+            "minibodegas": "From ~$15,000 CLP"
+          },
+          "minimo": {
+            "label": "Minimum rental volume",
+            "fletespro": "1 m³",
+            "mudango": "~1 m³ (plan dependent)",
+            "akikb": "Varies",
+            "minibodegas": "Varies"
+          },
+          "ejemplo3": {
+            "label": "Example: 3 m³ / month (estimate; FletesPro includes typical insurance)",
+            "fletespro": "~$22,500 CLP",
+            "mudango": "~$40,050 CLP",
+            "akikb": "~$43,500 CLP",
+            "minibodegas": "~$45,000 CLP"
+          }
+        }
+      },
       "sizes": {
         "title": "Storage Units by Size",
         "subtitle": "From small storage units to extra large storage. Choose the perfect size for your needs",
         "size1": {
-          "metros": "1-2m²",
+          "metros": "1–2 m³",
           "title": "Mini Storage",
-          "description": "Ideal for mini warehouses and small storage units. Perfect for personal items and small boxes.",
-          "price": "From 35€"
+          "description": "Ideal for personal items, small boxes and belongings.",
+          "price": "From ~$7,500/mo"
         },
         "size2": {
-          "metros": "3-4m²",
+          "metros": "3–4 m³",
           "title": "Small Storage",
-          "description": "Small storage unit perfect for studio contents. Ideal for mini warehouses.",
-          "price": "From 45€"
+          "description": "Perfect for a small apartment or studio contents.",
+          "price": "From ~$22,500/mo"
         },
         "size3": {
-          "metros": "5-6m²",
-          "title": "Small Storage Unit",
-          "description": "Small storage unit ideal for small apartments. 5 square meter storage available.",
-          "price": "From 60€"
+          "metros": "5–6 m³",
+          "title": "Medium Storage",
+          "description": "Ideal for furniture from a small apartment.",
+          "price": "From ~$37,500/mo"
         },
         "size4": {
-          "metros": "8-10m²",
-          "title": "Medium Storage",
-          "description": "Medium storage ideal for 2-3 bedroom apartments. 10m2 storage available.",
-          "price": "From 85€"
+          "metros": "8–10 m³",
+          "title": "Large Storage",
+          "description": "For 2–3 bedroom contents.",
+          "price": "From ~$60,000/mo"
         },
         "size5": {
-          "metros": "15m²",
-          "title": "Large Storage",
-          "description": "Large storage perfect for complete 2-3 bedroom apartment contents.",
-          "price": "From 120€"
+          "metros": "15 m³",
+          "title": "Extra Large Storage",
+          "description": "Full apartment contents.",
+          "price": "From ~$112,500/mo"
         },
         "size6": {
-          "metros": "20m²+",
-          "title": "Extra Large Storage",
-          "description": "Extra large storage for houses, villas or business storage. 20m2 storage available.",
-          "price": "From 180€"
+          "metros": "20 m³+",
+          "title": "Business / bulk",
+          "description": "Houses, businesses or commercial storage.",
+          "price": "Ask us"
         }
       },
       "types": {
@@ -340,9 +392,9 @@
       },
       "pricing": {
         "title": "Storage Prices and Rates",
-        "subtitle": "Transparent storage prices. Storage price per month from 35€",
-        "info1": "Storage price per month from 35€",
-        "info2": "Competitive price per square meter",
+        "subtitle": "Rent by volume (m³) with transparent pricing. From $6,500 CLP/m³ plus estimated insurance in the calculator.",
+        "info1": "Base rate from $6,500 CLP per m³ per month",
+        "info2": "Quotes by real cubic metres (not m²)",
         "info3": "Flexible storage rates according to duration",
         "info4": "Discounts for long-term contracts"
       },
@@ -1186,6 +1238,7 @@
     "title": "FletesPro",
     "description": "Professional moving company in Marbella, Málaga and Costa del Sol. Services for moving, packing, storage, cold transport and last mile. Cheap, affordable and fast moves with maximum quality.",
     "services": "Services",
+    "bodegajeRm": "Storage by area",
     "zones": "Areas",
     "legal": "Legal",
     "privacy": "Privacy",
@@ -1361,15 +1414,15 @@
       "ctaButton": "Meet the team"
     },
     "guardamueblesCalculator": {
-      "title": "Storage Calculator",
-      "subtitle": "Calculate the price of your storage in Marbella according to the volume of your objects",
+      "title": "Storage calculator",
+      "subtitle": "Estimate your storage price in Santiago from the volume (m³) of your items",
       "additionalServices": "Additional Services",
       "duration": "Duration",
       "calculationSummary": "Calculation Summary",
       "totalVolume": "Total Volume",
       "objects": "Objects",
       "stacking": "Stacking",
-      "minimum": "Minimum 3 m³",
+      "minimum": "Minimum 1 m³ (billable volume)",
       "containers": "Containers",
       "perUnit": "each",
       "basePrice": "Base price",
@@ -1378,7 +1431,14 @@
       "monthly": "Monthly",
       "total": "Total",
       "requestQuote": "Request Quote",
-      "estimatedPriceNote": "* Estimated price. Final quote after inspection."
+      "estimatedPriceNote": "* Estimated price. Final quote after inspection.",
+      "volumeHintM3": "Reference: {n} m³. Add items from the list to get close to that volume.",
+      "volumeHintHelp": "Unsure about volume? Use the item list or WhatsApp us with photos."
+    },
+    "fletesBodegajeCta": {
+      "title": "Need storage while you settle in?",
+      "body": "We pick up your furniture in {comuna} and store it safely. You do not lift a finger.",
+      "button": "View storage service"
     },
     "embalajesCalculator": {
       "title": "Professional Packing Calculator",

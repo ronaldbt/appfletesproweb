@@ -6,6 +6,14 @@
       <p class="text-sm text-teal-100">{{ $t('components.guardamueblesCalculator.subtitle') }}</p>
     </div>
 
+    <div
+      v-if="volumeHintBanner"
+      class="px-4 py-3 bg-amber-50 border-b border-amber-200/80 text-center"
+      role="status"
+    >
+      <p class="text-xs md:text-sm font-bold text-amber-950 leading-snug">{{ volumeHintBanner }}</p>
+    </div>
+
     <div class="grid lg:grid-cols-2 gap-4 md:gap-6 p-4 md:p-6">
       <!-- Left Panel: Selección de Objetos -->
       <div class="space-y-4 max-h-[500px] overflow-y-auto pr-2">
@@ -241,11 +249,32 @@
 
 <script setup>
 import { ref, computed, h } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+
+const props = defineProps({
+  /** número = referencia m³; 'help' = mensaje para quien necesita ayuda */
+  volumeHint: {
+    type: [Number, String],
+    default: null
+  }
+})
+
+const volumeHintBanner = computed(() => {
+  if (props.volumeHint === 'help') {
+    return t('components.guardamueblesCalculator.volumeHintHelp')
+  }
+  if (typeof props.volumeHint === 'number' && !Number.isNaN(props.volumeHint)) {
+    return t('components.guardamueblesCalculator.volumeHintM3', { n: props.volumeHint })
+  }
+  return ''
+})
 
 // Estado
 const items = ref({})
 const selectedDuration = ref(3)
-const pricePerM3 = ref(7000) // Precio base Santiago: $7.000 CLP/m³
+const pricePerM3 = ref(6500) // Precio base Santiago: $6.500 CLP/m³
 const openCategories = ref({
   'Salón y Comedor': false,
   'Dormitorio': false,
@@ -402,21 +431,22 @@ const rawVolume = computed(() => {
   return total
 })
 
+const MIN_VOLUME_M3 = 1
+
 const totalVolume = computed(() => {
   // Factor de apilamiento: +15%
   let volume = rawVolume.value * 1.15
-  
-  // Mínimo de contratación: 3 m³
-  const minimumVolume = 3
-  if (volume < minimumVolume) {
-    volume = minimumVolume
+
+  if (volume < MIN_VOLUME_M3) {
+    volume = MIN_VOLUME_M3
   }
-  
+
   return volume
 })
 
 const needsMinimum = computed(() => {
-  return rawVolume.value * 1.15 < 3
+  const stacked = rawVolume.value * 1.15
+  return stacked > 0 && stacked < MIN_VOLUME_M3
 })
 
 const finalVolume = computed(() => {

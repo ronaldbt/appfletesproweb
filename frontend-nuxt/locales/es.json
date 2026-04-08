@@ -32,6 +32,8 @@
     "mudanzas": "Mudanzas",
     "embalajes": "Embalajes",
     "guardamuebles": "Bodegaje",
+    "bodegajeHub": "Bodegaje — calculadora y precios",
+    "bodegajeComuna": "Bodegaje {comuna}",
     "transporteFrio": "Transporte Frío",
     "ultimaMilla": "Última Milla",
     "fletesConstruccion": "Fletes Construcción",
@@ -304,11 +306,28 @@
       }
     },
     "guardamuebles": {
-      "description": "Bodegaje y arriendo de bodegas en Santiago y Región Metropolitana. Espacios de almacenamiento climatizados, vigilados 24h. Servicio de recogida a domicilio incluido. Acceso online con usuario y contraseña. Calculadora de bodegaje online. Presupuesto gratis sin compromiso.",
+      "description": "Bodegaje y arriendo de bodegas en Santiago y Región Metropolitana. Tarifa base desde $6.500 CLP por m³ al mes. Espacios climatizados, vigilados 24h. Recogida a domicilio. Acceso online. Calculadora de bodegaje. Presupuesto gratis sin compromiso.",
       "hero": {
         "badge": "Almacenamiento Seguro y Climatizado",
         "title": "Bodegaje y Arriendo de Bodegas en Santiago",
         "subtitle": "Bodegaje y arriendo de bodegas baratos y seguros en Santiago y Región Metropolitana. Espacios de almacenamiento climatizados con acceso 24 horas. Servicio de recogida a domicilio incluido. Acceso online para verificar tus pertenencias siempre."
+      },
+      "comuna": {
+        "h1": "Retiramos en {comuna}",
+        "subtitle": "Recogemos tus muebles en {comuna} y los guardamos en bodega segura en Santiago. Arriendo por m³ desde 1 m³. Tú no mueves un dedo.",
+        "metaDescription": "Bodegaje con retiro a domicilio en {comuna}. Guardamos tus muebles mientras te mudas o reformas. Precio por m³, calculadora online. FletesPro Santiago."
+      },
+      "volumePicker": {
+        "title": "¿Cuánto espacio necesitas para guardar?",
+        "volumeTitle": "Volumen de {n} m³",
+        "hint1": "Ideal para cajas, bicicleta o pocos muebles pequeños.",
+        "hint3": "Contenido tipo estudio o piezas sueltas: sillas, muebles bajos, cajas.",
+        "hint6": "Aproximado para un depto pequeño: sofá, mesa, electrodomésticos y cajas.",
+        "hint12": "Varias habitaciones: muebles voluminosos, dormitorio y living.",
+        "helpTitle": "Necesito ayuda para estimar los m³",
+        "helpSubtitle": "Escríbenos con fotos o agenda: te ayudamos a calcular el volumen real.",
+        "select": "Seleccionar",
+        "note": "Todo en metros cúbicos (m³). Usa la calculadora de abajo para afinar el total con tus ítems."
       },
       "pickupService": {
         "title": "Servicio de Recogida a Domicilio",
@@ -326,41 +345,74 @@
         "feature3": "Consulta tu inventario desde cualquier dispositivo",
         "feature4": "Gestión completa de tu bodegaje online"
       },
+      "comparison": {
+        "title": "Comparativa de precios de bodegaje",
+        "subtitle": "Referencia por volumen (m³) frente a otras opciones en Santiago. FletesPro cobra por metro cúbico, con arriendo desde 1 m³.",
+        "colConcept": "Concepto",
+        "colFletespro": "FletesPro",
+        "colMudango": "Mudango",
+        "colAkikb": "Akikb",
+        "colMinibodegas": "Minibodegas",
+        "footnote": "Cifras de competidores orientativas según información pública (marzo 2026); pueden variar por promociones, seguros y sucursal. En FletesPro el seguro estimado en calculadora es aparte del arriendo base ($1.000/m³).",
+        "rows": {
+          "tarifa": {
+            "label": "Tarifa referencial por m³ / mes (arriendo base)",
+            "fletespro": "$6.500 CLP",
+            "mudango": "Desde ~$13.350 CLP",
+            "akikb": "Desde ~$14.500 CLP",
+            "minibodegas": "Desde ~$15.000 CLP"
+          },
+          "minimo": {
+            "label": "Volumen mínimo de arriendo",
+            "fletespro": "1 m³",
+            "mudango": "~1 m³ (según plan)",
+            "akikb": "Variable",
+            "minibodegas": "Variable"
+          },
+          "ejemplo3": {
+            "label": "Ejemplo: 3 m³ / mes (estimado, arriendo + seguro típico FletesPro)",
+            "fletespro": "~$22.500 CLP",
+            "mudango": "~$40.050 CLP",
+            "akikb": "~$43.500 CLP",
+            "minibodegas": "~$45.000 CLP"
+          }
+        }
+      },
       "sizes": {
         "title": "Bodegaje y Bodegas por Tamaño",
         "subtitle": "Desde mini bodegas hasta espacios extra grandes. Elige el tamaño perfecto para guardar tus cosas",
         "size1": {
-          "metros": "1-2m²",
+          "metros": "1–2 m³",
           "title": "Mini Bodega",
           "description": "Ideal para guardar objetos personales, cajas pequeñas y pertenencias.",
-          "price": "Desde $49.000/mes"
+          "price": "Desde ~$7.500/mes"
         },
         "size2": {
-          "metros": "3-4m²",
+          "metros": "3–4 m³",
           "title": "Bodega Pequeña",
           "description": "Perfecta para el contenido de un departamento pequeño o estudio.",
-          "price": "Desde $60.000/mes"
+          "price": "Desde ~$22.500/mes"
         },
         "size3": {
-          "metros": "5-6m²",
+          "metros": "5–6 m³",
           "title": "Bodega Mediana",
           "description": "Ideal para guardar muebles de un departamento pequeño.",
-          "price": "Desde $85.000/mes"
+          "price": "Desde ~$37.500/mes"
         },
         "size4": {
-          "metros": "8-10m²",
+          "metros": "8–10 m³",
           "title": "Bodega Grande",
           "description": "Para el contenido de 2-3 habitaciones.",
-          "price": "Desde $120.000/mes"
+          "price": "Desde ~$60.000/mes"
         },
         "size5": {
-          "metros": "15m²",
+          "metros": "15 m³",
           "title": "Bodega Extra Grande",
           "description": "Perfecta para el contenido de un departamento completo.",
-          "price": "Desde $180.000/mes"
+          "price": "Desde ~$112.500/mes"
         },
         "size6": {
-          "metros": "20m²+",
+          "metros": "20 m³+",
           "title": "Espacio Empresarial",
           "description": "Para casas, negocios o almacenamiento comercial.",
           "price": "Consultar"
@@ -392,9 +444,9 @@
       },
       "pricing": {
         "title": "Precios y Tarifas de Bodegaje",
-        "subtitle": "Arriendo de bodegas con precios transparentes. Precio bodegaje mes desde $49.000",
-        "info1": "Precio bodegaje mes desde $49.000",
-        "info2": "Precio por metro cuadrado competitivo",
+        "subtitle": "Arriendo por volumen (m³) con precios transparentes. Desde $6.500 CLP/m³ más seguro estimado en calculadora.",
+        "info1": "Tarifa base desde $6.500 CLP por m³ al mes",
+        "info2": "Cotización por metro cúbico real (no por m²)",
         "info3": "Tarifas flexibles según duración",
         "info4": "Descuentos por contratos de largo plazo"
       },
@@ -469,11 +521,11 @@
         "subtitle": "Resolvemos tus dudas sobre bodegaje y arriendo de bodegas en Santiago y Región Metropolitana",
         "faq1": {
           "question": "¿Cuánto cuesta arrendar una bodega?",
-          "answer": "El precio de arriendo de bodega varía según el tamaño. Mini bodegas desde $49.000/mes, bodegas pequeñas desde $60.000/mes, bodegas medianas desde $85.000/mes. Ofrecemos bodegaje económico en Santiago con diferentes opciones de pago. El precio mensual incluye el arriendo del espacio."
+          "answer": "Cobramos por volumen en metros cúbicos (m³): tarifa base desde $6.500 CLP/m³ al mes, más un seguro estimado que puedes ver en la calculadora. Puedes arrendar desde 1 m³. Para rangos orientativos: espacios pequeños desde ~$7.500/mes, 3–4 m³ desde ~$22.500/mes, según volumen y opciones."
         },
         "faq2": {
-          "question": "¿Cuál es el precio de bodegaje por metro cuadrado?",
-          "answer": "El precio por metro cuadrado varía según el tamaño total. Para mini bodegas (1-4m²) el precio es competitivo. Para bodegas medianas (5-10m²) y grandes (15m²+) ofrecemos tarifas transparentes. Consulta nuestra calculadora o solicita presupuesto para Santiago y Región Metropolitana."
+          "question": "¿Cuál es el precio de bodegaje por metro cúbico?",
+          "answer": "La tarifa base de referencia es $6.500 CLP por m³ al mes. El total mensual depende del volumen que ocupes (con factor de apilado en la calculadora) y del seguro estimado. No cotizamos por metro cuadrado: todo el presupuesto se basa en m³ reales de tus cosas."
         },
         "faq3": {
           "question": "¿Ofrecen servicio de bodegaje a domicilio?",
@@ -489,7 +541,7 @@
         },
         "faq6": {
           "question": "¿Qué es una mini bodega?",
-          "answer": "Una mini bodega es un espacio de almacenamiento pequeño, ideal para guardar cosas personales, cajas o pertenencias. Nuestras mini bodegas van desde 1-2m² y son perfectas para almacenamiento compacto y económico en Santiago."
+          "answer": "Una mini bodega es un espacio de almacenamiento pequeño, ideal para guardar cosas personales, cajas o pertenencias. Trabajamos por volumen: puedes partir desde 1 m³ y las mini bodegas orientativas suelen estar en el rango de 1–2 m³."
         },
         "faq7": {
           "question": "¿Ofrecen bodegas para empresas?",
@@ -513,11 +565,11 @@
         },
         "faq12": {
           "question": "¿Cómo puedo contratar una bodega?",
-          "answer": "Puedes usar nuestra calculadora online para obtener un presupuesto o contactarnos para una consulta personalizada. Ofrecemos arriendo de bodegas desde $49.000/mes en Santiago y Región Metropolitana con diferentes tamaños."
+          "answer": "Puedes usar nuestra calculadora online para estimar m³ y precio mensual, o contactarnos por WhatsApp para una consulta personalizada. Arriendo desde 1 m³ en Santiago y Región Metropolitana."
         },
         "faq13": {
           "question": "¿Cuáles son las tarifas de bodegaje?",
-          "answer": "Las tarifas de bodegaje varían según tamaño y duración. Mini bodegas desde $49.000/mes, bodegas medianas desde $85.000/mes, bodegas grandes desde $120.000/mes. Descuentos por contratos largo plazo. Precios transparentes en Santiago."
+          "answer": "Base desde $6.500 CLP/m³ al mes más seguro estimado en calculadora. Descuentos por contratos de más meses. Los importes finales se confirman tras inspección o validación del volumen."
         },
         "faq14": {
           "question": "¿El servicio incluye recogida a domicilio?",
@@ -1952,15 +2004,15 @@
       "ctaButton": "Conoce al equipo"
     },
     "guardamueblesCalculator": {
-      "title": "Calculadora de Guardamuebles",
-      "subtitle": "Calcula el precio de tu bodegaje en Santiago según el volumen de tus objetos",
+      "title": "Calculadora de Bodegaje",
+      "subtitle": "Calcula el precio de tu bodegaje en Santiago según el volumen (m³) de tus objetos",
       "additionalServices": "Servicios Adicionales",
       "duration": "Duración",
       "calculationSummary": "Resumen del Cálculo",
       "totalVolume": "Volumen Total",
       "objects": "Objetos",
       "stacking": "Apilado",
-      "minimum": "Mínimo 3 m³",
+      "minimum": "Mínimo 1 m³ (volumen facturable)",
       "containers": "Contenedores",
       "perUnit": "cada uno",
       "basePrice": "Precio base",
@@ -1969,7 +2021,14 @@
       "monthly": "Mensual",
       "total": "Total",
       "requestQuote": "Solicitar Presupuesto",
-      "estimatedPriceNote": "* Precio estimado. Presupuesto final tras inspección."
+      "estimatedPriceNote": "* Precio estimado. Presupuesto final tras inspección.",
+      "volumeHintM3": "Referencia elegida: {n} m³. Suma ítems en el listado para acercarte a ese volumen.",
+      "volumeHintHelp": "¿Dudas con el volumen? Usa el listado de objetos o contáctanos por WhatsApp con fotos."
+    },
+    "fletesBodegajeCta": {
+      "title": "¿Necesitas guardar mientras te instalas?",
+      "body": "Retiramos tus muebles en {comuna} y los guardamos en bodega segura. Tú no mueves un dedo.",
+      "button": "Ver servicio de bodegaje"
     },
     "embalajesCalculator": {
       "title": "Calculadora de Embalaje Profesional",
@@ -2033,6 +2092,7 @@
     "title": "FletesPro",
     "description": "Empresa de mudanzas profesionales en Santiago y Región Metropolitana. Servicios de fletes, embalajes, guardamuebles, transporte en frío y última milla. Mudanzas baratas, económicas y rápidas con la máxima calidad.",
     "services": "Servicios",
+    "bodegajeRm": "Bodegaje por comuna",
     "zones": "Zonas",
     "legal": "Legal",
     "privacy": "Privacidad",

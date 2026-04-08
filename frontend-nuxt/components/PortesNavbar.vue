@@ -50,14 +50,31 @@
           <span class="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300" />
         </NuxtLink>
 
-        <!-- Guardamuebles -->
-        <NuxtLink 
-          to="/bodegaje"
-          class="text-xs font-bold uppercase tracking-wide text-slate-500 hover:text-teal-600 transition-all relative group whitespace-nowrap"
-        >
-          {{ $t('nav.guardamuebles') }}
-          <span class="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-teal-600 group-hover:w-full transition-all duration-300" />
-        </NuxtLink>
+        <!-- Bodegaje Dropdown -->
+        <div class="relative group">
+          <button
+            type="button"
+            class="text-xs font-bold uppercase tracking-wide text-slate-500 hover:text-teal-600 transition-all relative flex items-center gap-0.5 cursor-pointer whitespace-nowrap"
+          >
+            {{ $t('nav.guardamuebles') }}
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="absolute top-full left-0 mt-2 w-64 max-h-[70vh] overflow-y-auto bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-slate-100 overflow-hidden z-50">
+            <NuxtLink to="/bodegaje" class="block px-6 py-4 text-sm font-bold text-teal-700 hover:bg-teal-50 hover:text-teal-600 transition-all border-b border-slate-100">
+              {{ $t('nav.bodegajeHub') }}
+            </NuxtLink>
+            <NuxtLink
+              v-for="row in bodegajeComunasLanding"
+              :key="row.slug"
+              :to="`/bodegaje/${row.slug}`"
+              class="block px-6 py-4 text-sm font-bold text-slate-700 hover:bg-teal-50 hover:text-teal-600 transition-all"
+            >
+              {{ $t('nav.bodegajeComuna', { comuna: row.comunaLabel }) }}
+            </NuxtLink>
+          </div>
+        </div>
 
         <!-- Transporte en Frío -->
         <NuxtLink 
@@ -163,8 +180,20 @@
           <NuxtLink to="/embalajes" @click="isOpen = false" class="text-slate-900 font-black text-lg uppercase tracking-tighter">
             Embalajes
           </NuxtLink>
-          <NuxtLink to="/bodegaje" @click="isOpen = false" class="text-slate-900 font-black text-lg uppercase tracking-tighter">
+          <div class="text-slate-900 font-black text-lg uppercase tracking-tighter mb-2">
             {{ $t('nav.guardamuebles') }}
+          </div>
+          <NuxtLink to="/bodegaje" @click="isOpen = false" class="text-teal-700 font-bold text-base pl-4 hover:text-teal-600 transition-all">
+            {{ $t('nav.bodegajeHub') }}
+          </NuxtLink>
+          <NuxtLink
+            v-for="row in bodegajeComunasLanding"
+            :key="row.slug"
+            :to="`/bodegaje/${row.slug}`"
+            class="text-slate-600 font-bold text-base pl-4 hover:text-teal-600 transition-all"
+            @click="isOpen = false"
+          >
+            {{ $t('nav.bodegajeComuna', { comuna: row.comunaLabel }) }}
           </NuxtLink>
           <NuxtLink to="/transporte-frio" @click="isOpen = false" class="text-slate-900 font-black text-lg uppercase tracking-tighter">
             Transporte Frío
@@ -199,6 +228,7 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { comunasRM } from '~/config/comunasRM'
 import { mudanzasComunas } from '~/config/mudanzasComunas'
+import { bodegajeComunasLanding } from '~/config/bodegajeComunas.js'
 
 defineEmits(['get-quote'])
 

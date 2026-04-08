@@ -2,7 +2,7 @@
   <footer class="bg-slate-950 text-white py-20">
     <div class="container mx-auto px-4">
       <!-- Main Footer Content -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-12 mb-16">
         <!-- Company Info -->
         <div class="lg:col-span-2 space-y-6">
           <div class="flex items-center gap-2">
@@ -94,6 +94,23 @@
             <li>
               <NuxtLink to="/blog" class="hover:text-teal-400 transition-colors text-sm">
                 {{ $t('common.blog') }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Bodegaje por comuna (landings de retiro) -->
+        <div>
+          <h4 class="text-lg font-black mb-6 uppercase tracking-widest text-teal-500">{{ $t('footer.bodegajeRm') }}</h4>
+          <ul class="space-y-3 text-slate-400">
+            <li>
+              <NuxtLink to="/bodegaje" class="hover:text-teal-400 transition-colors text-sm font-bold text-slate-300">
+                {{ $t('nav.bodegajeHub') }}
+              </NuxtLink>
+            </li>
+            <li v-for="row in bodegajeComunasLanding" :key="'b-' + row.slug">
+              <NuxtLink :to="`/bodegaje/${row.slug}`" class="hover:text-teal-400 transition-colors text-sm">
+                {{ $t('nav.bodegajeComuna', { comuna: row.comunaLabel }) }}
               </NuxtLink>
             </li>
           </ul>
@@ -277,6 +294,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { comunasRM } from '~/config/comunasRM'
+import { bodegajeComunasLanding } from '~/config/bodegajeComunas.js'
 
 const COMUNAS_VISIBLES = 10
 const comunasExpandidas = ref(false)

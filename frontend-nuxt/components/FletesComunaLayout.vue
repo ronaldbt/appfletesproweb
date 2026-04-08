@@ -86,12 +86,38 @@
 
     <slot />
 
+    <FletesBodegajeCta
+      v-if="crossSellBodegaje"
+      :comuna-label="crossSellBodegaje.label"
+      :to="crossSellBodegaje.to"
+    />
+
     <PortesStats />
     <PortesTestimonials />
   </div>
 </template>
 
 <script setup>
+import { getBodegajeSlugForFletePath, getBodegajeComunaBySlug, normalizeRoutePathForLocale } from '~/config/bodegajeComunas.js'
+
+const route = useRoute()
+const localePath = useLocalePath()
+
+const crossSellBodegaje = computed(() => {
+  const slug = getBodegajeSlugForFletePath(normalizeRoutePathForLocale(route.path))
+  if (!slug) {
+    return null
+  }
+  const row = getBodegajeComunaBySlug(slug)
+  if (!row) {
+    return null
+  }
+  return {
+    label: row.comunaLabel,
+    to: localePath(`/bodegaje/${slug}`)
+  }
+})
+
 const props = defineProps({
   hero: {
     type: Object,

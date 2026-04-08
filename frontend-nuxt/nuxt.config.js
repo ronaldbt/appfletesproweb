@@ -1,8 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { comunasRM } from './config/comunasRM.js'
+import { bodegajePrerenderSlugs } from './config/bodegajeComunas.js'
 import { beasties } from 'vite-plugin-beasties'
 
 const rutasFletesComunas = comunasRM.map(c => `/fletes-${c.slug}`)
+const rutasBodegajeComunas = bodegajePrerenderSlugs.flatMap(s => [`/bodegaje/${s}`, `/en/bodegaje/${s}`])
 
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
@@ -65,14 +67,15 @@ export default defineNuxtConfig({
     '/guardamuebles/': { redirect: { to: '/bodegaje', statusCode: 301 } },
     '/en/guardamuebles': { redirect: { to: '/en/bodegaje', statusCode: 301 } },
     '/en/guardamuebles/': { redirect: { to: '/en/bodegaje', statusCode: 301 } },
-    ...Object.fromEntries(rutasFletesComunas.map(r => [r, { prerender: true }]))
+    ...Object.fromEntries(rutasFletesComunas.map(r => [r, { prerender: true }])),
+    ...Object.fromEntries(rutasBodegajeComunas.map(r => [r, { prerender: true }]))
   },
   
   // Nitro: prerender índice blog + cada artículo + todas las URLs /fletes-{comuna}
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/blog', ...rutasFletesComunas, '/fletes-talca', '/mudanzas-vitacura', '/bodegaje'],
+      routes: ['/', '/blog', ...rutasFletesComunas, ...rutasBodegajeComunas, '/fletes-talca', '/mudanzas-vitacura', '/bodegaje'],
       failOnError: false
     }
   },

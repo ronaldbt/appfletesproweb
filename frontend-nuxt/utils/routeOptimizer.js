@@ -19,33 +19,39 @@ function routeMatrixItemCost (item, byTime) {
   return m != null && Number.isFinite(m) ? m : 1e12
 }
 
-function latLngWaypoint (p) {
-  return {
-    waypoint: {
-      location: {
-        latLng: { latitude: Number(p.lat), longitude: Number(p.lng) }
-      }
-    }
+/** Origen/destino para Route Matrix en Maps JS: literal { lat, lng } (ver migración desde Distance Matrix). No uses el JSON REST con `waypoint`. */
+function toRouteMatrixLatLng (p) {
+  const lat = Number(p.lat)
+  const lng = Number(p.lng)
+  if (!Number.isFinite(lat) || !Number.isFinite(lng)) {
+    throw new Error(
+      'Una parada tiene coordenadas inválidas. Quitarla y volver a agregarla desde una sugerencia del mapa.'
+    )
   }
+  return { lat, lng }
 }
 
 async function computeMatrixChunk (RouteMatrix, gmaps, points, originStart, originEnd, byTime) {
   const n = points.length
   const slice = points.slice(originStart, originEnd)
-  const origins = slice.map(latLngWaypoint)
-  const destinations = points.map(latLngWaypoint)
+  const origins = slice.map(toRouteMatrixLatLng)
+  const destinations = points.map(toRouteMatrixLatLng)
 
+  // Misma forma que la doc oficial de Route Matrix (JS): DRIVING + UnitSystem.METRIC.
+  // Sin languageCode: en Route Matrix (JS) no es propiedad válida del request y devuelve "unknown property languageCode".
   const baseRequest = {
     origins,
     destinations,
     travelMode: 'DRIVING',
     units: gmaps.UnitSystem.METRIC,
-    fields: ['durationMillis', 'distanceMeters', 'condition'],
-    languageCode: 'es'
+    fields: ['durationMillis', 'distanceMeters', 'condition']
   }
 
   const tryRequest = async (routingPreference) => {
     const request = { ...baseRequest, routingPreference }
+    if (routingPreference === 'TRAFFIC_AWARE') {
+      request.departureTime = new Date()
+    }
     return RouteMatrix.computeRouteMatrix(request)
   }
 
@@ -53,10 +59,18 @@ async function computeMatrixChunk (RouteMatrix, gmaps, points, originStart, orig
   try {
     raw = await tryRequest(byTime ? 'TRAFFIC_AWARE' : 'TRAFFIC_UNAWARE')
   } catch (e) {
+    const hint = e?.message || String(e)
     if (byTime) {
-      raw = await tryRequest('TRAFFIC_UNAWARE')
+      try {
+        raw = await tryRequest('TRAFFIC_UNAWARE')
+      } catch (e2) {
+        const h2 = e2?.message || String(e2)
+        throw new Error(
+          `Route Matrix (con tráfico: ${hint}; sin tráfico: ${h2}). Activa Routes API y comprueba la clave.`
+        )
+      }
     } else {
-      throw e
+      throw new Error(hint)
     }
   }
 
