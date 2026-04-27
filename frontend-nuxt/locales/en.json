@@ -187,11 +187,11 @@
         },
         "price2": {
           "title": "Approximate Freight Price",
-          "description": "Calculate your freight price instantly with our calculator on the main page. For freight to regions the reference is distance × $900 CLP. Request a personalized quote for an exact price."
+          "description": "Calculate your freight price instantly with our calculator on the main page. For freight to regions the reference is distance × $1500 CLP. Request a personalized quote for an exact price."
         },
         "price3": {
           "title": "Freight Price per Km (to regions)",
-          "description": "For freight from Santiago to regions we use a reference price per kilometer ($900 CLP). Final price depends on volume and type of load. Quote online or via WhatsApp for your route."
+          "description": "For freight from Santiago to regions we use a reference price per kilometer ($1500 CLP). Final price depends on volume and type of load. Quote online or via WhatsApp for your route."
         },
         "price4": {
           "title": "Prices Adapted to Your Needs",
@@ -221,7 +221,7 @@
         },
         "faq5": {
           "question": "How much does freight cost per kilometer?",
-          "answer": "It varies by route and type of load. For freight to regions we use an approximate reference of $900 CLP per km. Contact us for an exact price for your route."
+          "answer": "It varies by route and type of load. For freight to regions we use an approximate reference of $1500 CLP per km. Contact us for an exact price for your route."
         },
         "faq6": {
           "question": "How much does freight cost from Santiago to Arica?",
@@ -1386,6 +1386,29 @@
     },
     "testimonials": {
       "title": "Our Clients' Opinions",
+      "leaveCommentTitle": "Leave your comment",
+      "leaveCommentHint": "Your review will appear on this page. Rate us with stars and tell us about your experience.",
+      "yourName": "Your name",
+      "yourService": "Service (optional)",
+      "yourServicePlaceholder": "e.g. move in Las Condes, fridge transport…",
+      "starsLabel": "Rating",
+      "commentLabel": "Comment",
+      "commentPlaceholder": "Tell us about your experience with FletesPro…",
+      "submit": "Publish comment",
+      "submitting": "Sending…",
+      "thankYou": "Thanks! Your comment is now published.",
+      "errorSend": "Could not send. Please try again.",
+      "sectionUserTitle": "Customer reviews",
+      "adminMenu": "Website comments",
+      "adminTitle": "Website comments",
+      "adminSubtitle": "Review and remove any you do not want to show.",
+      "adminEmpty": "No comments yet.",
+      "adminConfirmDelete": "Remove this comment from the website? This cannot be undone.",
+      "adminDelete": "Delete",
+      "adminDeleted": "Comment removed.",
+      "adminLoadError": "Failed to load comments.",
+      "adminDeleteError": "Failed to delete.",
+      "adminDate": "Date",
       "testimonial1": {
         "name": "Alejandro Ruiz",
         "role": "Move in Santiago",

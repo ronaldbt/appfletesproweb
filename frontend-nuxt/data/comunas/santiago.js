@@ -25,8 +25,8 @@ export default {
   },
   ventajas: [
     'Fletes Santiago centro y toda la RM: cobertura en las 52 comunas.',
-    'Precios claros: valor flete Santiago desde $20.000 + $2.000/km en la RM.',
-    'Fletes Santiago a regiones: tarifa $900/km a Valparaíso, Temuco, La Serena y más.',
+    'Precios claros: valor flete Santiago desde $28.000 + $2.000/km en la RM.',
+    'Fletes Santiago a regiones: tarifa $1500/km a Valparaíso, Temuco, La Serena y más.',
     'Fletes express Santiago y fletes Santiago centro 24 horas cuando lo necesites.',
     'Servicio de fletes en Santiago para particulares y empresas.',
     'Cotización al instante: calculadora online y presupuesto por WhatsApp sin compromiso.'
@@ -36,8 +36,8 @@ export default {
   precios: {
     h2: 'Precios de Fletes en Santiago 2026 – Tarifas actualizadas',
     intro: '¿Cuánto cuesta un flete en Santiago? Referencia de precios para fletes Santiago y fletes Santiago a regiones. Valor flete Santiago y fletes Santiago precios.',
-    rm: 'Precio base $20.000 + $2.000/km (hasta 50 km). Incluye hasta 2 m³. m³ adicional +$20.000 (incl. carga y descarga), ayudante +$10.000. Fletes Santiago centro, Providencia, Las Condes, Maipú y todas las comunas RM.',
-    regiones: '$900 CLP por kilómetro. Ejemplos: Santiago–Valparaíso desde aprox. $108.000; Santiago–Temuco desde aprox. $600.000. Fletes de Santiago a Viña del Mar, La Serena, Rancagua, Concepción y más.',
+    rm: 'Precio base $28.000 + $2.000/km (hasta 50 km). Incluye hasta 2 m³. m³ adicional +$20.000 (incl. carga y descarga), ayudante +$10.000. Fletes Santiago centro, Providencia, Las Condes, Maipú y todas las comunas RM.',
+    regiones: '$1500 CLP por kilómetro. Ejemplos: Santiago–Valparaíso desde aprox. $180.000; Santiago–Temuco desde aprox. $1.005.000. Fletes de Santiago a Viña del Mar, La Serena, Rancagua, Concepción y más.',
     ejemplosTitulo: 'Ejemplos de precios fletes Santiago',
     ejemplos: [
       'Providencia a Las Condes (6 km): aprox. $32.000',
@@ -61,7 +61,7 @@ export default {
   // Widget: cómo cotizar, presupuesto y tarifas
   cotizarYPresupuesto: {
     h2: 'Presupuesto y tarifa fletes Santiago',
-    intro: 'Para obtener un presupuesto flete santiago o presupuesto de fletes santiago sin compromiso, usa la calculadora de esta página o escríbenos por WhatsApp. La tarifa fletes santiago dentro de la RM es $20.000 + $2.000/km; las tarifas de flete dentro de santiago chile pueden variar si sumas metros cúbicos o ayudante.',
+    intro: 'Para obtener un presupuesto flete santiago o presupuesto de fletes santiago sin compromiso, usa la calculadora de esta página o escríbenos por WhatsApp. La tarifa fletes santiago dentro de la RM es $28.000 + $2.000/km; las tarifas de flete dentro de santiago chile pueden variar si sumas metros cúbicos o ayudante.',
     p2: 'Puedes calcular fletes en santiago con nuestra herramienta online: solo indicas origen, destino y volumen y obtienes un estimado. Calcula valor flete santiago en segundos. Si prefieres que te armemos el presupuesto a mano, contacto de fletes santiago por WhatsApp +56 9 7979 6841. No tenemos aplicación de fletes santiago ni fletes santiago app por ahora: cotizamos por web y WhatsApp, que suele ser más rápido. Nosotros realizamos el servicio completo de flete (no arriendo de fletes santiago ni arriendo de vehículos).'
   },
   tipos: [
@@ -71,7 +71,7 @@ export default {
   ],
   rutas: {
     h2: 'Fletes Santiago a regiones – Rutas y precios de referencia',
-    p: 'Realizamos fletes de Santiago a regiones con tarifa de referencia $900/km. Algunas rutas frecuentes: flete Santiago Valparaíso, flete Santiago Viña del Mar, flete Santiago Temuco, flete Santiago La Serena, flete Santiago Rancagua, flete Santiago Talca, flete Santiago Concepción, flete Santiago Puerto Montt. Cuánto cuesta un flete de Santiago a Temuco, Valparaíso o La Serena depende del volumen; usa la calculadora o pide cotización por WhatsApp para el valor flete Santiago a tu destino.',
+    p: 'Realizamos fletes de Santiago a regiones con tarifa de referencia $1500/km. Algunas rutas frecuentes: flete Santiago Valparaíso, flete Santiago Viña del Mar, flete Santiago Temuco, flete Santiago La Serena, flete Santiago Rancagua, flete Santiago Talca, flete Santiago Concepción, flete Santiago Puerto Montt. Cuánto cuesta un flete de Santiago a Temuco, Valparaíso o La Serena depende del volumen; usa la calculadora o pide cotización por WhatsApp para el valor flete Santiago a tu destino.',
     items: ['Flete Santiago Valparaíso', 'Flete Santiago Viña del Mar', 'Flete Santiago Temuco', 'Flete Santiago La Serena', 'Flete Santiago Rancagua', 'Flete Santiago Talca', 'Flete Santiago Concepción', 'Flete Santiago Chillán', 'Flete Santiago Puerto Montt', 'Flete Santiago Antofagasta', 'Flete Santiago Iquique']
   },
   // Sección movida desde home: Fletes Santiago a regiones (texto completo)
@@ -86,15 +86,15 @@ export default {
   faqs: [
     {
       question: '¿Cuánto cuesta un flete en Santiago?',
-      answer: 'El valor flete Santiago depende de la distancia y el volumen. En la Región Metropolitana el precio base es $20.000 + $2.000 por kilómetro (hasta 50 km). Para fletes Santiago a regiones usamos una tarifa de referencia de $900 por km. Fletes baratos Santiago y fletes económicos en Santiago: usa la calculadora de esta página o escríbenos por WhatsApp para una cotización exacta según tu origen y destino.'
+      answer: 'El valor flete Santiago depende de la distancia y el volumen. En la Región Metropolitana el precio base es $28.000 + $2.000 por kilómetro (hasta 50 km). Para fletes Santiago a regiones usamos una tarifa de referencia de $1500 por km. Fletes baratos Santiago y fletes económicos en Santiago: usa la calculadora de esta página o escríbenos por WhatsApp para una cotización exacta según tu origen y destino.'
     },
     {
       question: '¿Cuánto sale un flete de Santiago a Valparaíso o Viña del Mar?',
-      answer: 'El flete Santiago Valparaíso (unos 120 km) parte desde aproximadamente $108.000 según volumen. El flete Santiago Viña del Mar tiene un valor similar. Fletes de Santiago a Viña del Mar y fletes de Santiago a Valparaiso se cotizan con la misma tarifa de referencia por kilómetro. Para el valor flete Santiago a tu dirección exacta, usa la calculadora o pide presupuesto por WhatsApp.'
+      answer: 'El flete Santiago Valparaíso (unos 120 km) parte desde aproximadamente $180.000 según volumen. El flete Santiago Viña del Mar tiene un valor similar. Fletes de Santiago a Viña del Mar y fletes de Santiago a Valparaiso se cotizan con la misma tarifa de referencia por kilómetro. Para el valor flete Santiago a tu dirección exacta, usa la calculadora o pide presupuesto por WhatsApp.'
     },
     {
       question: '¿Cuánto sale un flete de Santiago a Temuco?',
-      answer: 'Cuánto cuesta un flete de Santiago a Temuco depende del volumen de carga. Con tarifa de referencia $900/km, un flete Santiago Temuco (unos 670 km) puede ir desde aproximadamente $600.000. Valor flete Santiago temuco y valor flete santiago a otras ciudades del sur se calculan con la misma lógica. Cotiza con la calculadora o por WhatsApp para fletes de Santiago a Temuco con el mejor precio.'
+      answer: 'Cuánto cuesta un flete de Santiago a Temuco depende del volumen de carga. Con tarifa de referencia $1500/km, un flete Santiago Temuco (unos 670 km) puede ir desde aproximadamente $1.005.000. Valor flete Santiago temuco y valor flete santiago a otras ciudades del sur se calculan con la misma lógica. Cotiza con la calculadora o por WhatsApp para fletes de Santiago a Temuco con el mejor precio.'
     },
     {
       question: '¿Hacen fletes dentro de Santiago y fletes fuera de Santiago?',
@@ -102,7 +102,7 @@ export default {
     },
     {
       question: '¿Qué es el valor flete Santiago y cómo se calcula?',
-      answer: 'El valor flete Santiago es el precio final que pagas por el traslado. Para fletes en Santiago de Chile dentro de la RM: precio base $20.000 + $2.000/km, más metro cúbico adicional si aplica. Para fletes Santiago a regiones: $900/km. Fletes Santiago precios son transparentes; puedes calcular un estimado con la calculadora o pedir cotización de flete Santiago por WhatsApp.'
+      answer: 'El valor flete Santiago es el precio final que pagas por el traslado. Para fletes en Santiago de Chile dentro de la RM: precio base $28.000 + $2.000/km, más metro cúbico adicional si aplica. Para fletes Santiago a regiones: $1500/km. Fletes Santiago precios son transparentes; puedes calcular un estimado con la calculadora o pedir cotización de flete Santiago por WhatsApp.'
     },
     {
       question: '¿Ofrecen fletes baratos Santiago y fletes económicos Santiago?',
@@ -114,7 +114,7 @@ export default {
     },
     {
       question: '¿Cuánto sale un flete de Santiago a La Serena?',
-      answer: 'El flete de Santiago a La Serena (unos 470 km) con tarifa $900/km parte desde aproximadamente $423.000 según volumen. Cuanto sale un flete de santiago a la serena y precio flete santiago la serena pueden variar con m³ adicionales. Flete Santiago La Serena: cotiza con la calculadora o por WhatsApp para el valor flete Santiago exacto.'
+      answer: 'El flete de Santiago a La Serena (unos 470 km) con tarifa $1500/km parte desde aproximadamente $705.000 según volumen. Cuanto sale un flete de santiago a la serena y precio flete santiago la serena pueden variar con m³ adicionales. Flete Santiago La Serena: cotiza con la calculadora o por WhatsApp para el valor flete Santiago exacto.'
     },
     {
       question: '¿Hacen flete mudanza Santiago y fletes y mudanzas Santiago?',
@@ -122,7 +122,7 @@ export default {
     },
     {
       question: '¿Cuánto sale un flete de Santiago a Rancagua o Talca?',
-      answer: 'Flete Santiago Rancagua (unos 87 km) parte desde aproximadamente $78.300. Cuanto sale un flete de santiago a rancagua y cuanto vale un flete de santiago a talca dependen del volumen. Valor flete Santiago talca y flete Santiago Talca se cotizan con la misma tarifa por km. Fletes Santiago a regiones: usa la calculadora o escríbenos por WhatsApp.'
+      answer: 'Flete Santiago Rancagua (unos 87 km) parte desde aproximadamente $130.500. Cuanto sale un flete de santiago a rancagua y cuanto vale un flete de santiago a talca dependen del volumen. Valor flete Santiago talca y flete Santiago Talca se cotizan con la misma tarifa por km. Fletes Santiago a regiones: usa la calculadora o escríbenos por WhatsApp.'
     },
     {
       question: '¿Usan camión o camioneta para fletes en Santiago?',
@@ -134,7 +134,7 @@ export default {
     },
     {
       question: '¿Cuánto sale un flete de Santiago a Concepción o Puerto Montt?',
-      answer: 'Fletes de Santiago a Concepción y fletes de Santiago a Puerto Montt se cotizan con la tarifa $900/km. Valor flete santiago concepcion y valor flete santiago puerto montt dependen de la distancia y los m³. Cuanto sale un flete de santiago a puerto montt y costo flete santiago concepcion: usa la calculadora o pide cotización por WhatsApp para flete santiago concepcion o flete santiago puerto montt.'
+      answer: 'Fletes de Santiago a Concepción y fletes de Santiago a Puerto Montt se cotizan con la tarifa $1500/km. Valor flete santiago concepcion y valor flete santiago puerto montt dependen de la distancia y los m³. Cuanto sale un flete de santiago a puerto montt y costo flete santiago concepcion: usa la calculadora o pide cotización por WhatsApp para flete santiago concepcion o flete santiago puerto montt.'
     },
     {
       question: '¿Ofrecen fletes de retorno desde regiones a Santiago?',
@@ -146,7 +146,7 @@ export default {
     },
     {
       question: '¿Cuánto sale un flete dentro de Santiago?',
-      answer: 'Cuanto sale un flete dentro de santiago depende de los kilómetros y los m³. En la RM el precio base es $20.000 + $2.000/km. Cuanto sale un flete en santiago lo puedes estimar con la calculadora. Fletes dentro de Santiago desde Providencia a Las Condes, Maipú a Santiago Centro, etc. Fletes pequeños santiago y flete pequeño santiago con precios transparentes.'
+      answer: 'Cuanto sale un flete dentro de santiago depende de los kilómetros y los m³. En la RM el precio base es $28.000 + $2.000/km. Cuanto sale un flete en santiago lo puedes estimar con la calculadora. Fletes dentro de Santiago desde Providencia a Las Condes, Maipú a Santiago Centro, etc. Fletes pequeños santiago y flete pequeño santiago con precios transparentes.'
     },
     {
       question: '¿Hacen fletes Santiago Las Condes, Ñuñoa y otras comunas?',
@@ -162,7 +162,7 @@ export default {
     },
     {
       question: '¿Cómo calcular fletes en Santiago y obtener presupuesto?',
-      answer: 'Puedes calcular fletes en santiago con la calculadora de esta página: indicas origen, destino y volumen y obtienes un estimado al instante. Así puedes calcula valor flete santiago sin compromiso. Para un presupuesto flete santiago o presupuesto de fletes santiago personalizado, escríbenos por WhatsApp. La tarifa fletes santiago dentro de la RM es $20.000 + $2.000/km; las tarifas de flete dentro de santiago chile pueden variar con m³ o ayudante. Precio fletes dentro de santiago lo ves en la calculadora.'
+      answer: 'Puedes calcular fletes en santiago con la calculadora de esta página: indicas origen, destino y volumen y obtienes un estimado al instante. Así puedes calcula valor flete santiago sin compromiso. Para un presupuesto flete santiago o presupuesto de fletes santiago personalizado, escríbenos por WhatsApp. La tarifa fletes santiago dentro de la RM es $28.000 + $2.000/km; las tarifas de flete dentro de santiago chile pueden variar con m³ o ayudante. Precio fletes dentro de santiago lo ves en la calculadora.'
     },
     {
       question: '¿Tienen aplicación de fletes Santiago o fletes Santiago app?',
@@ -174,7 +174,7 @@ export default {
     },
     {
       question: '¿Ofrecen fletes económicos Santiago La Serena o Santiago Puerto Montt?',
-      answer: 'Sí. Fletes economicos santiago la serena y fletes economicos santiago puerto montt se cotizan con la tarifa por kilómetro ($900/km). Fletes económicos en santiago de chile para la RM y fletes económicos fuera de santiago para regiones. Flete santiago economico según distancia y volumen. Cotiza con la calculadora o por WhatsApp para fletes baratos santiago chile y fletes baratos en santiago centro.'
+      answer: 'Sí. Fletes economicos santiago la serena y fletes economicos santiago puerto montt se cotizan con la tarifa por kilómetro ($1500/km). Fletes económicos en santiago de chile para la RM y fletes económicos fuera de santiago para regiones. Flete santiago economico según distancia y volumen. Cotiza con la calculadora o por WhatsApp para fletes baratos santiago chile y fletes baratos en santiago centro.'
     },
     {
       question: '¿Trabajan en la comuna de Santiago y con camión plano?',

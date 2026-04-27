@@ -9,7 +9,7 @@ const rutasBodegajeComunas = bodegajePrerenderSlugs.flatMap(s => [`/bodegaje/${s
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  
+
   // SSR para mejor SEO
   ssr: true,
   
@@ -97,6 +97,7 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
     '@nuxtjs/tailwindcss',
+    './modules/fix-tailwind-postcss-config.mjs',
     '@nuxtjs/i18n',
     '@nuxt/content',
     '@nuxtjs/sitemap',

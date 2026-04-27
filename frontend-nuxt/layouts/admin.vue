@@ -42,15 +42,25 @@ const toggleSidebar = () => {
     visibility: hidden !important;
   }
   :deep(button.fixed.top-4.left-4),
-  :deep(.fixed.inset-0.bg-black) {
+  :deep(.fixed.inset-0.bg-black),
+  :deep(div.fixed.inset-0.z-40.backdrop-blur-sm),
+  :deep(nav.fixed.bottom-0.left-0.right-0) {
     display: none !important;
     visibility: hidden !important;
+  }
+  .min-h-screen {
+    min-height: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
   }
   .lg\:ml-64 {
     margin-left: 0 !important;
     padding-left: 0 !important;
+    padding-bottom: 0 !important;
+    overflow: visible !important;
   }
-  .max-w-7xl.mx-auto.p-6 {
+  .max-w-7xl.mx-auto.p-6,
+  .max-w-7xl.mx-auto.p-4 {
     max-width: 100% !important;
     padding: 0 !important;
     margin: 0 !important;
@@ -63,6 +73,8 @@ const toggleSidebar = () => {
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
+    position: relative !important;
+    z-index: 1 !important;
   }
 }
 </style>

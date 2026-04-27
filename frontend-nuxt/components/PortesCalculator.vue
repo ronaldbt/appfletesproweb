@@ -240,6 +240,11 @@
               <p class="text-slate-500 text-[9px] font-black uppercase tracking-widest mb-1">{{ $t('calculator.routePlanning') }}</p>
               <p class="font-bold text-xs leading-snug text-white truncate" :title="origin">{{ origin || '—' }}</p>
               <p class="font-bold text-xs leading-snug text-teal-400 truncate" :title="destination">{{ destination || '—' }}</p>
+              <p class="text-[10px] text-slate-500 font-bold mt-1 tabular-nums tracking-tight">
+                {{ $t('calculator.distance') }}:
+                <span v-if="calculation.distancia != null && calculation.distancia > 0" class="text-teal-400">{{ calculation.distancia.toFixed(1) }} km</span>
+                <span v-else class="text-slate-600">—</span>
+              </p>
             </div>
           </div>
 
@@ -377,10 +382,10 @@ const updateQuantity = (id, delta) => {
   }
 }
 
-// Fórmula Chile: RM hasta 50 km = $20.000 + (km × $2.000); más de 50 km (regiones) = km × $900
-const BASE_RM_CLP = 20000
+// Fórmula Chile: RM hasta 50 km = $28.000 + (km × $2.000); más de 50 km (regiones) = km × $1500
+const BASE_RM_CLP = 28000
 const POR_KM_RM_CLP = 2000
-const POR_KM_REGIONES_CLP = 900
+const POR_KM_REGIONES_CLP = 1500
 const LIMITE_KM_RM = 50
 const FREE_M3 = 2
 const PRICE_PER_EXTRA_M3 = 20000 // Incluye carga y descarga
@@ -594,7 +599,7 @@ function calculateRoute() {
       const leg = result.routes[0].legs[0]
       distancia.value = leg.distance.value / 1000 // Convertir metros a kilómetros
       
-      // RM ≤50 km: $20.000 + (km × $2.000); >50 km: km × $900 (regiones)
+      // RM ≤50 km: $28.000 + (km × $2.000); >50 km: km × $1500 (regiones)
       precio.value = calcPrecioFromDistancia(distancia.value)
       
       // Ajustar el zoom para que se vea toda la ruta

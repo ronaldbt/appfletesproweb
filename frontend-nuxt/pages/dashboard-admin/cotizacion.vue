@@ -232,7 +232,7 @@
 
 <script setup>
 definePageMeta({ layout: "admin" })
-import { computed, reactive, ref, onMounted } from 'vue'
+import { computed, reactive, ref, nextTick } from 'vue'
 
 const form = reactive({
   clienteNombre: '',
@@ -295,14 +295,20 @@ function autoResizeTextarea(event) {
 }
 
 function imprimirPDF() {
-  // Cambiar el título temporalmente para que no aparezca en el PDF
   const originalTitle = document.title
   document.title = 'Cotización FletesPro'
-  window.print()
-  // Restaurar el título después de un breve delay
-  setTimeout(() => {
-    document.title = originalTitle
-  }, 100)
+  // Dejar que el navegador pinte el layout antes de abrir el diálogo de impresión
+  // (evita PDF en blanco con window.print() inmediato).
+  nextTick(() => {
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        window.print()
+        setTimeout(() => {
+          document.title = originalTitle
+        }, 500)
+      }, 150)
+    })
+  })
 }
 
 function resetFormulario() {
@@ -810,16 +816,6 @@ function resetFormulario() {
     content: none !important;
   }
 
-  /* Asegurar que no aparezcan encabezados del navegador */
-  @page {
-    @top-center {
-      content: none !important;
-    }
-    @bottom-center {
-      content: none !important;
-    }
-  }
-
   /* Asegurar que el body y html sean visibles */
   html, body {
     background: white !important;
@@ -859,6 +855,15 @@ function resetFormulario() {
     visibility: visible !important;
     background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
     border-radius: 8px !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color: #fff !important;
+  }
+
+  .cotizacion-header .logo-text,
+  .cotizacion-header .titulo-cotizacion,
+  .cotizacion-header .numero-cotizacion {
+    color: #fff !important;
   }
 
   .info-section {
@@ -952,21 +957,22 @@ function resetFormulario() {
   .items-table thead {
     display: table-header-group !important;
     background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 
   .items-table th {
-    color: white !important;
+    color: #fff !important;
+    background: transparent !important;
+    display: table-cell !important;
+    visibility: visible !important;
+    border-bottom: 2px solid #059669 !important;
+    padding: 14px 12px !important;
+    text-align: left !important;
   }
 
   .items-table tbody {
     display: table-row-group !important;
-  }
-
-  .items-table th {
-    background: #f3f4f6 !important;
-    border-bottom: 2px solid #1f2937 !important;
-    display: table-cell !important;
-    visibility: visible !important;
   }
 
   .items-table td {
@@ -985,18 +991,14 @@ function resetFormulario() {
   .totals-box {
     border: 2px solid #10b981 !important;
     background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
     display: block !important;
     visibility: visible !important;
   }
 
   .total-final-value {
-    color: #10b981 !important;
-  }
-
-  /* Asegurar que todos los textos sean visibles */
-  h1, h2, h3, p, span, div {
-    color: #1f2937 !important;
-    visibility: visible !important;
+    color: #059669 !important;
   }
 }
 </style>

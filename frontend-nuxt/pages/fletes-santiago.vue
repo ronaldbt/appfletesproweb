@@ -32,7 +32,7 @@
         <p class="text-slate-600 mb-8">{{ content.precios.intro }}</p>
         <div class="grid md:grid-cols-2 gap-8">
           <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-            <h3 class="text-xl font-black text-slate-900 mb-3">Fletes Región Metropolitana: $20.000 + $2.000/km</h3>
+            <h3 class="text-xl font-black text-slate-900 mb-3">Fletes Región Metropolitana: $28.000 + $2.000/km</h3>
             <p class="text-slate-600 text-sm mb-4">{{ content.precios.rm }}</p>
             <p v-if="content.precios.ejemplosTitulo" class="text-sm font-black text-slate-800 mb-2">{{ content.precios.ejemplosTitulo }}</p>
             <ul v-if="content.precios.ejemplos?.length" class="text-slate-600 text-sm space-y-1">
@@ -40,7 +40,7 @@
             </ul>
           </div>
           <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-            <h3 class="text-xl font-black text-slate-900 mb-3">Fletes Santiago a regiones: $900/km</h3>
+            <h3 class="text-xl font-black text-slate-900 mb-3">Fletes Santiago a regiones: $1500/km</h3>
             <p class="text-slate-600 text-sm mb-4">{{ content.precios.regiones }}</p>
             <p v-if="content.precios.cierreRegiones" class="text-slate-600 text-sm">{{ content.precios.cierreRegiones }}</p>
           </div>

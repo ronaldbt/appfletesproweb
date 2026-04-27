@@ -25,7 +25,7 @@ Debajo puedes obtener un precio estimado de forma inmediata. Ingresa origen, des
 
 Para un flete grande el costo se puede calcular de la siguiente manera:
 
-**Precio = distancia × $900 CLP**
+**Precio = distancia × $1500 CLP**
 
 Esta fórmula te da una referencia aproximada para fletes de Santiago a diferentes regiones de Chile. Los precios pueden variar según el volumen de carga, el tipo de mercancía y la urgencia del servicio.
 
@@ -33,8 +33,8 @@ Esta fórmula te da una referencia aproximada para fletes de Santiago a diferent
 
 Para calcular un flete dentro de la Región Metropolitana (sin ayudante) se aplica:
 
-- **Hasta 50 km:** **Precio = $20.000 CLP + distancia × $2.000 CLP**
-- **Más de 50 km:** **Precio = distancia × $900 CLP**
+- **Hasta 50 km:** **Precio = $28.000 CLP + distancia × $2.000 CLP**
+- **Más de 50 km:** **Precio = distancia × $1500 CLP**
 
 Si deseas que el chofer vaya con un ayudante entonces hay un recargo de $7.000 CLP.
 
