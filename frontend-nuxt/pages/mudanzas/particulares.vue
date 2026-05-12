@@ -321,7 +321,6 @@ useHead(computed(() => ({
   title: t('pages.mudanzasParticulares.seo.title'),
   meta: [
     { name: 'description', content: t('pages.mudanzasParticulares.seo.description') },
-    { name: 'keywords', content: t('pages.mudanzasParticulares.seo.keywords') },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: currentUrl.value },
     { property: 'og:title', content: t('pages.mudanzasParticulares.seo.ogTitle') },

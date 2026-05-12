@@ -830,8 +830,8 @@ const localeMap = {
 
 // Titles genéricos (Santiago se potencia en /fletes-santiago)
 const pageTitle = computed(() => {
-  if (locale.value === 'es') return 'Fletes y Mudanzas | Cotización Online | RM y Regiones | FletesPro'
-  return 'Freight and Moving | Online Quote | FletesPro'
+  if (locale.value === 'es') return 'Fletes y Mudanzas | Cotización Online | RM y Regiones'
+  return 'Freight and Moving | Online Quote'
 })
 
 // Meta descriptions genéricas
@@ -842,8 +842,8 @@ const pageDescription = computed(() => {
 
 // OG Titles y Descriptions
 const ogTitle = computed(() => {
-  if (locale.value === 'es') return 'Fletes y Mudanzas | Cotización Online | RM y Regiones | FletesPro'
-  return 'Freight and Moving | FletesPro'
+  if (locale.value === 'es') return 'Fletes y Mudanzas | Cotización Online | RM y Regiones'
+  return 'Freight and Moving'
 })
 
 const ogDescription = computed(() => {
@@ -996,11 +996,6 @@ useHead(computed(() => {
         {
           name: 'description',
           content: pageDescription.value
-        },
-        {
-          name: 'keywords',
-          content: currentLocale === 'es' ? 'fletes y mudanzas, mudanzas y fletes, fletes región metropolitana, fletes a regiones, cotizar flete, transporte de carga Chile, mudanzas Santiago, mudanzas RM, fletes baratos, mudanzas económicas, calculadora flete, presupuesto mudanza, servicio de fletes, empresa de mudanzas' :
-            'freight and moving Chile, moving and freight, quote freight, cargo transport Chile, affordable freight'
         },
         // Open Graph
         { property: 'og:type', content: 'website' },

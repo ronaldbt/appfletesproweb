@@ -377,10 +377,6 @@ useHead(() => ({
       name: 'description',
       content: t('pages.transporteFrio.seo.description')
     },
-    {
-      name: 'keywords',
-      content: t('pages.transporteFrio.seo.keywords')
-    },
     // Open Graph
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: currentUrl },

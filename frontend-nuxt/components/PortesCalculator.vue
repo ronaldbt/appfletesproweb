@@ -389,7 +389,7 @@ const POR_KM_REGIONES_CLP = 1500
 const LIMITE_KM_RM = 50
 const FREE_M3 = 2
 const PRICE_PER_EXTRA_M3 = 20000 // Incluye carga y descarga
-const HELPER_PRICE_CLP = 10000
+const HELPER_PRICE_CLP = 15000
 const MAX_HELPERS = 10
 
 const fleteImmediate = ref(true)

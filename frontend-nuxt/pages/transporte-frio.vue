@@ -372,13 +372,11 @@ const defaultImage = `${siteUrl}/og-image.jpg`
 
 const seoTitle = () => t('pages.transporteFrio.seo.title', {}, { locale: 'es' })
 const seoDesc = () => t('pages.transporteFrio.seo.description', {}, { locale: 'es' })
-const seoKeywords = () => t('pages.transporteFrio.seo.keywords', {}, { locale: 'es' })
 
 useHead(() => ({
   title: seoTitle(),
   meta: [
     { name: 'description', content: seoDesc() },
-    { name: 'keywords', content: seoKeywords() },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: currentUrl },
     { property: 'og:title', content: seoTitle() },

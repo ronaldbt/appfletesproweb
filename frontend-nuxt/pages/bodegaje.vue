@@ -55,10 +55,6 @@ useHead(() => ({
   title: `${t('pages.guardamuebles.hero.title')} | FletesPro`,
   meta: [
     { name: 'description', content: t('pages.guardamuebles.description') },
-    {
-      name: 'keywords',
-      content: 'bodegaje Santiago, arriendo bodega Santiago, bodegaje Región Metropolitana, guardar muebles Santiago, arriendo bodega guardar cosas, mini bodegas Santiago, bodegaje precios, precio bodegaje mes, almacenamiento Santiago, bodegas particulares, bodegas empresas, bodegaje con mudanza, self storage Santiago, espacios almacenamiento Región Metropolitana'
-    },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: currentUrl },
     { property: 'og:title', content: `${t('pages.guardamuebles.hero.title')} | FletesPro` },

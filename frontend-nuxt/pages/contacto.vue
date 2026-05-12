@@ -125,10 +125,6 @@ useHead({
       name: 'description',
       content: 'Contacta con FletesPro para mudanzas baratas, mudanzas económicas y servicio de mudanza en Santiago. Solicita presupuesto gratis y cotiza tu mudanza online.'
     },
-    {
-      name: 'keywords',
-      content: 'contacto mudanzas, presupuesto mudanza, cotizar mudanza, empresa de mudanzas, mudanzas baratas, mudanzas económicas, servicio de mudanza, empresas de mudanzas, mudanzas Santiago, mudanzas Región Metropolitana, mudanzas Chile'
-    },
     // Open Graph
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: currentUrl },

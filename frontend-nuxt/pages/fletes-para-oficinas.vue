@@ -314,14 +314,13 @@ const faqs = computed(() => {
 
 // SEO Meta Tags
 const siteUrl = 'https://fletespro.cl'
-const currentUrl = computed(() => `${siteUrl}/mudanzas/oficinas`)
+const currentUrl = computed(() => `${siteUrl}/fletes-para-oficinas`)
 const defaultImage = `${siteUrl}/og-image.jpg`
 
 useHead(computed(() => ({
   title: t('pages.mudanzasOficinas.seo.title'),
   meta: [
     { name: 'description', content: t('pages.mudanzasOficinas.seo.description') },
-    { name: 'keywords', content: t('pages.mudanzasOficinas.seo.keywords') },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: currentUrl.value },
     { property: 'og:title', content: t('pages.mudanzasOficinas.seo.ogTitle') },
@@ -373,7 +372,7 @@ useHead(computed(() => ({
             '@type': 'ListItem',
             position: 2,
             name: t('nav.mudanzas'),
-            item: `${siteUrl}/mudanzas`
+            item: `${siteUrl}/mudanzas-santiago`
           },
           {
             '@type': 'ListItem',

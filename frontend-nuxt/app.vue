@@ -23,6 +23,12 @@ useHead({
   htmlAttrs: computed(() => ({
     lang: langMap[locale.value] || 'es-CL'
   })),
-  titleTemplate: '%s | FletesPro'
+  // Evita "… | FletesPro | FletesPro" si la página ya incluye la marca al final
+  titleTemplate: (titleChunk) => {
+    const t = titleChunk != null ? String(titleChunk).trim() : ''
+    if (!t) return 'FletesPro'
+    if (/\|\s*FletesPro\s*$/i.test(t) || /[-–]\s*FletesPro\s*$/i.test(t)) return t
+    return `${t} | FletesPro`
+  }
 })
 </script>

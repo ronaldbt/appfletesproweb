@@ -4,14 +4,14 @@
  */
 export default {
   meta: {
-    title: 'Fletes Santiago desde $27.000 | Precios y Cotización Online | FletesPro',
-    description: 'Fletes Santiago económicos desde $27.000. Fletes Santiago centro, fletes baratos Santiago, fletes Santiago a regiones. Cotización online, calculadora de precios. Servicio 24/7. WhatsApp +56979796841.',
+    title: 'Fletes Santiago económicos desde $28.000 - FletesPro',
+    description: 'Fletes Santiago económicos desde $28.000. Fletes Santiago centro, fletes baratos Santiago, fletes Santiago a regiones. Cotización online, calculadora de precios. Servicio 24/7.',
     keywords: 'fletes santiago, flete santiago, fletes santiago centro, fletes baratos santiago, fletes económicos santiago, fletes santiago precios, valor flete santiago, fletes santiago chile, fletes santiago centro 24 horas, fletes express santiago, servicio de fletes en santiago, servicio de fletes santiago, mini fletes santiago, flete pequeño santiago, fletes y mudanzas santiago, fletes dentro de santiago, fletes fuera de santiago, fletes santiago a regiones, fletes dentro y fuera de santiago, fletes baratos santiago centro, fletes baratos en santiago centro, fletes económicos en santiago, fletes economicos santiago centro, fletes en santiago de chile, fletes pequeños santiago, fletes pequeños santiago centro, fletes pequeño santiago, flete mudanza santiago, flete camion 3 4 santiago, flete camioneta santiago, fletes camion 3 4 santiago, camion de fletes en santiago, camion de fletes santiago, camion flete 3 4 santiago centro, camioneta para flete santiago, camioneta para fletes santiago, camioneta flete santiago, camioneta en santiago fletes baratos, camioneta para flete barato santiago, camionetas fletes en santiago, camion plano fletes santiago, camion santiago flete, fletes camiones pequeños en santiago, fletes camiones santiago regiones, calcula valor flete santiago, calcular fletes en santiago, presupuesto flete santiago, presupuesto de fletes santiago, tarifa fletes santiago, tarifas de flete dentro de santiago chile, precio fletes dentro de santiago, aplicacion de fletes santiago, fletes santiago app, empresa de flete santiago, empresa de fletes santiago, empresas de fletes en santiago, flete a domicilio en santiago de chile, flete santiago economico, fletes comuna de santiago, fletes baratos santiago chile, fletes en santiago centro economico, fletes en santiago mudanzas, fletes en camioneta en santiago, fletes pequeños dentro de santiago, fletes pequeños santiago economicos, mini flete en santiago, mini fletes santiago centro, mini fletes santiago chile, arriendo de fletes santiago, cuanto cuesta un flete de santiago a temuco, cuanto sale un flete de santiago a la serena, flete santiago temuco, flete santiago valparaiso, flete santiago la serena, flete santiago concepcion, flete santiago puerto montt, valor flete santiago talca, valor flete santiago concepcion, fletes santiago las condes, fletes recoleta santiago, cotizar fletes santiago, fletes para fuera de santiago, fletes economicos fuera de santiago, costo flete santiago concepcion, costo flete santiago temuco, cuanto sale un flete dentro de santiago, cuanto sale un flete en santiago, flete de santiago a viña del mar, fletes santiago a iquique, valor flete santiago viña del mar, fletes santiago centro baratos, contacto de fletes santiago, camion para flete santiago centro, fletes región metropolitana, fletes de santiago a regiones, fletes de santiago a temuco, fletes de santiago a concepcion, fletes economicos santiago la serena, fletes economicos santiago puerto montt, fletes económicos en santiago centro'
   },
   hero: {
     tagline: 'Fletes Santiago: precios y cobertura',
-    title: 'Fletes Santiago: económicos, rápidos y seguros desde $27.000',
-    intro: 'Fletes en Santiago: servicio de fletes Santiago centro, fletes baratos Santiago y fletes económicos en Santiago. Cotiza tu flete Santiago con la calculadora online o por WhatsApp. Valor flete Santiago desde $27.000. Fletes Santiago a regiones y fletes dentro de Santiago con precios transparentes.',
+    title: 'Fletes en Santiago económicos, rápidos y seguros desde $28.000',
+    intro: 'Fletes en Santiago: servicio de fletes Santiago centro, fletes baratos Santiago y fletes económicos en Santiago. Cotiza tu flete Santiago con la calculadora online o por WhatsApp. Valor flete Santiago desde $28.000. Fletes Santiago a regiones y fletes dentro de Santiago con precios transparentes.',
     introExtra: 'Fletes Santiago centro, fletes baratos Santiago y fletes en Santiago de Chile. Servicio de fletes en Santiago con cotización online y fletes Santiago centro 24 horas. Cotiza con la calculadora o por WhatsApp.'
   },
   // Sección movida desde home: Precio fletes Santiago / estimativo
@@ -56,7 +56,7 @@ export default {
     h2: 'Camiones y camionetas para fletes en Santiago',
     intro: 'Contamos con camion de fletes en santiago y camion de fletes santiago para distintos tamaños de carga. Ofrecemos flete camion 3 4 santiago y flete camioneta santiago para mini fletes y cargas medianas; también camion flete 3 4 santiago centro y camioneta para flete santiago cuando necesites algo más chico. Camioneta para fletes santiago y camioneta flete santiago están disponibles para fletes pequeños dentro de santiago y fletes en camioneta en santiago.',
     p2: 'Si buscas camion plano fletes santiago para muebles o carga voluminosa, o camioneta en santiago fletes baratos para pocas cosas, podemos cotizarte. Camionetas fletes en santiago y camion santiago flete para mudanzas o traslados. Camioneta para flete barato santiago y fletes camion 3 4 santiago con precios claros. Fletes camiones pequeños en santiago y fletes camiones santiago regiones según tu ruta.',
-    p3: 'Realizamos flete a domicilio en santiago de chile: retiramos y dejamos en la dirección que indiques. Mini flete en santiago y mini fletes santiago chile desde $27.000. Fletes pequeño santiago y fletes pequeños santiago economicos para particulares y comercios.'
+    p3: 'Realizamos flete a domicilio en santiago de chile: retiramos y dejamos en la dirección que indiques. Mini flete en santiago y mini fletes santiago chile desde $28.000. Fletes pequeño santiago y fletes pequeños santiago economicos para particulares y comercios.'
   },
   // Widget: cómo cotizar, presupuesto y tarifas
   cotizarYPresupuesto: {
@@ -65,7 +65,7 @@ export default {
     p2: 'Puedes calcular fletes en santiago con nuestra herramienta online: solo indicas origen, destino y volumen y obtienes un estimado. Calcula valor flete santiago en segundos. Si prefieres que te armemos el presupuesto a mano, contacto de fletes santiago por WhatsApp +56 9 7979 6841. No tenemos aplicación de fletes santiago ni fletes santiago app por ahora: cotizamos por web y WhatsApp, que suele ser más rápido. Nosotros realizamos el servicio completo de flete (no arriendo de fletes santiago ni arriendo de vehículos).'
   },
   tipos: [
-    { h3: 'Mini fletes Santiago', text: 'Fletes pequeños Santiago para muebles sueltos, electrodomésticos o pocas cajas. Ideal para flete pequeño Santiago con precios desde $27.000. Servicio de fletes en Santiago para cargas livianas.' },
+    { h3: 'Mini fletes Santiago', text: 'Fletes pequeños Santiago para muebles sueltos, electrodomésticos o pocas cajas. Ideal para flete pequeño Santiago con precios desde $28.000. Servicio de fletes en Santiago para cargas livianas.' },
     { h3: 'Fletes mudanza Santiago', text: 'Flete mudanza Santiago completo para casas y departamentos. Incluye carga, transporte y descarga. Fletes y mudanzas Santiago centro y toda la RM. Fletes y mudanzas santiago para particulares y empresas.' },
     { h3: 'Fletes express Santiago', text: 'Fletes express Santiago para urgencias y mismo día. Servicio de fletes en Santiago disponible cuando lo necesites. Fletes Santiago centro 24 horas. Cotiza por WhatsApp.' }
   ],
@@ -106,7 +106,7 @@ export default {
     },
     {
       question: '¿Ofrecen fletes baratos Santiago y fletes económicos Santiago?',
-      answer: 'Sí. Ofrecemos fletes baratos Santiago y fletes económicos en Santiago para particulares y empresas. Fletes baratos santiago centro y fletes económicos santiago centro con precios claros. Mini fletes Santiago y flete pequeño Santiago desde $27.000. Si buscas fletes baratos fuera de santiago o fletes económicos fuera de santiago, también tenemos tarifas a regiones. Cotiza con la calculadora o por WhatsApp.'
+      answer: 'Sí. Ofrecemos fletes baratos Santiago y fletes económicos en Santiago para particulares y empresas. Fletes baratos santiago centro y fletes económicos santiago centro con precios claros. Mini fletes Santiago y flete pequeño Santiago desde $28.000. Si buscas fletes baratos fuera de santiago o fletes económicos fuera de santiago, también tenemos tarifas a regiones. Cotiza con la calculadora o por WhatsApp.'
     },
     {
       question: '¿Tienen fletes express Santiago y fletes Santiago centro 24 horas?',

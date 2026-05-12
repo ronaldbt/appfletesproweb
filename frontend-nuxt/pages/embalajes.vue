@@ -288,10 +288,6 @@ useHead(() => ({
       name: 'description',
       content: t('pages.embalajes.description')
     },
-    {
-      name: 'keywords',
-      content: 'embalaje profesional Santiago, embalaje para mudanzas, embalaje mudanza, servicio embalaje profesional, embalaje completo, embalaje parcial, embalaje muebles, embalaje electrodomésticos, embalaje a domicilio, embalaje Región Metropolitana'
-    },
     // Open Graph
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: currentUrl },

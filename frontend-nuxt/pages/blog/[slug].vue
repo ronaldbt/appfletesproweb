@@ -168,9 +168,13 @@ import { ref, computed } from 'vue'
 
 const lang = ref('es')
 const route = useRoute()
+const config = useRuntimeConfig()
 
-const { data: page, pending, error } = await useAsyncData(`blog-${route.params.slug}`, () => 
-  queryCollection('content').path(`/blog/${route.params.slug}`).first()
+const slugParam = route.params.slug
+const slug = Array.isArray(slugParam) ? slugParam[0] : slugParam
+
+const { data: page, pending, error } = await useAsyncData(`blog-${slug}`, () =>
+  queryCollection('content').path(`/blog/${slug}`).first()
 )
 
 // TOC para todos los artículos: frontmatter (toc/headings) o extracción automática del body
@@ -186,10 +190,27 @@ const formatDate = (dateString) => {
   })
 }
 
-// SEO Meta Tags
-const siteUrl = 'https://fletespro.cl'
-const currentUrl = computed(() => page.value ? `${siteUrl}${page.value._path}` : `${siteUrl}/blog`)
-const defaultImage = computed(() => page.value?.image ? `${siteUrl}${page.value.image}` : `${siteUrl}/og-image.jpg`)
+// SEO: Nuxt Content v3 no siempre expone `_path`; si falta, canonical debe usar la ruta real (/blog/[slug]).
+const siteUrl = String(config.public.siteUrl || 'https://fletespro.cl').replace(/\/$/, '')
+
+const canonicalPath = computed(() => {
+  const p = page.value
+  if (p) {
+    const raw = p._path ?? p.path
+    if (typeof raw === 'string' && raw.startsWith('/')) return raw
+  }
+  if (slug && typeof slug === 'string') return `/blog/${slug}`
+  return '/blog'
+})
+
+const currentUrl = computed(() => `${siteUrl}${canonicalPath.value}`)
+const defaultImage = computed(() => {
+  const img = page.value?.image
+  if (!img) return `${siteUrl}/og-image.jpg`
+  if (typeof img === 'string' && /^https?:\/\//i.test(img)) return img
+  const path = img.startsWith('/') ? img : `/${img}`
+  return `${siteUrl}${path}`
+})
 
 // Article Schema
 const articleSchema = computed(() => {
@@ -259,7 +280,6 @@ const breadcrumbSchema = computed(() => {
 useHead(() => {
   if (!page.value) return {}
 
-  const keywords = page.value.tags ? page.value.tags.join(', ') : 'fletes, mudanzas, Santiago, regiones Chile, fletes baratos, blog fletes'
   const articleTags = page.value.tags || []
 
   return {
@@ -269,10 +289,6 @@ useHead(() => {
       {
         name: 'description',
         content: page.value.description || page.value.title
-      },
-      {
-        name: 'keywords',
-        content: keywords
       },
       {
         name: 'author',

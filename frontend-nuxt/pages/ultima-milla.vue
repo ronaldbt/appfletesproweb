@@ -384,7 +384,6 @@ useHead(computed(() => ({
   title: t('pages.ultimaMilla.seo.title'),
   meta: [
     { name: 'description', content: t('pages.ultimaMilla.seo.description') },
-    { name: 'keywords', content: t('pages.ultimaMilla.seo.keywords') },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: currentUrl.value },
     { property: 'og:title', content: t('pages.ultimaMilla.seo.ogTitle') },

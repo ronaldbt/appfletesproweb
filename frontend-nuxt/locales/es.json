@@ -42,21 +42,24 @@
     "login": "Ingresar",
     "mudanzasParticulares": "Mudanzas Particulares",
     "mudanzasEmpresas": "Mudanzas Empresas",
-    "mudanzasOficinas": "Mudanzas Oficinas",
+    "mudanzasOficinas": "Fletes para oficinas",
     "mudanzasInternacionales": "Mudanzas Internacionales",
     "mudanzasUrgentes": "Mudanzas Urgentes",
     "marbella": "Santiago",
     "malaga": "Región Metropolitana",
     "costaDelSol": "Chile",
     "estepona": "Providencia",
-    "fuengirola": "Las Condes"
+    "fuengirola": "Las Condes",
+    "mudanzasPiano": "Fletes piano",
+    "mudanzasAntiguedades": "Fletes antigüedades",
+    "mudanzasObrasArte": "Fletes obras de arte"
   },
   "pages": {
     "index": {
       "heroTag": "Fletes y Mudanzas en Santiago y Regiones",
-      "title": "Fletes Santiago: económicos, rápidos y seguros desde $27.000",
-      "subtitle": "Fletes y mudanzas en Santiago y a regiones de Chile. Empresa de fletes con servicios de mudanzas, transporte de carga y envíos. Precios desde $27.000. Cotiza tu flete online y presupuesto gratis.",
-      "description": "Fletes y mudanzas en Santiago y regiones desde $27.000. Cotiza tu flete online. Presupuesto gratis. Servicio de mudanzas, fletes a regiones y transporte en frío.",
+      "title": "Fletes y Mudanzas en Santiago económicos, rápidos y seguros desde $28.000",
+      "subtitle": "Fletes y mudanzas en Santiago y a regiones de Chile. Empresa de fletes con servicios de mudanzas, transporte de carga y envíos. Precios desde $28.000. Cotiza tu flete online y presupuesto gratis.",
+      "description": "Fletes y mudanzas en Santiago y regiones desde $28.000. Cotiza tu flete online. Presupuesto gratis. Servicio de mudanzas, fletes a regiones y transporte en frío.",
       "features": {
         "title": "Por Qué Elegirnos",
         "subtitle": "Servicios profesionales de fletes y mudanzas en Santiago y regiones",
@@ -205,7 +208,7 @@
         },
         "faq18": {
           "question": "¿Fletes baratos Santiago? ¿Cómo cotizar?",
-          "answer": "Sí, ofrecemos fletes baratos Santiago con precios desde $27.000. Para cotizar: usa la calculadora online en la página principal (origen, destino y carga) o escríbenos por WhatsApp. Te enviamos presupuesto sin compromiso. Fletes económicos en Santiago para particulares y empresas."
+          "answer": "Sí, ofrecemos fletes baratos Santiago con precios desde $28.000. Para cotizar: usa la calculadora online en la página principal (origen, destino y carga) o escríbenos por WhatsApp. Te enviamos presupuesto sin compromiso. Fletes económicos en Santiago para particulares y empresas."
         },
         "faq19": {
           "question": "¿Fletes económicos en Santiago?",
@@ -217,7 +220,7 @@
         },
         "faq21": {
           "question": "¿Qué es un flete pequeño Santiago y cuánto cuesta?",
-          "answer": "Un flete pequeño Santiago es un traslado de poca carga (muebles sueltos, electrodomésticos, cajas). Los fletes pequeños Santiago tienen precios desde $27.000 según la distancia dentro de la RM. Incluye hasta 2 m³. Usa la calculadora para flete pequeño Santiago o cotiza por WhatsApp."
+          "answer": "Un flete pequeño Santiago es un traslado de poca carga (muebles sueltos, electrodomésticos, cajas). Los fletes pequeños Santiago tienen precios desde $28.000 según la distancia dentro de la RM. Incluye hasta 2 m³. Usa la calculadora para flete pequeño Santiago o cotiza por WhatsApp."
         },
         "faq22": {
           "question": "¿Fletes express Santiago? ¿Mismo día?",
@@ -1025,8 +1028,7 @@
       },
       "seo": {
         "title": "Transporte en Frío Santiago | Empresa Transporte Frío | Cadena Frío Garantizada | FletesPro",
-        "description": "Empresa de transporte en frío en Santiago y Región Metropolitana. Transporte refrigerado, transporte frigorífico y logística de cadena frío. Transporte con temperatura controlada. Transporte de frios y congelados, transporte de alimentos frios. Precio transporte frío competitivo. Presupuesto gratis.",
-        "keywords": "transporte en frio, transporte frio, transporte refrigerado, cadena frío, transporte frigorífico, transporte temperatura controlada, transporte alimentos, transporte farmacéutico, logística frío, transporte frío local, transporte frio nacional, transporte frio internacional, transporte de frios y congelados, transporte frío particulares, envios temperatura controlada, envio paquete frio, empresas de transporte en frio, cadena de frio transporte, cadena de frio transporte en chile, transporte de frio en chile, transporte en frio santiago de chile, transporte de carga en frio, transporte de muestras en frio, importancia del transporte en la cadena de frio, como transportar medicamentos en frio, empresas de transportes y bodegaje en frio, transporte en frio desde santiago hacia arica, transporte en frio temuco, metodologias de transporte en cadena de frio, impacto del transporte en la cadena de frio, camion frio congelacion, camion isotermo con frio, contenedores para mantener frio, empresa transporte frio, empresas logistica frio, envio de paquetes frios, mensajeria en frio, precio transporte frio, transporte cadena de frio, transporte carga fria, transporte de alimentos frios, transporte de carga fria, transporte frio express, transportes refrigerados"
+        "description": "Empresa de transporte en frío en Santiago y Región Metropolitana. Transporte refrigerado, transporte frigorífico y logística de cadena frío. Transporte con temperatura controlada. Transporte de frios y congelados, transporte de alimentos frios. Precio transporte frío competitivo. Presupuesto gratis."
       }
     },
     "ultimaMilla": {
@@ -1288,7 +1290,6 @@
       "seo": {
         "title": "Última Milla Logística Santiago | Envíos para Ecommerce y Tiendas Online | FletesPro",
         "description": "Última milla Chile: logística de última milla y servicio de última milla en Santiago y Región Metropolitana. Envíos para ecommerce, envios ecommerce Chile y envios para tiendas online. Tiendas online con envío gratis y paquetería ecommerce. Empresas de transporte ecommerce y proveedor de última milla. Tarifas envíos ecommerce competitivas. Presupuesto gratis.",
-        "keywords": "ultima milla, ultima milla chile, última milla, ultima milla logistica, logistica de ultima milla, última milla logística, servicio de ultima milla, transporte ultima milla, transporte de ultima milla, envios para tiendas online, envios para ecommerce, envios ecommerce, envios ecommerce chile, envio ecommerce, transporte ecommerce, paqueteria ecommerce, empresas de envio para ecommerce, tarifas envíos ecommerce, tarifa plana envios ecommerce, envios ecommerce baratos, envios baratos para ecommerce, envios baratos para tienda online, transporte para ecommerce, paqueteria para ecommerce, logistica ultima milla, empresas de envios para tiendas online, empresas de transporte ecommerce, logistica de ultima milla, la ultima milla, que es ultima milla, concepto ultima milla, reparto ultima milla, reparto de ultima milla, empresas de ultima milla, empresas ultima milla, paqueteria ultima milla, envios internacionales ecommerce, servicio envio ecommerce, mensajeria ecommerce, proveedor de ultima milla, envios para mi tienda online, tiendas online con envio gratis, tiendas online envio, envio productos tienda online santiago chile, politicas de envio tienda online, como hacer los envios de mi tienda online, envios de tienda online, plataforma de envios para ecommerce, precios envios ecommerce, entregas ultima milla, logística de última milla, paqueteria para tiendas online, ultima milla en logistica, concepto de ultima milla, distribucion de ultima milla, soluciones logisticas para ecommerce, ultima milla definicion, ultima milla que es",
         "ogTitle": "Última Milla Logística Santiago | Envíos para Ecommerce",
         "ogDescription": "Última milla logística en Santiago y Región Metropolitana. Envíos para ecommerce, tiendas online y paquetería ecommerce. Empresas de transporte ecommerce y proveedor de última milla.",
         "twitterTitle": "Última Milla Logística | Envíos Ecommerce",
@@ -1396,7 +1397,6 @@
       "seo": {
         "title": "Mudanzas Particulares Santiago | Mudanza Pequeña | Mudanzas Baratas Particulares | FletesPro",
         "description": "Mudanzas particulares y mudanza pequeña en Santiago y Región Metropolitana. Mudanzas baratas particulares y mudanzas pequeñas baratas con servicio completo. Presupuesto gratis.",
-        "keywords": "mudanzas particulares, mudanza pequeña, mudanzas baratas particulares, mudanzas pequeñas baratas, mudanza particular, mudanzas para particulares, mudanzas hogar, mudanzas familia, mudanzas vivienda, mudanzas casa, mudanzas piso, mudanzas apartamento, mudanzas estudio, mudanzas baratas, mudanzas económicas, presupuesto mudanzas particulares, cotizar mudanza particular, precio mudanzas particulares, empresa mudanzas particulares, servicio mudanzas particulares",
         "ogTitle": "Mudanzas Particulares Santiago | Mudanza Pequeña",
         "ogDescription": "Mudanzas particulares y mudanza pequeña en Santiago y Región Metropolitana. Mudanzas baratas particulares con servicio completo.",
         "twitterTitle": "Mudanzas Particulares | Mudanza Pequeña",
@@ -1504,7 +1504,6 @@
       "seo": {
         "title": "Mudanzas Empresas Santiago | Mudanzas Corporativas | Mudanzas de Oficinas | FletesPro",
         "description": "Mudanzas empresas y mudanzas corporativas en Santiago y Región Metropolitana. Servicio especializado de mudanzas de oficinas para empresas. Presupuesto gratis.",
-        "keywords": "mudanzas empresas, mudanzas corporativas, mudanzas de oficinas, mudanzas empresariales, mudanzas negocios, mudanzas locales comerciales, mudanzas tiendas, mudanzas almacenes, mudanzas empresas Santiago, mudanzas empresas Región Metropolitana, servicio mudanzas empresas, empresa mudanzas corporativas, presupuesto mudanzas empresas, cotizar mudanzas empresas, precio mudanzas empresas",
         "ogTitle": "Mudanzas Empresas Santiago | Mudanzas Corporativas",
         "ogDescription": "Mudanzas empresas y mudanzas corporativas en Santiago y Región Metropolitana. Servicio especializado de mudanzas de oficinas.",
         "twitterTitle": "Mudanzas Empresas | Mudanzas Corporativas",
@@ -1515,9 +1514,9 @@
     },
     "mudanzasOficinas": {
       "hero": {
-        "badge": "Mudanzas de Oficinas Profesionales",
-        "title": "Mudanzas Oficinas",
-        "subtitle": "Mudanzas oficinas y mudanzas de oficinas en Santiago y Región Metropolitana. Servicio especializado para mudanzas de oficinas sin interrumpir tu negocio. Presupuesto gratis."
+        "badge": "Fletes para oficinas",
+        "title": "Fletes para oficinas: mudanza corporativa en Santiago",
+        "subtitle": "Fletes para oficinas y mudanzas de oficinas en Santiago y Región Metropolitana. Traslado de mobiliario, equipos y archivos con planificación para no detener tu operación. Presupuesto gratis y horarios flexibles."
       },
       "services": {
         "title": "Servicios de Mudanzas Oficinas",
@@ -1576,8 +1575,8 @@
         }
       },
       "cta": {
-        "title": "¿Necesitas Mudanzas Oficinas?",
-        "subtitle": "Mudanzas oficinas y mudanzas de oficinas en Santiago y Región Metropolitana. Servicio especializado sin interrumpir tu negocio. Presupuesto gratis.",
+        "title": "¿Necesitas fletes para oficinas?",
+        "subtitle": "Fletes para oficinas y mudanzas de oficinas en Santiago y Región Metropolitana. Servicio especializado sin interrumpir tu negocio. Presupuesto gratis.",
         "button1": "Solicitar Presupuesto",
         "button2": "Calcular Precio Online"
       },
@@ -1610,15 +1609,14 @@
         }
       },
       "seo": {
-        "title": "Mudanzas Oficinas Santiago | Mudanzas de Oficinas | Servicio Especializado | FletesPro",
-        "description": "Mudanzas oficinas y mudanzas de oficinas en Santiago y Región Metropolitana. Servicio especializado para mudanzas de oficinas sin interrumpir tu negocio. Presupuesto gratis.",
-        "keywords": "mudanzas oficinas, mudanzas de oficinas, mudanzas oficina, mudanzas despachos, mudanzas espacios trabajo, mudanzas oficinas Santiago, mudanzas oficinas Región Metropolitana, servicio mudanzas oficinas, empresa mudanzas oficinas, presupuesto mudanzas oficinas, cotizar mudanzas oficinas, precio mudanzas oficinas, mudanzas oficinas fin de semana, mudanzas oficinas nocturnas",
-        "ogTitle": "Mudanzas Oficinas Santiago | Mudanzas de Oficinas",
-        "ogDescription": "Mudanzas oficinas y mudanzas de oficinas en Santiago y Región Metropolitana. Servicio especializado sin interrumpir tu negocio.",
-        "twitterTitle": "Mudanzas Oficinas | Mudanzas de Oficinas",
-        "twitterDescription": "Mudanzas oficinas y mudanzas de oficinas en Santiago. Servicio especializado sin interrumpir tu negocio.",
-        "schemaServiceType": "Mudanzas Oficinas",
-        "schemaDescription": "Mudanzas oficinas y mudanzas de oficinas en Santiago y Región Metropolitana. Servicio especializado sin interrumpir tu negocio."
+        "title": "Fletes para oficinas Santiago | mudanza de oficinas y traslado corporativo | FletesPro",
+        "description": "Fletes para oficinas en Santiago y Región Metropolitana: mudanza de oficinas con desmontaje, embalaje, transporte y montaje. Coordinamos ascensores, estacionamiento y ventanas nocturnas o fin de semana para minimizar el freno al negocio. Cotización personalizada y seguimiento con FletesPro.",
+        "ogTitle": "Fletes para oficinas Santiago | mudanza corporativa",
+        "ogDescription": "Fletes para oficinas en Santiago y RM: mudanza de oficinas sin interrumpir tu negocio. Planificación, embalaje y montaje profesional.",
+        "twitterTitle": "Fletes para oficinas | mudanza corporativa",
+        "twitterDescription": "Fletes para oficinas en Santiago: mudanza de oficinas con servicio especializado y presupuesto gratis.",
+        "schemaServiceType": "Fletes para oficinas",
+        "schemaDescription": "Fletes para oficinas y mudanzas de oficinas en Santiago y Región Metropolitana. Servicio especializado sin interrumpir tu negocio."
       }
     },
     "mudanzasInternacionales": {
@@ -1720,7 +1718,6 @@
       "seo": {
         "title": "Mudanzas Internacionales Santiago | Mudanzas al Extranjero | Servicio Completo | FletesPro",
         "description": "Mudanzas internacionales y mudanzas al extranjero en Santiago y Región Metropolitana. Servicio completo de mudanzas internacionales con documentación incluida. Presupuesto gratis.",
-        "keywords": "mudanzas internacionales Chile, mudanzas al extranjero Santiago, mudanzas internacionales precios, servicio mudanzas internacionales, empresa mudanzas internacionales Santiago, presupuesto mudanzas internacionales, cotizar mudanzas internacionales, mudanzas a Argentina, mudanzas a Perú, mudanzas a Estados Unidos, mudanzas a Europa",
         "ogTitle": "Mudanzas Internacionales Santiago | Mudanzas al Extranjero",
         "ogDescription": "Mudanzas internacionales y mudanzas al extranjero en Santiago y Región Metropolitana. Servicio completo con documentación incluida.",
         "twitterTitle": "Mudanzas Internacionales | Mudanzas al Extranjero",
@@ -1828,7 +1825,6 @@
       "seo": {
         "title": "Mudanzas Urgentes Santiago | Mudanzas Express 24 Horas | Servicio Inmediato | FletesPro",
         "description": "Mudanzas urgentes y mudanzas express 24 horas en Santiago y Región Metropolitana. Servicio de mudanzas urgentes disponible todos los días. Presupuesto gratis.",
-        "keywords": "mudanzas urgentes, mudanzas express, mudanzas 24 horas, mudanzas mismo día, mudanzas urgentes Santiago, mudanzas urgentes Región Metropolitana, servicio mudanzas urgentes, empresa mudanzas urgentes, presupuesto mudanzas urgentes, cotizar mudanzas urgentes, precio mudanzas urgentes, mudanzas express 24h, mudanzas urgentes fin de semana, mudanzas urgentes domingo, mudanzas urgentes festivos",
         "ogTitle": "Mudanzas Urgentes Santiago | Mudanzas Express 24h",
         "ogDescription": "Mudanzas urgentes y mudanzas express 24 horas en Santiago y Región Metropolitana. Servicio disponible todos los días.",
         "twitterTitle": "Mudanzas Urgentes | Mudanzas Express 24h",
@@ -1854,8 +1850,550 @@
       "seoTitle": "Contacta con FletesPro - Empresa de Mudanzas Profesionales",
       "seoContent1": "FletesPro es una empresa de mudanzas profesionales especializada en mudanzas baratas, mudanzas económicas y servicio de mudanza en Santiago y Región Metropolitana. Ofrecemos presupuesto mudanza gratis y cotizar mudanza online para particulares y empresas.",
       "seoContent2": "Nuestro servicio de mudanza incluye mudanzas particulares, mudanzas empresas, mudanzas oficinas, mudanzas internacionales y mudanzas urgentes. También proporcionamos embalajes profesionales, guardamuebles y transporte en frío.",
-      "seoContent3": "Contacta con nuestra empresa de mudanzas para obtener un presupuesto mudanza personalizado. Ofrecemos mudanzas baratas, mudanzas económicas y servicio de mudanza con la máxima calidad. Solicita presupuesto mudanza gratis sin compromiso.",
-      "keywords": "contacto mudanzas, presupuesto mudanza, cotizar mudanza, empresa de mudanzas Santiago, mudanzas baratas, mudanzas económicas Chile, servicio de mudanza, empresas de mudanzas Región Metropolitana"
+      "seoContent3": "Contacta con nuestra empresa de mudanzas para obtener un presupuesto mudanza personalizado. Ofrecemos mudanzas baratas, mudanzas económicas y servicio de mudanza con la máxima calidad. Solicita presupuesto mudanza gratis sin compromiso."
+    },
+    "mudanzasPiano": {
+      "hero": {
+        "badge": "FletesPro · Fletes piano",
+        "title": "Fletes piano: mudanza y traslado seguro en Santiago",
+        "subtitle": "Fletes piano para pianos verticales y de cola en Santiago y Región Metropolitana. Embalaje reforzado, equipo coordinado, accesos estrechos y cotización personalizada según medidas reales."
+      },
+      "services": {
+        "title": "Servicios para tu piano",
+        "subtitle": "Planificación, embalaje y transporte en Santiago y Región Metropolitana.",
+        "service1": {
+          "title": "Inspección y planificación",
+          "description": "Evaluación del volumen, accesos y riesgos. Presupuesto detallado y cronograma coordinado contigo."
+        },
+        "service2": {
+          "title": "Embalaje profesional",
+          "description": "Materiales adecuados, fijación interior de cajas y protección frente a vibraciones y humedad."
+        },
+        "service3": {
+          "title": "Transporte y descarga",
+          "description": "Equipo capacitado, vehículo adecuado y seguro. Descarga cuidadosa en destino."
+        }
+      },
+      "benefits": {
+        "title": "Por qué contratar con FletesPro",
+        "subtitle": "Experiencia en cargas delicadas y atención personalizada.",
+        "benefit1": {
+          "title": "Presupuesto transparente",
+          "description": "Cotización clara antes del servicio, sin sorpresas en el día de la mudanza."
+        },
+        "benefit2": {
+          "title": "Equipo coordinado",
+          "description": "Conductores y ayudantes alineados con protocolos para objetos de alto valor."
+        },
+        "benefit3": {
+          "title": "Seguro y trazabilidad",
+          "description": "Opciones de cobertura y comunicación durante el traslado."
+        },
+        "benefit4": {
+          "title": "Cobertura RM",
+          "description": "Servicio en comunas de Santiago y desplazamientos según disponibilidad."
+        }
+      },
+      "process": {
+        "title": "Cómo trabajamos",
+        "subtitle": "Proceso ordenado para reducir riesgos.",
+        "step1": {
+          "title": "Contacto",
+          "description": "Nos cuentas origen, destino, fechas y características de la carga."
+        },
+        "step2": {
+          "title": "Visita o fotos",
+          "description": "Cuando aplica, valoración con fotos o visita para definir embalaje y medios."
+        },
+        "step3": {
+          "title": "Ejecución",
+          "description": "Embalaje, carga, ruta y descarga según lo acordado."
+        },
+        "step4": {
+          "title": "Entrega",
+          "description": "Revisión conjunta en destino y cierre del servicio."
+        }
+      },
+      "cta": {
+        "title": "¿Necesitas cotización?",
+        "subtitle": "Usa la calculadora o escríbenos por WhatsApp con fotos y medidas.",
+        "button1": "Solicitar presupuesto",
+        "button2": "Calcular precio online"
+      },
+      "faqs": {
+        "title": "Preguntas frecuentes · mudanza de piano",
+        "subtitle": "Información general; el detalle contractual se formaliza al contratar.",
+        "faq1": {
+          "question": "¿Incluye desmontaje y montaje?",
+          "answer": "Según lo acordado en el presupuesto. Para pianos y piezas voluminosas puede requerirse técnico adicional; te lo indicamos al cotizar."
+        },
+        "faq2": {
+          "question": "¿Debo contratar seguro adicional?",
+          "answer": "Recomendamos declarar el valor y revisar coberturas disponibles. Te orientamos según el tipo de bien."
+        },
+        "faq3": {
+          "question": "¿Trabajan fines de semana?",
+          "answer": "Sujeto a disponibilidad. Coordinamos fecha y ventana horaria contigo."
+        },
+        "faq4": {
+          "question": "¿Cómo preparo el origen?",
+          "answer": "Despeja pasillos y accesos, protege suelos si lo necesitas y avisa restricciones de edificio (horario ascensor, estacionamiento)."
+        },
+        "faq5": {
+          "question": "¿Sirve la calculadora para este tipo de mudanza?",
+          "answer": "La calculadora estima fletes/mudanzas generales. Para pianos, arte o antigüedades suele requerirse ajuste manual tras revisar fotos o visita."
+        },
+        "faq6": {
+          "question": "¿Hacen embalaje en el mismo día?",
+          "answer": "Según complejidad puede programarse embalaje el día anterior o el mismo día; lo definimos en la planificación."
+        }
+      },
+      "seo": {
+        "title": "Fletes piano Santiago | mudanza de piano y traslado profesional | FletesPro",
+        "description": "Fletes piano en Santiago y Región Metropolitana: mudanza y traslado de pianos verticales y de cola con embalaje reforzado, fijación interior y personal con experiencia en subidas, ascensores y pianolas. Cotiza con fotos y medidas por WhatsApp o usa la calculadora como referencia; cerramos precio tras revisión.",
+        "ogTitle": "Fletes piano Santiago | mudanza de piano",
+        "ogDescription": "Fletes piano en Santiago y RM: traslado profesional de pianos con embalaje reforzado y equipo coordinado.",
+        "twitterTitle": "Fletes piano | mudanza de piano Santiago",
+        "twitterDescription": "Fletes piano en Santiago y Región Metropolitana: mudanza segura de pianos con cotización personalizada.",
+        "schemaServiceType": "Fletes piano",
+        "schemaDescription": "Fletes piano y mudanza de pianos en Santiago y Región Metropolitana. Embalaje reforzado, equipo coordinado y cotización personalizada."
+      }
+    },
+    "mudanzasAntiguedades": {
+      "hero": {
+        "badge": "FletesPro · Fletes antigüedades",
+        "title": "Fletes antigüedades: traslado de muebles y piezas valiosas",
+        "subtitle": "Fletes antigüedades en Santiago y Región Metropolitana: inventario, embalaje a medida, manipulación cuidadosa y seguro opcional para muebles y objetos antiguos o de colección."
+      },
+      "services": {
+        "title": "Servicios para tus antigüedades",
+        "subtitle": "Planificación, embalaje y transporte en Santiago y Región Metropolitana.",
+        "service1": {
+          "title": "Inspección y planificación",
+          "description": "Evaluación del volumen, accesos y riesgos. Presupuesto detallado y cronograma coordinado contigo."
+        },
+        "service2": {
+          "title": "Embalaje profesional",
+          "description": "Materiales adecuados, fijación interior de cajas y protección frente a vibraciones y humedad."
+        },
+        "service3": {
+          "title": "Transporte y descarga",
+          "description": "Equipo capacitado, vehículo adecuado y seguro. Descarga cuidadosa en destino."
+        }
+      },
+      "benefits": {
+        "title": "Por qué contratar con FletesPro",
+        "subtitle": "Experiencia en cargas delicadas y atención personalizada.",
+        "benefit1": {
+          "title": "Presupuesto transparente",
+          "description": "Cotización clara antes del servicio, sin sorpresas en el día de la mudanza."
+        },
+        "benefit2": {
+          "title": "Equipo coordinado",
+          "description": "Conductores y ayudantes alineados con protocolos para objetos de alto valor."
+        },
+        "benefit3": {
+          "title": "Seguro y trazabilidad",
+          "description": "Opciones de cobertura y comunicación durante el traslado."
+        },
+        "benefit4": {
+          "title": "Cobertura RM",
+          "description": "Servicio en comunas de Santiago y desplazamientos según disponibilidad."
+        }
+      },
+      "process": {
+        "title": "Cómo trabajamos",
+        "subtitle": "Proceso ordenado para reducir riesgos.",
+        "step1": {
+          "title": "Contacto",
+          "description": "Nos cuentas origen, destino, fechas y características de la carga."
+        },
+        "step2": {
+          "title": "Visita o fotos",
+          "description": "Cuando aplica, valoración con fotos o visita para definir embalaje y medios."
+        },
+        "step3": {
+          "title": "Ejecución",
+          "description": "Embalaje, carga, ruta y descarga según lo acordado."
+        },
+        "step4": {
+          "title": "Entrega",
+          "description": "Revisión conjunta en destino y cierre del servicio."
+        }
+      },
+      "cta": {
+        "title": "¿Necesitas cotización?",
+        "subtitle": "Usa la calculadora o escríbenos por WhatsApp con fotos y medidas.",
+        "button1": "Solicitar presupuesto",
+        "button2": "Calcular precio online"
+      },
+      "faqs": {
+        "title": "Preguntas frecuentes · antigüedades",
+        "subtitle": "Información general; el detalle contractual se formaliza al contratar.",
+        "faq1": {
+          "question": "¿Incluye desmontaje y montaje?",
+          "answer": "Según lo acordado en el presupuesto. Para pianos y piezas voluminosas puede requerirse técnico adicional; te lo indicamos al cotizar."
+        },
+        "faq2": {
+          "question": "¿Debo contratar seguro adicional?",
+          "answer": "Recomendamos declarar el valor y revisar coberturas disponibles. Te orientamos según el tipo de bien."
+        },
+        "faq3": {
+          "question": "¿Trabajan fines de semana?",
+          "answer": "Sujeto a disponibilidad. Coordinamos fecha y ventana horaria contigo."
+        },
+        "faq4": {
+          "question": "¿Cómo preparo el origen?",
+          "answer": "Despeja pasillos y accesos, protege suelos si lo necesitas y avisa restricciones de edificio (horario ascensor, estacionamiento)."
+        },
+        "faq5": {
+          "question": "¿Sirve la calculadora para este tipo de mudanza?",
+          "answer": "La calculadora estima fletes/mudanzas generales. Para pianos, arte o antigüedades suele requerirse ajuste manual tras revisar fotos o visita."
+        },
+        "faq6": {
+          "question": "¿Hacen embalaje en el mismo día?",
+          "answer": "Según complejidad puede programarse embalaje el día anterior o el mismo día; lo definimos en la planificación."
+        }
+      },
+      "seo": {
+        "title": "Fletes antigüedades Santiago | mudanza de antigüedades y piezas delicadas | FletesPro",
+        "description": "Fletes antigüedades en Santiago y RM: mudanza y transporte de muebles y objetos antiguos con inventario fotográfico, embalaje acolchado, cajas a medida y protocolos para reducir vibraciones y golpes. Ideal para casas, colecciones y subastas. Solicita visita o envía fotos para una cotización afinada con FletesPro.",
+        "ogTitle": "Fletes antigüedades Santiago | mudanza delicada",
+        "ogDescription": "Fletes antigüedades en Santiago y Región Metropolitana: transporte cuidadoso con embalaje a medida.",
+        "twitterTitle": "Fletes antigüedades | mudanza en Santiago",
+        "twitterDescription": "Fletes antigüedades en Santiago y RM: inventario, embalaje y traslado con equipo especializado.",
+        "schemaServiceType": "Fletes antigüedades",
+        "schemaDescription": "Fletes antigüedades y mudanza de muebles y objetos antiguos en Santiago y Región Metropolitana."
+      }
+    },
+    "mudanzasObrasArte": {
+      "hero": {
+        "badge": "FletesPro · Fletes obras de arte",
+        "title": "Fletes obras de arte: cuadros, esculturas y colección",
+        "subtitle": "Fletes obras de arte en Chile: logística para cuadros, esculturas y piezas de colección con embalaje acolchado, cajas a medida y coordinación con galerías, museos o particulares en Santiago y RM."
+      },
+      "services": {
+        "title": "Servicios para tus obras",
+        "subtitle": "Planificación, embalaje y transporte en Santiago y Región Metropolitana.",
+        "service1": {
+          "title": "Inspección y planificación",
+          "description": "Evaluación del volumen, accesos y riesgos. Presupuesto detallado y cronograma coordinado contigo."
+        },
+        "service2": {
+          "title": "Embalaje profesional",
+          "description": "Materiales adecuados, fijación interior de cajas y protección frente a vibraciones y humedad."
+        },
+        "service3": {
+          "title": "Transporte y descarga",
+          "description": "Equipo capacitado, vehículo adecuado y seguro. Descarga cuidadosa en destino."
+        }
+      },
+      "benefits": {
+        "title": "Por qué contratar con FletesPro",
+        "subtitle": "Experiencia en cargas delicadas y atención personalizada.",
+        "benefit1": {
+          "title": "Presupuesto transparente",
+          "description": "Cotización clara antes del servicio, sin sorpresas en el día de la mudanza."
+        },
+        "benefit2": {
+          "title": "Equipo coordinado",
+          "description": "Conductores y ayudantes alineados con protocolos para objetos de alto valor."
+        },
+        "benefit3": {
+          "title": "Seguro y trazabilidad",
+          "description": "Opciones de cobertura y comunicación durante el traslado."
+        },
+        "benefit4": {
+          "title": "Cobertura RM",
+          "description": "Servicio en comunas de Santiago y desplazamientos según disponibilidad."
+        }
+      },
+      "process": {
+        "title": "Cómo trabajamos",
+        "subtitle": "Proceso ordenado para reducir riesgos.",
+        "step1": {
+          "title": "Contacto",
+          "description": "Nos cuentas origen, destino, fechas y características de la carga."
+        },
+        "step2": {
+          "title": "Visita o fotos",
+          "description": "Cuando aplica, valoración con fotos o visita para definir embalaje y medios."
+        },
+        "step3": {
+          "title": "Ejecución",
+          "description": "Embalaje, carga, ruta y descarga según lo acordado."
+        },
+        "step4": {
+          "title": "Entrega",
+          "description": "Revisión conjunta en destino y cierre del servicio."
+        }
+      },
+      "cta": {
+        "title": "¿Necesitas cotización?",
+        "subtitle": "Usa la calculadora o escríbenos por WhatsApp con fotos y medidas.",
+        "button1": "Solicitar presupuesto",
+        "button2": "Calcular precio online"
+      },
+      "faqs": {
+        "title": "Preguntas frecuentes · obras de arte",
+        "subtitle": "Información general; el detalle contractual se formaliza al contratar.",
+        "faq1": {
+          "question": "¿Incluye desmontaje y montaje?",
+          "answer": "Según lo acordado en el presupuesto. Para pianos y piezas voluminosas puede requerirse técnico adicional; te lo indicamos al cotizar."
+        },
+        "faq2": {
+          "question": "¿Debo contratar seguro adicional?",
+          "answer": "Recomendamos declarar el valor y revisar coberturas disponibles. Te orientamos según el tipo de bien."
+        },
+        "faq3": {
+          "question": "¿Trabajan fines de semana?",
+          "answer": "Sujeto a disponibilidad. Coordinamos fecha y ventana horaria contigo."
+        },
+        "faq4": {
+          "question": "¿Cómo preparo el origen?",
+          "answer": "Despeja pasillos y accesos, protege suelos si lo necesitas y avisa restricciones de edificio (horario ascensor, estacionamiento)."
+        },
+        "faq5": {
+          "question": "¿Sirve la calculadora para este tipo de mudanza?",
+          "answer": "La calculadora estima fletes/mudanzas generales. Para pianos, arte o antigüedades suele requerirse ajuste manual tras revisar fotos o visita."
+        },
+        "faq6": {
+          "question": "¿Hacen embalaje en el mismo día?",
+          "answer": "Según complejidad puede programarse embalaje el día anterior o el mismo día; lo definimos en la planificación."
+        }
+      },
+      "seo": {
+        "title": "Fletes obras de arte Santiago | mudanza de arte y piezas de museo | FletesPro",
+        "description": "Fletes obras de arte en Santiago y Región Metropolitana: mudanza y transporte de cuadros, esculturas, instalaciones y piezas de colección con embalaje acolchado, marcos rígidos, control de humedad básico y carga horizontal cuando aplica. Coordinamos con galerías, ferias y particulares; valoramos seguro y ruta según valor declarado. Cotiza con fotos y dimensiones.",
+        "ogTitle": "Fletes obras de arte Santiago | mudanza de arte",
+        "ogDescription": "Fletes obras de arte en Chile: logística para cuadros y esculturas con embalaje a medida y equipo especializado.",
+        "twitterTitle": "Fletes obras de arte | mudanza en Santiago",
+        "twitterDescription": "Fletes obras de arte en Santiago y RM: transporte seguro para piezas de colección y exposiciones.",
+        "schemaServiceType": "Fletes obras de arte",
+        "schemaDescription": "Fletes obras de arte y mudanza de piezas de arte en Santiago y Región Metropolitana."
+      }
+    },
+    "legalTerminos": {
+      "seo": {
+        "title": "Términos y Condiciones",
+        "description": "Términos y condiciones generales del sitio web y servicios FletesPro (Chile). Texto orientativo.",
+        "ogTitle": "Términos y Condiciones | FletesPro",
+        "ogDescription": "Condiciones de uso del sitio y contratación de servicios de transporte y mudanzas."
+      },
+      "badge": "Información legal",
+      "h1": "Términos y Condiciones",
+      "updated": "Última actualización: mayo de 2026",
+      "disclaimer": "El siguiente texto es un modelo informativo y no sustituye asesoría jurídica. Debe ser revisado por un abogado según la realidad societaria, fiscal y contractual de FletesPro en Chile.",
+      "sections": [
+        {
+          "title": "1. Identificación",
+          "paragraphs": [
+            "El sitio web y los servicios comercializados bajo la marca FletesPro están dirigidos a usuarios en Chile. Los datos de la sociedad titular (razón social, RUT, domicilio) deben completarse en la versión definitiva de este documento."
+          ]
+        },
+        {
+          "title": "2. Objeto y aceptación",
+          "paragraphs": [
+            "Estos términos regulan el acceso y uso del sitio web, formularios, calculadoras y canales de contacto (incluido WhatsApp). Al solicitar cotización o contratar un servicio, declaras haber leído y aceptado las condiciones vigentes en ese momento.",
+            "Las condiciones particulares del servicio (precio, fechas, alcance, exclusiones) prevalecen sobre lo genérico del sitio cuando consten por escrito en presupuesto, orden de servicio o contrato firmado."
+          ]
+        },
+        {
+          "title": "3. Cotizaciones y contratación",
+          "paragraphs": [
+            "Las cotizaciones generadas online o por medios digitales son estimativas salvo indicación expresa en contrario. El precio definitivo puede ajustarse tras inspección presencial o revisión de información adicional (accesos, peso, volumen, restricciones de horario, peajes, estacionamiento, etc.).",
+            "La contratación se entenderá perfeccionada según lo acordado por escrito entre las partes y el pago o señal que se hubiere estipulado."
+          ]
+        },
+        {
+          "title": "4. Obligaciones del usuario",
+          "paragraphs": [
+            "Proporcionar información veraz sobre origen, destino, contenido de la carga y condiciones de acceso. Declarar objetos de especial valor, fragilidad o normativa especial (por ejemplo, sustancias restringidas, donde aplique).",
+            "Obtener las autorizaciones necesarias en condominios, edificios o espacios con restricciones de carga/descarga."
+          ]
+        },
+        {
+          "title": "5. Limitación de responsabilidad (marco general)",
+          "paragraphs": [
+            "Salvo pacto en contrario y límites legales imperativos, no se responde por daños indirectos o lucro cesante derivados del uso del sitio o de imposibilidades ajenas al control razonable del prestador (caso fortuito, fuerza mayor, huelgas, cierres de calzada, etc.).",
+            "Los enlaces a sitios de terceros son meramente orientativos; su uso se rige por los términos de esos terceros."
+          ]
+        },
+        {
+          "title": "6. Propiedad intelectual",
+          "paragraphs": [
+            "Contenidos, marcas, logotipos y diseño del sitio están protegidos. Queda prohibida su reproducción o uso comercial no autorizado."
+          ]
+        },
+        {
+          "title": "7. Legislación y tribunales",
+          "paragraphs": [
+            "Para la resolución de controversias se aplicará la legislación de la República de Chile. Los tribunales ordinarios de justicia con competencia en el domicilio del prestador o el pactado contractualmente serán competentes, sin perjuicio de normas imperativas en favor del consumidor cuando corresponda (Ley 19.496 y normas concordantes)."
+          ]
+        }
+      ]
+    },
+    "legalPrivacidad": {
+      "seo": {
+        "title": "Política de Privacidad",
+        "description": "Tratamiento de datos personales en el sitio FletesPro, marco Ley 19.628 y normativa chilena vigente (orientativo).",
+        "ogTitle": "Política de Privacidad | FletesPro",
+        "ogDescription": "Cómo recopilamos y usamos datos personales en cotizaciones, formularios y atención al cliente."
+      },
+      "badge": "Protección de datos",
+      "h1": "Política de Privacidad",
+      "updated": "Última actualización: mayo de 2026",
+      "disclaimer": "Texto modelo alineado al enfoque de la Ley 19.628 sobre protección de la vida privada y normas complementarias. Debe ser adaptado por asesoría legal y el registro de tratamientos real de FletesPro.",
+      "sections": [
+        {
+          "title": "1. Responsable del tratamiento",
+          "paragraphs": [
+            "La sociedad que opera bajo la marca FletesPro (en adelante, el “Responsable”) determina los fines y medios del tratamiento de datos personales obtenidos a través del sitio web, WhatsApp, formularios y otros canales digitales. Completar identificación legal en la versión publicada."
+          ]
+        },
+        {
+          "title": "2. Datos que podemos tratar",
+          "paragraphs": [
+            "Datos identificativos y de contacto (nombre, teléfono, correo, direcciones de origen/destino).",
+            "Datos de la solicitud de servicio: tipo de carga, fotos que voluntariamente envíes, preferencias de fecha, comentarios.",
+            "Datos técnicos de navegación (dirección IP, tipo de dispositivo, cookies según la política de cookies)."
+          ]
+        },
+        {
+          "title": "3. Finalidades",
+          "paragraphs": [
+            "Gestionar cotizaciones, prestar el servicio contratado, facturar y dar soporte.",
+            "Mejorar la seguridad del sitio, analítica agregada y, con base legal correspondiente, envío de comunicaciones comerciales si lo autorizas.",
+            "Cumplir obligaciones legales (tributarias, contables, resolución de reclamos)."
+          ]
+        },
+        {
+          "title": "4. Conservación",
+          "paragraphs": [
+            "Los datos se conservarán el tiempo necesario para las finalidades indicadas y los plazos legales aplicables. Criterios de supresión o anonimización deben definirse en el registro interno de tratamientos."
+          ]
+        },
+        {
+          "title": "5. Comunicaciones a terceros",
+          "paragraphs": [
+            "No se cederán datos a terceros salvo base legal (ej. proveedores que actúen por cuenta del Responsable con encargo de tratamiento), requerimiento judicial o autorización del titular, según corresponda."
+          ]
+        },
+        {
+          "title": "6. Derechos del titular",
+          "paragraphs": [
+            "Puedes ejercer derechos de acceso, rectificación, cancelación y oposición conforme a la Ley 19.628, salvo excepciones legales. Canal de contacto: completar correo o formulario oficial en la versión definitiva."
+          ]
+        },
+        {
+          "title": "7. Seguridad",
+          "paragraphs": [
+            "Se aplicarán medidas técnicas y organizativas razonables para proteger la información. Ningún sistema es 100% invulnerable; notifica incidentes por el canal oficial."
+          ]
+        }
+      ]
+    },
+    "legalCookies": {
+      "seo": {
+        "title": "Política de Cookies",
+        "description": "Uso de cookies y tecnologías similares en fletespro.cl (orientativo, Chile).",
+        "ogTitle": "Política de Cookies | FletesPro",
+        "ogDescription": "Información sobre cookies, finalidades y cómo gestionar preferencias."
+      },
+      "badge": "Transparencia",
+      "h1": "Política de Cookies",
+      "updated": "Última actualización: mayo de 2026",
+      "disclaimer": "Texto modelo. La lista concreta de cookies y proveedores (p. ej. analítica, mapas) debe auditorse en el sitio y documentarse según la Ley 19.628 y la Ley 21.719 sobre cookies y tratamiento de datos.",
+      "sections": [
+        {
+          "title": "1. Qué son las cookies",
+          "paragraphs": [
+            "Las cookies son pequeños archivos almacenados en tu dispositivo cuando visitas un sitio web. También pueden usarse tecnologías similares (local storage, píxeles)."
+          ]
+        },
+        {
+          "title": "2. Tipos de cookies que podríamos usar",
+          "paragraphs": [
+            "Técnicas / necesarias: mantener sesión, seguridad, preferencias de idioma o carga de mapas.",
+            "De rendimiento o analíticas: estadísticas agregadas de uso (por ejemplo, páginas vistas).",
+            "De funcionalidad: recordar elecciones del usuario en el sitio."
+          ]
+        },
+        {
+          "title": "3. Finalidades",
+          "paragraphs": [
+            "Operar el sitio y calculadoras, medir audiencia de forma agregada y, si se implementa, mostrar contenido personalizado previo consentimiento cuando la ley lo exija."
+          ]
+        },
+        {
+          "title": "4. Conservación",
+          "paragraphs": [
+            "El tiempo de conservación depende del tipo de cookie y del proveedor. Los detalles deben publicarse en un cuadro actualizado periódicamente."
+          ]
+        },
+        {
+          "title": "5. Cómo gestionar o rechazar cookies",
+          "paragraphs": [
+            "Puedes borrar cookies y limitar su instalación desde la configuración de tu navegador. Si el sitio incorpora un banner de preferencias, descríbelo aquí en la versión final."
+          ]
+        },
+        {
+          "title": "6. Transferencias internacionales",
+          "paragraphs": [
+            "Algunos proveedores (p. ej. mapas o analítica) pueden tratar datos fuera de Chile. En la versión definitiva debe informarse la política aplicable y las garantías adoptadas."
+          ]
+        }
+      ]
+    },
+    "legalAviso": {
+      "seo": {
+        "title": "Aviso Legal",
+        "description": "Aviso legal del sitio web FletesPro: titularidad, uso del sitio y limitaciones (Chile, orientativo).",
+        "ogTitle": "Aviso Legal | FletesPro",
+        "ogDescription": "Información general sobre el titular del sitio y condiciones de uso informativo."
+      },
+      "badge": "Sitio web",
+      "h1": "Aviso Legal",
+      "updated": "Última actualización: mayo de 2026",
+      "disclaimer": "Texto orientativo. Completar datos societarios reales y revisar con abogado.",
+      "sections": [
+        {
+          "title": "1. Datos identificativos",
+          "paragraphs": [
+            "En cumplimiento del deber de información general, se publicarán: razón social, RUT, domicilio social, correo y teléfono de contacto del titular del sitio. Sustituir este párrafo con los datos definitivos."
+          ]
+        },
+        {
+          "title": "2. Condiciones de uso del sitio",
+          "paragraphs": [
+            "El acceso al sitio implica la aceptación de este aviso y de los términos y condiciones cuando se indique. El usuario se compromete a un uso lícito, sin introducir virus, ni realizar actividades que dañen o sobrecarguen la infraestructura."
+          ]
+        },
+        {
+          "title": "3. Propiedad intelectual e industrial",
+          "paragraphs": [
+            "Los contenidos del sitio (textos, imágenes, diseño, código salvo componentes de terceros bajo sus licencias) son titularidad del Responsable o de sus licenciantes. Queda prohibida su reproducción sin autorización."
+          ]
+        },
+        {
+          "title": "4. Exclusión de garantías sobre el contenido",
+          "paragraphs": [
+            "La información publicada tiene carácter general e informativo. Puede contener errores u omisiones; se procurará su actualización sin garantía de exhaustividad."
+          ]
+        },
+        {
+          "title": "5. Enlaces",
+          "paragraphs": [
+            "Los enlaces a sitios de terceros se ofrecen como referencia. FletesPro no controla esos sitios ni es responsable de sus contenidos o políticas."
+          ]
+        },
+        {
+          "title": "6. Legislación aplicable",
+          "paragraphs": [
+            "Este aviso se rige por las leyes de la República de Chile."
+          ]
+        }
+      ]
     }
   },
   "calculator": {
@@ -1905,7 +2443,7 @@
     "fleteScheduled": "Programado",
     "helpers": "Ayudantes",
     "helpersNote": "El chofer ayuda a cargar y descargar. Para cargas muy grandes puedes sumar ayudantes extra (máx. 10).",
-    "helpersNoteShort": "Chofer carga/descarga. Cargas grandes: sumar ayudantes +$10.000 c/u.",
+    "helpersNoteShort": "Chofer carga/descarga. Cargas grandes: sumar ayudantes +$15.000 c/u.",
     "helperUnit": "c/u",
     "totalEstimatedPortesPro": "Total Estimado FletesPro",
     "presets": {

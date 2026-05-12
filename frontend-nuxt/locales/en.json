@@ -42,21 +42,24 @@
     "login": "Login",
     "mudanzasParticulares": "Residential Moving",
     "mudanzasEmpresas": "Commercial Moving",
-    "mudanzasOficinas": "Office Moving",
+    "mudanzasOficinas": "Freight for offices",
     "mudanzasInternacionales": "International Moving",
     "mudanzasUrgentes": "Urgent Moving",
     "marbella": "Santiago",
     "malaga": "Metropolitan Region",
     "costaDelSol": "Chile",
     "estepona": "Providencia",
-    "fuengirola": "Las Condes"
+    "fuengirola": "Las Condes",
+    "mudanzasPiano": "Piano freight",
+    "mudanzasAntiguedades": "Antiques freight",
+    "mudanzasObrasArte": "Fine art freight"
   },
   "pages": {
     "index": {
       "heroTag": "Freight and Moving in Santiago and Chile",
-      "title": "Freight and Moving",
-      "subtitle": "Freight and moving in Santiago and across Chile. Cargo transport, moving services and deliveries. Prices from $27,000 CLP. Online quote and free estimate.",
-      "description": "Freight and moving in Santiago and regions from $27,000 CLP. Online quote. Free estimate. Moving services, freight to regions and cold transport.",
+      "title": "Freight and moving in Santiago — affordable, fast and secure from $28,000 CLP",
+      "subtitle": "Freight and moving in Santiago and across Chile. Cargo transport, moving services and deliveries. Prices from $28,000 CLP. Online quote and free estimate.",
+      "description": "Freight and moving in Santiago and regions from $28,000 CLP. Online quote. Free estimate. Moving services, freight to regions and cold transport.",
       "features": {
         "title": "Why Choose Us",
         "subtitle": "Professional freight and moving services in Santiago and regions",
@@ -961,8 +964,7 @@
       },
       "seo": {
         "title": "Cold Transport Marbella | Cold Transport Company | Guaranteed Cold Chain | FletesPro",
-        "description": "Cold transport company in Marbella, Málaga and Costa del Sol. Refrigerated transport, refrigerated transport and cold chain logistics. Transport with controlled temperature. Transport of cold and frozen products, transport of cold food. Competitive cold transport price. Free quote.",
-        "keywords": "cold transport, cold transport company, refrigerated transport, cold chain, refrigerated transport, transport with controlled temperature, food transport, pharmaceutical transport, cold logistics, local cold transport, provincial cold transport, national cold transport, international cold transport, transport of cold and frozen products, cold transport for individuals, temperature controlled shipments, cold transport price, cold package shipping, cold transport companies, cold chain transport, freezing cold truck, isothermal truck with cold, cold truck for delivery, containers to maintain cold, cold transport company, transport companies with cold chain, transport companies with controlled temperature, cold logistics companies, cold package shipping, temperature controlled shipments, cold courier service, cold courier, cold transport price, cold chain transport, cold cargo transport, transport with controlled temperature, cold food transport, cold cargo transport, transport of controlled temperature, express cold transport, cold transport, refrigerated transport"
+        "description": "Cold transport company in Marbella, Málaga and Costa del Sol. Refrigerated transport, refrigerated transport and cold chain logistics. Transport with controlled temperature. Transport of cold and frozen products, transport of cold food. Competitive cold transport price. Free quote."
       }
     },
     "ultimaMilla": {
@@ -1224,7 +1226,6 @@
       "seo": {
         "title": "Last Mile Logistics Marbella | Ecommerce Shipping and Online Stores | FletesPro",
         "description": "Last mile logistics in Marbella, Málaga and Costa del Sol. Shipping for ecommerce, online stores and ecommerce parcel service. Ecommerce transport companies and last mile provider. Competitive ecommerce shipping rates. Free quote.",
-        "keywords": "last mile, last mile logistics, shipping for online stores, shipping for ecommerce, ecommerce shipping, ecommerce transport, ecommerce parcel service, ecommerce shipping companies, ecommerce shipping rates, flat rate ecommerce shipping, cheap ecommerce shipping, last mile transport, last mile logistics, last mile provider, last mile companies, ecommerce logistics, last mile concept, last mile definition, last mile distribution",
         "ogTitle": "Last Mile Logistics Marbella | Ecommerce Shipping",
         "ogDescription": "Last mile logistics in Marbella, Málaga and Costa del Sol. Shipping for ecommerce, online stores and ecommerce parcel service. Ecommerce transport companies and last mile provider.",
         "twitterTitle": "Last Mile Logistics | Ecommerce Shipping",
@@ -1232,6 +1233,549 @@
         "schemaServiceType": "Last Mile Logistics",
         "schemaDescription": "Last mile logistics in Marbella. Express last mile delivery, same day and 24h. Shipping for ecommerce and online stores."
       }
+    },
+    "mudanzasPiano": {
+      "hero": {
+        "badge": "FletesPro · Piano freight",
+        "title": "Piano freight: safe moving and transport in Santiago",
+        "subtitle": "Piano freight for upright and grand pianos in Santiago and the Metropolitan Region. Reinforced packing, coordinated crew, narrow access planning and tailored quotes from real measurements."
+      },
+      "services": {
+        "title": "Services for your piano",
+        "subtitle": "Planning, packing and transport in Santiago and the Metropolitan Region.",
+        "service1": {
+          "title": "Inspection and planning",
+          "description": "Assessment of volume, access and risks. Detailed quote and schedule aligned with you."
+        },
+        "service2": {
+          "title": "Professional packing",
+          "description": "Suitable materials, internal bracing and protection against vibration and moisture."
+        },
+        "service3": {
+          "title": "Transport and unloading",
+          "description": "Trained crew, suitable vehicle and insurance options. Careful unloading at destination."
+        }
+      },
+      "benefits": {
+        "title": "Why book with FletesPro",
+        "subtitle": "Experience with delicate loads and personalised attention.",
+        "benefit1": {
+          "title": "Transparent pricing",
+          "description": "Clear quote before the job, without surprises on moving day."
+        },
+        "benefit2": {
+          "title": "Coordinated team",
+          "description": "Drivers and helpers following protocols for high-value items."
+        },
+        "benefit3": {
+          "title": "Insurance and updates",
+          "description": "Coverage options and communication during the move."
+        },
+        "benefit4": {
+          "title": "Metropolitan coverage",
+          "description": "Service in Santiago communes and trips subject to availability."
+        }
+      },
+      "process": {
+        "title": "How we work",
+        "subtitle": "An orderly process to reduce risk.",
+        "step1": {
+          "title": "Contact",
+          "description": "You share origin, destination, dates and load characteristics."
+        },
+        "step2": {
+          "title": "Photos or visit",
+          "description": "Where needed, assessment via photos or visit to define packing and resources."
+        },
+        "step3": {
+          "title": "Execution",
+          "description": "Packing, loading, route and unloading as agreed."
+        },
+        "step4": {
+          "title": "Delivery",
+          "description": "Joint check at destination and service completion."
+        }
+      },
+      "cta": {
+        "title": "Need a quote?",
+        "subtitle": "Use the calculator or message us on WhatsApp with photos and dimensions.",
+        "button1": "Request quote",
+        "button2": "Calculate price online"
+      },
+      "faqs": {
+        "title": "FAQ · piano moving",
+        "subtitle": "General information; contractual detail is formalised when you hire.",
+        "faq1": {
+          "question": "Is dismantling and assembly included?",
+          "answer": "As agreed in the quote. Pianos and bulky pieces may need extra technicians; we state this when quoting."
+        },
+        "faq2": {
+          "question": "Should I buy extra insurance?",
+          "answer": "We recommend declaring value and reviewing available cover. We guide you according to the asset type."
+        },
+        "faq3": {
+          "question": "Do you work weekends?",
+          "answer": "Subject to availability. We align date and time window with you."
+        },
+        "faq4": {
+          "question": "How should I prepare the origin?",
+          "answer": "Clear corridors and access, protect floors if needed, and flag building rules (lift hours, parking)."
+        },
+        "faq5": {
+          "question": "Does the calculator cover this type of move?",
+          "answer": "The calculator estimates general moves. Pianos, art or antiques usually need manual adjustment after photos or a visit."
+        },
+        "faq6": {
+          "question": "Can packing be same day?",
+          "answer": "Depending on complexity, packing may be the day before or the same day; we define it in planning."
+        }
+      },
+      "seo": {
+        "title": "Piano freight Santiago | professional piano moves and transport | FletesPro",
+        "description": "Piano freight in Santiago and the Metropolitan Region: moving and transport of upright and grand pianos with reinforced packing, internal bracing and crews experienced in lifts, stairs and tight doorways. Send photos and dimensions on WhatsApp for a refined quote; the calculator gives a general estimate first.",
+        "ogTitle": "Piano freight Santiago | professional piano moves",
+        "ogDescription": "Piano freight in Santiago and RM: safe transport with reinforced packing and coordinated crew.",
+        "twitterTitle": "Piano freight | piano moves in Santiago",
+        "twitterDescription": "Piano freight in Santiago and the Metropolitan Region: tailored quotes for delicate instruments.",
+        "schemaServiceType": "Piano freight",
+        "schemaDescription": "Piano freight and piano moving in Santiago and the Metropolitan Region. Reinforced packing and tailored quotes."
+      }
+    },
+    "mudanzasAntiguedades": {
+      "hero": {
+        "badge": "FletesPro · Antiques freight",
+        "title": "Antiques freight: moving furniture and valuable pieces",
+        "subtitle": "Antiques freight in Santiago and the Metropolitan Region: inventory, custom packing, careful handling and optional insurance for old furniture and collectible objects."
+      },
+      "services": {
+        "title": "Services for your antiques",
+        "subtitle": "Planning, packing and transport in Santiago and the Metropolitan Region.",
+        "service1": {
+          "title": "Inspection and planning",
+          "description": "Assessment of volume, access and risks. Detailed quote and schedule aligned with you."
+        },
+        "service2": {
+          "title": "Professional packing",
+          "description": "Suitable materials, internal bracing and protection against vibration and moisture."
+        },
+        "service3": {
+          "title": "Transport and unloading",
+          "description": "Trained crew, suitable vehicle and insurance options. Careful unloading at destination."
+        }
+      },
+      "benefits": {
+        "title": "Why book with FletesPro",
+        "subtitle": "Experience with delicate loads and personalised attention.",
+        "benefit1": {
+          "title": "Transparent pricing",
+          "description": "Clear quote before the job, without surprises on moving day."
+        },
+        "benefit2": {
+          "title": "Coordinated team",
+          "description": "Drivers and helpers following protocols for high-value items."
+        },
+        "benefit3": {
+          "title": "Insurance and updates",
+          "description": "Coverage options and communication during the move."
+        },
+        "benefit4": {
+          "title": "Metropolitan coverage",
+          "description": "Service in Santiago communes and trips subject to availability."
+        }
+      },
+      "process": {
+        "title": "How we work",
+        "subtitle": "An orderly process to reduce risk.",
+        "step1": {
+          "title": "Contact",
+          "description": "You share origin, destination, dates and load characteristics."
+        },
+        "step2": {
+          "title": "Photos or visit",
+          "description": "Where needed, assessment via photos or visit to define packing and resources."
+        },
+        "step3": {
+          "title": "Execution",
+          "description": "Packing, loading, route and unloading as agreed."
+        },
+        "step4": {
+          "title": "Delivery",
+          "description": "Joint check at destination and service completion."
+        }
+      },
+      "cta": {
+        "title": "Need a quote?",
+        "subtitle": "Use the calculator or message us on WhatsApp with photos and dimensions.",
+        "button1": "Request quote",
+        "button2": "Calculate price online"
+      },
+      "faqs": {
+        "title": "FAQ · antiques",
+        "subtitle": "General information; contractual detail is formalised when you hire.",
+        "faq1": {
+          "question": "Is dismantling and assembly included?",
+          "answer": "As agreed in the quote. Pianos and bulky pieces may need extra technicians; we state this when quoting."
+        },
+        "faq2": {
+          "question": "Should I buy extra insurance?",
+          "answer": "We recommend declaring value and reviewing available cover. We guide you according to the asset type."
+        },
+        "faq3": {
+          "question": "Do you work weekends?",
+          "answer": "Subject to availability. We align date and time window with you."
+        },
+        "faq4": {
+          "question": "How should I prepare the origin?",
+          "answer": "Clear corridors and access, protect floors if needed, and flag building rules (lift hours, parking)."
+        },
+        "faq5": {
+          "question": "Does the calculator cover this type of move?",
+          "answer": "The calculator estimates general moves. Pianos, art or antiques usually need manual adjustment after photos or a visit."
+        },
+        "faq6": {
+          "question": "Can packing be same day?",
+          "answer": "Depending on complexity, packing may be the day before or the same day; we define it in planning."
+        }
+      },
+      "seo": {
+        "title": "Antiques freight Santiago | antique furniture moves and delicate transport | FletesPro",
+        "description": "Antiques freight in Santiago and RM: moving and transport of antique furniture and valuable pieces with photo inventory, padded packing, custom crates and protocols to limit vibration and shocks. Ideal for homes, collections and auctions. Request a visit or send photos for a refined quote with FletesPro.",
+        "ogTitle": "Antiques freight Santiago | delicate moves",
+        "ogDescription": "Antiques freight in Santiago and the Metropolitan Region: careful transport with custom packing.",
+        "twitterTitle": "Antiques freight | moves in Santiago",
+        "twitterDescription": "Antiques freight in Santiago and RM: inventory, packing and transport with an experienced crew.",
+        "schemaServiceType": "Antiques freight",
+        "schemaDescription": "Antiques freight and moving of antique furniture in Santiago and the Metropolitan Region."
+      }
+    },
+    "mudanzasObrasArte": {
+      "hero": {
+        "badge": "FletesPro · Fine art freight",
+        "title": "Fine art freight: paintings, sculptures and collections",
+        "subtitle": "Fine art freight in Chile: logistics for paintings, sculptures and collectibles with padded packing, custom crates and coordination with galleries, museums or private clients in Santiago and RM."
+      },
+      "services": {
+        "title": "Services for your pieces",
+        "subtitle": "Planning, packing and transport in Santiago and the Metropolitan Region.",
+        "service1": {
+          "title": "Inspection and planning",
+          "description": "Assessment of volume, access and risks. Detailed quote and schedule aligned with you."
+        },
+        "service2": {
+          "title": "Professional packing",
+          "description": "Suitable materials, internal bracing and protection against vibration and moisture."
+        },
+        "service3": {
+          "title": "Transport and unloading",
+          "description": "Trained crew, suitable vehicle and insurance options. Careful unloading at destination."
+        }
+      },
+      "benefits": {
+        "title": "Why book with FletesPro",
+        "subtitle": "Experience with delicate loads and personalised attention.",
+        "benefit1": {
+          "title": "Transparent pricing",
+          "description": "Clear quote before the job, without surprises on moving day."
+        },
+        "benefit2": {
+          "title": "Coordinated team",
+          "description": "Drivers and helpers following protocols for high-value items."
+        },
+        "benefit3": {
+          "title": "Insurance and updates",
+          "description": "Coverage options and communication during the move."
+        },
+        "benefit4": {
+          "title": "Metropolitan coverage",
+          "description": "Service in Santiago communes and trips subject to availability."
+        }
+      },
+      "process": {
+        "title": "How we work",
+        "subtitle": "An orderly process to reduce risk.",
+        "step1": {
+          "title": "Contact",
+          "description": "You share origin, destination, dates and load characteristics."
+        },
+        "step2": {
+          "title": "Photos or visit",
+          "description": "Where needed, assessment via photos or visit to define packing and resources."
+        },
+        "step3": {
+          "title": "Execution",
+          "description": "Packing, loading, route and unloading as agreed."
+        },
+        "step4": {
+          "title": "Delivery",
+          "description": "Joint check at destination and service completion."
+        }
+      },
+      "cta": {
+        "title": "Need a quote?",
+        "subtitle": "Use the calculator or message us on WhatsApp with photos and dimensions.",
+        "button1": "Request quote",
+        "button2": "Calculate price online"
+      },
+      "faqs": {
+        "title": "FAQ · fine art",
+        "subtitle": "General information; contractual detail is formalised when you hire.",
+        "faq1": {
+          "question": "Is dismantling and assembly included?",
+          "answer": "As agreed in the quote. Pianos and bulky pieces may need extra technicians; we state this when quoting."
+        },
+        "faq2": {
+          "question": "Should I buy extra insurance?",
+          "answer": "We recommend declaring value and reviewing available cover. We guide you according to the asset type."
+        },
+        "faq3": {
+          "question": "Do you work weekends?",
+          "answer": "Subject to availability. We align date and time window with you."
+        },
+        "faq4": {
+          "question": "How should I prepare the origin?",
+          "answer": "Clear corridors and access, protect floors if needed, and flag building rules (lift hours, parking)."
+        },
+        "faq5": {
+          "question": "Does the calculator cover this type of move?",
+          "answer": "The calculator estimates general moves. Pianos, art or antiques usually need manual adjustment after photos or a visit."
+        },
+        "faq6": {
+          "question": "Can packing be same day?",
+          "answer": "Depending on complexity, packing may be the day before or the same day; we define it in planning."
+        }
+      },
+      "seo": {
+        "title": "Fine art freight Santiago | art handling and museum-grade moves | FletesPro",
+        "description": "Fine art freight in Santiago and the Metropolitan Region: moving and transport of paintings, sculptures, installations and collection pieces with padded packing, rigid frames, basic humidity awareness and horizontal loading when needed. We coordinate with galleries, fairs and private clients; insurance and routing follow declared value. Quote with photos and dimensions.",
+        "ogTitle": "Fine art freight Santiago | art moves",
+        "ogDescription": "Fine art freight in Chile: logistics for paintings and sculptures with custom packing and specialist crew.",
+        "twitterTitle": "Fine art freight | art moves in Santiago",
+        "twitterDescription": "Fine art freight in Santiago and RM: secure transport for collection pieces and exhibitions.",
+        "schemaServiceType": "Fine art freight",
+        "schemaDescription": "Fine art freight and art moving in Santiago and the Metropolitan Region."
+      }
+    },
+    "legalTerminos": {
+      "seo": {
+        "title": "Terms and Conditions",
+        "description": "General terms for the FletesPro website and services (Chile). Indicative text.",
+        "ogTitle": "Terms and Conditions | FletesPro",
+        "ogDescription": "Use of the website and booking of transport and moving services."
+      },
+      "badge": "Legal information",
+      "h1": "Terms and Conditions",
+      "updated": "Last updated: May 2026",
+      "disclaimer": "This text is a sample for information only and does not replace legal advice. It must be reviewed by counsel according to FletesPro’s corporate, tax and contractual situation in Chile.",
+      "sections": [
+        {
+          "title": "1. Identification",
+          "paragraphs": [
+            "The website and services marketed under the FletesPro brand are aimed at users in Chile. Corporate details (legal name, tax ID, address) must be completed in the final version of this document."
+          ]
+        },
+        {
+          "title": "2. Purpose and acceptance",
+          "paragraphs": [
+            "These terms govern access to and use of the website, forms, calculators and contact channels (including WhatsApp). By requesting a quote or hiring a service, you declare that you have read and accept the terms in force at that time.",
+            "Specific service conditions (price, dates, scope, exclusions) prevail over generic website wording when set out in writing in a quote, work order or signed contract."
+          ]
+        },
+        {
+          "title": "3. Quotes and booking",
+          "paragraphs": [
+            "Quotes generated online or digitally are estimates unless expressly stated otherwise. The final price may be adjusted after an on-site inspection or review of further information (access, weight, volume, time restrictions, tolls, parking, etc.).",
+            "The contract is deemed perfected as agreed in writing between the parties and any deposit or payment stipulated."
+          ]
+        },
+        {
+          "title": "4. User obligations",
+          "paragraphs": [
+            "Provide accurate information on origin, destination, cargo contents and access conditions. Declare items of special value, fragility or special rules (e.g. restricted substances, where applicable).",
+            "Obtain any permissions required in condominiums, buildings or spaces with loading/unloading restrictions."
+          ]
+        },
+        {
+          "title": "5. Limitation of liability (general)",
+          "paragraphs": [
+            "Unless otherwise agreed and within mandatory legal limits, we are not liable for indirect damages or lost profit from use of the site or events beyond reasonable control (force majeure, strikes, road closures, etc.).",
+            "Links to third-party sites are for convenience only; use is governed by those third parties’ terms."
+          ]
+        },
+        {
+          "title": "6. Intellectual property",
+          "paragraphs": [
+            "Site content, marks, logos and design are protected. Unauthorised commercial reproduction is prohibited."
+          ]
+        },
+        {
+          "title": "7. Law and courts",
+          "paragraphs": [
+            "Disputes are governed by the laws of the Republic of Chile. Courts with jurisdiction at the provider’s domicile or as contractually agreed shall have competence, without prejudice to imperative consumer-protection rules where applicable."
+          ]
+        }
+      ]
+    },
+    "legalPrivacidad": {
+      "seo": {
+        "title": "Privacy Policy",
+        "description": "How FletesPro processes personal data (Chile). Indicative framework.",
+        "ogTitle": "Privacy Policy | FletesPro",
+        "ogDescription": "Data collected through quotes, forms and customer care."
+      },
+      "badge": "Data protection",
+      "h1": "Privacy Policy",
+      "updated": "Last updated: May 2026",
+      "disclaimer": "Sample wording aligned with Chile’s Law 19.628 on privacy and related rules. Must be adapted by legal counsel and FletesPro’s actual processing register.",
+      "sections": [
+        {
+          "title": "1. Data controller",
+          "paragraphs": [
+            "The company operating the FletesPro brand (the “Controller”) determines the purposes and means of processing personal data obtained via the website, WhatsApp, forms and other digital channels. Complete legal identification in the published version."
+          ]
+        },
+        {
+          "title": "2. Data we may process",
+          "paragraphs": [
+            "Identity and contact data (name, phone, email, origin/destination addresses).",
+            "Service request data: type of load, photos you voluntarily send, date preferences, comments.",
+            "Technical browsing data (IP address, device type, cookies as per the cookie policy)."
+          ]
+        },
+        {
+          "title": "3. Purposes",
+          "paragraphs": [
+            "Manage quotes, provide the hired service, invoice and support.",
+            "Improve site security, aggregate analytics and, with a valid legal basis, marketing communications if you authorise.",
+            "Comply with legal duties (tax, accounting, complaint handling)."
+          ]
+        },
+        {
+          "title": "4. Retention",
+          "paragraphs": [
+            "Data are kept as long as needed for the stated purposes and applicable legal deadlines. Deletion or anonymisation criteria should be set in the internal processing register."
+          ]
+        },
+        {
+          "title": "5. Sharing with third parties",
+          "paragraphs": [
+            "Data are not shared with third parties except on a legal basis (e.g. processors acting on behalf of the Controller), court orders or your authorisation, as applicable."
+          ]
+        },
+        {
+          "title": "6. Data subject rights",
+          "paragraphs": [
+            "You may exercise rights of access, rectification, erasure and objection under Law 19.628, subject to legal exceptions. Contact channel: complete email or official form in the final version."
+          ]
+        },
+        {
+          "title": "7. Security",
+          "paragraphs": [
+            "Reasonable technical and organisational measures are applied. No system is 100% secure; report incidents through the official channel."
+          ]
+        }
+      ]
+    },
+    "legalCookies": {
+      "seo": {
+        "title": "Cookie Policy",
+        "description": "Use of cookies on fletespro.cl (Chile). Indicative text.",
+        "ogTitle": "Cookie Policy | FletesPro",
+        "ogDescription": "Cookies, purposes and how to manage preferences."
+      },
+      "badge": "Transparency",
+      "h1": "Cookie Policy",
+      "updated": "Last updated: May 2026",
+      "disclaimer": "Sample text. The actual cookie list and vendors (e.g. analytics, maps) must be audited on the site and documented under Chilean law including Law 21.719 on cookies and data processing.",
+      "sections": [
+        {
+          "title": "1. What cookies are",
+          "paragraphs": [
+            "Cookies are small files stored on your device when you visit a website. Similar technologies (local storage, pixels) may also be used."
+          ]
+        },
+        {
+          "title": "2. Types of cookies we may use",
+          "paragraphs": [
+            "Strictly necessary: session, security, language or map loading preferences.",
+            "Performance / analytics: aggregated usage statistics (e.g. pages viewed).",
+            "Functional: remember choices you make on the site."
+          ]
+        },
+        {
+          "title": "3. Purposes",
+          "paragraphs": [
+            "Run the site and calculators, measure audience in aggregate and, if implemented, personalised content only after consent where required by law."
+          ]
+        },
+        {
+          "title": "4. Retention",
+          "paragraphs": [
+            "Retention depends on the cookie type and vendor. Details should be published in a table updated periodically."
+          ]
+        },
+        {
+          "title": "5. How to manage or reject cookies",
+          "paragraphs": [
+            "You can delete cookies and restrict installation from your browser settings. If the site uses a preference banner, describe it in the final version."
+          ]
+        },
+        {
+          "title": "6. International transfers",
+          "paragraphs": [
+            "Some vendors (e.g. maps or analytics) may process data outside Chile. The final version should state the applicable policy and safeguards."
+          ]
+        }
+      ]
+    },
+    "legalAviso": {
+      "seo": {
+        "title": "Legal Notice",
+        "description": "Legal notice for the FletesPro website (Chile). Indicative text.",
+        "ogTitle": "Legal Notice | FletesPro",
+        "ogDescription": "General information on the site owner and terms of use."
+      },
+      "badge": "Website",
+      "h1": "Legal Notice",
+      "updated": "Last updated: May 2026",
+      "disclaimer": "Indicative text. Insert real corporate details and have counsel review.",
+      "sections": [
+        {
+          "title": "1. Identification",
+          "paragraphs": [
+            "For general transparency, the following will be published: legal name, tax ID, registered address, email and phone of the site owner. Replace this paragraph with final details."
+          ]
+        },
+        {
+          "title": "2. Terms of use",
+          "paragraphs": [
+            "Accessing the site implies acceptance of this notice and of the terms and conditions where referenced. Users agree to lawful use, not to introduce malware, and not to damage or overload infrastructure."
+          ]
+        },
+        {
+          "title": "3. Intellectual and industrial property",
+          "paragraphs": [
+            "Site content (texts, images, design, code except third-party components under their licences) belongs to the owner or its licensors. Reproduction without authorisation is prohibited."
+          ]
+        },
+        {
+          "title": "4. Disclaimer on content",
+          "paragraphs": [
+            "Information is general and indicative. It may contain errors or omissions; updates are sought without a guarantee of completeness."
+          ]
+        },
+        {
+          "title": "5. Links",
+          "paragraphs": [
+            "Links to third-party sites are for reference only. FletesPro does not control those sites or their content or policies."
+          ]
+        },
+        {
+          "title": "6. Applicable law",
+          "paragraphs": [
+            "This notice is governed by the laws of the Republic of Chile."
+          ]
+        }
+      ]
     }
   },
   "footer": {
@@ -1315,7 +1859,7 @@
     "fleteScheduled": "Scheduled",
     "helpers": "Helpers",
     "helpersNote": "The driver helps load and unload. For very large loads you can add extra helpers (max. 10).",
-    "helpersNoteShort": "Driver loads/unloads. Large loads: add helpers +$10,000 each.",
+    "helpersNoteShort": "Driver loads/unloads. Large loads: add helpers +$15,000 each.",
     "helperUnit": "each",
     "totalEstimatedPortesPro": "Total Estimated FletesPro",
     "presets": {
@@ -1537,8 +2081,7 @@
       "seoTitle": "Contact FletesPro - Professional Moving Company",
       "seoContent1": "FletesPro is a professional moving company specializing in cheap moving services, affordable removals and moving service in Marbella, Málaga and Costa del Sol. We offer free moving quotes and online moving estimates for individuals and businesses.",
       "seoContent2": "Our moving service includes residential moves, commercial moves, office moves, international moves and urgent moves. We also provide professional packing, storage and cold transport services.",
-      "seoContent3": "Contact our moving company to get a personalized moving quote. We offer cheap moving services, affordable removals and moving service with maximum quality. Request a free moving quote with no obligation.",
-      "keywords": "contact moving, moving quote, moving estimate, moving company, cheap moving, affordable removals, moving service, moving companies, removals Marbella, removals Málaga, removals Costa del Sol"
+      "seoContent3": "Contact our moving company to get a personalized moving quote. We offer cheap moving services, affordable removals and moving service with maximum quality. Request a free moving quote with no obligation."
     },
     "mudanzasParticulares": {
       "hero": {
@@ -1639,7 +2182,6 @@
       "seo": {
         "title": "Residential Moving Marbella | Small Moves | Affordable Residential Moving | FletesPro",
         "description": "Residential moving and small moves in Marbella, Málaga and Costa del Sol. Affordable residential moving and cheap small moves with complete service. Free quote.",
-        "keywords": "residential moving, small moves, affordable residential moving, cheap small moves, residential move, moving for individuals, home moving, family moving, house moving, apartment moving, studio moving, cheap moving, economical moving, residential moving quote, residential moving price, residential moving company, residential moving service",
         "ogTitle": "Residential Moving Marbella | Small Moves",
         "ogDescription": "Residential moving and small moves in Marbella, Málaga and Costa del Sol. Affordable residential moving with complete service.",
         "twitterTitle": "Residential Moving | Small Moves",
@@ -1747,7 +2289,6 @@
       "seo": {
         "title": "Business Moving Marbella | Corporate Moving | Office Moving | FletesPro",
         "description": "Business moving and corporate moving in Marbella, Málaga and Costa del Sol. Specialized service for office moving for businesses. Free quote.",
-        "keywords": "business moving, corporate moving, office moving, business removals, commercial moving, store moving, warehouse moving, business moving Marbella, business moving Málaga, corporate moving Costa del Sol, business moving service, corporate moving company, business moving quote, business moving price",
         "ogTitle": "Business Moving Marbella | Corporate Moving",
         "ogDescription": "Business moving and corporate moving in Marbella, Málaga and Costa del Sol. Specialized service for office moving.",
         "twitterTitle": "Business Moving | Corporate Moving",
@@ -1758,9 +2299,9 @@
     },
     "mudanzasOficinas": {
       "hero": {
-        "badge": "Professional Office Moving",
-        "title": "Office Moving",
-        "subtitle": "Office moving and office removals in Marbella, Málaga and Costa del Sol. Specialized service for office moving without interrupting your business. Free quote."
+        "badge": "Freight for offices",
+        "title": "Freight for offices: corporate moves in Santiago",
+        "subtitle": "Freight for offices and office removals in Santiago and the Metropolitan Region. Furniture, IT and files moved with planning so your operation keeps running. Free quote and flexible schedules including nights and weekends."
       },
       "services": {
         "title": "Office Moving Services",
@@ -1819,8 +2360,8 @@
         }
       },
       "cta": {
-        "title": "Need Office Moving?",
-        "subtitle": "Office moving and office removals in Marbella, Málaga and Costa del Sol. Specialized service without interrupting your business. Free quote.",
+        "title": "Need freight for offices?",
+        "subtitle": "Freight for offices and office removals in Santiago and the Metropolitan Region. Specialised service without interrupting your business. Free quote.",
         "button1": "Request Quote",
         "button2": "Calculate Online Price"
       },
@@ -1853,15 +2394,14 @@
         }
       },
       "seo": {
-        "title": "Office Moving Marbella | Office Removals | Specialized Service | FletesPro",
-        "description": "Office moving and office removals in Marbella, Málaga and Costa del Sol. Specialized service for office moving without interrupting your business. Free quote.",
-        "keywords": "office moving, office removals, office relocation, office moving Marbella, office moving Málaga, office moving Costa del Sol, office moving service, office moving company, office moving quote, office moving price",
-        "ogTitle": "Office Moving Marbella | Office Removals",
-        "ogDescription": "Office moving and office removals in Marbella, Málaga and Costa del Sol. Specialized service without interrupting your business.",
-        "twitterTitle": "Office Moving | Office Removals",
-        "twitterDescription": "Office moving and office removals in Marbella. Specialized service without interrupting your business.",
-        "schemaServiceType": "Office Moving",
-        "schemaDescription": "Office moving and office removals in Marbella, Málaga and Costa del Sol. Specialized service without interrupting your business."
+        "title": "Freight for offices Santiago | office removals and corporate relocation | FletesPro",
+        "description": "Freight for offices in Santiago and the Metropolitan Region: office removals with dismantling, packing, transport and reassembly. We coordinate lifts, parking and night or weekend windows to limit downtime. Personalised quotes and clear communication with FletesPro for IT-heavy and document-heavy moves.",
+        "ogTitle": "Freight for offices Santiago | corporate moves",
+        "ogDescription": "Freight for offices in Santiago and RM: specialised office removals without stopping your business.",
+        "twitterTitle": "Freight for offices | office moves Santiago",
+        "twitterDescription": "Freight for offices in Santiago: professional office removals with free quote.",
+        "schemaServiceType": "Freight for offices",
+        "schemaDescription": "Freight for offices and office removals in Santiago and the Metropolitan Region. Specialised service without interrupting your business."
       }
     },
     "mudanzasInternacionales": {
@@ -1963,7 +2503,6 @@
       "seo": {
         "title": "International Moving Marbella | Moving Abroad | Complete Service | FletesPro",
         "description": "International moving and moving abroad in Marbella, Málaga and Costa del Sol. Complete service for international moving with documentation included. Free quote.",
-        "keywords": "international moving, moving abroad, moving outside Chile, moving Europe, international moving prices, international moving Marbella, international moving Málaga, international moving Costa del Sol, international moving service, international moving company, international moving quote, international moving price",
         "ogTitle": "International Moving Marbella | Moving Abroad",
         "ogDescription": "International moving and moving abroad in Marbella, Málaga and Costa del Sol. Complete service with documentation included.",
         "twitterTitle": "International Moving | Moving Abroad",
@@ -2071,7 +2610,6 @@
       "seo": {
         "title": "Urgent Moving Marbella | Express Moving 24 Hours | Immediate Service | FletesPro",
         "description": "Urgent moving and express moving 24 hours in Marbella, Málaga and Costa del Sol. Urgent moving service available every day. Free quote.",
-        "keywords": "urgent moving, express moving, 24 hour moving, same day moving, urgent moving Marbella, urgent moving Málaga, urgent moving Costa del Sol, urgent moving service, urgent moving company, urgent moving quote, urgent moving price, express moving 24h",
         "ogTitle": "Urgent Moving Marbella | Express Moving 24h",
         "ogDescription": "Urgent moving and express moving 24 hours in Marbella, Málaga and Costa del Sol. Service available every day.",
         "twitterTitle": "Urgent Moving | Express Moving 24h",

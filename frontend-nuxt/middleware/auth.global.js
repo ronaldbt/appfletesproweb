@@ -18,7 +18,11 @@ export default defineNuxtRouteMiddleware((to) => {
     '/gracias',
     '/reservar',
     '/no-disponible',
-    '/test'
+    '/test',
+    '/terminos',
+    '/privacidad',
+    '/cookies',
+    '/legal'
   ]
   const isPublic = publicPaths.includes(path) ||
     path.startsWith('/blog') ||

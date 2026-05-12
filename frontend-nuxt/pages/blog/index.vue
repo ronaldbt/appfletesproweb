@@ -152,7 +152,8 @@ const getBlogSlug = (post) => {
 }
 
 // SEO Meta Tags
-const siteUrl = 'https://fletespro.cl'
+const config = useRuntimeConfig()
+const siteUrl = String(config.public.siteUrl || 'https://fletespro.cl').replace(/\/$/, '')
 const currentUrl = `${siteUrl}/blog`
 const defaultImage = `${siteUrl}/og-image.jpg`
 
@@ -162,10 +163,6 @@ useHead({
     {
       name: 'description',
       content: 'Blog de FletesPro con guías, consejos e información sobre fletes, mudanzas y servicios de transporte en Santiago y Regiones. Fletes baratos y económicos.'
-    },
-    {
-      name: 'keywords',
-      content: 'blog fletes, guías mudanzas, consejos fletes, fletes baratos, fletes económicos, mudanzas Santiago, transporte regiones Chile'
     },
     // Open Graph
     { property: 'og:type', content: 'website' },

@@ -150,7 +150,6 @@ useHead({
   title: 'Fletes para Constructoras | Fletes materiales construcción | FletesPro',
   meta: [
     { name: 'description', content: 'Fletes para constructoras en la Región Metropolitana. Fletes de materiales de construcción, compras a pedido, arriendo de equipos. Personal shopper para constructoras. Cotiza por WhatsApp.' },
-    { name: 'keywords', content: 'flete de materiales construccion, fletes materiales construccion, fletes de materiales de construccion, arriendo fletes construccion, camion para fletes 20 toneladas construccion, flete de materiales construccion de santiago a san felipe, flete material construccion av matta, fletes para construccion, permiso para efectuar fletes transporte de materiales de construccion, precio arriendo fletes construccion' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: currentUrl },
     { property: 'og:title', content: 'Fletes para Constructoras | FletesPro' },

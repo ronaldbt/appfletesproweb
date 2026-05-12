@@ -67,6 +67,23 @@ export default defineNuxtConfig({
     '/guardamuebles/': { redirect: { to: '/bodegaje', statusCode: 301 } },
     '/en/guardamuebles': { redirect: { to: '/en/bodegaje', statusCode: 301 } },
     '/en/guardamuebles/': { redirect: { to: '/en/bodegaje', statusCode: 301 } },
+    // Slugs SEO: mudanzas/* → /fletes-*
+    '/mudanzas/piano': { redirect: { to: '/fletes-piano', statusCode: 301 } },
+    '/mudanzas/piano/': { redirect: { to: '/fletes-piano', statusCode: 301 } },
+    '/en/mudanzas/piano': { redirect: { to: '/en/fletes-piano', statusCode: 301 } },
+    '/en/mudanzas/piano/': { redirect: { to: '/en/fletes-piano', statusCode: 301 } },
+    '/mudanzas/antiguedades': { redirect: { to: '/fletes-antiguedades', statusCode: 301 } },
+    '/mudanzas/antiguedades/': { redirect: { to: '/fletes-antiguedades', statusCode: 301 } },
+    '/en/mudanzas/antiguedades': { redirect: { to: '/en/fletes-antiguedades', statusCode: 301 } },
+    '/en/mudanzas/antiguedades/': { redirect: { to: '/en/fletes-antiguedades', statusCode: 301 } },
+    '/mudanzas/obras-arte': { redirect: { to: '/fletes-obras-de-arte', statusCode: 301 } },
+    '/mudanzas/obras-arte/': { redirect: { to: '/fletes-obras-de-arte', statusCode: 301 } },
+    '/en/mudanzas/obras-arte': { redirect: { to: '/en/fletes-obras-de-arte', statusCode: 301 } },
+    '/en/mudanzas/obras-arte/': { redirect: { to: '/en/fletes-obras-de-arte', statusCode: 301 } },
+    '/mudanzas/oficinas': { redirect: { to: '/fletes-para-oficinas', statusCode: 301 } },
+    '/mudanzas/oficinas/': { redirect: { to: '/fletes-para-oficinas', statusCode: 301 } },
+    '/en/mudanzas/oficinas': { redirect: { to: '/en/fletes-para-oficinas', statusCode: 301 } },
+    '/en/mudanzas/oficinas/': { redirect: { to: '/en/fletes-para-oficinas', statusCode: 301 } },
     ...Object.fromEntries(rutasFletesComunas.map(r => [r, { prerender: true }])),
     ...Object.fromEntries(rutasBodegajeComunas.map(r => [r, { prerender: true }]))
   },
@@ -75,7 +92,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/blog', ...rutasFletesComunas, ...rutasBodegajeComunas, '/fletes-talca', '/mudanzas-vitacura', '/bodegaje'],
+      routes: ['/', '/blog', ...rutasFletesComunas, ...rutasBodegajeComunas, '/fletes-talca', '/mudanzas-vitacura', '/bodegaje', '/fletes-piano', '/fletes-antiguedades', '/fletes-obras-de-arte', '/fletes-para-oficinas', '/en/fletes-piano', '/en/fletes-antiguedades', '/en/fletes-obras-de-arte', '/en/fletes-para-oficinas'],
       failOnError: false
     }
   },
@@ -128,7 +145,9 @@ export default defineNuxtConfig({
   // Runtime config para variables de entorno públicas
   runtimeConfig: {
     public: {
-      googleMapsApiKey: process.env.NUXT_PUBLIC_GOOGLE_MAPS_API_KEY || 'AIzaSyD6_IKXikaZ2YFx5R8yKVpFPUe_S6WOKJI'
+      googleMapsApiKey: process.env.NUXT_PUBLIC_GOOGLE_MAPS_API_KEY || 'AIzaSyD6_IKXikaZ2YFx5R8yKVpFPUe_S6WOKJI',
+      /** Origen absoluto para canonicals / OG (local: export NUXT_PUBLIC_SITE_URL=http://localhost:3000) */
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://fletespro.cl'
     }
   },
   

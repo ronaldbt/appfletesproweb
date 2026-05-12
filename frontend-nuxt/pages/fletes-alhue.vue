@@ -36,7 +36,6 @@ useHead({
   title: content.meta.title,
   meta: [
     { name: 'description', content: content.meta.description },
-    { name: 'keywords', content: content.meta.keywords || '' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: `${siteUrl}/fletes-${routeSlug}` },
     { property: 'og:title', content: content.meta.title },

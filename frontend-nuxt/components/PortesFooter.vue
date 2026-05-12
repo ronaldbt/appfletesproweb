@@ -52,7 +52,7 @@
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/mudanzas/oficinas" class="hover:text-teal-400 transition-colors text-sm">
+              <NuxtLink to="/fletes-para-oficinas" class="hover:text-teal-400 transition-colors text-sm">
                 {{ $t('nav.mudanzasOficinas') }}
               </NuxtLink>
             </li>
@@ -155,17 +155,17 @@
           <h4 class="text-lg font-black mb-6 uppercase tracking-widest text-teal-500">Especialidades</h4>
           <ul class="space-y-3 text-slate-400">
             <li>
-              <NuxtLink to="/mudanzas/piano" class="hover:text-teal-400 transition-colors text-sm">
+              <NuxtLink to="/fletes-piano" class="hover:text-teal-400 transition-colors text-sm">
                 Mudanzas Piano
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/mudanzas/antiguedades" class="hover:text-teal-400 transition-colors text-sm">
+              <NuxtLink to="/fletes-antiguedades" class="hover:text-teal-400 transition-colors text-sm">
                 Mudanzas Antigüedades
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/mudanzas/obras-arte" class="hover:text-teal-400 transition-colors text-sm">
+              <NuxtLink to="/fletes-obras-de-arte" class="hover:text-teal-400 transition-colors text-sm">
                 Mudanzas Obras de Arte
               </NuxtLink>
             </li>
