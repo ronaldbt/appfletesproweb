@@ -1,20 +1,28 @@
 <template>
-  <div :class="`max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col lg:flex-row transition-all duration-700 ${isHero ? 'ring-[10px] ring-slate-200/40' : ''}`">
+  <div
+    :class="[
+      'portes-calculator max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col lg:flex-row transition-all duration-700',
+      isHero ? 'ring-[10px] ring-slate-200/40' : '',
+      'max-lg:max-h-[min(88dvh,720px)] max-lg:overflow-hidden'
+    ]"
+  >
     <!-- Left Panel -->
-    <div class="lg:w-2/3 p-4 md:p-6 bg-white">
-      <div class="flex gap-2 mb-6 overflow-x-auto pb-3 scrollbar-hide">
+    <div class="lg:w-2/3 p-4 md:p-6 bg-white max-lg:p-3 max-lg:flex max-lg:flex-col max-lg:flex-1 max-lg:min-h-0 max-lg:overflow-hidden">
+      <div class="flex gap-1.5 max-lg:gap-1 mb-6 max-lg:mb-2 overflow-x-auto pb-3 max-lg:pb-1 scrollbar-hide shrink-0">
         <button
           v-for="s in [1, 2, 3]"
           :key="s"
           @click="step = s"
           :class="step === s ? 'bg-slate-900 text-white shadow-xl scale-105' : 'bg-slate-100 text-slate-400 hover:bg-slate-200'"
-          class="flex items-center gap-2 whitespace-nowrap px-5 py-2.5 rounded-xl font-bold transition-all duration-300 text-sm"
+          class="flex items-center gap-1.5 max-lg:gap-1 whitespace-nowrap px-5 max-lg:px-2.5 py-2.5 max-lg:py-1.5 rounded-xl max-lg:rounded-lg font-bold transition-all duration-300 text-sm max-lg:text-[10px]"
         >
-          <span :class="step === s ? 'border-teal-500' : 'border-slate-300'" class="w-6 h-6 rounded-full text-[10px] flex items-center justify-center border-2">{{ s }}</span>
-          {{ s === 1 ? $t('calculator.step1') : s === 2 ? $t('calculator.step2') : $t('calculator.step3') }}
+          <span :class="step === s ? 'border-teal-500' : 'border-slate-300'" class="w-6 h-6 max-lg:w-5 max-lg:h-5 rounded-full text-[10px] max-lg:text-[8px] flex items-center justify-center border-2">{{ s }}</span>
+          <span class="max-lg:hidden">{{ s === 1 ? $t('calculator.step1') : s === 2 ? $t('calculator.step2') : $t('calculator.step3') }}</span>
+          <span class="hidden max-lg:inline">{{ s === 1 ? 'Ruta' : s === 2 ? 'Carga' : 'Total' }}</span>
         </button>
       </div>
 
+      <div class="max-lg:flex-1 max-lg:min-h-0 max-lg:overflow-hidden max-lg:flex max-lg:flex-col">
       <Transition
         mode="out-in"
         enter-active-class="transition-all duration-300 ease-out"
@@ -25,11 +33,11 @@
         leave-to-class="opacity-0 translate-x-8"
       >
         <!-- Step 1: Route Selection -->
-        <div v-if="step === 1" key="step1" class="space-y-5">
-          <div class="grid md:grid-cols-2 gap-4">
-            <div class="space-y-3">
-              <label for="origen" class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] flex items-center gap-2">
-                <svg class="w-4 h-4 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div v-if="step === 1" key="step1" class="space-y-5 max-lg:space-y-2 max-lg:flex-1 max-lg:flex max-lg:flex-col max-lg:min-h-0">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-lg:grid-cols-2 max-lg:gap-2 shrink-0">
+            <div class="space-y-3 max-lg:space-y-1">
+              <label for="origen" class="text-[10px] max-lg:text-[8px] font-black text-slate-400 uppercase tracking-[0.2em] max-lg:tracking-wide flex items-center gap-2">
+                <svg class="w-4 h-4 max-lg:w-3 max-lg:h-3 text-teal-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
@@ -41,13 +49,13 @@
                 v-model="origin"
                 type="text"
                 :placeholder="$t('calculator.originPlaceholder')"
-                class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl p-3 font-bold text-slate-900 focus:border-teal-500 focus:bg-white outline-none transition-all shadow-sm text-sm"
+                class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl max-lg:rounded-lg p-3 max-lg:p-2 font-bold text-slate-900 focus:border-teal-500 focus:bg-white outline-none transition-all shadow-sm text-sm max-lg:text-[11px]"
                 @focus="ensureMapsLoaded"
               />
             </div>
-            <div class="space-y-3">
-              <label for="destino" class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] flex items-center gap-2">
-                <svg class="w-4 h-4 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="space-y-3 max-lg:space-y-1">
+              <label for="destino" class="text-[10px] max-lg:text-[8px] font-black text-slate-400 uppercase tracking-[0.2em] max-lg:tracking-wide flex items-center gap-2">
+                <svg class="w-4 h-4 max-lg:w-3 max-lg:h-3 text-slate-900 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
@@ -59,22 +67,47 @@
                 v-model="destination"
                 type="text"
                 :placeholder="$t('calculator.destinationPlaceholder')"
-                class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl p-3 font-bold text-slate-900 focus:border-teal-500 focus:bg-white outline-none transition-all shadow-sm text-sm"
+                class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl max-lg:rounded-lg p-3 max-lg:p-2 font-bold text-slate-900 focus:border-teal-500 focus:bg-white outline-none transition-all shadow-sm text-sm max-lg:text-[11px]"
                 @focus="ensureMapsLoaded"
               />
             </div>
           </div>
 
-          <div class="relative aspect-[3/2] bg-slate-900 rounded-3xl overflow-hidden group border border-slate-800 shadow-inner">
-            <div ref="mapContainer" class="w-full h-full"></div>
-            <div v-if="origin && destination" class="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 text-[9px] text-white font-black tracking-widest uppercase z-10 max-w-[calc(100%-2rem)] truncate">
-              {{ $t('calculator.optimizedLogistics') }}: {{ origin.split(',')[0] }} ➔ {{ destination.split(',')[0] }}
+          <div class="max-lg:flex max-lg:gap-2 max-lg:flex-1 max-lg:min-h-0 max-lg:items-stretch">
+            <div class="relative aspect-[3/2] max-lg:aspect-auto max-lg:flex-1 max-lg:min-w-0 max-lg:h-[8.75rem] bg-slate-900 rounded-3xl max-lg:rounded-2xl overflow-hidden group border border-slate-800 shadow-inner">
+              <div ref="mapContainer" class="w-full h-full"></div>
+              <div v-if="origin && destination" class="absolute bottom-4 left-4 max-lg:bottom-1 max-lg:left-1 max-lg:right-1 bg-black/60 backdrop-blur-md px-3 py-1.5 max-lg:px-1.5 max-lg:py-0.5 rounded-lg border border-white/10 text-[9px] max-lg:text-[7px] text-white font-black tracking-widest uppercase z-10 max-w-[calc(100%-2rem)] max-lg:max-w-full truncate">
+                {{ $t('calculator.optimizedLogistics') }}: {{ origin.split(',')[0] }} ➔ {{ destination.split(',')[0] }}
+              </div>
             </div>
+            <aside class="lg:hidden w-[38%] max-w-[9.5rem] shrink-0 flex flex-col gap-1.5 bg-slate-950 rounded-2xl p-2 border border-slate-800 text-white overflow-hidden">
+              <p class="text-[7px] font-black text-teal-500 uppercase tracking-widest leading-tight">{{ $t('calculator.price') }}</p>
+              <p class="text-sm font-black leading-none tracking-tight">{{ calculation.priceFormatted || calculation.price }}</p>
+              <p class="text-[7px] text-slate-500 font-bold">CLP</p>
+              <div class="border-t border-slate-800 pt-1 space-y-0.5 min-h-0 flex-1 overflow-hidden">
+                <p class="text-[7px] text-slate-500 font-black uppercase">{{ $t('calculator.distance') }}</p>
+                <p class="text-[9px] font-bold text-teal-400 tabular-nums">
+                  <span v-if="calculation.distancia != null && calculation.distancia > 0">{{ calculation.distancia.toFixed(1) }} km</span>
+                  <span v-else>—</span>
+                </p>
+                <p class="text-[7px] text-slate-500 font-black uppercase pt-0.5">{{ $t('calculator.loadEstimation') }}</p>
+                <p class="text-[9px] font-bold">{{ calculation.totalVolume.toFixed(1) }} m³</p>
+              </div>
+              <div class="flex gap-0.5 shrink-0">
+                <button type="button" :class="fleteImmediate ? 'bg-teal-600 text-white' : 'bg-slate-800 text-slate-500'" class="flex-1 py-0.5 rounded text-[6px] font-black uppercase leading-tight" @click="fleteImmediate = true">{{ $t('calculator.fleteImmediate') }}</button>
+                <button type="button" :class="!fleteImmediate ? 'bg-teal-600 text-white' : 'bg-slate-800 text-slate-500'" class="flex-1 py-0.5 rounded text-[6px] font-black uppercase leading-tight" @click="fleteImmediate = false">{{ $t('calculator.fleteScheduled') }}</button>
+              </div>
+              <div class="flex items-center justify-center gap-1 shrink-0">
+                <button type="button" :disabled="helpersCount <= 0" class="w-5 h-5 rounded bg-slate-800 text-[10px] font-black disabled:opacity-40" @click="helpersCount = Math.max(0, helpersCount - 1)">−</button>
+                <span class="text-[8px] font-black w-3 text-center">{{ helpersCount }}</span>
+                <button type="button" :disabled="helpersCount >= MAX_HELPERS" class="w-5 h-5 rounded bg-slate-800 text-[10px] font-black disabled:opacity-40" @click="helpersCount = Math.min(MAX_HELPERS, helpersCount + 1)">+</button>
+              </div>
+            </aside>
           </div>
 
           <button 
             @click="step = 2"
-            class="w-full bg-slate-900 text-white py-3.5 rounded-xl font-black text-sm shadow-2xl flex items-center justify-center gap-3 hover:bg-teal-600 transition-all hover:scale-[1.02] active:scale-[0.98]"
+            class="w-full bg-slate-900 text-white py-3.5 max-lg:py-2.5 rounded-xl max-lg:rounded-lg font-black text-sm max-lg:text-xs shadow-2xl flex items-center justify-center gap-3 hover:bg-teal-600 transition-all hover:scale-[1.02] active:scale-[0.98] shrink-0"
           >
             {{ $t('calculator.configureLoad') }}
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -84,18 +117,18 @@
         </div>
 
         <!-- Step 2: Inventory -->
-        <div v-else-if="step === 2" key="step2" class="space-y-5">
+        <div v-else-if="step === 2" key="step2" class="space-y-5 max-lg:space-y-2 max-lg:flex-1 max-lg:flex max-lg:flex-col max-lg:min-h-0 max-lg:overflow-hidden">
           <div class="flex justify-between items-center mb-3">
-            <h3 class="text-xl font-black text-slate-900">{{ $t('calculator.digitalInventory') }}</h3>
-            <span class="text-[9px] font-black text-teal-600 bg-teal-50 px-2.5 py-1 rounded-lg uppercase tracking-widest">{{ $t('calculator.technicalPrecision') }}</span>
+            <h3 class="text-xl max-lg:text-sm font-black text-slate-900">{{ $t('calculator.digitalInventory') }}</h3>
+            <span class="text-[9px] font-black text-teal-600 bg-teal-50 px-2.5 py-1 rounded-lg uppercase tracking-widest max-lg:hidden">{{ $t('calculator.technicalPrecision') }}</span>
           </div>
           
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+          <div class="grid grid-cols-2 sm:grid-cols-4 max-lg:grid-cols-4 max-lg:gap-1.5 gap-2.5 shrink-0">
             <button
               v-for="preset in presets"
               :key="preset.key"
               @click="addItem(preset)"
-              class="p-4 bg-slate-50 border-2 border-slate-100 rounded-xl hover:border-teal-500 hover:bg-white hover:shadow-xl transition-all text-left flex flex-col gap-2 group hover:scale-105 hover:-translate-y-0.5 active:scale-95"
+              class="p-4 max-lg:p-2 bg-slate-50 border-2 border-slate-100 rounded-xl max-lg:rounded-lg hover:border-teal-500 hover:bg-white hover:shadow-xl transition-all text-left flex flex-col gap-2 group hover:scale-105 hover:-translate-y-0.5 active:scale-95"
             >
               <svg class="w-5 h-5 text-slate-400 group-hover:text-teal-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
@@ -104,7 +137,7 @@
             </button>
           </div>
 
-          <div class="bg-slate-50 rounded-2xl p-4 h-[180px] overflow-y-auto space-y-2 border border-slate-200 shadow-inner custom-scrollbar">
+          <div class="bg-slate-50 rounded-2xl max-lg:rounded-xl p-4 max-lg:p-2 h-[180px] max-lg:h-[min(28vh,7.5rem)] max-lg:flex-1 max-lg:min-h-0 overflow-y-auto space-y-2 border border-slate-200 shadow-inner custom-scrollbar">
             <div v-if="items.length === 0" class="h-full flex flex-col items-center justify-center text-slate-300 gap-4 opacity-40">
               <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
@@ -176,16 +209,16 @@
         </div>
 
         <!-- Step 3: Final -->
-        <div v-else-if="step === 3" key="step3" class="text-center py-5">
-          <div class="w-16 h-16 bg-teal-50 text-teal-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm border border-teal-100 animate-check-in">
+        <div v-else-if="step === 3" key="step3" class="text-center py-5 max-lg:py-2 max-lg:flex-1 max-lg:flex max-lg:flex-col max-lg:min-h-0 max-lg:justify-center">
+          <div class="w-16 h-16 max-lg:w-10 max-lg:h-10 bg-teal-50 text-teal-600 rounded-full flex items-center justify-center mx-auto mb-4 max-lg:mb-2 shadow-sm border border-teal-100 animate-check-in">
             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h3 class="text-2xl font-black text-slate-900 mb-2 tracking-tighter">{{ $t('calculator.quoteFinished') }}</h3>
-          <p class="text-slate-500 text-xs mb-6 font-medium tracking-tight">{{ $t('calculator.artisanalCareGuaranteed') }}</p>
+          <h3 class="text-2xl max-lg:text-base font-black text-slate-900 mb-2 max-lg:mb-1 tracking-tighter">{{ $t('calculator.quoteFinished') }}</h3>
+          <p class="text-slate-500 text-xs max-lg:text-[10px] max-lg:mb-2 mb-6 font-medium tracking-tight">{{ $t('calculator.artisanalCareGuaranteed') }}</p>
           
-          <div class="bg-slate-950 p-8 rounded-3xl max-w-xs mx-auto shadow-2xl relative overflow-hidden group border border-slate-800 hover:scale-[1.02] transition-transform">
+          <div class="bg-slate-950 p-8 max-lg:p-4 rounded-3xl max-lg:rounded-2xl max-w-xs mx-auto shadow-2xl relative overflow-hidden group border border-slate-800 hover:scale-[1.02] transition-transform max-lg:w-full">
             <div class="absolute top-0 right-0 p-5">
               <svg class="text-teal-500/20 w-8 h-8 group-hover:text-teal-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
@@ -193,7 +226,7 @@
             </div>
             <p class="text-[9px] font-black text-teal-500 uppercase tracking-[0.4em] mb-3">{{ $t('calculator.totalEstimatedPortesPro') }}</p>
             <div class="flex items-center justify-center gap-1">
-              <span class="text-5xl font-black text-white tracking-tighter animate-price-in">{{ calculation.priceFormatted || calculation.price }}</span>
+              <span class="text-5xl max-lg:text-2xl font-black text-white tracking-tighter animate-price-in">{{ calculation.priceFormatted || calculation.price }}</span>
               <span class="text-xl font-bold text-teal-500">CLP</span>
             </div>
             <p class="text-[8px] text-teal-500/90 mt-2">{{ $t('calculator.includesFreeM3') }} {{ calculation.includesFreeM3 }} m³</p>
@@ -207,8 +240,8 @@
             </div>
           </div>
 
-          <div class="mt-8 space-y-3">
-            <a :href="whatsappQuoteUrl" target="_blank" rel="noopener noreferrer" class="w-full bg-teal-600 text-white py-4 rounded-2xl font-black text-lg shadow-2xl shadow-teal-500/30 hover:bg-teal-500 transition-all hover:scale-[1.05] active:scale-[0.95] flex items-center justify-center gap-2" @click="saveQuoteToStorage">
+          <div class="mt-8 max-lg:mt-3 space-y-3 max-lg:space-y-2 shrink-0">
+            <a :href="whatsappQuoteUrl" target="_blank" rel="noopener noreferrer" class="w-full bg-teal-600 text-white py-4 max-lg:py-2.5 rounded-2xl max-lg:rounded-xl font-black text-lg max-lg:text-sm shadow-2xl shadow-teal-500/30 hover:bg-teal-500 transition-all hover:scale-[1.05] active:scale-[0.95] flex items-center justify-center gap-2" @click="saveQuoteToStorage">
               <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               {{ $t('calculator.reserveMove') }}
             </a>
@@ -216,10 +249,11 @@
           </div>
         </div>
       </Transition>
+      </div>
     </div>
 
-    <!-- Right Panel (Summary) -->
-    <div class="lg:w-1/3 bg-slate-950 p-4 md:p-6 text-white flex flex-col border-l border-slate-900 relative">
+    <!-- Right Panel (Summary) — solo desktop -->
+    <div class="hidden lg:flex lg:w-1/3 bg-slate-950 p-4 md:p-6 text-white flex flex-col border-l border-slate-900 relative">
       <div class="absolute top-0 right-0 w-48 h-48 bg-teal-600/10 rounded-full blur-[80px] -z-10" />
       
       <div class="flex flex-col gap-3">
@@ -299,6 +333,50 @@
         </div>
         <p class="text-[7px] text-slate-500 font-bold text-center pt-1 tracking-widest uppercase">Santiago • RM</p>
         </div>
+      </div>
+    </div>
+
+    <!-- Resumen móvil fijo (pasos 2–3; paso 1 usa panel junto al mapa) -->
+    <div v-if="step !== 1" class="lg:hidden shrink-0 bg-slate-950 border-t border-slate-800 p-2.5 text-white">
+      <div class="flex items-center justify-between gap-2 mb-2">
+        <div class="min-w-0 flex-1">
+          <p class="text-[7px] font-black text-slate-500 uppercase tracking-widest">{{ $t('calculator.routePlanning') }}</p>
+          <p class="text-[9px] font-bold truncate">{{ origin || '—' }}</p>
+          <p class="text-[9px] font-bold text-teal-400 truncate">{{ destination || '—' }}</p>
+        </div>
+        <div class="text-right shrink-0">
+          <p class="text-[7px] font-black text-teal-500 uppercase">{{ $t('calculator.price') }}</p>
+          <p class="text-base font-black leading-none">{{ calculation.priceFormatted || calculation.price }}</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-3 gap-1.5 text-center">
+        <div class="bg-white/5 rounded-lg py-1 px-1">
+          <p class="text-[6px] text-slate-500 uppercase font-black">{{ $t('calculator.distance') }}</p>
+          <p class="text-[10px] font-bold text-teal-400 tabular-nums">
+            <span v-if="calculation.distancia != null && calculation.distancia > 0">{{ calculation.distancia.toFixed(1) }} km</span>
+            <span v-else>—</span>
+          </p>
+        </div>
+        <div class="bg-white/5 rounded-lg py-1 px-1">
+          <p class="text-[6px] text-slate-500 uppercase font-black">m³</p>
+          <p class="text-[10px] font-bold">{{ calculation.totalVolume.toFixed(1) }}</p>
+        </div>
+        <div class="bg-white/5 rounded-lg py-1 px-1 flex flex-col items-center justify-center">
+          <p class="text-[6px] text-slate-500 uppercase font-black">{{ $t('calculator.helpers') }}</p>
+          <div class="flex items-center gap-0.5 mt-0.5">
+            <button type="button" :disabled="helpersCount <= 0" class="w-4 h-4 rounded bg-slate-800 text-[9px] font-black" @click="helpersCount = Math.max(0, helpersCount - 1)">−</button>
+            <span class="text-[9px] font-black w-3">{{ helpersCount }}</span>
+            <button type="button" :disabled="helpersCount >= MAX_HELPERS" class="w-4 h-4 rounded bg-slate-800 text-[9px] font-black" @click="helpersCount = Math.min(MAX_HELPERS, helpersCount + 1)">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="flex gap-1 mt-1.5">
+        <button type="button" :class="fleteImmediate ? 'bg-teal-600 text-white' : 'bg-slate-800 text-slate-500'" class="flex-1 py-1 rounded text-[7px] font-black uppercase" @click="fleteImmediate = true">{{ $t('calculator.fleteImmediate') }}</button>
+        <button type="button" :class="!fleteImmediate ? 'bg-teal-600 text-white' : 'bg-slate-800 text-slate-500'" class="flex-1 py-1 rounded text-[7px] font-black uppercase" @click="fleteImmediate = false">{{ $t('calculator.fleteScheduled') }}</button>
+      </div>
+      <div v-if="!fleteImmediate" class="grid grid-cols-2 gap-1 mt-1">
+        <input v-model="fleteDate" type="date" class="bg-slate-900 border border-slate-700 rounded px-1 py-0.5 text-[9px] font-bold text-white w-full" />
+        <input v-model="fleteTime" type="time" class="bg-slate-900 border border-slate-700 rounded px-1 py-0.5 text-[9px] font-bold text-white w-full" />
       </div>
     </div>
   </div>
@@ -618,6 +696,26 @@ function ensureMapsLoaded() {
   if (process.client) initMap()
 }
 
+function triggerMapResize() {
+  if (!process.client || !mapInstance || !window.google?.maps) return
+  nextTick(() => {
+    window.google.maps.event.trigger(mapInstance, 'resize')
+    if (directionsRenderer?.getDirections()) {
+      const bounds = new window.google.maps.LatLngBounds()
+      directionsRenderer.getDirections().routes[0].legs.forEach((leg) => {
+        bounds.extend(leg.start_location)
+        bounds.extend(leg.end_location)
+      })
+      mapInstance.fitBounds(bounds)
+    } else {
+      mapInstance.setCenter({ lat: -33.4489, lng: -70.6693 })
+      mapInstance.setZoom(10)
+    }
+  })
+}
+
+watch(step, () => triggerMapResize())
+
 onMounted(() => {
   if (!process.client) return
   const attachObserver = () => {
@@ -658,6 +756,15 @@ onMounted(() => {
 </script>
 
 <style scoped>
+@media (max-width: 1023px) {
+  .portes-calculator {
+    max-height: min(88dvh, 720px);
+  }
+  .portes-calculator :deep(.pac-container) {
+    z-index: 10000;
+  }
+}
+
 @keyframes zoom {
   0%, 100% {
     transform: scale(1.1);

@@ -2,7 +2,7 @@
 title: "¿Cuánto se cobra por un flete en Chile?"
 description: "Si necesitas el precio rápido de un flete y actualizado a 2026, cotiza con nuestra calculadora en línea. Precios de fletes en Santiago y regiones."
 date: "2023-12-26"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Precios"
 tags: ["fletes", "precios fletes", "cuánto cuesta flete", "Santiago", "regiones Chile", "calculadora"]
 image: "/og-image.jpg"

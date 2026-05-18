@@ -2,7 +2,7 @@
 title: "Diferencia entre cadena de frío y almacenamiento en frío | Guía"
 description: "Cadena de frío es el proceso completo; almacenamiento en frío es un eslabón. Te explicamos la diferencia, los eslabones y el rol del transporte refrigerado."
 date: "2026-02-01"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Transporte Frío"
 tags: ["diferencia cadena de frío almacenamiento en frío", "cadena de frío", "almacenamiento en frío", "transporte refrigerado Santiago", "eslabones cadena de frío"]
 image: "/og-image.jpg"

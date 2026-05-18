@@ -2,7 +2,7 @@
 title: "Cómo mudarse con mascotas en Santiago: guía para no volverse loco (ni ellos tampoco)"
 description: "Cómo mudarse con mascotas en Santiago sin estrés: perro, gato, transporte y día D. Consejos y opciones de traslado. Guía práctica. Cotiza tu mudanza."
 date: "2026-02-01"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Mudanzas"
 tags: ["mudanza con mascotas Santiago", "mudarse con perro gato Santiago", "transporte mascotas mudanza", "mudanza con mascotas"]
 image: "/og-image.jpg"

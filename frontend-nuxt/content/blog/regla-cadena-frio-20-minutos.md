@@ -2,7 +2,7 @@
 title: "Regla cadena de frío 20 minutos: qué es y cómo aplicarla"
 description: "¿Existe la regla de los 20 minutos en la cadena de frío? Te explicamos qué es, cómo se relaciona con otros tiempos (30 s, 2 h) y cómo aplicarla en el transporte refrigerado."
 date: "2026-02-01"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Transporte Frío"
 tags: ["regla cadena de frío 20 minutos", "cadena de frío", "tiempo fuera de frío", "transporte refrigerado Santiago", "ruptura cadena de frío"]
 image: "/og-image.jpg"

@@ -119,6 +119,9 @@
         <div class="container mx-auto px-4 max-w-4xl">
           <h2 class="text-3xl font-black text-slate-900 mb-6">Empresa de mudanzas y fletes: servicios confiables y económicos</h2>
           <p class="text-slate-600 leading-relaxed mb-4">
+            <NuxtLink to="/empresa-fletes-santiago" class="text-teal-600 font-semibold hover:underline">Conoce la historia de FletesPro</NuxtLink> — cómo pasamos de una camioneta a una empresa de fletes en Santiago con precio transparente.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-4">
             Si estás buscando una compañía de mudanzas y fletes confiable y económica, estás en el lugar indicado. En nuestra empresa ofrecemos una amplia gama de servicios para satisfacer tus necesidades de mudanza y transporte. Contamos con camiones de mudanza de diferentes tamaños, que se adaptan a cualquier tipo de traslado, ya sea grande o pequeño.
           </p>
           <p class="text-slate-600 leading-relaxed mb-4">
@@ -278,6 +281,7 @@
         </div>
       </section>
       
+      <FletesLocalAuthority />
       <PortesTestimonials />
 
       <!-- CTA final mudanzas, fletes, acarreos -->
@@ -790,6 +794,7 @@ const pricingInfo = computed(() => {
 })
 
 // SEO Meta Tags
+const { withReviewsOnLocalBusiness } = useFletesProReviews()
 const siteUrl = 'https://fletespro.cl'
 const siteName = 'FletesPro'
 const defaultImage = `${siteUrl}/og-image.jpg`
@@ -931,13 +936,14 @@ useHead(computed(() => {
     const currentCanonicalUrl = `${siteUrl}${currentCanonicalPath}`
     
     // Construir schemas directamente aquí dentro del computed
-    const movingCompany = {
+    const movingCompany = withReviewsOnLocalBusiness({
       '@context': 'https://schema.org',
       '@type': 'MovingCompany',
+      '@id': `${siteUrl}/#fletespro`,
       name: 'FletesPro',
       url: siteUrl,
       logo: logoUrl,
-      image: defaultImage,
+      image: [`${siteUrl}/ejemplo-flete-sencillo.webp`, defaultImage],
       description: ogDescription.value,
       address: {
         '@type': 'PostalAddress',
@@ -961,7 +967,7 @@ useHead(computed(() => {
           closes: '18:00'
         }
       ]
-    }
+    })
 
     const breadcrumb = {
       '@context': 'https://schema.org',

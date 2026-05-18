@@ -93,6 +93,17 @@
     />
 
     <PortesStats />
+    <FletesLocalAuthority
+      v-if="showLocalAuthority"
+      :title="localAuthority?.title"
+      :eyebrow="localAuthority?.eyebrow"
+      :manager-name="localAuthority?.managerName"
+      :manager-role="localAuthority?.managerRole"
+      :history="localAuthority?.history"
+      :extra="localAuthority?.extra"
+      :image-src="localAuthority?.imageSrc"
+      :image-alt="localAuthority?.imageAlt"
+    />
     <PortesTestimonials />
   </div>
 </template>
@@ -127,6 +138,14 @@ const props = defineProps({
   variant: {
     type: String,
     default: ''
+  },
+  showLocalAuthority: {
+    type: Boolean,
+    default: true
+  },
+  localAuthority: {
+    type: Object,
+    default: null
   }
 })
 

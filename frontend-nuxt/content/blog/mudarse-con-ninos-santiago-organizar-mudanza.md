@@ -2,7 +2,7 @@
 title: "Mudarse con niños en Santiago: cómo organizar la mudanza para que no sea un trauma"
 description: "Mudarse con niños en Santiago: cómo explicar la mudanza, organizar el día D y adaptarse después. Guía práctica para familias. Cotiza tu mudanza."
 date: "2026-02-01"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Mudanzas"
 tags: ["mudanza con niños Santiago", "como explicar mudanza a niños", "organizar mudanza familia", "mudanza con hijos"]
 image: "/og-image.jpg"

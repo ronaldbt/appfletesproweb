@@ -2,7 +2,7 @@
 title: "Las 15 mejores empresas de logística para ecommerce en Chile en 2026"
 description: "Ranking de las 15 mejores empresas de logística para tiendas online en Chile. Encuentra el partner ideal para tu negocio de ecommerce en 2026."
 date: "2026-01-15"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Ecommerce"
 tags: ["ecommerce", "logística", "envíos", "tiendas online", "Chile", "2026"]
 image: "/images/blog/fletes-baratos.png"

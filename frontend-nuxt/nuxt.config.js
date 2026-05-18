@@ -92,7 +92,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/blog', ...rutasFletesComunas, ...rutasBodegajeComunas, '/fletes-talca', '/mudanzas-vitacura', '/bodegaje', '/fletes-piano', '/fletes-antiguedades', '/fletes-obras-de-arte', '/fletes-para-oficinas', '/en/fletes-piano', '/en/fletes-antiguedades', '/en/fletes-obras-de-arte', '/en/fletes-para-oficinas'],
+      routes: ['/', '/blog', ...rutasFletesComunas, ...rutasBodegajeComunas, '/fletes-talca', '/mudanzas-vitacura', '/bodegaje', '/fletes-piano', '/fletes-antiguedades', '/fletes-obras-de-arte', '/fletes-para-oficinas', '/en/fletes-piano', '/en/fletes-antiguedades', '/en/fletes-obras-de-arte', '/en/fletes-para-oficinas', '/empresa-fletes-santiago', '/fletes-santiago'],
       failOnError: false
     }
   },
@@ -212,7 +212,7 @@ export default defineNuxtConfig({
         const blogRoutes = blogSlugs.map(slug => `/blog/${slug}`)
         const { comunasRM } = await import('./config/comunasRM.js')
         const comunaRoutes = comunasRM.map(c => `/fletes-${c.slug}`)
-        return [...blogRoutes, ...comunaRoutes]
+        return [...blogRoutes, ...comunaRoutes, '/empresa-fletes-santiago', '/fletes-santiago']
       } catch {
         return []
       }

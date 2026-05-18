@@ -2,7 +2,7 @@
 title: "¿Por qué se llama cadena de frío? Origen y significado"
 description: "Te explicamos por qué se llama cadena de frío: eslabones conectados y temperaturas constantes. Origen del término y qué implica en transporte refrigerado en Santiago."
 date: "2026-02-01"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Transporte Frío"
 tags: ["por qué se llama cadena de frío", "cadena de frío", "transporte refrigerado", "transporte en frío Santiago", "eslabones cadena de frío"]
 image: "/og-image.jpg"

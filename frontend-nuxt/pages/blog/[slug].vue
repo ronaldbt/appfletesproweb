@@ -37,8 +37,15 @@
                 <span v-if="page.category" class="text-xs font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">
                   {{ page.category }}
                 </span>
-                <span v-if="page.author" class="text-xs text-slate-400">
-                  Por {{ page.author }}
+                <span class="text-xs text-slate-400">
+                  Por
+                  <NuxtLink
+                    :to="authorProfilePath"
+                    class="font-semibold text-slate-500 hover:text-teal-600 transition-colors"
+                  >
+                    {{ articleAuthorName }}
+                  </NuxtLink>
+                  · {{ BLOG_PUBLISHER_NAME }}
                 </span>
               </div>
 
@@ -164,6 +171,12 @@
 </template>
 
 <script setup>
+import {
+  BLOG_AUTHOR_NAME,
+  BLOG_PUBLISHER_NAME,
+  BLOG_AUTHOR_PROFILE_PATH,
+  blogAuthorProfileUrl
+} from '~/config/contentAuthor.js'
 import { ref, computed } from 'vue'
 
 const lang = ref('es')
@@ -192,6 +205,10 @@ const formatDate = (dateString) => {
 
 // SEO: Nuxt Content v3 no siempre expone `_path`; si falta, canonical debe usar la ruta real (/blog/[slug]).
 const siteUrl = String(config.public.siteUrl || 'https://fletespro.cl').replace(/\/$/, '')
+const authorProfilePath = BLOG_AUTHOR_PROFILE_PATH
+const articleAuthorName = computed(
+  () => page.value?.author?.trim() || BLOG_AUTHOR_NAME
+)
 
 const canonicalPath = computed(() => {
   const p = page.value
@@ -225,13 +242,18 @@ const articleSchema = computed(() => {
     datePublished: page.value.date,
     dateModified: page.value.date,
     author: {
-      '@type': 'Organization',
-      name: page.value.author || 'FletesPro',
-      url: siteUrl
+      '@type': 'Person',
+      name: articleAuthorName.value,
+      url: blogAuthorProfileUrl(siteUrl),
+      worksFor: {
+        '@type': 'Organization',
+        name: BLOG_PUBLISHER_NAME,
+        url: siteUrl
+      }
     },
     publisher: {
       '@type': 'Organization',
-      name: 'FletesPro',
+      name: BLOG_PUBLISHER_NAME,
       url: siteUrl,
       logo: {
         '@type': 'ImageObject',
@@ -292,11 +314,11 @@ useHead(() => {
       },
       {
         name: 'author',
-        content: page.value.author || 'FletesPro'
+        content: articleAuthorName.value
       },
       {
         name: 'publisher',
-        content: 'FletesPro'
+        content: BLOG_PUBLISHER_NAME
       },
       // Open Graph
       { property: 'og:type', content: 'article' },
@@ -308,7 +330,7 @@ useHead(() => {
       { property: 'og:locale', content: 'es_CL' },
       { property: 'article:published_time', content: page.value.date },
       { property: 'article:modified_time', content: page.value.date },
-      { property: 'article:author', content: page.value.author || 'FletesPro' },
+      { property: 'article:author', content: articleAuthorName.value },
       { property: 'article:section', content: page.value.category || 'Guías' },
       ...articleTags.map(tag => ({ property: 'article:tag', content: tag })),
       // Twitter Card

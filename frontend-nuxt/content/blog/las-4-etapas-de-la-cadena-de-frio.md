@@ -2,7 +2,7 @@
 title: "¿Cuáles son las 4 etapas de la cadena de frío? Guía 2026"
 description: "Te explicamos cuáles son las 4 etapas de la cadena de frío: producción, almacenamiento, transporte y distribución. Incluye el rol del transporte refrigerado en Santiago."
 date: "2026-02-01"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Transporte Frío"
 tags: ["4 etapas cadena de frío", "etapas cadena de frío", "cadena de frío", "transporte refrigerado Santiago", "transporte en frío"]
 image: "/og-image.jpg"

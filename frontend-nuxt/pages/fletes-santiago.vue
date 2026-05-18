@@ -1,5 +1,5 @@
 <template>
-  <FletesComunaLayout :hero="content.hero">
+  <FletesComunaLayout :hero="content.hero" :local-authority="content.localAuthority">
     <!-- Precio fletes Santiago / estimativo (contenido movido desde home) -->
     <section class="py-16 bg-white">
       <div class="container mx-auto px-4 max-w-5xl">
@@ -53,7 +53,7 @@
       <div class="container mx-auto px-4 max-w-5xl">
         <h2 class="text-3xl font-black text-slate-900 mb-4">{{ content.centroYComunas.h2 }}</h2>
         <p class="text-slate-600 leading-relaxed mb-4">{{ content.centroYComunas.p1 }}</p>
-        <p class="text-slate-600 leading-relaxed">{{ content.centroYComunas.p2 }}</p>
+        <p v-if="content.centroYComunas.p2" class="text-slate-600 leading-relaxed">{{ content.centroYComunas.p2 }}</p>
       </div>
     </section>
 
@@ -169,6 +169,11 @@
             </NuxtLink>
           </li>
           <li>
+            <NuxtLink to="/empresa-fletes-santiago" class="block px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-700 font-medium hover:border-teal-500 hover:bg-teal-50/50 hover:text-teal-700 transition-colors">
+              Quiénes somos — Empresa de fletes
+            </NuxtLink>
+          </li>
+          <li>
             <NuxtLink to="/blog" class="block px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-700 font-medium hover:border-teal-500 hover:bg-teal-50/50 hover:text-teal-700 transition-colors">
               Blog
             </NuxtLink>
@@ -199,9 +204,10 @@
 
 <script setup>
 import content from '~/data/comunas/santiago.js'
-
 const siteUrl = 'https://fletespro.cl'
 const currentUrl = `${siteUrl}/fletes-santiago`
+
+const { withReviewsOnLocalBusiness } = useFletesProReviews()
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -225,23 +231,31 @@ const breadcrumbSchema = {
   ]
 }
 
-const serviceSchema = {
+const serviceSchema = computed(() => ({
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Fletes Santiago',
   description: content.meta.description,
-  provider: {
+  provider: withReviewsOnLocalBusiness({
     '@type': 'LocalBusiness',
+    '@id': `${siteUrl}/#fletespro`,
     name: 'FletesPro',
     url: siteUrl,
+    image: `${siteUrl}/ejemplo-flete-sencillo.webp`,
     telephone: '+56-9-7979-6841',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Providencia',
+      addressRegion: 'Región Metropolitana',
+      addressCountry: 'CL'
+    },
     areaServed: { '@type': 'City', name: 'Santiago', containedInPlace: { '@type': 'AdministrativeArea', name: 'Región Metropolitana' } }
-  },
+  }),
   areaServed: { '@type': 'City', name: 'Santiago' },
   url: currentUrl
-}
+}))
 
-useHead({
+useHead(computed(() => ({
   title: content.meta.title,
   meta: [
     { name: 'description', content: content.meta.description },
@@ -258,11 +272,11 @@ useHead({
   ],
   link: [{ rel: 'canonical', href: currentUrl }],
   script: [
-    { type: 'application/ld+json', innerHTML: JSON.stringify(faqSchema) },
-    { type: 'application/ld+json', innerHTML: JSON.stringify(breadcrumbSchema) },
-    { type: 'application/ld+json', innerHTML: JSON.stringify(serviceSchema) }
+    { key: 'faq-santiago', type: 'application/ld+json', innerHTML: JSON.stringify(faqSchema) },
+    { key: 'breadcrumb-santiago', type: 'application/ld+json', innerHTML: JSON.stringify(breadcrumbSchema) },
+    { key: 'service-santiago', type: 'application/ld+json', innerHTML: JSON.stringify(serviceSchema.value) }
   ]
-})
+})))
 
 const scrollToCalc = () => {
   if (process.client) document.getElementById('hero-calculator')?.scrollIntoView({ behavior: 'smooth' })

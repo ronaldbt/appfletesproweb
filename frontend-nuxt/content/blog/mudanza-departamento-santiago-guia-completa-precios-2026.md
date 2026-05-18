@@ -2,7 +2,7 @@
 title: "Mudanza de departamento en Santiago: guía completa y precios 2026"
 description: "Guía completa de mudanza de departamento en Santiago 2026. Precios por tipo de depto, pasos y consejos. Cotiza en línea."
 date: "2026-02-01"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Mudanzas"
 tags: ["mudanza departamento Santiago", "guía mudanza Santiago", "precios mudanza departamento 2026", "mudanza depto Santiago"]
 image: "/og-image.jpg"

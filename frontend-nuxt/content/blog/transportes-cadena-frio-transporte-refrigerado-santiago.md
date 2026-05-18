@@ -2,7 +2,7 @@
 title: "Transportes con cadena de frío y transporte refrigerado Santiago"
 description: "Transportes con cadena de frío y envíos refrigerados en Santiago. Qué son, qué exigen y cómo contratar transporte refrigerado en la RM y regiones."
 date: "2026-02-01"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Transporte Frío"
 tags: ["transportes cadena de frío", "transporte refrigerado Santiago", "envíos cadena de frío", "transporte en frío Santiago", "cadena de frío"]
 image: "/og-image.jpg"

@@ -2,7 +2,7 @@
 title: "Cuándo se pierde la cadena de frío: criterios y consecuencias"
 description: "¿Cuándo se pierde la cadena de frío? Te explicamos los criterios, las situaciones típicas, las consecuencias y cómo evitarlo en el transporte refrigerado."
 date: "2026-02-01"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Transporte Frío"
 tags: ["cuando se pierde la cadena de frío", "romper cadena de frío", "ruptura cadena de frío", "transporte refrigerado", "transporte en frío Santiago"]
 image: "/og-image.jpg"

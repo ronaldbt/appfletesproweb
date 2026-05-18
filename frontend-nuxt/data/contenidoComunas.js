@@ -68,7 +68,7 @@ function getContenidoComuna(slug) {
 
   // Intro especial para /fletes-santiago (hub de keywords)
   if (slug === 'santiago') {
-    const intro = 'Fletes en Santiago: servicio de fletes Santiago centro, fletes baratos Santiago y fletes económicos en Santiago. Cotiza tu flete Santiago con la calculadora online o por WhatsApp. Valor flete Santiago desde $27.000. Fletes Santiago a regiones y fletes dentro de Santiago con precios transparentes.'
+    const intro = 'Realizamos fletes en Santiago y a regiones con precios desde $28.000. Usa la calculadora online para saber el costo exacto según tu origen y destino, o escríbenos por WhatsApp. Sin letra chica, sin sorpresas.'
     const ventajas = [
       'Fletes Santiago centro y toda la RM: cobertura en las 52 comunas.',
       'Precios claros: valor flete Santiago desde $28.000 + $2.000/km en la RM.',
@@ -77,7 +77,7 @@ function getContenidoComuna(slug) {
       'Servicio de fletes en Santiago para particulares y empresas.',
       'Cotización al instante: calculadora online y presupuesto por WhatsApp sin compromiso.'
     ]
-    const cierre = 'Cotiza tu flete Santiago con la calculadora de esta página o escríbenos por WhatsApp +56 9 7979 6841. Fletes baratos Santiago y fletes Santiago Chile con el mejor servicio.'
+    const cierre = 'Cotiza online con la calculadora o escríbenos por WhatsApp al +56 9 7979 6841. Te respondemos de inmediato.'
     return { intro, ventajas, cierre }
   }
 

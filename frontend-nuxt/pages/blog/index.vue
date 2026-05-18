@@ -82,8 +82,8 @@
                     <span class="text-sm font-bold text-teal-600 group-hover:text-teal-700 transition-colors">
                       Leer más →
                     </span>
-                    <span v-if="post.author" class="text-xs text-slate-400">
-                      Por {{ post.author }}
+                    <span class="text-xs text-slate-400">
+                      Por {{ post.author || 'Ronald Bravo' }} · FletesPro
                     </span>
                   </div>
                 </div>

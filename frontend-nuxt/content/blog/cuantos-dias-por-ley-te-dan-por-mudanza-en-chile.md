@@ -2,7 +2,7 @@
 title: "Cuántos días por ley te dan por mudanza en Chile: guía 2026"
 description: "¿Cuántos días por ley te dan por mudanza? El Código del Trabajo no exige un permiso universal. Guía sobre permisos pactados, 5 días y alternativas."
 date: "2026-02-01"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Mudanzas"
 tags: ["cuántos días por ley mudanza", "permiso mudanza Chile", "días libres mudanza trabajador", "Código del Trabajo mudanza", "permiso cambio domicilio"]
 image: "/og-image.jpg"

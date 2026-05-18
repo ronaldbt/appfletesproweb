@@ -2,7 +2,7 @@
 title: "¿Qué temperatura se utiliza para el transporte de alimentos refrigerados?"
 description: "Te explicamos qué temperatura se utiliza para el transporte de alimentos refrigerados: rangos por producto (0–5 °C, -18 °C) y qué exige la cadena de frío en Santiago."
 date: "2026-02-01"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Transporte Frío"
 tags: ["temperatura transporte alimentos refrigerados", "transporte refrigerado alimentos", "cadena de frío alimentos", "transporte en frío Santiago", "temperatura refrigeración"]
 image: "/og-image.jpg"

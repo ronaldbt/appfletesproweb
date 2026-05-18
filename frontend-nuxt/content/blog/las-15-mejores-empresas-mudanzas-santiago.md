@@ -2,7 +2,7 @@
 title: "Las 15 mejores empresas de mudanzas en Santiago (2026)"
 description: "Las 15 mejores empresas de mudanzas en Santiago: criterios, opciones y cómo comparar. Precios transparentes, calculadora y servicio fines de semana."
 date: "2026-02-01"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Mudanzas"
 tags: ["mejores empresas mudanzas Santiago", "empresas mudanzas Santiago", "mudanzas Santiago empresas", "cotizar mudanza Santiago"]
 image: "/og-image.jpg"

@@ -2,7 +2,7 @@
 title: "¿Cuánto cuesta una mudanza en Santiago en 2026? Precios reales por m³"
 description: "Precios reales de mudanza en Santiago 2026 por m³. Rangos pequeño/mediano/grande, qué afecta el costo y cómo ahorrar. Cotiza en línea con nuestra calculadora."
 date: "2026-02-01"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Precios"
 tags: ["precio mudanza Santiago", "costo mudanza Santiago", "cuánto vale una mudanza", "mudanza Santiago 2026", "precios por m3", "mudanza barata Santiago"]
 image: "/og-image.jpg"

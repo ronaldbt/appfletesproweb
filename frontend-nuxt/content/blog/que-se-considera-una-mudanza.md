@@ -2,7 +2,7 @@
 title: "¿Qué se considera una mudanza? Definición y guía 2026"
 description: "¿Qué se considera una mudanza? Te explicamos la definición, la diferencia con flete y cuándo necesitas salvoconducto. Guía clara para Chile."
 date: "2026-02-01"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Mudanzas"
 tags: ["qué se considera mudanza", "definición mudanza", "diferencia mudanza flete", "mudanza Chile", "cambio domicilio"]
 image: "/og-image.jpg"

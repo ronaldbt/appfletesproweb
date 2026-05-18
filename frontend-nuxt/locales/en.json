@@ -1928,8 +1928,17 @@
       "step4Title": "Hand Delivery",
       "step4Desc": "We place each piece of furniture in its final location. Your home ready to live from the first minute."
     },
+    "localAuthority": {
+      "eyebrow": "Who we are",
+      "title": "Freight and moving with a real local team in Chile",
+      "managerName": "Ronald Bravo",
+      "managerRole": "Operations coordinator — FletesPro",
+      "history": "FletesPro is a Chilean freight and moving company serving the Metropolitan Region and shipments nationwide. We operate our own vans and 3/4 trucks, publish prices online, and coordinate directly via WhatsApp so you know the cost, pickup details, and delivery timeframe upfront.",
+      "imageAlt": "FletesPro truck on a freight route in Santiago, Chile"
+    },
     "testimonials": {
       "title": "Our Clients' Opinions",
+      "basedOnReviews": "Based on {count} customer reviews",
       "leaveCommentTitle": "Leave your comment",
       "leaveCommentHint": "Your review will appear on this page. Rate us with stars and tell us about your experience.",
       "yourName": "Your name",

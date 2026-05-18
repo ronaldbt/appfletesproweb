@@ -2,7 +2,7 @@
 title: "¿Cuánto tiempo dura una mudanza? Tiempos reales según el tamaño de tu hogar"
 description: "¿Cuánto demora una mudanza? Horas reales según tamaño: estudio, departamento y casa. Tiempo día D y factores. Santiago. Cotiza tu mudanza."
 date: "2026-02-01"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Mudanzas"
 tags: ["cuanto demora una mudanza", "tiempo mudanza departamento", "horas mudanza Santiago", "duración mudanza"]
 image: "/og-image.jpg"

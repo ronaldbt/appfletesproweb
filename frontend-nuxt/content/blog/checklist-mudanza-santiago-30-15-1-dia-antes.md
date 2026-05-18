@@ -2,7 +2,7 @@
 title: "Checklist para una mudanza en Santiago: qué hacer 30, 15 y 1 día antes"
 description: "Checklist mudanza Santiago: tareas 30, 15 y 1 día antes. Planificación, embalaje, kit supervivencia y salvoconducto. Enlaces a cotizar en Santiago."
 date: "2026-02-01"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Mudanzas"
 tags: ["checklist mudanza Santiago", "qué hacer antes mudanza", "lista tareas mudanza", "planificación mudanza 30 días", "mudanza Santiago"]
 image: "/og-image.jpg"

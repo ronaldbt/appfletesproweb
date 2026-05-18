@@ -2512,8 +2512,17 @@
       "step4Title": "Entrega Manual",
       "step4Desc": "Colocamos cada mueble en su ubicación final. Tu hogar listo para vivir desde el primer minuto."
     },
+    "localAuthority": {
+      "eyebrow": "Quiénes somos",
+      "title": "Fletes y mudanzas con equipo real en Chile",
+      "managerName": "Ronald Bravo",
+      "managerRole": "Coordinador de operaciones — FletesPro",
+      "history": "FletesPro es una empresa chilena de fletes y mudanzas con operación en la Región Metropolitana y envíos a regiones. Trabajamos con camionetas y camiones 3/4 propios, precios publicados en la web y coordinación directa por WhatsApp. Nuestro foco es que cada cliente sepa cuánto pagará, quién retira y en qué plazo llega la carga.",
+      "imageAlt": "Camión de FletesPro realizando un flete en Santiago, Chile"
+    },
     "testimonials": {
       "title": "Opiniones de Nuestros Clientes",
+      "basedOnReviews": "Basado en {count} opiniones de clientes",
       "leaveCommentTitle": "Deja tu comentario",
       "leaveCommentHint": "Tu opinión se publicará en esta página. Valóranos con estrellas y cuéntanos tu experiencia.",
       "yourName": "Tu nombre",

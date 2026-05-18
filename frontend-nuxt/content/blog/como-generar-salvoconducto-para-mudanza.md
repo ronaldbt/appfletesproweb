@@ -2,7 +2,7 @@
 title: "Cómo generar un salvoconducto para mudanza: guía 2026"
 description: "Guía paso a paso para generar tu salvoconducto de mudanza en Chile. Requisitos, notaría, online y alternativas. Evita multas y traslada en paz."
 date: "2026-02-01"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Mudanzas"
 tags: ["cómo generar salvoconducto mudanza", "tramitar salvoconducto mudanza", "obtener salvoconducto mudanza", "salvoconducto mudanza Chile", "requisitos salvoconducto"]
 image: "/og-image.jpg"

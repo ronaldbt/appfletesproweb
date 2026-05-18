@@ -1,7 +1,22 @@
 <template>
   <section id="testimonios" class="py-24 bg-slate-50 overflow-hidden">
     <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-extrabold text-slate-900 text-center mb-12">{{ $t('components.testimonials.title') }}</h2>
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-extrabold text-slate-900 mb-3">{{ $t('components.testimonials.title') }}</h2>
+        <p
+          v-if="aggregate"
+          class="inline-flex flex-wrap items-center justify-center gap-2 text-sm font-bold text-slate-600"
+        >
+          <span class="inline-flex gap-0.5 text-teal-500" aria-hidden="true">
+            <svg v-for="i in 5" :key="i" class="w-5 h-5" :class="i <= Math.round(aggregate.ratingValue) ? 'fill-current' : 'fill-slate-200 text-slate-200'" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          </span>
+          <span>{{ aggregate.ratingValue }}/5</span>
+          <span class="text-slate-400">·</span>
+          <span>{{ $t('components.testimonials.basedOnReviews', { count: aggregate.reviewCount }) }}</span>
+        </p>
+      </div>
 
       <div class="grid md:grid-cols-3 gap-8 mb-16">
         <div
@@ -134,11 +149,34 @@
 </template>
 
 <script setup>
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, ref } from 'vue'
 
-const { t, locale } = useI18n()
+const { t } = useI18n()
+const { aggregate, reviewsSchema, userReviews } = useFletesProReviews()
 
-const userItems = ref([])
+useHead(computed(() => {
+  const schema = reviewsSchema.value
+  if (!schema) return {}
+  return {
+    script: [
+      {
+        key: 'fletespro-reviews-schema',
+        type: 'application/ld+json',
+        innerHTML: JSON.stringify(schema)
+      }
+    ]
+  }
+}))
+
+const userItems = computed(() =>
+  userReviews.value.map((r, i) => ({
+    id: `api-${i}`,
+    stars: r.rating,
+    comment: r.body,
+    name: r.name,
+    roleLabel: r.role
+  }))
+)
 const formStars = ref(5)
 const formName = ref('')
 const formRole = ref('')
@@ -146,26 +184,6 @@ const formComment = ref('')
 const submitting = ref(false)
 const sentOk = ref(false)
 const formError = ref('')
-
-async function loadUserTestimonials() {
-  try {
-    const res = await fetch('/api/testimonios')
-    const data = await res.json()
-    if (data?.items && Array.isArray(data.items)) {
-      userItems.value = data.items
-    }
-  } catch {
-    userItems.value = []
-  }
-}
-
-onMounted(() => {
-  loadUserTestimonials()
-})
-
-watch(locale, () => {
-  loadUserTestimonials()
-})
 
 const testimonials = computed(() => [
   {
@@ -216,7 +234,7 @@ async function submitComment() {
     formRole.value = ''
     formComment.value = ''
     formStars.value = 5
-    await loadUserTestimonials()
+    await refreshNuxtData('fletespro-testimonios-public')
   } catch {
     formError.value = t('components.testimonials.errorSend')
   } finally {

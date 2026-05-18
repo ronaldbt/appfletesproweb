@@ -2,7 +2,7 @@
 title: "Mudanza urgente en Santiago: ¿es posible mudarse en menos de 24 horas?"
 description: "Mudanza urgente en Santiago: sí es posible en menos de 24 horas. Qué preparar, salvoconducto y cómo cotizar. Cotiza mudanzas urgentes en Santiago. Presupuesto gratis."
 date: "2026-02-01"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Mudanzas"
 tags: ["mudanza urgente Santiago", "mudanzas urgentes Santiago", "mudanza menos 24 horas", "mudanza mismo día Santiago", "mudanza express Santiago"]
 image: "/og-image.jpg"

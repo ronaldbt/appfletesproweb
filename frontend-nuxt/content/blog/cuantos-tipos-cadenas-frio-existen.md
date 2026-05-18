@@ -2,7 +2,7 @@
 title: "¿Cuántos tipos de cadenas de frío existen? Guía por temperatura y sector"
 description: "Te explicamos cuántos tipos de cadenas de frío existen: por temperatura (refrigeración, congelación, ultrafría), por sector y qué implica en transporte refrigerado."
 date: "2026-02-01"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Transporte Frío"
 tags: ["cuántos tipos cadenas frío existen", "tipos cadena de frío", "refrigeración congelación", "transporte refrigerado Santiago", "cadena de frío"]
 image: "/og-image.jpg"

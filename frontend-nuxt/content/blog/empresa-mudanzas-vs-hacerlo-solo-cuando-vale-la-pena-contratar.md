@@ -2,7 +2,7 @@
 title: "Empresa de mudanzas vs. hacerlo solo: ¿cuándo vale la pena contratar?"
 description: "Empresa de mudanzas vs hacerlo solo: cuándo vale la pena contratar. Ventajas, desventajas y situaciones para decidir. Cotiza en Santiago."
 date: "2026-02-01"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Mudanzas"
 tags: ["empresa de mudanzas", "hacer mudanza solo", "cuándo contratar mudanza", "vale la pena contratar mudanza", "mudanza profesional vs propia"]
 image: "/og-image.jpg"

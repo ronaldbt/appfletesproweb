@@ -2,7 +2,7 @@
 title: "Fletes Baratos"
 description: "Tu solución confiable para fletes baratos, mudanzas y transporte en frío. Simplifica tus traslados con nuestra empresa especializada. Contamos con embalaje si lo requiere."
 date: "2023-06-22"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Fletes Baratos"
 tags: ["fletes baratos", "fletes económicos", "mudanzas", "transporte", "Santiago", "regiones Chile"]
 image: "/og-image.jpg"

@@ -2,7 +2,7 @@
 title: "Expertos en embalaje"
 description: "Servicio de embalaje profesional en Santiago y Región Metropolitana. Embalaje a domicilio, para mudanzas y productos frágiles. Precios competitivos."
 date: "2023-06-22"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Embalaje"
 tags: ["embalaje", "embalaje profesional", "mudanzas", "Santiago", "Región Metropolitana"]
 image: "/images/blog/expertos-embalaje.jpeg"

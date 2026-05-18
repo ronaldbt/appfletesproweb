@@ -2,7 +2,7 @@
 title: "Transporte en frío con amplia experiencia"
 description: "Servicio de transporte refrigerado en la Región Metropolitana y a regiones. Mantén la calidad de tus productos perecederos con nuestra flota especializada."
 date: "2023-06-22"
-author: "FletesPro"
+author: "Ronald Bravo"
 category: "Transporte Frío"
 tags: ["transporte en frío", "transporte refrigerado", "cadena de frío", "productos perecederos", "Santiago", "regiones Chile"]
 image: "/og-image.jpg"
