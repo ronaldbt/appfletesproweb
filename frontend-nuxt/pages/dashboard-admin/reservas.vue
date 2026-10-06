@@ -8,6 +8,8 @@
       </button>
     </div>
 
+    <ReservasCalendario :events="eventosCalendario" :show-price="esAdmin" class="mb-8" />
+
     <!-- Agenda de fletes (anotados por teléfono) -->
     <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm mb-8">
       <h2 class="text-lg font-black text-slate-900 mb-4">Agenda de fletes</h2>
@@ -20,7 +22,7 @@
           <a v-for="f in fletesManana" :key="f.id" :href="whatsappRecordatorioUrl(f)" target="_blank" rel="noopener"
              class="flex flex-wrap items-center justify-between gap-2 p-3 rounded-lg bg-white border border-teal-100 hover:border-teal-300 transition-colors">
             <span class="text-sm font-medium text-slate-800">{{ f.nombre || '—' }} · {{ f.origen }} → {{ f.destino }}</span>
-            <span class="text-xs text-slate-500">Tel: {{ f.telefono }}{{ f.precio ? ' · $' + formatPrecio(f.precio) : '' }}</span>
+            <span class="text-xs text-slate-500">Tel: {{ f.telefono }}{{ esAdmin && f.precio ? ' · $' + formatPrecio(f.precio) : '' }}</span>
             <span class="inline-flex items-center gap-1 text-xs font-bold text-teal-600">Abrir WhatsApp</span>
           </a>
         </div>
@@ -32,7 +34,7 @@
           <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Nombre persona o empresa</span>
           <input v-model="nuevoFlete.nombre" type="text" required placeholder="Ej: Juan Pérez / Empresa XYZ" class="mt-1 w-full rounded-xl border-2 border-slate-200 bg-white px-3 py-2 text-slate-900 focus:border-teal-500 focus:outline-none" />
         </label>
-        <label>
+        <label v-if="esAdmin">
           <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Precio del flete ($)</span>
           <input v-model="nuevoFlete.precio" type="text" placeholder="Ej: 45000" class="mt-1 w-full rounded-xl border-2 border-slate-200 bg-white px-3 py-2 text-slate-900 focus:border-teal-500 focus:outline-none" />
         </label>
@@ -74,7 +76,7 @@
           <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Qué llevar (carga)</span>
           <input v-model="nuevoFlete.carga" type="text" placeholder="Ej: muebles, cajas, refrigerador" class="mt-1 w-full rounded-xl border-2 border-slate-200 bg-white px-3 py-2 text-slate-900 focus:border-teal-500 focus:outline-none" />
         </label>
-        <label class="md:col-span-2 lg:col-span-3 flex items-center gap-2">
+        <label v-if="esAdmin" class="md:col-span-2 lg:col-span-3 flex items-center gap-2">
           <input v-model="nuevoFlete.ivaIncluido" type="checkbox" class="rounded border-slate-300 text-teal-600 focus:ring-teal-500" />
           <span class="text-sm font-medium text-slate-700">Precio con IVA incluido</span>
         </label>
@@ -98,7 +100,7 @@
               <th class="px-4 py-3 text-left font-bold">Nombre</th>
               <th class="px-4 py-3 text-left font-bold">Origen → Destino</th>
               <th class="px-4 py-3 text-left font-bold">Carga</th>
-              <th class="px-4 py-3 text-left font-bold">Precio</th>
+              <th v-if="esAdmin" class="px-4 py-3 text-left font-bold">Precio</th>
               <th class="px-4 py-3 text-left font-bold">Camión</th>
               <th class="px-4 py-3 text-left font-bold">Ayudante</th>
               <th class="px-4 py-3 text-left font-bold">Teléfono</th>
@@ -112,7 +114,7 @@
               <td class="px-4 py-3 font-medium text-slate-800">{{ f.nombre || '—' }}</td>
               <td class="px-4 py-3 text-slate-700">{{ f.origen }} → {{ f.destino }}</td>
               <td class="px-4 py-3 text-slate-600">{{ f.carga || '—' }}</td>
-              <td class="px-4 py-3 font-bold text-slate-900">{{ f.precio ? '$' + formatPrecio(f.precio) : '—' }}</td>
+              <td v-if="esAdmin" class="px-4 py-3 font-bold text-slate-900">{{ f.precio ? '$' + formatPrecio(f.precio) : '—' }}</td>
               <td class="px-4 py-3 text-slate-600">{{ getVehiculoLabel(f.vehiculoId) }}</td>
               <td class="px-4 py-3">{{ f.conAyudante === 'si' ? 'Sí' : 'No' }}</td>
               <td class="px-4 py-3"><a v-if="f.telefono" :href="`https://wa.me/${(f.telefono || '').replace(/\D/g, '')}`" target="_blank" rel="noopener" class="text-teal-600 font-bold hover:underline">{{ f.telefono }}</a><span v-else class="text-slate-400">—</span></td>
@@ -144,7 +146,7 @@
           <p class="text-xs font-bold text-slate-500 uppercase">Completadas</p>
           <p class="text-2xl font-black text-teal-700">{{ reservasStats.completadas }}</p>
         </div>
-        <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+        <div v-if="esAdmin" class="rounded-xl border border-slate-200 bg-slate-50 p-4">
           <p class="text-xs font-bold text-slate-500 uppercase">Ingresos</p>
           <p class="text-xl font-black text-slate-900">${{ reservasStats.ingresos.toLocaleString('es-CL') }}</p>
         </div>
@@ -170,10 +172,10 @@
               <th class="px-4 py-3 text-left font-bold">ID</th>
               <th class="px-4 py-3 text-left font-bold">Cliente</th>
               <th class="px-4 py-3 text-left font-bold">Ruta</th>
-              <th class="px-4 py-3 text-left font-bold">Precio</th>
-              <th class="px-4 py-3 text-left font-bold">IVA</th>
+              <th v-if="esAdmin" class="px-4 py-3 text-left font-bold">Precio</th>
+              <th v-if="esAdmin" class="px-4 py-3 text-left font-bold">IVA</th>
               <th class="px-4 py-3 text-left font-bold">Estado</th>
-              <th class="px-4 py-3 text-left font-bold">Cobrado</th>
+              <th v-if="esAdmin" class="px-4 py-3 text-left font-bold">Cobrado</th>
               <th class="px-4 py-3 text-left font-bold">Fecha y hora</th>
               <th class="px-4 py-3 text-left font-bold">Acciones</th>
             </tr>
@@ -189,12 +191,12 @@
                 <div>{{ reserva.origen }}</div>
                 <div class="text-teal-600">→ {{ reserva.destino }}</div>
               </td>
-              <td class="px-4 py-3 font-bold text-slate-900">${{ (reserva.precio != null ? reserva.precio : 0).toLocaleString('es-CL') }}</td>
-              <td class="px-4 py-3 text-slate-600">{{ reserva.iva_incluido !== false ? 'Sí' : 'No' }}</td>
+              <td v-if="esAdmin" class="px-4 py-3 font-bold text-slate-900">${{ (reserva.precio != null ? reserva.precio : 0).toLocaleString('es-CL') }}</td>
+              <td v-if="esAdmin" class="px-4 py-3 text-slate-600">{{ reserva.iva_incluido !== false ? 'Sí' : 'No' }}</td>
               <td class="px-4 py-3">
                 <span class="px-2 py-1 text-xs font-bold rounded-full" :class="getEstadoClass(reserva.estado)">{{ getEstadoText(reserva.estado) }}</span>
               </td>
-              <td class="px-4 py-3">
+              <td v-if="esAdmin" class="px-4 py-3">
                 <span v-if="reserva.estado !== 'completado'" class="text-slate-400">—</span>
                 <span v-else-if="reserva.cobrado !== false" class="text-emerald-600 font-medium">Sí</span>
                 <span v-else class="text-amber-600 font-medium">Por cobrar</span>
@@ -202,7 +204,7 @@
               <td class="px-4 py-3 text-slate-600">{{ formatDate(reserva.fecha) }} {{ reserva.hora || '' }}</td>
               <td class="px-4 py-3 flex flex-wrap gap-2">
                 <button v-if="reserva.estado !== 'completado' && !estadoEsCancelado(reserva.estado)" @click="marcarCompletado(reserva)" class="text-teal-600 hover:text-teal-700 font-bold text-xs">Completado</button>
-                <button v-if="reserva.estado === 'completado' && reserva.cobrado === false" @click="marcarCobrado(reserva)" class="text-emerald-600 hover:underline font-bold text-xs">Marcar cobrado</button>
+                <button v-if="esAdmin && reserva.estado === 'completado' && reserva.cobrado === false" @click="marcarCobrado(reserva)" class="text-emerald-600 hover:underline font-bold text-xs">Marcar cobrado</button>
                 <button v-if="!estadoEsCancelado(reserva.estado)" @click="cancelarReserva(reserva)" class="text-amber-600 hover:underline font-bold text-xs">Cancelar</button>
                 <button @click="viewReserva(reserva)" class="text-slate-600 hover:underline font-bold text-xs">Ver</button>
               </td>
@@ -223,6 +225,7 @@ import { apiUrl } from '../../config/api.js'
 const WHATSAPP_NUMERO = '56979796841'
 const UN_MES_MS = 30 * 24 * 60 * 60 * 1000
 
+const esAdmin = ref(false)
 const reservas = ref([])
 const vehiculos = ref([])
 const searchTerm = ref('')
@@ -284,7 +287,7 @@ function formatPrecio(val) {
 }
 
 function whatsappRecordatorioUrl(f) {
-  const precioStr = f.precio ? `\n• Precio: $${formatPrecio(f.precio)}` : ''
+  const precioStr = esAdmin.value && f.precio ? `\n• Precio: $${formatPrecio(f.precio)}` : ''
   const horaStr = f.hora ? `\n• Hora: ${formatTime(f.hora)}` : ''
   const msg = `Recordatorio FletesPro: Tienes un flete mañana.\n• Cliente: ${f.nombre || '—'}\n• Origen: ${f.origen}\n• Destino: ${f.destino}\n• Carga: ${f.carga || '—'}${horaStr}${precioStr}\n• Teléfono: ${f.telefono}\n• Ayudante: ${f.conAyudante === 'si' ? 'Sí' : 'No'}`
   return `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(msg)}`
@@ -323,11 +326,13 @@ async function guardarFleteAgenda() {
         destino: f.destino,
         carga: f.carga || '',
         ayudante: f.conAyudante === 'si',
-        precio: f.precio,
         fecha: f.fecha,
         hora: f.hora,
-        vehiculoId: f.vehiculoId || null,
-        ivaIncluido: f.ivaIncluido !== false
+        vehiculoId: f.vehiculoId || null
+      }
+      if (esAdmin.value) {
+        payload.precio = f.precio
+        payload.ivaIncluido = f.ivaIncluido !== false
       }
       const res = await fetch(url, {
         method: 'PATCH',
@@ -352,11 +357,13 @@ async function guardarFleteAgenda() {
         destino: f.destino,
         carga: f.carga || '',
         ayudante: f.conAyudante === 'si',
-        precio: f.precio,
         fecha: f.fecha,
         hora: f.hora,
-        vehiculoId: f.vehiculoId || null,
-        ivaIncluido: f.ivaIncluido !== false
+        vehiculoId: f.vehiculoId || null
+      }
+      if (esAdmin.value) {
+        payload.precio = f.precio
+        payload.ivaIncluido = f.ivaIncluido !== false
       }
       console.log('📋 [Reservas] POST URL:', url)
       const res = await fetch(url, {
@@ -419,6 +426,27 @@ const reservasStats = computed(() => {
   const completadas = reservas.value.filter(r => r.estado === 'completado').length
   const ingresos = reservas.value.filter(r => r.estado === 'completado').reduce((sum, r) => sum + parseFloat(r.precio || 0), 0)
   return { total, pendientes, completadas, ingresos }
+})
+
+const eventosCalendario = computed(() => {
+  return reservas.value.map((r) => {
+    const raw = r.fecha ? String(r.fecha) : ''
+    const match = raw.match(/^(\d{4}-\d{2}-\d{2})/)
+    if (!match) return null
+    const hora = formatTime(r.hora)
+    return {
+      id: `${r.source || 'reserva'}-${r.id}`,
+      fecha: match[1],
+      hora: hora === '—' ? '' : hora,
+      titulo: r.usuario_nombre || 'Reserva',
+      origen: r.origen || '',
+      destino: r.destino || '',
+      carga: r.carga || '',
+      precio: r.precio,
+      estado: r.estado || 'pendiente',
+      source: r.source || 'reserva'
+    }
+  }).filter(Boolean)
 })
 
 const filteredReservas = computed(() => {
@@ -511,7 +539,9 @@ function estadoEsCancelado(estado) {
 
 async function marcarCompletado(item) {
   if (!confirm('¿Marcar como realizado/completado?')) return
-  const cobrado = confirm('¿Ya recibiste el pago de este flete?\n\nSí = Cobrado\nNo = Orden de compra / me pagan después')
+  const cobrado = esAdmin.value
+    ? confirm('¿Ya recibiste el pago de este flete?\n\nSí = Cobrado\nNo = Orden de compra / me pagan después')
+    : undefined
   try {
     if (item.source === 'flete') {
       const res = await fetch(apiUrl(`/api/admin/fletes/${item.id}/estado`), {
@@ -613,7 +643,10 @@ function deleteReserva(r) {
 }
 
 onMounted(() => {
-  console.log('📋 [Reservas] onMounted: cargando vehículos y reservas (agenda desde BD)')
+  try {
+    const u = JSON.parse(localStorage.getItem('usuario') || 'null')
+    esAdmin.value = u?.tipo === 'admin'
+  } catch (_) {}
   loadVehiculos()
   loadReservas()
 })

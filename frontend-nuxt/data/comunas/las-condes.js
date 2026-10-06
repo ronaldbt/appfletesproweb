@@ -1,100 +1,130 @@
 /**
  * Contenido único para /fletes-las-condes
- * Página diferenciada: diseño propio, todas las keywords del CSV integradas de forma natural.
  */
 export default {
   meta: {
     title: 'Fletes Las Condes | Fletes y mudanzas | Precios y cotización | FletesPro',
-    description: 'Fletes en Las Condes y mudanzas en la comuna. Fletes baratos y económicos, camioneta y furgón. Rutas a Santiago centro, La Florida, Chicureo. Cotiza por WhatsApp o calculadora. Presupuesto gratis.',
-    keywords: 'fletes las condes, flete camioneta las condes, fletes baratos en las condes, fletes economicos las condes, fletes santiago las condes, cuanto me sale un flete de algarrobo a las condes, cuanto sale un flete desde maitencillo a las condes, flete chicureo las condes, flete economico las condes, flete furgon en las condes, flete las condes a san ramon, flete las condes a santiago centro, flete las condes pequeño, fletes baratos en las condes-la serena-santiago, fletes baratos las condes, fletes baratos las condes celular, fletes desde las condes a la florida, fletes economicos en las condes, fletes economicos las condes chile, fletes en comuna de las condes, fletes inmediatos en las condes, fletes sodimac av las condes, fletes traslado las condes, fletes y mudanzas en las condes, fletes y mudanzas en las condes valores, fletes y mudanzas las condes, mini fletes las condes, valor fletes a las condes'
+    description: 'Fletes en Las Condes desde $28.000. Mini fletes, camioneta y furgón. Retiros en Sodimac, Easy y Parque Arauco. Cotiza online o por WhatsApp; presupuesto gratis.',
+    keywords: 'fletes Las Condes, mini fletes Las Condes, flete pequeño Las Condes, flete camioneta Las Condes, fletes Sodimac Las Condes, fletes Parque Arauco, fletes baratos Las Condes, flete Las Condes a Santiago'
   },
   hero: {
     tagline: 'Comuna de Las Condes',
     title: 'Fletes en Las Condes',
-    intro: '¿Buscas fletes en Las Condes? Ofrecemos fletes y mudanzas en la comuna con precios claros desde $27.000. Flete camioneta Las Condes, flete furgón en Las Condes y mini fletes Las Condes para que elijas el vehículo según tu carga. Fletes baratos en Las Condes y fletes económicos Las Condes con cotización al instante. Realizamos flete Las Condes a Santiago centro, fletes desde Las Condes a La Florida, flete Chicureo Las Condes y retiros o entregas en sector Sodimac Av. Las Condes. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.'
+    intro: 'Fletes en Las Condes desde $28.000. Cotiza con la calculadora o por WhatsApp. Presupuesto gratis.',
+    introBelowCalc: '¿Necesitas un flete en Las Condes? En FletesPro llevamos desde un solo mueble hasta una carga completa, con el vehículo justo para lo que muevas: camioneta para muebles y electrodomésticos, furgón cerrado para cargas grandes y mini fletes cuando son pocos bultos. La tarifa parte en $28.000 (incluye hasta 2 m³), con chofer y carga y descarga incluidas. Hacemos retiros y entregas en tiendas del sector —Sodimac, Easy y Parque Arauco— y rutas hacia Santiago Centro, Providencia, La Florida o a la costa. Calcula el precio al instante con la calculadora o escríbenos por WhatsApp; el presupuesto es gratis.'
   },
-  // Sección: Precios y valores (H2)
   precios: {
-    h2: 'Precios y valores de fletes en Las Condes',
-    intro: 'El valor de un flete a Las Condes depende del volumen y la ruta. Ofrecemos fletes baratos en Las Condes y fletes económicos en Las Condes para particulares y empresas en Chile.',
-    p1: 'Nuestros fletes baratos Las Condes tienen tarifa base desde $27.000 (incluye hasta 2 m³). Para conocer el valor fletes a Las Condes exacto, usa la calculadora de esta página o escríbenos por WhatsApp; también puedes cotizar por celular y te respondemos al instante. Los fletes económicos Las Condes Chile incluyen carga y descarga en domicilio.',
-    h3Valores: 'Fletes y mudanzas en Las Condes: valores transparentes',
-    p2: 'Si buscas fletes y mudanzas en Las Condes valores, aquí los tienes: mismo precio base que en toda la RM, sin sorpresas. Fletes y mudanzas Las Condes con presupuesto gratis.'
+    h2: 'Precios de fletes en Las Condes 2026',
+    intro: 'Estos son valores referenciales para fletes en Las Condes. El precio final depende del volumen (m³), la distancia y si contratas ayudantes extra.',
+    p1: 'Usa la calculadora de esta página para un precio aproximado al instante. Rutas a la costa o a regiones: escríbenos por WhatsApp.',
+    h3Valores: '¿Qué incluye el precio?',
+    p2: 'La tarifa base incluye chofer y carga y descarga. Cada ayudante adicional vale $15.000. Sin sorpresas: mismo criterio de precio en toda la RM.',
+    tablaNota: 'Valores referenciales. El valor exacto depende de m³, distancia y ayudantes. Usa la calculadora para cotizar tu ruta.',
+    tabla: [
+      { servicio: 'Mini flete / flete pequeño (pocos bultos)', vehiculo: 'Camioneta', precio: 'desde $28.000 (hasta 2 m³)' },
+      { servicio: 'Flete mediano (muebles, electrodomésticos)', vehiculo: 'Camioneta / pickup', precio: '$28.000 + $2.000/km' },
+      { servicio: 'Flete grande / minimudanza', vehiculo: 'Furgón o camión 3/4', precio: 'según volumen (+$20.000 por m³ extra)' },
+      { servicio: 'Flete a regiones / costa', vehiculo: 'Camión', precio: 'distancia × $1.500/km' },
+      { servicio: 'Ayudante adicional', vehiculo: '—', precio: '+$15.000 c/u' }
+    ]
   },
-  // Sección: Rutas (H2)
+  miniFletes: {
+    h2: 'Mini fletes y flete pequeño en Las Condes',
+    p1: '¿Solo necesitas mover un mueble, un electrodoméstico o unas cajas? No hace falta un furgón completo. Nuestros mini fletes (o flete chico) están pensados para envíos pequeños dentro de Las Condes y comunas vecinas: una cama, un sofá, un refrigerador o la compra que no cabe en tu auto. Es la opción más económica, con salida rápida y precio desde $28.000. Ideal para retiros en Sodimac, Easy o Parque Arauco.'
+  },
+  urgentes: {
+    h3: 'Fletes urgentes y express el mismo día',
+    p1: '¿Lo necesitas hoy? Coordinamos fletes express en Las Condes con salida el mismo día cuando la agenda lo permite. Escríbenos por WhatsApp con origen, destino y qué mueves, y te confirmamos disponibilidad y precio al instante.'
+  },
   rutas: {
     h2: 'Rutas desde y hacia Las Condes',
-    intro: 'Realizamos flete Las Condes a Santiago centro, fletes Santiago Las Condes en ambas direcciones, fletes desde Las Condes a La Florida, flete Chicureo Las Condes y muchas otras rutas dentro de la RM y hacia la costa.',
+    intro: 'Hacemos fletes dentro de Las Condes y hacia el resto de la RM y la costa, en ambas direcciones.',
     items: [
-      'Flete Las Condes a Santiago centro',
-      'Fletes desde Las Condes a La Florida',
-      'Flete Las Condes a San Ramón',
-      'Flete Chicureo Las Condes'
+      { label: 'Flete Las Condes a Santiago centro', to: '/fletes-santiago' },
+      { label: 'Fletes desde Las Condes a La Florida', to: '/fletes-la-florida' },
+      { label: 'Flete Las Condes–Providencia', to: '/fletes-providencia' },
+      { label: 'Flete Las Condes–Vitacura', to: '/fletes-vitacura' },
+      { label: 'Flete Chicureo–Las Condes', to: '/fletes-en-chicureo' },
+      { label: 'Flete Lo Barnechea–Las Condes', to: '/fletes-lo-barnechea' }
     ],
-    pCostas: '¿Cuánto me sale un flete de Algarrobo a Las Condes o cuánto sale un flete desde Maitencillo a Las Condes? Depende del volumen; cotiza con la calculadora o por WhatsApp y te damos el valor al instante. También hacemos fletes baratos en las condes–La Serena–Santiago para mudanzas largas. Fletes traslado Las Condes y valor fletes a Las Condes transparentes para todas las rutas.'
+    pCostas: '¿Cuánto sale un flete desde Maitencillo o Algarrobo a Las Condes? Depende del volumen y la distancia; cotiza con la calculadora o por WhatsApp y te damos el valor al instante. También hacemos rutas largas (por ejemplo hacia La Serena) cuando lo necesitas.'
   },
-  // Sección: Servicios camioneta, furgón, mini (H2)
   servicios: {
     h2: 'Servicios: camioneta, furgón y mini fletes en Las Condes',
-    intro: 'En la comuna de Las Condes ofrecemos flete camioneta Las Condes para cargas medianas, flete furgón en Las Condes para mudanzas y flete Las Condes pequeño para pocos bultos.',
+    intro: 'Eliges el vehículo según tu carga: camioneta para muebles y electrodomésticos, furgón para cargas grandes y mini flete para pocos bultos.',
     items: [
       {
         h3: 'Flete camioneta Las Condes',
-        text: 'Flete en camioneta por Las Condes y toda la RM. Ideal para muebles, electrodomésticos o cajas. Incluye chofer y carga/descarga.'
+        text: 'Ideal para muebles, electrodomésticos o cajas. Incluye chofer y carga/descarga en Las Condes y toda la RM.'
       },
       {
         h3: 'Flete furgón en Las Condes',
-        text: 'Furgón para mudanzas completas o cargas grandes. Fletes traslado Las Condes con cuidado y puntualidad.'
+        text: 'Furgón cerrado para mudanzas o cargas grandes, con cuidado y puntualidad.'
       },
       {
-        h3: 'Mini fletes y flete pequeño Las Condes',
-        text: 'Mini fletes Las Condes para envíos pequeños: un mueble, unas cajas o un electrodoméstico. Flete Las Condes pequeño desde $27.000.'
+        h3: 'Mini fletes y flete pequeño',
+        text: 'Para un mueble, unas cajas o un electrodoméstico. Desde $28.000. Ver detalle en la sección de mini fletes.'
       }
-    ],
-    pInmediatos: '¿Necesitas fletes inmediatos en Las Condes? Contáctanos por WhatsApp; coordinamos salida el mismo día cuando la agenda lo permita.'
+    ]
   },
-  // Sección: Fletes y mudanzas en la comuna (H2)
   mudanzas: {
     h2: 'Fletes y mudanzas en la comuna de Las Condes',
-    intro: 'Fletes en comuna de Las Condes para particulares y empresas. Incluimos retiros y entregas en sector Sodimac Av. Las Condes y todo el barrio.',
-    p: 'Realizamos fletes y mudanzas en Las Condes con valores claros y servicio puerta a puerta. Si buscas fletes y mudanzas en Las Condes o fletes y mudanzas Las Condes para tu casa u oficina, cotiza con la calculadora o por celular; presupuesto gratis. Fletes y mudanzas en Las Condes valores los puedes ver con la calculadora de esta página; también atendemos fletes Sodimac Av Las Condes y fletes en comuna de Las Condes en general.'
+    intro: 'Atendemos particulares y empresas en toda la comuna, con retiros y entregas en tiendas del sector (Sodimac, Easy, Parque Arauco) y servicio puerta a puerta.',
+    p: 'Si buscas flete o una minimudanza en Las Condes para tu casa u oficina, cotiza con la calculadora o por WhatsApp; el presupuesto es gratis.'
   },
-  // Ventajas (H2)
+  enlaces: {
+    h2: 'También te puede interesar',
+    items: [
+      { to: '/mudanzas-las-condes', label: 'Mudanzas en Las Condes', text: 'Residenciales, oficinas y premium' },
+      { to: '/fletes-santiago', label: 'Fletes Santiago', text: 'Hub de precios y cobertura RM' },
+      { to: '/bodegaje/las-condes', label: 'Bodegaje Las Condes', text: 'Guardamuebles mientras te mudas' },
+      { to: '/embalajes', label: 'Embalajes', text: 'Cajas, burbuja y protección' },
+      { to: '/fletes-para-oficinas', label: 'Fletes para oficinas', text: 'Traslados corporativos El Golf' },
+      { to: '/mudanzas/urgentes', label: 'Mudanzas urgentes', text: 'Cuando lo necesitas hoy' }
+    ]
+  },
   h2Ventajas: '¿Por qué elegir FletesPro para fletes en Las Condes?',
   ventajas: [
     'Cobertura en Las Condes y toda la Región Metropolitana.',
-    'Precios competitivos: fletes económicos Las Condes con tarifas transparentes.',
-    'Flota adecuada: camioneta, furgón y mini fletes para cada necesidad.',
-    'Servicio personalizado y respuesta rápida por WhatsApp o celular.',
-    'Años de experiencia en fletes y mudanzas en Las Condes.',
-    'Cotiza con la calculadora de esta página o por WhatsApp; presupuesto gratis.'
+    'Precios claros desde $28.000, con calculadora online.',
+    'Camioneta, furgón y mini fletes según tu carga.',
+    'Retiros en Sodimac, Easy y Parque Arauco.',
+    'Fletes express el mismo día cuando hay agenda.',
+    'Ayudante adicional desde $15.000; presupuesto gratis.'
   ],
-  cierre: 'Contáctanos para fletes y mudanzas en Las Condes. Valor fletes a Las Condes desde $27.000. Presupuesto gratis. WhatsApp +56 9 7979 6841.',
-  // FAQs para schema FAQPage
+  cierre: 'Contáctanos para fletes en Las Condes. Desde $28.000. Presupuesto gratis. WhatsApp +56 9 7979 6841.',
   faqs: [
     {
       question: '¿Cuánto cuesta un flete en Las Condes?',
-      answer: 'El valor fletes a Las Condes parte desde $27.000 (hasta 2 m³). Para un valor exacto según tu ruta y carga, usa la calculadora de esta página o escribe por WhatsApp al +56 9 7979 6841; el presupuesto es gratis.'
+      answer: 'La tarifa base parte desde $28.000 e incluye hasta 2 m³, chofer y carga y descarga. Sobre 50 km se suma valor por kilómetro. Usa la calculadora de la página para el valor exacto según tu ruta y volumen.'
+    },
+    {
+      question: '¿Cuánto cuesta un mini flete o flete pequeño en Las Condes?',
+      answer: 'Un mini flete parte desde $28.000 e incluye hasta 2 m³. Es la opción más económica para mover un mueble, un electrodoméstico o pocos bultos, sin necesidad de un furgón completo.'
+    },
+    {
+      question: '¿Qué vehículos tienen para fletes en Las Condes?',
+      answer: 'Camioneta para muebles y electrodomésticos, furgón cerrado para cargas grandes o minimudanzas, y mini fletes para pocos bultos. Elegimos el vehículo según el volumen de tu carga.'
+    },
+    {
+      question: '¿Hacen retiros en Sodimac, Easy o Parque Arauco?',
+      answer: 'Sí. Retiramos tus compras en tiendas del sector de Las Condes y las llevamos a tu domicilio el mismo día cuando hay agenda. Indícanos la tienda y la dirección de entrega para cotizar.'
+    },
+    {
+      question: '¿Ofrecen fletes urgentes o express el mismo día en Las Condes?',
+      answer: 'Sí. Coordinamos fletes express con salida el mismo día cuando la agenda lo permite. Escríbenos por WhatsApp con origen, destino y qué mueves y te confirmamos disponibilidad y precio.'
     },
     {
       question: '¿Hacen flete Las Condes a Santiago centro?',
-      answer: 'Sí. Realizamos flete Las Condes a Santiago centro y también fletes desde Las Condes a La Florida, Chicureo, San Ramón y otras comunas. Cotiza con la calculadora o por WhatsApp.'
-    },
-    {
-      question: '¿Ofrecen fletes baratos en Las Condes?',
-      answer: 'Sí. Ofrecemos fletes baratos en Las Condes y fletes económicos en Las Condes con tarifa base desde $27.000. Puedes cotizar por celular o con la calculadora; presupuesto sin compromiso.'
-    },
-    {
-      question: '¿Hacen mini fletes y flete pequeño en Las Condes?',
-      answer: 'Sí. Tenemos mini fletes Las Condes y flete Las Condes pequeño para pocos bultos, muebles sueltos o electrodomésticos. Ideal si no necesitas un furgón completo.'
+      answer: 'Sí. Realizamos fletes a Santiago Centro y también hacia La Florida, Providencia, Vitacura, Chicureo y otras comunas. Cotiza con la calculadora o por WhatsApp.'
     },
     {
       question: '¿Cuánto sale un flete desde Maitencillo o Algarrobo a Las Condes?',
-      answer: 'El precio depende del volumen y la distancia. Para saber cuánto sale un flete desde Maitencillo a Las Condes o cuánto me sale un flete de Algarrobo a Las Condes, cotiza con la calculadora indicando origen, destino y m³, o escríbenos por WhatsApp.'
+      answer: 'El precio depende del volumen y la distancia. Cotiza con la calculadora indicando origen, destino y m³, o escríbenos por WhatsApp.'
     },
     {
-      question: '¿Hacen fletes Sodimac Av. Las Condes?',
-      answer: 'Sí. Realizamos retiros y entregas en sector Sodimac Av. Las Condes y en toda la comuna. Fletes en comuna de Las Condes con el mismo estándar de servicio. Cotiza indicando la dirección exacta para el valor fletes a Las Condes.'
+      question: '¿Cuánto cuesta un ayudante adicional?',
+      answer: 'Cada ayudante adicional tiene un costo de $15.000. La tarifa base ya incluye chofer y carga y descarga; el ayudante extra es opcional según tu carga.'
     }
   ]
 }

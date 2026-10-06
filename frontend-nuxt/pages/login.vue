@@ -78,8 +78,10 @@ async function iniciarSesion() {
     if (redirect && typeof redirect === 'string') {
       const path = redirect.startsWith('/') ? redirect : `/${redirect}`
       const allowed = (path.startsWith('/dashboard-admin') && data.usuario.tipo === 'admin') ||
+        (path.startsWith('/dashboard-admin/reservas') && data.usuario.tipo === 'agenda') ||
         ((path.startsWith('/dashboard-conductor') || path.startsWith('/conductor/')) && data.usuario.tipo === 'conductor') ||
-        ((path.startsWith('/dashboard-cliente') || path.startsWith('/cliente/')) && data.usuario.tipo === 'cliente')
+        ((path.startsWith('/dashboard-cliente') || path.startsWith('/cliente/')) && data.usuario.tipo === 'cliente') ||
+        (path.startsWith('/dashboard-bodega') && data.usuario.tipo === 'cliente_bodega')
       if (allowed) {
         router.push(path)
         return
@@ -88,8 +90,12 @@ async function iniciarSesion() {
 
     if (data.usuario.tipo === 'admin') {
       router.push('/dashboard-admin')
+    } else if (data.usuario.tipo === 'agenda') {
+      router.push('/dashboard-admin/reservas')
     } else if (data.usuario.tipo === 'conductor') {
       router.push('/dashboard-conductor')
+    } else if (data.usuario.tipo === 'cliente_bodega') {
+      router.push('/dashboard-bodega')
     } else {
       router.push('/dashboard-cliente')
     }

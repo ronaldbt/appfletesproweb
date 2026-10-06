@@ -1,6 +1,9 @@
 /** Entidad de marca FletesPro (CL) ↔ PortesPro (ES) para schema.org sameAs y E-E-A-T. */
 export const FLETESPRO_CL_URL = 'https://fletespro.cl'
 export const PORTESPRO_ES_URL = 'https://portespro.es'
+/** Correo público NAP Chile (nunca portespro.es en fletespro.cl). */
+export const FLETESPRO_CL_EMAIL = 'contacto@fletespro.cl'
+export const FLETESPRO_CL_PHONE = '+56979796841'
 
 export const FOUNDER_NAME = 'Ronald Bravo'
 export const FOUNDER_JOB_TITLE = 'Fundador y coordinador de operaciones'
@@ -39,7 +42,7 @@ export function fletesProFounderSchema (siteUrl = FLETESPRO_CL_URL) {
     image: founderPhotoUrl(base),
     worksFor: {
       '@type': 'Organization',
-      '@id': `${base}/#fletespro`,
+      '@id': `${base}/#organization`,
       name: 'FletesPro',
       url: base
     },

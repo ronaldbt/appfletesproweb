@@ -160,13 +160,15 @@ export default defineNuxtConfig({
       // Critical CSS inline: LCP hero sin esperar entry.css
       style: [
         {
-          textContent: '#hero-calculator h1{font-size:clamp(2.5rem,8vw,6rem);font-weight:900;color:#020617;line-height:.9;letter-spacing:-.05em;margin-bottom:2rem}#hero-calculator .container{width:100%;margin-left:auto;margin-right:auto;padding-left:1rem;padding-right:1rem}.text-5xl{font-size:3rem}.md\\:text-8xl{font-size:6rem}@media(min-width:768px){#hero-calculator .container{max-width:72rem;padding-left:1.5rem;padding-right:1.5rem}}'
+          textContent: '#hero-calculator:not(.hero-calculator--compact) h1{font-size:clamp(1.35rem,3vw,1.75rem)!important;font-weight:900;color:#020617;line-height:1.25;letter-spacing:-.02em;margin-bottom:1rem;max-width:64rem;margin-left:auto;margin-right:auto;width:100%}#hero-calculator.hero-calculator--compact h1{font-size:clamp(1.6rem,3.5vw,2.35rem)!important;font-weight:800;color:#020617;line-height:1.25;letter-spacing:-.02em;margin-bottom:1rem;max-width:56rem;margin-left:auto;margin-right:auto}#hero-calculator .container{width:100%;margin-left:auto;margin-right:auto;padding-left:1rem;padding-right:1rem}@media(min-width:768px){#hero-calculator .container{max-width:72rem;padding-left:1.5rem;padding-right:1.5rem}}'
         }
       ],
       link: [
-        { rel: 'icon', type: 'image/png', href: '/logo-portespro.png' },
-        { rel: 'shortcut icon', type: 'image/png', href: '/logo-portespro.png' },
-        { rel: 'apple-touch-icon', href: '/logo-portespro.png' }
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32.png?v=2' },
+        { rel: 'icon', type: 'image/png', sizes: '48x48', href: '/favicon-48.png?v=2' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico?v=2' },
+        { rel: 'shortcut icon', href: '/favicon.ico?v=2' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon-180.png?v=2' }
         // Preconnects removidos (maps deferred, fonts no usados) - Lighthouse: máx 4, solo orígenes críticos
       ],
       meta: [

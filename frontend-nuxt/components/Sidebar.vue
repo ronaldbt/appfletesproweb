@@ -24,20 +24,56 @@
     </div>
 
     <!-- Navegación -->
-    <nav class="p-4 space-y-1">
-      <NuxtLink
-        v-for="item in menuItems"
-        :key="item.path"
-        :to="item.path"
-        class="flex items-center space-x-3 px-3 py-2.5 rounded-xl text-slate-700 hover:bg-teal-50 hover:text-teal-700 transition-colors duration-200 font-medium"
-        :class="{ 'bg-teal-50 text-teal-800 border border-teal-200': $route.path === item.path }"
-      >
-        <span v-html="item.icon" class="w-5 h-5 text-teal-600"></span>
-        <span class="text-sm">{{ item.name }}</span>
-        <span v-if="item.badge" class="ml-auto bg-teal-600 text-white text-xs px-2 py-0.5 rounded-full font-bold">
-          {{ item.badge }}
-        </span>
-      </NuxtLink>
+    <nav class="p-4 space-y-1 overflow-y-auto max-h-[calc(100vh-8.5rem)]">
+      <template v-for="item in menuItems" :key="item.path">
+        <!-- Ítem con submenú -->
+        <div v-if="item.children?.length" class="space-y-0.5">
+          <button
+            type="button"
+            class="w-full flex items-center space-x-3 px-3 py-2.5 rounded-xl text-slate-700 hover:bg-teal-50 hover:text-teal-700 transition-colors duration-200 font-medium"
+            :class="{ 'bg-teal-50 text-teal-800 border border-teal-200': isGroupActive(item) }"
+            @click="toggleGroup(item.path)"
+          >
+            <span v-html="item.icon" class="w-5 h-5 text-teal-600 shrink-0"></span>
+            <span class="text-sm flex-1 text-left">{{ item.name }}</span>
+            <svg
+              class="w-4 h-4 text-slate-400 transition-transform duration-200 shrink-0"
+              :class="{ 'rotate-180': isGroupOpen(item.path) }"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div v-show="isGroupOpen(item.path)" class="ml-3 pl-3 border-l border-slate-200 space-y-0.5">
+            <NuxtLink
+              v-for="child in item.children"
+              :key="child.path"
+              :to="child.path"
+              class="flex items-center space-x-2.5 px-3 py-2 rounded-lg text-slate-600 hover:bg-teal-50 hover:text-teal-700 transition-colors text-sm"
+              :class="{ 'bg-teal-50 text-teal-800 font-semibold': isExactActive(child.path) }"
+            >
+              <span v-if="child.icon" v-html="child.icon" class="w-4 h-4 text-teal-600 shrink-0"></span>
+              <span>{{ child.name }}</span>
+            </NuxtLink>
+          </div>
+        </div>
+
+        <!-- Ítem simple -->
+        <NuxtLink
+          v-else
+          :to="item.path"
+          class="flex items-center space-x-3 px-3 py-2.5 rounded-xl text-slate-700 hover:bg-teal-50 hover:text-teal-700 transition-colors duration-200 font-medium"
+          :class="{ 'bg-teal-50 text-teal-800 border border-teal-200': isExactActive(item.path) }"
+        >
+          <span v-html="item.icon" class="w-5 h-5 text-teal-600"></span>
+          <span class="text-sm">{{ item.name }}</span>
+          <span v-if="item.badge" class="ml-auto bg-teal-600 text-white text-xs px-2 py-0.5 rounded-full font-bold">
+            {{ item.badge }}
+          </span>
+        </NuxtLink>
+      </template>
     </nav>
 
     <!-- Footer del Sidebar -->
@@ -63,11 +99,11 @@
   <!-- Barra inferior móvil -->
   <nav class="fixed bottom-0 left-0 right-0 z-50 flex lg:hidden items-stretch overflow-x-auto bg-white border-t border-slate-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] safe-area-pb scrollbar-hide">
     <NuxtLink
-      v-for="item in menuItems"
+      v-for="item in mobileMenuItems"
       :key="item.path"
       :to="item.path"
       class="relative flex flex-col items-center justify-center flex-shrink-0 min-w-[56px] max-w-[72px] py-2 px-1 text-slate-600 hover:text-teal-600 hover:bg-teal-50/50 transition-colors"
-      :class="{ 'text-teal-700 bg-teal-50 border-t-2 border-teal-500': $route.path === item.path }"
+      :class="{ 'text-teal-700 bg-teal-50 border-t-2 border-teal-500': isMobileActive(item) }"
     >
       <span v-html="item.icon" class="w-6 h-6 text-current flex-shrink-0 mb-0.5 [&>svg]:w-6 [&>svg]:h-6"></span>
       <span class="text-[10px] font-semibold truncate w-full text-center">{{ item.name }}</span>
@@ -87,24 +123,24 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
-import { useRouter } from '#app'
+import { ref, computed, onMounted, watch } from 'vue'
+import { useRouter, useRoute } from '#app'
 import { getMenuItems, updateMenuBadges } from '../config/sidebarConfig.js'
 import { useSidebar } from '../composables/useSidebar.js'
 
-const { sidebarRef, reservasCount: globalReservasCount } = useSidebar()
+const { reservasCount: globalReservasCount } = useSidebar()
 
 const router = useRouter()
+const route = useRoute()
 const isOpen = ref(false)
+const openGroups = ref({})
 
-// Detectar si es desktop y abrir sidebar por defecto
 onMounted(() => {
-  if (window.innerWidth >= 1024) { // lg breakpoint
+  if (window.innerWidth >= 1024) {
     isOpen.value = true
   }
 })
 
-// Props
 const props = defineProps({
   userRole: {
     type: String,
@@ -112,10 +148,8 @@ const props = defineProps({
   }
 })
 
-// Datos del usuario
 const userData = ref(null)
 
-// Computed
 const userName = computed(() => {
   return userData.value?.nombre || 'Usuario'
 })
@@ -127,19 +161,57 @@ const userInitials = computed(() => {
 
 const menuItems = computed(() => {
   const baseMenu = getMenuItems(props.userRole)
-  
-  // Si es conductor, actualizar el badge de reservas
+
   if (props.userRole === 'conductor') {
     const badges = {
       '/conductor/reservas': globalReservasCount.value > 0 ? globalReservasCount.value.toString() : null
     }
     return updateMenuBadges(props.userRole, badges)
   }
-  
+
   return baseMenu
 })
 
-// Métodos
+/** En móvil solo ítems de primer nivel (los submenús se navegan desde el hub). */
+const mobileMenuItems = computed(() => menuItems.value)
+
+function isExactActive (path) {
+  return route.path === path
+}
+
+function isGroupActive (item) {
+  if (route.path === item.path) return true
+  return (item.children || []).some(child => route.path === child.path || route.path.startsWith(child.path + '/'))
+}
+
+function isMobileActive (item) {
+  if (item.children?.length) {
+    return isGroupActive(item)
+  }
+  return isExactActive(item.path)
+}
+
+function isGroupOpen (path) {
+  return !!openGroups.value[path]
+}
+
+function toggleGroup (path) {
+  openGroups.value = {
+    ...openGroups.value,
+    [path]: !openGroups.value[path]
+  }
+}
+
+function syncOpenGroupsFromRoute () {
+  for (const item of menuItems.value) {
+    if (item.children?.length && isGroupActive(item)) {
+      openGroups.value = { ...openGroups.value, [item.path]: true }
+    }
+  }
+}
+
+watch(() => route.path, syncOpenGroupsFromRoute, { immediate: true })
+
 const toggleSidebar = () => {
   isOpen.value = !isOpen.value
 }
@@ -153,18 +225,15 @@ const logout = () => {
   router.push('/login')
 }
 
-// Función para cargar el número de reservas del conductor
 const loadReservasCount = async () => {
   if (props.userRole !== 'conductor' || !userData.value) return
-  
+
   try {
-    console.log('🔢 [Sidebar] Cargando número de reservas para conductor...')
     const response = await fetch(`https://api.fletespro.cl/api/conductor/reservas/${userData.value.id}`)
     const data = await response.json()
-    
+
     if (Array.isArray(data)) {
       globalReservasCount.value = data.length
-      console.log(`🔢 [Sidebar] Reservas encontradas: ${globalReservasCount.value}`)
     }
   } catch (error) {
     console.error('❌ [Sidebar] Error al cargar número de reservas:', error)
@@ -172,20 +241,17 @@ const loadReservasCount = async () => {
   }
 }
 
-// Cargar datos del usuario al montar
 onMounted(async () => {
   const storedUser = localStorage.getItem('usuario')
   if (storedUser) {
     userData.value = JSON.parse(storedUser)
-    
-    // Si es conductor, cargar el número de reservas
+
     if (props.userRole === 'conductor') {
       await loadReservasCount()
     }
   }
 })
 
-// Exponer métodos para el componente padre
 defineExpose({
   toggleSidebar,
   closeSidebar,

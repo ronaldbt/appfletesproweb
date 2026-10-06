@@ -221,7 +221,7 @@
               </svg>
               <div>
                 <p class="font-bold text-white text-sm">{{ $t('common.email') }}</p>
-                <a href="mailto:hola@portespro.es" class="hover:text-teal-400 transition-colors">hola@portespro.es</a>
+                <a href="mailto:contacto@fletespro.cl" class="hover:text-teal-400 transition-colors">contacto@fletespro.cl</a>
               </div>
             </li>
             <li class="flex items-start gap-3">

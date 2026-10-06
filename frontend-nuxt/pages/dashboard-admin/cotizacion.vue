@@ -2,24 +2,69 @@
   <div id="cotizacion-container" class="cotizacion-wrapper">
     <!-- Barra de acciones (solo visible en pantalla) -->
     <div class="action-bar print:hidden">
-      <button
-        type="button"
-        @click="resetFormulario"
-        class="btn-secondary"
-      >
+      <button type="button" class="btn-secondary" @click="resetFormulario">
         Limpiar cotización
       </button>
       <button
         type="button"
-        @click="imprimirPDF"
-        class="btn-primary"
+        class="btn-preview"
+        :class="{ 'btn-preview--active': showPreview }"
+        @click="toggleVistaPrevia"
       >
+        {{ showPreview ? 'Cerrar vista previa' : 'Vista previa' }}
+      </button>
+      <button type="button" class="btn-primary" @click="imprimirPDF">
         Exportar a PDF / Imprimir
       </button>
     </div>
 
+    <p class="preview-hint print:hidden">
+      Usa <strong>Vista previa</strong> para ver el documento como quedará al imprimir. Luego exporta con el otro botón.
+    </p>
+
+    <Teleport to="body">
+      <div
+        v-if="showPreview"
+        class="preview-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Vista previa de cotización"
+      >
+        <div class="preview-modal__backdrop" @click="cerrarVistaPrevia" />
+        <div class="preview-modal__panel">
+          <div class="preview-modal__toolbar">
+            <p class="preview-modal__title">Vista previa — documento listo para imprimir</p>
+            <button type="button" class="preview-modal__close" @click="cerrarVistaPrevia">
+              Cerrar ×
+            </button>
+          </div>
+          <div class="preview-modal__scroll">
+            <div id="cotizacion-preview-print" class="preview-modal__paper">
+              <AdminCotizacionPrintSheet
+                :form="form"
+                :items="items"
+                :numero-cotizacion="numeroCotizacion"
+                :subtotal="subtotal"
+                :iva="iva"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </Teleport>
+
+    <div id="cotizacion-print-fallback" class="cotizacion-print-fallback" aria-hidden="true">
+      <AdminCotizacionPrintSheet
+        :form="form"
+        :items="items"
+        :numero-cotizacion="numeroCotizacion"
+        :subtotal="subtotal"
+        :iva="iva"
+      />
+    </div>
+
     <!-- Contenedor principal de la cotización -->
-    <div class="cotizacion-content">
+    <div class="cotizacion-content cotizacion-content--edit">
       <!-- Encabezado -->
       <header class="cotizacion-header">
         <div class="header-left">
@@ -194,33 +239,11 @@
             <div class="totals-box">
               <div class="total-row">
                 <span>Subtotal</span>
-                <span class="total-value">
-                  {{ subtotal.toLocaleString('es-CL', { style: 'currency', currency: 'CLP', maximumFractionDigits: 0 }) }}
-                </span>
+                <span class="total-value">{{ formatCLP(subtotal) }}</span>
               </div>
-              <div class="total-row">
-                <span>Descuento</span>
-                <input
-                  v-model.number="descuento"
-                  type="number"
-                  min="0"
-                  class="total-input"
-                  placeholder="$0"
-                />
-              </div>
-              <div class="total-row">
-                <span>Impuestos</span>
-                <span class="total-value">$0</span>
-              </div>
-              <div class="total-row">
-                <span>Envío</span>
-                <span class="total-value">$0</span>
-              </div>
-              <div class="total-row total-final">
-                <span>Total</span>
-                <span class="total-final-value">
-                  {{ total.toLocaleString('es-CL', { style: 'currency', currency: 'CLP', maximumFractionDigits: 0 }) }}
-                </span>
+              <div class="total-row total-row-iva">
+                <span>+ 19% IVA</span>
+                <span class="total-value">{{ formatCLP(iva) }}</span>
               </div>
             </div>
           </div>
@@ -251,26 +274,44 @@ const items = ref([
   { id: 1, descripcion: 'Servicio de transporte', cantidad: 1, precio: 0 }
 ])
 
-const descuento = ref(0)
+const showPreview = ref(false)
 
-const numeroCotizacion = computed(() => {
+const numeroCotizacion = ref('')
+
+function generarNumeroCotizacion () {
   const d = new Date()
   const year = d.getFullYear()
-  const num = Math.floor(Math.random() * 100000)
+  const num = String(Math.floor(Math.random() * 100000)).padStart(5, '0')
   return `COT-${year}-${num}`
-})
+}
+
+numeroCotizacion.value = generarNumeroCotizacion()
 
 const subtotal = computed(() => {
-  return items.value.reduce((acc, item) => {
-    const totalItem = (Number(item.cantidad) || 0) * (Number(item.precio) || 0)
-    return acc + totalItem
-  }, 0)
+  return items.value.reduce((acc, item) => acc + lineTotal(item), 0)
 })
 
-const total = computed(() => {
-  const desc = Number(descuento.value) || 0
-  return Math.max(subtotal.value - desc, 0)
-})
+const iva = computed(() => Math.round(subtotal.value * 0.19))
+
+function lineTotal (item) {
+  return (Number(item.cantidad) || 0) * (Number(item.precio) || 0)
+}
+
+function formatCLP (amount) {
+  return Number(amount || 0).toLocaleString('es-CL', {
+    style: 'currency',
+    currency: 'CLP',
+    maximumFractionDigits: 0
+  })
+}
+
+function toggleVistaPrevia () {
+  showPreview.value = !showPreview.value
+}
+
+function cerrarVistaPrevia () {
+  showPreview.value = false
+}
 
 function agregarItem() {
   const nextId = (items.value[items.value.length - 1]?.id || 0) + 1
@@ -294,19 +335,27 @@ function autoResizeTextarea(event) {
   })
 }
 
-function imprimirPDF() {
+function imprimirPDF () {
+  ejecutarImpresion()
+}
+
+function ejecutarImpresion () {
   const originalTitle = document.title
-  document.title = 'Cotización FletesPro'
-  // Dejar que el navegador pinte el layout antes de abrir el diálogo de impresión
-  // (evita PDF en blanco con window.print() inmediato).
+  document.title = `Cotización ${numeroCotizacion.value} - FletesPro`
+  const root = document.documentElement
+  root.classList.add('printing-cotizacion')
+  root.classList.toggle('printing-from-modal', showPreview.value)
+  root.classList.toggle('printing-from-fallback', !showPreview.value)
+
   nextTick(() => {
     requestAnimationFrame(() => {
       setTimeout(() => {
         window.print()
         setTimeout(() => {
+          root.classList.remove('printing-cotizacion', 'printing-from-modal', 'printing-from-fallback')
           document.title = originalTitle
         }, 500)
-      }, 150)
+      }, 200)
     })
   })
 }
@@ -325,7 +374,8 @@ function resetFormulario() {
   items.value = [
     { id: 1, descripcion: 'Servicio de transporte', cantidad: 1, precio: 0 }
   ]
-  descuento.value = 0
+  numeroCotizacion.value = generarNumeroCotizacion()
+  showPreview.value = false
 }
 </script>
 
@@ -381,6 +431,123 @@ function resetFormulario() {
 .btn-secondary:hover {
   background: #f9fafb;
   border-color: #10b981;
+}
+
+.btn-preview {
+  background: #ecfdf5;
+  color: #047857;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 1px solid #10b981;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-preview:hover {
+  background: #d1fae5;
+}
+
+.btn-preview--active {
+  background: #10b981;
+  color: #fff;
+  border-color: #059669;
+}
+
+.preview-hint {
+  font-size: 13px;
+  color: #6b7280;
+  margin: -12px 0 20px;
+  padding: 0 4px;
+}
+
+.preview-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.preview-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+.preview-modal__panel {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 920px);
+  max-height: calc(100vh - 48px);
+  display: flex;
+  flex-direction: column;
+  background: #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.preview-modal__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.preview-modal__title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #047857;
+}
+
+.preview-modal__close {
+  border: none;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.preview-modal__close:hover {
+  background: #e5e7eb;
+}
+
+.preview-modal__scroll {
+  overflow: auto;
+  padding: 24px 20px 28px;
+  flex: 1;
+}
+
+.preview-modal__paper {
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.06),
+    0 8px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+}
+
+.cotizacion-print-fallback {
+  position: fixed;
+  left: -10000px;
+  top: 0;
+  width: 210mm;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.total-row-iva {
+  font-weight: 600;
+  color: #047857;
 }
 
 /* Encabezado */
@@ -997,8 +1164,51 @@ function resetFormulario() {
     visibility: visible !important;
   }
 
-  .total-final-value {
-    color: #059669 !important;
+}
+</style>
+
+<style>
+@media print {
+  html.printing-cotizacion body * {
+    visibility: hidden !important;
+  }
+
+  html.printing-cotizacion #cotizacion-preview-print,
+  html.printing-cotizacion #cotizacion-preview-print *,
+  html.printing-cotizacion #cotizacion-print-fallback,
+  html.printing-cotizacion #cotizacion-print-fallback * {
+    visibility: visible !important;
+  }
+
+  html.printing-cotizacion #cotizacion-preview-print,
+  html.printing-cotizacion #cotizacion-print-fallback {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  html.printing-cotizacion.printing-from-modal #cotizacion-print-fallback {
+    display: none !important;
+  }
+
+  html.printing-cotizacion.printing-from-fallback #cotizacion-preview-print {
+    display: none !important;
+  }
+
+  html.printing-cotizacion .preview-modal {
+    position: static !important;
+    display: block !important;
+    padding: 0 !important;
+    background: white !important;
+  }
+
+  html.printing-cotizacion .preview-modal__backdrop,
+  html.printing-cotizacion .preview-modal__toolbar,
+  html.printing-cotizacion .preview-modal__scroll {
+    display: none !important;
   }
 }
 </style>

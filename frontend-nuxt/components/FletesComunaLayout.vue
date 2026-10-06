@@ -5,7 +5,7 @@
     <section
       id="hero-calculator"
       class="relative pt-8 pb-24 md:pt-12 md:pb-32 overflow-hidden"
-      :class="heroSectionClass"
+      :class="[heroSectionClass, compactHero ? 'hero-calculator--compact' : '']"
     >
       <!-- Decoración según variante -->
       <div v-if="variant === 'las-condes'" class="absolute inset-0 overflow-hidden pointer-events-none">
@@ -36,8 +36,8 @@
 
       <div class="container mx-auto px-4 relative z-10">
         <div
-          class="mb-16 animate-fade-in max-w-4xl"
-          :class="heroContentAlign"
+          class="mb-16 animate-fade-in"
+          :class="[heroContentAlign, heroMaxWidthClass]"
         >
           <span
             v-if="hero.tagline"
@@ -47,14 +47,14 @@
             {{ hero.tagline }}
           </span>
           <h1
-            class="font-black text-slate-950 leading-tight tracking-tight mb-8"
-            :class="heroTitleClass"
+            class="font-black text-slate-950 mb-6 md:mb-8"
+            :class="[heroTitleClass, compactHero ? 'hero-title-compact' : 'leading-tight tracking-tight']"
           >
             {{ hero.title }}
           </h1>
           <p
-            class="text-lg max-w-2xl font-medium"
-            :class="heroIntroClass"
+            class="max-w-2xl mx-auto font-medium"
+            :class="[heroIntroClass, compactHero ? 'hero-intro-compact' : 'text-lg']"
           >
             {{ hero.intro }}
           </p>
@@ -81,6 +81,12 @@
             </template>
           </ClientOnly>
         </div>
+        <p
+          v-if="hero.introBelowCalc"
+          class="mt-10 md:mt-12 text-base md:text-lg text-slate-600 leading-relaxed max-w-4xl mx-auto text-center"
+        >
+          {{ hero.introBelowCalc }}
+        </p>
       </div>
     </section>
 
@@ -146,11 +152,26 @@ const props = defineProps({
   localAuthority: {
     type: Object,
     default: null
+  },
+  /** Clases Tailwind opcionales para el H1 (p. ej. título más compacto). */
+  heroTitleClassOverride: {
+    type: String,
+    default: ''
+  },
+  /** Clases Tailwind opcionales para el párrafo bajo el H1. */
+  heroIntroClassOverride: {
+    type: String,
+    default: ''
+  },
+  /** Ancho máximo del bloque del hero (título + intro). */
+  heroContentMaxWidthClass: {
+    type: String,
+    default: ''
   }
 })
 
 const variantStyles = {
-  'las-condes': { selection: 'selection:bg-amber-100 selection:text-slate-900', heroBg: 'bg-gradient-to-br from-slate-50 via-white to-amber-50/30', align: 'md:text-left text-center', tagline: 'bg-white/90 text-amber-800 border-amber-200/60', title: 'text-4xl md:text-6xl lg:text-7xl', intro: 'md:text-xl text-slate-600 md:mr-0 mx-auto', extraAlign: 'md:mr-0' },
+  'las-condes': { selection: 'selection:bg-amber-100 selection:text-slate-900', heroBg: 'bg-gradient-to-br from-slate-50 via-white to-amber-50/30', align: 'text-center mx-auto', tagline: 'bg-white/90 text-amber-800 border-amber-200/60', title: 'text-4xl md:text-6xl lg:text-7xl', intro: 'md:text-xl text-slate-600 mx-auto', extraAlign: '' },
   'buin': { selection: 'selection:bg-emerald-100 selection:text-slate-900', heroBg: 'bg-gradient-to-b from-slate-50 to-emerald-50/20', align: 'text-center mx-auto', tagline: 'bg-white/95 text-emerald-800 border-emerald-200/60', title: 'text-4xl md:text-6xl lg:text-7xl', intro: 'md:text-xl text-slate-600 mx-auto', extraAlign: 'md:mr-0' },
   'cerro-navia': { selection: 'selection:bg-violet-100 selection:text-slate-900', heroBg: 'bg-gradient-to-b from-slate-50 to-violet-50/20', align: 'text-center mx-auto', tagline: 'bg-white/95 text-violet-800 border-violet-200/60', title: 'text-4xl md:text-6xl lg:text-7xl', intro: 'md:text-xl text-slate-600 mx-auto', extraAlign: '' },
   'colina': { selection: 'selection:bg-sky-100 selection:text-slate-900', heroBg: 'bg-gradient-to-b from-slate-50 to-sky-50/25', align: 'text-center mx-auto', tagline: 'bg-white/95 text-sky-800 border-sky-200/60', title: 'text-4xl md:text-6xl lg:text-7xl', intro: 'md:text-xl text-slate-600 mx-auto', extraAlign: '' },
@@ -164,7 +185,37 @@ const selectionClass = computed(() => v.value.selection || 'selection:bg-teal-10
 const heroSectionClass = computed(() => v.value.heroBg || 'bg-slate-50')
 const heroContentAlign = computed(() => v.value.align || 'text-center mx-auto')
 const heroTaglineClass = computed(() => v.value.tagline || 'bg-white text-teal-700 border-slate-200')
-const heroTitleClass = computed(() => v.value.title || 'text-5xl md:text-8xl leading-[0.9] tracking-tighter')
-const heroIntroClass = computed(() => v.value.intro || 'md:text-2xl text-slate-500 max-w-3xl mx-auto')
+const heroTitleClass = computed(() =>
+  props.heroTitleClassOverride || v.value.title || 'text-5xl md:text-8xl leading-[0.9] tracking-tighter'
+)
+const heroIntroClass = computed(() =>
+  props.heroIntroClassOverride || v.value.intro || 'md:text-2xl text-slate-500 max-w-3xl mx-auto'
+)
 const heroExtraAlign = computed(() => v.value.extraAlign || '')
+const heroMaxWidthClass = computed(() => props.heroContentMaxWidthClass || 'max-w-4xl')
+const compactHero = computed(() => !!props.heroTitleClassOverride)
 </script>
+
+<style scoped>
+/* Gana al CSS crítico global de #hero-calculator h1 (clamp hasta 6rem) */
+.hero-calculator--compact :deep(h1.hero-title-compact),
+:deep(.hero-calculator--compact h1.hero-title-compact) {
+  font-size: clamp(1.6rem, 3.5vw, 2.35rem) !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.02em !important;
+  font-weight: 800 !important;
+  margin-bottom: 1rem !important;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-calculator--compact :deep(p.hero-intro-compact),
+:deep(.hero-calculator--compact p.hero-intro-compact) {
+  font-size: clamp(0.875rem, 1.6vw, 1rem) !important;
+  line-height: 1.55 !important;
+  font-weight: 500 !important;
+  color: #64748b !important;
+  max-width: 40rem;
+}
+</style>

@@ -6,17 +6,17 @@
         <div class="absolute top-0 right-0 w-full h-full bg-teal-600/[0.02] -skew-y-3 origin-top-right -z-10" />
         
         <div class="container mx-auto px-4 relative z-10">
-          <div class="text-center mb-16 animate-fade-in">
-            <span class="inline-block bg-white text-teal-700 px-6 py-2.5 rounded-2xl text-[10px] font-black uppercase tracking-[0.3em] mb-8 shadow-sm border border-slate-200">
+          <div class="text-center mb-12 md:mb-16 animate-fade-in max-w-6xl mx-auto">
+            <span class="inline-block bg-white text-teal-700 px-6 py-2.5 rounded-2xl text-[10px] font-black uppercase tracking-[0.3em] mb-6 shadow-sm border border-slate-200">
               {{ $t('pages.index.heroTag') }}
             </span>
-            <h1 class="text-5xl md:text-8xl font-black text-slate-950 leading-[0.9] tracking-tighter mb-8">
+            <h1 class="text-xl sm:text-2xl md:text-[1.6rem] lg:text-[1.75rem] font-black text-slate-950 leading-snug tracking-tight mb-4 md:mb-5 max-w-5xl mx-auto px-2">
               {{ $t('pages.index.title') }}
             </h1>
-            <p class="text-lg md:text-2xl text-slate-500 max-w-3xl mx-auto font-medium">
+            <p class="text-sm md:text-base text-slate-500 max-w-4xl mx-auto font-medium leading-relaxed">
               {{ $t('pages.index.subtitle') }}
             </p>
-            <p class="mt-6 text-base text-slate-600 max-w-2xl mx-auto">
+            <p class="mt-3 md:mt-4 text-sm text-slate-600 max-w-4xl mx-auto leading-relaxed">
               Desde pequeños fletes y mudanzas hasta envíos para ecommerce. Servicio en la RM y a regiones. ¿Estás planeando fletes o mudanzas? Para la capital tenemos una <NuxtLink to="/fletes-santiago" class="text-teal-600 font-semibold hover:underline">página dedicada</NuxtLink>. WhatsApp +56 9 7979 6841.
             </p>
           </div>
@@ -280,6 +280,9 @@
           <NuxtLink to="/embalajes" class="text-teal-600 font-bold hover:underline">Ver servicio de embalaje →</NuxtLink>
         </div>
       </section>
+
+      <!-- Hub interno: comunas, bodegaje, última milla, especialidades -->
+      <HomeHub />
       
       <FletesLocalAuthority />
       <PortesTestimonials />
@@ -430,6 +433,12 @@
 
 <script setup>
 import { computed, ref, h, watch, onMounted } from 'vue'
+import {
+  FLETESPRO_CL_EMAIL,
+  FLETESPRO_CL_PHONE,
+  fletesProSameAs,
+  fletesProFounderSchema
+} from '~/config/brandEntity.js'
 
 // ⚠️ LOG INMEDIATO - Debe aparecer siempre
 console.log('🔥🔥🔥 [INDEX.VUE] Script setup INICIADO')
@@ -799,6 +808,7 @@ const siteUrl = 'https://fletespro.cl'
 const siteName = 'FletesPro'
 const defaultImage = `${siteUrl}/og-image.jpg`
 const logoUrl = `${siteUrl}/logo.png`
+const waUrl = `https://wa.me/${FLETESPRO_CL_PHONE.replace('+', '')}`
 
 // URLs normalizadas: siempre https://fletespro.cl/ (con barra) para raíz
 const pathWithoutLocale = route.path.replace(/^\/(es|en)/, '') || '/'
@@ -889,19 +899,22 @@ const faqSchema = computed(() => {
   }
 })
 
-// MovingCompany Schema - FletesPro Chile
+// MovingCompany Schema - FletesPro Chile (legacy computed; head builds the live version)
 const movingCompanySchema = computed(() => ({
   '@context': 'https://schema.org',
   '@type': 'MovingCompany',
+  '@id': `${siteUrl}/#business`,
   name: 'FletesPro',
   url: siteUrl,
   logo: logoUrl,
   image: defaultImage,
+  email: FLETESPRO_CL_EMAIL,
   description: ogDescription.value,
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Providencia',
-    addressRegion: 'Región Metropolitana',
+    streetAddress: 'Providencia',
+    addressLocality: 'Santiago',
+    addressRegion: 'RM',
     addressCountry: 'CL'
   },
   geo: {
@@ -909,18 +922,18 @@ const movingCompanySchema = computed(() => ({
     latitude: '-33.4372',
     longitude: '-70.6506'
   },
-  telephone: '+56-9-7979-6841',
+  telephone: FLETESPRO_CL_PHONE,
   priceRange: '$$',
   areaServed: {
-    '@type': 'Country',
-    name: 'Chile'
+    '@type': 'AdministrativeArea',
+    name: 'Región Metropolitana de Santiago y todo Chile'
   },
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      opens: '09:00',
-      closes: '18:00'
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      opens: '00:00',
+      closes: '23:59'
     }
   ]
 }))
@@ -934,40 +947,95 @@ useHead(computed(() => {
       ? (currentPathWithoutLocale === '/' ? '/' : currentPathWithoutLocale)
       : `/${currentLocale}${currentPathWithoutLocale === '/' ? '' : currentPathWithoutLocale}`
     const currentCanonicalUrl = `${siteUrl}${currentCanonicalPath}`
+
+    const organization = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      '@id': `${siteUrl}/#organization`,
+      name: 'FletesPro',
+      url: `${siteUrl}/`,
+      logo: defaultImage,
+      email: FLETESPRO_CL_EMAIL,
+      telephone: FLETESPRO_CL_PHONE,
+      description: 'Empresa chilena de fletes y mudanzas en Santiago y todo Chile, con calculadora online, precios publicados y equipo propio.',
+      founder: {
+        '@type': 'Person',
+        name: 'Ronald Bravo',
+        jobTitle: 'Coordinador de operaciones',
+        '@id': `${siteUrl}/#founder-ronald-bravo`
+      },
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Providencia',
+        addressLocality: 'Santiago',
+        addressRegion: 'RM',
+        addressCountry: 'CL'
+      },
+      sameAs: [waUrl, ...fletesProSameAs(), `${siteUrl}/empresa-fletes-santiago`]
+    }
+
+    const website = {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
+      url: `${siteUrl}/`,
+      name: 'FletesPro',
+      publisher: { '@id': `${siteUrl}/#organization` },
+      inLanguage: 'es-CL',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: `${siteUrl}/buscar?q={search_term_string}`
+        },
+        'query-input': 'required name=search_term_string'
+      }
+    }
     
     // Construir schemas directamente aquí dentro del computed
     const movingCompany = withReviewsOnLocalBusiness({
       '@context': 'https://schema.org',
       '@type': 'MovingCompany',
-      '@id': `${siteUrl}/#fletespro`,
+      '@id': `${siteUrl}/#business`,
       name: 'FletesPro',
-      url: siteUrl,
+      url: `${siteUrl}/`,
       logo: logoUrl,
       image: [`${siteUrl}/ejemplo-flete-sencillo.webp`, defaultImage],
-      description: ogDescription.value,
+      email: FLETESPRO_CL_EMAIL,
+      telephone: FLETESPRO_CL_PHONE,
+      priceRange: '$$',
+      description: 'Fletes y mudanzas en Santiago y todo Chile desde $28.000. Mudanzas de casas, departamentos y oficinas, fletes, bodegaje, embalaje, transporte refrigerado y última milla.',
       address: {
         '@type': 'PostalAddress',
-        addressLocality: 'Providencia',
-        addressRegion: 'Región Metropolitana',
+        streetAddress: 'Providencia',
+        addressLocality: 'Santiago',
+        addressRegion: 'RM',
         addressCountry: 'CL'
       },
       geo: {
         '@type': 'GeoCoordinates',
-        latitude: '-33.4372',
-        longitude: '-70.6506'
+        latitude: -33.4372,
+        longitude: -70.6506
       },
-      telephone: '+56-9-7979-6841',
-      priceRange: '$$',
-      areaServed: { '@type': 'Country', name: 'Chile' },
-      openingHoursSpecification: [
-        {
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-          opens: '09:00',
-          closes: '18:00'
-        }
-      ]
+      areaServed: {
+        '@type': 'AdministrativeArea',
+        name: 'Región Metropolitana de Santiago y todo Chile'
+      },
+      openingHoursSpecification: {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '00:00',
+        closes: '23:59'
+      },
+      sameAs: [waUrl, ...fletesProSameAs(), `${siteUrl}/empresa-fletes-santiago`],
+      parentOrganization: { '@id': `${siteUrl}/#organization` },
+      founder: { '@id': `${siteUrl}/#founder-ronald-bravo` }
     })
+
+    const founder = {
+      '@context': 'https://schema.org',
+      ...fletesProFounderSchema(siteUrl)
+    }
 
     const breadcrumb = {
       '@context': 'https://schema.org',
@@ -1025,14 +1093,32 @@ useHead(computed(() => {
       ],
       script: [
         {
+          key: 'ld-organization-home',
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify(organization)
+        },
+        {
+          key: 'ld-website-home',
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify(website)
+        },
+        {
+          key: 'ld-business-home',
           type: 'application/ld+json',
           innerHTML: JSON.stringify(movingCompany)
         },
         {
+          key: 'ld-founder-home',
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify(founder)
+        },
+        {
+          key: 'ld-breadcrumb-home',
           type: 'application/ld+json',
           innerHTML: JSON.stringify(breadcrumb)
         },
         {
+          key: 'ld-faq-home',
           type: 'application/ld+json',
           innerHTML: JSON.stringify(faq)
         }

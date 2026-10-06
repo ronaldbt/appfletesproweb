@@ -27,7 +27,18 @@ export const API_ENDPOINTS = {
   ADMIN_BACKEND_STOP: '/api/admin/backend/stop',
   ADMIN_BACKEND_STATUS: '/api/admin/backend/status',
   ADMIN_BACKEND_LOGS: '/api/admin/backend/logs',
-  ADMIN_BACKEND_CLEAR_CACHE: '/api/admin/backend/clear-whatsapp-cache'
+  ADMIN_BACKEND_CLEAR_CACHE: '/api/admin/backend/clear-whatsapp-cache',
+  ADMIN_BODEGA_STATS: '/api/admin/bodega/stats',
+  ADMIN_BODEGA_BODEGAS: '/api/admin/bodega/bodegas',
+  ADMIN_BODEGA_USUARIOS: '/api/admin/bodega/usuarios',
+  ADMIN_BODEGA_CONTRATOS: '/api/admin/bodega/contratos',
+  ADMIN_BODEGA_ITEMS: '/api/admin/bodega/items',
+  ADMIN_BODEGA_CUOTAS: '/api/admin/bodega/cuotas',
+  BODEGA_MI_RESUMEN: '/api/bodega/mi/resumen',
+  BODEGA_MI_ITEMS: '/api/bodega/mi/items',
+  BODEGA_MI_PAGOS: '/api/bodega/mi/pagos',
+  BODEGA_MI_CONTRATO: '/api/bodega/mi/contrato',
+  BODEGA_MI_PERFIL: '/api/bodega/mi/perfil'
 }
 
 export const apiUrl = (endpoint) => buildApiUrl(endpoint)

@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-slate-50 text-slate-900">
     <!-- Sidebar persistente -->
-    <Sidebar :userRole="'admin'" ref="sidebar" />
+    <Sidebar :userRole="userRole" ref="sidebar" />
 
     <!-- Botón toggle (solo desktop cuando sidebar colapsa; móvil usa barra inferior) -->
     <button @click="toggleSidebar"
@@ -21,10 +21,18 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import Sidebar from '../components/Sidebar.vue'
 
 const sidebar = ref(null)
+const userRole = ref('admin')
+
+onMounted(() => {
+  try {
+    const u = JSON.parse(localStorage.getItem('usuario') || 'null')
+    if (u?.tipo === 'agenda') userRole.value = 'agenda'
+  } catch (_) {}
+})
 
 const toggleSidebar = () => {
   if (sidebar.value && typeof sidebar.value.toggleSidebar === 'function') {

@@ -24,7 +24,17 @@ const icons = {
   
   settings: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>',
 
-  comments: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>'
+  comments: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>',
+
+  warehouse: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path></svg>',
+
+  boxes: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>',
+
+  invoice: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>',
+
+  camera: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>',
+
+  contract: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>'
 }
 
 // Configuración de menús por rol
@@ -54,6 +64,43 @@ const menuConfigs = {
       name: 'Cotización',
       path: '/dashboard-admin/cotizacion',
       icon: icons.calculator
+    },
+    {
+      name: 'Bodega',
+      path: '/dashboard-admin/bodega',
+      icon: icons.warehouse,
+      children: [
+        {
+          name: 'Resumen',
+          path: '/dashboard-admin/bodega',
+          icon: icons.dashboard
+        },
+        {
+          name: 'Bodegas',
+          path: '/dashboard-admin/bodega/bodegas',
+          icon: icons.warehouse
+        },
+        {
+          name: 'Usuarios',
+          path: '/dashboard-admin/bodega/usuarios',
+          icon: icons.users
+        },
+        {
+          name: 'Almacenaje',
+          path: '/dashboard-admin/bodega/almacenaje',
+          icon: icons.boxes
+        },
+        {
+          name: 'Contratos',
+          path: '/dashboard-admin/bodega/contratos',
+          icon: icons.contract
+        },
+        {
+          name: 'Pagos bodega',
+          path: '/dashboard-admin/bodega/pagos',
+          icon: icons.payments
+        }
+      ]
     },
     {
       name: 'Comentarios web',
@@ -141,6 +188,41 @@ const menuConfigs = {
       name: 'Mi Perfil',
       path: '/cliente/perfil',
       icon: icons.profile
+    }
+  ],
+
+  cliente_bodega: [
+    {
+      name: 'Mi bodega',
+      path: '/dashboard-bodega',
+      icon: icons.warehouse
+    },
+    {
+      name: 'Mis cosas',
+      path: '/dashboard-bodega/items',
+      icon: icons.boxes
+    },
+    {
+      name: 'Mis pagos',
+      path: '/dashboard-bodega/pagos',
+      icon: icons.payments
+    },
+    {
+      name: 'Mi contrato',
+      path: '/dashboard-bodega/contrato',
+      icon: icons.contract
+    },
+    {
+      name: 'Mi perfil',
+      path: '/dashboard-bodega/perfil',
+      icon: icons.profile
+    }
+  ],
+  agenda: [
+    {
+      name: 'Reservas',
+      path: '/dashboard-admin/reservas',
+      icon: icons.reservations
     }
   ]
 }

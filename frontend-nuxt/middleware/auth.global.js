@@ -44,6 +44,8 @@ export default defineNuxtRouteMiddleware((to) => {
     requiredRole = 'conductor'
   } else if (path.startsWith('/dashboard-cliente') || path === '/dashboard-cliente' || path.startsWith('/cliente/')) {
     requiredRole = 'cliente'
+  } else if (path.startsWith('/dashboard-bodega') || path === '/dashboard-bodega') {
+    requiredRole = 'cliente_bodega'
   }
 
   if (!requiredRole) return
@@ -61,11 +63,18 @@ export default defineNuxtRouteMiddleware((to) => {
     })
   }
 
+  if (requiredRole === 'admin' && usuario.tipo === 'agenda') {
+    if (path === '/dashboard-admin/reservas' || path.startsWith('/dashboard-admin/reservas/')) return
+    return navigateTo('/dashboard-admin/reservas')
+  }
+
   if (usuario.tipo !== requiredRole) {
     // Usuario logueado pero con rol distinto: redirigir a su dashboard
     if (usuario.tipo === 'admin') return navigateTo('/dashboard-admin')
+    if (usuario.tipo === 'agenda') return navigateTo('/dashboard-admin/reservas')
     if (usuario.tipo === 'conductor') return navigateTo('/dashboard-conductor')
     if (usuario.tipo === 'cliente') return navigateTo('/dashboard-cliente')
+    if (usuario.tipo === 'cliente_bodega') return navigateTo('/dashboard-bodega')
     return navigateTo('/login')
   }
 })
