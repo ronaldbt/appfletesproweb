@@ -16,7 +16,7 @@ export default {
   precios: {
     h2: 'Precios de fletes en Chicureo',
     intro: 'El valor del flete depende del origen, destino y volumen. Fletes baratos Chicureo y fletes económicos Chicureo con tarifas transparentes.',
-    p1: 'Flete Santiago Chicureo y fletes Chicureo Santiago en ambas direcciones. Flete desde Chicureo a Santiago con precios desde $27.000 base. Servicio de fletes Chicureo con cotización al instante.',
+    p1: 'Flete Santiago Chicureo y fletes Chicureo Santiago en ambas direcciones. Flete desde Chicureo a Santiago con precios desde $28.000 base. Servicio de fletes Chicureo con cotización al instante.',
     h3Valores: 'Fletes baratos Chicureo y fletes económicos Chicureo',
     p2: 'Mudanzas Chicureo y fletes en Chicureo con el mismo estándar de servicio. Presupuesto gratis.'
   },
@@ -70,7 +70,7 @@ export default {
     },
     {
       question: '¿Ofrecen fletes baratos y económicos en Chicureo?',
-      answer: 'Sí. Fletes baratos Chicureo y fletes económicos Chicureo con tarifa base desde $27.000. Fletes en Chicureo y mudanzas Chicureo con cotización al instante.'
+      answer: 'Sí. Fletes baratos Chicureo y fletes económicos Chicureo con tarifa base desde $28.000. Fletes en Chicureo y mudanzas Chicureo con cotización al instante.'
     },
     {
       question: '¿Hacen flete Colina Chicureo?',

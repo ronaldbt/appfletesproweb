@@ -11,7 +11,7 @@ export default {
   "hero": {
     "tagline": "Fletes Talagante",
     "title": "Fletes en Talagante",
-    "intro": "¿Necesitas fletes en Talagante? Ofrecemos fletes Talagante con precios desde $27.000 (hasta 2 m³). Flete a Talagante, flete hasta Talagante, fletes Santiago Talagante y flete Talagante Vitacura. Fletes y mudanzas en Talagante para particulares y empresas. Flete camión Talagante para mudanzas; camioneta para cargas livianas. Valor de flete Santiago a Talagante al instante con la calculadora. Flete Pichilemu Talagante y rutas largas: cotiza por WhatsApp. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.",
+    "intro": "¿Necesitas fletes en Talagante? Ofrecemos fletes Talagante con precios desde $28.000 (hasta 2 m³). Flete a Talagante, flete hasta Talagante, fletes Santiago Talagante y flete Talagante Vitacura. Fletes y mudanzas en Talagante para particulares y empresas. Flete camión Talagante para mudanzas; camioneta para cargas livianas. Valor de flete Santiago a Talagante al instante con la calculadora. Flete Pichilemu Talagante y rutas largas: cotiza por WhatsApp. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.",
     "introExtra": "Fletes Talagante con tarifa clara. Valor de flete Santiago a Talagante al instante."
   },
   "precios": {

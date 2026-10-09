@@ -113,7 +113,7 @@
                   <input type="radio" v-model="ayudante" value="sí" class="sr-only peer">
                   <div class="border-2 border-gray-300 rounded-lg p-3 text-center peer-checked:border-green-600 peer-checked:bg-green-50 transition-all">
                     <p class="font-semibold text-gray-900">Sí</p>
-                    <p class="text-sm text-green-600 font-medium">+$10,000</p>
+                    <p class="text-sm text-green-600 font-medium">+$15.000</p>
                   </div>
                 </label>
               </div>
@@ -185,7 +185,7 @@
                   <p class="text-sm opacity-90">Precio Total</p>
                   <p class="text-4xl font-bold">${{ precioFinal.toLocaleString() }} CLP</p>
                   <p class="text-sm opacity-75 mt-1">
-                    {{ ayudante === 'sí' ? 'Incluye ayudante (+$10,000)' : 'Sin ayudante' }}
+                    {{ ayudante === 'sí' ? 'Incluye ayudante (+$15.000)' : 'Sin ayudante' }}
                   </p>
                 </div>
                 <svg class="w-16 h-16 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -252,7 +252,7 @@ const precioBase = computed(() => Math.round(precio.value || 0))
 const precioFinal = computed(() => {
   let total = precioBase.value
   if (ayudante.value === 'sí') {
-    total += 10000
+    total += 15000
   }
   return Math.round(total)
 })
@@ -370,11 +370,10 @@ function calcularRuta() {
 
       const leg = result.routes[0].legs[0]
       distancia.value = leg.distance.value / 1000
-      if (distancia.value <= 100) {
-        precio.value = 15000 + distancia.value * 1300;
-       } else {
-      precio.value = distancia.value * 900; 
-       }
+      const corte = 120
+      precio.value = distancia.value <= corte
+        ? 28000 + distancia.value * 2000
+        : 28000 + corte * 2000 + (distancia.value - corte) * 1400
 
       direccionOrigen.value = leg.start_address
       direccionDestino.value = leg.end_address

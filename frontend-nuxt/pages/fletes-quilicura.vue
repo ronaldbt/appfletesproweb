@@ -91,7 +91,7 @@ const serviceSchema = {
     '@type': 'LocalBusiness',
     name: 'FletesPro',
     url: siteUrl,
-    telephone: '+56-9-7979-6841',
+    telephone: '+56 9 7979 6841',
     address: { '@type': 'PostalAddress', addressLocality: 'Providencia', addressRegion: 'Región Metropolitana', addressCountry: 'CL' }
   },
   areaServed: { '@type': 'City', name: 'Quilicura', containedInPlace: { '@type': 'AdministrativeArea', name: 'Región Metropolitana' } }

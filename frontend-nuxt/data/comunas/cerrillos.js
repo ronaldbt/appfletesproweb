@@ -11,7 +11,7 @@ export default {
   "hero": {
     "tagline": "Fletes Cerrillos",
     "title": "Fletes en Cerrillos",
-    "intro": "¿Buscas fletes en Cerrillos? Ofrecemos fletes y mudanzas en Cerrillos con precios desde $27.000. fletes Cerrillos, fletes y mudanzas Cerrillos, flete Cerrillos, fletes baratos Cerrillos, fletes económicos Cerrillos. Cotiza con la calculadora o por WhatsApp. Presupuesto gratis.",
+    "intro": "¿Buscas fletes en Cerrillos? Ofrecemos fletes y mudanzas en Cerrillos con precios desde $28.000. fletes Cerrillos, fletes y mudanzas Cerrillos, flete Cerrillos, fletes baratos Cerrillos, fletes económicos Cerrillos. Cotiza con la calculadora o por WhatsApp. Presupuesto gratis.",
     "introExtra": "Servicio de fletes en Cerrillos y toda la RM. Fletes baratos Cerrillos, fletes económicos. Cotización al instante."
   },
   "ventajas": [

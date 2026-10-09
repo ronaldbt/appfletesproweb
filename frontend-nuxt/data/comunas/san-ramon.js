@@ -11,7 +11,7 @@ export default {
   "hero": {
     "tagline": "Fletes San Ramón",
     "title": "Fletes en San Ramón",
-    "intro": "¿Necesitas fletes en San Ramón? Ofrecemos fletes en San Ramón con precios desde $27.000 (hasta 2 m³). Fletes San Ramón para particulares y empresas. Realizamos flete Las Condes a San Ramón, flete San Ramón La Cisterna y conexiones con Santiago y la RM. Fletes en San Ramón con carga y descarga incluida. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.",
+    "intro": "¿Necesitas fletes en San Ramón? Ofrecemos fletes en San Ramón con precios desde $28.000 (hasta 2 m³). Fletes San Ramón para particulares y empresas. Realizamos flete Las Condes a San Ramón, flete San Ramón La Cisterna y conexiones con Santiago y la RM. Fletes en San Ramón con carga y descarga incluida. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.",
     "introExtra": "Fletes San Ramón con tarifa clara. La calculadora te da el precio al instante."
   },
   "precios": {

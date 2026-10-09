@@ -92,14 +92,14 @@ const serviceSchema = {
     '@type': 'LocalBusiness',
     name: 'FletesPro',
     url: siteUrl,
-    telephone: '+56-9-7979-6841',
+    telephone: '+56 9 7979 6841',
     address: { '@type': 'PostalAddress', addressLocality: 'San Miguel', addressRegion: 'Región Metropolitana', addressCountry: 'CL' },
-    priceRange: 'Desde $27.000'
+    priceRange: 'Desde $28.000'
   },
   offers: {
     '@type': 'AggregateOffer',
     priceCurrency: 'CLP',
-    lowPrice: '27000',
+    lowPrice: '28000',
     highPrice: '400000',
     url: currentUrl
   },

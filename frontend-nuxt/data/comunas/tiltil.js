@@ -11,7 +11,7 @@ export default {
   "hero": {
     "tagline": "Fletes Tiltil",
     "title": "Fletes en Tiltil",
-    "intro": "¿Necesitas fletes en Tiltil? Ofrecemos fletes a Tiltil con precios desde $27.000 (hasta 2 m³). Si quieres saber cuánto sale un flete de Santiago a Tiltil, valor flete materiales Santiago centro a Tiltil o fletes San Joaquín a Tiltil indica origen y destino en la calculadora. Fletes de Santiago Tiltil y flete de Barnechea a Tiltil cuanto sale: cotización al instante. Tiltil en zona norte; aplicamos tarifa por km. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.",
+    "intro": "¿Necesitas fletes en Tiltil? Ofrecemos fletes a Tiltil con precios desde $28.000 (hasta 2 m³). Si quieres saber cuánto sale un flete de Santiago a Tiltil, valor flete materiales Santiago centro a Tiltil o fletes San Joaquín a Tiltil indica origen y destino en la calculadora. Fletes de Santiago Tiltil y flete de Barnechea a Tiltil cuanto sale: cotización al instante. Tiltil en zona norte; aplicamos tarifa por km. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.",
     "introExtra": "Fletes Tiltil con tarifa clara. Cuánto sale un flete de Santiago a Tiltil al instante."
   },
   "precios": {

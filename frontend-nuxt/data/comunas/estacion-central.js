@@ -16,7 +16,7 @@ export default {
   },
   precios: {
     h2: 'Precios de fletes en Estación Central',
-    intro: 'El valor de un flete en Estación Central depende del origen, destino y volumen. Ofrecemos fletes estación central baratos y fletes económicos Estación Central con tarifa base desde $27.000.',
+    intro: 'El valor de un flete en Estación Central depende del origen, destino y volumen. Ofrecemos fletes estación central baratos y fletes económicos Estación Central con tarifa base desde $28.000.',
     p1: '¿Cuál es el valor de un flete desde Estación Central a Ñuñoa, o un flete de Providencia a Estación Central? Usa la calculadora indicando direcciones y m³, o escríbenos por WhatsApp. Fletes Santiago Estación Central y fletes Estación Central hacia otras comunas con precios claros.',
     h3Valores: 'Fletes Estación Central baratos y tarifas transparentes',
     p2: 'Camiones chicos para fletes en Estación Central cuando la carga es poca; vehículos más grandes para mudanzas y fletes de carga Estación Central. Cotización al instante y sin compromiso.'
@@ -73,7 +73,7 @@ export default {
     },
     {
       question: '¿Ofrecen fletes baratos y económicos en Estación Central?',
-      answer: 'Sí. Fletes Estación Central baratos y fletes económicos Estación Central con tarifa base desde $27.000. Fletes express Estación Central y fletes mudanzas Estación Central con cotización al instante.'
+      answer: 'Sí. Fletes Estación Central baratos y fletes económicos Estación Central con tarifa base desde $28.000. Fletes express Estación Central y fletes mudanzas Estación Central con cotización al instante.'
     },
     {
       question: '¿Hacen retiros en Sodimac Estación Central?',

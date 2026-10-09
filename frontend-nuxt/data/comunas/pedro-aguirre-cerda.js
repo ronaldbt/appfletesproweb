@@ -11,7 +11,7 @@ export default {
   "hero": {
     "tagline": "Fletes Pedro Aguirre Cerda",
     "title": "Fletes en Pedro Aguirre Cerda",
-    "intro": "¿Buscas fletes en Pedro Aguirre Cerda? Ofrecemos fletes y mudanzas en Pedro Aguirre Cerda con precios desde $27.000. fletes Pedro Aguirre Cerda, fletes y mudanzas Pedro Aguirre Cerda, flete Pedro Aguirre Cerda, fletes baratos Pedro Aguirre Cerda, fletes económicos Pedro Aguirre Cerda. Cotiza con la calculadora o por WhatsApp. Presupuesto gratis.",
+    "intro": "¿Buscas fletes en Pedro Aguirre Cerda? Ofrecemos fletes y mudanzas en Pedro Aguirre Cerda con precios desde $28.000. fletes Pedro Aguirre Cerda, fletes y mudanzas Pedro Aguirre Cerda, flete Pedro Aguirre Cerda, fletes baratos Pedro Aguirre Cerda, fletes económicos Pedro Aguirre Cerda. Cotiza con la calculadora o por WhatsApp. Presupuesto gratis.",
     "introExtra": "Servicio de fletes en Pedro Aguirre Cerda y toda la RM. Fletes baratos Pedro Aguirre Cerda, fletes económicos. Cotización al instante."
   },
   "ventajas": [

@@ -11,12 +11,12 @@ export default {
   "hero": {
     "tagline": "Fletes San Miguel",
     "title": "Fletes en San Miguel",
-    "intro": "¿Necesitas fletes en San Miguel? Ofrecemos fletes económicos en San Miguel con precios desde $27.000 (hasta 2 m³). Fletes San Miguel Santiago para particulares y empresas. Servicios de fletes y mudanzas en San Miguel con camioneta o camión. Realizamos flete de Renca a San Miguel, flete Providencia a San Miguel y conexiones con Santiago y toda la RM. Fletes en San Miguel Santiago Chile con carga y descarga incluida. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.",
+    "intro": "¿Necesitas fletes en San Miguel? Ofrecemos fletes económicos en San Miguel con precios desde $28.000 (hasta 2 m³). Fletes San Miguel Santiago para particulares y empresas. Servicios de fletes y mudanzas en San Miguel con camioneta o camión. Realizamos flete de Renca a San Miguel, flete Providencia a San Miguel y conexiones con Santiago y toda la RM. Fletes en San Miguel Santiago Chile con carga y descarga incluida. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.",
     "introExtra": "Servicios de fletes y mudanzas en San Miguel. La calculadora te da el precio al instante."
   },
   "precios": {
     "h2": "Precios de fletes en San Miguel",
-    "intro": "El valor del flete en San Miguel depende del volumen y la distancia. Fletes económicos San Miguel desde $27.000 para cargas de hasta 2 m³. Para flete de Renca a San Miguel o flete Providencia a San Miguel indica origen y destino en la calculadora.",
+    "intro": "El valor del flete en San Miguel depende del volumen y la distancia. Fletes económicos San Miguel desde $28.000 para cargas de hasta 2 m³. Para flete de Renca a San Miguel o flete Providencia a San Miguel indica origen y destino en la calculadora.",
     "p1": "¿Cuánto cuesta un flete en San Miguel? Fletes San Miguel Santiago con carga y descarga incluida. Servicios de fletes y mudanzas en San Miguel con cotización al instante. Presupuesto gratis por calculadora o WhatsApp al +56 9 7979 6841.",
     "h3Valores": "Tarifas para fletes en San Miguel",
     "p2": "Fletes en San Miguel con camioneta o camión según el volumen. Fletes económicos San Miguel y fletes y mudanzas San Miguel con el mismo estándar."
@@ -53,7 +53,7 @@ export default {
   "h2Ventajas": "¿Por qué elegir FletesPro para fletes en San Miguel?",
   "faqs": [
     { "question": "¿Hacen flete de Renca a San Miguel?", "answer": "Sí. Realizamos flete de Renca a San Miguel, flete Providencia a San Miguel y conexiones con toda la RM. Fletes económicos San Miguel con precios claros. Indica origen y destino en la calculadora o escribe por WhatsApp al +56 9 7979 6841; el presupuesto es gratis." },
-    { "question": "¿Cuánto cuesta un flete en San Miguel?", "answer": "Depende del volumen y la distancia. Fletes económicos San Miguel desde $27.000 para hasta 2 m³. Fletes en San Miguel Santiago Chile con carga y descarga incluida. Usa la calculadora de esta página para ver el precio." },
+    { "question": "¿Cuánto cuesta un flete en San Miguel?", "answer": "Depende del volumen y la distancia. Fletes económicos San Miguel desde $28.000 para hasta 2 m³. Fletes en San Miguel Santiago Chile con carga y descarga incluida. Usa la calculadora de esta página para ver el precio." },
     { "question": "¿Ofrecen servicios de fletes y mudanzas en San Miguel?", "answer": "Sí. Servicios de fletes y mudanzas en San Miguel para particulares y empresas. Fletes y mudanzas San Miguel con camioneta o camión. Cotiza con la calculadora o por WhatsApp." }
   ]
 }

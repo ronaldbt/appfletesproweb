@@ -16,7 +16,7 @@ export default {
   },
   precios: {
     h2: 'Precios de fletes en Paine',
-    intro: 'El valor del flete en Paine depende del origen, la distancia y el volumen. Paine queda fuera del radio urbano de 50 km, por lo que aplicamos tarifa por kilómetro. Para saber cuánto cuesta un flete de Santiago a Paine o qué valor tiene un flete de Paine a Puente Alto usa la calculadora indicando direcciones y m³.',
+    intro: 'El valor del flete en Paine depende del origen, la distancia y el volumen. Hasta 120 km el precio es $28.000 + $2.000 por km. Para saber cuánto cuesta un flete de Santiago a Paine o qué valor tiene un flete de Paine a Puente Alto usa la calculadora indicando direcciones y m³.',
     p1: '¿Cuánto cuesta un flete de Santiago a Paine? La calculadora de esta página te da el valor según la ruta y el volumen. Flete de Santiago a Paine, flete Maipú Paine y fletes Santiago Paine con precios claros. Para flete camión pluma Paine o flete bins en Paine el valor se cotiza por WhatsApp. Flete Paine Chile con presupuesto gratis.',
     h3Valores: 'Flete de Santiago a Paine y fletes Santiago Paine',
     p2: 'Camiones para fletes Paine cuando la carga es grande. Flete Paine con camioneta o camión según volumen. Qué valor tiene un flete de Paine a Puente Alto: cotización al instante con la calculadora.'

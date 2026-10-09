@@ -11,12 +11,12 @@ export default {
   "hero": {
     "tagline": "Fletes San Joaquín",
     "title": "Fletes en San Joaquín",
-    "intro": "¿Necesitas fletes en San Joaquín? Ofrecemos fletes económicos en San Joaquín con precios desde $27.000 (hasta 2 m³). Fletes San Joaquín y fletes comuna San Joaquín para particulares y empresas. Realizamos flete de San Joaquín a Puente Alto, fletes de San Joaquín a Independencia, fletes San Joaquín a Til Til. Flete refrigerador San Joaquín, fletes de materiales comuna San Joaquín y flete San Joaquín express. Fletes San Joaquín camiones para mudanzas. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.",
+    "intro": "¿Necesitas fletes en San Joaquín? Ofrecemos fletes económicos en San Joaquín con precios desde $28.000 (hasta 2 m³). Fletes San Joaquín y fletes comuna San Joaquín para particulares y empresas. Realizamos flete de San Joaquín a Puente Alto, fletes de San Joaquín a Independencia, fletes San Joaquín a Til Til. Flete refrigerador San Joaquín, fletes de materiales comuna San Joaquín y flete San Joaquín express. Fletes San Joaquín camiones para mudanzas. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.",
     "introExtra": "Fletes San Joaquín con tarifa clara. La calculadora te da el precio al instante."
   },
   "precios": {
     "h2": "Precios de fletes en San Joaquín",
-    "intro": "El valor del flete en San Joaquín depende del volumen y la distancia. Fletes económicos San Joaquín desde $27.000 para cargas de hasta 2 m³. Para flete de San Joaquín a Puente Alto, fletes de San Joaquín a Independencia o fletes San Joaquín a Til Til indica origen y destino en la calculadora. Flete refrigerador San Joaquín y fletes de materiales comuna San Joaquín: cotiza por WhatsApp.",
+    "intro": "El valor del flete en San Joaquín depende del volumen y la distancia. Fletes económicos San Joaquín desde $28.000 para cargas de hasta 2 m³. Para flete de San Joaquín a Puente Alto, fletes de San Joaquín a Independencia o fletes San Joaquín a Til Til indica origen y destino en la calculadora. Flete refrigerador San Joaquín y fletes de materiales comuna San Joaquín: cotiza por WhatsApp.",
     "p1": "¿Cuánto cuesta un flete en San Joaquín? Fletes comuna San Joaquín con carga y descarga incluida. Fletes San Joaquín camiones para mudanzas; camioneta para cargas livianas. Fletes económicos San Joaquín con precios transparentes. Presupuesto gratis por calculadora o WhatsApp al +56 9 7979 6841.",
     "h3Valores": "Tarifas para fletes en San Joaquín",
     "p2": "Fletes en San Joaquín con camioneta o camión según el volumen. Fletes San Joaquín camiones y flete San Joaquín express con el mismo estándar de servicio."

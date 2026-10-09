@@ -24,6 +24,13 @@
     "onlineAssistant": "Asistente en línea",
     "onlineAssistantTooltip": "¿Necesitas ayuda? Escríbenos por WhatsApp"
   },
+  "topbar": {
+    "quote": "Cotiza en 2 min",
+    "price": "desde $28.000",
+    "trust": "Empresa chilena · Santiago y todo Chile",
+    "santiago": "Fletes en Santiago",
+    "waMessage": "Hola, quiero cotizar un flete desde ___ hasta ___."
+  },
   "breadcrumbs": {
     "home": "Inicio",
     "ultimaMilla": "Última Milla"
@@ -172,7 +179,7 @@
         },
         "faq9": {
           "question": "¿Cuánto cuesta una mudanza pequeña?",
-          "answer": "El precio de una mudanza pequeña varía según la distancia y el volumen. Para mudanzas pequeñas baratas en Santiago y Región Metropolitana, los precios de referencia empiezan desde $28.000 + $2.000 por km (hasta 50 km), con hasta 2 m³ incluidos. Utiliza nuestra calculadora online para obtener el precio mudanza pequeña aproximado o solicita un presupuesto personalizado gratuito."
+          "answer": "El precio de una mudanza pequeña varía según la distancia y el volumen. Hasta 120 km el precio es $28.000 + $2.000 por km, con hasta 2 m³ incluidos. Desde el km 121, cada kilómetro extra suma $1.400 y lo ya recorrido se mantiene. Utiliza nuestra calculadora online para obtener el precio mudanza pequeña aproximado o solicita un presupuesto personalizado gratuito."
         },
         "faq10": {
           "question": "¿Cómo funciona el servicio de fletes y mudanzas?",
@@ -184,19 +191,19 @@
         },
         "faq12": {
           "question": "¿Cuál es el precio de mudanza por hora?",
-          "answer": "El precio de la mudanza depende del tipo de servicio, la distancia y el volumen. Para fletes en la RM usamos una tarifa base de $28.000 + $2.000 por km (hasta 50 km), con hasta 2 m³ incluidos; m³ adicional +$20.000 CLP (incluye carga y descarga) y ayudante +$10.000 CLP. Para mudanzas empresas u oficinas el precio puede variar. Nuestra calculadora online te da un precio aproximado al instante, o puedes solicitar un presupuesto detallado sin compromiso."
+          "answer": "El precio de la mudanza depende del tipo de servicio, la distancia y el volumen. Hasta 120 km la tarifa es $28.000 + $2.000 por km, con hasta 2 m³ incluidos. Desde el km 121, cada kilómetro extra suma $1.400 y el precio no se recalcula desde cero. m³ adicional +$20.000 CLP (incluye carga y descarga) y ayudante +$15.000 CLP. Para mudanzas empresas u oficinas el precio puede variar. Nuestra calculadora online te da un precio aproximado al instante, o puedes solicitar un presupuesto detallado sin compromiso."
         },
         "faq13": {
           "question": "¿Cuánto cuesta un flete de Santiago a Temuco?",
-          "answer": "El valor del flete Santiago Temuco depende del volumen y del tipo de carga. Para Santiago a regiones usamos una tarifa de referencia de $1500 CLP por kilómetro. Temuco está a unos 670 km de Santiago, por lo que el precio de referencia parte aproximadamente desde $1.005.000. Para un presupuesto exacto usa nuestra calculadora o escríbenos por WhatsApp con origen, destino y descripción de la carga."
+          "answer": "El valor del flete Santiago Temuco depende del volumen y del tipo de carga. Hasta 120 km se cobra $28.000 + $2.000 por km y, desde ahí, cada kilómetro extra suma $1.400. Temuco está a unos 670 km de Santiago, así que el traslado de referencia parte cerca de $1.038.000. Para un presupuesto exacto usa nuestra calculadora o escríbenos por WhatsApp con origen, destino y descripción de la carga."
         },
         "faq14": {
           "question": "¿Cuánto sale un flete de Santiago a Valparaíso o a La Serena?",
-          "answer": "El precio de un flete de Santiago a Valparaíso o de Santiago a La Serena se calcula por kilómetro (referencia $1500 CLP/km para fletes a regiones). Valparaíso está a unos 120 km y La Serena a unos 470 km. Te recomendamos usar la calculadora de la web o pedir cotización por WhatsApp con el detalle de tu carga para recibir el valor flete Santiago a tu destino."
+          "answer": "Hasta 120 km el flete es $28.000 + $2.000 por km. Desde el km 121, cada kilómetro extra suma $1.400. Valparaíso está a unos 120 km (cerca de $268.000 de traslado) y La Serena a unos 470 km (cerca de $758.000). Te recomendamos usar la calculadora de la web o pedir cotización por WhatsApp con el detalle de tu carga para recibir el valor flete Santiago a tu destino."
         },
         "faq15": {
           "question": "¿Cuánto cuesta un flete dentro de Santiago?",
-          "answer": "Un flete dentro de Santiago tiene una base de $28.000 + $2.000 por kilómetro (hasta 50 km), con hasta 2 m³ incluidos. Fletes Santiago centro, Providencia, Las Condes, Maipú y todas las comunas de la RM siguen esta tarifa. Usa la calculadora de la página principal para un precio al instante según tu ruta."
+          "answer": "Un flete de hasta 120 km tiene una base de $28.000 + $2.000 por kilómetro, con hasta 2 m³ incluidos. Pasado ese tramo, cada kilómetro extra suma $1.400. Fletes Santiago centro, Providencia, Las Condes, Maipú y todas las comunas de la RM siguen esta tarifa. Usa la calculadora de la página principal para un precio al instante según tu ruta."
         },
         "faq16": {
           "question": "¿Hacen fletes Santiago centro?",
@@ -212,11 +219,11 @@
         },
         "faq19": {
           "question": "¿Fletes económicos en Santiago?",
-          "answer": "Sí. Nuestros fletes económicos en Santiago y en toda la RM tienen tarifa base de $28.000 + $2.000/km (hasta 50 km), con hasta 2 m³ incluidos. Servicio de fletes en Santiago con precios transparentes. Cotiza con la calculadora o por WhatsApp para el valor flete Santiago según tu ruta."
+          "answer": "Sí. Nuestros fletes económicos hasta 120 km tienen tarifa base de $28.000 + $2.000/km, con hasta 2 m³ incluidos. Desde el km 121, cada kilómetro extra suma $1.400. Servicio de fletes en Santiago con precios transparentes. Cotiza con la calculadora o por WhatsApp para el valor flete Santiago según tu ruta."
         },
         "faq20": {
           "question": "¿Cuánto vale un flete de Santiago a Viña del Mar o Concepción?",
-          "answer": "El valor flete Santiago Viña del Mar o Santiago Concepción se calcula por kilómetro (referencia $1500/km para rutas a regiones). Viña está a unos 120 km y Concepción a unos 500 km. Para un precio exacto indica en la calculadora o por WhatsApp el origen, destino y volumen de carga."
+          "answer": "Hasta 120 km el precio es $28.000 + $2.000 por km. Después, cada kilómetro extra suma $1.400. Viña del Mar está a unos 120 km (cerca de $268.000 de traslado) y Concepción a unos 500 km (cerca de $800.000). Para un precio exacto indica en la calculadora o por WhatsApp el origen, destino y volumen de carga."
         },
         "faq21": {
           "question": "¿Qué es un flete pequeño Santiago y cuánto cuesta?",
@@ -228,7 +235,7 @@
         },
         "faq23": {
           "question": "¿Fletes de Santiago a regiones? Precios aproximados",
-          "answer": "Sí. Realizamos fletes de Santiago a regiones con tarifa de referencia de $1500 CLP por kilómetro. Ejemplos orientativos: Santiago–Valparaíso (120 km) desde aprox. $180.000; Santiago–Rancagua (87 km) desde aprox. $130.500; Santiago–La Serena (470 km) desde aprox. $705.000. El precio final depende del volumen. Cotiza con la calculadora o por WhatsApp."
+          "answer": "Hasta 120 km el precio es $28.000 + $2.000 por km. Desde el km 121, cada kilómetro extra suma $1.400 y el total no baja. Ejemplos del traslado: Santiago–Valparaíso (120 km) cerca de $268.000; Santiago–Rancagua (87 km) cerca de $202.000; Santiago–La Serena (470 km) cerca de $758.000. El precio final depende del volumen. Cotiza con la calculadora o por WhatsApp."
         },
         "faq24": {
           "question": "¿Servicio de fletes en Santiago? ¿Qué zonas cubren?",
@@ -236,7 +243,7 @@
         },
         "faq25": {
           "question": "¿Valor flete Santiago? ¿Cómo se calcula?",
-          "answer": "El valor flete Santiago se calcula según la distancia y el volumen. Dentro de la RM: base $28.000 + $2.000/km (hasta 50 km), hasta 2 m³ incluidos; m³ adicional +$20.000 (incl. carga y descarga), ayudante +$10.000. A regiones: $1500/km. Usa la calculadora de la página para el valor flete Santiago al instante o pide presupuesto por WhatsApp."
+          "answer": "El valor flete Santiago se calcula según la distancia y el volumen. Hasta 120 km: base $28.000 + $2.000/km, hasta 2 m³ incluidos; m³ adicional +$20.000 (incl. carga y descarga), ayudante +$15.000. Desde el km 121, cada kilómetro extra suma $1.400. Usa la calculadora de la página para el valor flete Santiago al instante o pide presupuesto por WhatsApp."
         }
       },
       "servicesTypes": {
@@ -290,19 +297,19 @@
         "subtitle": "Transparencia total en precios con calculadora online y presupuesto gratis",
         "price1": {
           "title": "Precio Flete Región Metropolitana",
-          "description": "Para fletes dentro de la RM (hasta 50 km) el precio de referencia es desde $28.000 + $2.000 por km. Incluye hasta 2 m³; por m³ adicional +$20.000 CLP (incluye carga y descarga). Por ayudante extra +$10.000 CLP. Obtén un precio aproximado con nuestra calculadora online."
+          "description": "Hasta 120 km el precio de referencia es $28.000 + $2.000 por km. Desde el km 121, cada kilómetro extra suma $1.400. Incluye hasta 2 m³; por m³ adicional +$20.000 CLP (incluye carga y descarga). Por ayudante extra +$15.000 CLP. Obtén un precio aproximado con nuestra calculadora online."
         },
         "price2": {
           "title": "Precio Flete Aproximado",
-          "description": "Calcula el precio de tu flete al instante con nuestra calculadora en la página principal. Para fletes a regiones (más de 50 km) la referencia es distancia × $1500 CLP/km. Solicita presupuesto personalizado para un precio exacto."
+          "description": "Calcula el precio de tu flete al instante con nuestra calculadora en la página principal. Pasados 120 km, cada kilómetro extra suma $1.400 y lo ya cobrado se mantiene. Solicita presupuesto personalizado para un precio exacto."
         },
         "price3": {
           "title": "Precio Flete por Km (a regiones)",
-          "description": "Para fletes de Santiago a regiones (más de 50 km) aplicamos $1500 CLP por kilómetro. El precio final suma volumen (hasta 2 m³ incluidos, +$20.000/m³ adicional con carga y descarga) y ayudantes (+$10.000 c/u). Cotiza online o por WhatsApp."
+          "description": "Pasados 120 km, cada kilómetro extra suma $1.400 (el tramo anterior sigue a $28.000 + $2.000/km). El precio final suma volumen (hasta 2 m³ incluidos, +$20.000/m³ adicional con carga y descarga) y ayudantes (+$15.000 c/u). Cotiza online o por WhatsApp."
         },
         "price4": {
           "title": "Precios Adaptados a tu Necesidad",
-          "description": "Los precios varían según tipo de servicio, distancia y volumen. En la RM: desde $28.000 + $2.000/km (hasta 50 km). Incluye hasta 2 m³; m³ extra +$20.000 (incl. carga y descarga); ayudante +$10.000. Usa la calculadora o pide presupuesto gratis."
+          "description": "Los precios varían según tipo de servicio, distancia y volumen. Hasta 120 km: $28.000 + $2.000/km. Después, cada km extra suma $1.400. Incluye hasta 2 m³; m³ extra +$20.000 (incl. carga y descarga); ayudante +$15.000. Usa la calculadora o pide presupuesto gratis."
         },
         "ctaText": "Usa nuestra calculadora para cotizar tu flete al instante o solicita un presupuesto personalizado gratuito por WhatsApp.",
         "ctaButton": "Cotizar Flete Online"
@@ -2444,6 +2451,7 @@
     "helpers": "Ayudantes",
     "helpersNote": "El chofer ayuda a cargar y descargar. Para cargas muy grandes puedes sumar ayudantes extra (máx. 10).",
     "helpersNoteShort": "Chofer carga/descarga. Cargas grandes: sumar ayudantes +$15.000 c/u.",
+    "fareRule": "Hasta 120 km: $28.000 + $2.000/km. Después, cada km extra suma $1.400.",
     "helperUnit": "c/u",
     "totalEstimatedPortesPro": "Total Estimado FletesPro",
     "presets": {
@@ -2482,11 +2490,11 @@
       "movesCompleted": "Mudanzas Completadas",
       "yearsExperience": "Años de Experiencia",
       "vipClients": "Clientes VIP",
-      "zonesCovered": "Zonas Cubiertas"
+      "zonesCovered": "Santiago y regiones"
     },
     "features": {
       "title": "La Diferencia FletesPro",
-      "trilingualDrivers": "Conductor Bilingue",
+      "trilingualDrivers": "Conductor bilingüe",
       "trilingualDriversDesc": "Hablamos español e inglés para tu comodidad y tranquilidad.",
       "portesMudanzas": "Fletes y Mudanzas",
       "portesMudanzasDesc": "Especialistas en Santiago, Providencia, Las Condes y Región Metropolitana. Servicio profesional.",
@@ -2508,7 +2516,7 @@
       "step2Title": "Embalaje Artesanal",
       "step2Desc": "Protección multicapa específica para cada objeto, desde arte hasta tecnología delicada.",
       "step3Title": "Tránsito Premium",
-      "step3Desc": "Conductores trilingües y vehículos monitoreados por GPS en tiempo real a lo largo de toda la costa.",
+      "step3Desc": "Conductores bilingües y vehículos monitoreados por GPS en Santiago y regiones.",
       "step4Title": "Entrega Manual",
       "step4Desc": "Colocamos cada mueble en su ubicación final. Tu hogar listo para vivir desde el primer minuto."
     },

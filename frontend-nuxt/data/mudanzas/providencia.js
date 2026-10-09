@@ -27,7 +27,7 @@ export default {
       { tipo: 'Departamento 1-2 dormitorios', equipo: 'Camión 3/4 + 1 peonetas', precio: '$70.000 – $150.000' },
       { tipo: 'Casa 3-4 dormitorios', equipo: 'Camión 3/4 + 2 peonetas', precio: '$150.000 – $300.000' },
       { tipo: 'Mudanza con embalaje completo', equipo: 'Camión + cuadrilla + materiales', precio: '$200.000 – $400.000' },
-      { tipo: 'Mudanza a regiones (interregional)', equipo: 'Camión + equipo', precio: 'según distancia (~$1.300/km)' }
+      { tipo: 'Mudanza a regiones (interregional)', equipo: 'Camión + equipo', precio: 'hasta 120 km: $28.000 + $2.000/km; después +$1.400/km' }
     ]
   },
   barrios: {
@@ -58,7 +58,7 @@ export default {
       { h3: 'Mudanzas de departamento o casa', text: 'Traslado de muebles, electrodomésticos y cajas. Ayudantes disponibles para carga y descarga en edificios.' },
       { h3: 'Mudanzas de oficina', text: 'Traslado de mobiliario, equipos y archivos. Coordinación con administración de edificios en Providencia.' },
       { h3: 'Mudanzas con embalaje', text: 'Cajas, plástico burbuja, film y frazadas. Desarme y armado de muebles. Consulta disponibilidad.' },
-      { h3: 'Mudanzas a regiones', text: 'Desde Providencia a Valparaíso, Concepción y más. Presupuesto según distancia (~$1.300/km).' },
+      { h3: 'Mudanzas a regiones', text: 'Desde Providencia a Valparaíso, Concepción y más. Presupuesto hasta 120 km: $28.000 + $2.000/km; después +$1.400/km.' },
       { h3: 'Transporte de muebles y objetos sueltos', text: '¿No es una mudanza completa? También hacemos transporte de muebles sueltos en Providencia: retiro y traslado de un sofá, una cama, un refrigerador, un escritorio o pocos bultos. Ideal para compras de marketplace, entregas entre departamentos o un flete pequeño dentro de la comuna. Cotiza solo lo que necesitas mover.' }
     ],
     pCombustible: 'El combustible está incluido en el precio.'

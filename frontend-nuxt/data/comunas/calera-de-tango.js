@@ -11,7 +11,7 @@ export default {
   "hero": {
     "tagline": "Fletes Calera de Tango",
     "title": "Fletes en Calera de Tango",
-    "intro": "¿Buscas fletes en Calera de Tango? Ofrecemos fletes y mudanzas en Calera de Tango con precios desde $27.000. fletes Calera de Tango, fletes y mudanzas Calera de Tango, flete Calera de Tango, fletes baratos Calera de Tango, fletes económicos Calera de Tango. Cotiza con la calculadora o por WhatsApp. Presupuesto gratis.",
+    "intro": "¿Buscas fletes en Calera de Tango? Ofrecemos fletes y mudanzas en Calera de Tango con precios desde $28.000. fletes Calera de Tango, fletes y mudanzas Calera de Tango, flete Calera de Tango, fletes baratos Calera de Tango, fletes económicos Calera de Tango. Cotiza con la calculadora o por WhatsApp. Presupuesto gratis.",
     "introExtra": "Servicio de fletes en Calera de Tango y toda la RM. Fletes baratos Calera de Tango, fletes económicos. Cotización al instante."
   },
   "ventajas": [

@@ -1,7 +1,9 @@
 <template>
   <div id="app" class="min-h-screen flex flex-col bg-white text-gray-900">
-    <PortesNavbar @get-quote="scrollToCalc" />
-    <PortesLanguageSwitcher />
+    <div class="sticky top-0 z-[70]">
+      <SiteTopbar />
+      <PortesNavbar @get-quote="scrollToCalc" />
+    </div>
     <main class="flex-grow">
       <slot />
     </main>
@@ -71,7 +73,7 @@ a { text-decoration: none; }
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
 @media print {
-  .fixed.bottom-6.right-6, header, .header-bar, Header { display: none !important; }
+  .fixed.bottom-6.right-6, header, .header-bar, Header, .site-topbar { display: none !important; }
   html, body, #app { background-color: #fff !important; color: #000 !important; width: 100% !important; height: auto !important; overflow: visible !important; margin: 0 !important; padding: 0 !important; }
   main { display: block !important; visibility: visible !important; opacity: 1 !important; width: 100% !important; margin: 0 !important; padding: 0 !important; }
   aside, nav, .sidebar, [class*="sidebar"] { display: none !important; }

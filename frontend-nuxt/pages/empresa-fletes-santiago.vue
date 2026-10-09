@@ -62,7 +62,7 @@
         <div class="bg-slate-900 text-white rounded-2xl p-6 md:p-8 border border-slate-800 shadow-xl">
           <p class="text-[10px] font-black uppercase tracking-widest text-teal-400 mb-3">Fórmula de cotización</p>
           <p class="text-lg md:text-xl font-black leading-snug">
-            Precio = distancia (km) × tarifa + volumen (m³) + ayudantes
+            Hasta 120 km: $28.000 + $2.000/km. Después, cada km extra suma $1.400. Se suman m³ extra y ayudantes.
           </p>
           <p class="text-sm text-slate-400 mt-4 font-medium">
             Sin letra chica. El precio que ves antes de llamar es el precio que pagas.
@@ -204,7 +204,7 @@ const stats = [
   { value: '4.000+', label: 'Mudanzas y fletes completados' },
   { value: '6 años', label: 'De experiencia en el sector' },
   { value: '52', label: 'Comunas RM cubiertas' },
-  { value: '100%', label: 'Zonas comprometidas' }
+  { value: 'RM', label: 'y rutas a regiones' }
 ]
 
 const movingCompanySchema = {
@@ -225,7 +225,7 @@ const movingCompanySchema = {
     addressRegion: 'Región Metropolitana',
     addressCountry: 'CL'
   },
-  telephone: '+56-9-7979-6841',
+  telephone: '+56 9 7979 6841',
   areaServed: {
     '@type': 'AdministrativeArea',
     name: 'Región Metropolitana de Santiago'

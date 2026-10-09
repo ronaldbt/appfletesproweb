@@ -11,12 +11,12 @@ export default {
   hero: {
     tagline: 'Fletes Padre Hurtado',
     title: 'Fletes en Padre Hurtado',
-    intro: '¿Buscas fletes en Padre Hurtado o fletes comuna Padre Hurtado? Ofrecemos fletes Padre Hurtado con precios desde $27.000 (hasta 2 m³). Si te preguntas cuánto sale un flete mudanza desde Santiago a Padre Hurtado, usa la calculadora indicando origen y destino; también realizamos fletes económicos Maipú a Padre Hurtado y fletes Maipú Padre Hurtado en ambas direcciones. Fletes baratos en comuna de Padre Hurtado para particulares y fletes negocios comuna Padre Hurtado para empresas. Presupuesto gratis por calculadora o WhatsApp.',
+    intro: '¿Buscas fletes en Padre Hurtado o fletes comuna Padre Hurtado? Ofrecemos fletes Padre Hurtado con precios desde $28.000 (hasta 2 m³). Si te preguntas cuánto sale un flete mudanza desde Santiago a Padre Hurtado, usa la calculadora indicando origen y destino; también realizamos fletes económicos Maipú a Padre Hurtado y fletes Maipú Padre Hurtado en ambas direcciones. Fletes baratos en comuna de Padre Hurtado para particulares y fletes negocios comuna Padre Hurtado para empresas. Presupuesto gratis por calculadora o WhatsApp.',
     introExtra: 'Fletes en Padre Hurtado con camioneta o camión. Cuánto sale un flete mudanza desde Santiago a Padre Hurtado: cotización al instante.'
   },
   precios: {
     h2: 'Precios de fletes en Padre Hurtado',
-    intro: 'El valor del flete en Padre Hurtado depende del origen, destino y volumen. Para saber cuánto sale un flete mudanza desde Santiago a Padre Hurtado indica ambas direcciones en la calculadora. Fletes baratos en comuna de Padre Hurtado y fletes económicos Maipú a Padre Hurtado con tarifa base desde $27.000.',
+    intro: 'El valor del flete en Padre Hurtado depende del origen, destino y volumen. Para saber cuánto sale un flete mudanza desde Santiago a Padre Hurtado indica ambas direcciones en la calculadora. Fletes baratos en comuna de Padre Hurtado y fletes económicos Maipú a Padre Hurtado con tarifa base desde $28.000.',
     p1: '¿Cuánto sale un flete mudanza desde Santiago a Padre Hurtado o cuánto cuesta fletes Maipú Padre Hurtado? Usa la calculadora de esta página. Fletes comuna Padre Hurtado con tarifas transparentes. Fletes en Padre Hurtado y fletes negocios comuna Padre Hurtado con cotización al instante por WhatsApp al +56 9 7979 6841.',
     h3Valores: 'Fletes baratos en comuna de Padre Hurtado',
     p2: 'Fletes en Padre Hurtado con camioneta o camión. Fletes económicos Maipú a Padre Hurtado y fletes Padre Hurtado desde Santiago con carga y descarga incluida. Presupuesto gratis.'
@@ -52,7 +52,7 @@ export default {
   h2Ventajas: '¿Por qué elegir FletesPro para fletes en Padre Hurtado?',
   ventajas: [
     'Cobertura Santiago, Maipú y Padre Hurtado: cuánto sale un flete mudanza desde Santiago a Padre Hurtado con precios claros.',
-    'Fletes económicos Maipú a Padre Hurtado y fletes Maipú Padre Hurtado con tarifa base desde $27.000.',
+    'Fletes económicos Maipú a Padre Hurtado y fletes Maipú Padre Hurtado con tarifa base desde $28.000.',
     'Fletes baratos en comuna de Padre Hurtado y fletes comuna Padre Hurtado con respuesta rápida.',
     'Fletes negocios comuna Padre Hurtado para empresas con el mismo estándar.',
     'Calculadora en página para fletes en Padre Hurtado; presupuesto gratis.'
@@ -69,7 +69,7 @@ export default {
     },
     {
       question: '¿Ofrecen fletes baratos en comuna de Padre Hurtado?',
-      answer: 'Sí. Fletes baratos en comuna de Padre Hurtado con tarifa base desde $27.000. Fletes Padre Hurtado desde Santiago o Maipú. Fletes negocios comuna Padre Hurtado también disponibles.'
+      answer: 'Sí. Fletes baratos en comuna de Padre Hurtado con tarifa base desde $28.000. Fletes Padre Hurtado desde Santiago o Maipú. Fletes negocios comuna Padre Hurtado también disponibles.'
     },
     {
       question: '¿Hacen fletes para negocios en Padre Hurtado?',

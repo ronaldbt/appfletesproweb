@@ -16,7 +16,7 @@ export default {
   },
   precios: {
     h2: 'Precios de fletes en La Florida',
-    intro: 'El valor del flete en La Florida depende del origen, destino, volumen y tipo de vehículo. Ofrecemos fletes baratos La Florida y fletes económicos La Florida con tarifa base desde $27.000. ¿Cuál es el valor de flete desde Maipú hasta La Florida? Usa la calculadora indicando direcciones y m³.',
+    intro: 'El valor del flete en La Florida depende del origen, destino, volumen y tipo de vehículo. Ofrecemos fletes baratos La Florida y fletes económicos La Florida con tarifa base desde $28.000. ¿Cuál es el valor de flete desde Maipú hasta La Florida? Usa la calculadora indicando direcciones y m³.',
     p1: 'Para fletes en la comuna de La Florida o fletes en La Florida Chile hacia otras comunas, cotiza con la calculadora de esta página. Fletes La Florida Santiago con precios claros. Flete economico La Florida para particulares y empresas. Si necesitas flete camión 3/4 cerrado La Florida o camioneta fletes La Florida, indícalo al cotizar.',
     h3Valores: 'Fletes baratos La Florida y fletes económicos La Florida con tarifas transparentes',
     p2: 'Fletes mudanzas La Florida y fletes y mudanzas La Florida con cotización al instante. Flete Santiago La Florida, flete desde Maipú a La Florida y fletes desde Las Condes a La Florida con el mismo estándar. Servicio de fletes urgentes La Florida cuando lo necesites.'
@@ -57,7 +57,7 @@ export default {
     { question: '¿Cuánto cuesta un flete desde Maipú a La Florida?', answer: 'El valor de flete desde Maipú hasta La Florida depende del volumen. Usa la calculadora de esta página indicando origen (Maipú) y destino (La Florida), o escribe por WhatsApp al +56 9 7979 6841; el presupuesto es gratis.' },
     { question: '¿Tienen camión 3/4 y camioneta para fletes La Florida?', answer: 'Sí. Ofrecemos camioneta fletes La Florida para cargas livianas, camión 3/4 flete La Florida para cargas medianas y flete camión 3/4 cerrado La Florida cuando necesites cubierta. Camión fletes La Florida para mudanzas completas.' },
     { question: '¿Hacen fletes urgentes La Florida?', answer: 'Sí. Realizamos fletes urgentes La Florida y flete urgencia desde La Florida hacia cualquier comuna. Fletes en La Florida Chile con respuesta rápida. Cotiza por WhatsApp para fletes urgentes La Florida.' },
-    { question: '¿Ofrecen fletes baratos y económicos en La Florida?', answer: 'Sí. Fletes baratos La Florida y fletes económicos La Florida con tarifa base desde $27.000. Fletes en la comuna de La Florida y fletes La Florida Santiago con cotización al instante.' },
+    { question: '¿Ofrecen fletes baratos y económicos en La Florida?', answer: 'Sí. Fletes baratos La Florida y fletes económicos La Florida con tarifa base desde $28.000. Fletes en la comuna de La Florida y fletes La Florida Santiago con cotización al instante.' },
     { question: '¿Hacen flete Santiago La Florida?', answer: 'Sí. Realizamos flete Santiago La Florida (desde Santiago centro a La Florida) y fletes La Florida Macul. Fletes en La Florida Chile hacia toda la RM. Flete economico La Florida con precios claros.' }
   ]
 }

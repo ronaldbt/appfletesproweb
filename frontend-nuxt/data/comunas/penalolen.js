@@ -11,12 +11,12 @@ export default {
   hero: {
     tagline: 'Fletes Peñalolén',
     title: 'Fletes en Peñalolén',
-    intro: '¿Buscas fletes en Peñalolén o fletes para Peñalolén? Ofrecemos servicio de fletes en Peñalolén con fletes baratos Peñalolén y fletes económicos Peñalolén desde $27.000 (hasta 2 m³). Realizamos flete Maipú a Peñalolén, fletes Peñalolén Cerrillos, fletes de Peñalolén a Lampa y fletes de Nogales a Peñalolén. Si necesitas cuánto sale un flete entre Peñalolén y Vicuña Mackenna, indica la ruta en la calculadora. Flete camioneta Peñalolén para cargas livianas; fletes hoy Peñalolén y fletes Peñalolén urgente cuando la agenda lo permita. Flete Sodimac Peñalolén para retiros o entregas en Sodimac. Fletes y mudanzas en Peñalolén y fletes Macul Peñalolén con el mismo estándar. Fletes comedor Peñalolén económicos para mudanzas de muebles. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.',
+    intro: '¿Buscas fletes en Peñalolén o fletes para Peñalolén? Ofrecemos servicio de fletes en Peñalolén con fletes baratos Peñalolén y fletes económicos Peñalolén desde $28.000 (hasta 2 m³). Realizamos flete Maipú a Peñalolén, fletes Peñalolén Cerrillos, fletes de Peñalolén a Lampa y fletes de Nogales a Peñalolén. Si necesitas cuánto sale un flete entre Peñalolén y Vicuña Mackenna, indica la ruta en la calculadora. Flete camioneta Peñalolén para cargas livianas; fletes hoy Peñalolén y fletes Peñalolén urgente cuando la agenda lo permita. Flete Sodimac Peñalolén para retiros o entregas en Sodimac. Fletes y mudanzas en Peñalolén y fletes Macul Peñalolén con el mismo estándar. Fletes comedor Peñalolén económicos para mudanzas de muebles. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.',
     introExtra: 'Flete en Peñalolén con camioneta o camión. Fletes baratos Peñalolén económicos y fletes Peñalolén económicos con cotización al instante.'
   },
   precios: {
     h2: 'Precios de fletes en Peñalolén',
-    intro: 'El valor del flete en Peñalolén depende del origen, destino y volumen. Fletes baratos Peñalolén y fletes económicos en Peñalolén con tarifa base desde $27.000. Para saber cuánto sale un flete entre Peñalolén y Vicuña Mackenna usa la calculadora indicando ambas direcciones.',
+    intro: 'El valor del flete en Peñalolén depende del origen, destino y volumen. Fletes baratos Peñalolén y fletes económicos en Peñalolén con tarifa base desde $28.000. Para saber cuánto sale un flete entre Peñalolén y Vicuña Mackenna usa la calculadora indicando ambas direcciones.',
     p1: '¿Cuánto sale un flete entre Peñalolén y Vicuña Mackenna o cuánto cuesta un flete Maipú a Peñalolén? Usa la calculadora de esta página. Fletes para Peñalolén y fletes Peñalolén Cerrillos con tarifas transparentes. Fletes baratos Peñalolén económicos y fletes Peñalolén económicos con cotización al instante. Fletes hoy Peñalolén y fletes Peñalolén urgente: contáctanos por WhatsApp.',
     h3Valores: 'Fletes baratos Peñalolén y fletes económicos Peñalolén',
     p2: 'Flete camioneta Peñalolén cuando la carga es liviana; camión para mudanzas. Servicio de fletes en Peñalolén con carga y descarga. Presupuesto gratis.'
@@ -53,7 +53,7 @@ export default {
   h2Ventajas: '¿Por qué elegir FletesPro para fletes en Peñalolén?',
   ventajas: [
     'Cobertura en Peñalolén y toda la RM: flete Maipú a Peñalolén, fletes Peñalolén Cerrillos, fletes de Peñalolén a Lampa, fletes Macul Peñalolén.',
-    'Fletes baratos Peñalolén y fletes económicos Peñalolén con tarifa base desde $27.000.',
+    'Fletes baratos Peñalolén y fletes económicos Peñalolén con tarifa base desde $28.000.',
     'Flete camioneta Peñalolén y camión según tu carga; fletes hoy Peñalolén y fletes Peñalolén urgente cuando sea posible.',
     'Flete Sodimac Peñalolén y servicio de fletes en Peñalolén con cotización al instante.',
     'Calculadora en página para cuánto sale un flete entre Peñalolén y Vicuña Mackenna; presupuesto gratis.'
@@ -78,7 +78,7 @@ export default {
     },
     {
       question: '¿Ofrecen fletes baratos y económicos en Peñalolén?',
-      answer: 'Sí. Fletes baratos Peñalolén y fletes económicos Peñalolén con tarifa base desde $27.000. Fletes baratos Peñalolén económicos y fletes Peñalolén económicos. Fletes y mudanzas en Peñalolén con cotización al instante.'
+      answer: 'Sí. Fletes baratos Peñalolén y fletes económicos Peñalolén con tarifa base desde $28.000. Fletes baratos Peñalolén económicos y fletes Peñalolén económicos. Fletes y mudanzas en Peñalolén con cotización al instante.'
     }
   ]
 }

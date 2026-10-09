@@ -264,7 +264,7 @@ const movingCompanyBase = {
   logo: logoUrl,
   url: siteUrl,
   mainEntityOfPage: currentUrl,
-  telephone: '+56979796841',
+  telephone: '+56 9 7979 6841',
   email: 'contacto@fletespro.cl',
   priceRange: '$$',
   currenciesAccepted: 'CLP',
@@ -318,7 +318,7 @@ const movingCompanyBase = {
   contactPoint: [
     {
       '@type': 'ContactPoint',
-      telephone: '+56979796841',
+      telephone: '+56 9 7979 6841',
       contactType: 'customer service',
       areaServed: 'CL',
       availableLanguage: ['Spanish', 'es'],
@@ -427,8 +427,8 @@ const serviceSchema = {
   availableChannel: {
     '@type': 'ServiceChannel',
     serviceUrl: currentUrl,
-    serviceSmsNumber: '+56979796841',
-    servicePhone: '+56979796841'
+    serviceSmsNumber: '+56 9 7979 6841',
+    servicePhone: '+56 9 7979 6841'
   },
   termsOfService: `${siteUrl}/terminos`,
   offers: {

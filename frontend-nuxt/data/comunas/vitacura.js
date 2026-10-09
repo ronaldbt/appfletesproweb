@@ -11,12 +11,12 @@ export default {
   "hero": {
     "tagline": "Fletes Vitacura",
     "title": "Fletes en Vitacura",
-    "intro": "¿Necesitas fletes en Vitacura? Ofrecemos fletes económicos en Vitacura con precios desde $27.000 (hasta 2 m³). Flete Vitacura y fletes Vitacura Santiago para particulares y empresas. Realizamos flete Talagante Vitacura y conexiones con Las Condes, Providencia y toda la RM. Fletes económicos Vitacura con carga y descarga incluida. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.",
+    "intro": "¿Necesitas fletes en Vitacura? Ofrecemos fletes económicos en Vitacura con precios desde $28.000 (hasta 2 m³). Flete Vitacura y fletes Vitacura Santiago para particulares y empresas. Realizamos flete Talagante Vitacura y conexiones con Las Condes, Providencia y toda la RM. Fletes económicos Vitacura con carga y descarga incluida. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.",
     "introExtra": "Fletes Vitacura Santiago con tarifa clara. La calculadora te da el precio al instante."
   },
   "precios": {
     "h2": "Precios de fletes en Vitacura",
-    "intro": "El valor del flete en Vitacura depende del volumen y la distancia. Fletes económicos Vitacura desde $27.000 para cargas de hasta 2 m³. Para flete Vitacura o flete Talagante Vitacura indica origen y destino en la calculadora. Fletes Vitacura Santiago con precios transparentes.",
+    "intro": "El valor del flete en Vitacura depende del volumen y la distancia. Fletes económicos Vitacura desde $28.000 para cargas de hasta 2 m³. Para flete Vitacura o flete Talagante Vitacura indica origen y destino en la calculadora. Fletes Vitacura Santiago con precios transparentes.",
     "p1": "¿Cuánto cuesta un flete en Vitacura? Flete Vitacura con carga y descarga incluida. Fletes Vitacura Santiago para particulares y empresas. Fletes económicos Vitacura con cotización al instante. Presupuesto gratis por calculadora o WhatsApp al +56 9 7979 6841.",
     "h3Valores": "Tarifas para fletes en Vitacura",
     "p2": "Fletes en Vitacura con camioneta o camión según el volumen. Fletes Vitacura Santiago y flete Talagante Vitacura con el mismo estándar."
@@ -53,6 +53,6 @@ export default {
   "h2Ventajas": "¿Por qué elegir FletesPro para fletes en Vitacura?",
   "faqs": [
     { "question": "¿Hacen flete Talagante Vitacura?", "answer": "Sí. Realizamos flete Talagante Vitacura, flete Vitacura y conexiones con toda la RM. Fletes Vitacura Santiago con precios claros. Indica origen y destino en la calculadora o escribe por WhatsApp al +56 9 7979 6841; el presupuesto es gratis." },
-    { "question": "¿Cuánto cuesta un flete en Vitacura?", "answer": "Depende del volumen y la distancia. Fletes económicos Vitacura desde $27.000 para hasta 2 m³. Fletes Vitacura Santiago con carga y descarga incluida. Usa la calculadora de esta página para ver el precio." }
+    { "question": "¿Cuánto cuesta un flete en Vitacura?", "answer": "Depende del volumen y la distancia. Fletes económicos Vitacura desde $28.000 para hasta 2 m³. Fletes Vitacura Santiago con carga y descarga incluida. Usa la calculadora de esta página para ver el precio." }
   ]
 }

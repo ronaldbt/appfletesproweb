@@ -11,12 +11,12 @@ export default {
   hero: {
     tagline: 'Fletes Pirque',
     title: 'Fletes en Pirque',
-    intro: '¿Buscas fletes en Pirque o fletes y encargos Pirque? Ofrecemos servicio de fletes y encargos Pirque con precios desde $27.000 (hasta 2 m³). Pirque queda en zona cordillera al sureste de Santiago; realizamos fletes desde y hacia la comuna conectando con Puente Alto, Santiago centro y toda la RM. Fletes en Pirque para particulares y empresas: mudanzas, traslado de muebles o encargos. Cotiza con la calculadora indicando origen y destino, o por WhatsApp; presupuesto gratis.',
+    intro: '¿Buscas fletes en Pirque o fletes y encargos Pirque? Ofrecemos servicio de fletes y encargos Pirque con precios desde $28.000 (hasta 2 m³). Pirque queda en zona cordillera al sureste de Santiago; realizamos fletes desde y hacia la comuna conectando con Puente Alto, Santiago centro y toda la RM. Fletes en Pirque para particulares y empresas: mudanzas, traslado de muebles o encargos. Cotiza con la calculadora indicando origen y destino, o por WhatsApp; presupuesto gratis.',
     introExtra: 'Fletes y encargos Pirque con camioneta o camión. La distancia desde Santiago implica tarifa por km; la calculadora te da el valor al instante.'
   },
   precios: {
     h2: 'Precios de fletes en Pirque',
-    intro: 'El valor del flete en Pirque depende de la distancia (Pirque está fuera del radio urbano de 50 km) y del volumen. Aplicamos tarifa por kilómetro para fletes y encargos Pirque. La calculadora de esta página te da el precio según la ruta que indiques.',
+    intro: 'El valor del flete en Pirque depende de la distancia y del volumen. Hasta 120 km el precio es $28.000 + $2.000 por km. La calculadora de esta página te da el precio según la ruta que indiques.',
     p1: '¿Cuánto cuesta un flete a Pirque o fletes y encargos Pirque? Indica origen y destino en la calculadora. Fletes en Pirque desde Santiago, Puente Alto o otras comunas con tarifas transparentes. Para encargos o cargas especiales escríbenos por WhatsApp al +56 9 7979 6841. Presupuesto gratis.',
     h3Valores: 'Tarifas para fletes y encargos Pirque',
     p2: 'Fletes en Pirque con camioneta o camión según la carga. Fletes y encargos Pirque con el mismo estándar de servicio: carga y descarga incluida.'

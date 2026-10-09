@@ -11,7 +11,7 @@ export default {
   "hero": {
     "tagline": "Fletes Isla de Maipo",
     "title": "Fletes en Isla de Maipo",
-    "intro": "¿Buscas fletes en Isla de Maipo? Ofrecemos fletes y mudanzas en Isla de Maipo con precios desde $27.000. flete camion de isla de maipo a puente alto, flete de isla de maipo a puente alto, flete maquinaria isla de maipo, fleted en isla de maipo, fletes en isla de maipo. Cotiza con la calculadora o por WhatsApp. Presupuesto gratis.",
+    "intro": "¿Buscas fletes en Isla de Maipo? Ofrecemos fletes y mudanzas en Isla de Maipo con precios desde $28.000. flete camion de isla de maipo a puente alto, flete de isla de maipo a puente alto, flete maquinaria isla de maipo, fleted en isla de maipo, fletes en isla de maipo. Cotiza con la calculadora o por WhatsApp. Presupuesto gratis.",
     "introExtra": "Servicio de fletes en Isla de Maipo y toda la RM. Fletes baratos Isla de Maipo, fletes económicos. Cotización al instante."
   },
   "ventajas": [

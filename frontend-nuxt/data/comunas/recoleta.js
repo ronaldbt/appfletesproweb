@@ -11,12 +11,12 @@ export default {
   "hero": {
     "tagline": "Fletes Recoleta",
     "title": "Fletes en Recoleta",
-    "intro": "¿Necesitas fletes en Recoleta? Ofrecemos fletes baratos y económicos en Recoleta con precios desde $27.000 (hasta 2 m³). Fletes Recoleta Santiago para particulares y empresas: mudanzas, traslado de muebles o encargos. Servicio de fletes en la comuna de Recoleta con camioneta o flete camión plano según la carga. Realizamos fletes desde Maipú a Recoleta, flete de San Bernardo a Recoleta y conexiones con Santiago y toda la RM. Fletes y mudanzas Recoleta; también cotizamos rutas largas como fletes Recoleta a Cartagena. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.",
+    "intro": "¿Necesitas fletes en Recoleta? Ofrecemos fletes baratos y económicos en Recoleta con precios desde $28.000 (hasta 2 m³). Fletes Recoleta Santiago para particulares y empresas: mudanzas, traslado de muebles o encargos. Servicio de fletes en la comuna de Recoleta con camioneta o flete camión plano según la carga. Realizamos fletes desde Maipú a Recoleta, flete de San Bernardo a Recoleta y conexiones con Santiago y toda la RM. Fletes y mudanzas Recoleta; también cotizamos rutas largas como fletes Recoleta a Cartagena. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.",
     "introExtra": "Fletes Recoleta Santiago con tarifa clara. Flete barato y económico Recoleta. La calculadora te da el precio al instante."
   },
   "precios": {
     "h2": "Precios de fletes en Recoleta",
-    "intro": "El valor del flete en Recoleta depende del volumen y la distancia. Fletes económicos Recoleta desde $27.000 para cargas de hasta 2 m³. Para saber cuánto sale un flete de San Bernardo a Recoleta o fletes Maipú a Recoleta indica origen y destino en la calculadora. Flete barato Recoleta cuando la carga es liviana; flete camión plano Recoleta para mudanzas o cargas voluminosas.",
+    "intro": "El valor del flete en Recoleta depende del volumen y la distancia. Fletes económicos Recoleta desde $28.000 para cargas de hasta 2 m³. Para saber cuánto sale un flete de San Bernardo a Recoleta o fletes Maipú a Recoleta indica origen y destino en la calculadora. Flete barato Recoleta cuando la carga es liviana; flete camión plano Recoleta para mudanzas o cargas voluminosas.",
     "p1": "¿Cuánto cuesta un flete en Recoleta? Fletes baratos Recoleta para camioneta con pocos bultos; fletes económicos Recoleta con carga y descarga incluida. Fletes en la comuna de Recoleta y conexiones con Santiago, Maipú, San Bernardo y toda la RM. Para fletes y mudanzas Recoleta cotiza por WhatsApp al +56 9 7979 6841. Presupuesto gratis.",
     "h3Valores": "Tarifas para fletes en Recoleta",
     "p2": "Fletes en Recoleta con camioneta o camión plano según la carga. Fletes baratos y económicos Recoleta con precios transparentes; la calculadora y WhatsApp te dan el valor al instante."

@@ -10,6 +10,7 @@
 import { computed } from 'vue'
 
 const { locale } = useI18n()
+const { getAlternateLinks } = useHreflang()
 
 // Mapeo de locales a atributos HTML lang (es-CL para Chile)
 const langMap = {
@@ -23,6 +24,7 @@ useHead({
   htmlAttrs: computed(() => ({
     lang: langMap[locale.value] || 'es-CL'
   })),
+  link: computed(() => getAlternateLinks()),
   // Evita "… | FletesPro | FletesPro" si la página ya incluye la marca al final
   titleTemplate: (titleChunk) => {
     const t = titleChunk != null ? String(titleChunk).trim() : ''

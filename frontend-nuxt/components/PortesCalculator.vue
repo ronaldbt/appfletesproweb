@@ -230,6 +230,7 @@
               <span class="text-xl font-bold text-teal-500">CLP</span>
             </div>
             <p class="text-[8px] text-teal-500/90 mt-2">{{ $t('calculator.includesFreeM3') }} {{ calculation.includesFreeM3 }} m³</p>
+            <p v-if="calculation.fareLine" class="text-[9px] text-slate-400 mt-2 leading-snug">{{ calculation.fareLine }}</p>
             <div v-if="calculation.volumeExtra > 0 || calculation.helpersExtra > 0" class="mt-3 space-y-1 text-[9px] text-slate-400">
               <p v-if="calculation.volumeExtra > 0">{{ $t('calculator.volumeExtra') }}: +${{ calculation.volumeExtra.toLocaleString('es-CL') }}</p>
               <p v-if="calculation.helpersExtra > 0">{{ $t('calculator.helpers') }}: +${{ calculation.helpersExtra.toLocaleString('es-CL') }}</p>
@@ -320,6 +321,8 @@
           <span class="text-xl md:text-2xl font-black text-white tracking-tighter truncate">{{ calculation.priceFormatted || calculation.price }} CLP</span>
         </div>
         <p class="text-[7px] text-teal-500/90 font-bold">{{ $t('calculator.includesFreeM3') }} {{ calculation.includesFreeM3 }} m³</p>
+        <p v-if="calculation.fareLine" class="text-[8px] text-slate-400 leading-snug">{{ calculation.fareLine }}</p>
+        <p class="text-[8px] text-slate-500 leading-snug">{{ $t('calculator.fareRule') }}</p>
         <div v-if="calculation.volumeExtra > 0" class="text-[8px] text-slate-400 flex justify-between gap-2">
           <span class="truncate">{{ $t('calculator.volumeExtra') }} ({{ calculation.extraM3.toFixed(1) }} m³)</span>
           <span class="shrink-0">+${{ calculation.volumeExtra.toLocaleString('es-CL') }}</span>
@@ -460,11 +463,11 @@ const updateQuantity = (id, delta) => {
   }
 }
 
-// Fórmula Chile: RM hasta 50 km = $28.000 + (km × $2.000); más de 50 km (regiones) = km × $1500
+// Hasta 120 km: $28.000 + $2.000/km. Después, cada km extra suma $1.400 (no se recalcula el tramo ya cobrado).
 const BASE_RM_CLP = 28000
-const POR_KM_RM_CLP = 2000
-const POR_KM_REGIONES_CLP = 1500
-const LIMITE_KM_RM = 50
+const POR_KM_CORTO_CLP = 2000
+const POR_KM_LARGO_CLP = 1400
+const CORTE_KM = 120
 const FREE_M3 = 2
 const PRICE_PER_EXTRA_M3 = 20000 // Incluye carga y descarga
 const HELPER_PRICE_CLP = 15000
@@ -475,12 +478,25 @@ const fleteDate = ref('')
 const fleteTime = ref('12:00')
 const helpersCount = ref(0)
 
+function clp(n) {
+  return Math.round(n).toLocaleString('es-CL')
+}
+
 function calcPrecioFromDistancia(km) {
   if (!km || km <= 0) return 0
-  if (km <= LIMITE_KM_RM) {
-    return Math.round(BASE_RM_CLP + km * POR_KM_RM_CLP)
+  if (km <= CORTE_KM) return Math.round(BASE_RM_CLP + km * POR_KM_CORTO_CLP)
+  return Math.round(BASE_RM_CLP + CORTE_KM * POR_KM_CORTO_CLP + (km - CORTE_KM) * POR_KM_LARGO_CLP)
+}
+
+function fareLineFromKm(km) {
+  if (!km || km <= 0) return ''
+  const kmTxt = km.toFixed(1)
+  if (km <= CORTE_KM) {
+    return `$${clp(BASE_RM_CLP)} + ${kmTxt} km × $${clp(POR_KM_CORTO_CLP)}`
   }
-  return Math.round(km * POR_KM_REGIONES_CLP)
+  const extra = km - CORTE_KM
+  const primeros = BASE_RM_CLP + CORTE_KM * POR_KM_CORTO_CLP
+  return `$${clp(primeros)} (hasta ${CORTE_KM} km) + ${extra.toFixed(1)} km × $${clp(POR_KM_LARGO_CLP)}`
 }
 
 const calculation = computed(() => {
@@ -506,7 +522,8 @@ const calculation = computed(() => {
     priceFormatted: totalPrice > 0 ? `$${Math.round(totalPrice).toLocaleString('es-CL')}` : '0',
     itemCount: items.value.reduce((acc, i) => acc + i.quantity, 0),
     distancia: distancia.value,
-    includesFreeM3: FREE_M3
+    includesFreeM3: FREE_M3,
+    fareLine: fareLineFromKm(distancia.value)
   }
 })
 
@@ -519,12 +536,13 @@ const whatsappQuoteUrl = computed(() => {
     'Hola, quiero cotización / reservar flete FletesPro',
     `Ruta: ${origin.value || '--'} → ${destination.value || '--'}`,
     `Distancia: ${c.distancia != null ? c.distancia.toFixed(1) + ' km' : '--'}`,
+    c.fareLine ? `Traslado: ${c.fareLine}` : '',
     `Carga: ${c.totalVolume.toFixed(1)} m³ (incluye ${FREE_M3} m³)`,
     `Ítems: ${itemsLine}`,
     `Fecha: ${schedule}`,
     `Ayudantes extra: ${helpersCount.value}`,
     `Total estimado: ${c.priceFormatted} CLP`
-  ].join('\n')
+  ].filter(Boolean).join('\n')
   return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(msg)}`
 })
 
@@ -622,7 +640,7 @@ function createMap() {
   const inputDestino = document.getElementById('destino')
 
   if (inputOrigen && inputDestino) {
-    // Bounds Chile (para permitir RM y rutas a regiones; si distancia > 50 km se aplica tarifa regiones)
+    // Bounds Chile (RM y regiones; después de 120 km cada km extra suma $1.400)
     const chileBounds = new google.maps.LatLngBounds(
       new google.maps.LatLng(-56, -76),
       new google.maps.LatLng(-17, -66)
@@ -677,7 +695,6 @@ function calculateRoute() {
       const leg = result.routes[0].legs[0]
       distancia.value = leg.distance.value / 1000 // Convertir metros a kilómetros
       
-      // RM ≤50 km: $28.000 + (km × $2.000); >50 km: km × $1500 (regiones)
       precio.value = calcPrecioFromDistancia(distancia.value)
       
       // Ajustar el zoom para que se vea toda la ruta

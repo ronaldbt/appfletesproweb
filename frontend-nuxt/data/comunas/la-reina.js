@@ -16,7 +16,7 @@ export default {
   },
   precios: {
     h2: 'Precios de fletes en La Reina',
-    intro: 'El valor del flete La Reina depende del origen, destino y volumen. Ofrecemos fletes La Reina con tarifa base desde $27.000. Flete de La Reina a Providencia, flete desde Independencia a La Reina y fletes económicos desde Independencia a La Reina con precios transparentes.',
+    intro: 'El valor del flete La Reina depende del origen, destino y volumen. Ofrecemos fletes La Reina con tarifa base desde $28.000. Flete de La Reina a Providencia, flete desde Independencia a La Reina y fletes económicos desde Independencia a La Reina con precios transparentes.',
     p1: 'Para flete La Reina a Santiago, flete Santiago La Reina o fletes entre Providencia y La Reina indica origen y destino en la calculadora. Fletes ñuñoa La Reina con el mismo estándar. Fletes La Reina Marquez y zona oriente. Escríbenos por WhatsApp al +56 9 7979 6841 para presupuesto gratis.',
     h3Valores: 'Fletes La Reina con tarifas claras',
     p2: 'Nuestro servicio de flete La Reina incluye carga y descarga. Fletes entre Providencia y La Reina, fletes desde Independencia a La Reina y fletes La Reina a Santiago con cotización al instante. Fletes y mudanza La Reina para mudanzas completas.'

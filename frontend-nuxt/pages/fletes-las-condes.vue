@@ -214,6 +214,7 @@ import {
   FLETESPRO_CL_URL,
   FLETESPRO_CL_EMAIL,
   FLETESPRO_CL_PHONE,
+  FLETESPRO_CL_PHONE_DISPLAY,
   fletesProSameAs,
   fletesProFounderSchema
 } from '~/config/brandEntity.js'
@@ -270,7 +271,7 @@ const organizationSchema = {
   url: `${siteUrl}/`,
   logo: logoUrl,
   email: FLETESPRO_CL_EMAIL,
-  telephone: FLETESPRO_CL_PHONE,
+  telephone: FLETESPRO_CL_PHONE_DISPLAY,
   sameAs: [waUrl, ...fletesProSameAs()]
 }
 
@@ -286,7 +287,7 @@ const movingCompanyBase = {
   name: 'FletesPro',
   image: logoUrl,
   url: currentUrl,
-  telephone: FLETESPRO_CL_PHONE,
+  telephone: FLETESPRO_CL_PHONE_DISPLAY,
   email: FLETESPRO_CL_EMAIL,
   priceRange: '$$',
   description: 'Fletes en Las Condes desde $28.000: camioneta, furgón y mini fletes para muebles, electrodomésticos y pocos bultos. Retiros en tiendas y salida el mismo día.',

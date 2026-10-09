@@ -79,7 +79,7 @@ const routeSlug = 'conchali'
 const currentUrl = `${siteUrl}/fletes-${routeSlug}`
 
 const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Inicio', item: siteUrl }, { '@type': 'ListItem', position: 2, name: 'Fletes Conchalí', item: currentUrl }] }
-const serviceSchema = { '@context': 'https://schema.org', '@type': 'Service', serviceType: 'Fletes en Conchalí', name: 'Fletes Conchalí', description: content.meta.description, provider: { '@type': 'LocalBusiness', name: 'FletesPro', url: siteUrl, telephone: '+56-9-7979-6841', address: { '@type': 'PostalAddress', addressLocality: 'Providencia', addressRegion: 'Región Metropolitana', addressCountry: 'CL' } }, areaServed: { '@type': 'City', name: 'Conchalí', containedInPlace: { '@type': 'AdministrativeArea', name: 'Región Metropolitana' } } }
+const serviceSchema = { '@context': 'https://schema.org', '@type': 'Service', serviceType: 'Fletes en Conchalí', name: 'Fletes Conchalí', description: content.meta.description, provider: { '@type': 'LocalBusiness', name: 'FletesPro', url: siteUrl, telephone: '+56 9 7979 6841', address: { '@type': 'PostalAddress', addressLocality: 'Providencia', addressRegion: 'Región Metropolitana', addressCountry: 'CL' } }, areaServed: { '@type': 'City', name: 'Conchalí', containedInPlace: { '@type': 'AdministrativeArea', name: 'Región Metropolitana' } } }
 const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: content.faqs.map(faq => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) }
 
 useHead({

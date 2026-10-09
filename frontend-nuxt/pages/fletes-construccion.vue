@@ -138,7 +138,7 @@ const serviceSchema = {
     '@type': 'LocalBusiness',
     name: 'FletesPro',
     url: siteUrl,
-    telephone: '+56-9-7979-6841'
+    telephone: '+56 9 7979 6841'
   },
   areaServed: {
     '@type': 'AdministrativeArea',

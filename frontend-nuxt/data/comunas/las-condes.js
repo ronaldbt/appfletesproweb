@@ -24,7 +24,7 @@ export default {
       { servicio: 'Mini flete / flete pequeño (pocos bultos)', vehiculo: 'Camioneta', precio: 'desde $28.000 (hasta 2 m³)' },
       { servicio: 'Flete mediano (muebles, electrodomésticos)', vehiculo: 'Camioneta / pickup', precio: '$28.000 + $2.000/km' },
       { servicio: 'Flete grande / minimudanza', vehiculo: 'Furgón o camión 3/4', precio: 'según volumen (+$20.000 por m³ extra)' },
-      { servicio: 'Flete a regiones / costa', vehiculo: 'Camión', precio: 'distancia × $1.500/km' },
+      { servicio: 'Flete a regiones / costa', vehiculo: 'Camión', precio: 'hasta 120 km: $28.000 + $2.000/km; después +$1.400/km' },
       { servicio: 'Ayudante adicional', vehiculo: '—', precio: '+$15.000 c/u' }
     ]
   },
@@ -96,7 +96,7 @@ export default {
   faqs: [
     {
       question: '¿Cuánto cuesta un flete en Las Condes?',
-      answer: 'La tarifa base parte desde $28.000 e incluye hasta 2 m³, chofer y carga y descarga. Sobre 50 km se suma valor por kilómetro. Usa la calculadora de la página para el valor exacto según tu ruta y volumen.'
+      answer: 'Hasta 120 km la tarifa es $28.000 + $2.000 por km e incluye hasta 2 m³, chofer y carga y descarga. Desde el km 121, cada kilómetro extra suma $1.400 y el precio no se recalcula desde cero. Usa la calculadora de la página para el valor exacto según tu ruta y volumen.'
     },
     {
       question: '¿Cuánto cuesta un mini flete o flete pequeño en Las Condes?',

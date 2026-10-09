@@ -3,7 +3,11 @@ export const FLETESPRO_CL_URL = 'https://fletespro.cl'
 export const PORTESPRO_ES_URL = 'https://portespro.es'
 /** Correo público NAP Chile (nunca portespro.es en fletespro.cl). */
 export const FLETESPRO_CL_EMAIL = 'contacto@fletespro.cl'
+/** Visible y en schema LocalBusiness. Mismo formato que la ficha de Google. */
+export const FLETESPRO_CL_PHONE_DISPLAY = '+56 9 7979 6841'
+/** E.164 para tel: y wa.me */
 export const FLETESPRO_CL_PHONE = '+56979796841'
+export const FLETESPRO_CL_WHATSAPP = '56979796841'
 
 export const FOUNDER_NAME = 'Ronald Bravo'
 export const FOUNDER_JOB_TITLE = 'Fundador y coordinador de operaciones'

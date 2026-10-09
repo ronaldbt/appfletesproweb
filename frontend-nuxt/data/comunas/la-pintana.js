@@ -16,7 +16,7 @@ export default {
   },
   precios: {
     h2: 'Precios de fletes en La Pintana',
-    intro: 'El valor del flete La Pintana depende del origen, destino y volumen. Ofrecemos fletes barato para La Pintana y fletes económicos La Pintana con tarifa base desde $27.000 (hasta 2 m³).',
+    intro: 'El valor del flete La Pintana depende del origen, destino y volumen. Ofrecemos fletes barato para La Pintana y fletes económicos La Pintana con tarifa base desde $28.000 (hasta 2 m³).',
     p1: 'Para fletes La Pintana o fletes para La Pintana indica origen y destino en la calculadora de esta página. Fletes comuna La Pintana con precios transparentes. Fletes con un camión a La Pintana cuando la carga sea grande; cotizamos según volumen. Escríbenos por WhatsApp al +56 9 7979 6841 para presupuesto gratis.',
     h3Valores: 'Fletes barato para La Pintana y fletes económicos La Pintana con tarifas claras',
     p2: 'Nuestro servicio de flete La Pintana incluye carga y descarga. Fletes comuna La Pintana hacia Providencia, Las Condes, Maipú y toda la RM. Fletes con un camión a La Pintana para mudanzas y cargas voluminosas.'
@@ -53,7 +53,7 @@ export default {
   ],
   cierre: 'Contáctanos para fletes La Pintana, flete La Pintana o fletes comuna La Pintana. Presupuesto gratis. WhatsApp +56 9 7979 6841.',
   faqs: [
-    { question: '¿Ofrecen fletes baratos para La Pintana?', answer: 'Sí. Ofrecemos fletes barato para La Pintana y fletes económicos La Pintana con tarifa base desde $27.000. Fletes La Pintana y fletes para La Pintana con cotización al instante. Fletes comuna La Pintana con precios transparentes.' },
+    { question: '¿Ofrecen fletes baratos para La Pintana?', answer: 'Sí. Ofrecemos fletes barato para La Pintana y fletes económicos La Pintana con tarifa base desde $28.000. Fletes La Pintana y fletes para La Pintana con cotización al instante. Fletes comuna La Pintana con precios transparentes.' },
     { question: '¿Tienen camión para fletes a La Pintana?', answer: 'Sí. Ofrecemos fletes con un camión a La Pintana para mudanzas y cargas grandes. Flete La Pintana y fletes La Pintana con el vehículo adecuado a tu carga. Fletes comuna La Pintana con equipo de carga y descarga.' },
     { question: '¿Hacen fletes para La Pintana?', answer: 'Sí. Realizamos fletes para La Pintana y fletes La Pintana desde y hacia la comuna. Fletes comuna La Pintana con cobertura en toda la RM. Fletes barato para La Pintana y fletes económicos La Pintana.' },
     { question: '¿Cotizan fletes publicados en Yapo?', answer: 'Sí. Si buscaste yapo fletes en La Pintana o en portales de avisos, cotiza con nosotros por WhatsApp. Fletes La Pintana y fletes con un camión a La Pintana con precios claros y sin sorpresas.' }

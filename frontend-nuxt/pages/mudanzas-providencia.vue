@@ -221,7 +221,7 @@ const movingCompanyBase = {
   name: 'FletesPro',
   image: logoUrl,
   url: currentUrl,
-  telephone: '+56979796841',
+  telephone: '+56 9 7979 6841',
   priceRange: '$$',
   description: 'Empresa de mudanzas en Providencia: mudanzas de departamentos, casas y oficinas, transporte de muebles, embalaje y traslados a regiones. Barrio Italia, Pedro de Valdivia, Los Leones y toda la comuna.',
   areaServed: {

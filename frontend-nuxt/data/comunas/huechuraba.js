@@ -5,7 +5,7 @@
 export default {
   meta: {
     title: 'Fletes Huechuraba | Flete camión pluma y mudanzas | Cotiza | FletesPro',
-    description: 'Fletes en Huechuraba. Flete camión pluma Huechuraba para cargas pesadas y grúa. Fletes y mudanzas en Huechuraba y toda la RM. Precios desde $27.000. Cotiza por WhatsApp.',
+    description: 'Fletes en Huechuraba. Flete camión pluma Huechuraba para cargas pesadas y grúa. Fletes y mudanzas en Huechuraba y toda la RM. Precios desde $28.000. Cotiza por WhatsApp.',
     keywords: 'fletes huechuraba, flete camion pluma huechuraba'
   },
   hero: {
@@ -16,7 +16,7 @@ export default {
   },
   precios: {
     h2: 'Precios de fletes en Huechuraba',
-    intro: 'El valor del flete en Huechuraba depende del tipo de servicio: fletes estándar o flete camión pluma Huechuraba. Tarifa base para fletes Huechuraba desde $27.000 (hasta 2 m³).',
+    intro: 'El valor del flete en Huechuraba depende del tipo de servicio: fletes estándar o flete camión pluma Huechuraba. Tarifa base para fletes Huechuraba desde $28.000 (hasta 2 m³).',
     p1: 'Para flete camión pluma Huechuraba el precio se cotiza según peso, distancia y tiempo de uso de la pluma. Escríbenos por WhatsApp al +56 9 7979 6841 con el detalle de lo que necesitas transportar y te damos el valor al instante.',
     h3Valores: 'Fletes Huechuraba con tarifas transparentes',
     p2: 'Fletes en Huechuraba con carga y descarga incluida. Flete camión pluma Huechuraba cuando la carga requiera grúa. Cotización sin compromiso.'
@@ -54,7 +54,7 @@ export default {
   cierre: 'Contáctanos para fletes en Huechuraba o flete camión pluma Huechuraba. Presupuesto gratis. WhatsApp +56 9 7979 6841.',
   faqs: [
     { question: '¿Ofrecen flete camión pluma en Huechuraba?', answer: 'Sí. Ofrecemos flete camión pluma Huechuraba para cargas que requieran grúa o pluma: maquinaria, materiales de construcción, cargas pesadas. Cotiza por WhatsApp al +56 9 7979 6841 con el detalle; el precio depende del peso y la ruta.' },
-    { question: '¿Cuánto cuesta un flete en Huechuraba?', answer: 'Para fletes Huechuraba estándar, la tarifa base es desde $27.000 (hasta 2 m³). Usa la calculadora de esta página. Para flete camión pluma Huechuraba el valor se cotiza según la carga; escríbenos por WhatsApp.' },
+    { question: '¿Cuánto cuesta un flete en Huechuraba?', answer: 'Para fletes Huechuraba estándar, la tarifa base es desde $28.000 (hasta 2 m³). Usa la calculadora de esta página. Para flete camión pluma Huechuraba el valor se cotiza según la carga; escríbenos por WhatsApp.' },
     { question: '¿Hacen fletes y mudanzas en Huechuraba?', answer: 'Sí. Realizamos fletes en Huechuraba y mudanzas con origen o destino en la comuna. Fletes Huechuraba hacia y desde toda la RM. Si necesitas flete camión pluma Huechuraba para la mudanza, indícalo al cotizar.' },
     { question: '¿Qué es el flete camión pluma?', answer: 'Es un camión con grúa (pluma) para cargar y descargar objetos pesados o voluminosos. El flete camión pluma Huechuraba es ideal para maquinaria, materiales de construcción o cargas que no se puedan subir a mano.' }
   ]

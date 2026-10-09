@@ -11,12 +11,12 @@ export default {
   hero: {
     tagline: 'Fletes Maipú',
     title: 'Fletes en Maipú',
-    intro: '¿Buscas fletes en Maipú o fletes y mudanzas Maipú? Ofrecemos fletes económicos Maipú y fletes baratos Maipú con precios desde $27.000 (hasta 2 m³). Realizamos flete desde Maipú a La Florida, flete desde Maipú a Quilicura, flete de Maipú a Santiago centro y fletes Maipú Santiago en ambas direcciones. Servicio en Ciudad Satélite Maipú, Villa Los Héroes Maipú, sector Los Profesores y toda la comuna. Fletes Maipú camioneta para cargas livianas; fletes en comuna de Maipú y fletes en Maipú Chile con el mismo estándar. Si necesitas valor de flete desde Maipú hasta La Florida o fletes Sodimac Maipú (retiro o entrega), cotiza con la calculadora o por WhatsApp; presupuesto gratis.',
+    intro: '¿Buscas fletes en Maipú o fletes y mudanzas Maipú? Ofrecemos fletes económicos Maipú y fletes baratos Maipú con precios desde $28.000 (hasta 2 m³). Realizamos flete desde Maipú a La Florida, flete desde Maipú a Quilicura, flete de Maipú a Santiago centro y fletes Maipú Santiago en ambas direcciones. Servicio en Ciudad Satélite Maipú, Villa Los Héroes Maipú, sector Los Profesores y toda la comuna. Fletes Maipú camioneta para cargas livianas; fletes en comuna de Maipú y fletes en Maipú Chile con el mismo estándar. Si necesitas valor de flete desde Maipú hasta La Florida o fletes Sodimac Maipú (retiro o entrega), cotiza con la calculadora o por WhatsApp; presupuesto gratis.',
     introExtra: 'Fletes Maipú a Recoleta, fletes Maipú Santiago centro y fletes mudanzas Maipú. Arriendo flete Maipú no; ofrecemos servicio completo con chofer. Camioneta fletes Maipú y camión cuando la carga lo requiera.'
   },
   precios: {
     h2: 'Precios de fletes en Maipú',
-    intro: 'El valor del flete en Maipú depende del origen, destino y volumen. Fletes económicos Maipú y fletes baratos Maipú con tarifa base desde $27.000 (hasta 2 m³). Para conocer el valor de flete desde Maipú hasta La Florida o el flete de Maipú a Santiago centro, usa la calculadora indicando direcciones y m³.',
+    intro: 'El valor del flete en Maipú depende del origen, destino y volumen. Fletes económicos Maipú y fletes baratos Maipú con tarifa base desde $28.000 (hasta 2 m³). Para conocer el valor de flete desde Maipú hasta La Florida o el flete de Maipú a Santiago centro, usa la calculadora indicando direcciones y m³.',
     p1: '¿Cuánto cuesta un flete desde Maipú a La Florida o un flete desde Maipú a Quilicura? Indica origen y destino en la calculadora de esta página. Fletes Maipú Santiago y fletes Maipú Santiago centro con tarifas transparentes. Fletes en comuna de Maipú y fletes en Maipú Chile con cotización al instante. Fletes Ciudad Satélite Maipú, fletes Villa Los Héroes Maipú y flete Los Profesores Maipú con el mismo criterio de precio.',
     h3Valores: 'Fletes económicos Maipú y fletes baratos Maipú',
     p2: 'Fletes Maipú camioneta cuando la carga es liviana; camión para mudanzas. Fletes y mudanzas Maipú y fletes mudanzas Maipú con carga y descarga incluida. Presupuesto gratis.'
@@ -57,7 +57,7 @@ export default {
   h2Ventajas: '¿Por qué elegir FletesPro para fletes en Maipú?',
   ventajas: [
     'Cobertura en Maipú y toda la RM: flete desde Maipú a La Florida, flete desde Maipú a Quilicura, flete de Maipú a Santiago centro, fletes Maipú a Recoleta.',
-    'Fletes económicos Maipú y fletes baratos Maipú con tarifa base desde $27.000.',
+    'Fletes económicos Maipú y fletes baratos Maipú con tarifa base desde $28.000.',
     'Fletes Maipú camioneta y camión según tu carga; camioneta fletes Maipú cuando la carga es liviana.',
     'Fletes Ciudad Satélite Maipú, fletes Villa Los Héroes Maipú y flete Los Profesores Maipú con el mismo estándar.',
     'Valor de flete desde Maipú hasta La Florida y otras rutas con la calculadora; fletes Sodimac Maipú y fletes en comuna de Maipú con respuesta rápida por WhatsApp.'
@@ -82,7 +82,7 @@ export default {
     },
     {
       question: '¿Ofrecen fletes económicos y baratos en Maipú?',
-      answer: 'Sí. Fletes económicos Maipú y fletes baratos Maipú con tarifa base desde $27.000. Flete de Maipú a Santiago centro, fletes Maipú a Recoleta y fletes mudanzas Maipú con cotización al instante.'
+      answer: 'Sí. Fletes económicos Maipú y fletes baratos Maipú con tarifa base desde $28.000. Flete de Maipú a Santiago centro, fletes Maipú a Recoleta y fletes mudanzas Maipú con cotización al instante.'
     }
   ]
 }

@@ -11,13 +11,13 @@ export default {
   hero: {
     tagline: 'Fletes Providencia',
     title: 'Fletes en Providencia',
-    intro: '¿Necesitas fletes en Providencia? Ofrecemos fletes baratos y económicos en Providencia con precios desde $27.000 (hasta 2 m³). Servicio de fletes en Providencia para particulares y empresas: mudanzas, traslado de muebles, flete de colchón o encargos. Cubrimos fletes dentro de Providencia, fletes desde Providencia a otras comunas y rutas como flete de La Reina a Providencia, flete de Providencia a Estación Central, flete Providencia a San Miguel o flete Providencia a Ñuñoa. Fletes pequeños y mini fletes en Providencia también. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.',
+    intro: '¿Necesitas fletes en Providencia? Ofrecemos fletes baratos y económicos en Providencia con precios desde $28.000 (hasta 2 m³). Servicio de fletes en Providencia para particulares y empresas: mudanzas, traslado de muebles, flete de colchón o encargos. Cubrimos fletes dentro de Providencia, fletes desde Providencia a otras comunas y rutas como flete de La Reina a Providencia, flete de Providencia a Estación Central, flete Providencia a San Miguel o flete Providencia a Ñuñoa. Fletes pequeños y mini fletes en Providencia también. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.',
     introExtra: 'Fletes y mudanzas en Providencia y Santiago. Fletes económicos Providencia con tarifa clara. La calculadora te da el valor al instante.'
   },
   precios: {
     h2: 'Precios de fletes en Providencia',
     intro: 'El valor del flete en Providencia depende del volumen y la distancia. Para fletes dentro de Providencia o trayectos cortos (por ejemplo flete de La Reina a Providencia o flete Providencia a Ñuñoa) el precio suele ser menor. Para fletes desde Providencia a comunas más lejanas aplicamos tarifa por kilómetro. Fletes baratos en Providencia son posibles cuando la carga es liviana: usa la calculadora de esta página.',
-    p1: '¿Cuánto cuesta un flete en Providencia? Fletes económicos Providencia desde $27.000 para cargas de hasta 2 m³. Flete barato Providencia para un colchón, un mueble o bultos: indica origen y destino en la calculadora. Servicio de fletes Providencia con carga y descarga incluida. Para mudanzas completas o fletes y mudanzas en Providencia cotiza por WhatsApp al +56 9 7979 6841. Presupuesto gratis.',
+    p1: '¿Cuánto cuesta un flete en Providencia? Fletes económicos Providencia desde $28.000 para cargas de hasta 2 m³. Flete barato Providencia para un colchón, un mueble o bultos: indica origen y destino en la calculadora. Servicio de fletes Providencia con carga y descarga incluida. Para mudanzas completas o fletes y mudanzas en Providencia cotiza por WhatsApp al +56 9 7979 6841. Presupuesto gratis.',
     h3Valores: 'Tarifas para fletes en Providencia',
     p2: 'Fletes en Providencia con camioneta o camión según el volumen. Fletes baratos Providencia y fletes económicos Providencia con el mismo estándar: precios transparentes y respuesta rápida.'
   },
@@ -62,7 +62,7 @@ export default {
   faqs: [
     {
       question: '¿Cuánto cuesta un flete en Providencia?',
-      answer: 'Depende del volumen y la distancia. Fletes económicos Providencia desde $27.000 para hasta 2 m³. Para fletes dentro de Providencia o trayectos cortos (por ejemplo flete de La Reina a Providencia) el valor suele ser menor. Usa la calculadora de esta página o escribe por WhatsApp al +56 9 7979 6841; el presupuesto es gratis.'
+      answer: 'Depende del volumen y la distancia. Fletes económicos Providencia desde $28.000 para hasta 2 m³. Para fletes dentro de Providencia o trayectos cortos (por ejemplo flete de La Reina a Providencia) el valor suele ser menor. Usa la calculadora de esta página o escribe por WhatsApp al +56 9 7979 6841; el presupuesto es gratis.'
     },
     {
       question: '¿Hacen fletes de La Reina a Providencia?',

@@ -11,7 +11,7 @@ export default {
   "hero": {
     "tagline": "Fletes Alhué",
     "title": "Fletes en Alhué",
-    "intro": "¿Buscas fletes en Alhué? Ofrecemos fletes y mudanzas en Alhué con precios desde $27.000. fletes Alhué, fletes y mudanzas Alhué, flete Alhué, fletes baratos Alhué, fletes económicos Alhué. Cotiza con la calculadora o por WhatsApp. Presupuesto gratis.",
+    "intro": "¿Buscas fletes en Alhué? Ofrecemos fletes y mudanzas en Alhué con precios desde $28.000. fletes Alhué, fletes y mudanzas Alhué, flete Alhué, fletes baratos Alhué, fletes económicos Alhué. Cotiza con la calculadora o por WhatsApp. Presupuesto gratis.",
     "introExtra": "Servicio de fletes en Alhué y toda la RM. Fletes baratos Alhué, fletes económicos. Cotización al instante."
   },
   "ventajas": [

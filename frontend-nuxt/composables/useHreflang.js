@@ -1,35 +1,29 @@
+const SPANISH_ONLY = ['/transporte-frio', '/transporte-en-frio-santiago']
+
 export const useHreflang = () => {
-  const { locale, locales } = useI18n()
   const route = useRoute()
   const siteUrl = 'https://fletespro.cl'
-  
+
   const getAlternateLinks = () => {
     const links = []
-    const currentPath = route.path
-    
-    // Obtener la ruta base sin el locale
-    const pathWithoutLocale = currentPath.replace(/^\/(es|en|sv|ru)/, '') || '/'
-    
-    locales.value.forEach((loc) => {
-      const localePath = loc.code === 'es' ? pathWithoutLocale : `/${loc.code}${pathWithoutLocale}`
-      const fullUrl = `${siteUrl}${localePath === '/' ? '' : localePath}`
-      
+    const pathWithoutLocale = route.path.replace(/^\/(es|en|sv|ru)/, '') || '/'
+    const basePath = pathWithoutLocale === '' ? '/' : pathWithoutLocale
+    const spanishUrl = `${siteUrl}${basePath === '/' ? '' : basePath}`
+    const spanishOnly = SPANISH_ONLY.some((path) => basePath === path || basePath.startsWith(`${path}/`))
+
+    links.push({ rel: 'alternate', hreflang: 'es-CL', href: spanishUrl, key: 'hreflang-es-CL' })
+    links.push({ rel: 'alternate', hreflang: 'x-default', href: spanishUrl, key: 'hreflang-x-default' })
+
+    if (!spanishOnly) {
+      const enPath = `/en${basePath === '/' ? '' : basePath}`
       links.push({
         rel: 'alternate',
-        hreflang: loc.iso || loc.code,
-        href: fullUrl
+        hreflang: 'en',
+        href: `${siteUrl}${enPath}`,
+        key: 'hreflang-en'
       })
-      
-      // Agregar x-default para el idioma por defecto
-      if (loc.code === 'es') {
-        links.push({
-          rel: 'alternate',
-          hreflang: 'x-default',
-          href: fullUrl
-        })
-      }
-    })
-    
+    }
+
     return links
   }
   

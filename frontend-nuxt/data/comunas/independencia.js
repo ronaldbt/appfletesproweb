@@ -16,7 +16,7 @@ export default {
   },
   precios: {
     h2: 'Precios de fletes en Independencia',
-    intro: 'El valor del flete en Independencia depende del tipo de vehículo (camioneta o camión rampla), el volumen y la ruta. Ofrecemos fletes baratos Independencia y fletes económicos Independencia con tarifa base desde $27.000.',
+    intro: 'El valor del flete en Independencia depende del tipo de vehículo (camioneta o camión rampla), el volumen y la ruta. Ofrecemos fletes baratos Independencia y fletes económicos Independencia con tarifa base desde $28.000.',
     p1: 'Para flete desde Independencia a La Reina, fletes económicos desde Independencia a La Reina o fletes comuna de Independencia a Pudahuel, usa la calculadora con las direcciones o escríbenos por WhatsApp. Fletes Independencia baratos con cotización al instante.',
     h3Valores: 'Fletes Independencia baratos y tarifas claras',
     p2: 'Flete camioneta Independencia para cargas livianas; flete camión rampla Independencia para vehículos o maquinaria. Fletes en Independencia y fletes Santiago centro Independencia con el mismo estándar.'
@@ -70,7 +70,7 @@ export default {
     },
     {
       question: '¿Ofrecen fletes baratos y económicos en Independencia?',
-      answer: 'Sí. Fletes baratos en Independencia, fletes baratos Independencia y fletes económicos Independencia con tarifa base desde $27.000. Fletes Independencia baratos con cotización al instante por WhatsApp o calculadora.'
+      answer: 'Sí. Fletes baratos en Independencia, fletes baratos Independencia y fletes económicos Independencia con tarifa base desde $28.000. Fletes Independencia baratos con cotización al instante por WhatsApp o calculadora.'
     },
     {
       question: '¿Hacen fletes de San Joaquín a Independencia?',

@@ -11,7 +11,7 @@ export default {
   "hero": {
     "tagline": "Fletes El Monte",
     "title": "Fletes en El Monte",
-    "intro": "¿Buscas fletes en El Monte? Ofrecemos fletes y mudanzas en El Monte con precios desde $27.000. fletes El Monte, fletes y mudanzas El Monte, flete El Monte, fletes baratos El Monte, fletes económicos El Monte. Cotiza con la calculadora o por WhatsApp. Presupuesto gratis.",
+    "intro": "¿Buscas fletes en El Monte? Ofrecemos fletes y mudanzas en El Monte con precios desde $28.000. fletes El Monte, fletes y mudanzas El Monte, flete El Monte, fletes baratos El Monte, fletes económicos El Monte. Cotiza con la calculadora o por WhatsApp. Presupuesto gratis.",
     "introExtra": "Servicio de fletes en El Monte y toda la RM. Fletes baratos El Monte, fletes económicos. Cotización al instante."
   },
   "ventajas": [

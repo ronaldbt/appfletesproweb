@@ -172,7 +172,7 @@ export default defineNuxtConfig({
         // Preconnects removidos (maps deferred, fonts no usados) - Lighthouse: máx 4, solo orígenes críticos
       ],
       meta: [
-        { name: 'description', content: 'Fletes Santiago económicos desde $27.000. Cotización online instantánea, calculadora de precios, mudanzas y transporte en RM. Servicio 24/7. WhatsApp +56979796841.' },
+        { name: 'description', content: 'Fletes Santiago económicos desde $28.000. Cotización online instantánea, calculadora de precios, mudanzas y transporte en RM. Servicio 24/7. WhatsApp +56 9 7979 6841.' },
         { name: 'robots', content: 'index, follow' },
         { name: 'author', content: 'FletesPro' },
         { name: 'publisher', content: 'FletesPro' },

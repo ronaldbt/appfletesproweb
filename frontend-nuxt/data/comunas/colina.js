@@ -17,7 +17,7 @@ export default {
     intro: 'El valor del flete depende del origen, destino y volumen. Fletes Colina Santiago y fletes de Santiago a Colina con tarifas transparentes.',
     p1: 'Para saber cuánto sale un flete de Conchalí a Colina, el precio flete Conchalí a Colina o el flete desde Colina a Cerrillos precio, usa la calculadora indicando origen y destino, o escríbenos por WhatsApp. Fletes cerca de Colina con el mismo estándar de servicio.',
     h3Valores: 'Fletes y mudanza Colina – tarifas claras',
-    p2: 'Flete particular en Colina y fletes y mudanza en Colina desde $27.000 base. Cotización al instante.'
+    p2: 'Flete particular en Colina y fletes y mudanza en Colina desde $28.000 base. Cotización al instante.'
   },
   rutas: {
     h2: 'Rutas desde y hacia Colina',

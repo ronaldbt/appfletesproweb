@@ -49,7 +49,7 @@ const stats = computed(() => {
     { label: t('components.stats.movesCompleted'), value: '4k+' },
     { label: t('components.stats.yearsExperience'), value: '+10' },
     { label: t('components.stats.vipClients'), value: '134' },
-    { label: t('components.stats.zonesCovered'), value: '100%' },
+    { label: t('components.stats.zonesCovered'), value: 'RM' },
   ]
 })
 

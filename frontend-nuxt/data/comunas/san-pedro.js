@@ -11,7 +11,7 @@ export default {
   "hero": {
     "tagline": "Fletes San Pedro",
     "title": "Fletes en San Pedro",
-    "intro": "¿Buscas fletes en San Pedro? Ofrecemos fletes y mudanzas en San Pedro con precios desde $27.000. fletes San Pedro, fletes y mudanzas San Pedro, flete San Pedro, fletes baratos San Pedro, fletes económicos San Pedro. Cotiza con la calculadora o por WhatsApp. Presupuesto gratis.",
+    "intro": "¿Buscas fletes en San Pedro? Ofrecemos fletes y mudanzas en San Pedro con precios desde $28.000. fletes San Pedro, fletes y mudanzas San Pedro, flete San Pedro, fletes baratos San Pedro, fletes económicos San Pedro. Cotiza con la calculadora o por WhatsApp. Presupuesto gratis.",
     "introExtra": "Servicio de fletes en San Pedro y toda la RM. Fletes baratos San Pedro, fletes económicos. Cotización al instante."
   },
   "ventajas": [

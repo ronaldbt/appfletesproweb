@@ -11,7 +11,7 @@ export default {
   "hero": {
     "tagline": "Fletes San José de Maipo",
     "title": "Fletes en San José de Maipo",
-    "intro": "¿Necesitas fletes en San José de Maipo? Ofrecemos flete San José de Maipo y fletes mudanzas San José de Maipo con precios desde $27.000 (hasta 2 m³). Fletes en San José de Maipo para particulares y empresas: mudanzas, traslado de muebles o encargos. La comuna está en zona cordillera; realizamos fletes mudanzas San José de Maipo y fletes mudanzas fuera de Santiago San José de Maipo para mudanzas a regiones. Conexión con Santiago, Puente Alto, Pirque y toda la RM. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.",
+    "intro": "¿Necesitas fletes en San José de Maipo? Ofrecemos flete San José de Maipo y fletes mudanzas San José de Maipo con precios desde $28.000 (hasta 2 m³). Fletes en San José de Maipo para particulares y empresas: mudanzas, traslado de muebles o encargos. La comuna está en zona cordillera; realizamos fletes mudanzas San José de Maipo y fletes mudanzas fuera de Santiago San José de Maipo para mudanzas a regiones. Conexión con Santiago, Puente Alto, Pirque y toda la RM. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.",
     "introExtra": "Fletes San José de Maipo con tarifa clara. La calculadora te da el precio al instante."
   },
   "precios": {

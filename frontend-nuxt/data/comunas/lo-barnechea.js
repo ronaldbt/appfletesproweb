@@ -11,12 +11,12 @@ export default {
   hero: {
     tagline: 'Fletes Lo Barnechea',
     title: 'Fletes en Lo Barnechea',
-    intro: '¿Buscas fletes en Lo Barnechea? Ofrecemos fletes Lo Barnechea con precios desde $27.000. Fletes económicos Lo Barnechea para particulares y empresas, con cobertura en toda la Región Metropolitana. Realizamos flete Melipilla Lo Barnechea, fletes desde y hacia Lo Barnechea a Santiago, Las Condes, Providencia y el resto de la RM. Fletes y mudanzas en la comuna con cotización al instante.',
+    intro: '¿Buscas fletes en Lo Barnechea? Ofrecemos fletes Lo Barnechea con precios desde $28.000. Fletes económicos Lo Barnechea para particulares y empresas, con cobertura en toda la Región Metropolitana. Realizamos flete Melipilla Lo Barnechea, fletes desde y hacia Lo Barnechea a Santiago, Las Condes, Providencia y el resto de la RM. Fletes y mudanzas en la comuna con cotización al instante.',
     introExtra: 'Cotiza con la calculadora de esta página o por WhatsApp; presupuesto gratis. Servicio de fletes en Lo Barnechea con camioneta y camión según el volumen de tu carga.'
   },
   precios: {
     h2: 'Precios de fletes en Lo Barnechea',
-    intro: 'El valor del flete en Lo Barnechea depende del origen, destino y volumen. Ofrecemos fletes económicos Lo Barnechea con tarifa base desde $27.000 (hasta 2 m³).',
+    intro: 'El valor del flete en Lo Barnechea depende del origen, destino y volumen. Ofrecemos fletes económicos Lo Barnechea con tarifa base desde $28.000 (hasta 2 m³).',
     p1: '¿Cuánto cuesta un flete Melipilla Lo Barnechea o un flete desde Santiago a Lo Barnechea? Usa la calculadora indicando direcciones y metros cúbicos. Para fletes en Lo Barnechea con carga más grande o mudanzas completas, escríbenos por WhatsApp al +56 9 7979 6841. Te damos el precio al instante.',
     h3Valores: 'Tarifas claras para fletes Lo Barnechea',
     p2: 'Fletes en Lo Barnechea con camioneta cuando la carga es liviana; camión para mudanzas. Nuestro servicio de fletes Lo Barnechea incluye carga y descarga. Cotización gratis.'
@@ -52,7 +52,7 @@ export default {
   h2Ventajas: '¿Por qué elegir FletesPro para fletes en Lo Barnechea?',
   ventajas: [
     'Cobertura en Lo Barnechea y toda la RM; flete Melipilla Lo Barnechea y rutas a Santiago con precios claros.',
-    'Fletes económicos Lo Barnechea con tarifa base desde $27.000.',
+    'Fletes económicos Lo Barnechea con tarifa base desde $28.000.',
     'Fletes en Lo Barnechea con camioneta y camión según tu necesidad.',
     'Respuesta rápida por WhatsApp.',
     'Experiencia en fletes Lo Barnechea y mudanzas en la comuna.',
@@ -66,7 +66,7 @@ export default {
     },
     {
       question: '¿Ofrecen fletes económicos en Lo Barnechea?',
-      answer: 'Sí. Fletes económicos Lo Barnechea con tarifa base desde $27.000. Fletes en Lo Barnechea con camioneta o camión según tu carga. Cotización al instante por calculadora o WhatsApp.'
+      answer: 'Sí. Fletes económicos Lo Barnechea con tarifa base desde $28.000. Fletes en Lo Barnechea con camioneta o camión según tu carga. Cotización al instante por calculadora o WhatsApp.'
     },
     {
       question: '¿Hacen fletes en Lo Barnechea hacia Santiago?',

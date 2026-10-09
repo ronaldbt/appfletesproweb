@@ -267,7 +267,7 @@ const movingCompanyBase = {
   name: 'FletesPro',
   image: logoUrl,
   url: currentUrl,
-  telephone: '+56979796841',
+  telephone: '+56 9 7979 6841',
   priceRange: '$$',
   description: 'Empresa de mudanzas en Lo Barnechea, La Dehesa y El Arrayán: residenciales y premium, con acceso a condominios y sectores altos.',
   areaServed: {

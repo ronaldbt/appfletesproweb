@@ -11,12 +11,12 @@ export default {
   hero: {
     tagline: 'Zona Poniente – Cerro Navia',
     title: 'Fletes en Cerro Navia',
-    intro: '¿Buscas fletes en Cerro Navia? Ofrecemos flete Cerro Navia y fletes económicos Cerro Navia con precios desde $27.000. Rutas hacia Maipú, Santiago y San Bernardo. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.'
+    intro: '¿Buscas fletes en Cerro Navia? Ofrecemos flete Cerro Navia y fletes económicos Cerro Navia con precios desde $28.000. Rutas hacia Maipú, Santiago y San Bernardo. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.'
   },
   precios: {
     h2: 'Precios de fletes en Cerro Navia',
     intro: 'El valor del flete en Cerro Navia depende del destino y el volumen. Ofrecemos fletes económicos Cerro Navia para particulares y empresas en la zona poniente.',
-    p1: 'Tarifa base desde $27.000 (hasta 2 m³). Si necesitas flete de Santiago Cerro Navia a San Bernardo o flete a Maipú desde Cerro Navia, indica origen y destino en la calculadora o escríbenos por WhatsApp para un presupuesto al instante.',
+    p1: 'Tarifa base desde $28.000 (hasta 2 m³). Si necesitas flete de Santiago Cerro Navia a San Bernardo o flete a Maipú desde Cerro Navia, indica origen y destino en la calculadora o escríbenos por WhatsApp para un presupuesto al instante.',
     h3Valores: 'Fletes económicos Cerro Navia',
     p2: 'Precios transparentes y cotización sin compromiso. Servicio de fletes en Cerro Navia con carga y descarga.'
   },
@@ -56,6 +56,6 @@ export default {
   faqs: [
     { question: '¿Cuánto cuesta un flete en Cerro Navia?', answer: 'El precio depende del destino y el volumen. Para flete Cerro Navia a Maipú, flete de Santiago Cerro Navia a San Bernardo o fletes económicos Cerro Navia, usa la calculadora de esta página o escribe por WhatsApp al +56 9 7979 6841; el presupuesto es gratis.' },
     { question: '¿Hacen flete de Santiago Cerro Navia a San Bernardo?', answer: 'Sí. Si necesitas flete de Santiago Cerro Navia a San Bernardo, indica los detalles en la calculadora o por WhatsApp y te damos el precio al instante. Fletes en Cerro Navia y desde Cerro Navia a toda la RM.' },
-    { question: '¿Hacen flete a Maipú desde Cerro Navia?', answer: 'Sí. Realizamos flete a Maipú desde Cerro Navia y también flete Cerro Navia a otros sectores. Fletes económicos Cerro Navia con tarifa base desde $27.000. Cotiza con la calculadora o por WhatsApp.' }
+    { question: '¿Hacen flete a Maipú desde Cerro Navia?', answer: 'Sí. Realizamos flete a Maipú desde Cerro Navia y también flete Cerro Navia a otros sectores. Fletes económicos Cerro Navia con tarifa base desde $28.000. Cotiza con la calculadora o por WhatsApp.' }
   ]
 }

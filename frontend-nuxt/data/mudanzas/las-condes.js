@@ -27,7 +27,7 @@ export default {
       { tipo: 'Departamento 1-2 dormitorios', equipo: 'Camión 3/4 + 1 peonetas', precio: '$70.000 – $150.000' },
       { tipo: 'Casa 3-4 dormitorios', equipo: 'Camión 3/4 + 2 peonetas', precio: '$150.000 – $300.000' },
       { tipo: 'Mudanza con embalaje completo', equipo: 'Camión + cuadrilla + materiales', precio: '$200.000 – $400.000' },
-      { tipo: 'Mudanza a regiones (interregional)', equipo: 'Camión + equipo', precio: 'según distancia (~$1.300/km)' }
+      { tipo: 'Mudanza a regiones (interregional)', equipo: 'Camión + equipo', precio: 'hasta 120 km: $28.000 + $2.000/km; después +$1.400/km' }
     ]
   },
   barrios: {
@@ -99,7 +99,7 @@ export default {
       { h3: 'Mudanzas de departamento o casa', text: 'Traslado de muebles, electrodomésticos y cajas. Ayudantes disponibles para edificios y condominios.' },
       { h3: 'Mudanzas de oficina', text: 'Traslado de mobiliario, equipos y archivos. Coordinación con edificios en El Golf y Apoquindo.' },
       { h3: 'Mudanzas con embalaje', text: 'Cajas, plástico burbuja, film y frazadas. Desarme y armado de muebles.' },
-      { h3: 'Mudanzas a regiones', text: 'Desde Las Condes a Valparaíso, Concepción y más. Presupuesto según distancia (~$1.300/km).' },
+      { h3: 'Mudanzas a regiones', text: 'Desde Las Condes a Valparaíso, Concepción y más. Presupuesto hasta 120 km: $28.000 + $2.000/km; después +$1.400/km.' },
       { h3: 'Mudanzas premium y cuidado de objetos delicados', text: 'Para casas y departamentos de Las Condes con objetos de alto valor, ofrecemos un servicio con embalaje profesional y protección especial: traslado de piano, obras de arte, antigüedades, espejos, lámparas y muebles finos, con desarme y armado. Una mudanza premium con el cuidado que tus cosas merecen.' }
     ],
     pCombustible: 'El combustible está incluido en el precio.'

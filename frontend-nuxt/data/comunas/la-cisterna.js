@@ -16,7 +16,7 @@ export default {
   },
   precios: {
     h2: 'Precios de fletes en La Cisterna',
-    intro: 'El valor del flete en La Cisterna depende del tipo de vehículo (camioneta o camión), el volumen y la ruta. Ofrecemos fletes económicos en La Cisterna y fletes económicos La Cisterna con tarifa base desde $27.000 (hasta 2 m³).',
+    intro: 'El valor del flete en La Cisterna depende del tipo de vehículo (camioneta o camión), el volumen y la ruta. Ofrecemos fletes económicos en La Cisterna y fletes económicos La Cisterna con tarifa base desde $28.000 (hasta 2 m³).',
     p1: '¿Cuánto cuesta un flete La Cisterna a Estación Central o un flete mudanza La Cisterna? Usa la calculadora de esta página indicando direcciones y metros cúbicos. Para flete San Ramón La Cisterna o fletes mudanzas La Cisterna con carga más grande, escríbenos por WhatsApp al +56 9 7979 6841. Te damos el precio al instante.',
     h3Valores: 'Tarifas claras para fletes La Cisterna',
     p2: 'Camionetas para fletes La Cisterna cuando la carga es pequeña; camiones para fletes y mudanzas La Cisterna. Nuestro servicio de flete en La Cisterna incluye carga y descarga. Cotización gratis.'
@@ -52,7 +52,7 @@ export default {
   ventajas: [
     'Cobertura en La Cisterna y toda la RM; flete La Cisterna a Estación Central y flete San Ramón La Cisterna con precios claros.',
     'Camionetas para fletes La Cisterna y camiones para fletes mudanzas La Cisterna según tu necesidad.',
-    'Fletes económicos en La Cisterna y fletes económicos La Cisterna con tarifa base desde $27.000.',
+    'Fletes económicos en La Cisterna y fletes económicos La Cisterna con tarifa base desde $28.000.',
     'Fletes y mudanzas La Cisterna con respuesta rápida por WhatsApp.',
     'Experiencia en flete en La Cisterna y fletes mudanzas La Cisterna para particulares y empresas.',
     'Calculadora en página y cotización gratis para flete mudanza La Cisterna o flete La Cisterna a Estación Central.'
@@ -77,7 +77,7 @@ export default {
     },
     {
       question: '¿Ofrecen fletes económicos en La Cisterna?',
-      answer: 'Sí. Fletes económicos en La Cisterna y fletes económicos La Cisterna con tarifa base desde $27.000. Camionetas para fletes La Cisterna y fletes y mudanzas La Cisterna con cotización al instante.'
+      answer: 'Sí. Fletes económicos en La Cisterna y fletes económicos La Cisterna con tarifa base desde $28.000. Camionetas para fletes La Cisterna y fletes y mudanzas La Cisterna con cotización al instante.'
     }
   ]
 }

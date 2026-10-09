@@ -11,12 +11,12 @@ export default {
   hero: {
     tagline: 'Fletes Lampa',
     title: 'Fletes en Lampa',
-    intro: '¿Necesitas fletes en Lampa o fletes a Lampa? Ofrecemos flete camión 3/4 a Lampa, fletes en camioneta Lampa y fletes económicos Lampa para particulares y empresas. Flete de Lampa, flete de Lo Prado a Lampa, flete de Melipilla a Lampa y flete Melipilla Lampa con precios desde $27.000. Fletes y mudanzas en Lampa con cobertura en toda la RM.',
+    intro: '¿Necesitas fletes en Lampa o fletes a Lampa? Ofrecemos flete camión 3/4 a Lampa, fletes en camioneta Lampa y fletes económicos Lampa para particulares y empresas. Flete de Lampa, flete de Lo Prado a Lampa, flete de Melipilla a Lampa y flete Melipilla Lampa con precios desde $28.000. Fletes y mudanzas en Lampa con cobertura en toda la RM.',
     introExtra: 'Realizamos fletes de Peñalolén a Lampa, flete camión 3/4 abierto Lampa cuando la carga lo permite, y fletes a Lampa desde cualquier comuna. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.'
   },
   precios: {
     h2: 'Precios de fletes en Lampa',
-    intro: 'El valor del flete en Lampa depende del tipo de vehículo (camioneta o camión 3/4), el volumen y la ruta. Ofrecemos fletes económicos Lampa con tarifa base desde $27.000 (hasta 2 m³).',
+    intro: 'El valor del flete en Lampa depende del tipo de vehículo (camioneta o camión 3/4), el volumen y la ruta. Ofrecemos fletes económicos Lampa con tarifa base desde $28.000 (hasta 2 m³).',
     p1: '¿Cuánto cuesta un flete de Lo Prado a Lampa o un flete Melipilla Lampa? Usa la calculadora de esta página indicando direcciones y metros cúbicos. Para flete camión 3/4 a Lampa o fletes y mudanzas en Lampa con carga más grande, escríbenos por WhatsApp al +56 9 7979 6841. Te damos el precio al instante.',
     h3Valores: 'Tarifas claras para fletes Lampa',
     p2: 'Fletes en camioneta Lampa cuando la carga es pequeña; flete camión 3/4 a Lampa o flete camión 3/4 abierto Lampa para mudanzas. Nuestro servicio de flete de Lampa incluye carga y descarga. Cotización gratis.'
@@ -57,7 +57,7 @@ export default {
   ventajas: [
     'Cobertura en Lampa y toda la RM; flete de Lo Prado a Lampa, flete Melipilla Lampa y fletes de Peñalolén a Lampa con precios claros.',
     'Fletes en camioneta Lampa y flete camión 3/4 a Lampa según tu necesidad.',
-    'Fletes económicos Lampa con tarifa base desde $27.000.',
+    'Fletes económicos Lampa con tarifa base desde $28.000.',
     'Fletes y mudanzas en Lampa con respuesta rápida por WhatsApp.',
     'Experiencia en flete de Lampa y fletes a Lampa para particulares y empresas.',
     'Calculadora en página y cotización gratis para fletes Lampa o flete camión 3/4 a Lampa.'
@@ -82,7 +82,7 @@ export default {
     },
     {
       question: '¿Ofrecen fletes económicos en Lampa?',
-      answer: 'Sí. Fletes económicos Lampa con tarifa base desde $27.000. Fletes en camioneta Lampa, flete camión 3/4 a Lampa y fletes y mudanzas en Lampa con cotización al instante.'
+      answer: 'Sí. Fletes económicos Lampa con tarifa base desde $28.000. Fletes en camioneta Lampa, flete camión 3/4 a Lampa y fletes y mudanzas en Lampa con cotización al instante.'
     }
   ]
 }

@@ -256,7 +256,7 @@ const movingCompanyBase = {
   name: 'FletesPro',
   image: logoUrl,
   url: currentUrl,
-  telephone: '+56979796841',
+  telephone: '+56 9 7979 6841',
   priceRange: '$$',
   description: 'Empresa de mudanzas en Las Condes: residenciales, de oficinas (El Golf y Apoquindo) y premium. San Carlos, Los Dominicos, Estoril y toda la comuna.',
   areaServed: {

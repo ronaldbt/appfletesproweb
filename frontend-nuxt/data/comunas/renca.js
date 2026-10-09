@@ -11,12 +11,12 @@ export default {
   hero: {
     tagline: 'Fletes Renca',
     title: 'Fletes en Renca',
-    intro: '¿Necesitas fletes en Renca? Ofrecemos fletes baratos en Renca con precios desde $27.000 (hasta 2 m³). Servicio de fletes por Renca para particulares y empresas: mudanzas, traslado de muebles o encargos. Realizamos flete de Renca a San Miguel, fletes en Renca hacia Santiago centro, Quinta Normal, Pudahuel y toda la zona poniente. Fletes baratos en Renca cuando la carga es liviana; camión para mudanzas completas. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.',
+    intro: '¿Necesitas fletes en Renca? Ofrecemos fletes baratos en Renca con precios desde $28.000 (hasta 2 m³). Servicio de fletes por Renca para particulares y empresas: mudanzas, traslado de muebles o encargos. Realizamos flete de Renca a San Miguel, fletes en Renca hacia Santiago centro, Quinta Normal, Pudahuel y toda la zona poniente. Fletes baratos en Renca cuando la carga es liviana; camión para mudanzas completas. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.',
     introExtra: 'Fletes por Renca con tarifa clara. Fletes baratos Renca. La calculadora te da el precio al instante.'
   },
   precios: {
     h2: 'Precios de fletes en Renca',
-    intro: 'El valor del flete en Renca depende del volumen y la distancia. Fletes baratos en Renca desde $27.000 para cargas de hasta 2 m³. Para flete de Renca a San Miguel o fletes por Renca dentro de la comuna el precio suele ser menor. La calculadora de esta página te da el valor según origen y destino.',
+    intro: 'El valor del flete en Renca depende del volumen y la distancia. Fletes baratos en Renca desde $28.000 para cargas de hasta 2 m³. Para flete de Renca a San Miguel o fletes por Renca dentro de la comuna el precio suele ser menor. La calculadora de esta página te da el valor según origen y destino.',
     p1: '¿Cuánto cuesta un flete en Renca? Fletes baratos Renca para camioneta con pocos bultos; fletes económicos cuando la ruta es corta. Fletes en Renca con carga y descarga incluida. Para mudanzas completas cotiza por WhatsApp al +56 9 7979 6841. Presupuesto gratis.',
     h3Valores: 'Tarifas para fletes en Renca',
     p2: 'Fletes en Renca con camioneta o camión según el volumen. Fletes baratos en Renca con precios transparentes; la calculadora te muestra el valor al instante.'
@@ -65,7 +65,7 @@ export default {
     },
     {
       question: '¿Cuánto cuesta un flete en Renca?',
-      answer: 'Depende del volumen y la distancia. Fletes baratos en Renca desde $27.000 para hasta 2 m³. Para fletes por Renca dentro de la comuna o flete de Renca a San Miguel el valor suele ser menor. Usa la calculadora de esta página para ver el precio.'
+      answer: 'Depende del volumen y la distancia. Fletes baratos en Renca desde $28.000 para hasta 2 m³. Para fletes por Renca dentro de la comuna o flete de Renca a San Miguel el valor suele ser menor. Usa la calculadora de esta página para ver el precio.'
     },
     {
       question: '¿Ofrecen fletes baratos en Renca?',

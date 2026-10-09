@@ -11,12 +11,12 @@ export default {
   hero: {
     tagline: 'Fletes Lo Prado',
     title: 'Fletes en Lo Prado',
-    intro: '¿Buscas fletes en Lo Prado? Ofrecemos flete de Cerrillos a Lo Prado, flete de Lo Prado a Lampa y fletes económicos Lo Prado con precios desde $27.000 (hasta 2 m³). Si necesitas flete Lo Prado hoy, contáctanos por WhatsApp; coordinamos salida el mismo día cuando la agenda lo permita. Fletes camión 3/4 Lo Prado para mudanzas y cargas medianas; también flete Santibáñez Lo Prado y rutas desde y hacia la comuna.',
+    intro: '¿Buscas fletes en Lo Prado? Ofrecemos flete de Cerrillos a Lo Prado, flete de Lo Prado a Lampa y fletes económicos Lo Prado con precios desde $28.000 (hasta 2 m³). Si necesitas flete Lo Prado hoy, contáctanos por WhatsApp; coordinamos salida el mismo día cuando la agenda lo permita. Fletes camión 3/4 Lo Prado para mudanzas y cargas medianas; también flete Santibáñez Lo Prado y rutas desde y hacia la comuna.',
     introExtra: 'Flete de Cerrillos a Lo Prado valor al instante con la calculadora. Fletes Lo Prado a Lampa y a toda la RM. Presupuesto gratis.'
   },
   precios: {
     h2: 'Precios de fletes en Lo Prado',
-    intro: 'El valor del flete en Lo Prado depende del origen, destino y volumen. Para conocer el flete de Cerrillos a Lo Prado valor o el flete de Lo Prado a Lampa, usa la calculadora indicando direcciones y m³. Fletes económicos Lo Prado con tarifa base desde $27.000.',
+    intro: 'El valor del flete en Lo Prado depende del origen, destino y volumen. Para conocer el flete de Cerrillos a Lo Prado valor o el flete de Lo Prado a Lampa, usa la calculadora indicando direcciones y m³. Fletes económicos Lo Prado con tarifa base desde $28.000.',
     p1: '¿Cuánto sale el flete de Cerrillos a Lo Prado o el flete de Lo Prado a Lampa? Indica origen y destino en la calculadora de esta página. Flete Lo Prado hoy con cotización inmediata por WhatsApp. Fletes camión 3/4 Lo Prado cuando la carga supera el volumen de una camioneta.',
     h3Valores: 'Fletes económicos Lo Prado con tarifas transparentes',
     p2: 'Fletes en Lo Prado con camioneta o fletes camión 3/4 Lo Prado según tu carga. Incluimos carga y descarga. Flete Santibáñez Lo Prado y otras rutas con el mismo estándar.'
@@ -52,7 +52,7 @@ export default {
   h2Ventajas: '¿Por qué elegir FletesPro para fletes en Lo Prado?',
   ventajas: [
     'Cobertura en Lo Prado y toda la RM: flete de Cerrillos a Lo Prado, flete de Lo Prado a Lampa, flete Santibáñez Lo Prado.',
-    'Fletes económicos Lo Prado con tarifa base desde $27.000.',
+    'Fletes económicos Lo Prado con tarifa base desde $28.000.',
     'Fletes camión 3/4 Lo Prado y camioneta según tu necesidad.',
     'Flete Lo Prado hoy: coordinación para salida el mismo día cuando sea posible.',
     'Calculadora en página para flete de Cerrillos a Lo Prado valor y otras rutas; presupuesto gratis.'
@@ -77,7 +77,7 @@ export default {
     },
     {
       question: '¿Ofrecen fletes económicos en Lo Prado?',
-      answer: 'Sí. Fletes económicos Lo Prado con tarifa base desde $27.000. Flete de Cerrillos a Lo Prado valor, flete de Lo Prado a Lampa y flete Santibáñez Lo Prado con cotización al instante.'
+      answer: 'Sí. Fletes económicos Lo Prado con tarifa base desde $28.000. Flete de Cerrillos a Lo Prado valor, flete de Lo Prado a Lampa y flete Santibáñez Lo Prado con cotización al instante.'
     }
   ]
 }

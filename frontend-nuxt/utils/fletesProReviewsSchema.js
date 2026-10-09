@@ -64,7 +64,7 @@ export function buildMovingCompanyReviewsSchema(reviews, options = {}) {
     '@id': `${siteUrl}/#fletespro`,
     name: options.businessName || 'FletesPro',
     url: siteUrl,
-    telephone: options.telephone || '+56-9-7979-6841',
+    telephone: options.telephone || '+56 9 7979 6841',
     aggregateRating: buildAggregateRatingSchema(aggregate),
     review: reviews.map((r) => buildReviewSchema(r, itemReviewed))
   }

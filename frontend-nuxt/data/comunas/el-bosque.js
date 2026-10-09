@@ -11,12 +11,12 @@ export default {
   hero: {
     tagline: 'Fletes El Bosque',
     title: 'Fletes en El Bosque',
-    intro: '¿Necesitas fletes en El Bosque o fletes en El Bosque Santiago? Ofrecemos flete El Bosque para particulares y empresas: fletes baratos en El Bosque y fletes económicos en El Bosque. Servicio de fletes comuna El Bosque con precios desde $27.000.',
+    intro: '¿Necesitas fletes en El Bosque o fletes en El Bosque Santiago? Ofrecemos flete El Bosque para particulares y empresas: fletes baratos en El Bosque y fletes económicos en El Bosque. Servicio de fletes comuna El Bosque con precios desde $28.000.',
     introExtra: 'Fletes y mudanzas El Bosque hacia y desde toda la RM. Si compraste por Mercado Libre o en tiendas, también hacemos fletes El Bosque Mercado Libre. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.'
   },
   precios: {
     h2: 'Precios de fletes en El Bosque',
-    intro: 'El valor del flete en El Bosque depende del origen, destino y volumen. Ofrecemos fletes baratos en El Bosque y fletes económicos en El Bosque con tarifa base desde $27.000 (hasta 2 m³).',
+    intro: 'El valor del flete en El Bosque depende del origen, destino y volumen. Ofrecemos fletes baratos en El Bosque y fletes económicos en El Bosque con tarifa base desde $28.000 (hasta 2 m³).',
     p1: '¿Cuánto cuesta un flete de El Bosque a Buin o un flete desde El Bosque a Puente Alto? Usa la calculadora de esta página indicando direcciones y metros cúbicos, o escríbenos por WhatsApp al +56 9 7979 6841. Te damos el precio al instante y sin compromiso.',
     h3Valores: 'Tarifas claras para fletes comuna El Bosque',
     p2: 'Nuestro servicio de fletes en El Bosque incluye carga y descarga. Fletes en El Bosque Santiago y hacia otras comunas con el mismo estándar. Cotización gratis.'
@@ -69,7 +69,7 @@ export default {
     },
     {
       question: '¿Ofrecen fletes baratos y económicos en El Bosque?',
-      answer: 'Sí. Ofrecemos fletes baratos en El Bosque y fletes económicos en El Bosque con tarifa base desde $27.000. Servicio de fletes comuna El Bosque con cotización al instante.'
+      answer: 'Sí. Ofrecemos fletes baratos en El Bosque y fletes económicos en El Bosque con tarifa base desde $28.000. Servicio de fletes comuna El Bosque con cotización al instante.'
     },
     {
       question: '¿Hacen fletes en El Bosque Santiago?',

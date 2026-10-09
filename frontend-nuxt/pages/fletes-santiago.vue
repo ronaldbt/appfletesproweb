@@ -40,7 +40,7 @@
             </ul>
           </div>
           <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-            <h3 class="text-xl font-black text-slate-900 mb-3">Fletes Santiago a regiones: $1500/km</h3>
+            <h3 class="text-xl font-black text-slate-900 mb-3">Después de 120 km: +$1.400 por km extra</h3>
             <p class="text-slate-600 text-sm mb-4">{{ content.precios.regiones }}</p>
             <p v-if="content.precios.cierreRegiones" class="text-slate-600 text-sm">{{ content.precios.cierreRegiones }}</p>
           </div>
@@ -242,7 +242,7 @@ const serviceSchema = computed(() => ({
     name: 'FletesPro',
     url: siteUrl,
     image: `${siteUrl}/ejemplo-flete-sencillo.webp`,
-    telephone: '+56-9-7979-6841',
+    telephone: '+56 9 7979 6841',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Providencia',

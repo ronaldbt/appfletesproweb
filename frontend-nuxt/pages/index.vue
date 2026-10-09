@@ -436,6 +436,7 @@ import { computed, ref, h, watch, onMounted } from 'vue'
 import {
   FLETESPRO_CL_EMAIL,
   FLETESPRO_CL_PHONE,
+  FLETESPRO_CL_PHONE_DISPLAY,
   fletesProSameAs,
   fletesProFounderSchema
 } from '~/config/brandEntity.js'
@@ -443,7 +444,7 @@ import {
 // ⚠️ LOG INMEDIATO - Debe aparecer siempre
 console.log('🔥🔥🔥 [INDEX.VUE] Script setup INICIADO')
 
-const { locale, locales, t } = useI18n()
+const { locale, t } = useI18n()
 const route = useRoute()
 const { $i18n } = useNuxtApp()
 
@@ -817,26 +818,6 @@ const canonicalPath = locale.value === 'es'
   : `/${locale.value}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`
 const canonicalUrl = `${siteUrl}${canonicalPath}`
 
-// Hreflang: canonical debe coincidir con una URL de hreflang. x-default = español (prioridad en búsquedas)
-const alternateLinks = computed(() => {
-  const links = []
-  const basePath = route.path.replace(/^\/(es|en)/, '') || '/'
-  
-  locales.value.forEach((loc) => {
-    const path = loc.code === 'es' 
-      ? (basePath === '/' ? '/' : basePath)
-      : `/${loc.code}${basePath === '/' ? '' : basePath}`
-    const url = `${siteUrl}${path}`
-    
-    links.push({ rel: 'alternate', hreflang: loc.iso || loc.code, href: url })
-    if (loc.code === 'es') {
-      links.push({ rel: 'alternate', hreflang: 'x-default', href: url })
-    }
-  })
-  
-  return links
-})
-
 // Locale mappings para OG (solo español e inglés)
 const localeMap = {
   'es': 'es_ES',
@@ -922,7 +903,7 @@ const movingCompanySchema = computed(() => ({
     latitude: '-33.4372',
     longitude: '-70.6506'
   },
-  telephone: FLETESPRO_CL_PHONE,
+  telephone: FLETESPRO_CL_PHONE_DISPLAY,
   priceRange: '$$',
   areaServed: {
     '@type': 'AdministrativeArea',
@@ -956,7 +937,7 @@ useHead(computed(() => {
       url: `${siteUrl}/`,
       logo: defaultImage,
       email: FLETESPRO_CL_EMAIL,
-      telephone: FLETESPRO_CL_PHONE,
+      telephone: FLETESPRO_CL_PHONE_DISPLAY,
       description: 'Empresa chilena de fletes y mudanzas en Santiago y todo Chile, con calculadora online, precios publicados y equipo propio.',
       founder: {
         '@type': 'Person',
@@ -1002,7 +983,7 @@ useHead(computed(() => {
       logo: logoUrl,
       image: [`${siteUrl}/ejemplo-flete-sencillo.webp`, defaultImage],
       email: FLETESPRO_CL_EMAIL,
-      telephone: FLETESPRO_CL_PHONE,
+      telephone: FLETESPRO_CL_PHONE_DISPLAY,
       priceRange: '$$',
       description: 'Fletes y mudanzas en Santiago y todo Chile desde $28.000. Mudanzas de casas, departamentos y oficinas, fletes, bodegaje, embalaje, transporte refrigerado y última milla.',
       address: {
@@ -1088,8 +1069,7 @@ useHead(computed(() => {
       ],
       link: [
         { rel: 'canonical', href: currentCanonicalUrl, key: 'canonical' },
-        { rel: 'sitemap', type: 'application/xml', title: 'Sitemap', href: '/sitemap.xml' },
-        ...alternateLinks.value.map((l, i) => ({ ...l, key: `hreflang-${l.hreflang}-${i}` }))
+        { rel: 'sitemap', type: 'application/xml', title: 'Sitemap', href: '/sitemap.xml' }
       ],
       script: [
         {

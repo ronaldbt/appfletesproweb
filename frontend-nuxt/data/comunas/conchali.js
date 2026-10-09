@@ -10,7 +10,7 @@ export default {
   hero: {
     tagline: 'Zona Norte – Conchalí',
     title: 'Fletes en Conchalí',
-    intro: '¿Buscas fletes en Conchalí? Ofrecemos fletes para Conchalí y fletes en comuna de Conchalí con precios desde $27.000. Fletes económicos Conchalí y fletes camiones tres cuartos en Conchalí. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.'
+    intro: '¿Buscas fletes en Conchalí? Ofrecemos fletes para Conchalí y fletes en comuna de Conchalí con precios desde $28.000. Fletes económicos Conchalí y fletes camiones tres cuartos en Conchalí. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.'
   },
   precios: {
     h2: 'Precios de fletes en Conchalí',

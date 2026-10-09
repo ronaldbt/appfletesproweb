@@ -11,12 +11,12 @@ export default {
   hero: {
     tagline: 'Fletes Macul',
     title: 'Fletes en Macul',
-    intro: '¿Buscas fletes en Macul o un flete barato Macul? Ofrecemos fletes comuna Macul y fletes para la comuna Macul con precios desde $27.000 (hasta 2 m³). Fletes económicos Macul y fletes económicos Macul y Ñuñoa para la zona oriente. Realizamos flete de Quilicura a Macul precios al instante con la calculadora, fletes Macul a Ñuñoa, fletes La Florida Macul, fletes Macul Peñalolén y fletes Ñuñoa Macul. Fletes por Macul y fletes San Luis de Macul con el mismo estándar. Si publicaste en Yapo, también atendemos consultas de yapo flete Macul.',
+    intro: '¿Buscas fletes en Macul o un flete barato Macul? Ofrecemos fletes comuna Macul y fletes para la comuna Macul con precios desde $28.000 (hasta 2 m³). Fletes económicos Macul y fletes económicos Macul y Ñuñoa para la zona oriente. Realizamos flete de Quilicura a Macul precios al instante con la calculadora, fletes Macul a Ñuñoa, fletes La Florida Macul, fletes Macul Peñalolén y fletes Ñuñoa Macul. Fletes por Macul y fletes San Luis de Macul con el mismo estándar. Si publicaste en Yapo, también atendemos consultas de yapo flete Macul.',
     introExtra: 'Flete en Macul con camioneta o camión. Fletes de San Bernardo a Macul, fletes de Macul a Concepción (a regiones) y fletes y mudanzas Macul. Cotiza con la calculadora o por WhatsApp; presupuesto gratis.'
   },
   precios: {
     h2: 'Precios de fletes en Macul',
-    intro: 'El valor del flete en Macul depende del origen, destino y volumen. Ofrecemos flete barato Macul y fletes económicos Macul con tarifa base desde $27.000. Para conocer el flete de Quilicura a Macul precios indica ambas direcciones en la calculadora.',
+    intro: 'El valor del flete en Macul depende del origen, destino y volumen. Ofrecemos flete barato Macul y fletes económicos Macul con tarifa base desde $28.000. Para conocer el flete de Quilicura a Macul precios indica ambas direcciones en la calculadora.',
     p1: '¿Cuánto cuesta un flete en Macul o el flete de Quilicura a Macul precios? Usa la calculadora de esta página. Fletes comuna Macul y fletes para la comuna Macul con tarifas transparentes. Fletes Macul a Ñuñoa, fletes La Florida Macul y fletes Macul Peñalolén con el mismo criterio de precio. Para fletes de Macul a Concepción (regiones) el valor se calcula por kilómetro; cotiza por WhatsApp.',
     h3Valores: 'Flete barato Macul y fletes económicos Macul',
     p2: 'Fletes en Macul con camioneta o camión. Fletes por Macul, fletes San Luis de Macul y fletes y mudanzas Macul con carga y descarga incluida. Presupuesto gratis.'
@@ -56,7 +56,7 @@ export default {
   h2Ventajas: '¿Por qué elegir FletesPro para fletes en Macul?',
   ventajas: [
     'Cobertura en Macul y zona oriente: fletes Macul a Ñuñoa, fletes La Florida Macul, fletes Macul Peñalolén, fletes Ñuñoa Macul.',
-    'Flete barato Macul y fletes económicos Macul con tarifa base desde $27.000.',
+    'Flete barato Macul y fletes económicos Macul con tarifa base desde $28.000.',
     'Flete de Quilicura a Macul precios con la calculadora; fletes de San Bernardo a Macul y fletes de Macul a Concepción por WhatsApp.',
     'Fletes comuna Macul, fletes por Macul y fletes San Luis de Macul con respuesta rápida.',
     'Calculadora en página y presupuesto gratis para flete en Macul o yapo flete Macul.'
@@ -77,7 +77,7 @@ export default {
     },
     {
       question: '¿Ofrecen flete barato y económicos en Macul?',
-      answer: 'Sí. Flete barato Macul y fletes económicos Macul con tarifa base desde $27.000. Fletes económicos Macul y Ñuñoa para la zona oriente. Flete en Macul y fletes y mudanzas Macul con cotización al instante.'
+      answer: 'Sí. Flete barato Macul y fletes económicos Macul con tarifa base desde $28.000. Fletes económicos Macul y Ñuñoa para la zona oriente. Flete en Macul y fletes y mudanzas Macul con cotización al instante.'
     },
     {
       question: '¿Hacen fletes de Macul a Concepción?',

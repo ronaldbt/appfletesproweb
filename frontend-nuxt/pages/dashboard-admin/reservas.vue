@@ -8,7 +8,115 @@
       </button>
     </div>
 
-    <ReservasCalendario :events="eventosCalendario" :show-price="esAdmin" class="mb-8" />
+    <ReservasCalendario :events="eventosCalendario" :conductores="conductores" :show-price="esAdmin" class="mb-8" @crear="abrirVentanaFlete" @editar="editarDesdeCalendario" @eliminar="eliminarDesdeCalendario" />
+
+    <div v-if="ventanaFlete" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50" @click.self="cerrarVentanaFlete">
+      <div class="bg-white rounded-2xl shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6">
+        <h3 class="text-lg font-black text-slate-900 mb-1">Nuevo flete</h3>
+        <p class="text-sm text-slate-500 mb-4">{{ nuevoFlete.fecha }}<span v-if="nuevoFlete.hora"> · {{ nuevoFlete.hora }}</span></p>
+        <form @submit.prevent="guardarFleteAgenda" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <label class="md:col-span-2">
+            <span class="text-xs font-bold text-slate-500 uppercase">Nombre persona o empresa</span>
+            <input v-model="nuevoFlete.nombre" type="text" required class="mt-1 w-full rounded-xl border-2 border-slate-200 px-3 py-2 focus:border-teal-500 focus:outline-none" />
+          </label>
+          <label v-if="esAdmin">
+            <span class="text-xs font-bold text-slate-500 uppercase">Precio ($)</span>
+            <input v-model="nuevoFlete.precio" type="text" class="mt-1 w-full rounded-xl border-2 border-slate-200 px-3 py-2 focus:border-teal-500 focus:outline-none" />
+          </label>
+          <label>
+            <span class="text-xs font-bold text-slate-500 uppercase">Hora</span>
+            <input v-model="nuevoFlete.hora" type="time" class="mt-1 w-full rounded-xl border-2 border-slate-200 px-3 py-2 focus:border-teal-500 focus:outline-none" />
+          </label>
+          <label>
+            <span class="text-xs font-bold text-slate-500 uppercase">Teléfono</span>
+            <input v-model="nuevoFlete.telefono" type="tel" class="mt-1 w-full rounded-xl border-2 border-slate-200 px-3 py-2 focus:border-teal-500 focus:outline-none" />
+          </label>
+          <label>
+            <span class="text-xs font-bold text-slate-500 uppercase">Conductor</span>
+            <select v-model="nuevoFlete.conductorId" class="mt-1 w-full rounded-xl border-2 border-slate-200 px-3 py-2 focus:border-teal-500 focus:outline-none">
+              <option value="">Sin asignar</option>
+              <option v-for="c in conductores" :key="c.id" :value="String(c.id)">{{ c.nombre }}</option>
+            </select>
+          </label>
+          <label class="md:col-span-2">
+            <span class="text-xs font-bold text-slate-500 uppercase">Origen</span>
+            <input v-model="nuevoFlete.origen" type="text" required class="mt-1 w-full rounded-xl border-2 border-slate-200 px-3 py-2 focus:border-teal-500 focus:outline-none" />
+          </label>
+          <label class="md:col-span-2">
+            <span class="text-xs font-bold text-slate-500 uppercase">Destino</span>
+            <input v-model="nuevoFlete.destino" type="text" required class="mt-1 w-full rounded-xl border-2 border-slate-200 px-3 py-2 focus:border-teal-500 focus:outline-none" />
+          </label>
+          <label>
+            <span class="text-xs font-bold text-slate-500 uppercase">¿Con ayudante?</span>
+            <select v-model="nuevoFlete.conAyudante" class="mt-1 w-full rounded-xl border-2 border-slate-200 px-3 py-2 focus:border-teal-500 focus:outline-none">
+              <option value="no">No</option>
+              <option value="si">Sí</option>
+            </select>
+          </label>
+          <label>
+            <span class="text-xs font-bold text-slate-500 uppercase">Camión</span>
+            <select v-model="nuevoFlete.vehiculoId" class="mt-1 w-full rounded-xl border-2 border-slate-200 px-3 py-2 focus:border-teal-500 focus:outline-none">
+              <option value="">Sin asignar</option>
+              <option v-for="v in vehiculos" :key="v.id" :value="v.id">{{ v.patente }} – {{ v.nombre || v.tipo || 'Camión' }}</option>
+            </select>
+          </label>
+          <label class="md:col-span-2">
+            <span class="text-xs font-bold text-slate-500 uppercase">Qué llevar (carga)</span>
+            <input v-model="nuevoFlete.carga" type="text" class="mt-1 w-full rounded-xl border-2 border-slate-200 px-3 py-2 focus:border-teal-500 focus:outline-none" />
+          </label>
+          <label class="md:col-span-2">
+            <span class="text-xs font-bold text-slate-500 uppercase">Comentario</span>
+            <textarea v-model="nuevoFlete.comentario" rows="3" placeholder="Cualquier dato extra del flete" class="mt-1 w-full rounded-xl border-2 border-slate-200 px-3 py-2 focus:border-teal-500 focus:outline-none"></textarea>
+          </label>
+          <div class="md:col-span-2 flex flex-wrap gap-2">
+            <button type="submit" class="rounded-xl bg-teal-600 hover:bg-teal-700 px-4 py-2.5 text-sm font-bold text-white">Guardar flete</button>
+            <button type="button" @click="cerrarVentanaFlete" class="rounded-xl border-2 border-slate-300 px-4 py-2.5 text-sm font-bold text-slate-600">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm mb-8">
+      <h2 class="text-lg font-black text-slate-900 mb-1">Notas por día</h2>
+      <p class="text-sm text-slate-500 mb-4">Elige cualquier día desde hoy, anota la hora, el precio y una nota. Queda en la agenda para completarla después.</p>
+      <form @submit.prevent="agregarNotaDesdeInicio" class="flex flex-col lg:flex-row gap-2 mb-5 p-3 rounded-xl bg-slate-50 border border-slate-200">
+        <input v-model="diaNota" type="date" required :min="fechaHoyChile()" @change="recordarDia(diaNota)" class="rounded-xl border-2 border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 focus:border-teal-500 focus:outline-none" />
+        <input v-model="notaInicio.hora" type="time" aria-label="Hora" class="rounded-xl border-2 border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 focus:border-teal-500 focus:outline-none lg:w-32" />
+        <input v-if="esAdmin" v-model="notaInicio.precio" type="text" inputmode="numeric" placeholder="Precio" aria-label="Precio" class="rounded-xl border-2 border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 focus:border-teal-500 focus:outline-none lg:w-32" />
+        <input v-model="notaInicio.texto" type="text" required placeholder="Nota rápida: cliente, dirección o lo que sea" class="flex-1 rounded-xl border-2 border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 focus:border-teal-500 focus:outline-none" />
+        <button type="submit" class="rounded-xl bg-teal-600 hover:bg-teal-700 px-4 py-2 text-sm font-bold text-white">Agregar a la agenda</button>
+      </form>
+      <div class="space-y-4">
+        <article v-for="dia in diasNotas" :key="dia.fecha" class="rounded-xl border border-slate-200 overflow-hidden">
+          <header class="bg-slate-50 px-4 py-2 border-b border-slate-200">
+            <h3 class="text-sm font-black text-slate-900 capitalize">{{ dia.titulo }}</h3>
+          </header>
+          <ul v-if="dia.items.length" class="divide-y divide-slate-100">
+            <li v-for="f in dia.items" :key="f.id" class="px-4 py-3 flex flex-wrap items-start justify-between gap-2">
+              <div>
+                <p class="text-sm font-bold text-slate-900">
+                  <span v-if="f.hora" class="text-teal-700">{{ formatTime(f.hora) }}</span>
+                  <span v-if="esAdmin && f.precio" class="text-slate-700">{{ formatPrecio(f.precio) === '—' ? '' : '$' + formatPrecio(f.precio) }}</span>
+                  {{ f.nombre || 'Nota' }}
+                </p>
+                <p v-if="f.comentario && f.comentario !== f.nombre" class="text-sm text-slate-600">{{ f.comentario }}</p>
+                <p v-if="notaIncompleta(f)" class="text-xs font-bold text-amber-700 mt-1">Falta completar</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <button type="button" @click="completarNota(f)" class="text-xs font-bold text-teal-700 hover:underline">Completar</button>
+                <button type="button" @click="eliminarFleteAgenda(f.id)" class="text-xs font-bold text-red-600 hover:underline">Eliminar</button>
+              </div>
+            </li>
+          </ul>
+          <form @submit.prevent="agregarNotaRapida(dia.fecha)" class="flex flex-col sm:flex-row gap-2 p-3 bg-white">
+            <input v-model="borrador(dia.fecha).hora" type="time" aria-label="Hora" class="rounded-xl border-2 border-slate-200 px-3 py-2 text-sm text-slate-900 focus:border-teal-500 focus:outline-none sm:w-32" />
+            <input v-if="esAdmin" v-model="borrador(dia.fecha).precio" type="text" inputmode="numeric" placeholder="Precio" aria-label="Precio" class="rounded-xl border-2 border-slate-200 px-3 py-2 text-sm text-slate-900 focus:border-teal-500 focus:outline-none sm:w-32" />
+            <input v-model="borrador(dia.fecha).texto" type="text" required placeholder="Nota rápida: cliente, dirección o lo que sea" class="flex-1 rounded-xl border-2 border-slate-200 px-3 py-2 text-sm text-slate-900 focus:border-teal-500 focus:outline-none" />
+            <button type="submit" class="rounded-xl bg-teal-600 hover:bg-teal-700 px-4 py-2 text-sm font-bold text-white">Agregar</button>
+          </form>
+        </article>
+      </div>
+    </section>
 
     <!-- Agenda de fletes (anotados por teléfono) -->
     <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm mb-8">
@@ -29,7 +137,7 @@
       </div>
 
       <!-- Formulario nuevo / editar flete -->
-      <form @submit.prevent="guardarFleteAgenda" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6 p-4 rounded-xl bg-slate-50 border border-slate-200" :class="{ 'ring-2 ring-teal-300': editingFleteId }">
+      <form id="form-agenda" @submit.prevent="guardarFleteAgenda" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6 p-4 rounded-xl bg-slate-50 border border-slate-200" :class="{ 'ring-2 ring-teal-300': editingFleteId }">
         <label class="md:col-span-2">
           <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Nombre persona o empresa</span>
           <input v-model="nuevoFlete.nombre" type="text" required placeholder="Ej: Juan Pérez / Empresa XYZ" class="mt-1 w-full rounded-xl border-2 border-slate-200 bg-white px-3 py-2 text-slate-900 focus:border-teal-500 focus:outline-none" />
@@ -40,7 +148,7 @@
         </label>
         <label>
           <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Fecha del flete</span>
-          <input v-model="nuevoFlete.fecha" type="date" required class="mt-1 w-full rounded-xl border-2 border-slate-200 bg-white px-3 py-2 text-slate-900 focus:border-teal-500 focus:outline-none" />
+          <input v-model="nuevoFlete.fecha" type="date" required :min="fechaMinima" class="mt-1 w-full rounded-xl border-2 border-slate-200 bg-white px-3 py-2 text-slate-900 focus:border-teal-500 focus:outline-none" />
         </label>
         <label>
           <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Hora del flete</span>
@@ -66,6 +174,13 @@
           </select>
         </label>
         <label>
+          <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Conductor</span>
+          <select v-model="nuevoFlete.conductorId" class="mt-1 w-full rounded-xl border-2 border-slate-200 bg-white px-3 py-2 text-slate-900 focus:border-teal-500 focus:outline-none">
+            <option value="">Sin asignar</option>
+            <option v-for="c in conductores" :key="c.id" :value="String(c.id)">{{ c.nombre }}</option>
+          </select>
+        </label>
+        <label>
           <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Camión (flota propia)</span>
           <select v-model="nuevoFlete.vehiculoId" class="mt-1 w-full rounded-xl border-2 border-slate-200 bg-white px-3 py-2 text-slate-900 focus:border-teal-500 focus:outline-none">
             <option value="">Sin asignar</option>
@@ -76,9 +191,13 @@
           <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Qué llevar (carga)</span>
           <input v-model="nuevoFlete.carga" type="text" placeholder="Ej: muebles, cajas, refrigerador" class="mt-1 w-full rounded-xl border-2 border-slate-200 bg-white px-3 py-2 text-slate-900 focus:border-teal-500 focus:outline-none" />
         </label>
+        <label class="md:col-span-2 lg:col-span-3">
+          <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Comentario</span>
+          <textarea v-model="nuevoFlete.comentario" rows="2" placeholder="Cualquier dato extra del flete" class="mt-1 w-full rounded-xl border-2 border-slate-200 bg-white px-3 py-2 text-slate-900 focus:border-teal-500 focus:outline-none"></textarea>
+        </label>
         <label v-if="esAdmin" class="md:col-span-2 lg:col-span-3 flex items-center gap-2">
           <input v-model="nuevoFlete.ivaIncluido" type="checkbox" class="rounded border-slate-300 text-teal-600 focus:ring-teal-500" />
-          <span class="text-sm font-medium text-slate-700">Precio con IVA incluido</span>
+          <span class="text-sm font-medium text-slate-700">El precio incluye IVA</span>
         </label>
         <div class="md:col-span-2 lg:col-span-3 flex flex-wrap gap-2">
           <button type="submit" class="rounded-xl bg-teal-600 hover:bg-teal-700 px-4 py-2.5 text-sm font-bold text-white shadow-lg shadow-teal-500/30 transition-colors">
@@ -125,7 +244,7 @@
             </tr>
           </tbody>
         </table>
-        <p v-if="agendaFletes.length === 0" class="p-6 text-center text-slate-500 text-sm">No hay fletes anotados. Los que tengan más de un mes se eliminan solos.</p>
+        <p v-if="agendaFletes.length === 0" class="p-6 text-center text-slate-500 text-sm">No hay fletes de hoy ni próximos. Los anteriores siguen en el calendario, en la vista Por mes.</p>
       </div>
     </section>
 
@@ -192,7 +311,7 @@
                 <div class="text-teal-600">→ {{ reserva.destino }}</div>
               </td>
               <td v-if="esAdmin" class="px-4 py-3 font-bold text-slate-900">${{ (reserva.precio != null ? reserva.precio : 0).toLocaleString('es-CL') }}</td>
-              <td v-if="esAdmin" class="px-4 py-3 text-slate-600">{{ reserva.iva_incluido !== false ? 'Sí' : 'No' }}</td>
+              <td v-if="esAdmin" class="px-4 py-3 text-slate-600">{{ reserva.iva_incluido === true ? 'Sí' : 'No' }}</td>
               <td class="px-4 py-3">
                 <span class="px-2 py-1 text-xs font-bold rounded-full" :class="getEstadoClass(reserva.estado)">{{ getEstadoText(reserva.estado) }}</span>
               </td>
@@ -207,19 +326,20 @@
                 <button v-if="esAdmin && reserva.estado === 'completado' && reserva.cobrado === false" @click="marcarCobrado(reserva)" class="text-emerald-600 hover:underline font-bold text-xs">Marcar cobrado</button>
                 <button v-if="!estadoEsCancelado(reserva.estado)" @click="cancelarReserva(reserva)" class="text-amber-600 hover:underline font-bold text-xs">Cancelar</button>
                 <button @click="viewReserva(reserva)" class="text-slate-600 hover:underline font-bold text-xs">Ver</button>
+                <button type="button" @click="eliminarDesdeCalendario({ rawId: reserva.id, source: reserva.source || 'reserva', titulo: reserva.usuario_nombre })" class="text-red-600 hover:underline font-bold text-xs">Eliminar</button>
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p class="mt-4 text-sm text-slate-500">Mostrando {{ filteredReservas.length }} de {{ reservas.length }} reservas</p>
+      <p class="mt-4 text-sm text-slate-500">Mostrando {{ filteredReservas.length }} de {{ reservasDesdeHoy.length }} reservas</p>
     </section>
   </div>
 </template>
 
 <script setup>
 definePageMeta({ layout: 'admin' })
-import { ref, computed, onMounted } from 'vue'
+import { ref, reactive, computed, onMounted } from 'vue'
 import { apiUrl } from '../../config/api.js'
 
 const WHATSAPP_NUMERO = '56979796841'
@@ -228,11 +348,18 @@ const UN_MES_MS = 30 * 24 * 60 * 60 * 1000
 const esAdmin = ref(false)
 const reservas = ref([])
 const vehiculos = ref([])
+const conductores = ref([])
 const searchTerm = ref('')
 const filterEstado = ref('')
 const filterFecha = ref('')
 
 const editingFleteId = ref(null)
+const ventanaFlete = ref(false)
+const borradores = reactive({})
+const diaNota = ref(fechaHoyChile())
+const notaInicio = reactive({ texto: '', hora: '', precio: '' })
+const diasElegidos = ref([])
+const fechaOriginal = ref('')
 const nuevoFlete = ref({
   nombre: '',
   precio: '',
@@ -244,7 +371,9 @@ const nuevoFlete = ref({
   conAyudante: 'no',
   telefono: '',
   vehiculoId: '',
-  ivaIncluido: true
+  conductorId: '',
+  comentario: '',
+  ivaIncluido: false
 })
 
 // Agenda de fletes desde la base de datos (API), sincronizada en todos los dispositivos
@@ -261,13 +390,144 @@ function mapReservaToAgendaFlete(r) {
     carga: r.carga ?? '',
     precio: r.precio != null ? parseFloat(r.precio) : null,
     vehiculoId: r.vehiculo_id ?? null,
+    conductorId: r.conductor_usuario_id ?? null,
+    comentario: r.nota || '',
     conAyudante: r.ayudante ? 'si' : 'no',
-    ivaIncluido: r.iva_incluido !== false
+    ivaIncluido: r.iva_incluido === true
   }
 }
 
+function fechaClave(fecha) {
+  const m = String(fecha || '').match(/^(\d{4}-\d{2}-\d{2})/)
+  return m ? m[1] : ''
+}
+
+function esHoyODespues(fecha) {
+  const key = fechaClave(fecha)
+  return !!key && key >= fechaHoyChile()
+}
+
+const reservasDesdeHoy = computed(() => reservas.value.filter(r => esHoyODespues(r.fecha)))
+
+function addDaysClave (clave, n) {
+  const [y, m, d] = clave.split('-').map(Number)
+  const dt = new Date(y, m - 1, d)
+  dt.setDate(dt.getDate() + n)
+  return `${dt.getFullYear()}-${String(dt.getMonth() + 1).padStart(2, '0')}-${String(dt.getDate()).padStart(2, '0')}`
+}
+
+function tituloDiaNota (clave) {
+  const [y, m, d] = clave.split('-').map(Number)
+  return new Date(y, m - 1, d).toLocaleDateString('es-CL', { weekday: 'long', day: 'numeric', month: 'long' })
+}
+
+function borrador (fecha) {
+  if (!borradores[fecha]) borradores[fecha] = { texto: '', hora: '', precio: '' }
+  return borradores[fecha]
+}
+
+function notaIncompleta (f) {
+  const tel = String(f.telefono || '').replace(/\D/g, '')
+  return !tel || f.origen === 'Por definir' || f.destino === 'Por definir'
+}
+
+const diasNotas = computed(() => {
+  const hoy = fechaHoyChile()
+  const claves = []
+  for (let i = 0; i < 7; i++) claves.push(addDaysClave(hoy, i))
+  diasElegidos.value.forEach((k) => { if (k >= hoy && !claves.includes(k)) claves.push(k) })
+  agendaFletes.value.forEach((f) => {
+    const k = (f.fecha || '').slice(0, 10)
+    if (k >= hoy && !claves.includes(k)) claves.push(k)
+  })
+  claves.sort()
+  return claves.map((fecha) => ({
+    fecha,
+    titulo: tituloDiaNota(fecha),
+    items: agendaFletes.value
+      .filter((f) => (f.fecha || '').slice(0, 10) === fecha)
+      .slice()
+      .sort((a, b) => String(a.hora || '99:99').localeCompare(String(b.hora || '99:99')))
+  }))
+})
+
+function recordarDia (fecha) {
+  if (!fecha || fecha < fechaHoyChile()) return
+  if (!diasElegidos.value.includes(fecha)) diasElegidos.value = [...diasElegidos.value, fecha].sort()
+}
+
+async function guardarNota ({ fecha, texto, hora, precio, alTerminar }) {
+  const nota = (texto || '').trim()
+  if (!nota) return
+  if (!fecha || fecha < fechaHoyChile()) {
+    alert('Elige un día de hoy en adelante.')
+    return
+  }
+  recordarDia(fecha)
+  const precioLimpio = esAdmin.value ? String(precio || '').replace(/\D/g, '') : ''
+  try {
+    const res = await fetch(apiUrl('/api/admin/fletes'), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        nombre: nota.slice(0, 120),
+        comentario: nota,
+        fecha,
+        hora: hora || null,
+        precio: precioLimpio || null,
+        telefono: '',
+        origen: 'Por definir',
+        destino: 'Por definir',
+        carga: '',
+        ayudante: false
+      })
+    })
+    const data = await res.json().catch(() => ({}))
+    if (!res.ok) throw new Error(data.error || 'No se pudo guardar la nota')
+    if (alTerminar) alTerminar()
+    await loadReservas()
+  } catch (err) {
+    alert(err.message || 'No se pudo guardar la nota')
+  }
+}
+
+async function agregarNotaRapida (fecha) {
+  const b = borrador(fecha)
+  await guardarNota({
+    fecha,
+    texto: b.texto,
+    hora: b.hora,
+    precio: b.precio,
+    alTerminar: () => {
+      b.texto = ''
+      b.hora = ''
+      b.precio = ''
+    }
+  })
+}
+
+async function agregarNotaDesdeInicio () {
+  await guardarNota({
+    fecha: diaNota.value,
+    texto: notaInicio.texto,
+    hora: notaInicio.hora,
+    precio: notaInicio.precio,
+    alTerminar: () => {
+      notaInicio.texto = ''
+      notaInicio.hora = ''
+      notaInicio.precio = ''
+    }
+  })
+}
+
+function completarNota (f) {
+  editarFleteAgenda(f)
+  const form = document.getElementById('form-agenda')
+  if (form) form.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
+
 const agendaFletes = computed(() => {
-  return reservas.value
+  return reservasDesdeHoy.value
     .filter(r => r.source === 'flete')
     .map(mapReservaToAgendaFlete)
 })
@@ -299,8 +559,27 @@ function getVehiculoLabel(vehiculoId) {
   return v ? (v.patente + (v.nombre ? ' ' + v.nombre : '')) : '—'
 }
 
+function fechaHoyChile() {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'America/Santiago',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit'
+  }).format(new Date())
+}
+
+const fechaMinima = computed(() => {
+  const hoy = fechaHoyChile()
+  if (editingFleteId.value && fechaOriginal.value && fechaOriginal.value < hoy) return fechaOriginal.value
+  return hoy
+})
+
 async function guardarFleteAgenda() {
-  console.log('📋 [Reservas] guardarFleteAgenda llamado')
+  const hoy = fechaHoyChile()
+  if (nuevoFlete.value.fecha && nuevoFlete.value.fecha < hoy && nuevoFlete.value.fecha !== fechaOriginal.value) {
+    alert('No se pueden anotar reservas en días que ya pasaron. El historial sigue guardado.')
+    return
+  }
   const f = {
     nombre: (nuevoFlete.value.nombre || '').trim(),
     precio: (nuevoFlete.value.precio || '').trim().replace(/\D/g, '') || null,
@@ -312,6 +591,8 @@ async function guardarFleteAgenda() {
     conAyudante: nuevoFlete.value.conAyudante,
     telefono: nuevoFlete.value.telefono.replace(/\D/g, '').replace(/^0/, '56'),
     vehiculoId: nuevoFlete.value.vehiculoId || null,
+    conductorId: nuevoFlete.value.conductorId || null,
+    comentario: (nuevoFlete.value.comentario || '').trim(),
     ivaIncluido: nuevoFlete.value.ivaIncluido !== false
   }
   console.log('📋 [Reservas] Flete a guardar:', f)
@@ -328,7 +609,9 @@ async function guardarFleteAgenda() {
         ayudante: f.conAyudante === 'si',
         fecha: f.fecha,
         hora: f.hora,
-        vehiculoId: f.vehiculoId || null
+        vehiculoId: f.vehiculoId || null,
+        conductorId: f.conductorId || null,
+        comentario: f.comentario
       }
       if (esAdmin.value) {
         payload.precio = f.precio
@@ -359,7 +642,9 @@ async function guardarFleteAgenda() {
         ayudante: f.conAyudante === 'si',
         fecha: f.fecha,
         hora: f.hora,
-        vehiculoId: f.vehiculoId || null
+        vehiculoId: f.vehiculoId || null,
+        conductorId: f.conductorId || null,
+        comentario: f.comentario
       }
       if (esAdmin.value) {
         payload.precio = f.precio
@@ -383,10 +668,12 @@ async function guardarFleteAgenda() {
   }
   await loadReservas()
   cancelarEdicionFlete()
+  ventanaFlete.value = false
 }
 
 function editarFleteAgenda(f) {
   editingFleteId.value = f.id
+  fechaOriginal.value = (f.fecha || '').slice(0, 10)
   nuevoFlete.value = {
     nombre: f.nombre || '',
     precio: f.precio != null ? String(f.precio) : '',
@@ -398,33 +685,80 @@ function editarFleteAgenda(f) {
     conAyudante: f.conAyudante === 'si' ? 'si' : 'no',
     telefono: f.telefono ? (String(f.telefono).startsWith('56') ? String(f.telefono) : '56' + String(f.telefono)) : '',
     vehiculoId: f.vehiculoId || '',
+    conductorId: f.conductorId ? String(f.conductorId) : '',
+    comentario: f.comentario || '',
     ivaIncluido: f.ivaIncluido !== false
   }
 }
 
-function cancelarEdicionFlete() {
-  editingFleteId.value = null
-  nuevoFlete.value = { nombre: '', precio: '', fecha: '', hora: '', origen: '', destino: '', carga: '', conAyudante: 'no', telefono: '', vehiculoId: '', ivaIncluido: true }
+function abrirVentanaFlete ({ fecha, hora, conductorId }) {
+  const hoy = fechaHoyChile()
+  if (fecha && fecha < hoy) {
+    alert('No se pueden anotar reservas en días que ya pasaron.')
+    return
+  }
+  cancelarEdicionFlete()
+  nuevoFlete.value.fecha = fecha || hoy
+  nuevoFlete.value.hora = hora || ''
+  nuevoFlete.value.conductorId = conductorId ? String(conductorId) : ''
+  ventanaFlete.value = true
 }
 
-async function eliminarFleteAgenda(id) {
-  if (!confirm('¿Eliminar este flete de la agenda?')) return
+function cerrarVentanaFlete () {
+  ventanaFlete.value = false
+  cancelarEdicionFlete()
+}
+
+function cancelarEdicionFlete() {
+  editingFleteId.value = null
+  fechaOriginal.value = ''
+  nuevoFlete.value = { nombre: '', precio: '', fecha: '', hora: '', origen: '', destino: '', carga: '', conAyudante: 'no', telefono: '', vehiculoId: '', conductorId: '', comentario: '', ivaIncluido: false }
+}
+
+function editarDesdeCalendario (ev) {
+  const original = reservas.value.find((r) => String(r.id) === String(ev.rawId) && (r.source || 'flete') === (ev.source || 'flete'))
+  if (!original) {
+    alert('No se encontró el flete.')
+    return
+  }
+  if (original.source === 'reserva') {
+    alert('Esa reserva del sistema no se edita desde aquí. Puedes eliminarla con la X.')
+    return
+  }
+  editarFleteAgenda(mapReservaToAgendaFlete(original))
+  ventanaFlete.value = true
+}
+
+async function eliminarDesdeCalendario (ev) {
+  const id = ev?.rawId
+  if (!id) return
+  const nombre = ev.titulo || 'este flete'
+  if (!confirm(`¿Eliminar ${nombre}?\n\nSe borra del calendario, de la agenda y de la base de datos.`)) return
+  const source = ev.source === 'reserva' ? 'reserva' : 'flete'
   try {
-    const res = await fetch(apiUrl(`/api/admin/fletes/${id}`), { method: 'DELETE' })
+    const res = await fetch(apiUrl(`/api/admin/${source === 'reserva' ? 'reservas' : 'fletes'}/${id}`), { method: 'DELETE' })
     if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error || 'Error eliminando')
     await loadReservas()
-    if (editingFleteId.value === id) cancelarEdicionFlete()
+    if (editingFleteId.value === id) {
+      cancelarEdicionFlete()
+      ventanaFlete.value = false
+    }
   } catch (err) {
     console.error('❌ [Reservas] Error eliminando flete:', err)
     alert('Error al eliminar: ' + (err.message || 'Error desconocido'))
   }
 }
 
+async function eliminarFleteAgenda(id) {
+  await eliminarDesdeCalendario({ rawId: id, source: 'flete', titulo: 'este flete' })
+}
+
 const reservasStats = computed(() => {
-  const total = reservas.value.length
-  const pendientes = reservas.value.filter(r => r.estado === 'pendiente').length
-  const completadas = reservas.value.filter(r => r.estado === 'completado').length
-  const ingresos = reservas.value.filter(r => r.estado === 'completado').reduce((sum, r) => sum + parseFloat(r.precio || 0), 0)
+  const lista = reservasDesdeHoy.value
+  const total = lista.length
+  const pendientes = lista.filter(r => r.estado === 'pendiente').length
+  const completadas = lista.filter(r => r.estado === 'completado').length
+  const ingresos = lista.filter(r => r.estado === 'completado').reduce((sum, r) => sum + parseFloat(r.precio || 0), 0)
   return { total, pendientes, completadas, ingresos }
 })
 
@@ -436,6 +770,7 @@ const eventosCalendario = computed(() => {
     const hora = formatTime(r.hora)
     return {
       id: `${r.source || 'reserva'}-${r.id}`,
+      rawId: r.id,
       fecha: match[1],
       hora: hora === '—' ? '' : hora,
       titulo: r.usuario_nombre || 'Reserva',
@@ -444,13 +779,16 @@ const eventosCalendario = computed(() => {
       carga: r.carga || '',
       precio: r.precio,
       estado: r.estado || 'pendiente',
-      source: r.source || 'reserva'
+      source: r.source || 'reserva',
+      conductorId: r.conductor_usuario_id || null,
+      conductorNombre: r.conductor_nombre || '',
+      comentario: r.nota || ''
     }
   }).filter(Boolean)
 })
 
 const filteredReservas = computed(() => {
-  let list = reservas.value
+  let list = reservasDesdeHoy.value
   if (searchTerm.value) {
     const q = searchTerm.value.toLowerCase()
     list = list.filter(r =>
@@ -600,6 +938,17 @@ async function loadReservas() {
   }
 }
 
+async function loadConductores() {
+  try {
+    const res = await fetch(apiUrl('/api/admin/reservas-conductores'))
+    const data = await res.json()
+    conductores.value = Array.isArray(data) ? data : []
+  } catch (e) {
+    console.error(e)
+    conductores.value = []
+  }
+}
+
 async function loadVehiculos() {
   try {
     const res = await fetch(apiUrl('/api/admin/vehiculos'))
@@ -639,7 +988,7 @@ async function cancelarReserva(item) {
 function viewReserva(r) { console.log('Ver', r) }
 function editReserva(r) { console.log('Editar', r) }
 function deleteReserva(r) {
-  if (confirm(`¿Eliminar reserva #${r.id}?`)) console.log('Eliminar', r)
+  eliminarDesdeCalendario({ rawId: r.id, source: r.source || 'reserva', titulo: r.usuario_nombre })
 }
 
 onMounted(() => {
@@ -648,6 +997,7 @@ onMounted(() => {
     esAdmin.value = u?.tipo === 'admin'
   } catch (_) {}
   loadVehiculos()
+  loadConductores()
   loadReservas()
 })
 </script>

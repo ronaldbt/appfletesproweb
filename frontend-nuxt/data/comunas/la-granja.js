@@ -16,7 +16,7 @@ export default {
   },
   precios: {
     h2: 'Precios y valor de flete en La Granja',
-    intro: 'El valor del flete en La Granja depende del origen, destino y volumen. Ofrecemos fletes baratos en La Granja y fletes económicos La Granja con tarifa base desde $27.000 (hasta 2 m³).',
+    intro: 'El valor del flete en La Granja depende del origen, destino y volumen. Ofrecemos fletes baratos en La Granja y fletes económicos La Granja con tarifa base desde $28.000 (hasta 2 m³).',
     p1: 'Para conocer el valor de flete desde La Granja a Conchalí o el valor flete desde Metro La Granja a Metro Vespucio Norte, usa la calculadora indicando las direcciones. Fletes comuna La Granja con cotización al instante por WhatsApp al +56 9 7979 6841.',
     h3Valores: 'Fletes baratos en La Granja y fletes económicos La Granja con tarifas transparentes',
     p2: 'Nuestro servicio de fletes en La Granja incluye carga y descarga. Fletes comuna La Granja hacia Conchalí, Vespucio Norte y toda la RM.'
@@ -38,7 +38,7 @@ export default {
     intro: 'Ofrecemos fletes en La Granja para mudanzas, envíos y transporte de carga. Fletes baratos en La Granja y fletes económicos La Granja con camiones adecuados al volumen.',
     items: [
       { h3: 'Fletes comuna La Granja', text: 'Servicio de fletes comuna La Granja para retiros y entregas dentro de la comuna y hacia otras comunas. Fletes en La Granja con equipo de carga y descarga. Valor de flete desde La Granja a Conchalí y valor flete desde Metro La Granja a Metro Vespucio Norte según distancia y volumen.' },
-      { h3: 'Fletes baratos en La Granja y fletes económicos La Granja', text: 'Fletes baratos en La Granja para particulares y empresas. Fletes económicos La Granja con tarifa base desde $27.000. Fletes comuna La Granja hacia Conchalí, Vespucio Norte, Providencia y toda la RM.' }
+      { h3: 'Fletes baratos en La Granja y fletes económicos La Granja', text: 'Fletes baratos en La Granja para particulares y empresas. Fletes económicos La Granja con tarifa base desde $28.000. Fletes comuna La Granja hacia Conchalí, Vespucio Norte, Providencia y toda la RM.' }
     ],
     pCombustible: 'Para fletes en La Granja con referencia a Metro, indica las estaciones o direcciones cercanas al cotizar.'
   },
@@ -55,7 +55,7 @@ export default {
   faqs: [
     { question: '¿Cuál es el valor de flete desde La Granja a Conchalí?', answer: 'El valor de flete desde La Granja a Conchalí depende del volumen y la dirección exacta. Usa la calculadora de esta página indicando origen (La Granja) y destino (Conchalí), o escribe por WhatsApp al +56 9 7979 6841; el presupuesto es gratis.' },
     { question: '¿Cuánto cuesta el flete desde Metro La Granja a Metro Vespucio Norte?', answer: 'Para conocer el valor flete desde Metro La Granja a Metro Vespucio Norte indica las direcciones o referencias cercanas a esas estaciones en la calculadora o por WhatsApp. Fletes en La Granja y fletes económicos La Granja con cotización al instante.' },
-    { question: '¿Ofrecen fletes baratos y económicos en La Granja?', answer: 'Sí. Fletes baratos en La Granja y fletes económicos La Granja con tarifa base desde $27.000. Servicio de fletes comuna La Granja con cotización al instante. Fletes en La Granja para particulares y empresas.' },
+    { question: '¿Ofrecen fletes baratos y económicos en La Granja?', answer: 'Sí. Fletes baratos en La Granja y fletes económicos La Granja con tarifa base desde $28.000. Servicio de fletes comuna La Granja con cotización al instante. Fletes en La Granja para particulares y empresas.' },
     { question: '¿Hacen fletes comuna La Granja hacia Conchalí?', answer: 'Sí. Realizamos fletes en La Granja hacia Conchalí y valor de flete desde La Granja a Conchalí según volumen. Fletes comuna La Granja con precios claros. Cotiza con la calculadora o por WhatsApp.' }
   ]
 }

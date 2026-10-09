@@ -28,7 +28,7 @@ export default {
       { tipo: 'Departamento 1-2 dormitorios', equipo: 'Camión 3/4 + 1 peonetas', precio: '$70.000 – $150.000' },
       { tipo: 'Casa 3-4 dormitorios', equipo: 'Camión 3/4 + 2 peonetas', precio: '$150.000 – $300.000' },
       { tipo: 'Mudanza con embalaje completo', equipo: 'Camión + cuadrilla + materiales', precio: '$200.000 – $400.000' },
-      { tipo: 'Mudanza a regiones (interregional)', equipo: 'Camión + equipo', precio: 'según distancia (~$1.300/km)' }
+      { tipo: 'Mudanza a regiones (interregional)', equipo: 'Camión + equipo', precio: 'hasta 120 km: $28.000 + $2.000/km; después +$1.400/km' }
     ]
   },
   baratas: {
@@ -98,7 +98,7 @@ export default {
       { h3: 'Mudanzas de departamento o casa', text: 'Traslado de muebles, electrodomésticos, cajas y enseres. Ayudantes disponibles para carga y descarga.' },
       { h3: 'Mudanzas de oficina', text: 'Traslado de escritorios, archivos, equipos y mobiliario. Coordinamos horarios con administración de edificios.' },
       { h3: 'Mudanzas con embalaje', text: 'Cajas, plástico burbuja y materiales para proteger tus pertenencias. Consulta disponibilidad.' },
-      { h3: 'Mudanzas a regiones', text: 'Rutas Santiago–Valparaíso, Santiago–Concepción, Santiago–sur y norte. Presupuesto según distancia (~$1.300/km).' },
+      { h3: 'Mudanzas a regiones', text: 'Rutas Santiago–Valparaíso, Santiago–Concepción, Santiago–sur y norte. Presupuesto hasta 120 km: $28.000 + $2.000/km; después +$1.400/km.' },
       { h3: 'Mudanzas urgentes y de último minuto', text: '¿Necesitas mudarte hoy o mañana? Realizamos mudanzas urgentes en Santiago, coordinadas por WhatsApp en el día según disponibilidad de camión. Ideal para entregas de arriendo, cambios de última hora o fletes 24 horas en Santiago Centro y comunas cercanas.' }
     ],
     pTransporte: 'Contamos con camión de mudanza Santiago para cada tipo de traslado. El transporte de mudanza Santiago incluye carga y descarga; si quieres saber el precio según tu ruta, usa la calculadora de esta página.',
@@ -121,7 +121,7 @@ export default {
     },
     {
       question: '¿Qué variables influyen en el precio de una mudanza?',
-      answer: 'Tres factores: el volumen de carga (m³), la distancia entre origen y destino, y la mano de obra (número de peonetas). Suman el embalaje, el piso sin ascensor y las rutas a regiones (~$1.300 por km). Con estos datos la calculadora te da un valor al instante.'
+      answer: 'Tres factores: el volumen de carga (m³), la distancia entre origen y destino, y la mano de obra (número de peonetas). Suman el embalaje, el piso sin ascensor y la distancia: hasta 120 km a $28.000 + $2.000/km y, después, $1.400 por km extra. Con estos datos la calculadora te da un valor al instante.'
     },
     {
       question: '¿Necesito salvoconducto para mudarme en Santiago?',
@@ -133,7 +133,7 @@ export default {
     },
     {
       question: '¿Hacen mudanzas a regiones desde Santiago?',
-      answer: 'Sí. Cubrimos rutas Santiago–Valparaíso, Santiago–Viña del Mar, Santiago–Concepción y otras regiones. El precio se calcula según la distancia, aproximadamente $1.300 por kilómetro. Escríbenos por WhatsApp con origen y destino para un presupuesto.'
+      answer: 'Sí. Cubrimos rutas Santiago–Valparaíso, Santiago–Viña del Mar, Santiago–Concepción y otras regiones. Hasta 120 km el precio es $28.000 + $2.000 por km. Desde el km 121, cada kilómetro extra suma $1.400. Escríbenos por WhatsApp con origen y destino para un presupuesto.'
     },
     {
       question: '¿Hacen mudanzas baratas y económicas en Santiago?',

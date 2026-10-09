@@ -11,7 +11,7 @@ export default {
   "hero": {
     "tagline": "Fletes Curacaví",
     "title": "Fletes en Curacaví",
-    "intro": "¿Buscas fletes en Curacaví? Ofrecemos fletes y mudanzas en Curacaví con precios desde $27.000. fletes Curacaví, fletes y mudanzas Curacaví, flete Curacaví, fletes baratos Curacaví, fletes económicos Curacaví. Cotiza con la calculadora o por WhatsApp. Presupuesto gratis.",
+    "intro": "¿Buscas fletes en Curacaví? Ofrecemos fletes y mudanzas en Curacaví con precios desde $28.000. fletes Curacaví, fletes y mudanzas Curacaví, flete Curacaví, fletes baratos Curacaví, fletes económicos Curacaví. Cotiza con la calculadora o por WhatsApp. Presupuesto gratis.",
     "introExtra": "Servicio de fletes en Curacaví y toda la RM. Fletes baratos Curacaví, fletes económicos. Cotización al instante."
   },
   "ventajas": [

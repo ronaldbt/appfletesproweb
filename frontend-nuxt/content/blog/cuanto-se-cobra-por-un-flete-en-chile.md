@@ -23,19 +23,20 @@ Debajo puedes obtener un precio estimado de forma inmediata. Ingresa origen, des
 
 ## Precio Fletes Santiago a Regiones
 
-Para un flete grande el costo se puede calcular de la siguiente manera:
+El precio no se recalcula desde cero al salir de Santiago. Los primeros 120 km se cobran con la tarifa corta y, a partir del km 121, cada kilómetro extra suma $1.400:
 
-**Precio = distancia × $1500 CLP**
+**Hasta 120 km:** $28.000 + distancia × $2.000  
+**Después de 120 km:** $268.000 + (km − 120) × $1.400
 
-Esta fórmula te da una referencia aproximada para fletes de Santiago a diferentes regiones de Chile. Los precios pueden variar según el volumen de carga, el tipo de mercancía y la urgencia del servicio.
+Así el total sube con cada kilómetro y no baja al pasar de un corte. Un flete Santiago–Valparaíso (unos 120 km) parte cerca de $268.000 de traslado; Santiago–Concepción (unos 500 km) parte cerca de $800.000. El precio final suma el volumen de carga y los ayudantes.
 
 ## Precio fletes dentro de la Región metropolitana
 
-Para calcular un flete dentro de la Región Metropolitana (sin ayudante) se aplica:
+Para calcular un flete dentro de la Región Metropolitana (sin ayudante extra) se aplica:
 
-- **Hasta 50 km:** **Precio = $28.000 CLP + distancia × $2.000 CLP**
-- **Más de 50 km:** **Precio = distancia × $1500 CLP**
+- **Hasta 120 km:** **Precio = $28.000 CLP + distancia × $2.000 CLP**
+- **Incluye hasta 2 m³.** Cada m³ adicional suma $20.000 (incluye carga y descarga).
 
-Si deseas que el chofer vaya con un ayudante entonces hay un recargo de $7.000 CLP.
+Si sumas un ayudante extra, el recargo es de $15.000 CLP por persona.
 
 Estos son valores de referencia. Para una cotización exacta, [contáctanos](/contacto) o usa la calculadora de esta página con los datos específicos de tu flete.

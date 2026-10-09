@@ -11,7 +11,7 @@ export default {
   "hero": {
     "tagline": "Fletes Pudahuel",
     "title": "Fletes en Pudahuel",
-    "intro": "¿Buscas fletes en Pudahuel? Ofrecemos fletes y mudanzas en Pudahuel con precios desde $27.000. fletes pudahuel, fletes economicos pudahuel, fletes pudahuel sur, flete camioneta pudahuel, flete escombros pudahuel. Cotiza con la calculadora o por WhatsApp. Presupuesto gratis.",
+    "intro": "¿Buscas fletes en Pudahuel? Ofrecemos fletes y mudanzas en Pudahuel con precios desde $28.000. fletes pudahuel, fletes economicos pudahuel, fletes pudahuel sur, flete camioneta pudahuel, flete escombros pudahuel. Cotiza con la calculadora o por WhatsApp. Presupuesto gratis.",
     "introExtra": "Servicio de fletes en Pudahuel y toda la RM. Fletes baratos Pudahuel, fletes económicos. Cotización al instante."
   },
   "ventajas": [

@@ -24,6 +24,13 @@
     "onlineAssistant": "Online Assistant",
     "onlineAssistantTooltip": "Need help? Write to us on WhatsApp"
   },
+  "topbar": {
+    "quote": "Quote in 2 min",
+    "price": "from $28,000",
+    "trust": "Chilean company · Santiago and all of Chile",
+    "santiago": "Freight in Santiago",
+    "waMessage": "Hi, I want a quote for a move from ___ to ___."
+  },
   "breadcrumbs": {
     "home": "Home",
     "ultimaMilla": "Last Mile"
@@ -186,19 +193,19 @@
         "subtitle": "Full transparency with online calculator and free quote",
         "price1": {
           "title": "Freight Price – Metropolitan Region",
-          "description": "For freight within the RM the reference price is from $12,000 + $1,300 per km (without helper). With helper there is an extra $7,000. Get an approximate price with our online calculator."
+          "description": "Up to 120 km the reference is $28,000 + $2,000 per km. After that, each extra kilometre adds $1,400. A helper is +$15,000. Get an approximate price with our online calculator."
         },
         "price2": {
           "title": "Approximate Freight Price",
-          "description": "Calculate your freight price instantly with our calculator on the main page. For freight to regions the reference is distance × $1500 CLP. Request a personalized quote for an exact price."
+          "description": "Calculate your freight price instantly with our calculator on the main page. After 120 km, each extra kilometre adds $1,400 CLP. The kilometres already driven stay at the short-haul rate. Request a personalized quote for an exact price."
         },
         "price3": {
           "title": "Freight Price per Km (to regions)",
-          "description": "For freight from Santiago to regions we use a reference price per kilometer ($1500 CLP). Final price depends on volume and type of load. Quote online or via WhatsApp for your route."
+          "description": "Up to 120 km the rate is $28,000 + $2,000 per km. After that, each extra kilometre adds $1,400. Final price depends on volume and type of load. Quote online or via WhatsApp for your route."
         },
         "price4": {
           "title": "Prices Adapted to Your Needs",
-          "description": "Prices vary by type of service (simple freight, moving, cold transport), distance and volume. Freight from $27,000 CLP for short hauls. Use the calculator or request a free quote."
+          "description": "Prices vary by type of service (simple freight, moving, cold transport), distance and volume. Freight from $28,000 CLP for short hauls. Use the calculator or request a free quote."
         },
         "ctaText": "Use our calculator to quote your freight instantly or request a free personalized quote via WhatsApp.",
         "ctaButton": "Quote Freight Online"
@@ -216,7 +223,7 @@
         },
         "faq3": {
           "question": "What is the cost of freight in Santiago, Chile?",
-          "answer": "Minimum cost starts from $20,000 for short hauls within the Metropolitan Region. Use our calculator or contact us for an exact price."
+          "answer": "Up to 120 km the price starts at $28,000 plus $2,000 per km within the Metropolitan Region. Use our calculator or contact us for an exact price."
         },
         "faq4": {
           "question": "How much do you pay for freight?",
@@ -224,7 +231,7 @@
         },
         "faq5": {
           "question": "How much does freight cost per kilometer?",
-          "answer": "It varies by route and type of load. For freight to regions we use an approximate reference of $1500 CLP per km. Contact us for an exact price for your route."
+          "answer": "It varies by route and type of load. Up to 120 km we charge $28,000 + $2,000 per km. After that, each extra kilometre adds $1,400, so the price does not drop. Contact us for an exact price for your route."
         },
         "faq6": {
           "question": "How much does freight cost from Santiago to Arica?",
@@ -236,7 +243,7 @@
         },
         "faq8": {
           "question": "How much does a move cost?",
-          "answer": "The price varies by volume, distance and services (packing, helper). For small moves in Santiago prices start from $27,000. Use our calculator or request a free quote."
+          "answer": "The price varies by volume, distance and services (packing, helper). For small moves in Santiago prices start from $28,000. Use our calculator or request a free quote."
         },
         "faq9": {
           "question": "Do you offer freight to other regions?",
@@ -1860,6 +1867,7 @@
     "helpers": "Helpers",
     "helpersNote": "The driver helps load and unload. For very large loads you can add extra helpers (max. 10).",
     "helpersNoteShort": "Driver loads/unloads. Large loads: add helpers +$15,000 each.",
+    "fareRule": "Up to 120 km: $28,000 + $2,000/km. After that, each extra km adds $1,400.",
     "helperUnit": "each",
     "totalEstimatedPortesPro": "Total Estimated FletesPro",
     "presets": {
@@ -1898,7 +1906,7 @@
       "movesCompleted": "Moves Completed",
       "yearsExperience": "Years of Experience",
       "vipClients": "VIP Clients",
-      "zonesCovered": "Zones Covered"
+      "zonesCovered": "Santiago and regions"
     },
     "features": {
       "title": "The FletesPro Difference",
@@ -1924,7 +1932,7 @@
       "step2Title": "Artisanal Packing",
       "step2Desc": "Specific multi-layer protection for each object, from art to delicate technology.",
       "step3Title": "Premium Transit",
-      "step3Desc": "Trilingual drivers and GPS-monitored vehicles in real-time along the entire coast.",
+      "step3Desc": "Bilingual drivers and GPS-tracked vehicles in Santiago and the regions.",
       "step4Title": "Hand Delivery",
       "step4Desc": "We place each piece of furniture in its final location. Your home ready to live from the first minute."
     },

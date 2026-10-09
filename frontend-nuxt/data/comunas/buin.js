@@ -16,7 +16,7 @@ export default {
   precios: {
     h2: 'Precios y valor del flete a Buin',
     intro: 'El valor del flete a Buin depende del origen, el volumen y la ruta. Ofrecemos fletes baratos Buin y fletes económicos en Buin para particulares y empresas.',
-    p1: 'Fletes en Buin económicas: tarifa base desde $27.000 (hasta 2 m³). Para saber cuánto cuesta tu envío —por ejemplo el valor del flete desde Plaza Sur hasta Buin o flete de Buin a Santiago— usa la calculadora o escríbenos por WhatsApp. Fletes Santiago Buin y fletes Buin Santiago con el mismo estándar de servicio.',
+    p1: 'Fletes en Buin económicas: tarifa base desde $28.000 (hasta 2 m³). Para saber cuánto cuesta tu envío —por ejemplo el valor del flete desde Plaza Sur hasta Buin o flete de Buin a Santiago— usa la calculadora o escríbenos por WhatsApp. Fletes Santiago Buin y fletes Buin Santiago con el mismo estándar de servicio.',
     h3Valores: 'Fletes baratos Buin y tarifas transparentes',
     p2: 'Nuestro servicio de fletes Buin incluye carga y descarga. Cotización al instante y sin compromiso.'
   },
@@ -73,7 +73,7 @@ export default {
     },
     {
       question: '¿Ofrecen fletes baratos y económicos en Buin?',
-      answer: 'Sí. Ofrecemos fletes baratos Buin y fletes económicos en Buin (fletes en Buin económicas) con tarifa base desde $27.000. Servicio de fletes Buin con cotización al instante.'
+      answer: 'Sí. Ofrecemos fletes baratos Buin y fletes económicos en Buin (fletes en Buin económicas) con tarifa base desde $28.000. Servicio de fletes Buin con cotización al instante.'
     },
     {
       question: '¿Tienen camión y rampla para fletes en Buin?',
